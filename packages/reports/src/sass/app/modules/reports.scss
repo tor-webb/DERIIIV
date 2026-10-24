@@ -1178,3 +1178,6 @@ $side-padding: 1.2em;
         }
     }
 }
+
+// FiscoFX theme: loaded last so it sits on top of the rules above
+@import '../_common/layout/fiscofx-theme';

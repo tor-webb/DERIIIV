@@ -1,0 +1,36 @@
+// FiscoFX theme for the Reports pages (Open positions, Trade table, Statement).
+// Colors, borders and weights only. No layout properties, so the page structure stays as it is.
+// Colors come from the brand tokens generated from brand.config.json.
+
+/* postcss-bem-linter: ignore */
+.reports,
+.statement,
+.profit-table {
+    /* Table header: tinted band with a brand-colored rule */
+    .table__head {
+        background-color: var(--color-surface-section);
+        border-bottom: 2px solid var(--brand-primary);
+
+        .table__row {
+            font-weight: 600;
+        }
+    }
+
+    /* Rows: brand marker on hover */
+    .table__body .table__row-link:hover {
+        background-color: var(--color-interactive-hover);
+        box-shadow: inset 3px 0 0 var(--brand-primary);
+    }
+
+    /* Totals row mirrors the header */
+    .table__foot {
+        background-color: var(--color-surface-section);
+        border-top: 2px solid var(--brand-primary);
+    }
+
+    /* Profit and loss read at a glance */
+    .amount--profit,
+    .amount--loss {
+        font-weight: 600;
+    }
+}
