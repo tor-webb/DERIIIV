@@ -10,6 +10,7 @@ import ContractDetailsSwitch from './ContractDetailsSwitch';
 const Trade = lazy(() => import(/* webpackChunkName: "trader-trade" */ 'AppV2/Containers/Trade'));
 const Dashboard = lazy(() => import(/* webpackChunkName: "trader-dashboard" */ 'AppV2/Containers/Dashboard'));
 const ChartsPage = lazy(() => import(/* webpackChunkName: "trader-charts" */ 'AppV2/Containers/ChartsPage'));
+const BotBuilder = lazy(() => import(/* webpackChunkName: "trader-bot-builder" */ 'AppV2/Containers/BotBuilder'));
 const Positions = lazy(() => import(/* webpackChunkName: "trader-positions" */ 'AppV2/Containers/Positions'));
 
 type TRouteConfigExtended = Omit<TRouteConfig, 'routes'> & {
@@ -34,6 +35,12 @@ const traderRoutes: TRouteConfigExtended[] = [
     {
         path: routes.charts,
         component: ChartsPage,
+        exact: true,
+        default: false,
+    },
+    {
+        path: routes.bot_builder,
+        component: BotBuilder,
         exact: true,
         default: false,
     },
