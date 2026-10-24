@@ -1,0 +1,25 @@
+// FiscoFX theme for the Contract details page (summary box, side drawer).
+// Colors and shadows only. No sizes or positions change, so the layout stays as it is.
+// Colors come from the brand tokens generated from brand.config.json.
+
+/* postcss-bem-linter: ignore */
+.contract-drawer {
+    /* Brand accent along the top edge of the drawer */
+    box-shadow: inset 0 3px 0 var(--brand-primary);
+
+    &__heading-btn:hover {
+        box-shadow: inset 0 -2px 0 var(--brand-primary);
+    }
+}
+
+/* postcss-bem-linter: ignore */
+.info-box-container .info-box {
+    /* Outline drawn as a shadow so the box keeps its size */
+    box-shadow:
+        0 0 0 1px var(--color-surface-border),
+        0 12px 24px -16px rgba(11, 18, 32, 0.35);
+
+    .expired .pl-value {
+        letter-spacing: -0.01em;
+    }
+}

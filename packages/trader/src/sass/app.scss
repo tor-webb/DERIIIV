@@ -31,3 +31,6 @@
 @import 'app/modules/portfolio';
 @import 'app/modules/smart-chart';
 @import 'app/modules/trading';
+
+// FiscoFX theme: last, so it sits on top of the rules above
+@import 'app/modules/contract/fiscofx-theme';
