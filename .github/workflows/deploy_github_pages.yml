@@ -40,7 +40,8 @@ jobs:
           NODE_ENV: production
           REF_NAME: ${{ github.ref_name }}
           TRANSLATIONS_CDN_URL: ${{ vars.TRANSLATIONS_CDN_URL }}
-          OAUTH_CLIENT_ID: ${{ secrets.OAUTH_CLIENT_ID }}
+          # Public OAuth client ID; a repository secret named OAUTH_CLIENT_ID overrides it if you add one
+          OAUTH_CLIENT_ID: ${{ secrets.OAUTH_CLIENT_ID || '34LokBezOF2aG5dSubeIL' }}
         run: |
           npm run build --workspace=@deriv/components
           npm run build --workspace=@deriv/reports -- "$PUBLIC_BASE"

@@ -1,0 +1,38 @@
+// FiscoFX theme for the mobile Menu page.
+// Colors and shadows only. No sizes or positions change, so the layout stays as it is.
+// Colors come from the brand tokens generated from brand.config.json.
+
+/* postcss-bem-linter: ignore */
+.menu-page {
+    /* Brand accent along the top edge of the page */
+    box-shadow: inset 0 3px 0 var(--brand-primary);
+
+    &__header-close {
+        box-shadow: 0 0 0 1px var(--color-surface-border);
+    }
+
+    /* Section titles (Reports, Settings, Support) in the brand color */
+    .header__menu-section-title {
+        color: var(--brand-primary);
+        letter-spacing: 0.04em;
+    }
+
+    &__item {
+        /* Pressed state: soft brand tint plus an accent bar drawn as a shadow (no size change) */
+        &:active {
+            background-color: var(--color-interactive-hover);
+            box-shadow: inset 3px 0 0 var(--brand-primary);
+        }
+    }
+
+    /* Thin divider between menu rows */
+    .header__menu-section .menu-page__item + .menu-page__item {
+        box-shadow: inset 0 1px 0 var(--color-surface-border);
+
+        &:active {
+            box-shadow:
+                inset 0 1px 0 var(--color-surface-border),
+                inset 3px 0 0 var(--brand-primary);
+        }
+    }
+}

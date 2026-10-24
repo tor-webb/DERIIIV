@@ -3,6 +3,7 @@ declare global {
         interface ProcessEnv {
             OAUTH_CLIENT_ID?: string;
             REF_NAME?: string;
+            PUBLIC_BASE?: string;
             TRANSLATIONS_CDN_URL?: string;
             NODE_ENV?: string;
         }

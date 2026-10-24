@@ -27,7 +27,11 @@ export default function register() {
     // Register the service worker
     if (/* process.env.NODE_ENV === 'production' && */ 'serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            const sw_url = `${window.location.origin}${getUrlBase('/service-worker.js')}`;
+            // PUBLIC_BASE is set at build time when hosted under a sub-path (e.g. GitHub Pages).
+            const sw_path = process.env.PUBLIC_BASE
+                ? `/${process.env.PUBLIC_BASE}/service-worker.js`
+                : getUrlBase('/service-worker.js');
+            const sw_url = `${window.location.origin}${sw_path}`;
             navigator.serviceWorker
                 .register(sw_url)
                 .then(registration => {
