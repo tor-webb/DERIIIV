@@ -24,7 +24,8 @@ const RouteWithSubRoutes = observer(route => {
 
     const renderFactory = props => {
         let result = null;
-        const pathname = removeBranchName(location.pathname).replace(/\/$/, '');
+        // Router pathname is relative to the basename, so this also works under a sub-path (GitHub Pages).
+        const pathname = removeBranchName(props?.location?.pathname ?? location.pathname).replace(/\/$/, '');
         const is_valid_route = validateRoute(pathname);
 
         if (route.component === Redirect) {

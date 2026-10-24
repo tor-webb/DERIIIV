@@ -24,6 +24,7 @@ import {
     getBrandName,
     getHomeUrl,
     getHelpCentreUrl,
+    getUrlBase,
     isFeatureEnabled,
     routes,
 } from '@deriv/shared';
@@ -241,7 +242,7 @@ const Sidebar = observer(() => {
                 <div className='sidebar__header'>
                     {/* [AI] */}
                     <img
-                        src={`/${is_dark_mode_on ? getBrandLogoDark() : getBrandLogo()}`}
+                        src={getUrlBase(`/${is_dark_mode_on ? getBrandLogoDark() : getBrandLogo()}`)}
                         alt={getBrandName()}
                         width={32}
                         height={32}

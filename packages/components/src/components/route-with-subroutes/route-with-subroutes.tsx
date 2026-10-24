@@ -67,7 +67,9 @@ const RouteWithSubRoutes = ({
             }
         } else {
             const default_subroute = routes.find(r => r.default);
-            const pathname = removeBranchName(location.pathname).replace(/\/$/, '');
+            // Use the router's pathname (already relative to the router basename), not the browser's full
+            // pathname, so the app also works when hosted under a sub-path such as /DERIIIV/app/.
+            const pathname = removeBranchName(props?.location?.pathname ?? location.pathname).replace(/\/$/, '');
             const is_valid_route = validateRoute(pathname);
             const should_redirect = !Component404;
 

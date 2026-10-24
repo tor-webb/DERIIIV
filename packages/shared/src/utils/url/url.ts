@@ -38,12 +38,29 @@ export const params = (href?: string | URL) => {
  */
 export const normalizePath = (path: string) => (path ? path.replace(/(^\/|\/$|[^a-zA-Z0-9-_./()#])/g, '') : '');
 
+// PUBLIC_BASE is injected at build time (e.g. 'DERIIIV/app') when the app is hosted under a sub-path
+// such as GitHub Pages. It is empty when the app is served from the site root.
+const getPublicBase = (): string => {
+    try {
+        return process.env.PUBLIC_BASE || '';
+    } catch {
+        return '';
+    }
+};
+
 export const getUrlBase = (path = '') => {
     const l = window.location;
+    const public_base = getPublicBase();
+    const normalized_path = /^\//.test(path) ? path : `/${path}`;
+
+    // Leave absolute URLs (https://..., //cdn...) untouched
+    if (/^([a-z][a-z0-9+.-]*:|\/\/)/i.test(path)) return path;
+
+    if (public_base) return `/${public_base}${normalized_path}`;
 
     if (!/^\/(br_)/.test(l.pathname)) return path;
 
-    return `/${l.pathname.split('/')[1]}${/^\//.test(path) ? path : `/${path}`}`;
+    return `/${l.pathname.split('/')[1]}${normalized_path}`;
 };
 
 export const removeBranchName = (path = '') => {
