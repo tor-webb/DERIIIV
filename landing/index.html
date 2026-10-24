@@ -10,6 +10,15 @@
             if (/[?&]code=/.test(location.search) && /[?&]state=/.test(location.search)) {
                 location.replace('app/' + location.search);
             }
+
+            // Remove any service worker an earlier version installed for the landing page (not the app's).
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.getRegistrations().then(function (regs) {
+                    regs.forEach(function (r) {
+                        if (/\/DERIIIV\/$/.test(r.scope)) r.unregister();
+                    });
+                });
+            }
         </script>
         <meta
             name="description"

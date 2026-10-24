@@ -52,6 +52,7 @@ jobs:
         run: |
           mkdir -p site
           cp landing/index.html site/index.html
+          cp landing/service-worker.js site/service-worker.js
           cp -r packages/core/dist site/app
           # GitHub Pages serves 404.html for unknown paths; reuse the app shell so deep links work
           cp site/app/index.html site/404.html
