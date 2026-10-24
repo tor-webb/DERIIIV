@@ -16,8 +16,8 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  # Repo name = sub-path on GitHub Pages (https://<user>.github.io/DERIIIV/)
-  PUBLIC_BASE: DERIIIV
+  # Landing page lives at https://<user>.github.io/DERIIIV/ and the trading app at .../DERIIIV/app/
+  PUBLIC_BASE: DERIIIV/app
 
 jobs:
   build:
@@ -48,17 +48,19 @@ jobs:
           npm run build --workspace=@deriv/trader -- "$PUBLIC_BASE"
           npm run build --workspace=@deriv/core -- "$PUBLIC_BASE"
 
-      - name: Add SPA fallback for GitHub Pages
+      - name: Assemble site (landing page + app)
         run: |
-          cd packages/core/dist
+          mkdir -p site
+          cp landing/index.html site/index.html
+          cp -r packages/core/dist site/app
           # GitHub Pages serves 404.html for unknown paths; reuse the app shell so deep links work
-          cp index.html 404.html
-          touch .nojekyll
+          cp site/app/index.html site/404.html
+          touch site/.nojekyll
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: packages/core/dist
+          path: site
 
   deploy:
     needs: build

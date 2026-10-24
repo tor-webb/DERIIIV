@@ -1,9 +1,22 @@
 {
+    "sourceType": "unambiguous",
     "env": {
         "test": {
             "presets": [
-                ["@babel/preset-env", { "targets": { "node": "current" } }],
-                ["@babel/preset-react", { "runtime": "automatic" }],
+                [
+                    "@babel/preset-env",
+                    {
+                        "targets": {
+                            "node": "current"
+                        }
+                    }
+                ],
+                [
+                    "@babel/preset-react",
+                    {
+                        "runtime": "automatic"
+                    }
+                ],
                 "@babel/preset-typescript"
             ]
         }
@@ -26,11 +39,36 @@
         "@babel/preset-typescript"
     ],
     "plugins": [
-        ["@babel/plugin-proposal-decorators", { "legacy": true }],
-        ["@babel/plugin-transform-class-properties", { "loose": true }],
-        ["@babel/plugin-transform-private-methods", { "loose": true }],
-        ["@babel/plugin-transform-private-property-in-object", { "loose": true }],
-        ["@babel/plugin-transform-unicode-property-regex", { "useUnicodeFlag": false }],
+        [
+            "@babel/plugin-proposal-decorators",
+            {
+                "legacy": true
+            }
+        ],
+        [
+            "@babel/plugin-transform-class-properties",
+            {
+                "loose": true
+            }
+        ],
+        [
+            "@babel/plugin-transform-private-methods",
+            {
+                "loose": true
+            }
+        ],
+        [
+            "@babel/plugin-transform-private-property-in-object",
+            {
+                "loose": true
+            }
+        ],
+        [
+            "@babel/plugin-transform-unicode-property-regex",
+            {
+                "useUnicodeFlag": false
+            }
+        ],
         "@babel/plugin-proposal-export-default-from",
         "@babel/plugin-transform-object-rest-spread",
         "@babel/plugin-transform-export-namespace-from",

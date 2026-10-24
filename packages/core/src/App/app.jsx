@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { APIProvider, useMobileBridge } from '@deriv/api';
 import { Loading } from '@deriv/components';
-import { initFormErrorMessages, setUrlLanguage, setWebsocket } from '@deriv/shared';
+import { initFormErrorMessages, redirectToLogin, setUrlLanguage, setWebsocket } from '@deriv/shared';
 import { StoreProvider } from '@deriv/stores';
 import { BreakpointProvider } from '@deriv-com/quill-ui';
 import { getInitialLanguage, initializeI18n, TranslationProvider } from '@deriv-com/translations';
@@ -66,13 +66,22 @@ const App = ({ root_store }) => {
                 // Token is now in sessionStorage. Reload to /  so initStore
                 // picks it up on fresh boot — avoids the race where onClientInit
                 // already ran before the token exchange completed.
-                window.location.replace('/');
+                window.location.replace(public_base ? `/${public_base}/` : '/');
             })
             .catch(err => {
                 // eslint-disable-next-line no-console
                 console.error('[OAuth] Token exchange failed:', err);
                 cleanURL();
             });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    // Landing page "Log In" button opens the app with ?action=login: send the visitor straight to Deriv.
+    React.useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('action') !== 'login' || params.get('code')) return;
+        if (sessionStorage.getItem('auth_info')) return; // already logged in
+        redirectToLogin();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
