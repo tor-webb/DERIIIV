@@ -1,0 +1,11 @@
+.charts-page {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - var(--top-nav-height, 0px));
+    background-color: var(--color-surface-primary);
+
+    .smartcharts,
+    .cq-chart-container {
+        height: 100%;
+    }
+}

@@ -1,6 +1,8 @@
 export const routes = {
     // Essential routes
     index: '/',
+    dashboard: '/dashboard',
+    charts: '/charts',
     callback_page: '/callback',
     error404: '/404',
     endpoint: '/endpoint',

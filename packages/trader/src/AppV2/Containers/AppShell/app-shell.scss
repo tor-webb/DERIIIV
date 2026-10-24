@@ -5,17 +5,45 @@
 .app-shell {
     display: flex;
 
-    @include desktop-screen {
-        flex-direction: row;
-    }
-
-    @include tablet-screen {
-        flex-direction: row;
-    }
+    flex-direction: column;
 
     @include mobile-screen {
-        flex-direction: column;
         height: 100%;
+    }
+
+    &__body {
+        display: flex;
+        flex: 1;
+        min-height: 0;
+        min-width: 0;
+
+        @include mobile-screen {
+            flex-direction: column;
+        }
+    }
+
+    // The sidebar is only shown on the Trade page; keep its slide-out panel from peeking in elsewhere
+    &--off-trade .dc-flyout {
+        display: none;
+    }
+
+    // The top bar takes space from the full-screen layouts below it
+    &--has-top-nav {
+        .sidebar {
+            height: calc(100vh - var(--top-nav-height));
+        }
+
+        .trade {
+            height: calc(100vh - var(--top-nav-height));
+
+            &__grid {
+                height: calc(100vh - 6.4rem - var(--top-nav-height));
+            }
+        }
+
+        .trade-container {
+            height: calc(100vh - var(--top-nav-height));
+        }
     }
 
     &__main-content {
