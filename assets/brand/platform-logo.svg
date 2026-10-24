@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="FiscoFX">
+  <rect width="64" height="64" rx="14" fill="#1f6bff"/>
+  <!-- Rising candlesticks forming the brand mark -->
+  <g stroke="#ffffff" stroke-width="3" stroke-linecap="round">
+    <line x1="19" y1="40" x2="19" y2="50"/>
+    <line x1="32" y1="24" x2="32" y2="46"/>
+    <line x1="45" y1="14" x2="45" y2="36"/>
+  </g>
+  <rect x="14.5" y="41" width="9" height="6" rx="1.5" fill="#ffffff"/>
+  <rect x="27.5" y="29" width="9" height="12" rx="1.5" fill="#ffffff"/>
+  <rect x="40.5" y="18" width="9" height="14" rx="1.5" fill="#00c2a8"/>
+</svg>

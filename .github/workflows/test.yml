@@ -1,0 +1,113 @@
+name: Test & Validate
+on:
+  pull_request:
+    branches:
+    - master
+permissions:
+  contents: read
+jobs:
+  build:
+    name: Build Project (Node ${{ matrix.node-version }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        node-version: [22.x, 24.x]
+    permissions:
+      contents: read
+      actions: write
+    environment: Preview
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Setup Node
+      uses: "./.github/actions/setup_node"
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install dependencies
+      uses: "./.github/actions/npm_install_from_cache"
+    - name: Build
+      uses: "./.github/actions/build"
+
+  validate:
+    name: TypeScript & Linting
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      actions: write
+    environment: Preview
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Setup Node
+      uses: "./.github/actions/setup_node"
+    - name: Install dependencies
+      uses: "./.github/actions/npm_install_from_cache"
+    
+    # TypeScript checking (parallel)
+    - name: Check TypeScript
+      run: |
+        npx tsc --project packages/api/tsconfig.json -noEmit &
+        npx tsc --project packages/api-v2/tsconfig.json -noEmit &
+        npx tsc --project packages/utils/tsconfig.json -noEmit &
+        npx tsc --project packages/stores/tsconfig.json -noEmit &
+        wait
+
+    # Linting (parallel)
+    - name: Run linting
+      run: |
+        npm run test:stylelint &
+        npm run test:eslint-all &
+        wait
+  test:
+    name: Tests - ${{ matrix.description }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    permissions:
+      contents: read
+      actions: write
+    environment: Preview
+    strategy:
+      matrix:
+        include:
+          - group: 1
+            packages: "packages/trader"
+            description: "Trader"
+          - group: 2
+            packages: "packages/core packages/reports"
+            description: "Core & Reports"
+          - group: 4
+            packages: "packages/api packages/api-v2 packages/shared packages/stores packages/utils packages/components"
+            description: "APIs, Utils & Components"
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Setup Node
+      uses: "./.github/actions/setup_node"
+    - name: Install dependencies
+      uses: "./.github/actions/npm_install_from_cache"
+    
+    # Run tests for specific packages
+    - name: Run tests for ${{ matrix.description }}
+      run: |
+        packages="${{ matrix.packages }}"
+        test_pattern=""
+        for package in $packages; do
+          if [ -f "$package/jest.config.js" ]; then
+            echo "Running tests for $package"
+            if [ -z "$test_pattern" ]; then
+              test_pattern="$package"
+            else
+              test_pattern="$test_pattern|$package"
+            fi
+          fi
+        done
+        
+        if [ -n "$test_pattern" ]; then
+          echo "Running tests with pattern: ($test_pattern)"
+          npm run test:jest -- --testPathPattern="($test_pattern)"
+        else
+          echo "No jest configs found for: $packages"
+          exit 1
+        fi

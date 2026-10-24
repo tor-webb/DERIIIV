@@ -1,0 +1,29 @@
+name: build
+description: Build all packages
+inputs:
+  REF_NAME:
+    description: 'Git ref name'
+    required: true
+    default: 'test'
+  NODE_ENV:
+    description: 'Node environment'
+    required: false
+    default: 'test'
+  TRANSLATIONS_CDN_URL:
+    description: 'Base CDN URL for loading translation files (e.g. https://cdn.yourdomain.com/translations). Leave empty to use bundled translations only.'
+    required: false
+  OAUTH_CLIENT_ID:
+    description: 'OAuth2 client ID — set as a GitHub Environment secret, never hardcoded'
+    required: true
+
+runs:
+  using: composite
+  steps:
+  - name: Build all packages
+    env:
+      NODE_ENV: ${{ inputs.NODE_ENV }}
+      REF_NAME: ${{ inputs.REF_NAME }}
+      TRANSLATIONS_CDN_URL: ${{ inputs.TRANSLATIONS_CDN_URL }}
+      OAUTH_CLIENT_ID: ${{ inputs.OAUTH_CLIENT_ID }}
+    run: npm run build:all
+    shell: bash

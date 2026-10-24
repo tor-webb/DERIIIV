@@ -1,0 +1,14 @@
+name: Setup Node
+description: 'Set up Node.js'
+inputs:
+  node-version:
+    description: 'Node.js version to install'
+    required: false
+    default: '24.x'
+runs: 
+  using: composite
+  steps:
+  - name: Use Node.js ${{ inputs.node-version }}
+    uses: actions/setup-node@b39b52d1213e96004bfcb1c61a8a6fa8ab84f3e8
+    with:
+      node-version: ${{ inputs.node-version }}

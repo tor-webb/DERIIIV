@@ -1,0 +1,50 @@
+name: Production Release Workflow
+on:
+  push:
+    tags:
+    - production_*
+env:
+  RELEASE_TYPE: production
+jobs:
+  build_test_and_publish:
+    name: Build, Test and Publish to Cloudflare Pages Production
+    runs-on: ubuntu-latest
+    environment: production
+    permissions:
+      contents: read
+      actions: write
+    outputs:
+      RELEASE_VERSION: ${{ steps.extract_version.outputs.RELEASE_VERSION }}
+    steps:
+    - name: Checkout
+      uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+    - name: Setup Node
+      uses: "./.github/actions/setup_node"
+    - name: Install Dependencies
+      uses: "./.github/actions/npm_install_from_cache"
+    - name: Build
+      uses: "./.github/actions/build"
+      with:
+        NODE_ENV: production
+        REF_NAME: ${{ github.ref_name }}
+        TRANSLATIONS_CDN_URL: ${{ vars.TRANSLATIONS_CDN_URL }}
+        OAUTH_CLIENT_ID: ${{ secrets.OAUTH_CLIENT_ID }}
+    - name: Versioning
+      uses: "./.github/actions/versioning"
+      with:
+        RELEASE_TYPE: ${{ env.RELEASE_TYPE }}
+    - name: Extract version
+      id: extract_version
+      run: echo "RELEASE_VERSION=${version}" >> $GITHUB_OUTPUT
+    - name: Publish to Cloudflare Pages Production
+      uses: "./.github/actions/publish_to_pages_production"
+      with:
+        CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        CLOUDFLARE_PROJECT_NAME: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
+    - name: Upload Build Artifact
+      uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+      with:
+        name: build
+        path: packages/core/dist
+        retention-days: 1

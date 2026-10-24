@@ -1,0 +1,1344 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>FiscoFX | Trade Smart. Think Ahead.</title>
+        <meta
+            name="description"
+            content="FiscoFX brings market charts, analytical tools, watchlists and portfolio information together in one trading workspace."
+        />
+        <meta name="theme-color" content="#0b1220" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                --ink: #0b1220;
+                --ink-2: #121b2f;
+                --ink-3: #1b2740;
+                --paper: #f4f6fb;
+                --white: #ffffff;
+                --blue: #1f6bff;
+                --blue-soft: #5f9bff;
+                --teal: #00c2a8;
+                --red: #ec3f3f;
+                --text: #1a2338;
+                --muted: #5a6680;
+                --muted-on-ink: #9fb0cf;
+                --line: #dde3ef;
+                --line-on-ink: #25324f;
+                --display: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+                --body: 'Figtree', 'Segoe UI', system-ui, sans-serif;
+                --gutter: clamp(1.25rem, 4vw, 3rem);
+                --max: 1180px;
+            }
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+            html {
+                scroll-behavior: smooth;
+                scroll-padding-top: 5rem;
+            }
+
+            body {
+                margin: 0;
+                font-family: var(--body);
+                font-size: 1.0625rem;
+                line-height: 1.6;
+                color: var(--text);
+                background: var(--white);
+                -webkit-font-smoothing: antialiased;
+            }
+
+            h1,
+            h2,
+            h3 {
+                font-family: var(--display);
+                margin: 0;
+                letter-spacing: -0.025em;
+                line-height: 1.08;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            a {
+                color: inherit;
+            }
+
+            :focus-visible {
+                outline: 3px solid var(--blue-soft);
+                outline-offset: 3px;
+                border-radius: 6px;
+            }
+
+            .wrap {
+                width: 100%;
+                max-width: var(--max);
+                margin: 0 auto;
+                padding: 0 var(--gutter);
+            }
+
+            .skip {
+                position: absolute;
+                left: -999px;
+                top: 0;
+                background: var(--white);
+                color: var(--ink);
+                padding: 0.6rem 1rem;
+                z-index: 100;
+            }
+            .skip:focus {
+                left: 0.5rem;
+                top: 0.5rem;
+            }
+
+            /* ---------- Buttons ---------- */
+            .btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 3rem;
+                padding: 0 1.5rem;
+                border-radius: 999px;
+                font: 600 1rem/1 var(--body);
+                text-decoration: none;
+                border: 1.5px solid transparent;
+                cursor: pointer;
+                transition:
+                    background-color 0.15s,
+                    border-color 0.15s,
+                    color 0.15s;
+            }
+            .btn-primary {
+                background: var(--blue);
+                color: var(--white);
+            }
+            .btn-primary:hover {
+                background: #3d80ff;
+            }
+            .btn-ghost-ink {
+                color: var(--white);
+                border-color: #3a4a6d;
+            }
+            .btn-ghost-ink:hover {
+                border-color: var(--blue-soft);
+                color: var(--white);
+            }
+            .btn-ghost-paper {
+                color: var(--ink);
+                border-color: #b9c4dc;
+            }
+            .btn-ghost-paper:hover {
+                border-color: var(--blue);
+                color: var(--blue);
+            }
+            .btn-sm {
+                min-height: 2.5rem;
+                padding: 0 1.1rem;
+                font-size: 0.95rem;
+            }
+
+            /* ---------- Navigation ---------- */
+            .nav {
+                position: sticky;
+                top: 0;
+                z-index: 50;
+                background: rgba(11, 18, 32, 0.92);
+                backdrop-filter: blur(10px);
+                border-bottom: 1px solid var(--line-on-ink);
+            }
+            .nav-inner {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                min-height: 4.25rem;
+            }
+            .nav-logo {
+                display: inline-flex;
+                flex-shrink: 0;
+            }
+            .nav-logo img {
+                display: block;
+                height: 2.25rem;
+                width: auto;
+            }
+            .nav-links {
+                display: flex;
+                gap: 1.75rem;
+                margin: 0 auto 0 1rem;
+                padding: 0;
+                list-style: none;
+            }
+            .nav-links a {
+                color: var(--muted-on-ink);
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 0.97rem;
+            }
+            .nav-links a:hover {
+                color: var(--white);
+            }
+            .nav-actions {
+                display: flex;
+                gap: 0.6rem;
+                align-items: center;
+            }
+            .nav-toggle {
+                display: none;
+                margin-left: auto;
+                background: none;
+                border: 1.5px solid #3a4a6d;
+                color: var(--white);
+                border-radius: 10px;
+                width: 2.75rem;
+                height: 2.75rem;
+                cursor: pointer;
+            }
+            .nav-toggle span,
+            .nav-toggle span::before,
+            .nav-toggle span::after {
+                display: block;
+                width: 1.1rem;
+                height: 2px;
+                background: currentColor;
+                margin: 0 auto;
+                position: relative;
+                content: '';
+            }
+            .nav-toggle span::before {
+                position: absolute;
+                top: -6px;
+            }
+            .nav-toggle span::after {
+                position: absolute;
+                top: 6px;
+            }
+
+            @media (max-width: 960px) {
+                .nav-toggle {
+                    display: block;
+                }
+                .nav-links,
+                .nav-actions {
+                    display: none;
+                }
+                .nav.is-open .nav-inner {
+                    flex-wrap: wrap;
+                    padding-bottom: 1.25rem;
+                }
+                .nav.is-open .nav-links {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0;
+                    width: 100%;
+                    margin: 0;
+                    order: 3;
+                }
+                .nav.is-open .nav-links a {
+                    display: block;
+                    padding: 0.8rem 0;
+                    border-top: 1px solid var(--line-on-ink);
+                }
+                .nav.is-open .nav-actions {
+                    display: flex;
+                    width: 100%;
+                    order: 4;
+                }
+                .nav.is-open .nav-actions .btn {
+                    flex: 1;
+                }
+            }
+
+            /* ---------- Hero ---------- */
+            .hero {
+                background: var(--ink);
+                color: var(--white);
+                overflow: hidden;
+            }
+            .hero-grid {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+                gap: clamp(2rem, 5vw, 4.5rem);
+                align-items: center;
+                padding-top: clamp(3rem, 7vw, 6rem);
+                padding-bottom: clamp(3rem, 7vw, 6rem);
+            }
+            .hero-tag {
+                color: var(--teal);
+                font-weight: 600;
+                font-size: 0.9rem;
+                letter-spacing: 0.04em;
+                margin-bottom: 1.25rem;
+            }
+            .hero h1 {
+                font-size: clamp(2.6rem, 5vw, 4.5rem);
+                font-weight: 800;
+                letter-spacing: -0.04em;
+                line-height: 1;
+                white-space: nowrap;
+            }
+            .hero h1 span {
+                display: block;
+                color: var(--blue-soft);
+            }
+            .hero-copy {
+                margin-top: 1.75rem;
+                max-width: 34rem;
+                color: var(--muted-on-ink);
+            }
+            .hero-copy + .hero-copy {
+                margin-top: 1rem;
+            }
+            .hero-actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.75rem;
+                margin-top: 2.25rem;
+            }
+            .hero-note {
+                margin-top: 2rem;
+                font-family: var(--display);
+                font-size: 1.05rem;
+                color: var(--white);
+                opacity: 0.85;
+            }
+
+            .chart-panel {
+                background: var(--ink-2);
+                border: 1px solid var(--line-on-ink);
+                border-radius: 18px;
+                padding: 1rem 1rem 0.75rem;
+                box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6);
+            }
+            .chart-bar {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1rem;
+                padding: 0.1rem 0.25rem 0.9rem;
+                font-size: 0.9rem;
+                color: var(--muted-on-ink);
+            }
+            .chart-bar strong {
+                color: var(--white);
+                font-family: var(--display);
+                font-size: 1.05rem;
+                letter-spacing: -0.01em;
+            }
+            .chart-tfs {
+                display: flex;
+                gap: 0.25rem;
+            }
+            .chart-tfs span {
+                padding: 0.2rem 0.55rem;
+                border-radius: 6px;
+                font-size: 0.82rem;
+            }
+            .chart-tfs span.on {
+                background: var(--ink-3);
+                color: var(--white);
+            }
+            .chart-svg {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            .chart-reveal {
+                clip-path: inset(0 0 0 0);
+            }
+            @media (prefers-reduced-motion: no-preference) {
+                .chart-reveal {
+                    animation: reveal 2.4s cubic-bezier(0.3, 0.7, 0.2, 1) both;
+                }
+                @keyframes reveal {
+                    from {
+                        clip-path: inset(0 100% 0 0);
+                    }
+                    to {
+                        clip-path: inset(0 0 0 0);
+                    }
+                }
+            }
+            .chart-foot {
+                padding: 0.6rem 0.25rem 0.1rem;
+                font-size: 0.8rem;
+                color: var(--muted-on-ink);
+            }
+
+            @media (max-width: 900px) {
+                .hero-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            /* ---------- Sections ---------- */
+            .section {
+                padding: clamp(3.5rem, 8vw, 6.5rem) 0;
+            }
+            .section-paper {
+                background: var(--paper);
+            }
+            .section-ink {
+                background: var(--ink);
+                color: var(--white);
+            }
+            .section h2 {
+                font-size: clamp(2rem, 4.2vw, 3.2rem);
+                font-weight: 700;
+                max-width: 18ch;
+            }
+            .lead {
+                margin-top: 1rem;
+                max-width: 38rem;
+                color: var(--muted);
+            }
+            .section-ink .lead {
+                color: var(--muted-on-ink);
+            }
+            .section-head {
+                margin-bottom: clamp(2rem, 4vw, 3.25rem);
+            }
+
+            /* Markets: a quiet ledger, not a card grid */
+            .ledger {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                border-top: 1.5px solid var(--ink);
+            }
+            .ledger li {
+                display: grid;
+                grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.5fr) 9rem;
+                gap: 1.5rem;
+                align-items: center;
+                padding: 1.4rem 0;
+                border-bottom: 1px solid var(--line);
+            }
+            .ledger h3 {
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+            .ledger p {
+                color: var(--muted);
+            }
+            .spark {
+                width: 100%;
+                height: 2.6rem;
+                display: block;
+            }
+            .fineprint {
+                margin-top: 1.5rem;
+                font-size: 0.9rem;
+                color: var(--muted);
+                font-style: italic;
+                max-width: 46rem;
+            }
+            @media (max-width: 720px) {
+                .ledger li {
+                    grid-template-columns: 1fr 6rem;
+                }
+                .ledger p {
+                    grid-column: 1 / -1;
+                    order: 3;
+                }
+            }
+
+            /* Terminal */
+            .terminal-grid {
+                display: grid;
+                grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.2fr);
+                gap: clamp(2rem, 5vw, 4.5rem);
+                align-items: center;
+            }
+            .checks {
+                list-style: none;
+                margin: 2rem 0 2.25rem;
+                padding: 0;
+                display: grid;
+                gap: 0.7rem;
+            }
+            .checks li {
+                position: relative;
+                padding-left: 1.9rem;
+                color: #d5deef;
+            }
+            .checks li::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0.5rem;
+                width: 0.95rem;
+                height: 0.55rem;
+                border-left: 2.5px solid var(--teal);
+                border-bottom: 2.5px solid var(--teal);
+                transform: rotate(-45deg) scale(0.9);
+            }
+            .term {
+                background: var(--ink-2);
+                border: 1px solid var(--line-on-ink);
+                border-radius: 16px;
+                overflow: hidden;
+                display: grid;
+                grid-template-columns: 1fr 11.5rem;
+                grid-template-rows: auto 1fr auto;
+            }
+            .term-top {
+                grid-column: 1 / -1;
+                display: flex;
+                gap: 0.5rem;
+                padding: 0.7rem 0.9rem;
+                border-bottom: 1px solid var(--line-on-ink);
+                color: var(--muted-on-ink);
+                font-size: 0.85rem;
+            }
+            .term-top i {
+                width: 0.6rem;
+                height: 0.6rem;
+                border-radius: 50%;
+                background: #33415f;
+                display: inline-block;
+                margin-top: 0.35rem;
+            }
+            .term-top span {
+                margin-left: auto;
+            }
+            .term-chart {
+                padding: 0.5rem;
+                min-width: 0;
+            }
+            .term-watch {
+                border-left: 1px solid var(--line-on-ink);
+                padding: 0.5rem 0.75rem;
+                font-size: 0.85rem;
+                color: var(--muted-on-ink);
+            }
+            .term-watch b {
+                display: block;
+                color: var(--white);
+                font-weight: 600;
+                padding: 0.4rem 0 0.5rem;
+            }
+            .term-watch div {
+                display: grid;
+                grid-template-columns: 1fr 3.4rem;
+                gap: 0.5rem;
+                align-items: center;
+                padding: 0.45rem 0;
+                border-top: 1px solid var(--line-on-ink);
+            }
+            .term-watch .spark {
+                height: 1.4rem;
+            }
+            .term-pos {
+                grid-column: 1 / -1;
+                border-top: 1px solid var(--line-on-ink);
+                padding: 0.7rem 0.9rem;
+                font-size: 0.85rem;
+                color: var(--muted-on-ink);
+                display: flex;
+                gap: 1.25rem;
+            }
+            .term-pos .on {
+                color: var(--white);
+                border-bottom: 2px solid var(--blue);
+                padding-bottom: 0.15rem;
+            }
+            @media (max-width: 900px) {
+                .terminal-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+            @media (max-width: 520px) {
+                .term {
+                    grid-template-columns: 1fr;
+                }
+                .term-watch {
+                    display: none;
+                }
+            }
+
+            /* Experience: definition list */
+            .exp {
+                display: grid;
+                grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+                gap: clamp(2rem, 5vw, 5rem);
+            }
+            .exp dl {
+                margin: 0;
+                border-top: 1.5px solid var(--ink);
+            }
+            .exp dt {
+                font-family: var(--display);
+                font-weight: 700;
+                font-size: 1.3rem;
+                letter-spacing: -0.015em;
+                padding-top: 1.25rem;
+            }
+            .exp dd {
+                margin: 0.25rem 0 0;
+                padding-bottom: 1.25rem;
+                border-bottom: 1px solid var(--line);
+                color: var(--muted);
+                max-width: 36rem;
+            }
+            @media (max-width: 900px) {
+                .exp {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            /* Insights */
+            .insights {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+                gap: clamp(2rem, 5vw, 5rem);
+                align-items: end;
+            }
+            .insights .stack p {
+                color: var(--muted);
+                max-width: 34rem;
+            }
+            .insights .stack p + p {
+                margin-top: 1rem;
+            }
+            .insights .btn {
+                margin-top: 1.75rem;
+            }
+            @media (max-width: 900px) {
+                .insights {
+                    grid-template-columns: 1fr;
+                    align-items: start;
+                }
+            }
+
+            /* Steps: a true sequence, so numbers carry meaning */
+            .steps {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 0;
+                counter-reset: step;
+            }
+            .steps li {
+                padding: 1.1rem 1.5rem 0 0;
+                border-top: 2px solid var(--line-on-ink);
+            }
+            .steps li::before {
+                counter-increment: step;
+                content: '0' counter(step);
+                display: block;
+                font-family: var(--display);
+                font-weight: 700;
+                font-size: 1.1rem;
+                color: var(--teal);
+            }
+            .steps h3 {
+                font-size: 1.25rem;
+                font-weight: 700;
+                margin-top: 0.6rem;
+            }
+            .steps p {
+                margin-top: 0.5rem;
+                color: var(--muted-on-ink);
+                font-size: 1rem;
+            }
+            .steps-cta {
+                margin-top: 3rem;
+            }
+            @media (max-width: 900px) {
+                .steps {
+                    grid-template-columns: 1fr 1fr;
+                    row-gap: 2.25rem;
+                }
+                .steps li {
+                    padding-right: 1.25rem;
+                }
+            }
+            @media (max-width: 520px) {
+                .steps {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            /* Responsible trading */
+            .notice {
+                display: grid;
+                grid-template-columns: 0.4rem minmax(0, 1fr);
+                gap: 1.75rem;
+                background: var(--white);
+                border: 1px solid var(--line);
+                border-radius: 14px;
+                padding: clamp(1.5rem, 4vw, 2.75rem);
+            }
+            .notice::before {
+                content: '';
+                background: var(--red);
+                border-radius: 4px;
+            }
+            .notice h2 {
+                font-size: clamp(1.8rem, 3.4vw, 2.5rem);
+            }
+            .notice p {
+                margin-top: 1rem;
+                max-width: 46rem;
+                color: var(--muted);
+            }
+            .notice .btn {
+                margin-top: 1.5rem;
+            }
+
+            /* Final CTA */
+            .final {
+                background: var(--blue);
+                color: var(--white);
+                text-align: left;
+            }
+            .final-inner {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                gap: 2rem;
+            }
+            .final h2 {
+                font-size: clamp(2.2rem, 5vw, 4rem);
+                font-weight: 800;
+                max-width: 14ch;
+            }
+            .final p {
+                margin-top: 0.9rem;
+                color: #dbe7ff;
+                max-width: 30rem;
+            }
+            .final .btn-white {
+                background: var(--white);
+                color: var(--ink);
+            }
+            .final .btn-white:hover {
+                background: #e9f0ff;
+            }
+            .final .btn-line {
+                color: var(--white);
+                border-color: rgba(255, 255, 255, 0.55);
+            }
+            .final .btn-line:hover {
+                border-color: var(--white);
+            }
+            .final-actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.75rem;
+            }
+
+            /* Footer */
+            .footer {
+                background: var(--ink);
+                color: var(--muted-on-ink);
+                padding: 3.5rem 0 2.5rem;
+                font-size: 0.95rem;
+            }
+            .footer-top {
+                display: grid;
+                grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr));
+                gap: 2.5rem;
+                padding-bottom: 2.5rem;
+                border-bottom: 1px solid var(--line-on-ink);
+            }
+            .footer-brand img {
+                height: 2.25rem;
+                width: auto;
+                display: block;
+            }
+            .footer-brand p {
+                margin-top: 1rem;
+                color: var(--white);
+                font-family: var(--display);
+                font-size: 1.15rem;
+            }
+            .footer h3 {
+                font-family: var(--body);
+                color: var(--white);
+                font-size: 1rem;
+                letter-spacing: 0;
+                margin-bottom: 0.9rem;
+            }
+            .footer ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: grid;
+                gap: 0.55rem;
+            }
+            .footer a {
+                text-decoration: none;
+            }
+            .footer a:hover {
+                color: var(--white);
+                text-decoration: underline;
+            }
+            .footer-legal {
+                padding-top: 1.75rem;
+                display: grid;
+                gap: 0.9rem;
+                font-size: 0.88rem;
+                max-width: 62rem;
+            }
+            @media (max-width: 720px) {
+                .footer-top {
+                    grid-template-columns: 1fr 1fr;
+                }
+                .footer-brand {
+                    grid-column: 1 / -1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <a class="skip" href="#main">Skip to content</a>
+
+        <!-- Navigation -->
+        <header class="nav" id="nav">
+            <div class="wrap nav-inner">
+                <a class="nav-logo" href="/landing.html" aria-label="FiscoFX home">
+                    <img src="/brand/brand-logo-dark.svg" alt="FiscoFX" width="150" height="36" />
+                </a>
+                <button
+                    class="nav-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="nav-menu"
+                    aria-label="Open menu"
+                >
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="nav-menu">
+                    <li><a href="#markets">Markets</a></li>
+                    <li><a href="#trading">Trading</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#insights">Market Insights</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a data-link="help" href="#">Help Centre</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a class="btn btn-ghost-ink btn-sm" data-link="login" href="/">Log In</a>
+                    <a class="btn btn-primary btn-sm" data-link="signup" href="/">Create Account</a>
+                </div>
+            </div>
+        </header>
+
+        <main id="main">
+            <!-- Hero -->
+            <section class="hero">
+                <div class="wrap hero-grid">
+                    <div>
+                        <p class="hero-tag">YOUR MARKETS. YOUR STRATEGY. YOUR FUTURE.</p>
+                        <h1>Trade Smart. <span>Think Ahead.</span></h1>
+                        <p class="hero-copy">
+                            Discover a smarter way to explore the financial markets with FiscoFX. Access an intuitive
+                            trading interface designed to bring market charts, analytical tools, watchlists, and
+                            portfolio information together in one place.
+                        </p>
+                        <p class="hero-copy">
+                            Whether you're exploring forex, cryptocurrencies, stocks, or options, FiscoFX gives you the
+                            tools to follow market movements and make informed trading decisions.
+                        </p>
+                        <div class="hero-actions">
+                            <a class="btn btn-primary" data-link="trade" href="/">Start Trading</a>
+                            <a class="btn btn-ghost-ink" href="#markets">Explore the Markets</a>
+                        </div>
+                        <p class="hero-note">Markets move. Stay informed. Make your decisions with confidence.</p>
+                    </div>
+
+                    <figure class="chart-panel" style="margin: 0" aria-label="Illustration of a candlestick chart">
+                        <div class="chart-bar">
+                            <strong>Candlestick chart</strong>
+                            <div class="chart-tfs" aria-hidden="true">
+                                <span>1m</span><span>5m</span><span class="on">1h</span><span>1d</span>
+                            </div>
+                        </div>
+                        <div class="chart-reveal">
+                            <svg
+                                class="chart-svg"
+                                id="hero-chart"
+                                viewBox="0 0 640 380"
+                                role="img"
+                                aria-hidden="true"
+                            ></svg>
+                        </div>
+                        <figcaption class="chart-foot">Illustrative chart. Not live market data.</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Market overview -->
+            <section class="section" id="markets">
+                <div class="wrap">
+                    <div class="section-head">
+                        <h2>The Markets, All in One Place</h2>
+                        <p class="lead">Explore multiple asset classes through a unified trading interface.</p>
+                    </div>
+                    <ul class="ledger">
+                        <li>
+                            <h3>Forex</h3>
+                            <p>Follow major, minor, and selected exotic currency pairs.</p>
+                            <svg class="spark" data-spark="11" viewBox="0 0 120 40" aria-hidden="true"></svg>
+                        </li>
+                        <li>
+                            <h3>Cryptocurrencies</h3>
+                            <p>Explore digital assets and monitor price movements across supported markets.</p>
+                            <svg class="spark" data-spark="23" viewBox="0 0 120 40" aria-hidden="true"></svg>
+                        </li>
+                        <li>
+                            <h3>Stocks</h3>
+                            <p>Track selected companies and follow their market performance.</p>
+                            <svg class="spark" data-spark="37" viewBox="0 0 120 40" aria-hidden="true"></svg>
+                        </li>
+                        <li>
+                            <h3>Indices</h3>
+                            <p>Monitor major global stock market indices.</p>
+                            <svg class="spark" data-spark="42" viewBox="0 0 120 40" aria-hidden="true"></svg>
+                        </li>
+                        <li>
+                            <h3>Options</h3>
+                            <p>Explore available options contracts and their trading conditions.</p>
+                            <svg class="spark" data-spark="58" viewBox="0 0 120 40" aria-hidden="true"></svg>
+                        </li>
+                    </ul>
+                    <p class="fineprint">
+                        Available instruments, trading features, and market hours depend on the supported services and
+                        applicable provider terms.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Trading terminal -->
+            <section class="section section-ink" id="trading">
+                <div class="wrap terminal-grid">
+                    <div>
+                        <h2>Everything You Need. One Trading Workspace.</h2>
+                        <p class="lead">Keep your trading tools organised in one professional interface.</p>
+                        <ul class="checks">
+                            <li>Interactive candlestick charts</li>
+                            <li>Multiple chart timeframes</li>
+                            <li>Technical indicators and drawing tools</li>
+                            <li>Customisable market watchlists</li>
+                            <li>Open and closed position tracking</li>
+                            <li>Portfolio and account summaries</li>
+                            <li>Trade history and transaction records</li>
+                            <li>Responsive desktop and mobile layouts</li>
+                        </ul>
+                        <a class="btn btn-primary" data-link="trade" href="/">Explore the Trading Platform</a>
+                    </div>
+                    <div class="term" role="img" aria-label="Illustration of the trading workspace">
+                        <div class="term-top" aria-hidden="true">
+                            <i></i><i></i><i></i>
+                            <span>Chart · Watchlist · Positions</span>
+                        </div>
+                        <div class="term-chart">
+                            <svg class="chart-svg" id="term-chart" viewBox="0 0 420 260" aria-hidden="true"></svg>
+                        </div>
+                        <div class="term-watch" aria-hidden="true">
+                            <b>Watchlist</b>
+                            <div><span>Forex</span><svg class="spark" data-spark="71" viewBox="0 0 120 40"></svg></div>
+                            <div><span>Crypto</span><svg class="spark" data-spark="83" viewBox="0 0 120 40"></svg></div>
+                            <div><span>Stocks</span><svg class="spark" data-spark="94" viewBox="0 0 120 40"></svg></div>
+                            <div>
+                                <span>Indices</span><svg class="spark" data-spark="17" viewBox="0 0 120 40"></svg>
+                            </div>
+                        </div>
+                        <div class="term-pos" aria-hidden="true">
+                            <span class="on">Open positions</span>
+                            <span>Closed positions</span>
+                            <span>History</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience -->
+            <section class="section section-paper" id="features">
+                <div class="wrap exp">
+                    <div>
+                        <h2>A Better Way to Navigate the Markets</h2>
+                        <p class="lead">Built around your experience.</p>
+                    </div>
+                    <dl>
+                        <dt>Clarity</dt>
+                        <dd>Access important market information through a clean, organised interface.</dd>
+                        <dt>Analysis</dt>
+                        <dd>
+                            Study price movements using charts, technical indicators, and market data available on the
+                            platform.
+                        </dd>
+                        <dt>Flexibility</dt>
+                        <dd>
+                            Monitor supported instruments and organise your preferred markets in personalised
+                            watchlists.
+                        </dd>
+                        <dt>Accessibility</dt>
+                        <dd>Navigate your trading workspace from compatible desktop and mobile devices.</dd>
+                        <dt>Account Visibility</dt>
+                        <dd>
+                            Review available account balances, positions, transaction history, and portfolio
+                            information.
+                        </dd>
+                    </dl>
+                </div>
+            </section>
+
+            <!-- Market insights -->
+            <section class="section" id="insights">
+                <div class="wrap insights">
+                    <h2>Stay Connected to Market Developments</h2>
+                    <div class="stack">
+                        <p>
+                            Follow financial news and market updates that may influence currencies, equities,
+                            cryptocurrencies, and other supported instruments.
+                        </p>
+                        <p>
+                            Explore market-moving events, economic announcements, company developments, and other
+                            information relevant to your trading decisions.
+                        </p>
+                        <a class="btn btn-ghost-paper" href="#insights">Explore Market Insights</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Getting started -->
+            <section class="section section-ink" id="about">
+                <div class="wrap">
+                    <div class="section-head">
+                        <h2>Your Trading Journey Starts Here</h2>
+                    </div>
+                    <ol class="steps">
+                        <li>
+                            <h3>Create Your Account</h3>
+                            <p>Register and complete any required verification procedures.</p>
+                        </li>
+                        <li>
+                            <h3>Explore the Markets</h3>
+                            <p>Browse available instruments and familiarise yourself with the trading interface.</p>
+                        </li>
+                        <li>
+                            <h3>Analyse the Charts</h3>
+                            <p>
+                                Use supported charting tools and market information to develop your own trading
+                                approach.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Manage Your Activity</h3>
+                            <p>Monitor positions, review account information, and track your trading history.</p>
+                        </li>
+                    </ol>
+                    <div class="steps-cta">
+                        <a class="btn btn-primary" data-link="signup" href="/">Create Your Account</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Responsible trading -->
+            <section class="section section-paper" id="risk">
+                <div class="wrap">
+                    <div class="notice">
+                        <div>
+                            <h2>Trade With Awareness</h2>
+                            <p>
+                                Financial markets involve risk, and losses can exceed expectations. Options and
+                                leveraged products can be particularly risky. Market information and analytical tools do
+                                not guarantee profitable outcomes.
+                            </p>
+                            <p>
+                                Understand the products you trade, review the applicable terms and costs, and never risk
+                                money you cannot afford to lose.
+                            </p>
+                            <a class="btn btn-ghost-paper" data-link="risk" href="#">Read Our Risk Disclosure</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final call to action -->
+            <section class="section final">
+                <div class="wrap final-inner">
+                    <div>
+                        <h2>Your Strategy. Your Next Move.</h2>
+                        <p>Explore the tools, markets, and information available through FiscoFX.</p>
+                    </div>
+                    <div class="final-actions">
+                        <a class="btn btn-white" data-link="signup" href="/">Get Started</a>
+                        <a class="btn btn-line" href="#markets">Explore Markets</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="wrap">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <img src="/brand/brand-logo-dark.svg" alt="FiscoFX" width="150" height="36" />
+                        <p>FiscoFX — Trade Smart. Think Ahead.</p>
+                    </div>
+                    <nav aria-label="Explore">
+                        <h3>Explore</h3>
+                        <ul>
+                            <li><a href="#markets">Markets</a></li>
+                            <li><a href="#trading">Trading Tools</a></li>
+                            <li><a href="#insights">Market Insights</a></li>
+                            <li><a data-link="help" href="#">Help Centre</a></li>
+                        </ul>
+                    </nav>
+                    <nav aria-label="Legal">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a data-link="terms" href="#">Terms &amp; Conditions</a></li>
+                            <li><a data-link="privacy" href="#">Privacy Policy</a></li>
+                            <li><a data-link="risk" href="#">Risk Disclosure</a></li>
+                            <li><a data-link="complaints" href="#">Complaints</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer-legal">
+                    <p>© 2026 FiscoFX. All rights reserved.</p>
+                    <p>
+                        FiscoFX is an independent platform. Any relationship with third-party trading providers should
+                        be described accurately and only where authorised. The availability of financial products and
+                        services depends on applicable agreements, eligibility requirements, and local regulations.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            // Where each button goes. Change these when the real pages exist.
+            var LINKS = {
+                trade: '/',
+                login: '/',
+                signup: '/',
+                help: 'https://trade.deriv.com/help-centre',
+                terms: '#',
+                privacy: '#',
+                risk: '#risk',
+                complaints: '#',
+            };
+
+            document.querySelectorAll('[data-link]').forEach(function (a) {
+                var target = LINKS[a.getAttribute('data-link')];
+                if (target) a.setAttribute('href', target);
+                if (/^https?:/.test(target || '')) {
+                    a.setAttribute('target', '_blank');
+                    a.setAttribute('rel', 'noopener noreferrer');
+                }
+            });
+
+            // Mobile menu
+            var nav = document.getElementById('nav');
+            var toggle = nav.querySelector('.nav-toggle');
+            toggle.addEventListener('click', function () {
+                var open = nav.classList.toggle('is-open');
+                toggle.setAttribute('aria-expanded', String(open));
+                toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            });
+            nav.querySelectorAll('.nav-links a').forEach(function (a) {
+                a.addEventListener('click', function () {
+                    nav.classList.remove('is-open');
+                    toggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // ---------- Illustrative charts (generated, not market data) ----------
+            var NS = 'http://www.w3.org/2000/svg';
+            var UP = '#00c2a8';
+            var DOWN = '#ec3f3f';
+
+            function rng(seed) {
+                var a = seed >>> 0;
+                return function () {
+                    a |= 0;
+                    a = (a + 0x6d2b79f5) | 0;
+                    var t = Math.imul(a ^ (a >>> 15), 1 | a);
+                    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+                    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+                };
+            }
+
+            function el(name, attrs, parent) {
+                var node = document.createElementNS(NS, name);
+                for (var k in attrs) node.setAttribute(k, attrs[k]);
+                if (parent) parent.appendChild(node);
+                return node;
+            }
+
+            function makeCandles(count, seed) {
+                var r = rng(seed);
+                var price = 100;
+                var out = [];
+                for (var i = 0; i < count; i++) {
+                    var open = price;
+                    var drift = (r() - 0.44) * 5;
+                    var close = open + drift;
+                    var high = Math.max(open, close) + r() * 2.6;
+                    var low = Math.min(open, close) - r() * 2.6;
+                    out.push({ o: open, c: close, h: high, l: low });
+                    price = close;
+                }
+                return out;
+            }
+
+            function drawChart(svg, count, seed, live) {
+                var vb = svg.viewBox.baseVal;
+                var W = vb.width;
+                var H = vb.height;
+                var padTop = 14;
+                var padBottom = 14;
+                var candles = makeCandles(count, seed);
+                var lo = Math.min.apply(
+                    null,
+                    candles.map(function (c) {
+                        return c.l;
+                    })
+                );
+                var hi = Math.max.apply(
+                    null,
+                    candles.map(function (c) {
+                        return c.h;
+                    })
+                );
+                var span = hi - lo || 1;
+                function y(v) {
+                    return padTop + (1 - (v - lo) / span) * (H - padTop - padBottom);
+                }
+                // grid
+                for (var g = 1; g < 5; g++) {
+                    el(
+                        'line',
+                        {
+                            x1: 0,
+                            x2: W,
+                            y1: (H / 5) * g,
+                            y2: (H / 5) * g,
+                            stroke: '#25324f',
+                            'stroke-width': 1,
+                            'stroke-dasharray': '2 6',
+                        },
+                        svg
+                    );
+                }
+                var step = W / count;
+                var bw = Math.max(3, step * 0.58);
+                var nodes = [];
+                candles.forEach(function (c, i) {
+                    var x = step * i + step / 2;
+                    var color = c.c >= c.o ? UP : DOWN;
+                    var wick = el(
+                        'line',
+                        { x1: x, x2: x, y1: y(c.h), y2: y(c.l), stroke: color, 'stroke-width': 1.5 },
+                        svg
+                    );
+                    var body = el(
+                        'rect',
+                        {
+                            x: x - bw / 2,
+                            y: Math.min(y(c.o), y(c.c)),
+                            width: bw,
+                            height: Math.max(2, Math.abs(y(c.o) - y(c.c))),
+                            rx: 1.5,
+                            fill: color,
+                        },
+                        svg
+                    );
+                    nodes.push({ wick: wick, body: body, x: x, c: c });
+                });
+                var last = candles[candles.length - 1];
+                var priceLine = el(
+                    'line',
+                    {
+                        x1: 0,
+                        x2: W,
+                        y1: y(last.c),
+                        y2: y(last.c),
+                        stroke: '#5f9bff',
+                        'stroke-width': 1,
+                        'stroke-dasharray': '4 4',
+                    },
+                    svg
+                );
+
+                if (live && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    var tick = rng(seed + 99);
+                    var node = nodes[nodes.length - 1];
+                    setTimeout(function () {
+                        setInterval(function () {
+                            var c = node.c;
+                            c.c += (tick() - 0.5) * 2.2;
+                            c.h = Math.max(c.h, c.c);
+                            c.l = Math.min(c.l, c.c);
+                            var color = c.c >= c.o ? UP : DOWN;
+                            node.wick.setAttribute('y1', y(c.h));
+                            node.wick.setAttribute('y2', y(c.l));
+                            node.wick.setAttribute('stroke', color);
+                            node.body.setAttribute('y', Math.min(y(c.o), y(c.c)));
+                            node.body.setAttribute('height', Math.max(2, Math.abs(y(c.o) - y(c.c))));
+                            node.body.setAttribute('fill', color);
+                            priceLine.setAttribute('y1', y(c.c));
+                            priceLine.setAttribute('y2', y(c.c));
+                        }, 900);
+                    }, 2500);
+                }
+            }
+
+            function drawSpark(svg) {
+                var seed = Number(svg.getAttribute('data-spark')) || 1;
+                var r = rng(seed);
+                var pts = [];
+                var v = 20;
+                for (var i = 0; i < 24; i++) {
+                    v += (r() - 0.46) * 6;
+                    pts.push(v);
+                }
+                var lo = Math.min.apply(null, pts);
+                var hi = Math.max.apply(null, pts);
+                var d = pts
+                    .map(function (p, i) {
+                        var x = (i / (pts.length - 1)) * 120;
+                        var yy = 36 - ((p - lo) / (hi - lo || 1)) * 32;
+                        return (i ? 'L' : 'M') + x.toFixed(1) + ' ' + yy.toFixed(1);
+                    })
+                    .join('');
+                var up = pts[pts.length - 1] >= pts[0];
+                var onDark = !!svg.closest('.term-watch');
+                el(
+                    'path',
+                    {
+                        d: d,
+                        fill: 'none',
+                        stroke: up ? (onDark ? UP : '#0a9d89') : DOWN,
+                        'stroke-width': 2,
+                        'stroke-linecap': 'round',
+                        'stroke-linejoin': 'round',
+                    },
+                    svg
+                );
+            }
+
+            drawChart(document.getElementById('hero-chart'), 46, 7, true);
+            drawChart(document.getElementById('term-chart'), 32, 21, false);
+            document.querySelectorAll('[data-spark]').forEach(drawSpark);
+        </script>
+    </body>
+</html>

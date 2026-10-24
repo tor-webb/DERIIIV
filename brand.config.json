@@ -1,0 +1,70 @@
+{
+    "brand_name": "FiscoFX",
+    "brand_logo": "brand/brand-logo.svg",
+    "brand_logo_dark": "brand/brand-logo-dark.svg",
+    "brand_domain": "deriv.com",
+    "brand_hostname": {
+        "staging": "staging.dtrader-template.pages.dev",
+        "production": "dtrader-template.pages.dev"
+    },
+    "platform": {
+        "name": "FiscoFX",
+        "description": "FiscoFX: Trade Smart. Think Ahead. An intuitive trading workspace for charts, watchlists and portfolio information.",
+        "logo": "brand/platform-logo.svg",
+        "home_url": "https://home.deriv.com/dashboard",
+        "help_centre_url": "https://trade.deriv.com/help-centre"
+    },
+    "signup_url": {
+        "production": "https://home.deriv.com/dashboard/signup",
+        "staging": "https://staging-home.deriv.com/dashboard/signup"
+    },
+    "deposit_url": {
+        "staging": "https://staging.dtrader-template.pages.dev/transfer",
+        "production": "https://dtrader-template.pages.dev/transfer"
+    },
+    "auth": {
+        "staging": "https://staging-auth.deriv.com",
+        "production": "https://auth.deriv.com",
+        "oauth_scopes": ["trade", "account_manage"],
+        "oauth_redirect_uri_staging": "https://staging.dtrader-template.pages.dev",
+        "oauth_redirect_uri_production": "https://dtrader-template.pages.dev",
+        "oauth_app_id": ""
+    },
+    "derivws": {
+        "staging": "https://staging-api.derivws.com",
+        "production": "https://api.derivws.com"
+    },
+    "api_core": {
+        "staging": "staging-api-core.deriv.com",
+        "production": "api-core.deriv.com"
+    },
+    "api": {
+        "staging": "staging-api.deriv.com",
+        "production": "api.deriv.com"
+    },
+    "app_id": {
+        "staging": 16929,
+        "production": 16929
+    },
+    "colors": {
+        "primary": "#1f6bff",
+        "secondary": "#8593ad",
+        "tertiary": "#00c2a8",
+        "success": "#00b39b",
+        "danger": "#ec3f3f",
+        "warning": "#ffad3a",
+        "info": "#2196f3",
+        "neutral": "#999999",
+        "black": "#0b1220",
+        "white": "#ffffff"
+    },
+    "color_variants": {
+        "auto_generate": true,
+        "lighten_percentage": 10,
+        "darken_percentage": 10
+    },
+    "features": {
+        "dark_mode": true,
+        "language_switcher": false
+    }
+}
