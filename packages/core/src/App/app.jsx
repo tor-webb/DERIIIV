@@ -25,6 +25,8 @@ const App = ({ root_store }) => {
     const l = window.location;
     const base = l.pathname.split('/')[1];
     const has_base = /^\/(br_)/.test(l.pathname);
+    // Set at build time (e.g. 'DERIIIV') when the app is hosted under a sub-path such as GitHub Pages.
+    const public_base = process.env.PUBLIC_BASE;
     const { preferred_language } = root_store.client;
     const { is_dark_mode_on } = root_store.ui;
     const is_dark_mode = is_dark_mode_on || JSON.parse(localStorage.getItem('ui_store'))?.is_dark_mode_on;
@@ -129,7 +131,7 @@ const App = ({ root_store }) => {
     }, []);
 
     return (
-        <Router basename={has_base ? `/${base}` : null}>
+        <Router basename={public_base ? `/${public_base}` : has_base ? `/${base}` : null}>
             <StoreProvider store={root_store}>
                 <BreakpointProvider>
                     <APIProvider>
