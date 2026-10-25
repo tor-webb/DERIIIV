@@ -1,0 +1,160 @@
+.copy-trading {
+    box-sizing: border-box;
+    min-height: calc(100vh - var(--top-nav-height, 0px));
+    padding: 4rem 2.4rem;
+    background-color: var(--color-surface-section);
+    color: var(--color-text-primary);
+    overflow-y: auto;
+
+    &__header,
+    &__card,
+    &__disclaimer {
+        max-width: 72rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__header {
+        margin-bottom: 2.4rem;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 3.2rem;
+        font-weight: 800;
+    }
+
+    &__subtitle {
+        margin: 0.8rem 0 0;
+        font-size: 1.6rem;
+        opacity: 0.8;
+    }
+
+    &__card {
+        margin-bottom: 1.6rem;
+        padding: 2.4rem;
+        border-radius: 1.6rem;
+        background-color: var(--color-surface-card, var(--brand-white));
+        box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.06);
+    }
+
+    &__section-title {
+        margin: 0 0 1.2rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+
+    &__steps {
+        margin: 0;
+        padding-left: 2rem;
+        font-size: 1.4rem;
+        line-height: 1.8;
+    }
+
+    &__fine {
+        margin: 1.6rem 0 0;
+        font-size: 1.2rem;
+        opacity: 0.7;
+    }
+
+    &__form,
+    &__login,
+    &__active {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+
+    &__account,
+    &__notice {
+        margin: 0;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    &__field {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 0.6rem 0.8rem;
+        align-items: center;
+        font-size: 1.3rem;
+        font-weight: 600;
+
+        span {
+            grid-column: 1 / -1;
+        }
+
+        input {
+            min-width: 0;
+            padding: 1rem 1.2rem;
+            border: 1px solid var(--color-border-normal, #ced2d9);
+            border-radius: 0.8rem;
+            background: transparent;
+            color: inherit;
+            font-size: 1.6rem;
+        }
+
+        small {
+            opacity: 0.7;
+        }
+    }
+
+    &__consent {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+
+    &__button {
+        align-self: flex-start;
+        padding: 1.2rem 2.4rem;
+        border: none;
+        border-radius: 999px;
+        background-color: var(--brand-primary);
+        color: var(--brand-white);
+        font-size: 1.4rem;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+        }
+
+        &--stop {
+            background-color: var(--brand-danger, #ec3f3f);
+        }
+    }
+
+    &__badge {
+        margin: 0;
+        padding: 1rem 1.4rem;
+        border-radius: 0.8rem;
+        background-color: rgba(0, 179, 155, 0.15);
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    &__message {
+        margin: 1.6rem 0 0;
+        padding: 1.2rem 1.4rem;
+        border-radius: 0.8rem;
+        font-size: 1.3rem;
+
+        &--error {
+            background-color: rgba(236, 63, 63, 0.12);
+        }
+
+        &--success {
+            background-color: rgba(0, 179, 155, 0.15);
+        }
+    }
+
+    &__disclaimer {
+        margin-top: 2.4rem;
+        font-size: 1.2rem;
+        opacity: 0.65;
+    }
+}

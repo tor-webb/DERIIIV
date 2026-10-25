@@ -2,7 +2,6 @@ import React from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 
-import { useMobileBridge } from '@deriv/api';
 import { Button, Flyout, Text } from '@deriv/components';
 import {
     LabelPairedLifeRingSmRegularIcon,
@@ -22,7 +21,6 @@ import {
     getBrandLogo,
     getBrandLogoDark,
     getBrandName,
-    getHomeUrl,
     getHelpCentreUrl,
     getUrlBase,
     isFeatureEnabled,
@@ -56,7 +54,6 @@ const Sidebar = observer(() => {
     const location = useLocation();
     const history = useHistory();
     const sidebar_ref = React.useRef<HTMLElement>(null);
-    const { sendBridgeEvent } = useMobileBridge();
 
     React.useEffect(() => {
         onMount();
@@ -96,11 +93,10 @@ const Sidebar = observer(() => {
         window.open(getHelpCentreUrl(), '_blank', 'noopener,noreferrer');
     };
 
+    // Home stays inside this site: it opens our own dashboard, not Deriv's.
     const handleHomeClick = () => {
         closeSidebarFlyout();
-        sendBridgeEvent('trading:home', () => {
-            window.location.href = getHomeUrl();
-        });
+        history.push(routes.dashboard);
     };
 
     const closeFlyout = () => {

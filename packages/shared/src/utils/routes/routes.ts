@@ -4,6 +4,8 @@ export const routes = {
     dashboard: '/dashboard',
     charts: '/charts',
     bot_builder: '/bot-builder',
+    risk_calculator: '/risk-calculator',
+    copy_trading: '/copy-trading',
     callback_page: '/callback',
     error404: '/404',
     endpoint: '/endpoint',

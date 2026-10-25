@@ -40,6 +40,18 @@ const Dashboard = observer(() => {
             path: routes.bot_builder,
         },
         {
+            id: 'risk_calculator',
+            title: localize('Risk calculator'),
+            description: localize('Work out your position size and stake'),
+            path: routes.risk_calculator,
+        },
+        {
+            id: 'copy_trading',
+            title: localize('Copy trading'),
+            description: localize('Mirror our trades on your account'),
+            path: routes.copy_trading,
+        },
+        {
             id: 'positions',
             title: localize('Positions'),
             description: localize('Your open contracts'),

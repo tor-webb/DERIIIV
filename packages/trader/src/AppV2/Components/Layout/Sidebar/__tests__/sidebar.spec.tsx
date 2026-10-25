@@ -1,4 +1,4 @@
-import { Router } from 'react-router-dom';
+import { MemoryRouter, Route, Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 
 import { mockStore, StoreProvider } from '@deriv/stores';
@@ -11,20 +11,8 @@ jest.mock('@deriv/shared', () => ({
     useWS: () => ({
         send: jest.fn(),
     }),
-    getHomeUrl: jest.fn(() => 'https://home.deriv.com/dashboard'),
     getHelpCentreUrl: jest.fn(() => 'https://trade.deriv.com/help-centre'),
     isFeatureEnabled: jest.fn(() => true),
-}));
-
-jest.mock('@deriv/api', () => ({
-    ...jest.requireActual('@deriv/api'),
-    useMobileBridge: jest.fn(() => ({
-        sendBridgeEvent: jest.fn((_event, dataOrFallback, callback) => {
-            // Handle overloaded signature - detect if second param is function or data
-            const actualFallback = typeof dataOrFallback === 'function' ? dataOrFallback : callback;
-            return actualFallback && actualFallback();
-        }),
-    })),
 }));
 
 jest.mock('@deriv-com/translations', () => ({
@@ -120,7 +108,7 @@ describe('<Sidebar />', () => {
         expect(screen.getByTestId('dt_sidebar_home')).toBeInTheDocument();
     });
 
-    it('should navigate to home when Home button is clicked', () => {
+    it('should open our own dashboard (not Deriv) when Home button is clicked', () => {
         const store = mockStore({
             ...defaultStoreConfig,
             client: {
@@ -128,10 +116,20 @@ describe('<Sidebar />', () => {
                 currency: 'USD',
             },
         });
-        renderSidebar(store);
-        const homeButton = screen.getByTestId('dt_sidebar_home');
-        fireEvent.click(homeButton);
-        expect(window.location.href).toBe('https://home.deriv.com/dashboard');
+        render(
+            <MemoryRouter initialEntries={['/']}>
+                <StoreProvider store={store}>
+                    <Sidebar />
+                    <Route
+                        path='*'
+                        render={({ location }) => <div data-testid='dt_location'>{location.pathname}</div>}
+                    />
+                </StoreProvider>
+            </MemoryRouter>
+        );
+        fireEvent.click(screen.getByTestId('dt_sidebar_home'));
+        expect(screen.getByTestId('dt_location')).toHaveTextContent('/dashboard');
+        expect(window.location.href).toBe('');
         expect(store.ui.closeSidebarFlyout).toHaveBeenCalled();
     });
 

@@ -274,3 +274,23 @@ export const isFeatureEnabled = (feature: 'dark_mode' | 'language_switcher'): bo
     const features = (config_data as Record<string, unknown>).features as Record<string, boolean> | undefined;
     return features?.[feature] ?? false;
 };
+
+export type TCopyTradingConfig = {
+    enabled: boolean;
+    trader_name: string;
+    /** A READ-ONLY Deriv API token of the trader being copied. Followers send it to Deriv's `copy_start`. */
+    trader_token: string;
+};
+
+/**
+ * Copy trading settings from `copy_trading` in brand.config.json.
+ * The token must be a read-only token: it is public once the site is built, and Deriv only needs read access to copy.
+ */
+export const getCopyTradingConfig = (): TCopyTradingConfig => {
+    const copy = (config_data as Record<string, unknown>).copy_trading as Partial<TCopyTradingConfig> | undefined;
+    return {
+        enabled: copy?.enabled ?? false,
+        trader_name: copy?.trader_name ?? '',
+        trader_token: (copy?.trader_token ?? '').trim(),
+    };
+};

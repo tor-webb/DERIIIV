@@ -11,7 +11,7 @@
         "name": "FiscoFX",
         "description": "FiscoFX: Trade Smart. Think Ahead. An intuitive trading workspace for charts, watchlists and portfolio information.",
         "logo": "brand/platform-logo.svg",
-        "home_url": "https://home.deriv.com/dashboard",
+        "home_url": "https://tor-webb.github.io/DERIIIV/app/dashboard",
         "help_centre_url": "https://trade.deriv.com/help-centre"
     },
     "signup_url": {
@@ -62,6 +62,11 @@
         "auto_generate": true,
         "lighten_percentage": 10,
         "darken_percentage": 10
+    },
+    "copy_trading": {
+        "enabled": true,
+        "trader_name": "FiscoFX",
+        "trader_token": ""
     },
     "features": {
         "dark_mode": true,
