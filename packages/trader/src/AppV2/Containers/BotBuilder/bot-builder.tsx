@@ -42,6 +42,23 @@ const EMPTY_STATS: TBotStats = { runs: 0, won: 0, lost: 0, total_profit: 0, tota
 
 const EMPTY_LIMITS: TRunLimitsInput = { max_trades: '', max_profit: '', max_loss: '' };
 
+/**
+ * The bot's "prompt for number/text" blocks. A browser prompt is the simplest thing that works and is what Deriv Bot
+ * does. Cancelling stops the bot. A number question is asked again, up to three times, until the answer is a number.
+ */
+const askUser = (message: string, kind: 'NUMBER' | 'TEXT'): number | string => {
+    const attempts = kind === 'NUMBER' ? 3 : 1;
+    let question = message;
+    for (let attempt = 0; attempt < attempts; attempt += 1) {
+        const answer = window.prompt(question);
+        if (answer === null) throw new Error(localize('The bot stopped because a question was cancelled.'));
+        if (kind === 'TEXT') return answer;
+        if (answer.trim() !== '' && Number.isFinite(Number(answer))) return Number(answer);
+        question = localize('Please enter a number. {{question}}', { question: message });
+    }
+    throw new Error(localize('The bot stopped because no number was entered.'));
+};
+
 const parseLimit = (value: string) => {
     const parsed = Number(value);
     return Number.isFinite(parsed) && parsed > 0 ? parsed : undefined;
@@ -176,6 +193,7 @@ const BotBuilder = observer(() => {
             onStatus: setRunStatus,
             onTransaction: upsertTransaction,
             onLiveContract: setLive,
+            prompt: askUser,
         });
         runner_ref.current = runner;
         runner.start();

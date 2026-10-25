@@ -27,12 +27,15 @@ Everything described below lives in `packages/trader/src/AppV2/`.
 ## Known gaps, in the order I would do them
 
 1. **Importing Deriv XML bots.** Import exists (toolbar, Import) and is safe (allow-list scan, no DOCTYPE/ENTITY). It
-   works for bots built from the blocks we support: trade parameters, purchase/sell/restart sections, if/compare/logic,
-   math, text, variables, loops, functions, `read_details` (profit), `contract_check_result`, `total_profit`, `notify`,
+   works for bots built from the blocks we support: trade parameters (including scripts that pick the trade options at
+   run time), purchase/sell/restart sections, if/compare/logic/null, math (including even/odd/prime checks), text,
+   prompts, variables, loops, functions, `read_details` (profit), `contract_check_result`, `total_profit`, `notify`,
    `timeout`. That covers stake-management bots (Martingale, D'Alembert, Oscar's Grind style). A bot that uses a block
    outside the allow-list is **refused with a list of the blocks missing**; it is not partly loaded. Not supported yet:
    indicators (SMA, EMA, RSI, Bollinger, MACD), candle and tick lists, `check_direction`, `ohlc`, most contract types
-   (only Rise/Fall, Even/Odd, Over/Under, Matches/Differs), barrier trades. Each new block needs: a definition, an
+   (only Rise/Fall, Even/Odd, Over/Under, Matches/Differs), barrier trades. The imported KTH bot declares an `rsi`
+   variable but no indicator block, so it never reads an RSI value here; its trades follow its own even/odd logic.
+   Blockly logs a console warning for the two barrier-offset fields on legacy `tradeOptions` blocks; harmless for digits. Each new block needs: a definition, an
    entry in `ALLOWED_BLOCK_TYPES`, a compiler case, an interpreter or runner path and a test (see the other handoff,
    section 7). Get two or three real bot files from the user first and add what they actually use. The
    `deriv-bots.spec.ts` suite shows how to test a real export.

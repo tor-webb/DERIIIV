@@ -4,7 +4,17 @@ import { localize } from '@deriv-com/translations';
 
 import { BLOCK_TYPES, TRADE_TYPES } from '../blocks';
 
-import type { TDataKind, TExpr, TLevel, TProcedure, TProgram, TStmt, TTradeOptions, TTradeSetup } from './types';
+import type {
+    TDataKind,
+    TExpr,
+    TLevel,
+    TNumberProperty,
+    TProcedure,
+    TProgram,
+    TStmt,
+    TTradeOptions,
+    TTradeSetup,
+} from './types';
 
 export class CompileError extends Error {}
 
@@ -93,8 +103,25 @@ export const compileExpr = (block: Blockly.Block): TExpr => {
             return { t: 'str', v: String(block.getFieldValue('TEXT') ?? '') };
         case 'logic_boolean':
             return { t: 'bool', v: block.getFieldValue('BOOL') === 'TRUE' };
+        case 'logic_null':
+            return { t: 'null' };
         case 'variables_get':
             return { t: 'var', name: getVariableName(block) };
+        case 'math_number_property': {
+            const prop = String(block.getFieldValue('PROPERTY')) as TNumberProperty;
+            return {
+                t: 'numprop',
+                prop,
+                a: compileInput(block, 'NUMBER_TO_CHECK'),
+                divisor: prop === 'DIVISIBLE_BY' ? compileInput(block, 'DIVISOR') : null,
+            };
+        }
+        case 'text_prompt_ext':
+            return {
+                t: 'prompt',
+                kind: block.getFieldValue('TYPE') === 'NUMBER' ? 'NUMBER' : 'TEXT',
+                message: compileInput(block, 'TEXT'),
+            };
         case 'logic_compare':
             return {
                 t: 'cmp',
@@ -195,6 +222,14 @@ const compileStatement = (block: Blockly.Block): TStmt => {
                 seconds: compileInput(block, 'SECONDS'),
                 body: compileStack(block.getInputTargetBlock('TIMEOUTSTACK')),
             };
+        case BLOCK_TYPES.TRADE_OPTIONS:
+            return {
+                t: 'set_options',
+                duration_unit: String(block.getFieldValue('DURATIONTYPE_LIST')),
+                duration: compileInput(block, 'DURATION'),
+                amount: compileInput(block, 'AMOUNT'),
+                prediction: block.getInputTargetBlock('PREDICTION') ? compileInput(block, 'PREDICTION') : null,
+            };
         case BLOCK_TYPES.PURCHASE:
             return { t: 'purchase', contract_type: block.getFieldValue('PURCHASE_LIST') };
         case BLOCK_TYPES.SELL_AT_MARKET:
@@ -254,8 +289,13 @@ const compileSetup = (trade_block: Blockly.Block): TTradeSetup => {
     };
 };
 
+/** The first trade options block anywhere in the trade parameters script, however deep it sits. */
+const findNestedOptions = (first: Blockly.Block | null) =>
+    first?.getDescendants(false).find(block => block.type === BLOCK_TYPES.TRADE_OPTIONS && block.isEnabled()) ?? null;
+
 const compileOptions = (trade_block: Blockly.Block, trade_type: string): TTradeOptions => {
-    const options = findInStack(trade_block.getInputTargetBlock('SUBMARKET'), BLOCK_TYPES.TRADE_OPTIONS);
+    const stack = trade_block.getInputTargetBlock('SUBMARKET');
+    const options = findInStack(stack, BLOCK_TYPES.TRADE_OPTIONS) ?? findNestedOptions(stack);
     if (!options) throw new CompileError(localize('Missing block: Trade options (duration and stake).'));
     return {
         duration_unit: String(options.getFieldValue('DURATIONTYPE_LIST')),
@@ -304,9 +344,14 @@ export const compileProgram = (workspace: Blockly.Workspace): TProgram => {
     if (!after_block) throw new CompileError(localize('Missing block: Restart trading conditions.'));
 
     const setup = compileSetup(trade_block);
+    const options_stack_start = trade_block.getInputTargetBlock('SUBMARKET');
+    // options picked by a script (inside ifs, loops, timeouts) rather than a plain trade options block
+    const picks_options_at_run_time =
+        !findInStack(options_stack_start, BLOCK_TYPES.TRADE_OPTIONS) && Boolean(findNestedOptions(options_stack_start));
     return {
         setup,
         options: compileOptions(trade_block, setup.trade_type),
+        options_stack: picks_options_at_run_time ? compileStack(options_stack_start) : null,
         init: compileStack(trade_block.getInputTargetBlock('INITIALIZATION')),
         before_purchase: compileStack(before_block.getInputTargetBlock('BEFOREPURCHASE_STACK')),
         during_purchase: during_block ? compileStack(during_block.getInputTargetBlock('DURING_PURCHASE_STACK')) : [],

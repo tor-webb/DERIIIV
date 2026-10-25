@@ -1,6 +1,6 @@
 export type TLevel = 'info' | 'success' | 'warn' | 'error';
 
-export type TValue = number | boolean | string;
+export type TValue = number | boolean | string | null;
 
 export type TDataKind =
     | 'tick'
@@ -19,10 +19,13 @@ export type TDataKind =
     | 'detail_profit'
     | 'detail_sell_price';
 
+export type TNumberProperty = 'EVEN' | 'ODD' | 'PRIME' | 'WHOLE' | 'POSITIVE' | 'NEGATIVE' | 'DIVISIBLE_BY';
+
 export type TExpr =
     | { t: 'num'; v: number }
     | { t: 'bool'; v: boolean }
     | { t: 'str'; v: string }
+    | { t: 'null' }
     | { t: 'var'; name: string }
     | { t: 'data'; kind: TDataKind }
     | { t: 'cmp'; op: 'EQ' | 'NEQ' | 'LT' | 'LTE' | 'GT' | 'GTE'; a: TExpr; b: TExpr }
@@ -31,6 +34,8 @@ export type TExpr =
     | { t: 'arith'; op: 'ADD' | 'MINUS' | 'MULTIPLY' | 'DIVIDE' | 'POWER'; a: TExpr; b: TExpr }
     | { t: 'single'; op: 'ROOT' | 'ABS' | 'NEG' | 'LN' | 'LOG10' | 'EXP' | 'POW10'; a: TExpr }
     | { t: 'mod'; a: TExpr; b: TExpr }
+    | { t: 'numprop'; prop: TNumberProperty; a: TExpr; divisor: TExpr | null }
+    | { t: 'prompt'; kind: 'NUMBER' | 'TEXT'; message: TExpr }
     | { t: 'round'; op: 'ROUND' | 'ROUNDUP' | 'ROUNDDOWN'; a: TExpr }
     | { t: 'rand'; from: TExpr; to: TExpr }
     | { t: 'join'; parts: TExpr[] }
@@ -47,6 +52,7 @@ export type TStmt =
     | { t: 'while'; until: boolean; cond: TExpr; body: TStmt[] }
     | { t: 'flow'; kind: 'BREAK' | 'CONTINUE' }
     | { t: 'timeout'; seconds: TExpr; body: TStmt[] }
+    | { t: 'set_options'; duration_unit: string; duration: TExpr; amount: TExpr; prediction: TExpr | null }
     | { t: 'call'; name: string; args: TExpr[] }
     | { t: 'return'; cond: TExpr | null; value: TExpr | null };
 
@@ -88,6 +94,12 @@ export type TProgram = {
     /** Runs once when a contract has finished. */
     after_purchase: TStmt[];
     procedures: Record<string, TProcedure>;
+    /**
+     * Set when the trade parameters block holds a script that picks the trade options at run time (Binary Bot style:
+     * `tradeOptions` blocks inside ifs, loops and timeouts). The runner runs it before every trade and waits for a
+     * `set_options` statement to say what to trade. Absent for the usual fixed duration and stake.
+     */
+    options_stack?: TStmt[] | null;
 };
 
 /** What the runner sends to the API for one trade. */

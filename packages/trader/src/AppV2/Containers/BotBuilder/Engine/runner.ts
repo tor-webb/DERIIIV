@@ -13,6 +13,7 @@ import type {
     TProgram,
     TRunLimits,
     TRunStatus,
+    TExpr,
     TStmt,
     TSubscription,
     TTradeRequest,
@@ -20,7 +21,7 @@ import type {
     TValue,
 } from './types';
 
-type TPhase = 'idle' | 'starting' | 'waiting' | 'buying' | 'in_contract' | 'restarting';
+type TPhase = 'idle' | 'starting' | 'preparing' | 'waiting' | 'buying' | 'in_contract' | 'restarting';
 
 export type TRunnerOptions = {
     api: TBotApi;
@@ -34,7 +35,12 @@ export type TRunnerOptions = {
     onTransaction?: (transaction: TTransaction) => void;
     /** The contract being followed, or null once it has closed. Feeds the live card in the Summary tab. */
     onLiveContract?: (contract: TLiveContract | null) => void;
+    /** Answers the bot's "prompt for" questions. It may throw (for example when the person cancels) to stop the bot. */
+    prompt?: (message: string, kind: 'NUMBER' | 'TEXT') => TValue;
 };
+
+/** The trade options a bot picked at run time (see `TProgram.options_stack`), worked out but not yet checked. */
+type TPickedOptions = { duration_unit: string; duration: TValue; amount: TValue; prediction: TValue | null };
 
 type TRequests = { purchase: string | null; sell: boolean; trade_again: boolean };
 
@@ -111,6 +117,7 @@ export class BotRunner {
     private last_contract_id = 0;
     private contract_type = '';
     private last_request: TTradeRequest | null = null;
+    private picked_options: TPickedOptions | null = null;
     private buy_in_flight = false;
     private sell_in_flight = false;
 
@@ -154,8 +161,36 @@ export class BotRunner {
         this.runStack(program.init);
         if (this.status !== 'running') return;
 
-        this.phase = 'waiting';
+        this.picked_options = null;
+        this.phase = program.options_stack ? 'preparing' : 'waiting';
         this.tick_sub = api.subscribeTicks(program.setup.symbol, response => this.onTick(response));
+        if (program.options_stack) this.runOptionsStack();
+    }
+
+    /** With run-time trade options, the trade parameters script runs before every trade and picks the options. */
+    private beginNextTrade() {
+        if (!this.options.program.options_stack) {
+            this.phase = 'waiting';
+            return;
+        }
+        this.picked_options = null;
+        this.phase = 'preparing';
+        this.runOptionsStack();
+    }
+
+    private runOptionsStack() {
+        const { options_stack } = this.options.program;
+        if (!options_stack) return;
+        const requests = this.runStack(options_stack);
+        if (requests) this.applyRequests(requests);
+        this.checkOptionsStalled();
+    }
+
+    /** The script finished (and no timeout is pending) without ever saying what to trade. */
+    private checkOptionsStalled() {
+        if (this.status === 'running' && this.phase === 'preparing' && this.timers.size === 0) {
+            this.fail(localize('The trade parameters did not set any trade options.'));
+        }
     }
 
     /** Stops placing new trades. An open contract is followed until it closes so its result is recorded. */
@@ -273,6 +308,12 @@ export class BotRunner {
                 requests.trade_again = true;
             },
             schedule: (seconds, body) => this.scheduleTimer(seconds, body),
+            prompt: this.options.prompt,
+            setOptions: picked => {
+                if (!this.options.program.options_stack) return;
+                this.picked_options = picked;
+                if (this.phase === 'preparing') this.phase = 'waiting';
+            },
         };
     }
 
@@ -297,6 +338,7 @@ export class BotRunner {
             const requests = this.runStack(body);
             if (requests) this.applyRequests(requests);
             this.finishIfStalled();
+            this.checkOptionsStalled();
         }, seconds * 1000);
         this.timers.add(timer);
     }
@@ -305,7 +347,7 @@ export class BotRunner {
     private finishIfStalled() {
         if (this.status === 'running' && this.phase === 'restarting' && this.timers.size === 0) {
             if (this.options.limits?.keep_running) {
-                this.phase = 'waiting';
+                this.beginNextTrade();
                 return;
             }
             this.stop(localize('Bot finished: the restart conditions did not ask to trade again.'));
@@ -322,7 +364,7 @@ export class BotRunner {
             this.sellContract(this.contract.sell_price);
             return;
         }
-        if (requests.trade_again && this.phase === 'restarting') this.phase = 'waiting';
+        if (requests.trade_again && this.phase === 'restarting') this.beginNextTrade();
     }
 
     private onTick(response: TApiResponse) {
@@ -357,14 +399,25 @@ export class BotRunner {
         }
 
         let amount: number, duration: number;
+        let duration_unit = options.duration_unit;
         let prediction: number | null = null;
         try {
             const ctx = this.makeContext({ purchase: null, sell: false, trade_again: false });
+            // options picked by the bot's own script, or the fixed ones re-evaluated for every trade
+            const picked = program.options_stack ? this.picked_options : null;
+            if (program.options_stack && !picked) {
+                this.fail(localize('The trade parameters did not set any trade options.'));
+                return null;
+            }
+            const read = (expr: TExpr | null, value: TValue | null | undefined) =>
+                picked ? value : expr && evaluate(expr, ctx);
             // the API takes at most two decimals; a martingale stake such as 0.3642 must be rounded first
-            amount = round2(Number(evaluate(options.amount, ctx)));
-            duration = Math.trunc(Number(evaluate(options.duration, ctx)));
+            amount = round2(Number(read(options.amount, picked?.amount)));
+            duration = Math.trunc(Number(read(options.duration, picked?.duration)));
+            if (picked) duration_unit = picked.duration_unit;
             if (PREDICTION_CONTRACTS.has(contract_type)) {
-                if (!options.prediction) {
+                const prediction_value = read(options.prediction, picked?.prediction);
+                if (prediction_value === null || prediction_value === undefined) {
                     this.fail(
                         localize('{{type}} needs a digit prediction, but the trade type has no prediction.', {
                             type: contract_type,
@@ -372,7 +425,7 @@ export class BotRunner {
                     );
                     return null;
                 }
-                prediction = Math.trunc(Number(evaluate(options.prediction, ctx)));
+                prediction = Math.trunc(Number(prediction_value));
             }
         } catch (error) {
             this.fail((error as Error).message);
@@ -400,7 +453,7 @@ export class BotRunner {
             // the platform's own proposals use `underlying_symbol` and an integer duration
             underlying_symbol: setup.symbol,
             duration,
-            duration_unit: options.duration_unit,
+            duration_unit,
         };
         // the platform sends the digit prediction as `barrier`
         if (prediction !== null) request.barrier = String(prediction);
@@ -635,7 +688,7 @@ export class BotRunner {
         const requests = this.runStack(this.options.program.after_purchase);
         if (!requests || this.status !== 'running') return;
         if (requests.trade_again || (limits?.keep_running && this.timers.size === 0)) {
-            this.phase = 'waiting';
+            this.beginNextTrade();
             return;
         }
         // a timeout in the restart conditions may still ask to trade again

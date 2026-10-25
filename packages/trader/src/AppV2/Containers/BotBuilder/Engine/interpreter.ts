@@ -1,6 +1,6 @@
 import { localize } from '@deriv-com/translations';
 
-import type { TDataKind, TExpr, TLevel, TProcedure, TStmt, TValue } from './types';
+import type { TDataKind, TExpr, TLevel, TNumberProperty, TProcedure, TStmt, TValue } from './types';
 
 export class RuntimeError extends Error {}
 
@@ -27,6 +27,15 @@ export type TInterpreterContext = {
     sell: () => void;
     tradeAgain: () => void;
     schedule?: (seconds: number, body: TStmt[]) => void;
+    /** Asks the person running the bot a question (the "prompt for" block). May throw to stop the bot. */
+    prompt?: (message: string, kind: 'NUMBER' | 'TEXT') => TValue;
+    /** A "trade options" block ran: the bot says what to trade next. Values are already worked out. */
+    setOptions?: (options: {
+        duration_unit: string;
+        duration: TValue;
+        amount: TValue;
+        prediction: TValue | null;
+    }) => void;
     /** Parameter scopes of the procedures that are currently running; the last one is the innermost. */
     frames?: Map<string, TValue>[];
     /** Steps left before the bot is considered stuck. */
@@ -49,6 +58,7 @@ const spend = (ctx: TState) => {
 };
 
 const toNumber = (value: TValue): number => {
+    if (value === null) return 0;
     if (typeof value === 'number') return value;
     if (typeof value === 'boolean') return Number(value);
     const parsed = Number(value);
@@ -71,7 +81,8 @@ const lookup = (ctx: TState, name: string): TValue => {
         const frame = ctx.frames[index];
         if (frame.has(name)) return frame.get(name) as TValue;
     }
-    return ctx.vars.get(name) ?? 0;
+    // a variable nobody has set reads as 0; one set to null stays null
+    return ctx.vars.has(name) ? (ctx.vars.get(name) as TValue) : 0;
 };
 
 const assign = (ctx: TState, name: string, value: TValue) => {
@@ -84,7 +95,36 @@ const assign = (ctx: TState, name: string, value: TValue) => {
     ctx.vars.set(name, value);
 };
 
-const isNumeric = (value: TValue) => typeof value !== 'string';
+const isNumeric = (value: TValue) => typeof value !== 'string' && value !== null;
+
+const isPrime = (n: number) => {
+    if (n === 2 || n === 3) return true;
+    if (n <= 1 || n % 1 !== 0 || n % 2 === 0 || n % 3 === 0) return false;
+    for (let divisor = 5; divisor <= Math.sqrt(n); divisor += 6) {
+        if (n % divisor === 0 || n % (divisor + 2) === 0) return false;
+    }
+    return true;
+};
+
+/** The same tests Blockly's "is even / odd / prime / whole / positive / negative / divisible by" block makes. */
+const hasProperty = (prop: TNumberProperty, n: number, divisor: number): boolean => {
+    switch (prop) {
+        case 'EVEN':
+            return n % 2 === 0;
+        case 'ODD':
+            return n % 2 === 1;
+        case 'PRIME':
+            return isPrime(n);
+        case 'WHOLE':
+            return n % 1 === 0;
+        case 'POSITIVE':
+            return n > 0;
+        case 'NEGATIVE':
+            return n < 0;
+        default:
+            return divisor !== 0 && n % divisor === 0;
+    }
+};
 
 const callProcedure = (ctx: TState, name: string, args: TExpr[]): TValue | null => {
     const procedure = ctx.procedures?.[name];
@@ -117,6 +157,8 @@ const evaluateState = (expr: TExpr, ctx: TState): TValue => {
         case 'bool':
         case 'str':
             return expr.v;
+        case 'null':
+            return null;
         case 'var':
             return lookup(ctx, expr.name);
         case 'data':
@@ -133,7 +175,9 @@ const evaluateState = (expr: TExpr, ctx: TState): TValue => {
             const a = evaluateState(expr.a, ctx);
             const b = evaluateState(expr.b, ctx);
             if (expr.op === 'EQ' || expr.op === 'NEQ') {
-                const equal = isNumeric(a) && isNumeric(b) ? Number(a) === Number(b) : toText(a) === toText(b);
+                let equal: boolean;
+                if (a === null || b === null) equal = a === b;
+                else equal = isNumeric(a) && isNumeric(b) ? Number(a) === Number(b) : toText(a) === toText(b);
                 return expr.op === 'EQ' ? equal : !equal;
             }
             const x = toNumber(a);
@@ -171,6 +215,17 @@ const evaluateState = (expr: TExpr, ctx: TState): TValue => {
             const b = toNumber(evaluateState(expr.b, ctx));
             if (b === 0) throw new RuntimeError(localize('The bot tried to divide by zero.'));
             return a % b;
+        }
+        case 'numprop': {
+            const a = toNumber(evaluateState(expr.a, ctx));
+            const divisor = expr.divisor ? toNumber(evaluateState(expr.divisor, ctx)) : 0;
+            return hasProperty(expr.prop, a, divisor);
+        }
+        case 'prompt': {
+            if (!ctx.prompt) {
+                throw new RuntimeError(localize('This bot asks a question, which cannot be answered here.'));
+            }
+            return ctx.prompt(toText(evaluateState(expr.message, ctx)), expr.kind);
         }
         case 'round': {
             const a = toNumber(evaluateState(expr.a, ctx));
@@ -237,6 +292,14 @@ const executeState = (statements: TStmt[], ctx: TState): void => {
                 break;
             case 'notify':
                 ctx.notify(statement.level, toText(evaluateState(statement.message, ctx)));
+                break;
+            case 'set_options':
+                ctx.setOptions?.({
+                    duration_unit: statement.duration_unit,
+                    duration: evaluateState(statement.duration, ctx),
+                    amount: evaluateState(statement.amount, ctx),
+                    prediction: statement.prediction ? evaluateState(statement.prediction, ctx) : null,
+                });
                 break;
             case 'purchase':
                 ctx.purchase(statement.contract_type);
