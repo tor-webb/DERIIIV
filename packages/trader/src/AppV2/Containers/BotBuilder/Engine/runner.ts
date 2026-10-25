@@ -9,6 +9,7 @@ import type {
     TBotStats,
     TDataKind,
     TLevel,
+    TLiveContract,
     TProgram,
     TRunLimits,
     TRunStatus,
@@ -31,18 +32,42 @@ export type TRunnerOptions = {
     onStats: (stats: TBotStats) => void;
     onStatus: (status: TRunStatus) => void;
     onTransaction?: (transaction: TTransaction) => void;
+    /** The contract being followed, or null once it has closed. Feeds the live card in the Summary tab. */
+    onLiveContract?: (contract: TLiveContract | null) => void;
 };
 
 type TRequests = { purchase: string | null; sell: boolean; trade_again: boolean };
 
-type TContractInfo = { buy_price: number; payout: number; profit: number; sell_price: number };
+type TContractInfo = {
+    buy_price: number;
+    payout: number;
+    profit: number;
+    sell_price: number;
+    entry_spot: string;
+    exit_spot: string;
+    current_value: number;
+    tick_current: number;
+    tick_total: number;
+};
 
 const MAX_TIMERS = 100;
 const MAX_CONSECUTIVE_TRADE_ERRORS = 5;
 
 const emptyStats = (): TBotStats => ({ runs: 0, won: 0, lost: 0, total_profit: 0, total_stake: 0, total_payout: 0 });
 
-const emptyContract = (): TContractInfo => ({ buy_price: 0, payout: 0, profit: 0, sell_price: 0 });
+const emptyContract = (): TContractInfo => ({
+    buy_price: 0,
+    payout: 0,
+    profit: 0,
+    sell_price: 0,
+    entry_spot: '',
+    exit_spot: '',
+    current_value: 0,
+    tick_current: 0,
+    tick_total: 0,
+});
+
+const spotText = (value: unknown) => (value === undefined || value === null ? '' : String(value));
 
 const round2 = (value: number) => Math.round(value * 100) / 100;
 
@@ -85,6 +110,7 @@ export class BotRunner {
     private contract_id: number | null = null;
     private last_contract_id = 0;
     private contract_type = '';
+    private last_request: TTradeRequest | null = null;
     private buy_in_flight = false;
     private sell_in_flight = false;
 
@@ -163,6 +189,7 @@ export class BotRunner {
         this.proposal_sub = null;
         this.contract_sub = null;
         this.clearTimers();
+        this.emitLiveContract(false);
         this.phase = 'idle';
         this.status = 'stopped';
         this.options.onStatus(this.status);
@@ -277,6 +304,10 @@ export class BotRunner {
     /** After the restart conditions, the bot may be waiting on a timeout that will say "trade again". */
     private finishIfStalled() {
         if (this.status === 'running' && this.phase === 'restarting' && this.timers.size === 0) {
+            if (this.options.limits?.keep_running) {
+                this.phase = 'waiting';
+                return;
+            }
             this.stop(localize('Bot finished: the restart conditions did not ask to trade again.'));
         }
     }
@@ -373,6 +404,7 @@ export class BotRunner {
         };
         // the platform sends the digit prediction as `barrier`
         if (prediction !== null) request.barrier = String(prediction);
+        this.last_request = request;
         return request;
     }
 
@@ -428,11 +460,12 @@ export class BotRunner {
                 this.consecutive_trade_errors = 0;
                 this.contract_id = Number(contract_id);
                 this.phase = 'in_contract';
+                const { duration, duration_unit } = this.last_request ?? { duration: 0, duration_unit: '' };
                 this.contract = {
+                    ...emptyContract(),
                     buy_price: Number(buy_price),
                     payout: Number(payout ?? 0),
-                    profit: 0,
-                    sell_price: 0,
+                    tick_total: duration_unit === 't' ? duration : 0,
                 };
                 this.sell_available = false;
                 this.sell_in_flight = false;
@@ -447,6 +480,7 @@ export class BotRunner {
                     })
                 );
                 this.emitTransaction('open');
+                this.emitLiveContract();
                 this.contract_sub = this.options.api.subscribeOpenContract(this.contract_id, update =>
                     this.onContract(update)
                 );
@@ -462,12 +496,48 @@ export class BotRunner {
         this.options.onTransaction?.({
             contract_id: this.contract_id,
             contract_type: this.contract_type,
+            symbol: this.options.program.setup.symbol,
             buy_price: this.contract.buy_price,
             payout: this.contract.payout,
             profit: this.contract.profit,
+            entry_spot: this.contract.entry_spot,
+            exit_spot: this.contract.exit_spot,
             status,
             time: new Date().toLocaleTimeString(),
         });
+    }
+
+    private emitLiveContract(open = true) {
+        const { onLiveContract } = this.options;
+        if (!onLiveContract) return;
+        if (!open || this.contract_id === null) {
+            onLiveContract(null);
+            return;
+        }
+        onLiveContract({
+            contract_id: this.contract_id,
+            contract_type: this.contract_type,
+            symbol: this.options.program.setup.symbol,
+            buy_price: this.contract.buy_price,
+            profit: this.contract.profit,
+            current_value: this.contract.current_value,
+            payout: this.contract.payout,
+            resale_offered: this.sell_available,
+            tick_current: this.contract.tick_current,
+            tick_total: this.contract.tick_total,
+        });
+    }
+
+    /** Copies what an open-contract update says about the spots and the tick count. */
+    private readSpots(contract: TApiResponse) {
+        const entry = contract.entry_spot_display_value ?? contract.entry_tick_display_value ?? contract.entry_tick;
+        const exit = contract.exit_tick_display_value ?? contract.exit_tick ?? contract.sell_spot_display_value;
+        if (entry !== undefined && entry !== null) this.contract.entry_spot = spotText(entry);
+        if (exit !== undefined && exit !== null) this.contract.exit_spot = spotText(exit);
+        if (Array.isArray(contract.tick_stream)) this.contract.tick_current = contract.tick_stream.length;
+        else if (contract.tick_count !== undefined && this.contract.tick_total === 0) {
+            this.contract.tick_total = Number(contract.tick_count);
+        }
     }
 
     private onContract(response: TApiResponse) {
@@ -480,13 +550,16 @@ export class BotRunner {
 
         this.contract.profit = Number(contract.profit ?? 0);
         this.contract.sell_price = Number(contract.bid_price ?? contract.sell_price ?? 0);
+        this.contract.current_value = Number(contract.bid_price ?? contract.sell_price ?? 0);
         if (contract.payout !== undefined) this.contract.payout = Number(contract.payout);
         this.sell_available = contract.is_valid_to_sell === 1 && contract.is_sold !== 1;
+        this.readSpots(contract);
 
         if (contract.is_sold === 1) {
             this.finishContract(contract);
             return;
         }
+        this.emitLiveContract();
         if (this.status !== 'running' || this.sell_in_flight) return;
 
         const requests = this.runStack(this.options.program.during_purchase);
@@ -521,6 +594,7 @@ export class BotRunner {
         const won = contract.status === 'won' || profit > 0;
         this.contract.profit = profit;
         this.contract.sell_price = Number(contract.sell_price ?? this.contract.sell_price);
+        this.readSpots(contract);
         this.last_result = won ? 'win' : 'loss';
         this.sell_available = false;
         this.stats.runs += 1;
@@ -529,6 +603,7 @@ export class BotRunner {
         this.stats.total_payout = round2(this.stats.total_payout + this.contract.sell_price);
         this.options.onStats(this.getStats());
         this.emitTransaction(won ? 'won' : 'lost');
+        this.emitLiveContract(false);
         this.last_contract_id = this.contract_id ?? this.last_contract_id;
         this.contract_id = null;
         this.options.onLog(
@@ -545,7 +620,11 @@ export class BotRunner {
 
         const { limits } = this.options;
         if (limits?.max_loss && -this.stats.total_profit >= limits.max_loss) {
-            this.stop(localize('Loss limit of {{amount}} reached.', { amount: limits.max_loss }));
+            this.stop(localize('Stop loss of {{amount}} reached.', { amount: limits.max_loss }));
+            return;
+        }
+        if (limits?.max_profit && this.stats.total_profit >= limits.max_profit) {
+            this.stop(localize('Take profit of {{amount}} reached.', { amount: limits.max_profit }));
             return;
         }
         if (limits?.max_trades && this.stats.runs >= limits.max_trades) {
@@ -555,7 +634,7 @@ export class BotRunner {
 
         const requests = this.runStack(this.options.program.after_purchase);
         if (!requests || this.status !== 'running') return;
-        if (requests.trade_again) {
+        if (requests.trade_again || (limits?.keep_running && this.timers.size === 0)) {
             this.phase = 'waiting';
             return;
         }

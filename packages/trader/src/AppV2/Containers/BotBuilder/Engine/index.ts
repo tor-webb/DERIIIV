@@ -4,6 +4,7 @@ export type {
     TBotApi,
     TBotStats,
     TLevel,
+    TLiveContract,
     TProgram,
     TRunLimits,
     TRunStatus,

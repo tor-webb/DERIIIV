@@ -129,12 +129,33 @@ export type TBotStats = {
 export type TTransaction = {
     contract_id: number;
     contract_type: string;
+    /** The market the contract was bought on, such as `1HZ100V`. */
+    symbol: string;
     buy_price: number;
     payout: number;
     profit: number;
+    /** Entry and exit spot as the API displays them. Empty until the API has reported them. */
+    entry_spot: string;
+    exit_spot: string;
     /** `open` until the contract is sold or expires. */
     status: 'open' | 'won' | 'lost';
     time: string;
+};
+
+/** The contract the bot is following right now, for the live card in the Summary tab. */
+export type TLiveContract = {
+    contract_id: number;
+    contract_type: string;
+    symbol: string;
+    buy_price: number;
+    profit: number;
+    /** What the contract could be sold for now. */
+    current_value: number;
+    payout: number;
+    resale_offered: boolean;
+    /** Ticks seen so far and in total, for tick contracts. `tick_total` is 0 for other durations. */
+    tick_current: number;
+    tick_total: number;
 };
 
 export type TRunStatus = 'idle' | 'running' | 'stopping' | 'stopped';
@@ -142,6 +163,13 @@ export type TRunStatus = 'idle' | 'running' | 'stopping' | 'stopped';
 export type TRunLimits = {
     /** Stop after this many finished trades. */
     max_trades?: number;
-    /** Stop once the total loss reaches this amount (a positive number). */
+    /** Stop (stop loss) once the total loss reaches this amount (a positive number). */
     max_loss?: number;
+    /** Stop (take profit) once the total profit reaches this amount (a positive number). */
+    max_profit?: number;
+    /**
+     * Keep trading until a limit above is hit, even when the restart conditions do not ask to trade again.
+     * The page turns this on whenever a take profit or stop loss is set.
+     */
+    keep_running?: boolean;
 };

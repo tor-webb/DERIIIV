@@ -73,14 +73,54 @@ export const ALLOWED_BLOCK_TYPES: ReadonlySet<string> = new Set<string>([
     'variables_set',
 ]);
 
-const COLOURS = {
-    trade: '#ff444f',
-    purchase: '#0e7c86',
-    sell: '#c0392b',
-    restart: '#6c5ce7',
-    analysis: '#2f80ed',
-    utility: '#e17055',
+/**
+ * Deriv Bot's look: the four section blocks are green, the blocks inside them are light grey with white
+ * dropdowns, and the helper categories keep their own colours. Grey and green blocks are styled through the
+ * theme below (`deriv_section`, `deriv_setting`) so their text can be dark where the fill is light.
+ */
+export const BLOCK_STYLES = {
+    section: 'deriv_section',
+    setting: 'deriv_setting',
 };
+
+const COLOURS = {
+    section: '#3fd16f',
+    setting: '#e3e5e8',
+    analysis: '#2f80ed',
+    utility: '#e8803a',
+};
+
+export const getBlocklyTheme = () =>
+    Blockly.Theme.defineTheme('deriv', {
+        name: 'deriv',
+        base: Blockly.Themes.Classic,
+        blockStyles: {
+            [BLOCK_STYLES.section]: {
+                colourPrimary: COLOURS.section,
+                colourSecondary: '#d9f6e3',
+                colourTertiary: '#2fae58',
+            },
+            [BLOCK_STYLES.setting]: {
+                colourPrimary: COLOURS.setting,
+                colourSecondary: '#ffffff',
+                colourTertiary: '#c6cad0',
+            },
+        },
+        componentStyles: {
+            workspaceBackgroundColour: '#ffffff',
+            toolboxBackgroundColour: '#ffffff',
+            toolboxForegroundColour: '#0e0e0e',
+            flyoutBackgroundColour: '#f2f3f4',
+            flyoutForegroundColour: '#0e0e0e',
+            flyoutOpacity: 1,
+            scrollbarColour: '#c6cad0',
+            insertionMarkerColour: '#3fd16f',
+            insertionMarkerOpacity: 0.3,
+            scrollbarOpacity: 0.6,
+            cursorColour: '#2f80ed',
+        },
+        fontStyle: { family: 'Inter, system-ui, sans-serif', weight: '500', size: 11 },
+    });
 
 /* ----------------------------------------------------------------------------------------------- */
 /* Markets and trade types                                                                          */
@@ -285,10 +325,10 @@ export const registerBlocks = () => {
             message2: localize('Run once at start:'),
             message3: '%1',
             args3: [{ type: 'input_statement', name: 'INITIALIZATION' }],
-            message4: localize('Define your trade options such as duration and stake.'),
+            message4: localize('Trade options:'),
             message5: '%1',
             args5: [{ type: 'input_statement', name: 'SUBMARKET' }],
-            colour: COLOURS.trade,
+            style: BLOCK_STYLES.section,
             tooltip: localize('Define your trade options such as duration and stake.'),
         },
         {
@@ -299,7 +339,7 @@ export const registerBlocks = () => {
             ],
             previousStatement: null,
             nextStatement: null,
-            colour: COLOURS.trade,
+            style: BLOCK_STYLES.setting,
             tooltip: localize('Candle interval used for candle based analysis.'),
         },
         {
@@ -317,7 +357,7 @@ export const registerBlocks = () => {
             ],
             previousStatement: null,
             nextStatement: null,
-            colour: COLOURS.trade,
+            style: BLOCK_STYLES.setting,
             tooltip: localize('Restarts the buy or sell request when it fails.'),
         },
         {
@@ -335,7 +375,7 @@ export const registerBlocks = () => {
             ],
             previousStatement: null,
             nextStatement: null,
-            colour: COLOURS.trade,
+            style: BLOCK_STYLES.setting,
             tooltip: localize('Carries on with the next trade when a trade fails instead of stopping the bot.'),
         },
         {
@@ -343,7 +383,7 @@ export const registerBlocks = () => {
             message0: localize('2. Purchase conditions'),
             message1: '%1',
             args1: [{ type: 'input_statement', name: 'BEFOREPURCHASE_STACK' }],
-            colour: COLOURS.purchase,
+            style: BLOCK_STYLES.section,
             tooltip: localize('Decide when to buy a contract.'),
         },
         {
@@ -351,7 +391,7 @@ export const registerBlocks = () => {
             message0: localize('Purchase %1'),
             args0: [{ type: 'field_dropdown', name: 'PURCHASE_LIST', options: asOptions(ALL_CONTRACT_OPTIONS) }],
             previousStatement: null,
-            colour: COLOURS.purchase,
+            style: BLOCK_STYLES.setting,
             tooltip: localize('Buys a contract of the selected type.'),
         },
         {
@@ -359,7 +399,7 @@ export const registerBlocks = () => {
             message0: localize('3. Sell conditions (optional)'),
             message1: '%1',
             args1: [{ type: 'input_statement', name: 'DURING_PURCHASE_STACK' }],
-            colour: COLOURS.sell,
+            style: BLOCK_STYLES.section,
             tooltip: localize('Decide when to sell an open contract before it expires.'),
         },
         {
@@ -367,14 +407,14 @@ export const registerBlocks = () => {
             message0: localize('Sell at market price'),
             previousStatement: null,
             nextStatement: null,
-            colour: COLOURS.sell,
+            style: BLOCK_STYLES.setting,
             tooltip: localize('Sells the open contract at the current market price.'),
         },
         {
             type: BLOCK_TYPES.SELL_AVAILABLE,
             message0: localize('Sell is available'),
             output: 'Boolean',
-            colour: COLOURS.sell,
+            style: BLOCK_STYLES.setting,
             tooltip: localize('True if the open contract can be sold right now.'),
         },
         {
@@ -382,14 +422,14 @@ export const registerBlocks = () => {
             message0: localize('4. Restart trading conditions'),
             message1: '%1',
             args1: [{ type: 'input_statement', name: 'AFTERPURCHASE_STACK' }],
-            colour: COLOURS.restart,
+            style: BLOCK_STYLES.section,
             tooltip: localize('Decide whether to trade again once a contract finishes.'),
         },
         {
             type: BLOCK_TYPES.TRADE_AGAIN,
             message0: localize('Trade again'),
             previousStatement: null,
-            colour: COLOURS.restart,
+            style: BLOCK_STYLES.setting,
             tooltip: localize('Starts the next trade from the purchase conditions.'),
         },
         {
@@ -459,7 +499,7 @@ export const registerBlocks = () => {
                 },
             ],
             output: 'Boolean',
-            colour: COLOURS.restart,
+            style: BLOCK_STYLES.setting,
             tooltip: localize('True if the last finished contract matches the selected result.'),
         },
         {
@@ -552,7 +592,7 @@ export const registerBlocks = () => {
                 .appendField(dynamicDropdown(symbolOptions), 'SYMBOL_LIST');
             this.setPreviousStatement(true);
             this.setNextStatement(true);
-            this.setColour(COLOURS.trade);
+            this.setStyle(BLOCK_STYLES.setting);
             this.setTooltip(localize('The market and symbol the bot trades.'));
         },
         onchange(this: Blockly.Block) {
@@ -577,7 +617,7 @@ export const registerBlocks = () => {
                 );
             this.setPreviousStatement(true);
             this.setNextStatement(true);
-            this.setColour(COLOURS.trade);
+            this.setStyle(BLOCK_STYLES.setting);
             this.setTooltip(localize('The kind of contract the bot trades.'));
         },
         onchange(this: Blockly.Block) {
@@ -598,7 +638,7 @@ export const registerBlocks = () => {
                 );
             this.setPreviousStatement(true);
             this.setNextStatement(true);
-            this.setColour(COLOURS.trade);
+            this.setStyle(BLOCK_STYLES.setting);
             this.setTooltip(localize('Which contracts the bot may buy.'));
         },
         onchange(this: Blockly.Block) {
@@ -620,7 +660,7 @@ export const registerBlocks = () => {
             this.setInputsInline(true);
             this.setPreviousStatement(true);
             this.setNextStatement(true);
-            this.setColour(COLOURS.trade);
+            this.setStyle(BLOCK_STYLES.setting);
             this.setTooltip(localize('Duration, stake and, for digit trades, the digit prediction.'));
         },
         onchange(this: Blockly.Block) {
@@ -644,7 +684,7 @@ export const getToolbox = (): Blockly.utils.toolbox.ToolboxDefinition => ({
         {
             kind: 'category',
             name: localize('Trade parameters'),
-            colour: COLOURS.trade,
+            colour: COLOURS.section,
             contents: [
                 { kind: 'block', type: BLOCK_TYPES.TRADE_DEFINITION },
                 { kind: 'block', type: BLOCK_TYPES.MARKET },
@@ -663,7 +703,7 @@ export const getToolbox = (): Blockly.utils.toolbox.ToolboxDefinition => ({
         {
             kind: 'category',
             name: localize('Purchase conditions'),
-            colour: COLOURS.purchase,
+            colour: COLOURS.section,
             contents: [
                 { kind: 'block', type: BLOCK_TYPES.BEFORE_PURCHASE },
                 { kind: 'block', type: BLOCK_TYPES.PURCHASE },
@@ -672,7 +712,7 @@ export const getToolbox = (): Blockly.utils.toolbox.ToolboxDefinition => ({
         {
             kind: 'category',
             name: localize('Sell conditions'),
-            colour: COLOURS.sell,
+            colour: COLOURS.section,
             contents: [
                 { kind: 'block', type: BLOCK_TYPES.DURING_PURCHASE },
                 { kind: 'block', type: BLOCK_TYPES.SELL_AT_MARKET },
@@ -682,7 +722,7 @@ export const getToolbox = (): Blockly.utils.toolbox.ToolboxDefinition => ({
         {
             kind: 'category',
             name: localize('Restart trading conditions'),
-            colour: COLOURS.restart,
+            colour: COLOURS.section,
             contents: [
                 { kind: 'block', type: BLOCK_TYPES.AFTER_PURCHASE },
                 { kind: 'block', type: BLOCK_TYPES.TRADE_AGAIN },

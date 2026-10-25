@@ -5,7 +5,17 @@ import { getDefaultWorkspaceState, loadWorkspaceState } from '../bot-utils';
 import { compileProgram } from '../Engine/compile';
 import { evaluate, execute, MAX_STEPS, TInterpreterContext } from '../Engine/interpreter';
 import { BotRunner } from '../Engine/runner';
-import type { TApiResponse, TBotApi, TLevel, TProgram, TStmt, TTradeRequest, TTransaction } from '../Engine/types';
+import type {
+    TApiResponse,
+    TBotApi,
+    TLevel,
+    TLiveContract,
+    TProgram,
+    TRunLimits,
+    TStmt,
+    TTradeRequest,
+    TTransaction,
+} from '../Engine/types';
 
 jest.mock('@deriv-com/translations', () => ({
     localize: (text: string, values?: Record<string, string | number>) =>
@@ -493,13 +503,11 @@ const baseProgram = (overrides: Partial<TProgram> = {}): TProgram => ({
     ...overrides,
 });
 
-const setup = (
-    program: TProgram,
-    options: { balance?: number; limits?: { max_trades?: number; max_loss?: number } } = {}
-) => {
+const setup = (program: TProgram, options: { balance?: number; limits?: TRunLimits } = {}) => {
     const api = createFakeApi();
     const logs: [TLevel, string][] = [];
     const transactions: TTransaction[] = [];
+    const live: (TLiveContract | null)[] = [];
     const runner = new BotRunner({
         api,
         program,
@@ -510,8 +518,9 @@ const setup = (
         onStats: jest.fn(),
         onStatus: jest.fn(),
         onTransaction: transaction => transactions.push(transaction),
+        onLiveContract: contract => live.push(contract),
     });
-    return { api, logs, runner, transactions };
+    return { api, live, logs, runner, transactions };
 };
 
 const bought = { buy: { contract_id: 77, buy_price: 1, payout: 1.95 } };
@@ -779,7 +788,86 @@ describe('BotRunner', () => {
         await flush();
         api.emitContract({ profit: -2, is_sold: 1, status: 'lost' });
         expect(runner.getStatus()).toBe('stopped');
-        expect(logs.some(([, message]) => message.includes('Loss limit'))).toBe(true);
+        expect(logs.some(([, message]) => message.includes('Stop loss'))).toBe(true);
+    });
+
+    it('stops at the take profit', async () => {
+        const { api, runner, logs } = setup(baseProgram(), { limits: { max_profit: 1.5 } });
+        runner.start();
+        api.emitTick(1);
+        await flush();
+        api.resolveBuy(bought);
+        await flush();
+        api.emitContract({ profit: 0.95, sell_price: 1.95, is_sold: 1, status: 'won' });
+        expect(runner.getStatus()).toBe('running');
+        api.emitTick(2);
+        await flush();
+        api.resolveBuy(bought);
+        await flush();
+        api.emitContract({ profit: 0.95, sell_price: 1.95, is_sold: 1, status: 'won' });
+        expect(runner.getStatus()).toBe('stopped');
+        expect(logs.some(([, message]) => message.includes('Take profit'))).toBe(true);
+    });
+
+    it('keeps trading until a limit is hit when the restart conditions do not ask to trade again', async () => {
+        const program = baseProgram({ after_purchase: [] });
+        const { api, runner } = setup(program, { limits: { max_loss: 5, keep_running: true } });
+        runner.start();
+        const playRound = async (tick: number) => {
+            api.emitTick(tick);
+            await flush();
+            api.resolveBuy(bought);
+            await flush();
+            api.emitContract({ profit: -1, is_sold: 1, status: 'lost' });
+            expect(runner.getStatus()).toBe('running');
+        };
+        await playRound(1);
+        await playRound(2);
+        await playRound(3);
+        expect(api.calls.proposal).toHaveLength(3);
+    });
+
+    it('reports the live contract with its tick progress, and the entry and exit spots of each transaction', async () => {
+        const program = baseProgram();
+        const { api, live, runner, transactions } = setup(program);
+        runner.start();
+        api.emitTick(1);
+        await flush();
+        api.resolveBuy(bought);
+        await flush();
+        api.emitContract({
+            profit: 0.2,
+            bid_price: 1.2,
+            payout: 1.95,
+            is_valid_to_sell: 0,
+            is_sold: 0,
+            entry_spot_display_value: '1061.49',
+            tick_stream: [{ epoch: 1 }, { epoch: 2 }],
+        });
+        expect(live[live.length - 1]).toMatchObject({
+            contract_id: 77,
+            contract_type: 'CALL',
+            symbol: '1HZ100V',
+            profit: 0.2,
+            current_value: 1.2,
+            resale_offered: false,
+            tick_current: 2,
+            tick_total: 5,
+        });
+        api.emitContract({
+            profit: -1,
+            is_sold: 1,
+            status: 'lost',
+            exit_tick_display_value: '1061.15',
+            entry_spot_display_value: '1061.49',
+        });
+        expect(live[live.length - 1]).toBeNull();
+        expect(transactions[transactions.length - 1]).toMatchObject({
+            status: 'lost',
+            symbol: '1HZ100V',
+            entry_spot: '1061.49',
+            exit_spot: '1061.15',
+        });
     });
 
     it('stops after the trade limit', async () => {

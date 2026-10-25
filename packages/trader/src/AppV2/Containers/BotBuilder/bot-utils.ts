@@ -91,14 +91,14 @@ export const getDefaultWorkspaceState = () => ({
             {
                 type: BLOCK_TYPES.DURING_PURCHASE,
                 id: 'during_purchase',
-                x: 520,
+                x: 700,
                 y: 20,
             },
             {
                 type: BLOCK_TYPES.AFTER_PURCHASE,
                 id: 'after_purchase',
-                x: 520,
-                y: 200,
+                x: 700,
+                y: 220,
                 inputs: {
                     AFTERPURCHASE_STACK: { block: { type: BLOCK_TYPES.TRADE_AGAIN } },
                 },

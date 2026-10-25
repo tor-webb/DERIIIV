@@ -6,7 +6,7 @@ import { WS } from '@deriv/shared';
 import { observer, useStore } from '@deriv/stores';
 import { localize } from '@deriv-com/translations';
 
-import { getToolbox, registerBlocks } from './blocks';
+import { getBlocklyTheme, getToolbox, registerBlocks } from './blocks';
 import {
     exportWorkspaceXml,
     formatTime,
@@ -20,7 +20,17 @@ import {
     TJournalLevel,
     validateBot,
 } from './bot-utils';
-import { BotRunner, CompileError, compileProgram, createWsBotApi, TBotStats, TRunStatus, TTransaction } from './Engine';
+import {
+    BotRunner,
+    CompileError,
+    compileProgram,
+    createWsBotApi,
+    TBotStats,
+    TLiveContract,
+    TRunStatus,
+    TTransaction,
+} from './Engine';
+import RunPanel, { TPanelTab, TRunLimitsInput } from './run-panel';
 
 import './bot-builder.scss';
 
@@ -28,9 +38,9 @@ const AUTOSAVE_DELAY_MS = 400;
 const MAX_JOURNAL_ENTRIES = 200;
 const MAX_TRANSACTIONS = 100;
 
-type TPanelTab = 'summary' | 'transactions' | 'journal';
-
 const EMPTY_STATS: TBotStats = { runs: 0, won: 0, lost: 0, total_profit: 0, total_stake: 0, total_payout: 0 };
+
+const EMPTY_LIMITS: TRunLimitsInput = { max_trades: '', max_profit: '', max_loss: '' };
 
 const parseLimit = (value: string) => {
     const parsed = Number(value);
@@ -54,8 +64,8 @@ const BotBuilder = observer(() => {
 
     const [run_status, setRunStatus] = React.useState<TRunStatus>('idle');
     const [stats, setStats] = React.useState<TBotStats>(EMPTY_STATS);
-    const [max_trades, setMaxTrades] = React.useState('');
-    const [max_loss, setMaxLoss] = React.useState('');
+    const [limits, setLimits] = React.useState<TRunLimitsInput>(EMPTY_LIMITS);
+    const [live, setLive] = React.useState<TLiveContract | null>(null);
     const [needs_real_confirmation, setNeedsRealConfirmation] = React.useState(false);
     const [tab, setTab] = React.useState<TPanelTab>('summary');
     const [journal, setJournal] = React.useState<TJournalEntry[]>([]);
@@ -74,6 +84,7 @@ const BotBuilder = observer(() => {
         registerBlocks();
         const workspace = Blockly.inject(container, {
             toolbox: getToolbox(),
+            theme: getBlocklyTheme(),
             trashcan: true,
             sounds: false,
             move: { scrollbars: true, drag: true, wheel: true },
@@ -145,16 +156,26 @@ const BotBuilder = observer(() => {
         }
 
         setTransactions([]);
+        setLive(null);
+        const max_loss = parseLimit(limits.max_loss);
+        const max_profit = parseLimit(limits.max_profit);
         const runner = new BotRunner({
             api: createWsBotApi(WS),
             program,
             currency: client.currency,
             getBalance: () => Number(client.balance) || 0,
-            limits: { max_trades: parseLimit(max_trades), max_loss: parseLimit(max_loss) },
+            limits: {
+                max_trades: parseLimit(limits.max_trades),
+                max_loss,
+                max_profit,
+                // with a take profit or stop loss the bot keeps trading until one of them is hit
+                keep_running: Boolean(max_loss || max_profit),
+            },
             onLog: log,
             onStats: setStats,
             onStatus: setRunStatus,
             onTransaction: upsertTransaction,
+            onLiveContract: setLive,
         });
         runner_ref.current = runner;
         runner.start();
@@ -168,8 +189,8 @@ const BotBuilder = observer(() => {
         }
         if (!client.is_virtual) {
             // a real account needs a loss limit so a bad bot cannot keep trading
-            if (!parseLimit(max_loss)) {
-                log('error', localize('Set a "Stop at total loss" limit before running a bot on a real account.'));
+            if (!parseLimit(limits.max_loss)) {
+                log('error', localize('Set a "Stop loss" limit before running a bot on a real account.'));
                 setTab('summary');
                 return;
             }
@@ -235,18 +256,15 @@ const BotBuilder = observer(() => {
         validateBot(workspace).forEach(issue => log(issue.level, issue.message));
     };
 
+    const resetStats = () => {
+        setStats(EMPTY_STATS);
+        setTransactions([]);
+        setLive(null);
+    };
+
     const sortBlocks = () => workspace_ref.current?.cleanUp();
     const setAllCollapsed = (collapsed: boolean) =>
         workspace_ref.current?.getTopBlocks(false).forEach(block => block.setCollapsed(collapsed));
-
-    const statTiles = [
-        { key: 'stake', label: localize('Total stake'), value: stats.total_stake.toFixed(2) },
-        { key: 'payout', label: localize('Total payout'), value: stats.total_payout.toFixed(2) },
-        { key: 'runs', label: localize('No. of runs'), value: String(stats.runs) },
-        { key: 'lost', label: localize('Contracts lost'), value: String(stats.lost) },
-        { key: 'won', label: localize('Contracts won'), value: String(stats.won) },
-        { key: 'profit', label: localize('Total profit/loss'), value: stats.total_profit.toFixed(2) },
-    ];
 
     return (
         <main className='bot-builder' data-testid='dt_bot_builder'>
@@ -330,135 +348,19 @@ const BotBuilder = observer(() => {
                     />
                 </section>
 
-                <aside className='bot-builder__panel' aria-label={localize('Run panel')}>
-                    <div className='bot-builder__tabs' role='tablist'>
-                        {(['summary', 'transactions', 'journal'] as TPanelTab[]).map(name => (
-                            <button
-                                key={name}
-                                type='button'
-                                role='tab'
-                                aria-selected={tab === name}
-                                className={classNames('bot-builder__tab', { 'bot-builder__tab--active': tab === name })}
-                                onClick={() => setTab(name)}
-                            >
-                                {name === 'summary' && localize('Summary')}
-                                {name === 'transactions' && localize('Transactions')}
-                                {name === 'journal' && localize('Journal')}
-                            </button>
-                        ))}
-                    </div>
-
-                    {tab === 'summary' && (
-                        <div className='bot-builder__tab-body'>
-                            <dl className='bot-builder__stats' data-testid='dt_bot_builder_stats'>
-                                {statTiles.map(({ key, label, value }) => (
-                                    <div key={key} className='bot-builder__stat'>
-                                        <dt>{label}</dt>
-                                        <dd
-                                            className={classNames({
-                                                'bot-builder__stat--up': key === 'profit' && stats.total_profit > 0,
-                                                'bot-builder__stat--down': key === 'profit' && stats.total_profit < 0,
-                                            })}
-                                        >
-                                            {value}
-                                        </dd>
-                                    </div>
-                                ))}
-                            </dl>
-                            <div className='bot-builder__limits'>
-                                <label>
-                                    {localize('Stop after trades')}
-                                    <input
-                                        type='number'
-                                        min='1'
-                                        value={max_trades}
-                                        disabled={is_active}
-                                        placeholder={localize('No limit')}
-                                        onChange={event => setMaxTrades(event.target.value)}
-                                    />
-                                </label>
-                                <label>
-                                    {localize('Stop at total loss')}
-                                    <input
-                                        type='number'
-                                        min='0'
-                                        value={max_loss}
-                                        disabled={is_active}
-                                        placeholder={localize('No limit')}
-                                        onChange={event => setMaxLoss(event.target.value)}
-                                    />
-                                </label>
-                            </div>
-                        </div>
-                    )}
-
-                    {tab === 'transactions' && (
-                        <div className='bot-builder__tab-body' data-testid='dt_bot_builder_transactions'>
-                            {transactions.length === 0 ? (
-                                <p className='bot-builder__empty'>{localize('Contracts the bot buys appear here.')}</p>
-                            ) : (
-                                <table className='bot-builder__table'>
-                                    <thead>
-                                        <tr>
-                                            <th>{localize('Contract')}</th>
-                                            <th>{localize('Stake')}</th>
-                                            <th>{localize('Profit/loss')}</th>
-                                            <th>{localize('Status')}</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {transactions.map(item => (
-                                            <tr key={item.contract_id}>
-                                                <td>{item.contract_type}</td>
-                                                <td>{item.buy_price.toFixed(2)}</td>
-                                                <td
-                                                    className={classNames({
-                                                        'bot-builder__stat--up': item.status === 'won',
-                                                        'bot-builder__stat--down': item.status === 'lost',
-                                                    })}
-                                                >
-                                                    {item.status === 'open' ? '—' : item.profit.toFixed(2)}
-                                                </td>
-                                                <td>
-                                                    {item.status === 'open' && localize('Open')}
-                                                    {item.status === 'won' && localize('Won')}
-                                                    {item.status === 'lost' && localize('Lost')}
-                                                </td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            )}
-                        </div>
-                    )}
-
-                    {tab === 'journal' && (
-                        <div className='bot-builder__tab-body'>
-                            {journal.length === 0 ? (
-                                <p className='bot-builder__empty'>
-                                    {localize(
-                                        'Build your bot, then press "Run". "Check bot" validates it without trading.'
-                                    )}
-                                </p>
-                            ) : (
-                                <ul className='bot-builder__journal-list'>
-                                    {journal.map(entry => (
-                                        <li
-                                            key={entry.id}
-                                            className={classNames(
-                                                'bot-builder__journal-entry',
-                                                `bot-builder__journal-entry--${entry.level}`
-                                            )}
-                                        >
-                                            <span className='bot-builder__journal-time'>{entry.time}</span>
-                                            <span>{entry.message}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                        </div>
-                    )}
-                </aside>
+                <RunPanel
+                    tab={tab}
+                    onTabChange={setTab}
+                    stats={stats}
+                    live={live}
+                    transactions={transactions}
+                    journal={journal}
+                    currency={client.currency}
+                    is_active={is_active}
+                    limits={limits}
+                    onLimitsChange={setLimits}
+                    onReset={resetStats}
+                />
             </div>
 
             {needs_real_confirmation && (
@@ -489,13 +391,6 @@ const BotBuilder = observer(() => {
             )}
 
             <footer className='bot-builder__footer'>
-                <span className='bot-builder__status' data-testid='dt_bot_builder_status'>
-                    <span
-                        className={classNames('bot-builder__dot', { 'bot-builder__dot--on': run_status === 'running' })}
-                    />
-                    {STATUS_TEXT[run_status]()}
-                </span>
-                <span className='bot-builder__spacer' />
                 {client.is_logged_in && (
                     <span
                         className={classNames('bot-builder__account', {
@@ -506,20 +401,39 @@ const BotBuilder = observer(() => {
                         {client.is_virtual ? localize('Demo account') : localize('Real account')} · {client.loginid}
                     </span>
                 )}
-                {is_active ? (
-                    <button
-                        type='button'
-                        className='bot-builder__button bot-builder__button--danger'
-                        onClick={stopBot}
-                        disabled={run_status === 'stopping'}
-                    >
-                        {run_status === 'stopping' ? localize('Stopping…') : localize('Stop')}
-                    </button>
-                ) : (
-                    <button type='button' className='bot-builder__button bot-builder__button--primary' onClick={runBot}>
-                        {localize('Run')}
-                    </button>
-                )}
+                <div className='bot-builder__runbar'>
+                    {is_active ? (
+                        <button
+                            type='button'
+                            className='bot-builder__runbar-button bot-builder__runbar-button--stop'
+                            onClick={stopBot}
+                            disabled={run_status === 'stopping'}
+                        >
+                            <span className='bot-builder__runbar-icon bot-builder__runbar-icon--stop' aria-hidden />
+                            {run_status === 'stopping' ? localize('Stopping…') : localize('Stop')}
+                        </button>
+                    ) : (
+                        <button
+                            type='button'
+                            className='bot-builder__runbar-button bot-builder__runbar-button--run'
+                            onClick={runBot}
+                        >
+                            <span className='bot-builder__runbar-icon bot-builder__runbar-icon--run' aria-hidden />
+                            {localize('Run')}
+                        </button>
+                    )}
+                    <div className='bot-builder__runbar-status' data-testid='dt_bot_builder_status'>
+                        <span className='bot-builder__runbar-text'>
+                            {live && run_status === 'running' ? localize('Contract bought') : STATUS_TEXT[run_status]()}
+                        </span>
+                        <span
+                            className={classNames('bot-builder__runbar-progress', {
+                                'bot-builder__runbar-progress--on': run_status === 'running',
+                            })}
+                            aria-hidden
+                        />
+                    </div>
+                </div>
             </footer>
         </main>
     );

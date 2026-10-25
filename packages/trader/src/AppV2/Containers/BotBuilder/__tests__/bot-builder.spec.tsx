@@ -22,6 +22,7 @@ jest.mock('../blocks', () => ({
     ...jest.requireActual('../blocks'),
     registerBlocks: jest.fn(),
     getToolbox: jest.fn(() => ({})),
+    getBlocklyTheme: jest.fn(() => ({})),
 }));
 
 const mockValidate = jest.fn();
@@ -135,13 +136,13 @@ describe('BotBuilder', () => {
             expect(mockStart).not.toHaveBeenCalled();
             expect(screen.queryByTestId('dt_bot_builder_confirm')).not.toBeInTheDocument();
             fireEvent.click(screen.getByText('Journal'));
-            expect(screen.getByText(/Set a "Stop at total loss" limit/)).toBeInTheDocument();
+            expect(screen.getByText(/Set a "Stop loss" limit/)).toBeInTheDocument();
         });
 
         it('requires explicit confirmation before trading real money', () => {
             renderPage(real);
             expect(screen.getByTestId('dt_bot_builder_account')).toHaveTextContent('Real account · CR1');
-            fireEvent.change(screen.getByLabelText('Stop at total loss'), { target: { value: '10' } });
+            fireEvent.change(screen.getByLabelText('Stop loss'), { target: { value: '10' } });
             fireEvent.click(screen.getByText('Run'));
             expect(mockStart).not.toHaveBeenCalled();
             expect(screen.getByTestId('dt_bot_builder_confirm')).toHaveTextContent('real money on account CR1');
@@ -168,9 +169,14 @@ describe('BotBuilder', () => {
         it('passes the optional limits to the runner and shows Stop while running', () => {
             renderPage(demo);
             fireEvent.change(screen.getByLabelText('Stop after trades'), { target: { value: '5' } });
-            fireEvent.change(screen.getByLabelText('Stop at total loss'), { target: { value: '20' } });
+            fireEvent.change(screen.getByLabelText('Stop loss'), { target: { value: '20' } });
             fireEvent.click(screen.getByText('Run'));
-            expect(mockRunnerOptions.mock.calls[0][0].limits).toEqual({ max_trades: 5, max_loss: 20 });
+            expect(mockRunnerOptions.mock.calls[0][0].limits).toEqual({
+                max_trades: 5,
+                max_loss: 20,
+                max_profit: undefined,
+                keep_running: true,
+            });
 
             act(() => mockRunnerOptions.mock.calls[0][0].onStatus('running'));
             fireEvent.click(screen.getByText('Stop'));
