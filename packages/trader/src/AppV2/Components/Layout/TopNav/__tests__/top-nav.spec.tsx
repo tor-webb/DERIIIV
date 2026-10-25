@@ -40,6 +40,13 @@ describe('TopNav', () => {
         expect(screen.getByText('CR123')).toBeInTheDocument();
     });
 
+    it('shows the balance as plain text, not HTML', () => {
+        renderTopNav('/', true);
+        const account = screen.getByTestId('dt_top_nav_account');
+        expect(account).toHaveTextContent('10.00 USD');
+        expect(account.textContent).not.toMatch(/[<>]|span/);
+    });
+
     it('marks the current page as active', () => {
         renderTopNav('/charts');
         expect(screen.getByTestId('dt_top_nav_charts')).toHaveAttribute('aria-current', 'page');

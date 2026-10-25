@@ -2,9 +2,11 @@ import React from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 
-import { formatMoney, getBrandLogo, getBrandLogoDark, getBrandName, getUrlBase, routes } from '@deriv/shared';
+import { getBrandLogo, getBrandLogoDark, getBrandName, getUrlBase, routes } from '@deriv/shared';
 import { observer, useStore } from '@deriv/stores';
 import { localize } from '@deriv-com/translations';
+
+import { formatBalanceWithCurrency } from 'AppV2/Utils/format-balance';
 
 import './top-nav.scss';
 
@@ -67,7 +69,7 @@ const TopNav = observer(() => {
                 {is_logged_in ? (
                     <div className='top-nav__balance' data-testid='dt_top_nav_account'>
                         <span className='top-nav__loginid'>{loginid}</span>
-                        <span className='top-nav__amount'>{formatMoney(currency, balance ?? 0, false)}</span>
+                        <span className='top-nav__amount'>{formatBalanceWithCurrency(currency, balance)}</span>
                     </div>
                 ) : (
                     <span className='top-nav__guest'>{localize('Not logged in')}</span>

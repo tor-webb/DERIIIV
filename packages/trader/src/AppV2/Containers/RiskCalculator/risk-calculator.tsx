@@ -1,8 +1,10 @@
 import React from 'react';
 
-import { formatMoney, getBrandName } from '@deriv/shared';
+import { getBrandName } from '@deriv/shared';
 import { observer, useStore } from '@deriv/stores';
 import { localize } from '@deriv-com/translations';
+
+import { formatBalanceWithCurrency } from 'AppV2/Utils/format-balance';
 
 import { calcPositionSize, calcRewardRisk, calcStakePlan } from './risk-utils';
 
@@ -11,7 +13,7 @@ import './risk-calculator.scss';
 type TMode = 'position' | 'stake';
 
 const toNumber = (value: string) => (value.trim() === '' ? NaN : Number(value));
-const money = (currency: string, value: number) => formatMoney(currency, value, false);
+const money = (currency: string, value: number) => formatBalanceWithCurrency(currency, value);
 const lotsText = (lots: number) => (lots > 0 && lots < 0.01 ? '<0.01' : lots.toFixed(2));
 const percent = (value: number) => `${value.toFixed(value < 1 && value > 0 ? 3 : 1)}%`;
 
