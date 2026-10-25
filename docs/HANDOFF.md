@@ -8,6 +8,31 @@ Everything described below lives in `packages/trader/src/AppV2/`.
 
 ## Session log, 2026-10-26 (newest first)
 
+### Balance display fix, site guide assistant (branch `fix-balance-assistant`, not merged)
+
+- **Bug fixed.** The dashboard, the top-nav balance and the Risk calculator printed `<span class="symbols usd"></span>9,987.00`
+  as text. `formatMoney(currency, amount, false)` returns the currency as an HTML string, and React shows it literally.
+  New `AppV2/Utils/format-balance.ts` (`formatBalance`, `formatBalanceWithCurrency`) returns plain text ("9,987.00",
+  "9,987.00 USD"). Use it for every balance or money value in AppV2; do not call `formatMoney(..., false)` in JSX. The
+  Trade page's own components (`risk-management-item`, contract details footer) were not touched. Tests added for the
+  formatter, the top nav and the dashboard (the dashboard had no spec before).
+- **Site guide assistant** (`Containers/Assistant/`), a "Help" button bottom-right on every page, mounted in `AppShell`.
+  It is a built-in help list, **not a live AI model**: `assistant-knowledge.ts` holds topics with keywords, the best keyword
+  match answers, and answers carry buttons (go to a page, or Log in via `redirectToLogin`). The panel says so ("not live AI,
+  not financial advice"). Topics: log in, demo vs real (knows which you are on), balance, trade, charts, Bot Builder (what,
+  import, limits, run), risk calculator, copy trading, positions, reports, "where am I", and an honest "no strategy guarantees
+  profit" answer. To add a topic, add an entry to `topics()` and a case to `assistant-knowledge.spec.ts`.
+  Making it a real AI would need a small server that holds the model key (GitHub Pages is static, and a key in the
+  browser would be public). Put the call behind the same panel and keep the keyword list as the offline fallback.
+- **Checked:** 22 new and changed tests pass; ESLint 0 errors; production build exit 0; headless Chromium at 1280px and 390px
+  with the panel open (button clear of the Run bar and Reset button; the answer button navigates and closes the panel).
+- **Bulk Trader: deliberately NOT built as asked.** The request was a Deriv-disconnected tool whose runs "mostly win with some
+  losses". Results that are chosen in advance rather than coming from the market would present fake performance to users as
+  a trading tool, which can push people towards real money. Two honest versions are possible and need a decision:
+  (a) a clearly labelled **simulator** that replays real ticks and settles contracts with real payout maths, so its win rate
+  is whatever the strategy genuinely does; (b) a bulk trader on the **Deriv demo account** through the existing Bot Builder
+  engine (real demo contracts, real results). Both can use the Bot Builder look and be called "Bulk Trader".
+
 ### Merge to main and real-build check
 
 - **Merged.** `bot-builder-deriv-look` was fast-forwarded into `main` (now `0586214`). Every other branch was already
