@@ -3,6 +3,7 @@ export const routes = {
     index: '/',
     dashboard: '/dashboard',
     charts: '/charts',
+    bot_builder: '/bot-builder',
     callback_page: '/callback',
     error404: '/404',
     endpoint: '/endpoint',

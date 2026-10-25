@@ -34,6 +34,12 @@ const Dashboard = observer(() => {
             path: routes.charts,
         },
         {
+            id: 'bot_builder',
+            title: localize('Bot Builder'),
+            description: localize('Build a trading bot with blocks'),
+            path: routes.bot_builder,
+        },
+        {
             id: 'positions',
             title: localize('Positions'),
             description: localize('Your open contracts'),

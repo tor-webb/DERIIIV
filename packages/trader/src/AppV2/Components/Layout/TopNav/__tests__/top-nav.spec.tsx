@@ -23,11 +23,12 @@ const renderTopNav = (path = '/', is_logged_in = false) => {
 };
 
 describe('TopNav', () => {
-    it('shows Dashboard, Trade and Charts, and hides Reports when logged out', () => {
+    it('shows Dashboard, Trade, Charts and Bot Builder, and hides Reports when logged out', () => {
         renderTopNav();
         expect(screen.getByText('Dashboard')).toBeInTheDocument();
         expect(screen.getByText('Trade')).toBeInTheDocument();
         expect(screen.getByText('Charts')).toBeInTheDocument();
+        expect(screen.getByText('Bot Builder')).toBeInTheDocument();
         expect(screen.queryByText('Reports')).not.toBeInTheDocument();
     });
 
@@ -49,5 +50,7 @@ describe('TopNav', () => {
         expect(screen.getByTestId('dt_location')).toHaveTextContent('/dashboard');
         fireEvent.click(screen.getByTestId('dt_top_nav_charts'));
         expect(screen.getByTestId('dt_location')).toHaveTextContent('/charts');
+        fireEvent.click(screen.getByTestId('dt_top_nav_bot_builder'));
+        expect(screen.getByTestId('dt_location')).toHaveTextContent('/bot-builder');
     });
 });
