@@ -7,11 +7,15 @@ const mockWorkspace = {
     addChangeListener: jest.fn(),
     dispose: jest.fn(),
     undo: jest.fn(),
+    zoomCenter: jest.fn(),
+    cleanUp: jest.fn(),
+    getTopBlocks: jest.fn(() => []),
 };
 
 jest.mock('blockly', () => ({
     inject: jest.fn(() => mockWorkspace),
     svgResize: jest.fn(),
+    Events: { disable: jest.fn(), enable: jest.fn() },
 }));
 
 jest.mock('../blocks', () => ({
@@ -25,7 +29,7 @@ jest.mock('../bot-utils', () => ({
     ...jest.requireActual('../bot-utils'),
     loadWorkspaceState: jest.fn(),
     saveWorkspaceToStorage: jest.fn(),
-    readWorkspaceFromStorage: jest.fn(() => null),
+    restoreWorkspace: jest.fn(),
     validateBot: (...args: unknown[]) => mockValidate(...args),
 }));
 
@@ -42,7 +46,7 @@ const mockRunnerOptions = jest.fn();
 
 jest.mock('../Engine', () => ({
     CompileError: class CompileError extends Error {},
-    compileProgram: jest.fn(() => ({ trade: {}, purchase: [], sell: [], restart: [] })),
+    compileProgram: jest.fn(() => ({})),
     createWsBotApi: jest.fn(() => ({})),
     BotRunner: jest.fn().mockImplementation(options => {
         mockRunnerOptions(options);
@@ -75,6 +79,14 @@ describe('BotBuilder', () => {
         expect(screen.getByText('Bot structure looks good.')).toBeInTheDocument();
     });
 
+    it('shows whether the bot is running in the footer', () => {
+        renderPage({ is_logged_in: true, is_virtual: true, loginid: 'VRTC1', balance: '10', currency: 'USD' });
+        expect(screen.getByTestId('dt_bot_builder_status')).toHaveTextContent('Bot is not running');
+        fireEvent.click(screen.getByText('Run'));
+        act(() => mockRunnerOptions.mock.calls[0][0].onStatus('running'));
+        expect(screen.getByTestId('dt_bot_builder_status')).toHaveTextContent('Bot is running');
+    });
+
     it('lists every validation issue in the journal', () => {
         mockValidate.mockReturnValue([
             { level: 'error', message: 'Missing block: Trade parameters.' },
@@ -103,6 +115,7 @@ describe('BotBuilder', () => {
         it('asks the user to log in first', () => {
             renderPage({ is_logged_in: false });
             fireEvent.click(screen.getByText('Run'));
+            fireEvent.click(screen.getByText('Journal'));
             expect(screen.getByText('Log in to run a bot.')).toBeInTheDocument();
             expect(mockStart).not.toHaveBeenCalled();
         });
@@ -116,9 +129,19 @@ describe('BotBuilder', () => {
             expect(mockRunnerOptions.mock.calls[0][0].getBalance()).toBe(10000);
         });
 
+        it('asks for a loss limit before trading real money', () => {
+            renderPage(real);
+            fireEvent.click(screen.getByText('Run'));
+            expect(mockStart).not.toHaveBeenCalled();
+            expect(screen.queryByTestId('dt_bot_builder_confirm')).not.toBeInTheDocument();
+            fireEvent.click(screen.getByText('Journal'));
+            expect(screen.getByText(/Set a "Stop at total loss" limit/)).toBeInTheDocument();
+        });
+
         it('requires explicit confirmation before trading real money', () => {
             renderPage(real);
             expect(screen.getByTestId('dt_bot_builder_account')).toHaveTextContent('Real account · CR1');
+            fireEvent.change(screen.getByLabelText('Stop at total loss'), { target: { value: '10' } });
             fireEvent.click(screen.getByText('Run'));
             expect(mockStart).not.toHaveBeenCalled();
             expect(screen.getByTestId('dt_bot_builder_confirm')).toHaveTextContent('real money on account CR1');
@@ -138,6 +161,7 @@ describe('BotBuilder', () => {
             renderPage(demo);
             fireEvent.click(screen.getByText('Run'));
             expect(mockStart).not.toHaveBeenCalled();
+            // the page switches to the journal so the errors are visible
             expect(screen.getByText('Missing block: Trade parameters.')).toBeInTheDocument();
         });
 
@@ -163,9 +187,11 @@ describe('BotBuilder', () => {
                     lost: 1,
                     total_profit: 1.5,
                     total_stake: 3,
+                    total_payout: 4.5,
                 })
             );
-            expect(screen.getByTestId('dt_bot_builder_stats')).toHaveTextContent('Runs3');
+            expect(screen.getByTestId('dt_bot_builder_stats')).toHaveTextContent('No. of runs3');
+            expect(screen.getByTestId('dt_bot_builder_stats')).toHaveTextContent('Total payout4.50');
             expect(screen.getByTestId('dt_bot_builder_stats')).toHaveTextContent('1.50');
         });
     });

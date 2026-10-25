@@ -1,6 +1,8 @@
 import { localize } from '@deriv-com/translations';
 
-import { execute, TInterpreterContext } from './interpreter';
+import { PREDICTION_CONTRACTS } from '../blocks';
+
+import { evaluate, execute, TInterpreterContext } from './interpreter';
 import type {
     TApiResponse,
     TBotApi,
@@ -12,9 +14,12 @@ import type {
     TRunStatus,
     TStmt,
     TSubscription,
+    TTradeRequest,
+    TTransaction,
+    TValue,
 } from './types';
 
-type TPhase = 'idle' | 'waiting' | 'buying' | 'in_contract' | 'restarting';
+type TPhase = 'idle' | 'starting' | 'waiting' | 'buying' | 'in_contract' | 'restarting';
 
 export type TRunnerOptions = {
     api: TBotApi;
@@ -25,7 +30,21 @@ export type TRunnerOptions = {
     onLog: (level: TLevel, message: string) => void;
     onStats: (stats: TBotStats) => void;
     onStatus: (status: TRunStatus) => void;
+    onTransaction?: (transaction: TTransaction) => void;
 };
+
+type TRequests = { purchase: string | null; sell: boolean; trade_again: boolean };
+
+type TContractInfo = { buy_price: number; payout: number; profit: number; sell_price: number };
+
+const MAX_TIMERS = 100;
+const MAX_CONSECUTIVE_TRADE_ERRORS = 5;
+
+const emptyStats = (): TBotStats => ({ runs: 0, won: 0, lost: 0, total_profit: 0, total_stake: 0, total_payout: 0 });
+
+const emptyContract = (): TContractInfo => ({ buy_price: 0, payout: 0, profit: 0, sell_price: 0 });
+
+const round2 = (value: number) => Math.round(value * 100) / 100;
 
 const errorMessage = (response: TApiResponse | undefined) =>
     response?.error?.message ?? localize('Something went wrong while talking to the server.');
@@ -53,22 +72,25 @@ const subscribeOnce = (
 export class BotRunner {
     private status: TRunStatus = 'idle';
     private phase: TPhase = 'idle';
-    private stats: TBotStats = { runs: 0, won: 0, lost: 0, total_profit: 0, total_stake: 0 };
-    private vars = new Map<string, number | boolean>();
+    private stats: TBotStats = emptyStats();
+    private vars = new Map<string, TValue>();
 
     private last_tick = 0;
     private last_digit = 0;
-    private current_profit = 0;
+    private contract: TContractInfo = emptyContract();
     private sell_available = false;
     private last_result: 'win' | 'loss' | null = null;
+    private consecutive_trade_errors = 0;
 
     private contract_id: number | null = null;
+    private contract_type = '';
     private buy_in_flight = false;
     private sell_in_flight = false;
 
     private tick_sub: TSubscription | null = null;
     private proposal_sub: TSubscription | null = null;
     private contract_sub: TSubscription | null = null;
+    private timers = new Set<ReturnType<typeof setTimeout>>();
 
     private readonly options: TRunnerOptions;
 
@@ -85,22 +107,28 @@ export class BotRunner {
         const { api, program, onLog } = this.options;
 
         this.status = 'running';
-        this.phase = 'waiting';
-        this.stats = { runs: 0, won: 0, lost: 0, total_profit: 0, total_stake: 0 };
+        this.phase = 'starting';
+        this.stats = emptyStats();
         this.vars.clear();
+        this.contract = emptyContract();
         this.last_result = null;
+        this.consecutive_trade_errors = 0;
         this.options.onStatus(this.status);
         this.options.onStats(this.getStats());
         onLog(
             'info',
-            localize('Bot started: {{symbol}}, stake {{stake}} {{currency}}.', {
-                symbol: program.trade.symbol,
-                stake: program.trade.stake,
+            localize('Bot started: {{symbol}}, {{currency}} account.', {
+                symbol: program.setup.symbol,
                 currency: this.options.currency,
             })
         );
 
-        this.tick_sub = api.subscribeTicks(program.trade.symbol, response => this.onTick(response));
+        // the "run once at start" blocks come first, then the bot starts listening to ticks
+        this.runStack(program.init);
+        if (this.status !== 'running') return;
+
+        this.phase = 'waiting';
+        this.tick_sub = api.subscribeTicks(program.setup.symbol, response => this.onTick(response));
     }
 
     /** Stops placing new trades. An open contract is followed until it closes so its result is recorded. */
@@ -110,6 +138,7 @@ export class BotRunner {
 
         this.tick_sub?.unsubscribe();
         this.tick_sub = null;
+        this.clearTimers();
 
         if (this.phase === 'in_contract' || this.buy_in_flight) {
             this.status = 'stopping';
@@ -120,6 +149,11 @@ export class BotRunner {
         this.teardown();
     }
 
+    private clearTimers() {
+        this.timers.forEach(timer => clearTimeout(timer));
+        this.timers.clear();
+    }
+
     private teardown() {
         this.tick_sub?.unsubscribe();
         this.proposal_sub?.unsubscribe();
@@ -127,6 +161,7 @@ export class BotRunner {
         this.tick_sub = null;
         this.proposal_sub = null;
         this.contract_sub = null;
+        this.clearTimers();
         this.phase = 'idle';
         this.status = 'stopped';
         this.options.onStatus(this.status);
@@ -143,31 +178,57 @@ export class BotRunner {
         this.stop();
     }
 
-    private read = (kind: TDataKind): number | boolean => {
+    /** A failed proposal or purchase. With "restart on error" the bot skips that trade and tries the next one. */
+    private failTrade(message: string) {
+        const { restart_on_error } = this.options.program.setup;
+        this.consecutive_trade_errors += 1;
+        if (
+            restart_on_error &&
+            this.status === 'running' &&
+            this.consecutive_trade_errors < MAX_CONSECUTIVE_TRADE_ERRORS
+        ) {
+            this.options.onLog('warn', localize('Trade skipped: {{message}}', { message }));
+            this.phase = 'waiting';
+            return;
+        }
+        this.fail(message);
+    }
+
+    private read = (kind: TDataKind): TValue => {
         switch (kind) {
-            case 'last_tick':
+            case 'tick':
                 return this.last_tick;
             case 'last_digit':
                 return this.last_digit;
             case 'balance':
                 return this.options.getBalance();
+            case 'balance_text':
+                return String(this.options.getBalance());
             case 'total_profit':
                 return this.stats.total_profit;
-            case 'current_profit':
-                return this.current_profit;
+            case 'total_runs':
+                return this.stats.runs;
             case 'sell_available':
                 return this.sell_available;
-            case 'last_result_win':
+            case 'result_win':
                 return this.last_result === 'win';
-            default:
+            case 'result_loss':
                 return this.last_result === 'loss';
+            case 'detail_buy_price':
+                return this.contract.buy_price;
+            case 'detail_payout':
+                return this.contract.payout;
+            case 'detail_profit':
+                return this.contract.profit;
+            default:
+                return this.contract.sell_price;
         }
     };
 
-    private runStack(statements: TStmt[]) {
-        const requests = { purchase: null as string | null, sell: false, trade_again: false };
-        const ctx: TInterpreterContext = {
+    private makeContext(requests: TRequests): TInterpreterContext {
+        return {
             vars: this.vars,
+            procedures: this.options.program.procedures,
             read: this.read,
             notify: (level, message) => this.options.onLog(level, message),
             purchase: contract_type => {
@@ -179,14 +240,53 @@ export class BotRunner {
             tradeAgain: () => {
                 requests.trade_again = true;
             },
+            schedule: (seconds, body) => this.scheduleTimer(seconds, body),
         };
+    }
+
+    private runStack(statements: TStmt[]): TRequests | null {
+        const requests: TRequests = { purchase: null, sell: false, trade_again: false };
         try {
-            execute(statements, ctx);
+            execute(statements, this.makeContext(requests));
         } catch (error) {
             this.fail((error as Error).message);
             return null;
         }
         return requests;
+    }
+
+    private scheduleTimer(seconds: number, body: TStmt[]) {
+        if (this.timers.size >= MAX_TIMERS) {
+            throw new Error(localize('The bot scheduled too many timeouts at once.'));
+        }
+        const timer = setTimeout(() => {
+            this.timers.delete(timer);
+            if (this.status !== 'running') return;
+            const requests = this.runStack(body);
+            if (requests) this.applyRequests(requests);
+            this.finishIfStalled();
+        }, seconds * 1000);
+        this.timers.add(timer);
+    }
+
+    /** After the restart conditions, the bot may be waiting on a timeout that will say "trade again". */
+    private finishIfStalled() {
+        if (this.status === 'running' && this.phase === 'restarting' && this.timers.size === 0) {
+            this.stop(localize('Bot finished: the restart conditions did not ask to trade again.'));
+        }
+    }
+
+    private applyRequests(requests: TRequests) {
+        if (this.status !== 'running') return;
+        if (requests.purchase && this.phase === 'waiting') {
+            this.requestPurchase(requests.purchase);
+            return;
+        }
+        if (requests.sell && this.phase === 'in_contract' && this.sell_available && !this.sell_in_flight) {
+            this.sellContract(this.contract.sell_price);
+            return;
+        }
+        if (requests.trade_again && this.phase === 'restarting') this.phase = 'waiting';
     }
 
     private onTick(response: TApiResponse) {
@@ -201,39 +301,98 @@ export class BotRunner {
         this.last_digit = Number(digits[digits.length - 1]);
 
         if (this.phase !== 'waiting') return;
-        const requests = this.runStack(this.options.program.purchase);
-        if (requests?.purchase && this.status === 'running') this.requestPurchase(requests.purchase);
+        const requests = this.runStack(this.options.program.before_purchase);
+        if (requests) this.applyRequests(requests);
+    }
+
+    /** Works out this trade's request from the trade options. They are re-evaluated for every trade. */
+    private buildRequest(contract_type: string): TTradeRequest | null {
+        const { program, currency } = this.options;
+        const { setup, options } = program;
+
+        if (setup.contract_type !== 'both' && setup.contract_type !== contract_type) {
+            this.fail(
+                localize('The bot may only buy {{allowed}} contracts, but a purchase block asked for {{asked}}.', {
+                    allowed: setup.contract_type,
+                    asked: contract_type,
+                })
+            );
+            return null;
+        }
+
+        let amount: number, duration: number;
+        let prediction: number | null = null;
+        try {
+            const ctx = this.makeContext({ purchase: null, sell: false, trade_again: false });
+            amount = Number(evaluate(options.amount, ctx));
+            duration = Math.trunc(Number(evaluate(options.duration, ctx)));
+            if (PREDICTION_CONTRACTS.has(contract_type)) {
+                if (!options.prediction) {
+                    this.fail(
+                        localize('{{type}} needs a digit prediction, but the trade type has no prediction.', {
+                            type: contract_type,
+                        })
+                    );
+                    return null;
+                }
+                prediction = Math.trunc(Number(evaluate(options.prediction, ctx)));
+            }
+        } catch (error) {
+            this.fail((error as Error).message);
+            return null;
+        }
+
+        if (!Number.isFinite(amount) || amount <= 0) {
+            this.fail(localize('The stake must be greater than zero.'));
+            return null;
+        }
+        if (!Number.isFinite(duration) || duration < 1) {
+            this.fail(localize('The duration must be at least 1.'));
+            return null;
+        }
+        if (prediction !== null && !(prediction >= 0 && prediction <= 9)) {
+            this.fail(localize('The prediction must be a digit from 0 to 9.'));
+            return null;
+        }
+
+        const request: TTradeRequest = {
+            amount,
+            basis: 'stake',
+            contract_type,
+            currency,
+            // the platform's own proposals use `underlying_symbol` and an integer duration
+            underlying_symbol: setup.symbol,
+            duration,
+            duration_unit: options.duration_unit,
+        };
+        // the platform sends the digit prediction as `barrier`
+        if (prediction !== null) request.barrier = String(prediction);
+        return request;
     }
 
     private requestPurchase(contract_type: string) {
-        const { api, program, currency, limits } = this.options;
-        const { stake, symbol, duration, duration_unit } = program.trade;
+        const { api, limits, currency } = this.options;
 
         if (limits?.max_trades && this.stats.runs >= limits.max_trades) {
             this.stop(localize('Trade limit of {{count}} reached.', { count: limits.max_trades }));
             return;
         }
-        if (this.options.getBalance() < stake) {
-            this.fail(localize('Your balance is lower than the stake of {{stake}} {{currency}}.', { stake, currency }));
+        const request = this.buildRequest(contract_type);
+        if (!request) return;
+        if (this.options.getBalance() < request.amount) {
+            this.fail(
+                localize('Your balance is lower than the stake of {{stake}} {{currency}}.', {
+                    stake: request.amount,
+                    currency,
+                })
+            );
             return;
         }
 
         this.phase = 'buying';
+        this.contract_type = contract_type;
         this.proposal_sub = subscribeOnce(
-            cb =>
-                api.subscribeProposal(
-                    {
-                        amount: stake,
-                        basis: 'stake',
-                        contract_type,
-                        currency,
-                        // the platform's own proposals use `underlying_symbol` and an integer duration
-                        underlying_symbol: symbol,
-                        duration: Math.trunc(duration),
-                        duration_unit,
-                    },
-                    cb
-                ),
+            cb => api.subscribeProposal(request, cb),
             response => {
                 this.proposal_sub = null;
                 if (this.status !== 'running') {
@@ -241,7 +400,7 @@ export class BotRunner {
                     return;
                 }
                 if (response?.error || !response?.proposal) {
-                    this.fail(errorMessage(response));
+                    this.failTrade(errorMessage(response));
                     return;
                 }
                 this.buy(response.proposal.id, Number(response.proposal.ask_price));
@@ -256,16 +415,23 @@ export class BotRunner {
             .then(response => {
                 this.buy_in_flight = false;
                 if (response?.error || !response?.buy) {
-                    this.fail(errorMessage(response));
+                    this.failTrade(errorMessage(response));
                     return;
                 }
-                const { contract_id, buy_price } = response.buy;
+                const { contract_id, buy_price, payout } = response.buy;
+                this.consecutive_trade_errors = 0;
                 this.contract_id = Number(contract_id);
                 this.phase = 'in_contract';
-                this.current_profit = 0;
+                this.contract = {
+                    buy_price: Number(buy_price),
+                    payout: Number(payout ?? 0),
+                    profit: 0,
+                    sell_price: 0,
+                };
                 this.sell_available = false;
                 this.sell_in_flight = false;
-                this.stats.total_stake += Number(buy_price);
+                this.stats.total_stake = round2(this.stats.total_stake + Number(buy_price));
+                this.options.onStats(this.getStats());
                 this.options.onLog(
                     'info',
                     localize('Bought contract {{id}} for {{price}} {{currency}}.', {
@@ -274,14 +440,28 @@ export class BotRunner {
                         currency: this.options.currency,
                     })
                 );
+                this.emitTransaction('open');
                 this.contract_sub = this.options.api.subscribeOpenContract(this.contract_id, update =>
                     this.onContract(update)
                 );
             })
             .catch(error => {
                 this.buy_in_flight = false;
-                this.fail(error?.error?.message ?? error?.message ?? errorMessage(undefined));
+                this.failTrade(error?.error?.message ?? error?.message ?? errorMessage(undefined));
             });
+    }
+
+    private emitTransaction(status: TTransaction['status']) {
+        if (this.contract_id === null) return;
+        this.options.onTransaction?.({
+            contract_id: this.contract_id,
+            contract_type: this.contract_type,
+            buy_price: this.contract.buy_price,
+            payout: this.contract.payout,
+            profit: this.contract.profit,
+            status,
+            time: new Date().toLocaleTimeString(),
+        });
     }
 
     private onContract(response: TApiResponse) {
@@ -292,7 +472,9 @@ export class BotRunner {
         const contract = response?.proposal_open_contract;
         if (!contract || Number(contract.contract_id) !== this.contract_id) return;
 
-        this.current_profit = Number(contract.profit ?? 0);
+        this.contract.profit = Number(contract.profit ?? 0);
+        this.contract.sell_price = Number(contract.bid_price ?? contract.sell_price ?? 0);
+        if (contract.payout !== undefined) this.contract.payout = Number(contract.payout);
         this.sell_available = contract.is_valid_to_sell === 1 && contract.is_sold !== 1;
 
         if (contract.is_sold === 1) {
@@ -301,8 +483,8 @@ export class BotRunner {
         }
         if (this.status !== 'running' || this.sell_in_flight) return;
 
-        const requests = this.runStack(this.options.program.sell);
-        if (requests?.sell && this.sell_available) this.sellContract(Number(contract.bid_price));
+        const requests = this.runStack(this.options.program.during_purchase);
+        if (requests) this.applyRequests(requests);
     }
 
     private sellContract(bid_price: number) {
@@ -326,19 +508,22 @@ export class BotRunner {
     private finishContract(contract: TApiResponse) {
         this.contract_sub?.unsubscribe();
         this.contract_sub = null;
-        this.contract_id = null;
         // no contract is open any more, so a stop from here on can finish immediately
         this.phase = 'restarting';
 
         const profit = Number(contract.profit ?? 0);
         const won = contract.status === 'won' || profit > 0;
+        this.contract.profit = profit;
+        this.contract.sell_price = Number(contract.sell_price ?? this.contract.sell_price);
         this.last_result = won ? 'win' : 'loss';
-        this.current_profit = 0;
         this.sell_available = false;
         this.stats.runs += 1;
         this.stats[won ? 'won' : 'lost'] += 1;
-        this.stats.total_profit = Math.round((this.stats.total_profit + profit) * 100) / 100;
+        this.stats.total_profit = round2(this.stats.total_profit + profit);
+        this.stats.total_payout = round2(this.stats.total_payout + this.contract.sell_price);
         this.options.onStats(this.getStats());
+        this.emitTransaction(won ? 'won' : 'lost');
+        this.contract_id = null;
         this.options.onLog(
             won ? 'success' : 'warn',
             won
@@ -361,12 +546,13 @@ export class BotRunner {
             return;
         }
 
-        const requests = this.runStack(this.options.program.restart);
+        const requests = this.runStack(this.options.program.after_purchase);
         if (!requests || this.status !== 'running') return;
         if (requests.trade_again) {
             this.phase = 'waiting';
-        } else {
-            this.stop(localize('Bot finished: the restart conditions did not ask to trade again.'));
+            return;
         }
+        // a timeout in the restart conditions may still ask to trade again
+        this.finishIfStalled();
     }
 }
