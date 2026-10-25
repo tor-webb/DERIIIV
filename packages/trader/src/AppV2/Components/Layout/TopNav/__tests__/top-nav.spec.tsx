@@ -29,6 +29,8 @@ describe('TopNav', () => {
         expect(screen.getByText('Trade')).toBeInTheDocument();
         expect(screen.getByText('Charts')).toBeInTheDocument();
         expect(screen.getByText('Bot Builder')).toBeInTheDocument();
+        expect(screen.getByText('Risk')).toBeInTheDocument();
+        expect(screen.getByText('Copy trading')).toBeInTheDocument();
         expect(screen.queryByText('Reports')).not.toBeInTheDocument();
     });
 

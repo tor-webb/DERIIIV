@@ -27,6 +27,8 @@ const TopNav = observer(() => {
         { id: 'trade', label: localize('Trade'), path: routes.index, exact: true },
         { id: 'charts', label: localize('Charts'), path: routes.charts },
         { id: 'bot_builder', label: localize('Bot Builder'), path: routes.bot_builder },
+        { id: 'risk_calculator', label: localize('Risk'), path: routes.risk_calculator },
+        { id: 'copy_trading', label: localize('Copy trading'), path: routes.copy_trading },
         ...(is_logged_in ? [{ id: 'reports', label: localize('Reports'), path: routes.reports }] : []),
     ];
 
