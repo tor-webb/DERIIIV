@@ -227,7 +227,7 @@ describe('importing bots', () => {
             errors: ['This bot uses blocks that are not supported here: evil_block.'],
         });
 
-        const json = JSON.stringify({ blocks: { blocks: [{ type: 'text_print' }] } });
+        const json = JSON.stringify({ blocks: { blocks: [{ type: 'lists_create_with' }] } });
         expect(parseBotFile(json)).toMatchObject({ ok: false });
     });
 

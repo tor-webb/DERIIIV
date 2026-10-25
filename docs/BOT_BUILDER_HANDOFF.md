@@ -27,18 +27,36 @@ contains the first branch's commits, so merging it alone also works.
 
 ## 3. Honest status
 
-**Verified (by running it):** 68 Jest tests pass in the three BotBuilder suites; `tsc --noEmit` shows no
+**Verified (by running it):** 76 Jest tests pass in the four BotBuilder suites; `tsc --noEmit` shows no
 BotBuilder errors; ESLint shows 0 errors (2 warnings: `max-classes-per-file` in `interpreter.ts`,
 `no-restricted-exports` in `index.ts`).
 
 **NOT verified, and the most likely places for bugs:**
 
-1. **Block and field names come from memory of Deriv Bot, not from the user's file.** The user said to use
-   the names "exactly as they appear in your file", but the file was not available this session. Names
-   such as `trade_definition`, `trade_definition_market`, `SYMBOL_LIST`, `PURCHASE_LIST`,
-   `TRADETYPE_LIST`, `DURATIONTYPE_LIST`, `PREDICTION`, `NOTIFICATION_TYPE`, `BEFOREPURCHASE_STACK`,
-   `DURING_PURCHASE_STACK`, `AFTERPURCHASE_STACK` must be checked against a real exported Deriv Bot
-   `.xml`. **First job: get that file from the user and reconcile.**
+1. **Block and field names are now checked against two real files, but only partly.** The user supplied a
+   Deriv Bot export (`MKUU_ODD_EVEN`, modern format with `is_dbot="true"`) and an older Binary Bot file
+   (`dollar_printer_fx_candle_mine`, legacy format). Both import, load, validate and compile (checked with
+   throwaway tests over the real files, not committed; the committed tests use reduced reproductions with
+   text of our own because the originals carry other people's branding).
+   - **Confirmed by those files:** `trade_definition` (+ `_market`, `_tradetype`, `_contracttype`,
+     `_candleinterval`, `_restartbuysell`, `_restartonerror`, `_tradeoptions`), `before_purchase`,
+     `during_purchase`, `after_purchase`, `purchase`, `trade_again`, `check_sell`, `contract_check_result`,
+     `total_profit`, `last_digit`, `read_details`, `notify`, `text_print`, `math_change`,
+     `math_number_positive`, `text_statement`, and all field and input names on them.
+   - **Still from memory, not seen in any file:** `tick`, `balance` (`BALANCE_TYPE`), `total_runs`, `timeout`
+     (`SECONDS`, `TIMEOUTSTACK`), and the function blocks (`procedures_*`).
+   - **`read_details`:** both bots use `DETAIL_INDEX` 4 as the signed profit, so that is confirmed. The other
+     indexes (1 contract id, 2 buy price, 3 sell price, 5 contract type) follow Binary Bot's order from memory and
+     are **unconfirmed**; 6 to 10 are listed but make the compiler throw. Check Deriv Bot's dropdown.
+   - **Two meanings of `text_join`:** Deriv Bot's is a *statement* ("set VARIABLE to create text with", holding
+     `text_statement` blocks). Binary Bot's was a *value* block with `ADD0`, `ADD1`. We register Deriv's and
+     delete Blockly's built-in one. On import, `migrateLegacyBot` (in `bot-utils.ts`) turns each legacy value
+     join into a statement placed just before the block that used it, and the value becomes a variable. A legacy
+     join that is not inside any statement is refused as `legacy_text_join`.
+   - **Legacy `trade` / `tradeOptions`** blocks are migrated to `trade_definition` + the setting blocks.
+   - The two barrier-offset fields (`BARRIEROFFSETTYPE_LIST`, `SECONDBARRIEROFFSETTYPE_LIST`) and the barrier
+     inputs are not defined on our `trade_definition_tradeoptions`; Blockly logs a console warning and drops
+     them. Harmless for digit and rise/fall bots, but a barrier trade type would lose its barrier.
 2. **Never run in a browser.** No visual check of the layout (especially the mobile stacked layout), no
    webpack build, no check of the Blockly dropdowns that depend on other dropdowns (market > submarket >
    symbol, trade type category > trade type, contract type), or of the hidden Prediction input.
@@ -65,7 +83,7 @@ BotBuilder errors; ESLint shows 0 errors (2 warnings: `max-classes-per-file` in 
 | `Engine/ws-adapter.ts` | Adapts the platform `WS` helper from `@deriv/shared` to `TBotApi`. **Untouched this session.** |
 | `bot-utils.ts` | Starter bot, storage, `restoreWorkspace`, `parseBotFile` / `scanState` (safe import), `loadParsedBot`, `exportWorkspaceXml` (Deriv format, `is_dbot="true"`), `validateBot`. |
 | `bot-builder.tsx` / `.scss` | The page. Toolbar, workspace, Summary / Transactions / Journal tabs, footer with status and Run/Stop. |
-| `__tests__/` | `engine.spec.ts` (compiler, interpreter, runner incl. fake timers), `bot-utils.spec.ts` (validation, import safety), `bot-builder.spec.tsx` (page, with Blockly mocked). |
+| `__tests__/` | `engine.spec.ts` (compiler, interpreter, runner incl. fake timers), `bot-utils.spec.ts` (validation, import safety), `deriv-bots.spec.ts` (a Deriv Bot export and a legacy Binary Bot file, imported and run end to end), `bot-builder.spec.tsx` (page, with Blockly mocked). Note: the repo's Jest `testRegex` treats every file under `__tests__/` as a test, so shared helpers must live elsewhere. |
 
 ## 5. How a bot runs (the model to preserve)
 
@@ -100,8 +118,9 @@ Do not edit generated colour SCSS (see `CLAUDE.md`).
 
 ## 7. Remaining work, in order
 
-1. **Get a real Deriv Bot `.xml` from the user and reconcile names.** Update `BLOCK_TYPES`, field names,
-   the starter bot, compiler and tests. Add that file (sanitised) as a test fixture and test a real import.
+1. **Confirm the unconfirmed names** listed in section 3 (`tick`, `balance`, `total_runs`, `timeout`, functions,
+   `read_details` indexes other than 4) with a Deriv Bot export that uses them, and add the barrier-offset
+   fields and inputs to `trade_definition_tradeoptions` before adding barrier trade types.
 2. **Browser smoke test on a demo account** (`npm run serve trader` or core): Rise/Fall, then Over/Under
    with prediction, then a bot with a function and a `timeout`. In the network tab check the `proposal`
    payload: `underlying_symbol`, integer `duration`, `barrier` only for digit contracts that need one.
@@ -126,6 +145,7 @@ Do not edit generated colour SCSS (see `CLAUDE.md`).
 
 - Imports are **allow-list scanned** before anything touches the workspace; unknown blocks are refused.
   XML with `<!DOCTYPE` or `<!ENTITY` is refused. Limits: 2,000,000 characters, 5,000 blocks, depth 200.
+- Stakes are **rounded to two decimals** before the proposal (martingale stakes such as 0.3642 are rejected by the API).
 - The runner has **no `eval` or dynamic code** anywhere; bots are data interpreted by `interpreter.ts`.
 - Real accounts require a "Stop at total loss" value plus an explicit confirmation dialog.
 - A saved workspace that fails the scan (for example one saved by the old block set) falls back to the

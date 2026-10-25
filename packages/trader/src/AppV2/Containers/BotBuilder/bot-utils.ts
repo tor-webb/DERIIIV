@@ -254,6 +254,155 @@ const scanXml = (root: Element): TScanResult => {
     return { errors };
 };
 
+/* ----------------------------------------------------------------------------------------------- */
+/* Legacy Binary Bot files                                                                          */
+/* ----------------------------------------------------------------------------------------------- */
+
+const childrenOf = (element: Element, tag?: string) =>
+    Array.from(element.children).filter(child => !tag || child.tagName.toLowerCase() === tag);
+
+const fieldOf = (block: Element, name: string) =>
+    childrenOf(block, 'field').find(field => field.getAttribute('name') === name);
+
+const makeElement = (doc: Document, tag: string, attributes: Record<string, string> = {}) => {
+    const element = doc.createElement(tag);
+    Object.entries(attributes).forEach(([key, value]) => element.setAttribute(key, value));
+    return element;
+};
+
+/** The market, trade type and restart settings were fields of one `trade` block; Deriv Bot makes them blocks. */
+const TRADE_SETTING_BLOCKS: [string, string[]][] = [
+    [BLOCK_TYPES.MARKET, ['MARKET_LIST', 'SUBMARKET_LIST', 'SYMBOL_LIST']],
+    [BLOCK_TYPES.TRADE_TYPE, ['TRADETYPECAT_LIST', 'TRADETYPE_LIST']],
+    [BLOCK_TYPES.CONTRACT_TYPE, ['TYPE_LIST']],
+    [BLOCK_TYPES.CANDLE_INTERVAL, ['CANDLEINTERVAL_LIST']],
+    [BLOCK_TYPES.RESTART_BUY_SELL, ['TIME_MACHINE_ENABLED']],
+    [BLOCK_TYPES.RESTART_ON_ERROR, ['RESTARTONERROR']],
+];
+
+const migrateTradeBlock = (trade: Element) => {
+    const doc = trade.ownerDocument;
+    let chain: Element | null = null;
+    [...TRADE_SETTING_BLOCKS].reverse().forEach(([type, names]) => {
+        const block = makeElement(doc, 'block', { type });
+        names.forEach(name => {
+            const old = fieldOf(trade, name);
+            if (old) block.appendChild(old.cloneNode(true));
+        });
+        if (chain) {
+            const next = makeElement(doc, 'next');
+            next.appendChild(chain);
+            block.appendChild(next);
+        }
+        chain = block;
+    });
+    childrenOf(trade, 'field').forEach(field => trade.removeChild(field));
+    trade.setAttribute('type', BLOCK_TYPES.TRADE_DEFINITION);
+    if (chain) {
+        const statement = makeElement(doc, 'statement', { name: 'TRADE_OPTIONS' });
+        statement.appendChild(chain);
+        trade.insertBefore(statement, trade.firstChild);
+    }
+};
+
+const isLegacyJoin = (element: Element) =>
+    element.tagName.toLowerCase() === 'block' &&
+    element.getAttribute('type') === 'text_join' &&
+    childrenOf(element).some(
+        child =>
+            child.tagName.toLowerCase() === 'mutation' ||
+            (child.tagName.toLowerCase() === 'value' && /^ADD\d+$/.test(child.getAttribute('name') ?? ''))
+    );
+
+const MAX_MIGRATION_STEPS = 2000;
+
+/**
+ * Binary Bot's "create text with" was a value block. Deriv Bot's is a statement that fills a variable. The text is
+ * built in a statement placed just before the block that used it, and the value block becomes that variable.
+ */
+const hoistLegacyJoins = (root: Element) => {
+    const doc = root.ownerDocument;
+    for (let step = 1; step <= MAX_MIGRATION_STEPS; step += 1) {
+        const joins = Array.from(root.getElementsByTagName('block')).filter(isLegacyJoin);
+        // innermost first, so a join nested in another is already a variable by the time the outer one moves
+        const join = joins.find(candidate => !Array.from(candidate.getElementsByTagName('block')).some(isLegacyJoin));
+        if (!join) return;
+
+        // climb to the statement block that holds this join, through any value blocks in between
+        let statement: Element | null = join;
+        while (statement) {
+            const container: Element | null = statement.parentElement;
+            const container_tag: string = container?.tagName.toLowerCase() ?? '';
+            if (container_tag === 'next' || container_tag === 'statement') break;
+            const is_value_slot = container_tag === 'value' || container_tag === 'shadow';
+            statement = is_value_slot ? (container?.parentElement ?? null) : null;
+        }
+        const parent = statement?.parentElement;
+        if (!statement || !parent || !join.parentElement) {
+            // a join that is not inside any statement cannot be moved; the scan reports it
+            join.setAttribute('type', 'legacy_text_join');
+            return hoistLegacyJoins(root);
+        }
+
+        const variable_name = `joined text ${step}`;
+        const variable_id = `legacy_text_${step}`;
+        const parts = childrenOf(join, 'value')
+            .filter(value => /^ADD\d+$/.test(value.getAttribute('name') ?? ''))
+            .sort((a, b) => Number(a.getAttribute('name')?.slice(3)) - Number(b.getAttribute('name')?.slice(3)));
+
+        let chain: Element | null = null;
+        [...parts].reverse().forEach(part => {
+            const piece = makeElement(doc, 'block', { type: 'text_statement' });
+            const slot = makeElement(doc, 'value', { name: 'TEXT' });
+            childrenOf(part).forEach(child => slot.appendChild(child));
+            piece.appendChild(slot);
+            if (chain) {
+                const next = makeElement(doc, 'next');
+                next.appendChild(chain);
+                piece.appendChild(next);
+            }
+            chain = piece;
+        });
+
+        const setter = makeElement(doc, 'block', { type: 'text_join' });
+        const set_field = makeElement(doc, 'field', { name: 'VARIABLE', id: variable_id, variabletype: '' });
+        set_field.textContent = variable_name;
+        setter.appendChild(set_field);
+        if (chain) {
+            const stack = makeElement(doc, 'statement', { name: 'STACK' });
+            stack.appendChild(chain);
+            setter.appendChild(stack);
+        }
+
+        const getter = makeElement(doc, 'block', { type: 'variables_get' });
+        const get_field = makeElement(doc, 'field', { name: 'VAR', id: variable_id, variabletype: '' });
+        get_field.textContent = variable_name;
+        getter.appendChild(get_field);
+        join.parentElement.replaceChild(getter, join);
+
+        parent.replaceChild(setter, statement);
+        const next = makeElement(doc, 'next');
+        next.appendChild(statement);
+        setter.appendChild(next);
+    }
+    // gave up: leave what is left for the scan to refuse
+    Array.from(root.getElementsByTagName('block'))
+        .filter(isLegacyJoin)
+        .forEach(block => block.setAttribute('type', 'legacy_text_join'));
+    return undefined;
+};
+
+/** Upgrades a Binary Bot file (`trade`, `tradeOptions`, value-form text join) to the blocks used here. */
+export const migrateLegacyBot = (root: Element) => {
+    Array.from(root.getElementsByTagName('block'))
+        .filter(block => block.getAttribute('type') === 'trade')
+        .forEach(migrateTradeBlock);
+    Array.from(root.getElementsByTagName('block'))
+        .filter(block => block.getAttribute('type') === 'tradeOptions')
+        .forEach(block => block.setAttribute('type', BLOCK_TYPES.TRADE_OPTIONS));
+    hoistLegacyJoins(root);
+};
+
 export type TParsedBot =
     | { ok: true; kind: 'json'; state: Record<string, unknown> }
     | { ok: true; kind: 'xml'; dom: Element }
@@ -278,6 +427,7 @@ export const parseBotFile = (text: string): TParsedBot => {
         if (!root || parsed.getElementsByTagName('parsererror').length || root.tagName.toLowerCase() !== 'xml') {
             return invalid();
         }
+        migrateLegacyBot(root);
         const { errors } = scanXml(root);
         return errors.length ? { ok: false, errors } : { ok: true, kind: 'xml', dom: root };
     }
@@ -340,7 +490,9 @@ const isUnder = (block: Blockly.Block, root: string) => {
 
 const plainNumber = (block: Blockly.Block, input: string): number | null => {
     const target = block.getInputTargetBlock(input);
-    return target?.type === 'math_number' ? Number(target.getFieldValue('NUM')) : null;
+    return target?.type === 'math_number' || target?.type === 'math_number_positive'
+        ? Number(target.getFieldValue('NUM'))
+        : null;
 };
 
 /**

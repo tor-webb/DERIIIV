@@ -18,7 +18,7 @@ export const BLOCK_TYPES = {
     BEFORE_PURCHASE: 'before_purchase',
     PURCHASE: 'purchase',
     DURING_PURCHASE: 'during_purchase',
-    SELL_AVAILABLE: 'sell_available',
+    SELL_AVAILABLE: 'check_sell',
     SELL_AT_MARKET: 'sell_at_market',
     AFTER_PURCHASE: 'after_purchase',
     TRADE_AGAIN: 'trade_again',
@@ -58,13 +58,17 @@ export const ALLOWED_BLOCK_TYPES: ReadonlySet<string> = new Set<string>([
     'logic_negate',
     'logic_boolean',
     'math_number',
+    'math_number_positive',
+    'math_change',
     'math_arithmetic',
     'math_single',
     'math_modulo',
     'math_round',
     'math_random_int',
     'text',
+    'text_print',
     'text_join',
+    'text_statement',
     'variables_get',
     'variables_set',
 ]);
@@ -206,11 +210,22 @@ export const CANDLE_INTERVAL_OPTIONS: [string, string][] = [
     ['1 day', '86400'],
 ];
 
+/**
+ * `read_details` option values. Index 4 is the profit or loss of the contract (both reference bots rely on that:
+ * it is negative after a loss). The others follow Binary Bot's order and are NOT confirmed against Deriv Bot's
+ * dropdown yet; indexes 6 to 10 are listed so imported bots keep their value, but the compiler refuses them.
+ */
 export const READ_DETAILS_OPTIONS: [string, string][] = [
-    ['Buy price', '1'],
-    ['Payout', '2'],
-    ['Profit', '3'],
-    ['Current sell price', '4'],
+    ['Contract ID', '1'],
+    ['Buy price', '2'],
+    ['Sell price', '3'],
+    ['Profit/loss', '4'],
+    ['Contract type', '5'],
+    ['Entry spot', '6'],
+    ['Entry spot time', '7'],
+    ['Exit spot', '8'],
+    ['Exit spot time', '9'],
+    ['Barrier', '10'],
 ];
 
 /** Walks the trade parameter blocks of a workspace to find the selected trade type. */
@@ -490,6 +505,39 @@ export const registerBlocks = () => {
         },
     ]);
 
+    // Deriv Bot's "set VAR to create text with" is a statement, not Blockly's value block of the same name
+    delete Blockly.Blocks.text_join;
+    Blockly.common.defineBlocksWithJsonArray([
+        {
+            type: 'text_join',
+            message0: localize('set %1 to create text with'),
+            args0: [{ type: 'field_variable', name: 'VARIABLE', variable: 'text' }],
+            message1: '%1',
+            args1: [{ type: 'input_statement', name: 'STACK', check: 'Text' }],
+            previousStatement: null,
+            nextStatement: null,
+            colour: '#5ca68d',
+            tooltip: localize('Joins the texts inside into one text and stores it in the variable.'),
+        },
+        {
+            type: 'text_statement',
+            message0: '%1',
+            args0: [{ type: 'input_value', name: 'TEXT' }],
+            previousStatement: 'Text',
+            nextStatement: 'Text',
+            colour: '#5ca68d',
+            tooltip: localize('A piece of text to join.'),
+        },
+        {
+            type: 'math_number_positive',
+            message0: '%1',
+            args0: [{ type: 'field_number', name: 'NUM', value: 0, min: 0 }],
+            output: 'Number',
+            colour: '#5c68a6',
+            tooltip: localize('A number that is zero or more.'),
+        },
+    ]);
+
     Blockly.Blocks[BLOCK_TYPES.MARKET] = {
         init(this: Blockly.Block) {
             this.appendDummyInput()
@@ -692,6 +740,7 @@ export const getToolbox = (): Blockly.utils.toolbox.ToolboxDefinition => ({
             colour: '#5c68a6',
             contents: [
                 { kind: 'block', type: 'math_number' },
+                { kind: 'block', type: 'math_change', inputs: { DELTA: num(1) } },
                 { kind: 'block', type: 'math_arithmetic', inputs: { A: num(1), B: num(1) } },
                 { kind: 'block', type: 'math_single', inputs: { NUM: num(9) } },
                 { kind: 'block', type: 'math_modulo', inputs: { DIVIDEND: num(64), DIVISOR: num(10) } },
@@ -706,6 +755,8 @@ export const getToolbox = (): Blockly.utils.toolbox.ToolboxDefinition => ({
             contents: [
                 { kind: 'block', type: 'text' },
                 { kind: 'block', type: 'text_join' },
+                { kind: 'block', type: 'text_statement' },
+                { kind: 'block', type: 'text_print', inputs: { TEXT: txt('abc') } },
             ],
         },
         { kind: 'category', name: localize('Variables'), colour: '#a65c81', custom: 'VARIABLE' },

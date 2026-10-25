@@ -12,6 +12,8 @@ export type TDataKind =
     | 'sell_available'
     | 'result_win'
     | 'result_loss'
+    | 'detail_contract_id'
+    | 'detail_contract_type'
     | 'detail_buy_price'
     | 'detail_payout'
     | 'detail_profit'

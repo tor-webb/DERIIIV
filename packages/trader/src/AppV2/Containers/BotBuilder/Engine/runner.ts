@@ -83,6 +83,7 @@ export class BotRunner {
     private consecutive_trade_errors = 0;
 
     private contract_id: number | null = null;
+    private last_contract_id = 0;
     private contract_type = '';
     private buy_in_flight = false;
     private sell_in_flight = false;
@@ -214,6 +215,10 @@ export class BotRunner {
                 return this.last_result === 'win';
             case 'result_loss':
                 return this.last_result === 'loss';
+            case 'detail_contract_id':
+                return this.contract_id ?? this.last_contract_id;
+            case 'detail_contract_type':
+                return this.contract_type;
             case 'detail_buy_price':
                 return this.contract.buy_price;
             case 'detail_payout':
@@ -324,7 +329,8 @@ export class BotRunner {
         let prediction: number | null = null;
         try {
             const ctx = this.makeContext({ purchase: null, sell: false, trade_again: false });
-            amount = Number(evaluate(options.amount, ctx));
+            // the API takes at most two decimals; a martingale stake such as 0.3642 must be rounded first
+            amount = round2(Number(evaluate(options.amount, ctx)));
             duration = Math.trunc(Number(evaluate(options.duration, ctx)));
             if (PREDICTION_CONTRACTS.has(contract_type)) {
                 if (!options.prediction) {
@@ -523,6 +529,7 @@ export class BotRunner {
         this.stats.total_payout = round2(this.stats.total_payout + this.contract.sell_price);
         this.options.onStats(this.getStats());
         this.emitTransaction(won ? 'won' : 'lost');
+        this.last_contract_id = this.contract_id ?? this.last_contract_id;
         this.contract_id = null;
         this.options.onLog(
             won ? 'success' : 'warn',

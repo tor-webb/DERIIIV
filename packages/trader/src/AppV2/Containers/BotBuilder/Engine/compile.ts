@@ -41,11 +41,13 @@ const DATA_BLOCKS: Record<string, TDataKind> = {
     [BLOCK_TYPES.SELL_AVAILABLE]: 'sell_available',
 };
 
+/** See READ_DETAILS_OPTIONS: only index 4 is confirmed against real Deriv bots. */
 const DETAIL_KINDS: Record<string, TDataKind> = {
-    '1': 'detail_buy_price',
-    '2': 'detail_payout',
-    '3': 'detail_profit',
-    '4': 'detail_sell_price',
+    '1': 'detail_contract_id',
+    '2': 'detail_buy_price',
+    '3': 'detail_sell_price',
+    '4': 'detail_profit',
+    '5': 'detail_contract_type',
 };
 
 const getVariableName = (block: Blockly.Block) => block.getField('VAR')?.getText() ?? '';
@@ -75,21 +77,20 @@ export const compileExpr = (block: Blockly.Block): TExpr => {
             return { t: 'data', kind: block.getFieldValue('CHECK_RESULT') === 'win' ? 'result_win' : 'result_loss' };
         case BLOCK_TYPES.READ_DETAILS: {
             const kind = DETAIL_KINDS[String(block.getFieldValue('DETAIL_INDEX'))];
-            return kind ? { t: 'data', kind } : unsupported(block);
+            if (!kind) {
+                throw new CompileError(
+                    localize('"Contract detail" option {{index}} is not supported in a bot yet.', {
+                        index: String(block.getFieldValue('DETAIL_INDEX')),
+                    })
+                );
+            }
+            return { t: 'data', kind };
         }
         case 'math_number':
+        case 'math_number_positive':
             return { t: 'num', v: Number(block.getFieldValue('NUM')) };
         case 'text':
             return { t: 'str', v: String(block.getFieldValue('TEXT') ?? '') };
-        case 'text_join':
-            return {
-                t: 'join',
-                parts: block.inputList
-                    .filter(input => /^ADD\d+$/.test(input.name))
-                    .map(input => block.getInputTargetBlock(input.name))
-                    .filter((target): target is Blockly.Block => Boolean(target))
-                    .map(compileExpr),
-            };
         case 'logic_boolean':
             return { t: 'bool', v: block.getFieldValue('BOOL') === 'TRUE' };
         case 'variables_get':
@@ -164,6 +165,24 @@ const compileStatement = (block: Blockly.Block): TStmt => {
             return { t: 'flow', kind: block.getFieldValue('FLOW') === 'CONTINUE' ? 'CONTINUE' : 'BREAK' };
         case 'variables_set':
             return { t: 'set', name: getVariableName(block), value: compileInput(block, 'VALUE') };
+        case 'math_change': {
+            const name = getVariableName(block);
+            return {
+                t: 'set',
+                name,
+                value: { t: 'arith', op: 'ADD', a: { t: 'var', name }, b: compileInput(block, 'DELTA') },
+            };
+        }
+        case 'text_print':
+            return { t: 'notify', level: 'info', message: compileInput(block, 'TEXT') };
+        case 'text_join': {
+            // Deriv Bot's "set VARIABLE to create text with ..." statement
+            const parts: TExpr[] = [];
+            for (let part = block.getInputTargetBlock('STACK'); part; part = part.getNextBlock()) {
+                if (part.isEnabled()) parts.push(compileInput(part, 'TEXT'));
+            }
+            return { t: 'set', name: String(block.getField('VARIABLE')?.getText() ?? ''), value: { t: 'join', parts } };
+        }
         case BLOCK_TYPES.NOTIFY:
             return {
                 t: 'notify',
