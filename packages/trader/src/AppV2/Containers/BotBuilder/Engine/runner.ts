@@ -222,7 +222,16 @@ export class BotRunner {
         this.proposal_sub = subscribeOnce(
             cb =>
                 api.subscribeProposal(
-                    { amount: stake, basis: 'stake', contract_type, currency, duration, duration_unit, symbol },
+                    {
+                        amount: stake,
+                        basis: 'stake',
+                        contract_type,
+                        currency,
+                        // the platform's own proposals use `underlying_symbol` and an integer duration
+                        underlying_symbol: symbol,
+                        duration: Math.trunc(duration),
+                        duration_unit,
+                    },
                     cb
                 ),
             response => {

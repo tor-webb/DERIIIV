@@ -270,7 +270,7 @@ describe('BotRunner', () => {
             currency: 'USD',
             duration: 5,
             duration_unit: 't',
-            symbol: '1HZ100V',
+            underlying_symbol: '1HZ100V',
         });
         expect(api.calls.buy).toEqual([['prop-1', 1]]);
 
