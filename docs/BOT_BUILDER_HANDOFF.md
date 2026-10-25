@@ -12,18 +12,19 @@ and that bots exported from Deriv Bot import here.
 
 All code is in `packages/trader/src/AppV2/Containers/BotBuilder/`.
 
-## 2. Repo state
+## 2. Repo state (updated 2026-10-25, after the merge)
 
-| Branch | What it holds |
+**The Bot Builder is merged into `main`** via PR #3 (merge commit `9a03b1f`, 2026-10-25). PR #1 shows as merged;
+PR #2 was closed with a comment because its changes shipped in #3. Work from here should branch off `main`.
+
+| Branch | State |
 |---|---|
-| `main` | Up to the top navigation. No Bot Builder. |
-| `bot-builder-page` | First version: block workspace page only. |
-| `bot-run-engine` | Page plus a first, simple run engine (PR #2). Last commit `d762be0` sends `underlying_symbol` and an integer `duration`. |
-| **`bot-deriv-compat`** | **Current work.** One commit (`be62a61`) on top of `d762be0`. Contains everything below. No PR opened yet. |
-| `github-pages-fix` | Older than `main`; probably dead. |
+| `main` | Has the Bot Builder. A push to `main` triggers the "Deploy to GitHub Pages" workflow. |
+| `bot-deriv-compat`, `bot-run-engine`, `bot-builder-page` | Fully contained in `main`; safe to delete. |
+| `github-pages-fix` | Older than the merged work; probably dead. Confirm, then delete. |
 
-Merge order when ready: PR #2 (`bot-run-engine`), then `bot-deriv-compat`. The second branch already
-contains the first branch's commits, so merging it alone also works.
+The webpack build of the merged code had **not** been run when it was merged. Check the latest
+"Deploy to GitHub Pages" run in the Actions tab first; if it failed, fix the build before anything else.
 
 ## 3. Honest status
 
@@ -101,7 +102,7 @@ BotBuilder errors; ESLint shows 0 errors (2 warnings: `max-classes-per-file` in 
 
 ```bash
 git clone https://github.com/tor-webb/deriiiv && cd deriiiv
-git checkout bot-deriv-compat
+git checkout main
 # repo wants Node 24 (.nvmrc); Node 22.14+ also works. The last session used Node 22.23.
 npm ci --ignore-scripts --no-audit --no-fund      # ~35 s; the repo's own script is `npm run bootstrap`
 
@@ -136,9 +137,9 @@ Do not edit generated colour SCSS (see `CLAUDE.md`).
    runner would wait forever for an update). Add a timeout or resubscribe on reconnect.
 7. **Real-money safety review** before any real-account launch: the loss limit is required and the confirm
    dialog exists, but also consider a maximum stake cap and a visible real-account banner while running.
-8. **Open the PR** for `bot-deriv-compat`, run the repo-wide `npm run test` (only the BotBuilder suites
-   were run), and fix anything outside this folder that it flags.
-9. Cleanup: delete `github-pages-fix` if confirmed dead; consider splitting the three break, continue and
+8. **Check the deploy and run the repo-wide `npm run test`** (only the BotBuilder suites were run before the
+   merge) and fix anything outside this folder that it flags.
+9. Cleanup: delete the merged branches (section 2) and `github-pages-fix` if confirmed dead; consider splitting the three break, continue and
    return signal classes in `interpreter.ts` to clear the `max-classes-per-file` warning.
 
 ## 8. Decisions already made (do not undo without asking the user)
