@@ -15,7 +15,7 @@ import Assistant from '../Assistant';
 
 import './app-shell.scss';
 
-// Pages that get the phone tab bar. The trade page keeps its own full-screen mobile layout.
+// Pages that get the phone tab bar (the Trade page is matched exactly, below, because '/' prefixes every path).
 const MOBILE_NAV_ROUTES = [
     routes.dashboard,
     routes.charts,
@@ -39,7 +39,9 @@ const AppShell = observer(() => {
         }
     }, [location.pathname]);
 
-    const has_mobile_nav = isMobile && MOBILE_NAV_ROUTES.some(route => location.pathname.startsWith(route));
+    const has_mobile_nav =
+        isMobile &&
+        (location.pathname === routes.index || MOBILE_NAV_ROUTES.some(route => location.pathname.startsWith(route)));
 
     return (
         <div

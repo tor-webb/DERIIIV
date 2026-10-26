@@ -1,5 +1,14 @@
 # Handoff: where the work stands (2026-10-26)
 
+## Session 2026-10-27: merge of fix branches, phone navigation on Trade
+
+- Merged `fix/currency-text-and-mobile-nav` and `fix-balance-assistant` into one line. Balances use `formatMoneyText` (shared), so
+  the currency shows as a symbol ("$9,987.00") and never as HTML. `AppV2/Utils/format-balance.ts` was dropped as a duplicate.
+- The phone tab bar (Dashboard, Trade, Charts, Bot Builder, ...) now also shows on the Trade page (`/`). Before, phones on Trade
+  got only the old Deriv Home/Trade/Menu bar and could not reach the dashboard or Bot Builder. Test: `AppShell/__tests__/app-shell.spec.tsx`.
+- There is **no News tab** anywhere in the app. The only news content is the "News and crypto" lessons on the Learn page.
+- Known: on phones the old core header still shows the "DT" logo and the old bottom bar sits under the new tab bar.
+
 ## Session 2026-10-26: Bulk Trader, What-if, Learn page, Telegram link
 
 Branch **`simulators-bulk-and-whatif`** (off `main`). Not merged. A push to `main` triggers the Pages deploy, so review first.
