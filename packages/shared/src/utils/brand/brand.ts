@@ -294,3 +294,34 @@ export const getCopyTradingConfig = (): TCopyTradingConfig => {
         trader_token: (copy?.trader_token ?? '').trim(),
     };
 };
+
+export type TCommunityConfig = {
+    /** The invite link of the Telegram channel or group. Empty until the owner adds one. */
+    telegram_url: string;
+    telegram_name: string;
+};
+
+const TELEGRAM_HOSTS = ['t.me', 'telegram.me'];
+
+/** `true` only for an https link on Telegram's own domains, so a mistyped or hostile value is never rendered as a link. */
+export const isTelegramUrl = (value: string): boolean => {
+    try {
+        const url = new URL(value);
+        return url.protocol === 'https:' && TELEGRAM_HOSTS.includes(url.hostname) && url.pathname.length > 1;
+    } catch {
+        return false;
+    }
+};
+
+/**
+ * Community settings from `community` in brand.config.json.
+ * `telegram_url` is returned empty unless it is a valid Telegram link, and the pages then show "coming soon".
+ */
+export const getCommunityConfig = (): TCommunityConfig => {
+    const community = (config_data as Record<string, unknown>).community as Partial<TCommunityConfig> | undefined;
+    const url = (community?.telegram_url ?? '').trim();
+    return {
+        telegram_url: isTelegramUrl(url) ? url : '',
+        telegram_name: (community?.telegram_name ?? '').trim() || `${getBrandName()} Community`,
+    };
+};

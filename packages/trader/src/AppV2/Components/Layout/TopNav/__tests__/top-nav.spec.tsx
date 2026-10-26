@@ -30,6 +30,9 @@ describe('TopNav', () => {
         expect(screen.getByText('Charts')).toBeInTheDocument();
         expect(screen.getByText('Bot Builder')).toBeInTheDocument();
         expect(screen.getByText('Risk')).toBeInTheDocument();
+        expect(screen.getByText('Bulk Trader')).toBeInTheDocument();
+        expect(screen.getByText('What-if')).toBeInTheDocument();
+        expect(screen.getByText('Learn')).toBeInTheDocument();
         expect(screen.getByText('Copy trading')).toBeInTheDocument();
         expect(screen.queryByText('Reports')).not.toBeInTheDocument();
     });
@@ -54,5 +57,11 @@ describe('TopNav', () => {
         expect(screen.getByTestId('dt_location')).toHaveTextContent('/charts');
         fireEvent.click(screen.getByTestId('dt_top_nav_bot_builder'));
         expect(screen.getByTestId('dt_location')).toHaveTextContent('/bot-builder');
+        fireEvent.click(screen.getByTestId('dt_top_nav_bulk_trader'));
+        expect(screen.getByTestId('dt_location')).toHaveTextContent('/bulk-trader');
+        fireEvent.click(screen.getByTestId('dt_top_nav_what_if'));
+        expect(screen.getByTestId('dt_location')).toHaveTextContent('/what-if');
+        fireEvent.click(screen.getByTestId('dt_top_nav_learn'));
+        expect(screen.getByTestId('dt_location')).toHaveTextContent('/learn');
     });
 });

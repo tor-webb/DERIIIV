@@ -7,7 +7,7 @@ import { localize } from '@deriv-com/translations';
 
 import './dashboard.scss';
 
-type TIconName = 'trade' | 'chart' | 'bot' | 'risk' | 'copy' | 'positions' | 'reports';
+type TIconName = 'trade' | 'chart' | 'bot' | 'bulk' | 'risk' | 'whatif' | 'learn' | 'copy' | 'positions' | 'reports';
 
 type TTool = {
     id: string;
@@ -23,7 +23,10 @@ const ICON_PATHS: Record<TIconName, string> = {
     trade: 'M4 17l5-5 4 4 7-8M15 8h5v5',
     chart: 'M5 20V10M12 20V4M19 20v-7',
     bot: 'M7 9h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2zM12 9V5M9 14h.01M15 14h.01M3 14v2M21 14v2',
+    bulk: 'M4 7h4v4H4zM10 7h4v4h-4zM16 7h4v4h-4zM4 14h16M4 18h10',
     risk: 'M12 3l9 16H3L12 3zM12 10v4M12 17h.01',
+    learn: 'M4 5h7a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-7a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h8z',
+    whatif: 'M12 4a5 5 0 0 0-3 9v2h6v-2a5 5 0 0 0-3-9zM10 19h4M11 22h2',
     copy: 'M9 9h10v10H9zM5 15V5h10',
     positions: 'M4 6h16M4 12h16M4 18h10',
     reports: 'M6 3h9l4 4v14H6zM14 3v5h5M9 13h6M9 17h6',
@@ -71,11 +74,34 @@ const Dashboard = observer(() => {
             tag: localize('Automation'),
         },
         {
+            id: 'bulk_trader',
+            title: localize('Bulk Trader simulator'),
+            description: localize('Settle every contract on real ticks and compare the win rate with break-even.'),
+            path: routes.bulk_trader,
+            icon: 'bulk',
+            tag: localize('Simulator'),
+        },
+        {
             id: 'risk_calculator',
             title: localize('Risk calculator'),
             description: localize('Work out your position size and stake before you trade.'),
             path: routes.risk_calculator,
             icon: 'risk',
+        },
+        {
+            id: 'what_if',
+            title: localize('What-if calculator'),
+            description: localize('Try a win rate of your own and see the profit, loss and drawdown it would bring.'),
+            path: routes.what_if,
+            icon: 'whatif',
+        },
+        {
+            id: 'learn',
+            title: localize('Learn to trade'),
+            description: localize('Beginner lessons on charts, news, crypto and risk, plus our Telegram community.'),
+            path: routes.learn,
+            icon: 'learn',
+            tag: localize('Beginners'),
         },
         {
             id: 'copy_trading',

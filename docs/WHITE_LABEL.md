@@ -170,6 +170,23 @@ npm run serve core
 
 ---
 
+## Community (Telegram) Link
+
+The Learn page shows a "Join us on Telegram" button when `community.telegram_url` in `brand.config.json` is set.
+While it is empty the page says the channel is opening soon, so nothing breaks before the channel exists.
+
+```json
+"community": {
+    "telegram_url": "https://t.me/your_channel_or_+invite_code",
+    "telegram_name": "Your Community Name"
+}
+```
+
+Only `https://t.me/...` and `https://telegram.me/...` links are accepted. Anything else (other domains, `http`,
+`javascript:`) is ignored and the page falls back to "opening soon". Rebuild after editing the file.
+
+---
+
 ## Logo Requirements
 
 ### Brand SVG logos (`assets/brand/`)

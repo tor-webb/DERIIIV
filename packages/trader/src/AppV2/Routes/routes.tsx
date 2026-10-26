@@ -14,6 +14,11 @@ const BotBuilder = lazy(() => import(/* webpackChunkName: "trader-bot-builder" *
 const RiskCalculator = lazy(
     () => import(/* webpackChunkName: "trader-risk-calculator" */ 'AppV2/Containers/RiskCalculator')
 );
+const BulkTrader = lazy(() => import(/* webpackChunkName: "trader-bulk-trader" */ 'AppV2/Containers/BulkTrader'));
+const WhatIfCalculator = lazy(
+    () => import(/* webpackChunkName: "trader-what-if" */ 'AppV2/Containers/WhatIfCalculator')
+);
+const Learn = lazy(() => import(/* webpackChunkName: "trader-learn" */ 'AppV2/Containers/Learn'));
 const CopyTrading = lazy(() => import(/* webpackChunkName: "trader-copy-trading" */ 'AppV2/Containers/CopyTrading'));
 const Positions = lazy(() => import(/* webpackChunkName: "trader-positions" */ 'AppV2/Containers/Positions'));
 
@@ -51,6 +56,24 @@ const traderRoutes: TRouteConfigExtended[] = [
     {
         path: routes.risk_calculator,
         component: RiskCalculator,
+        exact: true,
+        default: false,
+    },
+    {
+        path: routes.bulk_trader,
+        component: BulkTrader,
+        exact: true,
+        default: false,
+    },
+    {
+        path: routes.what_if,
+        component: WhatIfCalculator,
+        exact: true,
+        default: false,
+    },
+    {
+        path: routes.learn,
+        component: Learn,
         exact: true,
         default: false,
     },

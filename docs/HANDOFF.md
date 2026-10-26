@@ -1,4 +1,59 @@
-# Handoff: where the work stands (2026-10-25, end of session)
+# Handoff: where the work stands (2026-10-26)
+
+## Session 2026-10-26: Bulk Trader, What-if, Learn page, Telegram link
+
+Branch **`simulators-bulk-and-whatif`** (off `main`). Not merged. A push to `main` triggers the Pages deploy, so review first.
+
+| Page                  | Route          | What it is                                                                                                                                                                                                                                                             | Folder (`packages/trader/src/AppV2/Containers/`) |
+| --------------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| Bulk Trader simulator | `/bulk-trader` | Fetches the latest real ticks of a market and a live payout quote, then settles every contract with the real rules. Shows the win rate next to the **break-even win rate** and the gap. Nothing is bought.                                                             | `BulkTrader/`                                    |
+| What-if calculator    | `/what-if`     | The user types a win rate. Runs the stake plan 500 times at that rate and shows profit, range, chance of ruin and drawdown, plus a table at 0, 2, 5, 10 and 20 points **below** the assumed rate. The win rate is labelled "Assumption, not a prediction" in the page. | `WhatIfCalculator/`                              |
+| Learn to trade        | `/learn`       | Beginner lessons (basics, charts and indicators, news, stocks, crypto, predictions and risk), glossary with search, a "before every trade" checklist, and the Telegram community card. Lessons are plain data in `learn-content.ts`.                                   | `Learn/`                                         |
+| Shared maths and UI   | n/a            | `stake-math.ts` (payout, break-even, stake plans, `runPlan`, drawdown, seeded simulation) and `stake-tools-ui.tsx/.scss` (fields, gauge, chart). Both simulators settle through the same `runPlan`.                                                                    | `StakeTools/`                                    |
+
+Also changed: route constants (`packages/shared/src/utils/routes/routes.ts`), `AppV2/Routes/routes.tsx`, `top-nav.tsx`
+(Bulk Trader, What-if and Learn tabs), `dashboard.tsx` (three new cards), `brand.config.json` (new `community` block) and
+`packages/shared/src/utils/brand/brand.ts` (`getCommunityConfig`, `isTelegramUrl`).
+
+**Telegram:** put the invite link in `brand.config.json` under `community.telegram_url` (only `https://t.me/...` or
+`https://telegram.me/...` is accepted) and rebuild. Empty means the page says "opening soon". See `docs/WHITE_LABEL.md`.
+
+### Checked, and how
+
+- Jest: the whole `src/AppV2` tree passes (181 suites, 1,458 tests), plus 3 new tests in `packages/shared`. New tests cover the
+  maths (hand-checked numbers), tick settlement for every contract type, the API layer against a fake socket, each page,
+  nav, dashboard and the Telegram link rules.
+- ESLint: 0 errors in the new code (3 `no-restricted-exports` warnings on the new `index.ts` files, same as the existing pages).
+  Stylelint clean. `tsc --noEmit` in `packages/trader` shows no errors in these files (4 older errors in `packages/components`).
+
+### NOT checked (do these first)
+
+1. **Never run in a browser and never against the live Deriv socket.** The layout of the three new pages has not been seen on
+   a screen (desktop or phone), and the dark-mode look of the new SCSS is unchecked.
+2. **Tick timing convention.** `bulk-utils.ts` assumes a contract bought after tick `i` has its entry spot at tick `i + 1` and its
+   exit spot at tick `i + duration`, and that Rise/Fall loses on a tie. This matches how Deriv describes tick contracts, but it
+   was written from memory and is unconfirmed. Compare one simulated trade with a real demo contract on the same ticks.
+3. **API shapes.** `bulk-api.ts` sends `ticks_history` (`adjust_start_time`, `count`, `end: 'latest'`, `style: 'ticks'`) and a
+   `proposal` subscription, and reads `history.prices`, `history.times`, `pip_size`, `proposal.ask_price` and `proposal.payout`.
+   Tested against a fake only. Check the network tab on a demo account.
+4. **Contract limits from memory:** Rise/Fall minimum 5 ticks, maximum 10 ticks in the form, Over prediction 0 to 8, Under 1 to 9.
+   The live quote will refuse a combination that is not offered, and the page then falls back to the typed payout and says so.
+5. **Payout rounding.** `winProfit` rounds the payout to cents. A real contract can differ by a cent.
+6. **The Learn page text** is general education written without a compliance review. Read it, and have it checked if you
+   operate under a financial promotions rule where you live. It does not tell anyone what to buy.
+7. The market list in `bulk-trader.tsx` is the Volatility indices only (same as the Bot Builder). Forex, stocks and crypto
+   symbols are not in the picker yet.
+
+### Next steps, in order
+
+1. Run the three pages in a browser on a demo account (`npm run serve trader`) and fix layout.
+2. Add a few forex and crypto symbols to the Bulk Trader picker once their tick timing is confirmed.
+3. Optional: save a run's settings in `localStorage`, or let the Bulk Trader export its trades as CSV (the Bot Builder already has one in `panel-utils.ts`).
+4. Decide what the Telegram community rules are, and put them in the channel description.
+
+---
+
+# Earlier: where the work stood (2026-10-25, end of session)
 
 Read this first. It is the short version; `docs/BOT_BUILDER_HANDOFF.md` has the deep detail on the bot engine
 (block names, runner model, decisions not to undo).
