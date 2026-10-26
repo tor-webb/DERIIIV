@@ -53,7 +53,7 @@ describe('<Dashboard /> balance', () => {
         renderDashboard(logged_in_client(true));
         const balance = screen.getByTestId('dt_dashboard_balance');
         expect(balance).toHaveTextContent('$9,987.00');
-        expect(balance.textContent).not.toMatch(/[<>]|span/);
+        expect(balance).not.toHaveTextContent(/[<>]|span/);
     });
 
     it('labels a demo account', () => {
