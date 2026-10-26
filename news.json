@@ -1,8 +1,6 @@
 {
- "updated": "2026-10-26T21:44:13.091Z",
+ "updated": "2026-10-26T21:46:15.301Z",
  "sources": {
-  "FXStreet /rss/news": "error: HTTP 403",
-  "FXStreet /rss": "error: HTTP 403",
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
   "ECB /rss/press.html": 12,
@@ -13,6 +11,15 @@
   "The Guardian Business /business/rss": 12
  },
  "items": [
+  {
+   "id": "1ox68sg",
+   "title": "US OCC calls on community banks to become payment stablecoin issuers",
+   "link": "https://cointelegraph.com/news/occ-community-banks-stablecoin-issuers-genius-act?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The announcement followed the banking regulator finalizing its rules for the GENIUS Act, a stablecoin law to be implemented in January",
+   "published": "2026-10-26T21:38:30.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
   {
    "id": "9enc3f",
    "title": "Injective launches onchain futures market tracking Nvidia GPU rental costs",
@@ -273,15 +280,6 @@
    "published": "2026-10-26T11:00:41.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "oxwid9",
-   "title": "BTC price risks $80K loss into FOMC, earnings: Three things to know in Bitcoin this week",
-   "link": "https://cointelegraph.com/markets/btc-price-risks-80k-loss-into-fomc-earnings-three-things-to-know-in-bitcoin-this-week?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitcoin bulls fought for $80,000 support over the weekend ahead of a heavy week of US tech earnings and inflation data.",
-   "published": "2026-10-26T10:49:55.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "ujddai",
