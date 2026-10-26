@@ -1,0 +1,240 @@
+// Same cards, pill tabs and colours as the Risk Calculator.
+.learn {
+    box-sizing: border-box;
+    min-height: calc(100vh - var(--top-nav-height, 0px));
+    padding: 4rem 2.4rem;
+    background-color: var(--color-surface-section);
+    color: var(--color-text-primary);
+    overflow-y: auto;
+
+    &__header,
+    &__notice,
+    &__tabs,
+    &__content,
+    &__checklist,
+    &__community {
+        max-width: 96rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__header {
+        margin-bottom: 2.4rem;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 3.2rem;
+        font-weight: 800;
+    }
+
+    &__subtitle {
+        margin: 0.8rem 0 0;
+        font-size: 1.6rem;
+        opacity: 0.8;
+    }
+
+    &__notice {
+        box-sizing: border-box;
+        margin-bottom: 1.6rem;
+        padding: 1.2rem 1.4rem;
+        border-radius: 0.8rem;
+        background-color: rgba(255, 173, 58, 0.18);
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+
+    &__tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-bottom: 1.6rem;
+    }
+
+    &__tab {
+        padding: 1rem 1.8rem;
+        border: 1px solid var(--color-border-normal, #ced2d9);
+        border-radius: 999px;
+        background: transparent;
+        color: inherit;
+        font-size: 1.4rem;
+        font-weight: 600;
+        cursor: pointer;
+
+        &:focus-visible {
+            outline: 2px solid var(--brand-primary);
+            outline-offset: 2px;
+        }
+
+        &--active {
+            border-color: var(--brand-primary);
+            background-color: var(--brand-primary);
+            color: var(--brand-white);
+        }
+    }
+
+    &__intro {
+        margin: 0 0 1.6rem;
+        font-size: 1.5rem;
+        opacity: 0.85;
+    }
+
+    &__lessons {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 2.4rem;
+    }
+
+    &__lesson,
+    &__checklist,
+    &__community {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        min-width: 0;
+        padding: 2.4rem;
+        border-radius: 1.6rem;
+        background-color: var(--color-surface-card, var(--brand-white));
+        box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.06);
+    }
+
+    &__checklist,
+    &__community {
+        margin-top: 2.4rem;
+    }
+
+    &__lesson-title,
+    &__community-title {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 800;
+    }
+
+    &__lesson-summary {
+        margin: 0;
+        font-size: 1.4rem;
+        font-weight: 600;
+        opacity: 0.85;
+    }
+
+    &__text,
+    &__community-text {
+        margin: 0;
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
+
+    &__points,
+    &__rules {
+        margin: 0;
+        padding-left: 2rem;
+        font-size: 1.3rem;
+        line-height: 1.6;
+    }
+
+    &__rules {
+        opacity: 0.8;
+    }
+
+    &__try,
+    &__button {
+        align-self: flex-start;
+        padding: 1rem 1.8rem;
+        border: 1px solid var(--brand-primary);
+        border-radius: 999px;
+        background-color: transparent;
+        color: var(--brand-primary);
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:focus-visible {
+            outline: 2px solid var(--brand-primary);
+            outline-offset: 2px;
+        }
+    }
+
+    &__button {
+        background-color: var(--brand-primary);
+        color: var(--brand-white);
+    }
+
+    &__soon {
+        margin: 0;
+        padding: 1.2rem 1.4rem;
+        border-radius: 0.8rem;
+        background-color: rgba(31, 107, 255, 0.1);
+        font-size: 1.4rem;
+    }
+
+    &__search {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        margin-bottom: 1.6rem;
+    }
+
+    &__search-label {
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    &__input {
+        padding: 1rem 1.2rem;
+        border: 1px solid var(--color-border-normal, #ced2d9);
+        border-radius: 0.8rem;
+        background: transparent;
+        color: inherit;
+        font-size: 1.6rem;
+
+        &:focus {
+            outline: 2px solid var(--brand-primary);
+            outline-offset: 1px;
+        }
+    }
+
+    &__glossary {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+        gap: 1.6rem;
+        margin: 0;
+    }
+
+    &__term {
+        padding: 1.6rem;
+        border-radius: 1.2rem;
+        background-color: var(--color-surface-card, var(--brand-white));
+        box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.06);
+
+        dt {
+            margin: 0 0 0.4rem;
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+        dd {
+            margin: 0;
+            font-size: 1.3rem;
+            line-height: 1.5;
+        }
+    }
+
+    &__check {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.4rem;
+    }
+
+    &__ready {
+        margin: 0;
+        font-size: 1.4rem;
+        font-weight: 700;
+
+        &--yes {
+            color: var(--brand-success, #00b39b);
+        }
+    }
+}

@@ -1,0 +1,374 @@
+// Shared look for the Bulk Trader and What-if pages. Same cards, pills, fields and colours as the Risk Calculator.
+.stake-tool {
+    box-sizing: border-box;
+    min-height: calc(100vh - var(--top-nav-height, 0px));
+    padding: 4rem 2.4rem;
+    background-color: var(--color-surface-section);
+    color: var(--color-text-primary);
+    overflow-y: auto;
+
+    &__header,
+    &__banner,
+    &__panel,
+    &__disclaimer {
+        max-width: 96rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__header {
+        margin-bottom: 2.4rem;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 3.2rem;
+        font-weight: 800;
+    }
+
+    &__subtitle {
+        margin: 0.8rem 0 0;
+        font-size: 1.6rem;
+        opacity: 0.8;
+    }
+
+    &__banner {
+        margin-bottom: 1.6rem;
+    }
+
+    &__panel {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.4rem;
+        align-items: start;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__form,
+    &__results {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        min-width: 0;
+        padding: 2.4rem;
+        border-radius: 1.6rem;
+        background-color: var(--color-surface-card, var(--brand-white));
+        box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.06);
+    }
+
+    &__section-title {
+        margin: 0.8rem 0 0;
+        font-size: 1.4rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        opacity: 0.7;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        min-width: 0;
+    }
+
+    &__label {
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    &__input-wrap {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    &__input {
+        flex: 1;
+        min-width: 0;
+        padding: 1rem 1.2rem;
+        border: 1px solid var(--color-border-normal, #ced2d9);
+        border-radius: 0.8rem;
+        background: transparent;
+        color: inherit;
+        font-size: 1.6rem;
+
+        &:focus {
+            outline: 2px solid var(--brand-primary);
+            outline-offset: 1px;
+        }
+
+        &:disabled {
+            opacity: 0.6;
+        }
+    }
+
+    &__select {
+        width: 100%;
+        // keeps the native list readable in dark mode
+        background-color: var(--color-surface-card, var(--brand-white));
+    }
+
+    &__suffix {
+        min-width: 4rem;
+        font-size: 1.3rem;
+        opacity: 0.7;
+    }
+
+    &__hint {
+        font-size: 1.2rem;
+        opacity: 0.65;
+    }
+
+    &__check {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.6rem;
+
+        @media (max-width: 480px) {
+            grid-template-columns: minmax(0, 1fr);
+        }
+    }
+
+    &__button {
+        padding: 1.2rem 2rem;
+        border: 1px solid var(--brand-primary);
+        border-radius: 999px;
+        background-color: var(--brand-primary);
+        color: var(--brand-white);
+        font-size: 1.5rem;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:disabled {
+            opacity: 0.55;
+            cursor: not-allowed;
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--brand-primary);
+            outline-offset: 2px;
+        }
+    }
+
+    &__result {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 1.6rem;
+        padding-bottom: 1.2rem;
+        border-bottom: 1px solid var(--color-border-normal, #ced2d9);
+    }
+
+    &__result-label {
+        font-size: 1.4rem;
+        opacity: 0.8;
+    }
+
+    &__result-value {
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: right;
+
+        &--good {
+            color: var(--brand-success, #00b39b);
+        }
+
+        &--bad {
+            color: var(--brand-danger, #ec3f3f);
+        }
+    }
+
+    &__verdict {
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: 700;
+
+        &--good {
+            color: var(--brand-success, #00b39b);
+        }
+
+        &--bad {
+            color: var(--brand-danger, #ec3f3f);
+        }
+    }
+
+    &__gauge {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    &__gauge-track {
+        position: relative;
+        height: 1.4rem;
+        border-radius: 999px;
+        background-color: rgba(128, 128, 128, 0.2);
+        overflow: visible;
+    }
+
+    &__gauge-fill {
+        height: 100%;
+        border-radius: 999px;
+
+        &--good {
+            background-color: var(--brand-success, #00b39b);
+        }
+
+        &--bad {
+            background-color: var(--brand-danger, #ec3f3f);
+        }
+    }
+
+    &__gauge-marker {
+        position: absolute;
+        top: -0.4rem;
+        bottom: -0.4rem;
+        width: 0.3rem;
+        margin-left: -0.15rem;
+        border-radius: 0.2rem;
+        background-color: var(--color-text-primary);
+    }
+
+    &__gauge-legend {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.2rem;
+        font-size: 1.3rem;
+    }
+
+    &__chart {
+        width: 100%;
+        height: 16rem;
+        border-radius: 0.8rem;
+        background-color: rgba(128, 128, 128, 0.08);
+    }
+
+    &__chart-line {
+        fill: none;
+        stroke: var(--brand-primary);
+        stroke-width: 2;
+        vector-effect: non-scaling-stroke;
+    }
+
+    &__chart-baseline {
+        stroke: currentcolor;
+        stroke-width: 1;
+        stroke-dasharray: 4 4;
+        opacity: 0.4;
+        vector-effect: non-scaling-stroke;
+    }
+
+    &__table-wrap {
+        overflow-x: auto;
+    }
+
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 1.3rem;
+
+        caption {
+            margin-bottom: 0.8rem;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        th,
+        td {
+            padding: 0.6rem 0.8rem 0.6rem 0;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        th {
+            font-weight: 600;
+            white-space: normal;
+            opacity: 0.8;
+            vertical-align: bottom;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 1.1rem;
+
+            th,
+            td {
+                padding-right: 0.5rem;
+            }
+        }
+
+        tbody tr {
+            border-top: 1px solid var(--color-border-normal, #ced2d9);
+        }
+
+        &--highlight tbody tr:first-child {
+            font-weight: 700;
+        }
+    }
+
+    &__won {
+        color: var(--brand-success, #00b39b);
+        font-weight: 700;
+    }
+
+    &__lost {
+        color: var(--brand-danger, #ec3f3f);
+        font-weight: 700;
+    }
+
+    &__warning,
+    &__note,
+    &__assumption,
+    &__error {
+        margin: 0;
+        padding: 1.2rem 1.4rem;
+        border-radius: 0.8rem;
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+
+    &__warning {
+        background-color: rgba(255, 173, 58, 0.18);
+    }
+
+    &__note {
+        background-color: rgba(31, 107, 255, 0.1);
+    }
+
+    &__assumption {
+        border-left: 0.4rem solid var(--brand-primary);
+        background-color: rgba(31, 107, 255, 0.1);
+        font-weight: 600;
+    }
+
+    &__error {
+        background-color: rgba(236, 63, 63, 0.14);
+    }
+
+    &__empty {
+        margin: 0;
+        font-size: 1.4rem;
+        opacity: 0.7;
+    }
+
+    &__disclaimer {
+        margin-top: 2.4rem;
+        font-size: 1.2rem;
+        opacity: 0.65;
+    }
+}

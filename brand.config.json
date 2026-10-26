@@ -68,6 +68,10 @@
         "trader_name": "FiscoFX",
         "trader_token": ""
     },
+    "community": {
+        "telegram_url": "",
+        "telegram_name": "FiscoFX Community"
+    },
     "features": {
         "dark_mode": true,
         "language_switcher": false

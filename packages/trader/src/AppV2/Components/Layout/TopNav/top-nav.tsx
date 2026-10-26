@@ -27,7 +27,10 @@ const TopNav = observer(() => {
         { id: 'trade', label: localize('Trade'), path: routes.index, exact: true },
         { id: 'charts', label: localize('Charts'), path: routes.charts },
         { id: 'bot_builder', label: localize('Bot Builder'), path: routes.bot_builder },
+        { id: 'bulk_trader', label: localize('Bulk Trader'), path: routes.bulk_trader },
         { id: 'risk_calculator', label: localize('Risk'), path: routes.risk_calculator },
+        { id: 'what_if', label: localize('What-if'), path: routes.what_if },
+        { id: 'learn', label: localize('Learn'), path: routes.learn },
         { id: 'copy_trading', label: localize('Copy trading'), path: routes.copy_trading },
         ...(is_logged_in ? [{ id: 'reports', label: localize('Reports'), path: routes.reports }] : []),
     ];
