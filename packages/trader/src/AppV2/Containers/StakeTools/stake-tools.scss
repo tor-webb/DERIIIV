@@ -76,6 +76,7 @@
         display: flex;
         flex-direction: column;
         gap: 0.6rem;
+        min-width: 0;
     }
 
     &__label {
@@ -136,11 +137,11 @@
 
     &__row {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 1.6rem;
 
         @media (max-width: 480px) {
-            grid-template-columns: 1fr;
+            grid-template-columns: minmax(0, 1fr);
         }
     }
 
@@ -290,14 +291,25 @@
 
         th,
         td {
-            padding: 0.6rem 0.6rem 0.6rem 0;
+            padding: 0.6rem 0.8rem 0.6rem 0;
             text-align: left;
             white-space: nowrap;
         }
 
         th {
             font-weight: 600;
+            white-space: normal;
             opacity: 0.8;
+            vertical-align: bottom;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 1.1rem;
+
+            th,
+            td {
+                padding-right: 0.5rem;
+            }
         }
 
         tbody tr {

@@ -35,6 +35,7 @@
     }
 
     &__notice {
+        box-sizing: border-box;
         margin-bottom: 1.6rem;
         padding: 1.2rem 1.4rem;
         border-radius: 0.8rem;
@@ -87,6 +88,7 @@
     &__lesson,
     &__checklist,
     &__community {
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
         gap: 1.2rem;

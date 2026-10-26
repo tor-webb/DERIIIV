@@ -28,8 +28,9 @@ Also changed: route constants (`packages/shared/src/utils/routes/routes.ts`), `A
 
 ### NOT checked (do these first)
 
-1. **Never run in a browser and never against the live Deriv socket.** The layout of the three new pages has not been seen on
-   a screen (desktop or phone), and the dark-mode look of the new SCSS is unchecked.
+1. **Never run against the live Deriv socket or inside the real app shell.** The three pages WERE rendered in headless Chromium
+   through a throwaway esbuild harness (stub store, stub translations, fake ticks and quote), at desktop and 390px widths, in light
+   and dark, and the layout bugs found there were fixed. Not seen: inside the real top nav and shell, or on a real phone.
 2. **Tick timing convention.** `bulk-utils.ts` assumes a contract bought after tick `i` has its entry spot at tick `i + 1` and its
    exit spot at tick `i + duration`, and that Rise/Fall loses on a tie. This matches how Deriv describes tick contracts, but it
    was written from memory and is unconfirmed. Compare one simulated trade with a real demo contract on the same ticks.
