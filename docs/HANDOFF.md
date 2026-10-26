@@ -1,5 +1,26 @@
 # Handoff: where the work stands (2026-10-26)
 
+## Session 2026-10-27 (later): News page, alerts, recommendations, handout
+
+- **News page** (`/news`, tab between What-if and Learn): headlines from public RSS feeds (FXStreet, Cointelegraph, BBC
+  Business, CNBC Finance, The Guardian Business), category tabs, "Can move markets" and topic chips, a **Recommendations**
+  panel (keyword rules that point to the Risk calculator, What-if, Charts or Learn; they never predict prices), an **Alerts**
+  switch and a printable **Trader handout**. Code: `AppV2/Containers/News/`.
+- **How the data gets there (the site is static, so it cannot fetch RSS itself).** `.github/workflows/update_news.yml` runs every
+  30 minutes, runs `scripts/news/fetch-news.js` and commits `news.json` to the **`news-data`** branch. The app reads
+  `https://raw.githubusercontent.com/tor-webb/DERIIIV/news-data/news.json` (`NEWS_URL` in `news-utils.ts`). Only title,
+  link, source, date and a 220-character snippet are kept; the page links to the publisher. Until the first run there is no
+  `news-data` branch and the page shows an honest "could not load" state. Run it by hand: Actions, Update news feed, Run workflow.
+  Parser test: `node --test scripts/news/parse-feed.test.js`. GitHub pauses scheduled workflows after 60 days with no repo
+  activity; re-enable it in the Actions tab if that happens. raw.githubusercontent.com caches for about 5 minutes.
+- **Alerts.** `news-notifier.tsx` (mounted in `AppShell`) polls every 15 minutes and pops up at most two new headlines about
+  rates, inflation, jobs, oil or world events that are under 6 hours old. No pop-up on a first visit, none on the News page,
+  and the person can switch them off on the News page (`localStorage`). The News tab shows an unread count.
+- **Handout.** Printing renders a second copy of the sheet under `<body>` (`.news-print-root`) because the app's fixed-height
+  layout clips anything printed from inside it.
+- **Not done / ideas.** An economic calendar with exact release times needs a data source with a licence; per-user
+  push notifications (outside the open page) need a server. Neither exists yet.
+
 ## Session 2026-10-27: merge of fix branches, phone navigation on Trade
 
 - Merged `fix/currency-text-and-mobile-nav` and `fix-balance-assistant` into one line. Balances use `formatMoneyText` (shared), so

@@ -180,6 +180,26 @@ const topics = (): TTopic[] => [
         actions: () => [go(localize('Open Risk calculator'), routes.risk_calculator)],
     },
     {
+        id: 'news',
+        keywords: [
+            'news',
+            'headlines',
+            'market news',
+            'alert',
+            'alerts',
+            'notification',
+            'notifications',
+            'handout',
+            'recommendation',
+            'recommendations',
+        ],
+        answer: () =>
+            localize(
+                'The News page lists recent headlines from public news sites, tags the ones that can move markets, and gives tips on staying safe around them. You can switch pop-up alerts on or off there, and print a one-page handout. News is information, not advice.'
+            ),
+        actions: () => [go(localize('Open News'), routes.news)],
+    },
+    {
         id: 'copy',
         keywords: ['copy', 'copy trading', 'copier', 'mirror', 'follow'],
         answer: () =>

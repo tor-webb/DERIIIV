@@ -52,6 +52,19 @@
         overflow-x: auto;
     }
 
+    &__badge {
+        display: inline-block;
+        min-width: 1.8rem;
+        margin-left: 0.6rem;
+        padding: 0 0.5rem;
+        border-radius: 999px;
+        background-color: var(--custom-indicator-red, #ff444f);
+        color: #fff;
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+        text-align: center;
+    }
+
     &__item {
         position: relative;
         height: 4rem;

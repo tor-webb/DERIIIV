@@ -1,0 +1,54 @@
+name: Update news feed
+
+# Pulls public RSS headlines every 30 minutes and publishes news.json to the `news-data` branch.
+# The app reads it from raw.githubusercontent.com, so a news refresh never needs a full site deploy.
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-news
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: Test the feed parser
+        run: node --test scripts/news/parse-feed.test.js
+
+      - name: Fetch headlines
+        run: node scripts/news/fetch-news.js "$RUNNER_TEMP/news.json"
+
+      - name: Publish to news-data branch
+        run: |
+          set -euo pipefail
+          git config user.name "fiscofx-news-bot"
+          git config user.email "news-bot@users.noreply.github.com"
+          if git ls-remote --exit-code --heads origin news-data >/dev/null 2>&1; then
+            git fetch --depth=1 origin news-data
+            git checkout -B news-data FETCH_HEAD
+          else
+            git checkout --orphan news-data
+            git rm -rf --quiet . || true
+          fi
+          cp "$RUNNER_TEMP/news.json" news.json
+          git add news.json
+          if git diff --cached --quiet; then
+            echo "No change."
+          else
+            git commit -m "Update news $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push origin news-data
+          fi

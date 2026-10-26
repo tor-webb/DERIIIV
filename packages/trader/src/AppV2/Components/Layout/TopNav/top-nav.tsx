@@ -6,6 +6,9 @@ import { formatMoneyText, getBrandLogo, getBrandLogoDark, getBrandName, getUrlBa
 import { observer, useStore } from '@deriv/stores';
 import { localize } from '@deriv-com/translations';
 
+import { countUnread } from 'AppV2/Containers/News/news-utils';
+import { useNews } from 'AppV2/Containers/News/use-news';
+
 import './top-nav.scss';
 
 type TNavItem = {
@@ -27,6 +30,8 @@ const TopNav = observer(({ is_mobile = false }: TTopNavProps) => {
     const location = useLocation();
     const { is_logged_in, balance, currency, loginid } = client;
     const { is_dark_mode_on, closeSidebarFlyout } = ui;
+    const { feed } = useNews();
+    const news_unread = location.pathname === routes.news ? 0 : countUnread(feed);
 
     const items: TNavItem[] = [
         { id: 'dashboard', label: localize('Dashboard'), path: routes.dashboard },
@@ -36,6 +41,7 @@ const TopNav = observer(({ is_mobile = false }: TTopNavProps) => {
         { id: 'bulk_trader', label: localize('Bulk Trader'), path: routes.bulk_trader },
         { id: 'risk_calculator', label: localize('Risk'), path: routes.risk_calculator },
         { id: 'what_if', label: localize('What-if'), path: routes.what_if },
+        { id: 'news', label: localize('News'), path: routes.news },
         { id: 'learn', label: localize('Learn'), path: routes.learn },
         { id: 'copy_trading', label: localize('Copy trading'), path: routes.copy_trading },
         ...(is_logged_in ? [{ id: 'reports', label: localize('Reports'), path: routes.reports }] : []),
@@ -76,6 +82,11 @@ const TopNav = observer(({ is_mobile = false }: TTopNavProps) => {
                         onClick={() => go(item.path)}
                     >
                         {item.label}
+                        {item.id === 'news' && news_unread > 0 && (
+                            <span className='top-nav__badge' data-testid='dt_top_nav_news_badge'>
+                                {news_unread > 9 ? '9+' : news_unread}
+                            </span>
+                        )}
                     </button>
                 ))}
             </nav>

@@ -19,6 +19,7 @@ const WhatIfCalculator = lazy(
     () => import(/* webpackChunkName: "trader-what-if" */ 'AppV2/Containers/WhatIfCalculator')
 );
 const Learn = lazy(() => import(/* webpackChunkName: "trader-learn" */ 'AppV2/Containers/Learn'));
+const News = lazy(() => import(/* webpackChunkName: "trader-news" */ 'AppV2/Containers/News'));
 const CopyTrading = lazy(() => import(/* webpackChunkName: "trader-copy-trading" */ 'AppV2/Containers/CopyTrading'));
 const Positions = lazy(() => import(/* webpackChunkName: "trader-positions" */ 'AppV2/Containers/Positions'));
 
@@ -74,6 +75,12 @@ const traderRoutes: TRouteConfigExtended[] = [
     {
         path: routes.learn,
         component: Learn,
+        exact: true,
+        default: false,
+    },
+    {
+        path: routes.news,
+        component: News,
         exact: true,
         default: false,
     },

@@ -22,6 +22,8 @@ describe('getAssistantReply', () => {
         ['how do I log in', 'login'],
         ['where is the risk calculator', 'risk'],
         ['can I copy your trades', 'copy'],
+        ['where can I read the news and alerts', 'news'],
+        ['is there a handout I can print', 'news'],
         ['how do I set a take profit', 'bot_limits'],
         ['my bot is not running', 'bot_run'],
         ['where are my past trades', 'reports'],

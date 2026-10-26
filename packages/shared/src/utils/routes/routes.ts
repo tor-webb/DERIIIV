@@ -8,6 +8,7 @@ export const routes = {
     bulk_trader: '/bulk-trader',
     what_if: '/what-if',
     learn: '/learn',
+    news: '/news',
     copy_trading: '/copy-trading',
     callback_page: '/callback',
     error404: '/404',
