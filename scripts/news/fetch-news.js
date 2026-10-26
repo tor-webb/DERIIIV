@@ -11,8 +11,6 @@ const BROWSER_UA =
     'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36';
 
 const FEEDS = [
-    { source: 'FXStreet', category: 'forex', url: 'https://www.fxstreet.com/rss/news', ua: BROWSER_UA },
-    { source: 'FXStreet', category: 'forex', url: 'https://www.fxstreet.com/rss', ua: BROWSER_UA },
     { source: 'investingLive', category: 'forex', url: 'https://investinglive.com/feed', ua: BROWSER_UA },
     { source: 'Federal Reserve', category: 'economy', url: 'https://www.federalreserve.gov/feeds/press_all.xml' },
     { source: 'ECB', category: 'economy', url: 'https://www.ecb.europa.eu/rss/press.html' },
