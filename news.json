@@ -1,5 +1,17 @@
 {
- "updated": "2026-10-26T21:42:25.644Z",
+ "updated": "2026-10-26T21:44:13.091Z",
+ "sources": {
+  "FXStreet /rss/news": "error: HTTP 403",
+  "FXStreet /rss": "error: HTTP 403",
+  "investingLive /feed": 12,
+  "Federal Reserve /feeds/press_all.xml": 12,
+  "ECB /rss/press.html": 12,
+  "Bank of England /rss/news": 12,
+  "Cointelegraph /rss": 12,
+  "BBC Business /news/business/rss.xml": 12,
+  "CNBC Finance /rs/search/combinedcms/view.xml": 12,
+  "The Guardian Business /business/rss": 12
+ },
  "items": [
   {
    "id": "9enc3f",
@@ -9,6 +21,69 @@
    "published": "2026-10-26T21:23:32.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
+  },
+  {
+   "id": "lh7v8k",
+   "title": "Citadel Securities warns AI trade has little margin for error as three risks converge",
+   "link": "https://investinglive.com/stock-market-update/citadel-securities-warns-ai-trade-has-little-margin-for-error-as-three-risks-converge/",
+   "summary": "The note gives a framework for the recent equity sell-off: a market priced for AI success has little cushion if returns slip, approvals drag or financing costs keep climbing. Heavy AI capex spenders with thin or…",
+   "published": "2026-10-26T20:58:35.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1j1tv1u",
+   "title": "Carney says Canada has not budged as US trade deal looks less imminent than claimed",
+   "link": "https://investinglive.com/news/carney-says-canada-has-not-budged-as-us-trade-deal-looks-less-imminent-than-claimed/",
+   "summary": "The Canadian dollar had some deal optimism built in after the weekend remarks from Washington, so Carney’s comments and the Semafor report remove part of that support and leave USD/CAD sensitive to further trade…",
+   "published": "2026-10-26T20:52:20.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1nbd1pt",
+   "title": "Solana trading bot Bloom drained of $947,000 in SOL as nine users’ wallets emptied",
+   "link": "https://investinglive.com/cryptocurrency/solana-trading-bot-bloom-drained-of-947-000-in-sol-as-nine-users-wallets-emptied/",
+   "summary": "The theft is too small to move SOL on its own, but it lands on a fragile tape. SOL has fallen about 14% in October, the weakest of the four largest cryptocurrencies, as spot Solana ETF outflows and a broad pullback…",
+   "published": "2026-10-26T20:33:21.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "kx11qt",
+   "title": "investingLive Americas FX news wrap 26 Oct: Anthropic IPO puts AI back in focus as stocks rebound",
+   "link": "https://investinglive.com/news/investinglive-americas-fx-news-wrap-26-oct-anthropic-ipo-puts-ai-back-in-focus-as-stocks-rebound/",
+   "summary": "At the close: US stock markets climb Monday as Anthropic files for IPO US and Canada working on deal to ease tariffs on Canadian steel and auto imports The once Magnificent 7 are not so magnificent, but they still are…",
+   "published": "2026-10-26T20:30:04.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "vwuupm",
+   "title": "Japan services PPI preview: 3.7% pace in focus ahead of Friday’s BoJ decision",
+   "link": "https://investinglive.com/news/japan-services-ppi-preview-3-7-pace-in-focus-ahead-of-friday-s-boj-decision/",
+   "summary": "The services PPI is rarely a big mover for the yen on its own, but a reading at or above 3.7% would reinforce December hike pricing and lend modest support to the yen and short-dated JGB yields into Friday. A downside…",
+   "published": "2026-10-26T20:20:17.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1ctg739",
+   "title": "A light economic and event calendar in Asia Tuesday, October 27, 2026 - Japan services PPI",
+   "link": "https://investinglive.com/news/a-light-economic-and-event-calendar-in-asia-tuesday-october-27-2026-japan-services-ppi/",
+   "summary": "I'll get a preview posted for the Japanese data soon (ADDED, here it is: Japan services PPI preview: 3.7% pace in focus ahead of Friday’s BoJ decision ). In brief, while the services PPI is rarely a big mover for the…",
+   "published": "2026-10-26T20:09:59.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "fkzjcw",
+   "title": "At the close: US stock markets climb Monday as Anthropic files for IPO",
+   "link": "https://investinglive.com/stocks/at-the-close-us-stock-markets-climb-monday-as-anthropic-files-for-ipo/",
+   "summary": "Closing changes for the main US equity indexes: S&P 500 +0.7% Nasdaq +0.8% Russell 2000 +0.5% DJIA +0.3% Toronto TSX Comp +0.4% Brazil Bovespa -13.5% The rout in markets reversed to some extent on Monday as we count…",
+   "published": "2026-10-26T20:06:50.000Z",
+   "source": "investingLive",
+   "category": "forex"
   },
   {
    "id": "1jjqfcw",
@@ -29,6 +104,24 @@
    "category": "crypto"
   },
   {
+   "id": "lx8qta",
+   "title": "US and Canada working on deal to ease tariffs on Canadian steel and auto imports",
+   "link": "https://investinglive.com/news/us-and-canada-working-on-deal-to-ease-tariffs-on-canadian-steel-and-auto-imports/",
+   "summary": "False reports of 'a Canada-USA trade deal' aren't far off from the number of reports about 'peace in Hormuz' so I would take this one with a grain of salt. There has been some noise over the weekend about new trade…",
+   "published": "2026-10-26T19:35:14.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "c4samx",
+   "title": "The once Magnificent 7 are not so magnificent, but they still are large cap technology movers",
+   "link": "https://investinglive.com/stocks/the-once-magnificent-7-are-not-so-magnificent-but-they-still-are-large-cap-technology-movers/",
+   "summary": "The once-dominant Magnificent 7 are looking a little less magnificent. However, their substantial weightings in the broader indices mean they still command plenty of attention—and have considerable influence over the…",
+   "published": "2026-10-26T19:21:20.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
    "id": "14nq0ye",
    "title": "AI company Anthropic announces IPO, expected as early as November",
    "link": "https://cointelegraph.com/news/anthropic-artificial-intelligence-ipo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -38,6 +131,24 @@
    "category": "crypto"
   },
   {
+   "id": "1lwh3j8",
+   "title": "Saudi Arabia offers cash to Houthis to stop attacks - report",
+   "link": "https://investinglive.com/B/",
+   "summary": "An extraordinary report from Israel Hayom says Saudi Arabia is seeking a ceasefire with the Houthis through a deal that would see $1 billion transferred to the Iranian-backed group via Tehran. Citing unnamed Gulf…",
+   "published": "2026-10-26T18:36:46.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "xqlnp5",
+   "title": "The cost of intelligence is collapsing",
+   "link": "https://investinglive.com/news/the-cost-of-intelligence-is-collapsing/",
+   "summary": "OpenAI is just out with a new model named GPT 6.1 Terra. This isn't as strong as GPT-6 Astra but it's far more efficient and it gets to the heart of where AI is headed. AI is becoming a commodity faster than it is…",
+   "published": "2026-10-26T18:24:04.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
    "id": "l2sml0",
    "title": "NBA names Kalshi, Polymarket preferred exchanges, signs CFTC deal",
    "link": "https://cointelegraph.com/news/nba-names-kalshi-polymarket-preferred-exchanges-signs-cftc-deal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -45,6 +156,15 @@
    "published": "2026-10-26T17:46:09.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
+  },
+  {
+   "id": "1hicxe1",
+   "title": "US Treasury sells $69 billion of 2-year notes at a high yield of 4.708%",
+   "link": "https://investinglive.com/news/us-treasury-sells-69-billion-of-2-year-notes-at-a-high-yield-of-4-708/",
+   "summary": "High yield: 4.708% WI level at the time of the auction: 4.705% Tail: 0.3 basis points vs the average of a 0.2-basis-point stop-through Bid to cover: 2.59X vs the average of 2.64X Directs: 41.32% vs the average of 30.4%…",
+   "published": "2026-10-26T17:05:46.000Z",
+   "source": "investingLive",
+   "category": "forex"
   },
   {
    "id": "1ut2fz4",
@@ -137,15 +257,6 @@
    "category": "crypto"
   },
   {
-   "id": "letejb",
-   "title": "Australians should prepare for online services to go down unexpectedly as threats rise, cyber agency warns",
-   "link": "https://www.theguardian.com/technology/2026/oct/26/australians-should-prepare-for-online-services-to-go-down-unexpectedly-as-threats-rise-cyber-agency-warns",
-   "summary": "Australian Signals Directorate chief says advanced AI tools are needed to defend against ‘AI-enabled attackers’ Get our daily political email , free app or daily news podcast Australians should prepare for more basic…",
-   "published": "2026-10-26T11:30:40.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
    "id": "856pio",
    "title": "‘We don’t have inflation’? Five charts show the US economic reality of Trump’s second term so far",
    "link": "https://www.theguardian.com/us-news/2026/oct/26/trump-second-term-economy-charts",
@@ -200,31 +311,22 @@
    "category": "economy"
   },
   {
-   "id": "1mqe0wl",
-   "title": "Securitize’s tokenized stock value halves as Circle widens lead",
-   "link": "https://cointelegraph.com/markets/securitizes-tokenized-stock-circle-lead?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "SECZ’s onchain market cap fell to $208.6 million as Circle-linked tokens reached a combined $383.6 million across several issuers in the $3.3 billion tokenized equities market.",
-   "published": "2026-10-26T10:25:01.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
+   "id": "1rgp2z6",
+   "title": "Survey on the Access to Finance of Enterprises: lending conditions tightened",
+   "link": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261026~bde7b6d11a.en.html",
+   "summary": "",
+   "published": "2026-10-26T09:00:00.000Z",
+   "source": "ECB",
+   "category": "economy"
   },
   {
-   "id": "1k7tk3x",
-   "title": "Bitcoin ETFs break 2-week outflow streak with $301M comeback",
-   "link": "https://cointelegraph.com/markets/bitcoin-etfs-rebound-weekly-inflow-301-million?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "US spot Bitcoin ETFs finished the week with $301 million in net inflows after a strong three-day start gave way to heavy withdrawals.",
-   "published": "2026-10-26T08:20:49.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "15syhui",
-   "title": "Musk warns over 200 AI neoclouds face ‘guppy-level death’",
-   "link": "https://cointelegraph.com/news/musk-warns-over-200-ai-neoclouds-face-guppy-level-death?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The warning comes as Gartner forecasts that more than 80% of specialist cloud providers will cease operating independently by 2030.",
-   "published": "2026-10-26T05:13:33.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
+   "id": "1evl412",
+   "title": "Frank Elderson: Taking action for nature – investing in economic resilience and prosperity",
+   "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261026~d903d7ad85.en.html",
+   "summary": "",
+   "published": "2026-10-26T05:00:00.000Z",
+   "source": "ECB",
+   "category": "economy"
   },
   {
    "id": "wyl4v",
@@ -299,30 +401,12 @@
    "category": "economy"
   },
   {
-   "id": "1qytxwp",
-   "title": "White House lifts tariffs on some Canadian goods as midterm elections loom",
-   "link": "https://www.bbc.co.uk/news/articles/c60qk573yzz8o?at_medium=RSS&at_campaign=rss",
-   "summary": "From 30 October, tariffs will be eased on some products, including certain machinery, and placed on others, such as carpets.",
-   "published": "2026-10-24T00:36:47.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "su711n",
-   "title": "How does the UK state pension compare with other countries?",
-   "link": "https://www.bbc.co.uk/news/articles/c3gr84w85glyo?at_medium=RSS&at_campaign=rss",
-   "summary": "Do British pensioners have it better or worse than those in other countries?",
-   "published": "2026-10-24T00:09:12.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "13rieeg",
-   "title": "UK to invest £100m in 'world first' AI Biosecurity Lab",
-   "link": "https://www.bbc.co.uk/news/articles/cqdjv8xllvyyo?at_medium=RSS&at_campaign=rss",
-   "summary": "The chancellor will unveil AI spending aimed at shoring up the UK's defences in Wednesday's Budget.",
-   "published": "2026-10-24T00:05:45.000Z",
-   "source": "BBC Business",
+   "id": "mmvht5",
+   "title": "Piero Cipollone: Interview with Milano Finanza",
+   "link": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261024~ee2ba73cf3.en.html",
+   "summary": "",
+   "published": "2026-10-24T06:00:00.000Z",
+   "source": "ECB",
    "category": "economy"
   },
   {
@@ -362,21 +446,30 @@
    "category": "economy"
   },
   {
-   "id": "1i2h8an",
-   "title": "India slashes cost of cancer drugs after court rules mark-ups are ‘extortion’",
-   "link": "https://www.theguardian.com/global-development/2026/oct/23/india-cuts-cost-cancer-drugs",
-   "summary": "Case filed in 2022 by patient unable to afford medicine leads to cap on drug prices for millions who face ruin if diagnosed The Indian government has moved to reduce the price of cancer drugs after a retired bank clerk…",
-   "published": "2026-10-23T07:00:03.000Z",
-   "source": "The Guardian Business",
+   "id": "6063zj",
+   "title": "ECB Consumer Expectations Survey results – September 2026",
+   "link": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261023~a3d201c97c.en.html",
+   "summary": "",
+   "published": "2026-10-23T08:00:00.000Z",
+   "source": "ECB",
    "category": "economy"
   },
   {
-   "id": "t7xejw",
-   "title": "Cyprus police investigate financial and tax affairs of ex-Chelsea owner Roman Abramovich",
-   "link": "https://www.theguardian.com/world/2026/oct/22/cyprus-police-investigate-financial-tax-affairs-roman-abramovich-chelsea",
-   "summary": "Inquiry follows report by Guardian and partners that aides of Russian oligarch appeared to have falsified paperwork mapping his businesses Police in Cyprus have opened an investigation into the financial and tax…",
-   "published": "2026-10-22T15:53:22.000Z",
-   "source": "The Guardian Business",
+   "id": "1ubwlh",
+   "title": "Regulators unveil plans to simplify Senior Manager and Certification Regime",
+   "link": "https://www.bankofengland.co.uk/news/2026/october/regulators-unveil-plans-to-simplify-senior-manager-and-certification-regime",
+   "summary": "The number of financial services roles required to face enhanced checks from regulators will fall significantly under proposals that will support growth.",
+   "published": "2026-10-22T20:00:00.000Z",
+   "source": "Bank of England",
+   "category": "economy"
+  },
+  {
+   "id": "1vpydao",
+   "title": "Minutes of the Securities Lending Committee meeting – September 2026",
+   "link": "https://www.bankofengland.co.uk/minutes/2026/september/securities-lending-committee-meeting-september-2026",
+   "summary": "The Securities Lending Committee is a forum for market participants and authorities to discuss the UK securities lending market.",
+   "published": "2026-10-22T15:35:53.000Z",
+   "source": "Bank of England",
    "category": "economy"
   },
   {
@@ -416,6 +509,24 @@
    "category": "economy"
   },
   {
+   "id": "1dob4g2",
+   "title": "Piero Cipollone: Pontes and Appia: unlocking opportunities for banks",
+   "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261021_1~d190f2c349.en.pdf",
+   "summary": "",
+   "published": "2026-10-21T08:00:00.000Z",
+   "source": "ECB",
+   "category": "economy"
+  },
+  {
+   "id": "k42jfn",
+   "title": "Philip R. Lane: Euro liquidity lines and the international monetary system",
+   "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261021~401d6c4b70.en.html",
+   "summary": "",
+   "published": "2026-10-21T04:15:00.000Z",
+   "source": "ECB",
+   "category": "economy"
+  },
+  {
    "id": "9zv15f",
    "title": "Stocks making the biggest moves after hours: Super Micro Computer, Intuitive Surgical, Netflix, SpaceX & more",
    "link": "https://www.cnbc.com/2026/10/20/stocks-making-the-biggest-moves-after-hours-isrg-nflx-spcx.html",
@@ -450,6 +561,15 @@
    "published": "2026-10-20T10:39:17.000Z",
    "source": "CNBC Finance",
    "category": "markets"
+  },
+  {
+   "id": "6ero1c",
+   "title": "Frank Elderson: Interview with Die Presse",
+   "link": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261020~97e2e4bc38.en.html",
+   "summary": "",
+   "published": "2026-10-20T07:00:00.000Z",
+   "source": "ECB",
+   "category": "economy"
   },
   {
    "id": "1u0jniu",
