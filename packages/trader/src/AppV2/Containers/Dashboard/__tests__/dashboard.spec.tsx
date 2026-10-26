@@ -11,9 +11,9 @@ jest.mock('@deriv-com/translations', () => ({
         Object.entries(values ?? {}).reduce((text, [name, value]) => text.replace(`{{${name}}}`, String(value)), key),
 }));
 
-const renderDashboard = () =>
+const renderDashboard = (client: Record<string, unknown> = {}) =>
     render(
-        <StoreProvider store={mockStore({})}>
+        <StoreProvider store={mockStore({ client })}>
             <MemoryRouter initialEntries={['/dashboard']}>
                 <Dashboard />
                 <Route path='*' render={({ location }) => <span data-testid='dt_location'>{location.pathname}</span>} />
@@ -37,5 +37,27 @@ describe('<Dashboard /> simulator cards', () => {
         expect(screen.getByTestId('dt_location')).toHaveTextContent('/what-if');
         fireEvent.click(screen.getByTestId('dt_dashboard_learn'));
         expect(screen.getByTestId('dt_location')).toHaveTextContent('/learn');
+    });
+});
+
+describe('<Dashboard /> balance', () => {
+    const logged_in_client = (is_virtual: boolean) => ({
+        is_logged_in: true,
+        is_virtual,
+        loginid: 'VRTC1',
+        balance: 9987,
+        currency: 'USD',
+    });
+
+    it('shows the amount with its currency symbol as plain text, with no HTML', () => {
+        renderDashboard(logged_in_client(true));
+        const balance = screen.getByTestId('dt_dashboard_balance');
+        expect(balance).toHaveTextContent('$9,987.00');
+        expect(balance.textContent).not.toMatch(/[<>]|span/);
+    });
+
+    it('labels a demo account', () => {
+        renderDashboard(logged_in_client(true));
+        expect(screen.getByTestId('dt_dashboard_balance')).toHaveTextContent(/demo/i);
     });
 });

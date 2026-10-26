@@ -11,6 +11,7 @@ import Sidebar from 'AppV2/Components/Layout/Sidebar/sidebar';
 import TopNav from 'AppV2/Components/Layout/TopNav';
 
 import Router from '../../Routes/router';
+import Assistant from '../Assistant';
 
 import './app-shell.scss';
 
@@ -56,6 +57,7 @@ const AppShell = observer(() => {
                     <Router />
                 </div>
             </div>
+            <Assistant />
         </div>
     );
 });

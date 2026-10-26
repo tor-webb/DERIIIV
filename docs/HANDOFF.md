@@ -62,7 +62,53 @@ Read this first. It is the short version; `docs/BOT_BUILDER_HANDOFF.md` has the 
 Repo: `tor-webb/DERIIIV` (a white-label fork of the Deriv derivatives-trader monorepo, branded FiscoFX).
 Everything described below lives in `packages/trader/src/AppV2/`.
 
-## What changed this session
+## Session log, 2026-10-26 (newest first)
+
+### Balance display fix, site guide assistant (branch `fix-balance-assistant`, not merged)
+
+- **Bug fixed.** The dashboard, the top-nav balance and the Risk calculator printed `<span class="symbols usd"></span>9,987.00`
+  as text. `formatMoney(currency, amount, false)` returns the currency as an HTML string, and React shows it literally.
+  New `AppV2/Utils/format-balance.ts` (`formatBalance`, `formatBalanceWithCurrency`) returns plain text ("9,987.00",
+  "9,987.00 USD"). Use it for every balance or money value in AppV2; do not call `formatMoney(..., false)` in JSX. The
+  Trade page's own components (`risk-management-item`, contract details footer) were not touched. Tests added for the
+  formatter, the top nav and the dashboard (the dashboard had no spec before).
+- **Site guide assistant** (`Containers/Assistant/`), a "Help" button bottom-right on every page, mounted in `AppShell`.
+  It is a built-in help list, **not a live AI model**: `assistant-knowledge.ts` holds topics with keywords, the best keyword
+  match answers, and answers carry buttons (go to a page, or Log in via `redirectToLogin`). The panel says so ("not live AI,
+  not financial advice"). Topics: log in, demo vs real (knows which you are on), balance, trade, charts, Bot Builder (what,
+  import, limits, run), risk calculator, copy trading, positions, reports, "where am I", and an honest "no strategy guarantees
+  profit" answer. To add a topic, add an entry to `topics()` and a case to `assistant-knowledge.spec.ts`.
+  Making it a real AI would need a small server that holds the model key (GitHub Pages is static, and a key in the
+  browser would be public). Put the call behind the same panel and keep the keyword list as the offline fallback.
+- **Checked:** 22 new and changed tests pass; ESLint 0 errors; production build exit 0; headless Chromium at 1280px and 390px
+  with the panel open (button clear of the Run bar and Reset button; the answer button navigates and closes the panel).
+- **Bulk Trader: deliberately NOT built as asked.** The request was a Deriv-disconnected tool whose runs "mostly win with some
+  losses". Results that are chosen in advance rather than coming from the market would present fake performance to users as
+  a trading tool, which can push people towards real money. Two honest versions are possible and need a decision:
+  (a) a clearly labelled **simulator** that replays real ticks and settles contracts with real payout maths, so its win rate
+  is whatever the strategy genuinely does; (b) a bulk trader on the **Deriv demo account** through the existing Bot Builder
+  engine (real demo contracts, real results). Both can use the Bot Builder look and be called "Bulk Trader".
+
+### Merge to main and real-build check
+
+- **Merged.** `bot-builder-deriv-look` was fast-forwarded into `main` (now `0586214`). Every other branch was already
+  contained in `main`; `handoff-update` was left alone because `main` already has a newer handoff (#4). The old branches
+  can be deleted on GitHub.
+- **Deploy.** The GitHub Pages workflow for `0586214` ran the real webpack build and finished green.
+- **Local production build** with the same commands and env as `.github/workflows/deploy_github_pages.yml` (note that
+  `PUBLIC_BASE=DERIIIV/app` must be exported too, not only passed as the `base` argument, or the router base is wrong
+  and every page shows 404): exit 0, warnings only (3, 49, 172, 169 for components, reports, trader, core).
+- **Browser check** (headless Chromium, built app served at `/DERIIIV/app/`): `/bot-builder` renders the toolbar, the
+  four green section blocks, the toolbox categories, the run panel (Summary / Transactions / Journal) and the Run bar.
+  The only app-side failed request is Blockly's sprite from `blockly-demo.appspot.com` (the trashcan, gap 2 below).
+- **NOT checked, and why:** a demo-account run. The sandbox cannot reach the Deriv websocket
+  (`wss://staging-api.derivws.com` fails at the proxy) and has no account token. Someone with a Deriv demo login still
+  needs to open the live site, log in, run Rise/Fall, then Matches/Differs with the KTH bot, and read the `proposal`
+  payload in the network tab (`underlying_symbol`, integer `duration`, `barrier` for digit trades).
+- **Uploaded KTH bot** was re-run through the importer and the simulated exchange: validates clean, DIGITDIFF on R_50,
+  stake 0.35 to 0.70 after a loss and back after a win, durations vary. Its `rsi` variable is never calculated.
+
+## What changed in the previous session
 
 | Area             | What was done                                                                                                                                                                                                                                                                                                                                                                                  | Files                                                    |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
@@ -98,8 +144,8 @@ Everything described below lives in `packages/trader/src/AppV2/`.
 2. **Trashcan icon.** Blockly loads its sprite from `blockly-demo.appspot.com` because no `media` option is passed to
    `Blockly.inject`. Copy `node_modules/blockly/media` into the build (see `copyConfig` in `packages/core/build/config.js`)
    and pass `media: getUrlBase('/blockly/media/')`.
-3. **Real webpack build and a browser smoke test on a demo account** (see section 6 of the other handoff for commands).
-   Check the `proposal` payload in the network tab.
+3. **Demo-account smoke test.** The real webpack build and a page-render check are done (see the session log above).
+   What is left needs a Deriv demo login: run a bot on the live site and check the `proposal` payload in the network tab.
 4. **Toolbar icons.** The toolbar is text buttons in a rounded bar. Deriv uses icon buttons; swap in icons, keep the
    text as `aria-label`s (the tests click by text).
 5. **Top-nav tabs from the screenshots** (Bulk Trader, Trading Bots, DiffBot, Analysis Tool, DTrader) do not exist in this
