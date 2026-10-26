@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { formatMoney } from '@deriv/shared';
+import { formatMoneyText } from '@deriv/shared';
 import { localize } from '@deriv-com/translations';
 
 import { TPlanKind, TStakePlan } from './stake-math';
@@ -10,7 +10,7 @@ import './stake-tools.scss';
 /* ------------------------------ helpers ------------------------------ */
 
 export const toNumber = (value: string) => (value.trim() === '' ? NaN : Number(value));
-export const money = (currency: string, value: number) => formatMoney(currency, value, false);
+export const money = (currency: string, value: number) => formatMoneyText(currency, value);
 export const percent = (value: number, digits = 1) => `${value.toFixed(digits)}%`;
 
 /** Reads a limit field: empty means off (0). */

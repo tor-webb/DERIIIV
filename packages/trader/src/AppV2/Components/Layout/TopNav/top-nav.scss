@@ -1,5 +1,6 @@
 :root {
     --top-nav-height: 5.6rem;
+    --mobile-bottom-nav-height: 5.6rem;
 }
 
 .top-nav {
@@ -14,8 +15,11 @@
     position: relative;
     z-index: 101;
 
-    @include mobile-screen {
-        display: none;
+    // Desktop layout is not used on phones. The phone layout is the --mobile modifier below.
+    &:not(&--mobile) {
+        @include mobile-screen {
+            display: none;
+        }
     }
 
     :where(button) {
@@ -115,5 +119,64 @@
     &__guest {
         font-size: 1.3rem;
         color: var(--brand-neutral);
+    }
+
+    // Phone layout: slim top bar (logo + balance) and the tabs as a bottom bar
+    &--mobile {
+        gap: 1.2rem;
+        justify-content: space-between;
+        padding: 0 1.6rem;
+        padding-top: env(safe-area-inset-top);
+
+        .top-nav__logo {
+            height: 2.6rem;
+        }
+
+        .top-nav__balance {
+            padding: 0.4rem 0;
+        }
+
+        .top-nav__amount {
+            font-size: 1.4rem;
+        }
+
+        .top-nav__items {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 102;
+            flex: none;
+            gap: 0;
+            height: calc(var(--mobile-bottom-nav-height) + env(safe-area-inset-bottom));
+            padding: 0 0.8rem env(safe-area-inset-bottom);
+            box-sizing: border-box;
+            background-color: var(--color-surface-primary);
+            border-top: 1px solid var(--color-surface-border);
+            box-shadow: 0 -0.2rem 1.2rem rgba(0, 0, 0, 0.06);
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-snap-type: x proximity;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        .top-nav__item {
+            flex: 0 0 auto;
+            height: 4.4rem;
+            min-width: 4.8rem; // comfortable touch target
+            padding: 0 1.2rem;
+            font-size: 1.3rem;
+            scroll-snap-align: center;
+
+            &--active:after {
+                left: 1.2rem;
+                right: 1.2rem;
+            }
+        }
     }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 
-import { formatMoney, getBrandLogo, getBrandLogoDark, getBrandName, getUrlBase, routes } from '@deriv/shared';
+import { formatMoneyText, getBrandLogo, getBrandLogoDark, getBrandName, getUrlBase, routes } from '@deriv/shared';
 import { observer, useStore } from '@deriv/stores';
 import { localize } from '@deriv-com/translations';
 
@@ -15,8 +15,14 @@ type TNavItem = {
     exact?: boolean;
 };
 
-const TopNav = observer(() => {
+type TTopNavProps = {
+    /** Compact phone layout: slim top bar plus a scrollable tab bar fixed to the bottom of the screen. */
+    is_mobile?: boolean;
+};
+
+const TopNav = observer(({ is_mobile = false }: TTopNavProps) => {
     const { client, ui } = useStore();
+    const nav_ref = React.useRef<HTMLElement>(null);
     const history = useHistory();
     const location = useLocation();
     const { is_logged_in, balance, currency, loginid } = client;
@@ -38,13 +44,20 @@ const TopNav = observer(() => {
     const isActive = (item: TNavItem) =>
         item.exact ? location.pathname === item.path : location.pathname.startsWith(item.path);
 
+    // On phones the tab bar scrolls sideways, so keep the current tab in view
+    React.useEffect(() => {
+        if (!is_mobile) return;
+        const active = nav_ref.current?.querySelector<HTMLElement>('[aria-current="page"]');
+        active?.scrollIntoView?.({ inline: 'center', block: 'nearest' });
+    }, [is_mobile, location.pathname]);
+
     const go = (path: string) => {
         closeSidebarFlyout();
         history.push(path);
     };
 
     return (
-        <header className='top-nav' data-testid='dt_top_nav'>
+        <header className={classNames('top-nav', { 'top-nav--mobile': is_mobile })} data-testid='dt_top_nav'>
             <button type='button' className='top-nav__brand' onClick={() => go(routes.dashboard)}>
                 <img
                     className='top-nav__logo'
@@ -52,7 +65,7 @@ const TopNav = observer(() => {
                     alt={getBrandName()}
                 />
             </button>
-            <nav className='top-nav__items' aria-label={localize('Main navigation')}>
+            <nav ref={nav_ref} className='top-nav__items' aria-label={localize('Main navigation')}>
                 {items.map(item => (
                     <button
                         key={item.id}
@@ -70,7 +83,7 @@ const TopNav = observer(() => {
                 {is_logged_in ? (
                     <div className='top-nav__balance' data-testid='dt_top_nav_account'>
                         <span className='top-nav__loginid'>{loginid}</span>
-                        <span className='top-nav__amount'>{formatMoney(currency, balance ?? 0, false)}</span>
+                        <span className='top-nav__amount'>{formatMoneyText(currency, balance ?? 0)}</span>
                     </div>
                 ) : (
                     <span className='top-nav__guest'>{localize('Not logged in')}</span>

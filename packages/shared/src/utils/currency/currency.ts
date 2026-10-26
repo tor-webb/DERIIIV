@@ -79,6 +79,21 @@ export const formatCurrency = (currency: string) => {
     return `<span class="symbols ${(currency || '').toLowerCase()}"></span>`;
 };
 
+const FIAT_SYMBOLS: Record<string, string> = { USD: '$', EUR: '€', GBP: '£', AUD: 'A$' };
+
+/** Plain-text currency symbol ('$' for USD). Empty for currencies without one, e.g. crypto. */
+export const getCurrencySymbolText = (currency = '') => FIAT_SYMBOLS[currency.toUpperCase()] ?? '';
+
+/**
+ * Like formatMoney, but safe to render as React text: it never returns HTML.
+ * Example: formatMoneyText('USD', -103) -> '-$103.00'
+ */
+export const formatMoneyText = (currency: string, amount: number | string, decimals = 0, minimumFractionDigits = 0) => {
+    const formatted = formatMoney(currency, amount, true, decimals, minimumFractionDigits);
+    const symbol = getCurrencySymbolText(currency);
+    return formatted.startsWith('-') ? `-${symbol}${formatted.slice(1)}` : `${symbol}${formatted}`;
+};
+
 export const addComma = (num?: number | string | null, decimal_points?: number, is_crypto?: boolean) => {
     let number: number | string = String(num || 0).replace(/,/g, '');
     if (typeof decimal_points !== 'undefined') {
