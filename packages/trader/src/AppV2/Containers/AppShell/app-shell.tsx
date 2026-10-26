@@ -14,6 +14,18 @@ import Router from '../../Routes/router';
 
 import './app-shell.scss';
 
+// Pages that get the phone tab bar. The trade page keeps its own full-screen mobile layout.
+const MOBILE_NAV_ROUTES = [
+    routes.dashboard,
+    routes.charts,
+    routes.bot_builder,
+    routes.bulk_trader,
+    routes.risk_calculator,
+    routes.what_if,
+    routes.learn,
+    routes.copy_trading,
+];
+
 const AppShell = observer(() => {
     const { ui } = useStore();
     const { active_sidebar_flyout } = ui;
@@ -26,14 +38,18 @@ const AppShell = observer(() => {
         }
     }, [location.pathname]);
 
+    const has_mobile_nav = isMobile && MOBILE_NAV_ROUTES.some(route => location.pathname.startsWith(route));
+
     return (
         <div
             className={classNames('app-shell', {
                 'app-shell--has-top-nav': !isMobile,
+                'app-shell--has-mobile-nav': has_mobile_nav,
                 'app-shell--off-trade': location.pathname !== routes.index,
             })}
         >
             {!isMobile && <TopNav />}
+            {has_mobile_nav && <TopNav is_mobile />}
             <div className='app-shell__body'>
                 {!isMobile && <Sidebar />}
                 <div className='app-shell__main-content'>

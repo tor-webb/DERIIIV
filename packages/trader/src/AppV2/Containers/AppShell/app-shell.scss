@@ -46,6 +46,19 @@
         }
     }
 
+    // Phones: leave room under the content for the fixed bottom tab bar
+    &--has-mobile-nav {
+        .app-shell__main-content {
+            padding-bottom: calc(var(--mobile-bottom-nav-height) + env(safe-area-inset-bottom));
+        }
+
+        .charts-page {
+            height: calc(
+                100dvh - var(--top-nav-height) - var(--mobile-bottom-nav-height) - env(safe-area-inset-bottom)
+            );
+        }
+    }
+
     &__main-content {
         flex: 1;
         min-width: 0;

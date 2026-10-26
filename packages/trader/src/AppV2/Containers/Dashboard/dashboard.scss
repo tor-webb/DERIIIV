@@ -110,6 +110,11 @@
         flex-shrink: 0;
         min-width: 26rem;
         padding: 2rem 2.4rem;
+
+        @include mobile-screen {
+            min-width: 0;
+            padding: 1.6rem;
+        }
         border: 1px solid rgba(255, 255, 255, 0.16);
         border-radius: 1.2rem;
         background-color: rgba(255, 255, 255, 0.07);
@@ -125,6 +130,11 @@
     &__balance-value {
         font-size: 3.2rem;
         font-weight: 800;
+        overflow-wrap: anywhere;
+
+        @include mobile-screen {
+            font-size: 2.6rem;
+        }
 
         small {
             margin-left: 0.8rem;

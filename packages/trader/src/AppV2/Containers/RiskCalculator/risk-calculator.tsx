@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { formatMoney, getBrandName } from '@deriv/shared';
+import { formatMoneyText, getBrandName } from '@deriv/shared';
 import { observer, useStore } from '@deriv/stores';
 import { localize } from '@deriv-com/translations';
 
@@ -11,7 +11,7 @@ import './risk-calculator.scss';
 type TMode = 'position' | 'stake';
 
 const toNumber = (value: string) => (value.trim() === '' ? NaN : Number(value));
-const money = (currency: string, value: number) => formatMoney(currency, value, false);
+const money = (currency: string, value: number) => formatMoneyText(currency, value);
 const lotsText = (lots: number) => (lots > 0 && lots < 0.01 ? '<0.01' : lots.toFixed(2));
 const percent = (value: number) => `${value.toFixed(value < 1 && value > 0 ? 3 : 1)}%`;
 

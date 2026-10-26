@@ -112,4 +112,19 @@ describe('CurrencyUtils', () => {
             expect(CurrencyUtils.isCryptocurrency('ZZZ')).toBe(false);
         });
     });
+
+    describe('formatMoneyText', () => {
+        it('returns plain text with the currency symbol and never HTML', () => {
+            expect(CurrencyUtils.formatMoneyText('USD', 9987)).toBe('$9,987.00');
+            expect(CurrencyUtils.formatMoneyText('USD', 9987)).not.toContain('<');
+        });
+
+        it('puts the minus sign before the symbol', () => {
+            expect(CurrencyUtils.formatMoneyText('USD', -103)).toBe('-$103.00');
+        });
+
+        it('has no symbol for currencies without one', () => {
+            expect(CurrencyUtils.formatMoneyText('BTC', 0.5)).toBe('0.50000000');
+        });
+    });
 });

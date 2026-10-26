@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { formatMoney, getBrandName, routes } from '@deriv/shared';
+import { formatMoneyText, getBrandName, routes } from '@deriv/shared';
 import { observer, useStore } from '@deriv/stores';
 import { localize } from '@deriv-com/translations';
 
@@ -190,7 +190,7 @@ const Dashboard = observer(() => {
                         <div className='dashboard__balance' data-testid='dt_dashboard_balance'>
                             <span className='dashboard__balance-label'>{localize('Balance')}</span>
                             <span className='dashboard__balance-value'>
-                                {formatMoney(currency, balance ?? 0, false)}
+                                {formatMoneyText(currency, balance ?? 0)}
                                 <small>{currency}</small>
                             </span>
                             <span

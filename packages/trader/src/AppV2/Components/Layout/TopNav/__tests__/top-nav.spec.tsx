@@ -10,12 +10,12 @@ jest.mock('@deriv-com/translations', () => ({
     Localize: ({ i18n_default_text }: { i18n_default_text: string }) => <>{i18n_default_text}</>,
 }));
 
-const renderTopNav = (path = '/', is_logged_in = false) => {
+const renderTopNav = (path = '/', is_logged_in = false, is_mobile = false) => {
     const store = mockStore({ client: { is_logged_in, loginid: 'CR123', balance: '10', currency: 'USD' } });
     render(
         <StoreProvider store={store}>
             <MemoryRouter initialEntries={[path]}>
-                <TopNav />
+                <TopNav is_mobile={is_mobile} />
                 <Route path='*' render={({ location }) => <div data-testid='dt_location'>{location.pathname}</div>} />
             </MemoryRouter>
         </StoreProvider>
@@ -63,5 +63,16 @@ describe('TopNav', () => {
         expect(screen.getByTestId('dt_location')).toHaveTextContent('/what-if');
         fireEvent.click(screen.getByTestId('dt_top_nav_learn'));
         expect(screen.getByTestId('dt_location')).toHaveTextContent('/learn');
+    });
+
+    it('shows the balance as plain text, not HTML', () => {
+        renderTopNav('/', true);
+        expect(screen.getByText('$10.00')).toBeInTheDocument();
+        expect(screen.queryByText(/<span/)).not.toBeInTheDocument();
+    });
+
+    it('uses the phone layout when is_mobile is set', () => {
+        renderTopNav('/dashboard', false, true);
+        expect(screen.getByTestId('dt_top_nav')).toHaveClass('top-nav--mobile');
     });
 });
