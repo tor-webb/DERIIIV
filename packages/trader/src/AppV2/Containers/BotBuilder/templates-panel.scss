@@ -1,0 +1,219 @@
+// Strategy library drawer. Sits over the right side of Bot Builder (a full-width sheet on phones).
+.templates-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    box-sizing: border-box;
+    width: 44rem;
+    max-width: 100%;
+    padding: 1.6rem;
+    border-left: 1px solid var(--color-surface-border);
+    background-color: var(--color-surface-section);
+    box-shadow: -0.8rem 0 2.4rem rgba(0, 0, 0, 0.12);
+    overflow-y: auto;
+
+    @include mobile-screen {
+        width: 100%;
+        border-left: 0;
+    }
+
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1.2rem;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--color-text-primary);
+    }
+
+    &__subtitle {
+        margin: 0.4rem 0 0;
+        font-size: 1.3rem;
+        color: var(--color-text-primary);
+        opacity: 0.75;
+    }
+
+    &__close {
+        flex-shrink: 0;
+        width: 3.6rem;
+        height: 3.6rem;
+        border: 0;
+        border-radius: 0.8rem;
+        background: transparent;
+        color: var(--color-text-primary);
+        font-size: 2.4rem;
+        line-height: 1;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--color-surface-border);
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--brand-primary);
+            outline-offset: 2px;
+        }
+    }
+
+    &__notice {
+        margin: 0;
+        padding: 1rem 1.2rem;
+        border-radius: 0.8rem;
+        background-color: #fff7e0;
+        color: #5c4500;
+        font-size: 1.2rem;
+    }
+
+    &__restore {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.2rem;
+        padding: 1rem 1.2rem;
+        border: 1px solid var(--color-surface-border);
+        border-radius: 0.8rem;
+        background-color: var(--color-surface-primary);
+        color: var(--color-text-primary);
+        font-size: 1.3rem;
+    }
+
+    &__link {
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: var(--brand-primary);
+        font: inherit;
+        font-weight: 700;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1.4rem;
+        border: 1px solid var(--color-surface-border);
+        border-radius: 1.2rem;
+        background-color: var(--color-surface-primary);
+        color: var(--color-text-primary);
+    }
+
+    &__card-top {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.6rem;
+    }
+
+    &__card-title {
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+
+    &__tags {
+        display: flex;
+        gap: 0.4rem;
+    }
+
+    &__tag {
+        padding: 0.2rem 0.8rem;
+        border-radius: 10rem;
+        background-color: var(--color-surface-section);
+        font-size: 1.1rem;
+        font-weight: 700;
+
+        &--low {
+            background-color: #dff5e8;
+            color: #14663a;
+        }
+
+        &--medium {
+            background-color: #fff1cc;
+            color: #6b4d00;
+        }
+
+        &--high {
+            background-color: #fdeaea;
+            color: #7a1f17;
+        }
+    }
+
+    &__text {
+        margin: 0;
+        font-size: 1.3rem;
+        opacity: 0.85;
+    }
+
+    &__facts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__fact {
+        padding: 0.2rem 0.8rem;
+        border: 1px solid var(--color-surface-border);
+        border-radius: 0.6rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    &__caution {
+        margin: 0;
+        font-size: 1.2rem;
+        color: #7a1f17;
+    }
+
+    &__import {
+        align-self: flex-start;
+        height: 3.6rem;
+        padding: 0 2rem;
+        border: 0;
+        border-radius: 0.8rem;
+        background-color: var(--brand-primary);
+        color: #fff;
+        font: inherit;
+        font-size: 1.3rem;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:hover:not(:disabled) {
+            opacity: 0.9;
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--brand-primary);
+            outline-offset: 2px;
+        }
+
+        &:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+    }
+}

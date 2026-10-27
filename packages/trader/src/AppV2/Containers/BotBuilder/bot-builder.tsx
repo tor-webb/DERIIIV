@@ -31,6 +31,8 @@ import {
     TTransaction,
 } from './Engine';
 import RunPanel, { TPanelTab, TRunLimitsInput } from './run-panel';
+import { TBotTemplate } from './templates';
+import TemplatesPanel from './templates-panel';
 
 import './bot-builder.scss';
 
@@ -78,6 +80,8 @@ const BotBuilder = observer(() => {
     const workspace_ref = React.useRef<Blockly.WorkspaceSvg | null>(null);
     const file_input_ref = React.useRef<HTMLInputElement>(null);
     const entry_id_ref = React.useRef(0);
+    /** The bot that a template replaced, kept so the person can bring it back. */
+    const previous_bot_ref = React.useRef<Record<string, unknown> | null>(null);
 
     const [run_status, setRunStatus] = React.useState<TRunStatus>('idle');
     const [stats, setStats] = React.useState<TBotStats>(EMPTY_STATS);
@@ -87,6 +91,8 @@ const BotBuilder = observer(() => {
     const [tab, setTab] = React.useState<TPanelTab>('summary');
     const [journal, setJournal] = React.useState<TJournalEntry[]>([]);
     const [transactions, setTransactions] = React.useState<TTransaction[]>([]);
+    const [is_templates_open, setIsTemplatesOpen] = React.useState(false);
+    const [can_restore, setCanRestore] = React.useState(false);
 
     const log = React.useCallback((level: TJournalLevel, message: string) => {
         entry_id_ref.current += 1;
@@ -274,6 +280,47 @@ const BotBuilder = observer(() => {
         validateBot(workspace).forEach(issue => log(issue.level, issue.message));
     };
 
+    const importTemplate = (template: TBotTemplate) => {
+        const workspace = workspace_ref.current;
+        if (!workspace || is_active) return;
+
+        setTab('journal');
+        const parsed = parseBotFile(template.xml);
+        if (!parsed.ok) {
+            parsed.errors.forEach(message => log('error', message));
+            return;
+        }
+        const backup = Blockly.serialization.workspaces.save(workspace);
+        if (!loadParsedBot(workspace, parsed)) {
+            log('error', localize('That template could not be loaded.'));
+            return;
+        }
+        previous_bot_ref.current = backup;
+        setCanRestore(true);
+        setIsTemplatesOpen(false);
+        saveWorkspaceToStorage(workspace);
+        log(
+            'success',
+            localize('Loaded the "{{name}}" template. Open Templates to bring your old bot back.', {
+                name: template.name,
+            })
+        );
+        validateBot(workspace).forEach(issue => log(issue.level, issue.message));
+    };
+
+    const restorePreviousBot = () => {
+        const workspace = workspace_ref.current;
+        const previous = previous_bot_ref.current;
+        if (!workspace || !previous || is_active) return;
+        loadWorkspaceState(workspace, previous);
+        saveWorkspaceToStorage(workspace);
+        previous_bot_ref.current = null;
+        setCanRestore(false);
+        setIsTemplatesOpen(false);
+        setTab('journal');
+        log('info', localize('Your previous bot is back.'));
+    };
+
     const resetStats = () => {
         setStats(EMPTY_STATS);
         setTransactions([]);
@@ -299,6 +346,15 @@ const BotBuilder = observer(() => {
                             onClick={() => file_input_ref.current?.click()}
                         >
                             {localize('Import')}
+                        </button>
+                        <button
+                            type='button'
+                            className='bot-builder__tool'
+                            aria-expanded={is_templates_open}
+                            data-testid='dt_bot_builder_templates_toggle'
+                            onClick={() => setIsTemplatesOpen(open => !open)}
+                        >
+                            {localize('Templates')}
                         </button>
                         <button type='button' className='bot-builder__tool' onClick={saveBot}>
                             {localize('Save')}
@@ -379,6 +435,16 @@ const BotBuilder = observer(() => {
                     onLimitsChange={setLimits}
                     onReset={resetStats}
                 />
+
+                {is_templates_open && (
+                    <TemplatesPanel
+                        is_disabled={is_active}
+                        can_restore={can_restore}
+                        onImport={importTemplate}
+                        onRestore={restorePreviousBot}
+                        onClose={() => setIsTemplatesOpen(false)}
+                    />
+                )}
             </div>
 
             {needs_real_confirmation && (

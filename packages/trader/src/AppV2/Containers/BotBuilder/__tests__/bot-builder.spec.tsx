@@ -16,6 +16,7 @@ jest.mock('blockly', () => ({
     inject: jest.fn(() => mockWorkspace),
     svgResize: jest.fn(),
     Events: { disable: jest.fn(), enable: jest.fn() },
+    serialization: { workspaces: { save: jest.fn(() => ({ marker: 'old bot' })) } },
 }));
 
 jest.mock('../blocks', () => ({
@@ -26,8 +27,10 @@ jest.mock('../blocks', () => ({
 }));
 
 const mockValidate = jest.fn();
+const mockLoadParsedBot = jest.fn(() => true);
 jest.mock('../bot-utils', () => ({
     ...jest.requireActual('../bot-utils'),
+    loadParsedBot: (...args: unknown[]) => (mockLoadParsedBot as (...a: unknown[]) => boolean)(...args),
     loadWorkspaceState: jest.fn(),
     saveWorkspaceToStorage: jest.fn(),
     restoreWorkspace: jest.fn(),
@@ -199,6 +202,70 @@ describe('BotBuilder', () => {
             expect(screen.getByTestId('dt_bot_builder_stats')).toHaveTextContent('No. of runs3');
             expect(screen.getByTestId('dt_bot_builder_stats')).toHaveTextContent('Total payout4.50');
             expect(screen.getByTestId('dt_bot_builder_stats')).toHaveTextContent('1.50');
+        });
+    });
+    describe('templates', () => {
+        const openTemplates = () => fireEvent.click(screen.getByTestId('dt_bot_builder_templates_toggle'));
+
+        beforeEach(() => {
+            mockValidate.mockReturnValue([]);
+            mockLoadParsedBot.mockReturnValue(true);
+        });
+
+        it('opens and closes the template library', () => {
+            renderPage();
+            expect(screen.queryByTestId('dt_bot_templates')).not.toBeInTheDocument();
+            openTemplates();
+            expect(screen.getByTestId('dt_bot_templates')).toBeInTheDocument();
+            fireEvent.click(screen.getByLabelText('Close templates'));
+            expect(screen.queryByTestId('dt_bot_templates')).not.toBeInTheDocument();
+        });
+
+        it('loads a template in one tap, closes the library and logs it', () => {
+            renderPage();
+            openTemplates();
+            fireEvent.click(screen.getByTestId('dt_bot_template_import_rise_fall_basic'));
+
+            expect(mockLoadParsedBot).toHaveBeenCalledTimes(1);
+            expect(screen.queryByTestId('dt_bot_templates')).not.toBeInTheDocument();
+            expect(screen.getByText(/Loaded the "Rise\/Fall: steady stake" template/)).toBeInTheDocument();
+        });
+
+        it('keeps the current bot and says so when a template cannot be loaded', () => {
+            mockLoadParsedBot.mockReturnValue(false);
+            renderPage();
+            openTemplates();
+            fireEvent.click(screen.getByTestId('dt_bot_template_import_even_odd_basic'));
+
+            expect(screen.getByText('That template could not be loaded.')).toBeInTheDocument();
+            // the library stays open and nothing was replaced, so there is no old bot to bring back
+            expect(screen.getByTestId('dt_bot_templates')).toBeInTheDocument();
+            expect(screen.queryByTestId('dt_bot_templates_restore')).not.toBeInTheDocument();
+        });
+
+        it('brings the previous bot back after a template replaced it', () => {
+            // eslint-disable-next-line @typescript-eslint/no-var-requires
+            const { loadWorkspaceState } = require('../bot-utils');
+            renderPage();
+            openTemplates();
+            fireEvent.click(screen.getByTestId('dt_bot_template_import_digit_over_2'));
+            loadWorkspaceState.mockClear();
+
+            openTemplates();
+            fireEvent.click(screen.getByText('Bring it back'));
+
+            expect(loadWorkspaceState).toHaveBeenCalledWith(mockWorkspace, { marker: 'old bot' });
+            expect(screen.getByText('Your previous bot is back.')).toBeInTheDocument();
+            openTemplates();
+            expect(screen.queryByTestId('dt_bot_templates_restore')).not.toBeInTheDocument();
+        });
+
+        it('cannot import while a bot is running', () => {
+            renderPage({ is_logged_in: true, is_virtual: true, loginid: 'VRTC1', currency: 'USD', balance: 10000 });
+            fireEvent.click(screen.getByText('Run'));
+            act(() => mockRunnerOptions.mock.calls[0][0].onStatus('running'));
+            openTemplates();
+            expect(screen.getByTestId('dt_bot_template_import_rise_fall_basic')).toBeDisabled();
         });
     });
 });
