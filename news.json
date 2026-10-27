@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T18:34:24.067Z",
+ "updated": "2026-10-27T22:50:27.103Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,13 +12,166 @@
  },
  "items": [
   {
+   "id": "u7n0z4",
+   "title": "Standard Chartered: Gold must hold $3,886 or risk deeper correction as oil fuels hike bets",
+   "link": "https://investinglive.com/commodities/standard-chartered-gold-must-hold-3-886-or-risk-deeper-correction-as-oil-fuels-hike-bets/",
+   "summary": "Oil is the key driver here: Standard Chartered’s warning ties gold’s next move directly to crude, with each leg higher in oil feeding inflation and Fed hike expectations, a pressure gold has struggled to withstand.…",
+   "published": "2026-10-27T21:53:29.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1xx0ofu",
+   "title": "VanEck launches diversified ETF combining stocks, bonds and Bitcoin exposure",
+   "link": "https://cointelegraph.com/news/vaneck-launches-diversified-etf-combining-stocks-bonds-and-bitcoin-exposure?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "VanEck’s new Wealth Builder ETF targets a 2% Bitcoin allocation, with a permitted range of 1% to 5%, gaining exposure through a spot Bitcoin ETP.",
+   "published": "2026-10-27T21:28:22.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1imcbej",
+   "title": "Intel, IBM, Oracle and IonQ latest to object to OKX-ICE tokenized stocks",
+   "link": "https://cointelegraph.com/news/intel-ibm-oracle-ionq-object-okx-ice-tokenized-stocks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "More than 40% of the companies initially proposed to have their stocks listed in tokenized form have asked to opt-out.",
+   "published": "2026-10-27T21:26:41.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1xghrw3",
+   "title": "Goldman: Markets selling US banks on higher rates, but income guidance rises into 2027",
+   "link": "https://investinglive.com/stocks/goldman-markets-selling-us-banks-on-higher-rates-but-income-guidance-rises-into-2027/",
+   "summary": "Goldman’s view puts bank stocks at the centre of the debate over higher-for-longer rates: with the Fed still on a hiking path, unrealised bond losses are keeping investors away despite improving income guidance. If…",
+   "published": "2026-10-27T21:24:21.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "tuj2dp",
+   "title": "ICYMI: S&P sees global bond issuance growth slowing to 2.7% in 2027, weakest in five years",
+   "link": "https://investinglive.com/news/icymi-s-p-sees-global-bond-issuance-growth-slowing-to-2-7-in-2027-weakest-in-five-years/",
+   "summary": "A sharp slowdown in supply growth would ease one source of pressure on bond markets after a heavy 2026, which could help keep corporate spreads tight if demand holds up. AI borrowing stays the main swing factor for…",
+   "published": "2026-10-27T20:55:48.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "zkq1ba",
+   "title": "Landline switchover could cut people off in emergency, minister warned",
+   "link": "https://www.bbc.co.uk/news/articles/c6x29g1nlr51o?at_medium=RSS&at_campaign=rss",
+   "summary": "Plans to switch to digital landlines by January could leave remote areas of the UK vulnerable, MPs say.",
+   "published": "2026-10-27T20:54:48.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1mvdb92",
+   "title": "Oil: Private survey of inventory shows a headline crude oil draw vs build expected",
+   "link": "https://investinglive.com/commodities/oil-private-survey-of-inventory-shows-a-headline-crude-oil-0/",
+   "summary": "Via Oilprice.com: This article was written by Eamonn Sheridan at investinglive.com.",
+   "published": "2026-10-27T20:48:55.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1df1quh",
+   "title": "Quantum fears already limiting Bitcoin’s growth, Stacks founder says",
+   "link": "https://cointelegraph.com/news/quantum-fears-already-limiting-bitcoins-growth-stacks-founder-says?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Speaking on Cointelegraph’s Chain Reaction podcast, Muneeb Ali warned that uncertainty over Bitcoin’s quantum security could deter institutional investors.",
+   "published": "2026-10-27T20:33:19.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "fk0zxi",
+   "title": "Nasdaq rallies as AI and chip stocks outperform",
+   "link": "https://investinglive.com/stocks/nasdaq-rallies-as-ai-and-chip-stocks-outperform/",
+   "summary": "The major US stock indices closed higher, but the gains were far from evenly distributed. AI and chip-related shares continued to outperform, helping the Nasdaq Composite and Nasdaq 100 rise more than 1%. The Russell…",
+   "published": "2026-10-27T20:21:18.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "t3t84y",
+   "title": "ICYMI: Fitch sees Fed hiking to 4.25% in December, says US credit outlook still benign",
+   "link": "https://investinglive.com/central-banks/icymi-fitch-sees-fed-hiking-to-4-25-in-december-says-us-credit-outlook-still-benign/",
+   "summary": "Fitch’s December call fits the view that the Fed is still on a hiking path, which supports front-end Treasury yields and the US dollar and argues against any near-term easing. The more telling signal for credit is the…",
+   "published": "2026-10-27T20:19:38.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "qnvxzj",
+   "title": "investingLive Americas market news wrap: Tech stocks rally",
+   "link": "https://investinglive.com/news/investinglive-americas-market-news-wrap-tech-stocks-rally/",
+   "summary": "US September durable goods orders +1.8% vs +1.7% expected US FHFA Monthly home prices index 0.3% vs 0.2% estimate US August Case-Shiller 20-city house price index +2.7% y/y vs +2.6% expected October US consumer…",
+   "published": "2026-10-27T20:10:35.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "5tol99",
+   "title": "Economic and event calendar in Asia Wednesday, October 28, 2026. AUD CPI, RBA and RBNZ",
+   "link": "https://investinglive.com/central-banks/economic-and-event-calendar-in-asia-wednesday-october-28-2026-aud-cpi-rba-and-rbnz/",
+   "summary": "I've posted previews for the Australian inflation data and the RBNZ deciison. Australia: Australia CPI preview: banks see 1.0% core rise, above the RBA’s 0.8% forecast and from Greg: AUDUSD trades up and down in a 35…",
+   "published": "2026-10-27T20:04:12.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "bdsn8o",
+   "title": "Ripple, Robinhood expand partnership to bring RLUSD to retail and institutional markets",
+   "link": "https://cointelegraph.com/news/ripple-robinhood-expand-partnership-rlusd-retail-institutional-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Ripple also expanded its collaboration with BNY on digital asset custody and partnered with C2FO to bring trade finance settlement onto the XRP Ledger.",
+   "published": "2026-10-27T19:54:05.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-10-27T19:36:13.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "124aoty",
+   "title": "CFTC sues Utah to block action against prediction markets",
+   "link": "https://cointelegraph.com/news/cftc-lawsuit-utah-action-prediction-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The US state filed a lawsuit against Kalshi last week, seeking to recover up to $60 million in profits related to event contracts on prediction markets.",
+   "published": "2026-10-27T19:21:59.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "r3ou0j",
+   "title": "AUDUSD trades up and down in a 35 pip trading range over the last 3 days. Look for a break?",
+   "link": "https://investinglive.com/education/audusd-trades-up-and-down-in-a-35-pip-trading-range-over-the-last-3-days-look-for-a-break/",
+   "summary": "The AUDUSD has spent the last three trading days moving up and down inside a narrow range, with a low near 0.7005 and a high at 0.70397. That is only about 35 pips from bottom to top. There has been plenty of movement…",
+   "published": "2026-10-27T18:54:44.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
    "id": "wyl4v",
    "title": "Tax on banks, energy bill help and minimum wage rise - what could be in the Budget?",
    "link": "https://www.bbc.co.uk/news/articles/c6x2zrjl7kjno?at_medium=RSS&at_campaign=rss",
    "summary": "Chancellor John Healey will set out his plans for UK taxes on 28 October.",
-   "published": "2026-10-27T18:18:36.000Z",
+   "published": "2026-10-27T18:45:56.000Z",
    "source": "BBC Business",
    "category": "economy"
+  },
+  {
+   "id": "1butyrz",
+   "title": "Macro takeaways from earnings: Travel, package delivery and home appliances in focus",
+   "link": "https://investinglive.com/stocks/macro-takeaways-from-earnings-travel-package-delivery-and-home-appliances-in-focus/",
+   "summary": "The US economy is sending some wildly contradictory signals, but four earnings calls this today help to make sense of what's happening beneath the surface. Whirlpool is struggling with weak consumer demand and says…",
+   "published": "2026-10-27T18:45:04.000Z",
+   "source": "investingLive",
+   "category": "forex"
   },
   {
    "id": "mhyss2",
@@ -57,15 +210,6 @@
    "category": "crypto"
   },
   {
-   "id": "1h001ni",
-   "title": "The S&P and Nasdaq 100 are trying to tilt the bias to the upside technically",
-   "link": "https://investinglive.com/stocks/the-s-p-and-nasdaq-100-are-trying-to-tilt-the-bias-to-the-upside-technically/",
-   "summary": "The S&P and Nasdaq 100 are trying to tilt the technical bias back to the upside after their recent declines found buyers near key support. That is a start. The next step is to reclaim resistance, hold those breaks, and…",
-   "published": "2026-10-27T16:37:03.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "13992zn",
    "title": "USDC overtakes USDT in euro stablecoin trading as EU rules reshape market: Kaiko",
    "link": "https://cointelegraph.com/news/usdc-overtakes-usdt-euro-stablecoin-trading-mica-kaiko?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -73,24 +217,6 @@
    "published": "2026-10-27T15:59:58.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "ks8xr",
-   "title": "Why spreads matter more than you think, Elev8 broker explains",
-   "link": "https://investinglive.com/education/why-spreads-matter-more-than-you-think-elev8-broker-explains/",
-   "summary": "The spread, the difference between the bid (selling price) and ask (buying price)—can become a substantial expense when trades are frequent. According to the World Gold Council , average spot-market spreads were 0.02%…",
-   "published": "2026-10-27T15:42:06.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "18uu3f8",
-   "title": "USDCAD buyers push higher, but the 100-day MA remains a key hurdle",
-   "link": "https://investinglive.com/technical-analysis/usdcad-buyers-push-higher-but-the-100-day-ma-remains-a-key-hurdle/",
-   "summary": "The USDCAD trended higher through September (see chart below), but the buyers ran into a ceiling in early October. Three separate highs between October 5 and October 14 stalled near 1.4291–1.4298. The buyers had their…",
-   "published": "2026-10-27T15:19:37.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "vxzsv7",
@@ -102,51 +228,6 @@
    "category": "economy"
   },
   {
-   "id": "usm3rf",
-   "title": "Gold tests its 100-hour moving average as buyers look for more control",
-   "link": "https://investinglive.com/commodities/gold-tests-its-100-hour-moving-average-as-buyers-look-for-more-control/",
-   "summary": "Gold is extending higher today and testing its falling 100-hour moving average near $4043. That level is the short-term barometer for buyers and sellers. A move above—and the ability to stay above—would give buyers…",
-   "published": "2026-10-27T14:41:51.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "12cumbl",
-   "title": "US October Richmond Fed -2 vs -2 expected",
-   "link": "https://investinglive.com/news/us-october-richmond-fed-2-vs-2-expected/",
-   "summary": "Manufacturing shipments 0 vs -5 last month Other details: Employment 3 versus 7 last month Wages 20 versus 17 last month Prices paid 7.12 versus 7.08 last month Prices received 5.27 versus 4.19 last month New orders -8…",
-   "published": "2026-10-27T14:00:28.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "10qp6p9",
-   "title": "October US consumer confidence 91.7 vs 81.0 expected",
-   "link": "https://investinglive.com/news/october-us-consumer-confidence-vs-81-0-expected/",
-   "summary": "Prior was 81.9 (revised to 84.2) Present situation 120.4 vs 111.8 prior Expectations 72.6 vs 65.7 prior This is a nice jump but it comes after the worst reading since 2014 so it's still at extremely depressed levels.…",
-   "published": "2026-10-27T14:00:16.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1x8xsfn",
-   "title": "US New home sales for September 0.676M annualized vs 0.650M estimate",
-   "link": "https://investinglive.com/news/us-new-home-sales-for-september-0-676m-annualized-vs-0-650m-estimate/",
-   "summary": "Prior month 0.684M annualized revised lower to 0.680M annualized Details: New home sales: 676,000 annualized. Prior 680,000. Sales change: −0.6% MoM; −5.3% YoY. Homes for sale: 476,000 vs 481,000 in August. Down 2.3%…",
-   "published": "2026-10-27T14:00:06.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "8c99y4",
-   "title": "Bitcoin trades in a narrow range above and below $80,000. What would get the digital currency out of its rut?",
-   "link": "https://investinglive.com/cryptocurrency/bitcoin-trades-in-a-narrow-range-above-and-below-80-000-what-would-get-the-digital-currency-out-of-its-rut/",
-   "summary": "Bitcoin has been moving lower since the September and October highs formed a ceiling near $87,374. The repeated failures near that level gave sellers a clearly defined area to lean against. Buyers had their…",
-   "published": "2026-10-27T13:44:47.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "10lej5g",
    "title": "Crypto could outperform AI stocks: Wall Street veteran Jordi Visser",
    "link": "https://cointelegraph.com/magazine/crypto-could-outperform-ai-stocks-wall-street-veteran-jordi-visser?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -156,15 +237,6 @@
    "category": "crypto"
   },
   {
-   "id": "t4zzau",
-   "title": "S&P 500 rebounds as US-Iran escalation fears fade, but bearish drivers remain intact. What's next?",
-   "link": "https://investinglive.com/stocks/s-p-500-rebounds-as-us-iran-escalation-fears-fade-but-bearish-drivers-remain-intact-what-s-next/",
-   "summary": "The S&P 500 sold off sharply last week as growth concerns, widening credit spreads and the risk of renewed US-Iran strikes weighed on risk sentiment. Although no new US attack has occurred so far, the risk of further…",
-   "published": "2026-10-27T13:29:43.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1ogiewa",
    "title": "Mbappé sorry for 'ill-judged' Mao remark after backlash in China",
    "link": "https://www.bbc.co.uk/news/articles/cv62yg0erp8zo?at_medium=RSS&at_campaign=rss",
@@ -172,15 +244,6 @@
    "published": "2026-10-27T13:25:54.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-10-27T13:17:24.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "kgr6ki",
@@ -210,24 +273,6 @@
    "category": "crypto"
   },
   {
-   "id": "1o4e11y",
-   "title": "US August Case-Shiller 20-city house price index +2.7% y/y vs +2.6% expected",
-   "link": "https://investinglive.com/news/us-august-case-shiller-20-city-house-price-index-2-7-y-y-vs-2-6-expected/",
-   "summary": "Prior was +2.5% y/y 20-city house price index +0.3% m/m vs +0.3% expected Mortgage rates at 7.5% aren't doing any favors for the housing market. For background, the S&P Case-Shiller Home Price Indices are the…",
-   "published": "2026-10-27T13:00:16.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1liapov",
-   "title": "Bitcoin price analysis sees ‘strong rally’ as old coins become dormant",
-   "link": "https://cointelegraph.com/markets/bitcoin-price-analysis-sees-strong-rally-as-old-coins-become-dormant?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "A decline in the share of Bitcoin’s realized cap held by coins unmoved for 18 months or longer points to the ‘early stages’ of a bull market, analysis says.",
-   "published": "2026-10-27T12:18:24.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1z0hmjx",
    "title": "The survival of American democracy depends on taxing billionaires",
    "link": "https://www.theguardian.com/us-news/2026/oct/27/democracy-tax-billionaires",
@@ -237,15 +282,6 @@
    "category": "economy"
   },
   {
-   "id": "1jnkf8p",
-   "title": "Zcash co-founder calls to stop funding ‘over $125M’ grants program",
-   "link": "https://cointelegraph.com/news/zcash-co-founder-ending-zcg-funding-125m?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Sean Bowe says ZCG has enough money to keep funding projects and wants its share of new ZEC redirected to a reserve for the network.",
-   "published": "2026-10-27T10:00:31.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "af5umx",
    "title": "Apple to replace iPhone Duos affected by screen problem",
    "link": "https://www.bbc.co.uk/news/articles/c893zwlev2xpo?at_medium=RSS&at_campaign=rss",
@@ -253,33 +289,6 @@
    "published": "2026-10-27T09:37:55.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "16yo1om",
-   "title": "Bloom bot hackers loot $953K faster than you can microwave popcorn",
-   "link": "https://cointelegraph.com/news/bloom-bot-hackers-953k-faster-popcorn?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bloom pledged to reimburse nine traders after $953,000 was drained from 48 wallets, saying no private keys were accessed or compromised.",
-   "published": "2026-10-27T09:07:37.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1mf8zrt",
-   "title": "Binance files for Brazil crypto license ahead of Friday deadline",
-   "link": "https://cointelegraph.com/news/binance-brazil-crypto-license-oct-30-deadline?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The exchange is delisting 22 crypto assets for Brazilian users and hopes talks with the central bank will allow it to restore some services.",
-   "published": "2026-10-27T08:04:21.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1eycmhg",
-   "title": "Bitcoin ETFs claw back $110M after $774M exit",
-   "link": "https://cointelegraph.com/markets/bitcoin-etf-rebound-110-million-btc-dip-below-80k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "US spot Bitcoin ETFs remained in the red for October, with about $202 million in net outflows for the month despite Monday’s rebound.",
-   "published": "2026-10-27T07:35:37.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1nmjudn",
@@ -404,15 +413,6 @@
    "link": "https://www.bbc.co.uk/news/articles/ck87z4ng2l03o?at_medium=RSS&at_campaign=rss",
    "summary": "The economic is positive now but come January things could become trickier for the Labour government",
    "published": "2026-10-26T00:26:49.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "12d1qj3",
-   "title": "Big, noisy and coming to a town near you - why the data centre backlash is growing",
-   "link": "https://www.bbc.co.uk/news/articles/cq2e9we7w2ejo?at_medium=RSS&at_campaign=rss",
-   "summary": "Data centres are the lifeblood of our digital world, but there are growing concerns about their environmental impact. The BBC explores their rise in charts.",
-   "published": "2026-10-25T23:44:34.000Z",
    "source": "BBC Business",
    "category": "economy"
   },
