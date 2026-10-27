@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T12:56:44.308Z",
+ "updated": "2026-10-27T18:34:24.067Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,13 +12,211 @@
  },
  "items": [
   {
-   "id": "vxzsv7",
-   "title": "Minimum wage increase set to slow for 18-20 year-olds",
-   "link": "https://www.bbc.co.uk/news/articles/c6d93gq1xdgno?at_medium=RSS&at_campaign=rss",
-   "summary": "Chancellor John Healey will reveal the new pay rates in the Budget, and has also announced measures to help households with the cost of living.",
-   "published": "2026-10-27T12:53:49.000Z",
+   "id": "wyl4v",
+   "title": "Tax on banks, energy bill help and minimum wage rise - what could be in the Budget?",
+   "link": "https://www.bbc.co.uk/news/articles/c6x2zrjl7kjno?at_medium=RSS&at_campaign=rss",
+   "summary": "Chancellor John Healey will set out his plans for UK taxes on 28 October.",
+   "published": "2026-10-27T18:18:36.000Z",
    "source": "BBC Business",
    "category": "economy"
+  },
+  {
+   "id": "mhyss2",
+   "title": "Majority of Americans want candidates who support US-based financial technology: Poll",
+   "link": "https://cointelegraph.com/news/us-voters-candidates-support-financial-technology-poll?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The September survey offered a possible window into US voters who could consider fintech and digital asset policies on Election Day.",
+   "published": "2026-10-27T18:08:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "jmn5sj",
+   "title": "Flávio Bolsonaro reportedly flees Brazil for the US after election loss",
+   "link": "https://investinglive.com/news/flavio-bolsonaro-reportedly-flees-brazil-for-the-us-after-election-loss/",
+   "summary": "Flávio Bolsonaro is reportedly en route to the United States, according to allies cited by Folha de S.Paulo. That comes just two days after he lost the presidential runoff to Lula, and after the Supreme Court ordered…",
+   "published": "2026-10-27T17:29:48.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1gwo1l4",
+   "title": "European stocks mostly rise, but the FTSE lags as French yields climb",
+   "link": "https://investinglive.com/stocks/european-stocks-mostly-rise-but-the-ftse-lags-as-french-yields-climb/",
+   "summary": "As London/European traders head home, the major continental indices are closing higher, with Italy and Germany leading the gains. The UK FTSE 100 is the exception, moving lower as weakness in HSBC weighs on sentiment.…",
+   "published": "2026-10-27T17:07:47.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "vj29bi",
+   "title": "Janus Henderson, Centrifuge launch tokenized Nasdaq-100 fund on Stellar",
+   "link": "https://cointelegraph.com/news/janus-henderson-centrifuge-launch-tokenized-nasdaq-100-fund-on-stellar?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The blockchain-based fund offers eligible non-US investors exposure to the Nasdaq-100 as Janus Henderson expands its institutional tokenization business.",
+   "published": "2026-10-27T16:37:15.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1h001ni",
+   "title": "The S&P and Nasdaq 100 are trying to tilt the bias to the upside technically",
+   "link": "https://investinglive.com/stocks/the-s-p-and-nasdaq-100-are-trying-to-tilt-the-bias-to-the-upside-technically/",
+   "summary": "The S&P and Nasdaq 100 are trying to tilt the technical bias back to the upside after their recent declines found buyers near key support. That is a start. The next step is to reclaim resistance, hold those breaks, and…",
+   "published": "2026-10-27T16:37:03.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "13992zn",
+   "title": "USDC overtakes USDT in euro stablecoin trading as EU rules reshape market: Kaiko",
+   "link": "https://cointelegraph.com/news/usdc-overtakes-usdt-euro-stablecoin-trading-mica-kaiko?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "USDC’s share of euro stablecoin trading has climbed to 56% since January 2024, with deeper liquidity as exchanges restrict USDT under MiCA.",
+   "published": "2026-10-27T15:59:58.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "ks8xr",
+   "title": "Why spreads matter more than you think, Elev8 broker explains",
+   "link": "https://investinglive.com/education/why-spreads-matter-more-than-you-think-elev8-broker-explains/",
+   "summary": "The spread, the difference between the bid (selling price) and ask (buying price)—can become a substantial expense when trades are frequent. According to the World Gold Council , average spot-market spreads were 0.02%…",
+   "published": "2026-10-27T15:42:06.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "18uu3f8",
+   "title": "USDCAD buyers push higher, but the 100-day MA remains a key hurdle",
+   "link": "https://investinglive.com/technical-analysis/usdcad-buyers-push-higher-but-the-100-day-ma-remains-a-key-hurdle/",
+   "summary": "The USDCAD trended higher through September (see chart below), but the buyers ran into a ceiling in early October. Three separate highs between October 5 and October 14 stalled near 1.4291–1.4298. The buyers had their…",
+   "published": "2026-10-27T15:19:37.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "vxzsv7",
+   "title": "Minimum wage set to rise but 18-20 year-olds will not get bigger increase",
+   "link": "https://www.bbc.co.uk/news/articles/c6d93gq1xdgno?at_medium=RSS&at_campaign=rss",
+   "summary": "Chancellor John Healey will reveal the new pay rates in the Budget, and has also announced measures to help households with the cost of living.",
+   "published": "2026-10-27T15:01:27.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "usm3rf",
+   "title": "Gold tests its 100-hour moving average as buyers look for more control",
+   "link": "https://investinglive.com/commodities/gold-tests-its-100-hour-moving-average-as-buyers-look-for-more-control/",
+   "summary": "Gold is extending higher today and testing its falling 100-hour moving average near $4043. That level is the short-term barometer for buyers and sellers. A move above—and the ability to stay above—would give buyers…",
+   "published": "2026-10-27T14:41:51.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "12cumbl",
+   "title": "US October Richmond Fed -2 vs -2 expected",
+   "link": "https://investinglive.com/news/us-october-richmond-fed-2-vs-2-expected/",
+   "summary": "Manufacturing shipments 0 vs -5 last month Other details: Employment 3 versus 7 last month Wages 20 versus 17 last month Prices paid 7.12 versus 7.08 last month Prices received 5.27 versus 4.19 last month New orders -8…",
+   "published": "2026-10-27T14:00:28.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "10qp6p9",
+   "title": "October US consumer confidence 91.7 vs 81.0 expected",
+   "link": "https://investinglive.com/news/october-us-consumer-confidence-vs-81-0-expected/",
+   "summary": "Prior was 81.9 (revised to 84.2) Present situation 120.4 vs 111.8 prior Expectations 72.6 vs 65.7 prior This is a nice jump but it comes after the worst reading since 2014 so it's still at extremely depressed levels.…",
+   "published": "2026-10-27T14:00:16.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1x8xsfn",
+   "title": "US New home sales for September 0.676M annualized vs 0.650M estimate",
+   "link": "https://investinglive.com/news/us-new-home-sales-for-september-0-676m-annualized-vs-0-650m-estimate/",
+   "summary": "Prior month 0.684M annualized revised lower to 0.680M annualized Details: New home sales: 676,000 annualized. Prior 680,000. Sales change: −0.6% MoM; −5.3% YoY. Homes for sale: 476,000 vs 481,000 in August. Down 2.3%…",
+   "published": "2026-10-27T14:00:06.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "8c99y4",
+   "title": "Bitcoin trades in a narrow range above and below $80,000. What would get the digital currency out of its rut?",
+   "link": "https://investinglive.com/cryptocurrency/bitcoin-trades-in-a-narrow-range-above-and-below-80-000-what-would-get-the-digital-currency-out-of-its-rut/",
+   "summary": "Bitcoin has been moving lower since the September and October highs formed a ceiling near $87,374. The repeated failures near that level gave sellers a clearly defined area to lean against. Buyers had their…",
+   "published": "2026-10-27T13:44:47.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "10lej5g",
+   "title": "Crypto could outperform AI stocks: Wall Street veteran Jordi Visser",
+   "link": "https://cointelegraph.com/magazine/crypto-could-outperform-ai-stocks-wall-street-veteran-jordi-visser?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Former Morgan Stanley and Weiss executive Jordi Visser says AI agents are boosting demand for crypto as he expands his holdings beyond Bitcoin, Ether and Solana.",
+   "published": "2026-10-27T13:30:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "t4zzau",
+   "title": "S&P 500 rebounds as US-Iran escalation fears fade, but bearish drivers remain intact. What's next?",
+   "link": "https://investinglive.com/stocks/s-p-500-rebounds-as-us-iran-escalation-fears-fade-but-bearish-drivers-remain-intact-what-s-next/",
+   "summary": "The S&P 500 sold off sharply last week as growth concerns, widening credit spreads and the risk of renewed US-Iran strikes weighed on risk sentiment. Although no new US attack has occurred so far, the risk of further…",
+   "published": "2026-10-27T13:29:43.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1ogiewa",
+   "title": "Mbappé sorry for 'ill-judged' Mao remark after backlash in China",
+   "link": "https://www.bbc.co.uk/news/articles/cv62yg0erp8zo?at_medium=RSS&at_campaign=rss",
+   "summary": "The France star had referred to the former Chinese leader as a \"dictator\" during an interview about memes.",
+   "published": "2026-10-27T13:25:54.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-10-27T13:17:24.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "kgr6ki",
+   "title": "I'm a single mum on £41,000 and limit my weekly shop to £40 - it's hard",
+   "link": "https://www.bbc.co.uk/news/articles/cmx235r9wr3yo?at_medium=RSS&at_campaign=rss",
+   "summary": "People earning from £380 a month to £150,000 a year tell the BBC what they want to see in this year's Budget.",
+   "published": "2026-10-27T13:08:26.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1frredg",
+   "title": "Hayes details FLOP’s AI compute derivatives vision after selling his altcoins",
+   "link": "https://cointelegraph.com/news/hayes-flop-ai-compute-vision-selling-altcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Arthur Hayes revealed the derivatives market design for Flop Network and how he expects its native token could transform AI compute into a tradable commodity.",
+   "published": "2026-10-27T13:01:10.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "3uuhn7",
+   "title": "Luxor raises $16M from CMT Digital amid AI-Bitcoin miner convergence",
+   "link": "https://cointelegraph.com/news/luxor-raises-16m-ai-bitcoin-miner-convergence?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Luxor aims to use the proceeds to scale its existing AI infrastructure business and expand its GPU sourcing services as global chip supply chains become constrained.",
+   "published": "2026-10-27T13:01:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1o4e11y",
+   "title": "US August Case-Shiller 20-city house price index +2.7% y/y vs +2.6% expected",
+   "link": "https://investinglive.com/news/us-august-case-shiller-20-city-house-price-index-2-7-y-y-vs-2-6-expected/",
+   "summary": "Prior was +2.5% y/y 20-city house price index +0.3% m/m vs +0.3% expected Mortgage rates at 7.5% aren't doing any favors for the housing market. For background, the S&P Case-Shiller Home Price Indices are the…",
+   "published": "2026-10-27T13:00:16.000Z",
+   "source": "investingLive",
+   "category": "forex"
   },
   {
    "id": "1liapov",
@@ -30,37 +228,10 @@
    "category": "crypto"
   },
   {
-   "id": "1ogiewa",
-   "title": "Mbappé sorry for 'ill-judged' Mao remark after backlash in China",
-   "link": "https://www.bbc.co.uk/news/articles/cv62yg0erp8zo?at_medium=RSS&at_campaign=rss",
-   "summary": "The France star had referred to the former Chinese leader as a \"dictator\" during an interview about memes.",
-   "published": "2026-10-27T12:02:20.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "wyl4v",
-   "title": "What is the Budget and what could be in it?",
-   "link": "https://www.bbc.co.uk/news/articles/c6x2zrjl7kjno?at_medium=RSS&at_campaign=rss",
-   "summary": "Chancellor John Healey will set out his plans for UK taxes on 28 October.",
-   "published": "2026-10-27T11:06:53.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "9mha72",
-   "title": "Why the Federal Reserve matters more to crypto market than many investors realise",
-   "link": "https://investinglive.com/education/why-the-federal-reserve-matters-more-to-crypto-market-than-many-investors-realise/",
-   "summary": "Cryptocurrencies have different use cases and fundamentals, but the macroeconomic conditions are an important underlying driver. The Federal Reserve's policy has an enormous influence on macroeconomic conditions…",
-   "published": "2026-10-27T11:06:51.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1z0hmjx",
    "title": "The survival of American democracy depends on taxing billionaires",
    "link": "https://www.theguardian.com/us-news/2026/oct/27/democracy-tax-billionaires",
-   "summary": "It is essential not just to fund the public goods the nation needs, it is indispensable to restore a sense of fairness Money doesn’t buy happiness, we’re told. Even some economists agree. The Nobel Prize-winning…",
+   "summary": "It is essential not just to fund the public goods the nation needs, it is indispensable to restore a sense of fairness Money doesn’t buy happiness, we’re told. Even some economists agree. The Nobel prize-winning…",
    "published": "2026-10-27T11:00:36.000Z",
    "source": "The Guardian Business",
    "category": "economy"
@@ -75,24 +246,6 @@
    "category": "crypto"
   },
   {
-   "id": "tn6wk9",
-   "title": "Oil consolidates around recent highs as fears of imminent US strikes ease. What's next?",
-   "link": "https://investinglive.com/commodities/oil-consolidates-around-recent-highs-as-fears-of-imminent-us-strikes-ease-what-s-next/",
-   "summary": "Crude oil is consolidating around recent highs as the fears of imminent US attacks on Iran eased. Nevertheless, the market remains supported amid persistent escalation risk given the prolonged stalemate in…",
-   "published": "2026-10-27T09:56:46.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "w32h79",
-   "title": "Bitcoin at risk of a big correction after breaking below the major $80K support. What to watch next?",
-   "link": "https://investinglive.com/cryptocurrency/bitcoin-at-risk-of-a-big-correction-after-breaking-below-the-major-80k-support-what-to-watch-next/",
-   "summary": "Bitcoin broke below the key support zone around the 80,000 level recently as fears of potential US strikes on Iran over the weekend weighed on the crypto market. The lack of US attacks eased the bearish momentum but…",
-   "published": "2026-10-27T09:43:39.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "af5umx",
    "title": "Apple to replace iPhone Duos affected by screen problem",
    "link": "https://www.bbc.co.uk/news/articles/c893zwlev2xpo?at_medium=RSS&at_campaign=rss",
@@ -100,15 +253,6 @@
    "published": "2026-10-27T09:37:55.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "8qwhvn",
-   "title": "ECB rate outlook grows more complicated as bank lending conditions tighten",
-   "link": "https://investinglive.com/central-banks/ecb-rate-outlook-grows-more-complicated-as-bank-lending-conditions-tighten/",
-   "summary": "The ECB just released its latest bank lending survey and it's not exactly painting a particularly encouraging picture for the euro area economy. Of note, banks are tightening their lending standards further while…",
-   "published": "2026-10-27T09:20:47.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "16yo1om",
@@ -120,24 +264,6 @@
    "category": "crypto"
   },
   {
-   "id": "5809yy",
-   "title": "European stock market open: Stocks retreat as caution returns, UK leads losses",
-   "link": "https://investinglive.com/stocks/european-stock-market-open-stocks-retreat-as-caution-returns-uk-leads-losses/",
-   "summary": "European stocks are opening lower across the board today in giving back some of yesterday's gains as investors remain cautious ahead of major central bank decisions and big tech earnings later this week. Here are the…",
-   "published": "2026-10-27T08:35:18.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "z22dav",
-   "title": "Gold gets stuck in a consolidation around the $4,000 level as traders await the FOMC decision, US-Iran developments",
-   "link": "https://investinglive.com/commodities/gold-gets-stuck-in-a-consolidation-around-the-4-000-level-as-traders-await-the-fomc-decision-us-iran-developments/",
-   "summary": "Gold got stuck in a consolidation around the 4,000 level as traders await the next key catalysts to pick a direction. The first one is tomorrow’s FOMC decision where the Fed is widely expected to keep interest rates…",
-   "published": "2026-10-27T08:31:32.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1mf8zrt",
    "title": "Binance files for Brazil crypto license ahead of Friday deadline",
    "link": "https://cointelegraph.com/news/binance-brazil-crypto-license-oct-30-deadline?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -145,33 +271,6 @@
    "published": "2026-10-27T08:04:21.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "18qpazj",
-   "title": "France consumer confidence plunges to lowest since 2013 as fiscal worries deepen",
-   "link": "https://investinglive.com/news/france-consumer-confidence-plunges-to-lowest-since-2013-as-fiscal-worries-deepen/",
-   "summary": "France October consumer confidence 80 vs 85 expected Prior 86; revised to 85 That's a major blow. French household confidence falls to its lowest since 2013 in October as fiscal worries and concerns over the country's…",
-   "published": "2026-10-27T07:45:16.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "ybans1",
-   "title": "What are the main events for today?",
-   "link": "https://investinglive.com/news/what-are-the-main-events-for-today-72/",
-   "summary": "EUROPEAN SESSION In the European session, we don't have much on the agenda other than a couple of low-tier releases like the French consumer confidence and the Spanish unemployment rate. The data won't change anything…",
-   "published": "2026-10-27T07:41:14.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1fyksn9",
-   "title": "China tech stocks plunge as AI trade cracks deepen, is Wall Street next?",
-   "link": "https://investinglive.com/stocks/china-tech-stocks-plunge-as-ai-trade-cracks-deepen-is-wall-street-next/",
-   "summary": "Things may be looking quieter and calmer in European pre-market but it wasn't really the case in Asia trading, or more specifically Chinese markets. While stocks in Japan and South Korea held up today, it was a…",
-   "published": "2026-10-27T07:39:42.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "1eycmhg",
@@ -183,15 +282,6 @@
    "category": "crypto"
   },
   {
-   "id": "kgr6ki",
-   "title": "I'm a single mum on £41,000 and limit my weekly shop to £40 - it's hard",
-   "link": "https://www.bbc.co.uk/news/articles/cmx235r9wr3yo?at_medium=RSS&at_campaign=rss",
-   "summary": "People earning from £380 a month to £150,000 a year tell the BBC what they want to see in this year's Budget.",
-   "published": "2026-10-27T06:48:50.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "1nmjudn",
    "title": "Rise in sales of radios and tinned foods, say retailers, after call to stock up",
    "link": "https://www.bbc.co.uk/news/articles/c5rmy84np001o?at_medium=RSS&at_campaign=rss",
@@ -199,24 +289,6 @@
    "published": "2026-10-27T06:33:11.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "3x4vl1",
-   "title": "Chart of the day: Gold price hangs by a thread at $4,000 as bond market risks loom",
-   "link": "https://investinglive.com/technical-analysis/chart-of-the-day-gold-price-hangs-by-a-thread-at-4-000-as-bond-market-risks-loom/",
-   "summary": "So far this week, gold is hanging on around the $4,000 mark as buyers are hoping to prevent a bigger breakdown on the charts. After spending much of October struggling to find its footing, gold price is in a very…",
-   "published": "2026-10-27T06:32:25.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-10-27T06:08:28.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1vm0b2a",
@@ -228,24 +300,6 @@
    "category": "economy"
   },
   {
-   "id": "uq94l9",
-   "title": "FX option expiries for 27 October 10am New York cut",
-   "link": "https://investinglive.com/orders/fx-option-expiries-for-27-october-10am-new-york-cut/",
-   "summary": "There are a couple of key expiry levels to take note of on the day, as highlighted in bold below. The first is for EUR/USD at the 1.1175 level, with the strike holding roughly within 10 pips of the spot price. That…",
-   "published": "2026-10-27T05:56:43.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "y820xr",
-   "title": "Japan finance minister Katayama warns of decisive action as yen intervention risks linger",
-   "link": "https://investinglive.com/forex/japan-finance-minister-katayama-warns-of-decisive-action-as-yen-intervention-risks-linger/",
-   "summary": "Japan finance minister Katayama is out with another warning to markets today, reaffirming that Tokyo remains ready to step in if necessary to defend the yen. Her comments: Government stands ready to take decisive…",
-   "published": "2026-10-27T05:02:57.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "15owjdu",
    "title": "Four takeaways from Anthropic’s potentially record-breaking stock market filing",
    "link": "https://www.theguardian.com/technology/2026/oct/26/anthropic-stock-market-filing-takeaways",
@@ -255,31 +309,13 @@
    "category": "economy"
   },
   {
-   "id": "sin4i5",
-   "title": "RedotPay weighs confidential US IPO filing by year-end: Bloomberg",
-   "link": "https://cointelegraph.com/news/redotpay-weighs-confidential-us-ipo-filing-by-year-end-bloomberg?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The stablecoin payments company previously disputed reports that its US listing had been delayed.",
-   "published": "2026-10-27T04:26:51.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1x8qxsj",
-   "title": "Keystone breach deepens: Hackers stole key used to verify wallets as genuine",
-   "link": "https://cointelegraph.com/news/keystone-breach-deepens-hackers-stole-key-used-to-verify-wallets-as-genuine?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Keystone initially disclosed a leak of customer information but has since disclosed that hackers also stole a key that could allow counterfeit wallets to pass authenticity checks.",
-   "published": "2026-10-27T01:55:03.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "14ruxtn",
-   "title": "Ripple wins final US approval for national trust bank",
-   "link": "https://cointelegraph.com/news/ripple-wins-final-us-approval-for-national-trust-bank?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The approval clears the way for Ripple to manage reserves backing its RLUSD stablecoin and provide digital asset custody.",
-   "published": "2026-10-27T00:06:41.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
+   "id": "51bbr0",
+   "title": "Chinese markets lose trillions as race for AI supremacy with US takes its toll",
+   "link": "https://www.theguardian.com/world/2026/oct/27/chinese-markets-lose-trillions-ai-race-beijing",
+   "summary": "Lack of profits and the threat posed by western countries are raising concern about the sustainability of Beijing’s AI boom Trillions of dollars have been wiped from China’s stock markets in recent months amid…",
+   "published": "2026-10-27T04:42:50.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
   },
   {
    "id": "1n0zyut",
@@ -291,24 +327,6 @@
    "category": "economy"
   },
   {
-   "id": "1ox68sg",
-   "title": "US OCC calls on community banks to become payment stablecoin issuers",
-   "link": "https://cointelegraph.com/news/occ-community-banks-stablecoin-issuers-genius-act?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The announcement followed the banking regulator finalizing its rules for the GENIUS Act, a stablecoin law to be implemented in January",
-   "published": "2026-10-26T21:38:30.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "9enc3f",
-   "title": "Injective launches onchain futures market tracking Nvidia GPU rental costs",
-   "link": "https://cointelegraph.com/news/injective-launches-onchain-futures-market-tracking-nvidia-gpu-rental-costs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The new index tracks rental prices for five Nvidia GPUs, offering leveraged trading and potential hedging against fluctuations in AI computing costs.",
-   "published": "2026-10-26T21:23:32.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1jjqfcw",
    "title": "Anthropic's blockbuster share listing - 5 surprising things we now know",
    "link": "https://www.bbc.co.uk/news/articles/cwn8d7g29vd9o?at_medium=RSS&at_campaign=rss",
@@ -318,30 +336,12 @@
    "category": "economy"
   },
   {
-   "id": "fol4gt",
-   "title": "Canada opens consultation on stablecoins, citing US GENIUS Act",
-   "link": "https://cointelegraph.com/news/canada-consultation-stablecoins-genius-act?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "As part of the potential implementation of its Stablecoin Act, the Canadian government will hear from the public on a proposed framework for tokens from non-financial institutions.",
-   "published": "2026-10-26T19:47:40.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1ut2fz4",
    "title": "Anthropic warns of 'catastrophic risk' to humankind ahead of blockbuster share listing",
    "link": "https://www.bbc.co.uk/news/articles/cq398p1wd1evo?at_medium=RSS&at_campaign=rss",
    "summary": "The company will be the first true artificial intelligence company to go public as tech firms continue to invest heavily in AI.",
    "published": "2026-10-26T16:27:17.000Z",
    "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "1w6b2ak",
-   "title": "Anthropic files for stock market IPO; Meta announces $95bn fundraising drive to pay for AI expansion – as it happened",
-   "link": "https://www.theguardian.com/business/live/2026/oct/26/ai-cloud-computing-companies-guppy-level-death-elon-musk-stock-markets-dollar-oil-bond-yieds-latest-news-updates",
-   "summary": "Meta says share sale will support its “continued investment in AI infrastructure and personal superintelligence”, as Elon Musk warns some AI cloud computing firms face ‘guppy-level death’ UK government borrowing costs…",
-   "published": "2026-10-26T15:33:24.000Z",
-   "source": "The Guardian Business",
    "category": "economy"
   },
   {
@@ -548,24 +548,6 @@
    "link": "https://www.cnbc.com/2026/10/20/stocks-making-the-biggest-moves-after-hours-isrg-nflx-spcx.html",
    "summary": "Here are some of the companies making headlines after the closing bell.",
    "published": "2026-10-20T22:55:27.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
-   "id": "1awjb74",
-   "title": "Stocks making the biggest moves midday: Hasbro, Northrop Grumman, Equifax, General Motors & more",
-   "link": "https://www.cnbc.com/2026/10/20/stocks-making-the-biggest-moves-midday-has-noc-efx-gm.html",
-   "summary": "These are the stocks posting the largest moves midday.",
-   "published": "2026-10-20T16:45:06.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
-   "id": "1vz5g61",
-   "title": "Stocks making the biggest moves premarket: RTX, General Motors, Northrop Grumman, Steel Dynamics & more",
-   "link": "https://www.cnbc.com/2026/10/20/stocks-making-the-biggest-moves-premarket-rtx-gm-noc-stld.html",
-   "summary": "These are the stocks posting the largest moves in early trading.",
-   "published": "2026-10-20T16:35:41.000Z",
    "source": "CNBC Finance",
    "category": "markets"
   }
