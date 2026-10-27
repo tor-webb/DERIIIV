@@ -76,8 +76,11 @@ describe('bot templates', () => {
             const trade_again = jest.fn();
             const context: TInterpreterContext = {
                 vars: new Map(),
-                read: kind =>
-                    kind === 'result_win' ? last_result === 'win' : kind === 'result_loss' ? last_result === 'loss' : 0,
+                read: kind => {
+                    if (kind === 'result_win') return last_result === 'win';
+                    if (kind === 'result_loss') return last_result === 'loss';
+                    return 0;
+                },
                 notify: jest.fn(),
                 purchase: jest.fn(),
                 sell: jest.fn(),

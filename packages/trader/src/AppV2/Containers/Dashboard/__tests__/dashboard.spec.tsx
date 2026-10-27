@@ -29,6 +29,15 @@ describe('<Dashboard /> simulator cards', () => {
         expect(screen.getByText('Learn to trade')).toBeInTheDocument();
     });
 
+    it('lists Markets and opens it from its card', () => {
+        renderDashboard();
+        expect(
+            screen.getByText('Live prices, top movers and volatility, so you can pick a market before you trade.')
+        ).toBeInTheDocument();
+        fireEvent.click(screen.getByTestId('dt_dashboard_markets'));
+        expect(screen.getByTestId('dt_location')).toHaveTextContent('/markets');
+    });
+
     it('opens each tool from its card', () => {
         renderDashboard();
         fireEvent.click(screen.getByTestId('dt_dashboard_bulk_trader'));

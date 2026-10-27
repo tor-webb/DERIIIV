@@ -3,6 +3,7 @@ export const routes = {
     index: '/',
     dashboard: '/dashboard',
     charts: '/charts',
+    markets: '/markets',
     bot_builder: '/bot-builder',
     risk_calculator: '/risk-calculator',
     bulk_trader: '/bulk-trader',
