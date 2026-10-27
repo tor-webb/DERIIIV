@@ -1,4 +1,40 @@
-# Handoff: where the work stands (2026-10-26)
+# Handoff: where the work stands (2026-10-27)
+
+## PICK UP HERE (written 2026-10-27, read this block first)
+
+**State.** Everything is on `main` (head `6070369`), deployed and green. Every old branch is merged except `handoff-update`
+(one old notes-only commit, ignore it; safe to delete). `news-data` is a data branch written by a bot, never merge it.
+Live site: `https://tor-webb.github.io/DERIIIV/` (app at `/DERIIIV/app/`). Local check before any push:
+`cd packages/trader && npx jest src/AppV2` then ESLint and Stylelint (commands at the bottom of this file).
+
+**Done and checked (real production build, headless Chromium at 390px and 1280px, tests, ESLint, Stylelint):**
+
+| Area       | Result                                                                                                                                                   |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Currency   | Balances print as `$9,987.00` through `formatMoneyText` (`packages/shared/src/utils/currency`). Never call `formatMoney(..., false)` in JSX.             |
+| Phone nav  | Scrolling tab bar on every page including Trade (`AppShell/app-shell.tsx`, `MOBILE_NAV_ROUTES`). No sideways scroll on any page.                         |
+| News       | `/news`: live headlines, category tabs, market-moving tags, recommendations, alerts switch, unread badge, printable handout. See the News section below. |
+| Feed job   | `update_news.yml` writes `news.json` to `news-data`. GitHub's schedule is loose: in practice it ran about every 5 hours, not every 30 minutes.           |
+| Site guide | "Help" button (bottom right) answers from a keyword list. It is **not** live AI.                                                                         |
+
+**Not checked, because the sandbox cannot do it. Do these first, they need you at a browser:**
+
+1. Log in with a Deriv **demo** account on the live site. Check the balance shows `$` and a number on the dashboard, top bar and Risk calculator.
+2. Run a bot (Rise/Fall, then Matches/Differs) on demo and read the `proposal` payload in the network tab (`underlying_symbol`, integer `duration`, `barrier` for digit trades).
+3. Open `/news` on your phone: tap a headline, print the handout, switch alerts off and on.
+
+**Next jobs, in order:**
+
+1. **Phone header and Menu.** Phones still show the old Deriv header ("DT" logo, Sign up / Log in) and the old Home/Trade/Menu bar sits _under_ the new tab bar, so the account Menu (settings, logout, language) is unreachable on phones. Fix: add a "More" entry to the phone tab bar that opens the menu route, and swap the "DT" logo for the brand logo. Files: `core/src/App/Containers/Layout/bottom-nav`, `header`, `AppShell`, `TopNav`.
+2. **Telegram link.** `brand.config.json` has `telegram_url: ""`, so the Learn page says "opening soon". Paste the channel URL there (must be a `t.me` link) and the button appears.
+3. **Bulk Trader decision.** The Bulk Trader page is a _simulator_ on real ticks with real payout maths (it shows break-even win rate). A tool that picks "mostly wins" results was deliberately not built, because fake performance pushes people to real money. Decide: keep the simulator, and/or add a bulk trader that runs on the Deriv demo account through the Bot Builder engine.
+4. **News improvements.** Economic calendar with exact release times (needs a licensed data source). Push alerts outside the open page (needs a server). More forex sources if wanted: FXStreet blocks GitHub (403), so it was dropped.
+5. **Bot Builder gaps.** Indicator blocks (SMA, EMA, RSI, Bollinger), more contract types, Blockly trashcan icon (sprite loads from blockly-demo.appspot.com), toolbar icons. Detail in the lists further down.
+
+**Rules to keep.** No profit promises or fake results anywhere. Recommendations never predict prices. Do not edit the generated colour
+SCSS (`npm run generate:colors`). A push to `main` deploys the site (about 5 minutes), so run the tests first.
+
+---
 
 ## Session 2026-10-27 (later): News page, alerts, recommendations, handout
 
