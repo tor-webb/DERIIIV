@@ -56,7 +56,7 @@ How the numbers are defined (so nobody has to guess):
 
 **Verified by running it:** `npx jest src/AppV2` passes (191 suites, 1,595 tests at the last full run; Markets and Templates are among them); ESLint reports
 0 errors on the new files (the only warning on new code is the `no-restricted-exports` on `Markets/index.ts`, the same one `BotBuilder/index.ts` has);
-Stylelint exit 0; `tsc` shows no errors in the touched files.
+Stylelint exit 0; `tsc` shows no errors in the touched files; the trader package's production webpack build (`npx webpack --config ./build/webpack.config.js --env base=/`, run from `packages/trader`) compiled successfully and emitted the new Markets chunk.
 
 **NOT verified, do these first (they need a browser and a Deriv demo account):**
 
@@ -64,7 +64,6 @@ Stylelint exit 0; `tsc` shows no errors in the touched files.
 2. **Never run against the real socket.** Confirm in the network tab that `ticks_history` with `style: 'candles'`, `granularity: 60`, `count: 60` is accepted for every listed symbol, and that `ticks` subscriptions send `tick.quote`, `tick.epoch` and `tick.pip_size`. Any symbol the server refuses shows as "Unavailable" with a Try again link.
 3. **Trade hand-off.** Open `/markets`, tap Trade on a market that is not the current one, and check the Trade page really switches to it, including after you have already visited Trade in the same session (the URL read happens once per store). Check a closed forex market too.
 4. **Run each template once on a demo account** (Rise/Fall, Over/Under with prediction 2, Even/Odd, both stake-changing bots) and read the `proposal` payload. The stake-changing logic is tested against the interpreter, not against live contracts.
-5. **webpack build** of the trader package was not run in this session.
 
 ## Ideas for next time
 
