@@ -141,8 +141,13 @@
         padding: 0 1.6rem;
         padding-top: env(safe-area-inset-top);
 
-        .top-nav__logo {
-            height: 2.6rem;
+        // The page header above already shows the logo on phones
+        .top-nav__brand {
+            display: none;
+        }
+
+        .top-nav__account {
+            margin-left: auto;
         }
 
         .top-nav__balance {

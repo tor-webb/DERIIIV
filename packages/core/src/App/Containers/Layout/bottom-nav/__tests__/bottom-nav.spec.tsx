@@ -59,6 +59,12 @@ describe('BottomNav', () => {
         expect(screen.getByText('Menu')).toBeInTheDocument();
     });
 
+    it('keeps the Home button inside the app and opens the dashboard', async () => {
+        renderBottomNav();
+        await userEvent.click(screen.getByText('Home'));
+        expect(history.location.pathname).toBe('/dashboard');
+    });
+
     it('should render the correct number of navigation items', () => {
         renderBottomNav();
         // Check by label text instead of role, as Navigation.BottomAction renders divs, not buttons

@@ -194,7 +194,16 @@
         }
     }
     &__logo {
+        display: flex;
+        align-items: center;
         padding: 0 1.6rem;
+    }
+
+    &__logo-img {
+        display: block;
+        height: 2.8rem;
+        width: auto;
+        max-width: 14rem;
     }
 
     &__title {

@@ -45,6 +45,8 @@ const TopNav = observer(({ is_mobile = false }: TTopNavProps) => {
         { id: 'learn', label: localize('Learn'), path: routes.learn },
         { id: 'copy_trading', label: localize('Copy trading'), path: routes.copy_trading },
         ...(is_logged_in ? [{ id: 'reports', label: localize('Reports'), path: routes.reports }] : []),
+        // On phones the old bottom bar is covered by this one, so the account menu needs its own tab
+        ...(is_mobile ? [{ id: 'menu', label: localize('Menu'), path: routes.menu }] : []),
     ];
 
     const isActive = (item: TNavItem) =>

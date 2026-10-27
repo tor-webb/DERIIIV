@@ -13,7 +13,7 @@ import {
     StandaloneHouseBlankFillIcon,
     StandaloneHouseBlankRegularIcon,
 } from '@deriv/quill-icons';
-import { getBrandUrl, routes } from '@deriv/shared';
+import { routes } from '@deriv/shared';
 import { useStore } from '@deriv/stores';
 import { Badge, Navigation } from '@deriv-com/quill-ui';
 import { Localize } from '@deriv-com/translations';
@@ -25,10 +25,9 @@ type BottomNavProps = {
 const BottomNav = observer(({ className }: BottomNavProps) => {
     const history = useHistory();
     const location = useLocation();
-    const { client, portfolio, common } = useStore();
+    const { client, portfolio } = useStore();
     const { active_positions_count } = portfolio;
-    const { currency, is_logged_in } = client;
-    const { current_language } = common;
+    const { is_logged_in } = client;
     const { sendBridgeEvent } = useMobileBridge();
 
     const bottomNavItems = React.useMemo(
@@ -121,12 +120,8 @@ const BottomNav = observer(({ className }: BottomNavProps) => {
         const item = bottomNavItems[index];
 
         if (item.action === 'home') {
-            sendBridgeEvent('trading:home', () => {
-                const brandUrl = getBrandUrl();
-                const lang_param = current_language ? `&lang=${encodeURIComponent(current_language)}` : '';
-                const curr = encodeURIComponent(currency || '');
-                window.location.href = `${brandUrl}/home?source=options&acc=options&curr=${curr}${lang_param}`;
-            });
+            // Inside the Deriv mobile app the bridge handles Home; on the web, Home is our own dashboard
+            sendBridgeEvent('trading:home', () => history.push(routes.dashboard));
             return;
         }
 

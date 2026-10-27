@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { DerivProductBrandLightDerivTraderLogoIcon } from '@deriv/quill-icons';
+import { getBrandLogo, getBrandName, getUrlBase } from '@deriv/shared';
 import { observer, useStore } from '@deriv/stores';
 import { useDevice } from '@deriv-com/ui';
 
@@ -37,7 +37,12 @@ const HeaderLegacy = observer(() => {
             <div className='header__menu-items'>
                 {isMobile && (
                     <div className='header__logo'>
-                        <DerivProductBrandLightDerivTraderLogoIcon height='32px' width='32px' />
+                        <img
+                            className='header__logo-img'
+                            data-testid='dt_dtrader_logo'
+                            src={getUrlBase(`/${getBrandLogo()}`)}
+                            alt={getBrandName()}
+                        />
                     </div>
                 )}
                 {is_logging_in ? (

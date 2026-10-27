@@ -113,10 +113,13 @@ describe('HeaderLegacy', () => {
             (useDevice as jest.Mock).mockReturnValue({ isDesktop: false, isMobile: true });
         });
 
-        it('should render DTrader logo on mobile', () => {
+        it('should render the brand logo on mobile', () => {
             renderComponent();
 
-            expect(screen.getByTestId('dt_dtrader_logo')).toBeInTheDocument();
+            const logo = screen.getByTestId('dt_dtrader_logo');
+            expect(logo).toBeInTheDocument();
+            expect(logo).toHaveAttribute('src', expect.stringMatching(/\.svg$/));
+            expect(logo).toHaveAttribute('alt', expect.stringMatching(/\S/));
         });
     });
 

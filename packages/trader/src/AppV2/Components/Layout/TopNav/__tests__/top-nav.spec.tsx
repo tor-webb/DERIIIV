@@ -74,6 +74,17 @@ describe('TopNav', () => {
         expect(screen.queryByText(/<span/)).not.toBeInTheDocument();
     });
 
+    it('has a Menu tab on phones only, so the account menu stays reachable', () => {
+        renderTopNav('/dashboard', true, true);
+        fireEvent.click(screen.getByTestId('dt_top_nav_menu'));
+        expect(screen.getByTestId('dt_location')).toHaveTextContent('/menu');
+    });
+
+    it('has no Menu tab on desktop', () => {
+        renderTopNav('/dashboard', true, false);
+        expect(screen.queryByTestId('dt_top_nav_menu')).not.toBeInTheDocument();
+    });
+
     it('uses the phone layout when is_mobile is set', () => {
         renderTopNav('/dashboard', false, true);
         expect(screen.getByTestId('dt_top_nav')).toHaveClass('top-nav--mobile');
