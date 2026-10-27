@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T01:04:17.992Z",
+ "updated": "2026-10-27T06:34:50.088Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,20 +12,155 @@
  },
  "items": [
   {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-10-27T06:08:28.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "uq94l9",
+   "title": "FX option expiries for 27 October 10am New York cut",
+   "link": "https://investinglive.com/orders/fx-option-expiries-for-27-october-10am-new-york-cut/",
+   "summary": "There are a couple of key expiry levels to take note of on the day, as highlighted in bold below. The first is for EUR/USD at the 1.1175 level, with the strike holding roughly within 10 pips of the spot price. That…",
+   "published": "2026-10-27T05:56:43.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "y820xr",
+   "title": "Japan finance minister Katayama warns of decisive action as yen intervention risks linger",
+   "link": "https://investinglive.com/forex/japan-finance-minister-katayama-warns-of-decisive-action-as-yen-intervention-risks-linger/",
+   "summary": "Japan finance minister Katayama is out with another warning to markets today, reaffirming that Tokyo remains ready to step in if necessary to defend the yen. Her comments: Government stands ready to take decisive…",
+   "published": "2026-10-27T05:02:57.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1lqhjp2",
+   "title": "Bond market tensions ease but Treasury yields near 5% and France's debt risks keep investors on edge",
+   "link": "https://investinglive.com/news/bond-market-tensions-ease-but-treasury-yields-near-5-and-france-s-debt-risks-keep-investors-on-edge/",
+   "summary": "There is a bit of a welcome relief in global bonds to start the new week, particularly in Europe after Moody's affirmed France's Aa3 credit rating. Meanwhile, Treasury yields have also settled down a fair bit after an…",
+   "published": "2026-10-27T04:49:54.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "sin4i5",
+   "title": "RedotPay weighs confidential US IPO filing by year-end: Bloomberg",
+   "link": "https://cointelegraph.com/news/redotpay-weighs-confidential-us-ipo-filing-by-year-end-bloomberg?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The stablecoin payments company previously disputed reports that its US listing had been delayed.",
+   "published": "2026-10-27T04:26:51.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1h9b9lc",
+   "title": "European markets face a quiet calendar today as central banks and big tech earnings loom",
+   "link": "https://investinglive.com/news/european-markets-face-a-quiet-calendar-today-as-central-banks-and-big-tech-earnings-loom/",
+   "summary": "European traders will be greeted with a rather bare economic calendar when they get to their desks today, and I reckon that might suit some market players just fine considering what is on the agenda later this week. In…",
+   "published": "2026-10-27T04:02:45.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "14q56t0",
+   "title": "investingLive Asia-Pacific market news: Regional stocks mostly rose",
+   "link": "https://investinglive.com/news/investinglive-asia-pacific-market-news-regional-stocks-mostly-rose/",
+   "summary": "Asia firms into Tokyo lunch: Japan and Korea stocks rise, AUD and NZD gain after Nasdaq lead Ethereum Foundation “dump” is a $6.4m treasury sale, not a crisis South Korea Q3 GDP grows 1.0%, beating forecasts as AI chip…",
+   "published": "2026-10-27T03:36:48.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "g4z468",
+   "title": "Asia firms into Tokyo lunch: Japan and Korea stocks rise, AUD and NZD gain after Nasdaq lead",
+   "link": "https://investinglive.com/stock-market-update/asia-firms-into-tokyo-lunch-japan-and-korea-stocks-rise-aud-and-nzd-gain-after-nasdaq-lead/",
+   "summary": "Summary: Japanese and South Korean stocks rose, following a firmer Wall Street session led by the Nasdaq South Korea’s Q3 GDP grew 1.0% q/q, well above forecasts, and the KOSPI’s strong rally triggered a sidecar halt…",
+   "published": "2026-10-27T02:53:29.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "17ey8j3",
+   "title": "Ethereum Foundation “dump” is a $6.4m treasury sale, not a crisis",
+   "link": "https://investinglive.com/cryptocurrency/ethereum-foundation-dump-is-a-6-4m-treasury-sale-not-a-crisis/",
+   "summary": "A sale of this size has no meaningful effect on ETH supply or price, coming in at well under 0.1% of daily trading volume. The more relevant support for ETH is around $2,300, where it has been trading, and the broader…",
+   "published": "2026-10-27T02:33:16.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "wt0qy5",
+   "title": "South Korea Q3 GDP grows 1.0%, beating forecasts as AI chip boom lifts exports",
+   "link": "https://investinglive.com/stock-market-update/south-korea-q3-gdp-grows-1-0-beating-forecasts-as-ai-chip-boom-lifts-exports/",
+   "summary": "The strength of the beat, and the KOSPI sidecar on a sharp rally, underline how heavily Korean assets now trade on the AI chip cycle. That cuts both ways: it supports exporters and chip names while global AI demand…",
+   "published": "2026-10-27T01:58:18.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "vxzsv7",
+   "title": "Healey pledges cheaper marmalade and gherkins in pre-Budget package of 'everyday fixes'",
+   "link": "https://www.bbc.co.uk/news/articles/c6d93gq1xdgno?at_medium=RSS&at_campaign=rss",
+   "summary": "The chancellor will axe tariffs on some staples as part of plans to give households \"breathing space\".",
+   "published": "2026-10-27T01:57:48.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1x8qxsj",
+   "title": "Keystone breach deepens: Hackers stole key used to verify wallets as genuine",
+   "link": "https://cointelegraph.com/news/keystone-breach-deepens-hackers-stole-key-used-to-verify-wallets-as-genuine?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Keystone initially disclosed a leak of customer information but has since disclosed that hackers also stole a key that could allow counterfeit wallets to pass authenticity checks.",
+   "published": "2026-10-27T01:55:03.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "fycf1u",
+   "title": "China September industrial profits jump 14.4% y/y, rebounding from 4.2% in August",
+   "link": "https://investinglive.com/news/china-september-industrial-profits-jump-14-4-y-y-rebounding-from-4-2-in-august/",
+   "summary": "The rebound offers a modest positive surprise for Chinese assets at a time when sentiment is fragile, with onshore equities in a bear market and Morgan Stanley warning of further downside in offshore shares. Industrial…",
+   "published": "2026-10-27T01:49:19.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "af5umx",
+   "title": "Apple says it will replace iPhone Duo handsets with screen problems",
+   "link": "https://www.bbc.co.uk/news/articles/c893zwlev2xpo?at_medium=RSS&at_campaign=rss",
+   "summary": "Photos shared online showed faults appearing on the screens of Apple's first foldable device.",
+   "published": "2026-10-27T01:48:04.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "3uwcnw",
+   "title": "Japan services PPI picks up to 3.7% as August revised lower, backing BoJ hike path",
+   "link": "https://investinglive.com/central-banks/japan-services-ppi-picks-up-to-3-7-as-august-revised-lower-backing-boj-hike-path/",
+   "summary": "The downward revision to August makes the September print more hawkish than the headline suggests: services prices are accelerating, not just holding. That adds weight to the case for the BoJ’s Outlook Report to…",
+   "published": "2026-10-27T01:20:31.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1ezlnw",
+   "title": "PBOC sets USD/ CNY central rate at 6.7171 (vs. estimate at 6.6731)",
+   "link": "https://investinglive.com/central-banks/pboc-sets-usd-cny-central-rate-at-6-vs-estimate-at-6-6731/",
+   "summary": "The PBOC allows the yuan to fluctuate within a +/- 2% range, around this reference rate. More here on this. PBOC injects 1 trillion yuan through overnight reverse repos PBOC injects 412 billion yuan through 7 day…",
+   "published": "2026-10-27T01:17:02.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
    "id": "1qdwh8f",
    "title": "Moody’s Zandi says a Fed hike this week would be a mistake as 5% yields do the tightening",
    "link": "https://investinglive.com/central-banks/moody-s-zandi-says-a-fed-hike-this-week-would-be-a-mistake-as-5-yields-do-the-tightening/",
    "summary": "Zandi’s view runs against market pricing for at least one more hike this year, so it’s more a marker for the doves than a market mover. It does sharpen focus on the tension in this week’s Fed decision. Oil is the…",
    "published": "2026-10-27T00:27:56.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "rxn75t",
-   "title": "PBOC is expected to set the USD/CNY reference rate at 6.6731 – Reuters estimate",
-   "link": "https://investinglive.com/central-banks/pboc-is-expected-to-set-the-usd-cny-reference-rate-at-6-6731-reuters-estimate/",
-   "summary": "The People’s Bank of China is due to set the daily USD/CNY reference rate at around 0115 GMT (2115 US Eastern time), a fixing that remains one of the most closely watched signals in Asian foreign exchange markets.…",
-   "published": "2026-10-27T00:22:20.000Z",
    "source": "investingLive",
    "category": "forex"
   },
@@ -48,87 +183,6 @@
    "category": "economy"
   },
   {
-   "id": "2dwjju",
-   "title": "Japan September services PPI holds at 3.7% y/y, in line with forecast, before BoJ",
-   "link": "https://investinglive.com/news/japan-september-services-ppi-holds-at-3-7-y-y-in-line-with-forecast-before-boj/",
-   "summary": "An in-line print is unlikely to move the yen much on its own, but it removes one possible dovish surprise before Friday’s decision and keeps the backdrop supportive of December hike pricing. Steady services inflation…",
-   "published": "2026-10-26T23:52:21.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "6qwvpf",
-   "title": "Greer warns $3.4 billion EU loan to Airbus may breach US-EU aircraft trade truce Alt headlines:",
-   "link": "https://investinglive.com/news/greer-warns-3-4-billion-eu-loan-to-airbus-may-breach-us-eu-aircraft-trade-truce-alt-headlines/",
-   "summary": "This is a warning shot rather than an escalation, so the immediate market impact is likely confined to aerospace names, with Airbus and Boeing shares the most exposed to any shift in trade rhetoric. The bigger risk is…",
-   "published": "2026-10-26T23:43:11.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1346kwj",
-   "title": "Australia CPI preview: banks see 1.0% core rise, above the RBA’s 0.8% forecast",
-   "link": "https://investinglive.com/news/australia-cpi-preview-banks-see-1-0-core-rise-above-the-rba-s-0-8-forecast/",
-   "summary": "The Australian dollar and front-end yields are set up for a binary reaction. With implied hike odds already above half, a trimmed mean at or above 1.0% would push November pricing closer to fully priced and support the…",
-   "published": "2026-10-26T23:31:36.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1px36hp",
-   "title": "RBA is talking more but promising nothing: Westpac’s Ellis says read the data calls",
-   "link": "https://investinglive.com/central-banks/rba-is-talking-more-but-promising-nothing-westpac-s-ellis-says-read-the-data-calls/",
-   "summary": "For rates traders, the note argues against reading too much into tone shifts between the press conference and market-focused speeches, and in favour of the minutes and officials’ data interpretations as the cleaner…",
-   "published": "2026-10-26T23:19:30.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "14vtfzd",
-   "title": "ROADMAP: Morgan Stanley sees three catalysts ending the correction to ~7150, then S&P 500 to 8,000",
-   "link": "https://investinglive.com/stock-market-update/roadmap-morgan-stanley-sees-three-catalysts-ending-the-correction-to-~7150-then-s-p-500-to-8-000/",
-   "summary": "Morgan Stanley's Wilson’s framework gives traders a roadmap: a final flush toward 7,100 to 7,200, slightly below the 200-day moving average, would be consistent with his view rather than a breakdown of it. The quality…",
-   "published": "2026-10-26T22:43:49.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "z1s1g0",
-   "title": "BoJ preview: MUFG sees hold but a 2% inflation call, with two dissenters the key yen risk",
-   "link": "https://investinglive.com/central-banks/boj-preview-mufg-sees-hold-but-a-2-inflation-call-with-two-dissenters-the-key-yen-risk/",
-   "summary": "A hold with an effective 2% declaration and a firm Ueda press conference would support the yen and pull December hike pricing forward, pushing short-end JGB yields higher. The asymmetric risk is the vote: if the two…",
-   "published": "2026-10-26T22:31:51.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "vxzsv7",
-   "title": "Healey vows cheaper marmalade and gherkins in pre-Budget package of 'everyday fixes'",
-   "link": "https://www.bbc.co.uk/news/articles/c6d93gq1xdgno?at_medium=RSS&at_campaign=rss",
-   "summary": "The chancellor will axe tariffs on some staples as part of plans to give households \"breathing space\".",
-   "published": "2026-10-26T22:30:02.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "gj64ok",
-   "title": "ICYMI: Morgan Stanley sees 10%-15% more downside for Chinese offshore stocks before a bottom",
-   "link": "https://investinglive.com/stock-market-update/icymi-morgan-stanley-sees-10-15-more-downside-for-chinese-offshore-stocks-before-a-bottom/",
-   "summary": "The call sets a clear valuation marker: offshore Chinese shares near eight times forward earnings would be historically cheap territory, and that could become a reference point for bottom-fishing. Until then, Hong…",
-   "published": "2026-10-26T22:09:03.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "2b8msa",
-   "title": "Goldman Sachs: AI buildout to add up to 50bp to US core PCE, but the boost is temporary",
-   "link": "https://investinglive.com/news/goldman-sachs-ai-buildout-to-add-up-to-50bp-to-us-core-pce-but-the-boost-is-temporary/",
-   "summary": "The analysis adds a structural layer to an inflation backdrop already strained by energy, which argues against easing and supports the case for central banks on tightening paths, including the Fed and the Bank of…",
-   "published": "2026-10-26T21:58:53.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1ox68sg",
    "title": "US OCC calls on community banks to become payment stablecoin issuers",
    "link": "https://cointelegraph.com/news/occ-community-banks-stablecoin-issuers-genius-act?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -138,15 +192,6 @@
    "category": "crypto"
   },
   {
-   "id": "1joc0gg",
-   "title": "NZIER Shadow Board majority backs 25bp RBNZ hike to 3% as oil and weaker kiwi bite",
-   "link": "https://investinglive.com/central-banks/nzier-shadow-board-majority-backs-25bp-rbnz-hike-to-3-as-oil-and-weaker-kiwi-bite/",
-   "summary": "The Shadow Board result adds to the case for a hike at the October review, although several members still favour a pause, so a hold would not be a shock. A hike paired with a clear signal of a prolonged pause could…",
-   "published": "2026-10-26T21:30:06.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "9enc3f",
    "title": "Injective launches onchain futures market tracking Nvidia GPU rental costs",
    "link": "https://cointelegraph.com/news/injective-launches-onchain-futures-market-tracking-nvidia-gpu-rental-costs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -154,15 +199,6 @@
    "published": "2026-10-26T21:23:32.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "lh7v8k",
-   "title": "Citadel Securities warns AI trade has little margin for error as three risks converge",
-   "link": "https://investinglive.com/stock-market-update/citadel-securities-warns-ai-trade-has-little-margin-for-error-as-three-risks-converge/",
-   "summary": "The note gives a framework for the recent equity sell-off: a market priced for AI success has little cushion if returns slip, approvals drag or financing costs keep climbing. Heavy AI capex spenders with thin or…",
-   "published": "2026-10-26T20:58:35.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "1jjqfcw",
@@ -211,7 +247,7 @@
   },
   {
    "id": "tehing",
-   "title": "Anthropic files for potentially record-breaking $1.5tn stock market valuation in key test for AI industry",
+   "title": "Anthropic files for potentially record-breaking stock market valuation in key test for AI industry",
    "link": "https://www.theguardian.com/technology/2026/oct/26/anthropic-files-listing-stock-market",
    "summary": "Market debut of firm behind Claude chatbot will be one of largest in US history, a test of AI boom’s financial viability Anthropic has publicly filed for a stock market listing in what is slated to be one of the…",
    "published": "2026-10-26T16:22:28.000Z",
@@ -251,33 +287,6 @@
    "link": "https://cointelegraph.com/news/php-flaw-ai-vulnerability-apocalypse-immunefi-ceo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "summary": "Mitchell Amador warned internet users that websites could remain compromised for weeks, particularly smaller websites slower to adopt the emergency upgrades.",
    "published": "2026-10-26T14:25:22.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "km0r25",
-   "title": "Strategy skips Bitcoin purchases, spends $205M on STRC buybacks",
-   "link": "https://cointelegraph.com/news/strategy-skips-btc-buy-205-million-strc-buyback?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Strategy made no Bitcoin purchases or sales last week, as its STRC preferred stock buybacks reduced its USD Cash balance by 46% to $242.4 million.",
-   "published": "2026-10-26T13:27:38.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-10-26T13:26:47.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "b4g0y9",
-   "title": "HOOD’s prediction markets to add $1.7B to revenue, exceed crypto by 2028: Bernstein",
-   "link": "https://cointelegraph.com/news/prediction-markets-17b-robinhood-exceed-crypto-revenue-2028-bernstein?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bernstein analysts raised Robinhood’s revenue estimates through 2026 and 2028, while maintaining their HOOD price target unchanged at $160.",
-   "published": "2026-10-26T13:12:41.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
   },
@@ -405,15 +414,6 @@
    "summary": "",
    "published": "2026-10-24T06:00:00.000Z",
    "source": "ECB",
-   "category": "economy"
-  },
-  {
-   "id": "1iekx20",
-   "title": "Are California voters about to impose 'world's first' tax on billionaires?",
-   "link": "https://www.bbc.co.uk/news/articles/ck4g1jg4n9dno?at_medium=RSS&at_campaign=rss",
-   "summary": "Voters are about to decide if the mega-rich among them should hand over billions of dollars to pay for improvements to healthcare.",
-   "published": "2026-10-23T23:11:31.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
@@ -568,15 +568,6 @@
    "published": "2026-10-20T07:00:00.000Z",
    "source": "ECB",
    "category": "economy"
-  },
-  {
-   "id": "1u0jniu",
-   "title": "The world’s finance chiefs see new risks — and less China angst",
-   "link": "https://www.cnbc.com/2026/10/20/imf-debt-yields-russia-china-takeaway-.html",
-   "summary": "Debt, AI and Ukraine dominated the conversation at the IMF-World Bank meetings in Bangkok, while China, the focus in 2018, slipped into the background.",
-   "published": "2026-10-20T05:27:53.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
   }
  ]
 }
