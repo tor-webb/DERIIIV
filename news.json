@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T01:59:52.998Z",
+ "updated": "2026-10-28T08:16:50.489Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,11 +12,173 @@
  },
  "items": [
   {
-   "id": "1q7cgve",
-   "title": "Australia trimmed mean CPI rises to 3.7%, above forecasts, as RBA hike case firms",
-   "link": "https://investinglive.com/news/australia-trimmed-mean-cpi-rises-to-3-7-above-forecasts-as-rba-hike-case-firms/",
-   "summary": "Oil is the clearest driver of the headline beat, and Bullock tied higher energy prices directly to a worse inflation outlook only minutes before the release, so any further rise in crude adds to the case for…",
-   "published": "2026-10-28T00:52:42.000Z",
+   "id": "w0kfel",
+   "title": "Bitcoin ETF inflows climb to $176M as sentiment edges higher",
+   "link": "https://cointelegraph.com/markets/bitcoin-etf-176-million-inflow-sentiment-rebounds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "US spot Bitcoin ETFs drew $286 million over two days, narrowing October’s net outflows to $26 million as the Crypto Fear & Greed Index remained neutral.",
+   "published": "2026-10-28T07:57:18.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "2sq06e",
+   "title": "Luxury cruise passengers stranded in Cambodia due to soaring fuel costs",
+   "link": "https://www.bbc.co.uk/news/articles/cwj342k62exyo?at_medium=RSS&at_campaign=rss",
+   "summary": "The Villa Vie Odyssey suspended its voyage and is working with passengers on \"temporary living arrangements\".",
+   "published": "2026-10-28T07:53:20.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1dk3cvo",
+   "title": "Germany's trade struggles with China set to put Asia-Pacific deficit on course for record high",
+   "link": "https://investinglive.com/news/germany-s-trade-struggles-with-china-set-to-put-asia-pacific-deficit-on-course-for-record-high/",
+   "summary": "For quite some time now, Germany's export struggles are hardly anything new. A lot of that comes down to push to diversify away from China in recent times but Beijing's own ambitions to become more self-sufficient…",
+   "published": "2026-10-28T07:46:42.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1td2h1n",
+   "title": "Coinbase denies systems breach, says vendor exposed customer data",
+   "link": "https://cointelegraph.com/news/coinbase-analytics-provider-customer-data?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Coinbase said that an incident at analytics vendor Amplitude exposed some customers’ contact data, but it found no evidence of unauthorized access to its own systems.",
+   "published": "2026-10-28T07:42:55.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "wyl4v",
+   "title": "Energy bill help, minimum wage rise and bank taxes - what could be in the Budget?",
+   "link": "https://www.bbc.co.uk/news/articles/c6x2zrjl7kjno?at_medium=RSS&at_campaign=rss",
+   "summary": "Chancellor John Healey will set out his plans for UK taxes on 28 October.",
+   "published": "2026-10-28T07:39:54.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "ybansy",
+   "title": "What are the main events for today?",
+   "link": "https://investinglive.com/news/what-are-the-main-events-for-today-73/",
+   "summary": "EUROPEAN SESSION In the European session, the main highlight will be the UK Budget announcement at 12:30 GMT/08:30 ET. The UK Chancellor is expected to announce targeted tax increases and cost-of-living support, with…",
+   "published": "2026-10-28T07:36:49.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "yy2aue",
+   "title": "Germany consumer sentiment remains weak ahead of November as inflation fears cloud recovery outlook",
+   "link": "https://investinglive.com/news/germany-consumer-sentiment-remains-weak-ahead-of-november-as-inflation-fears-cloud-recovery-outlook/",
+   "summary": "Germany November GfK consumer sentiment -30.8 vs -30.9 expected Prior -30.6 The breakdownThe latest GfK survey shows that German consumer sentiment is set to slip marginally heading into November, amid growing…",
+   "published": "2026-10-28T07:00:09.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "fg62j4",
+   "title": "Chart of the day: Gold faces a make-or-break moment near $4,000 as Fed and market risks converge",
+   "link": "https://investinglive.com/technical-analysis/chart-of-the-day-gold-faces-a-make-or-break-moment-near-4-000-as-fed-and-market-risks-converge/",
+   "summary": "It's squeaky bum time for gold traders as we start to get into a rather crucial and tense trading period in the second half of this week. The precious metal is already looking vulnerable, barely holding above $4,000…",
+   "published": "2026-10-28T06:40:38.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-10-28T06:00:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "93zmgo",
+   "title": "AUD/USD struggles to break key resistance despite hot Australia CPI and hawkish RBA",
+   "link": "https://investinglive.com/forex/aud-usd-struggles-to-break-key-resistance-despite-hot-australia-cpi-and-hawkish-rba/",
+   "summary": "Even with the latest developments out of Australia earlier today, AUD/USD is finding it tough to make any meaningful push higher. The pair continues to trade around 0.7030 on the day, once again knocking on the door of…",
+   "published": "2026-10-28T05:54:45.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1uyvgta",
+   "title": "FX option expiries for 28 October 10am New York cut",
+   "link": "https://investinglive.com/orders/fx-option-expiries-for-28-october-10am-new-york-cut/",
+   "summary": "There are a couple of key expiry levels to take note of on the day, as highlighted in bold below. The first one is for EUR/USD at the 1.1150 level, with the strike sitting within 30 pips of the spot level. The expiries…",
+   "published": "2026-10-28T05:17:13.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "15r25y7",
+   "title": "Wall Street faces a double test as Fed decision and Microsoft, Alphabet earnings loom",
+   "link": "https://investinglive.com/stocks/wall-street-faces-a-double-test-as-fed-decision-and-microsoft-alphabet-earnings-loom/",
+   "summary": "Wall Street enjoyed a bit of a breather in overnight trading, as the S&P 500 gained by 0.6% and Nasdaq closed higher by 1.2%. It's a welcome relief after drop in the past two weeks as tech shares bounced back, but…",
+   "published": "2026-10-28T04:56:13.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "g3g1z3",
+   "title": "European markets brace for Fed decision as hot Australia CPI, RBNZ surprise and oil rally stir nerves",
+   "link": "https://investinglive.com/news/european-markets-brace-for-fed-decision-as-hot-australia-cpi-rbnz-surprise-and-oil-rally-stir-nerves/",
+   "summary": "It has been quite an eventful start to the day so far as the central bank bonanza rolls into town. That is putting inflation back in the spotlight with there already being plenty to digest before European traders get…",
+   "published": "2026-10-28T04:15:15.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "7cqb7l",
+   "title": "Robinhood’s Tenev warns US tokenization uncertainty deters ‘serious assets’",
+   "link": "https://cointelegraph.com/news/robinhoods-tenev-warns-us-tokenization-uncertainty-deters-serious-assets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Robinhood CEO Vlad Tenev says tokenized equities need more than a temporary SEC exemption to flourish in the US.",
+   "published": "2026-10-28T03:55:57.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1rhvep7",
+   "title": "Topix explained: why Japan’s biggest-ever index overhaul will cull 683 stocks by 2028",
+   "link": "https://investinglive.com/stock-market-update/topix-explained-why-japan-s-biggest-ever-index-overhaul-will-cull-683-stocks-by-2028/",
+   "summary": "The immediate effect comes at Thursday’s close, when around $60 billion of passive trades is expected to cause sharp, short-lived price swings and heavy volume in affected stocks. That can briefly distort the Topix and…",
+   "published": "2026-10-28T03:35:27.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1nb3iw",
+   "title": "investingLive Asia-Pacific market news: Hawkish RBA, surprise RBNZ hold lift AUD/NZD",
+   "link": "https://investinglive.com/news/investinglive-asia-pacific-market-news-hawkish-rba-surprise-rbnz-hold-lift-aud-nzd/",
+   "summary": "RBNZ’s Breman: more hikes likely at coming meetings, possibly into restrictive territory US warns Gulf allies of possible short, intense Iran campaign after midterms: WSJ Oil edges higher after Houthis claim missile…",
+   "published": "2026-10-28T03:18:59.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "15m3s8c",
+   "title": "RBNZ’s Breman: more hikes likely at coming meetings, possibly into restrictive territory",
+   "link": "https://investinglive.com/central-banks/rbnz-s-breman-more-hikes-likely-at-coming-meetings-possibly-into-restrictive-territory/",
+   "summary": "Breman’s guidance partly reverses the dovish read of the hold . Signalling likely hikes at coming meetings, possibly into restrictive territory, should push December pricing back up, support front-end yields and help…",
+   "published": "2026-10-28T02:35:19.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1s1ohks",
+   "title": "Bithumb discloses data leak after internal system breach: Report",
+   "link": "https://cointelegraph.com/news/bithumb-discloses-data-leak-after-internal-system-breach-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The breach impacted its in-house mobile system, used by employees for work and information sharing.",
+   "published": "2026-10-28T02:18:47.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1ufp1va",
+   "title": "US warns Gulf allies of possible short, intense Iran campaign after midterms: WSJ",
+   "link": "https://investinglive.com/commodities/us-warns-gulf-allies-of-possible-short-intense-iran-campaign-after-midterms-wsj/",
+   "summary": "This is a direct upside risk for oil. A renewed US campaign against Iran would revive the threat of Iranian retaliation against Gulf energy facilities, shipping and infrastructure, which Iran has already shown it is…",
+   "published": "2026-10-28T02:12:46.000Z",
    "source": "investingLive",
    "category": "forex"
   },
@@ -28,42 +190,6 @@
    "published": "2026-10-28T00:47:04.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "1bph8kc",
-   "title": "Australian September core inflation (trimmed mean) 3.7% y/y (expected 3.6%)",
-   "link": "https://investinglive.com/news/australian-september-core-inflation-trimmed-mean-3-7-y-y-expected-3-6/",
-   "summary": "Australia CPI, September 2026 / Q3 Quarterly (Q3) CPI q/q: 1.3% vs. 1.3% expected (prior 0.6%) CPI y/y: 3.9% vs. 3.9% expected (prior 3.9%) Trimmed mean q/q: 1.0% vs. 1.0% expected (prior 0.8%) Trimmed mean y/y: 3.7%…",
-   "published": "2026-10-28T00:31:39.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1whebs8",
-   "title": "RBA’s Bullock: oil shock means inflation above August forecasts, Board meets next week",
-   "link": "https://investinglive.com/central-banks/rba-s-bullock-oil-shock-means-inflation-above-august-forecasts-board-meets-next-week/",
-   "summary": "Oil leads the hawkish read. Bullock tied the deterioration in the inflation outlook directly to re-escalating Middle East conflict and higher energy prices, so further gains in crude feed straight into the case for…",
-   "published": "2026-10-28T00:24:31.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "vid25l",
-   "title": "PBOC is expected to set the USD/CNY reference rate at 6.6734 – Reuters estimate",
-   "link": "https://investinglive.com/central-banks/pboc-is-expected-to-set-the-usd-cny-reference-rate-at-6-9-reuters-estimate-3/",
-   "summary": "The People’s Bank of China is due to set the daily USD/CNY reference rate at around 0115 GMT (2115 US Eastern time), a fixing that remains one of the most closely watched signals in Asian foreign exchange markets.…",
-   "published": "2026-10-28T00:23:37.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "wyl4v",
-   "title": "Tax on banks, energy bill help and minimum wage rise - what could be in the Budget?",
-   "link": "https://www.bbc.co.uk/news/articles/c6x2zrjl7kjno?at_medium=RSS&at_campaign=rss",
-   "summary": "Chancellor John Healey will set out his plans for UK taxes on 28 October.",
-   "published": "2026-10-28T00:03:10.000Z",
-   "source": "BBC Business",
-   "category": "economy"
   },
   {
    "id": "kgr6ki",
@@ -84,33 +210,6 @@
    "category": "economy"
   },
   {
-   "id": "rrl9te",
-   "title": "HBM explained: the AI memory behind SK Hynix’s record profits and rising chip prices",
-   "link": "https://investinglive.com/education/hbm-explained-the-ai-memory-behind-sk-hynix-s-record-profits-and-rising-chip-prices/",
-   "summary": "HBM helps explain why the memory upcycle has been so strong. Because it absorbs production capacity, AI demand lifts prices across the whole DRAM market, not just at the high end, which supports earnings at SK Hynix,…",
-   "published": "2026-10-27T23:58:30.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "o0f4f1",
-   "title": "SK Hynix Q3 operating profit beats at 83tn won, unveils 100tn won shareholder payout plan",
-   "link": "https://investinglive.com/stocks/sk-hynix-q3-operating-profit-beats-at-83tn-won-unveils-100tn-won-shareholder-payout-plan/",
-   "summary": "The operating beat and a shareholder return of about 100 trillion won give the stock strong support, and the buyback and cancellation of more than 60 trillion won stands out as a structural tailwind for SK Hynix shares…",
-   "published": "2026-10-27T23:42:49.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1k31g87",
-   "title": "Australia CPI explained: why 2 inflation readings land today and which one the RBA watches",
-   "link": "https://investinglive.com/education/australia-cpi-explained-why-2-inflation-readings-land-today-and-which-one-the-rba-watches/",
-   "summary": "For the Australian dollar and front-end yields, the reaction is likely to hinge on the quarterly trimmed mean, not the headline monthly print. A reading at or above the expected 1.0% in the quarter would run ahead of…",
-   "published": "2026-10-27T23:21:41.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "enxvr4",
    "title": "China's families are now supporting more old people than kids",
    "link": "https://www.bbc.co.uk/news/articles/cr20wzwyzl1qo?at_medium=RSS&at_campaign=rss",
@@ -118,51 +217,6 @@
    "published": "2026-10-27T23:16:08.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "to811s",
-   "title": "BlackRock sees one more Fed hike this year, calls market pricing for more too hawkish",
-   "link": "https://investinglive.com/central-banks/blackrock-sees-one-more-fed-hike-this-year-calls-market-pricing-for-more-too-hawkish/",
-   "summary": "BlackRock’s view supports the front end of the Treasury curve. If the Fed sounds less aggressive than markets fear this week, two-year yields have the most room to fall, which would steepen the curve. Its caution on…",
-   "published": "2026-10-27T23:04:30.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1hn37gp",
-   "title": "MUFG sees RBNZ hiking to 3% today but under-delivering on pricing, flags NZD downside",
-   "link": "https://investinglive.com/central-banks/mufg-sees-rbnz-hiking-to-3-today-but-under-delivering-on-pricing-flags-nzd-downside/",
-   "summary": "MUFG’s call puts the risk squarely on the New Zealand dollar: with a hike almost fully priced, the currency’s G10 outperformance this month depends on the RBNZ endorsing a much steeper path than MUFG expects. Neutral…",
-   "published": "2026-10-27T22:47:46.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "2pc1bn",
-   "title": "All 5 major NZ banks expect RBNZ to hike to 3% today, but split on how far rates will go",
-   "link": "https://investinglive.com/central-banks/all-5-major-nz-banks-expect-rbnz-to-hike-to-3-today-but-split-on-how-far-rates-will-go/",
-   "summary": "A 25bp hike is close to fully priced, so the New Zealand dollar is likely to trade on guidance, not the move itself. Language that leaves the door open to more tightening would back the hawkish paths from ASB and…",
-   "published": "2026-10-27T22:35:05.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1ecjh9d",
-   "title": "Bessent says SEC and CFTC can fill the Clarity Act gap, but agency rules come with an expiry risk",
-   "link": "https://investinglive.com/cryptocurrency/bessent-says-sec-and-cftc-can-fill-the-clarity-act-gap-but-agency-rules-come-with-an-expiry-risk/",
-   "summary": "US Treasury Secretary Scott Bessent says Washington can still deliver crypto rules without Congress. Speaking at Ripple’s Swell conference, he said the Senate’s failure to pass the Clarity Act was disappointing, but…",
-   "published": "2026-10-27T22:24:39.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1qne05m",
-   "title": "UBS sees Brent near $110 by year-end, lifts 2027 forecasts on freight and supply risks",
-   "link": "https://investinglive.com/commodities/ubs-sees-brent-near-110-by-year-end-lifts-2027-forecasts-on-freight-and-supply-risks/",
-   "summary": "UBS is arguing that the oil market’s tightness has moved from production to logistics. Even with Gulf flows close to pre-conflict levels, shipping attacks and scarce tankers keep delivered crude expensive, which means…",
-   "published": "2026-10-27T22:10:29.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "1xx0ofu",
@@ -210,15 +264,6 @@
    "category": "crypto"
   },
   {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-10-27T19:36:13.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "124aoty",
    "title": "CFTC sues Utah to block action against prediction markets",
    "link": "https://cointelegraph.com/news/cftc-lawsuit-utah-action-prediction-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -237,24 +282,6 @@
    "category": "crypto"
   },
   {
-   "id": "vj29bi",
-   "title": "Janus Henderson, Centrifuge launch tokenized Nasdaq-100 fund on Stellar",
-   "link": "https://cointelegraph.com/news/janus-henderson-centrifuge-launch-tokenized-nasdaq-100-fund-on-stellar?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The blockchain-based fund offers eligible non-US investors exposure to the Nasdaq-100 as Janus Henderson expands its institutional tokenization business.",
-   "published": "2026-10-27T16:37:15.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "13992zn",
-   "title": "USDC overtakes USDT in euro stablecoin trading as EU rules reshape market: Kaiko",
-   "link": "https://cointelegraph.com/news/usdc-overtakes-usdt-euro-stablecoin-trading-mica-kaiko?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "USDC’s share of euro stablecoin trading has climbed to 56% since January 2024, with deeper liquidity as exchanges restrict USDT under MiCA.",
-   "published": "2026-10-27T15:59:58.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "vxzsv7",
    "title": "Minimum wage set to rise but 18-20 year-olds will not get bigger increase",
    "link": "https://www.bbc.co.uk/news/articles/c6d93gq1xdgno?at_medium=RSS&at_campaign=rss",
@@ -264,15 +291,6 @@
    "category": "economy"
   },
   {
-   "id": "10lej5g",
-   "title": "Crypto could outperform AI stocks: Wall Street veteran Jordi Visser",
-   "link": "https://cointelegraph.com/magazine/crypto-could-outperform-ai-stocks-wall-street-veteran-jordi-visser?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Former Morgan Stanley and Weiss executive Jordi Visser says AI agents are boosting demand for crypto as he expands his holdings beyond Bitcoin, Ether and Solana.",
-   "published": "2026-10-27T13:30:00.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1ogiewa",
    "title": "Mbappé sorry for 'ill-judged' Mao remark after backlash in China",
    "link": "https://www.bbc.co.uk/news/articles/cv62yg0erp8zo?at_medium=RSS&at_campaign=rss",
@@ -280,15 +298,6 @@
    "published": "2026-10-27T13:25:54.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "1frredg",
-   "title": "Hayes details FLOP’s AI compute derivatives vision after selling his altcoins",
-   "link": "https://cointelegraph.com/news/hayes-flop-ai-compute-vision-selling-altcoin?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Arthur Hayes revealed the derivatives market design for Flop Network and how he expects its native token could transform AI compute into a tradable commodity.",
-   "published": "2026-10-27T13:01:10.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1z0hmjx",
@@ -359,15 +368,6 @@
    "link": "https://www.bbc.co.uk/news/articles/cwn8d7g29vd9o?at_medium=RSS&at_campaign=rss",
    "summary": "Anthropic’s IPO prospectus is 355 pages and full of never before disclosed company information.",
    "published": "2026-10-26T19:57:23.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "1ut2fz4",
-   "title": "Anthropic warns of 'catastrophic risk' to humankind ahead of blockbuster share listing",
-   "link": "https://www.bbc.co.uk/news/articles/cq398p1wd1evo?at_medium=RSS&at_campaign=rss",
-   "summary": "The company will be the first true artificial intelligence company to go public as tech firms continue to invest heavily in AI.",
-   "published": "2026-10-26T16:27:17.000Z",
    "source": "BBC Business",
    "category": "economy"
   },
@@ -522,24 +522,6 @@
    "summary": "Lorenzo Salgado Araujo was a house framer before he was killed by ICE agents. Countless other Latino builders in Texas live in fear of a similar fate Every morning long before dawn, while America sleeps, legions of…",
    "published": "2026-10-21T10:00:02.000Z",
    "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "1dob4g2",
-   "title": "Piero Cipollone: Pontes and Appia: unlocking opportunities for banks",
-   "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261021_1~d190f2c349.en.pdf",
-   "summary": "",
-   "published": "2026-10-21T08:00:00.000Z",
-   "source": "ECB",
-   "category": "economy"
-  },
-  {
-   "id": "k42jfn",
-   "title": "Philip R. Lane: Euro liquidity lines and the international monetary system",
-   "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261021~401d6c4b70.en.html",
-   "summary": "",
-   "published": "2026-10-21T04:15:00.000Z",
-   "source": "ECB",
    "category": "economy"
   }
  ]
