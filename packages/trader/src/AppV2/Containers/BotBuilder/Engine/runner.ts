@@ -19,6 +19,7 @@ import type {
     TTradeRequest,
     TTransaction,
     TValue,
+    TWatchdogOptions,
 } from './types';
 
 type TPhase = 'idle' | 'starting' | 'preparing' | 'waiting' | 'buying' | 'in_contract' | 'restarting';
@@ -29,6 +30,8 @@ export type TRunnerOptions = {
     currency: string;
     getBalance: () => number;
     limits?: TRunLimits;
+    /** How long to wait on the server before acting. Leave unset for the live defaults. */
+    watchdog?: TWatchdogOptions;
     onLog: (level: TLevel, message: string) => void;
     onStats: (stats: TBotStats) => void;
     onStatus: (status: TRunStatus) => void;
@@ -58,6 +61,15 @@ type TContractInfo = {
 
 const MAX_TIMERS = 100;
 const MAX_CONSECUTIVE_TRADE_ERRORS = 5;
+
+/** Live defaults: a purchase answers in well under a second, an open contract updates about every tick. */
+const DEFAULT_WATCHDOG: Required<TWatchdogOptions> = {
+    request_timeout_ms: 30_000,
+    contract_stall_ms: 60_000,
+    max_resubscribes: 3,
+};
+
+type TGuard = 'proposal' | 'buy' | 'contract';
 
 const emptyStats = (): TBotStats => ({ runs: 0, won: 0, lost: 0, total_profit: 0, total_stake: 0, total_payout: 0 });
 
@@ -125,6 +137,16 @@ export class BotRunner {
     private proposal_sub: TSubscription | null = null;
     private contract_sub: TSubscription | null = null;
     private timers = new Set<ReturnType<typeof setTimeout>>();
+
+    /** Watchdog timers. Kept apart from `timers` (the bot's own timeout blocks) so they never change what "stalled" means. */
+    private guards: Record<TGuard, ReturnType<typeof setTimeout> | null> = {
+        proposal: null,
+        buy: null,
+        contract: null,
+    };
+    private buy_token = 0;
+    private proposal_token = 0;
+    private resubscribes = 0;
 
     private readonly options: TRunnerOptions;
 
@@ -211,6 +233,26 @@ export class BotRunner {
         this.teardown();
     }
 
+    private watchdogSettings = (): Required<TWatchdogOptions> => ({ ...DEFAULT_WATCHDOG, ...this.options.watchdog });
+
+    private armGuard(name: TGuard, ms: number, onFire: () => void) {
+        this.disarmGuard(name);
+        this.guards[name] = setTimeout(() => {
+            this.guards[name] = null;
+            onFire();
+        }, ms);
+    }
+
+    private disarmGuard(name: TGuard) {
+        const timer = this.guards[name];
+        if (timer !== null) clearTimeout(timer);
+        this.guards[name] = null;
+    }
+
+    private disarmAllGuards() {
+        (Object.keys(this.guards) as TGuard[]).forEach(name => this.disarmGuard(name));
+    }
+
     private clearTimers() {
         this.timers.forEach(timer => clearTimeout(timer));
         this.timers.clear();
@@ -224,6 +266,7 @@ export class BotRunner {
         this.proposal_sub = null;
         this.contract_sub = null;
         this.clearTimers();
+        this.disarmAllGuards();
         this.emitLiveContract(false);
         this.phase = 'idle';
         this.status = 'stopped';
@@ -436,6 +479,16 @@ export class BotRunner {
             this.fail(localize('The stake must be greater than zero.'));
             return null;
         }
+        const max_stake = this.options.limits?.max_stake;
+        if (max_stake && amount > max_stake) {
+            this.fail(
+                localize(
+                    'The bot tried to stake {{stake}} {{currency}}, which is above your maximum stake of {{max}} {{currency}}. No trade was placed.',
+                    { stake: amount, max: max_stake, currency }
+                )
+            );
+            return null;
+        }
         if (!Number.isFinite(duration) || duration < 1) {
             this.fail(localize('The duration must be at least 1.'));
             return null;
@@ -482,9 +535,16 @@ export class BotRunner {
 
         this.phase = 'buying';
         this.contract_type = contract_type;
+        this.proposal_token += 1;
+        const token = this.proposal_token;
+        // armed first: a response may arrive before `subscribeOnce` returns, and its handler must find the guard
+        this.armGuard('proposal', this.watchdogSettings().request_timeout_ms, () => this.onProposalTimeout());
         this.proposal_sub = subscribeOnce(
             cb => api.subscribeProposal(request, cb),
             response => {
+                // an answer to a request the bot already gave up on must never lead to a purchase
+                if (token !== this.proposal_token) return;
+                this.disarmGuard('proposal');
                 this.proposal_sub = null;
                 if (this.status !== 'running') {
                     if (this.status === 'stopping' && !this.buy_in_flight) this.teardown();
@@ -494,16 +554,47 @@ export class BotRunner {
                     this.failTrade(errorMessage(response));
                     return;
                 }
-                this.buy(response.proposal.id, Number(response.proposal.ask_price));
+                const ask_price = Number(response.proposal.ask_price);
+                // the stake already passed the cap; this also catches a price the server raised above it
+                const { max_stake } = this.options.limits ?? {};
+                if (max_stake && ask_price > max_stake) {
+                    this.fail(
+                        localize(
+                            'The server priced this trade at {{price}} {{currency}}, above your maximum stake of {{max}} {{currency}}. No trade was placed.',
+                            { price: ask_price, max: max_stake, currency }
+                        )
+                    );
+                    return;
+                }
+                this.buy(response.proposal.id, ask_price);
             }
+        );
+    }
+
+    /** No price came back. Nothing has been bought, so the trade is skipped or the bot stops, as for any failed trade. */
+    private onProposalTimeout() {
+        this.proposal_token += 1;
+        this.proposal_sub?.unsubscribe();
+        this.proposal_sub = null;
+        if (this.status !== 'running' || this.phase !== 'buying') return;
+        this.failTrade(
+            localize('The server did not send a price in time. Check your connection. No trade was placed.')
         );
     }
 
     private buy(proposal_id: string, price: number) {
         this.buy_in_flight = true;
+        this.buy_token += 1;
+        const token = this.buy_token;
+        this.armGuard('buy', this.watchdogSettings().request_timeout_ms, () => this.onBuyTimeout(token));
         this.options.api
             .buy(proposal_id, price)
             .then(response => {
+                if (token !== this.buy_token) {
+                    this.onLateBuy(response);
+                    return;
+                }
+                this.disarmGuard('buy');
                 this.buy_in_flight = false;
                 if (response?.error || !response?.buy) {
                     this.failTrade(errorMessage(response));
@@ -537,11 +628,97 @@ export class BotRunner {
                 this.contract_sub = this.options.api.subscribeOpenContract(this.contract_id, update =>
                     this.onContract(update)
                 );
+                this.resubscribes = 0;
+                this.armContractGuard();
             })
             .catch(error => {
+                if (token !== this.buy_token) return;
+                this.disarmGuard('buy');
                 this.buy_in_flight = false;
                 this.failTrade(error?.error?.message ?? error?.message ?? errorMessage(undefined));
             });
+    }
+
+    /**
+     * The purchase was sent but the server never answered. It may or may not have gone through, so the bot stops and
+     * says so; it does not buy again. A late answer is reported by `onLateBuy`.
+     */
+    private onBuyTimeout(token: number) {
+        if (token !== this.buy_token || !this.buy_in_flight) return;
+        this.buy_token += 1; // whatever arrives later is a late answer
+        this.buy_in_flight = false;
+        this.fail(
+            localize(
+                'The server did not confirm the purchase in time. The contract may still have been bought: check Positions before running the bot again.'
+            )
+        );
+    }
+
+    /** The answer to a purchase the bot had already given up on. The contract is not followed, so say where it is. */
+    private onLateBuy(response: TApiResponse) {
+        const id = response?.buy?.contract_id;
+        if (id === undefined) return;
+        this.options.onLog(
+            'warn',
+            localize(
+                'Contract {{id}} was bought after the bot gave up waiting for it. The bot is not following it: check Positions.',
+                { id }
+            )
+        );
+    }
+
+    private armContractGuard() {
+        this.armGuard('contract', this.watchdogSettings().contract_stall_ms, () => this.onContractStalled());
+    }
+
+    /**
+     * An open contract has sent no update for a while, as when the socket dropped. Ask the server for it again, a few
+     * times. If it still says nothing, stop waiting: the bot stops and names the contract so the person can look.
+     */
+    private onContractStalled() {
+        const id = this.contract_id;
+        if (this.phase !== 'in_contract' || id === null) return;
+        const { contract_stall_ms, max_resubscribes } = this.watchdogSettings();
+
+        if (this.resubscribes >= max_resubscribes) {
+            this.abandonContract(id);
+            return;
+        }
+        this.resubscribes += 1;
+        this.options.onLog(
+            'warn',
+            localize(
+                'No update on contract {{id}} for {{seconds}} seconds. Asking the server again (try {{attempt}} of {{max}}).',
+                {
+                    id,
+                    seconds: Math.round(contract_stall_ms / 1000),
+                    attempt: this.resubscribes,
+                    max: max_resubscribes,
+                }
+            )
+        );
+        this.contract_sub?.unsubscribe();
+        this.contract_sub = null;
+        try {
+            this.contract_sub = this.options.api.subscribeOpenContract(id, update => this.onContract(update));
+        } catch {
+            // the socket may be closed; the next stall check tries again
+        }
+        this.armContractGuard();
+    }
+
+    /** Gives up on a contract the server will not report on. It may still be open, so it is left as "Open" in the list. */
+    private abandonContract(id: number) {
+        this.options.onLog(
+            'error',
+            localize(
+                'Lost contact with contract {{id}}. It may still be open and the bot does not know its result. Check Positions. The bot has stopped.',
+                { id }
+            )
+        );
+        this.last_contract_id = id;
+        this.contract_id = null;
+        this.teardown();
     }
 
     private emitTransaction(status: TTransaction['status']) {
@@ -601,6 +778,10 @@ export class BotRunner {
         const contract = response?.proposal_open_contract;
         if (!contract || Number(contract.contract_id) !== this.contract_id) return;
 
+        // the server is talking about this contract, so the connection is alive
+        this.resubscribes = 0;
+        this.armContractGuard();
+
         this.contract.profit = Number(contract.profit ?? 0);
         this.contract.sell_price = Number(contract.bid_price ?? contract.sell_price ?? 0);
         this.contract.current_value = Number(contract.bid_price ?? contract.sell_price ?? 0);
@@ -638,6 +819,7 @@ export class BotRunner {
     }
 
     private finishContract(contract: TApiResponse) {
+        this.disarmGuard('contract');
         this.contract_sub?.unsubscribe();
         this.contract_sub = null;
         // no contract is open any more, so a stop from here on can finish immediately

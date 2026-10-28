@@ -43,7 +43,7 @@ const MAX_TRANSACTIONS = 100;
 
 const EMPTY_STATS: TBotStats = { runs: 0, won: 0, lost: 0, total_profit: 0, total_stake: 0, total_payout: 0 };
 
-const EMPTY_LIMITS: TRunLimitsInput = { max_trades: '', max_profit: '', max_loss: '' };
+const EMPTY_LIMITS: TRunLimitsInput = { max_trades: '', max_profit: '', max_loss: '', max_stake: '' };
 
 /**
  * The bot's "prompt for number/text" blocks. A browser prompt is the simplest thing that works and is what Deriv Bot
@@ -206,6 +206,7 @@ const BotBuilder = observer(() => {
             getBalance: () => Number(client.balance) || 0,
             limits: {
                 max_trades: parseLimit(limits.max_trades),
+                max_stake: parseLimit(limits.max_stake),
                 max_loss,
                 max_profit,
                 // with a take profit or stop loss the bot keeps trading until one of them is hit
@@ -232,6 +233,12 @@ const BotBuilder = observer(() => {
             // a real account needs a loss limit so a bad bot cannot keep trading
             if (!parseLimit(limits.max_loss)) {
                 log('error', localize('Set a "Stop loss" limit before running a bot on a real account.'));
+                setTab('summary');
+                return;
+            }
+            // and a stake cap, so a growing stake or a typo in a block cannot size a trade past what was chosen
+            if (!parseLimit(limits.max_stake)) {
+                log('error', localize('Set a "Max stake per trade" limit before running a bot on a real account.'));
                 setTab('summary');
                 return;
             }
@@ -351,6 +358,18 @@ const BotBuilder = observer(() => {
 
     return (
         <main className='bot-builder' data-testid='dt_bot_builder'>
+            {is_active && client.is_logged_in && !client.is_virtual && (
+                <p className='bot-builder__real-banner' role='alert' data-testid='dt_bot_builder_real_banner'>
+                    {run_status === 'stopping'
+                        ? localize(
+                              'REAL MONEY: the bot is stopping on account {{loginid}}. An open contract is still running.',
+                              { loginid: client.loginid }
+                          )
+                        : localize('REAL MONEY: this bot is trading on account {{loginid}}. Press Stop to end it.', {
+                              loginid: client.loginid,
+                          })}
+                </p>
+            )}
             <div className='bot-builder__body'>
                 <section className='bot-builder__stage'>
                     <div className='bot-builder__toolbar' role='toolbar' aria-label={localize('Bot builder actions')}>

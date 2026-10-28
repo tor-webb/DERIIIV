@@ -269,7 +269,19 @@
         }
     }
 
-    /* ---- real money confirmation ---- */
+    /* ---- real money: confirmation and the strip shown while a bot is trading ---- */
+
+    &__real-banner {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin: 0;
+        padding: 0.8rem 1.6rem;
+        background-color: #c0392b;
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
 
     &__confirm {
         display: flex;
@@ -531,7 +543,7 @@
 
     &__limits {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 0.8rem;
 
         label {

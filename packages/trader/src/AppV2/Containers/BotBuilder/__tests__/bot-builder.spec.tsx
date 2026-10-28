@@ -142,10 +142,28 @@ describe('BotBuilder', () => {
             expect(screen.getByText(/Set a "Stop loss" limit/)).toBeInTheDocument();
         });
 
+        it('asks for a stake cap before trading real money', () => {
+            renderPage(real);
+            fireEvent.change(screen.getByLabelText('Stop loss'), { target: { value: '10' } });
+            fireEvent.click(screen.getByText('Run'));
+            expect(mockStart).not.toHaveBeenCalled();
+            expect(screen.queryByTestId('dt_bot_builder_confirm')).not.toBeInTheDocument();
+            fireEvent.click(screen.getByText('Journal'));
+            expect(screen.getByText(/Set a "Max stake per trade" limit/)).toBeInTheDocument();
+        });
+
+        it('does not ask for a stake cap on a demo account', () => {
+            renderPage(demo);
+            fireEvent.click(screen.getByText('Run'));
+            expect(mockStart).toHaveBeenCalledTimes(1);
+            expect(mockRunnerOptions.mock.calls[0][0].limits.max_stake).toBeUndefined();
+        });
+
         it('requires explicit confirmation before trading real money', () => {
             renderPage(real);
             expect(screen.getByTestId('dt_bot_builder_account')).toHaveTextContent('Real account · CR1');
             fireEvent.change(screen.getByLabelText('Stop loss'), { target: { value: '10' } });
+            fireEvent.change(screen.getByLabelText('Max stake per trade'), { target: { value: '2' } });
             fireEvent.click(screen.getByText('Run'));
             expect(mockStart).not.toHaveBeenCalled();
             expect(screen.getByTestId('dt_bot_builder_confirm')).toHaveTextContent('real money on account CR1');
@@ -173,9 +191,11 @@ describe('BotBuilder', () => {
             renderPage(demo);
             fireEvent.change(screen.getByLabelText('Stop after trades'), { target: { value: '5' } });
             fireEvent.change(screen.getByLabelText('Stop loss'), { target: { value: '20' } });
+            fireEvent.change(screen.getByLabelText('Max stake per trade'), { target: { value: '3.5' } });
             fireEvent.click(screen.getByText('Run'));
             expect(mockRunnerOptions.mock.calls[0][0].limits).toEqual({
                 max_trades: 5,
+                max_stake: 3.5,
                 max_loss: 20,
                 max_profit: undefined,
                 keep_running: true,
@@ -184,6 +204,42 @@ describe('BotBuilder', () => {
             act(() => mockRunnerOptions.mock.calls[0][0].onStatus('running'));
             fireEvent.click(screen.getByText('Stop'));
             expect(mockStop).toHaveBeenCalled();
+        });
+
+        describe('real money banner', () => {
+            const startReal = () => {
+                renderPage(real);
+                fireEvent.change(screen.getByLabelText('Stop loss'), { target: { value: '10' } });
+                fireEvent.change(screen.getByLabelText('Max stake per trade'), { target: { value: '2' } });
+                fireEvent.click(screen.getByText('Run'));
+                fireEvent.click(screen.getByText('Run with real money'));
+            };
+
+            it('is hidden until a bot is running', () => {
+                renderPage(real);
+                expect(screen.queryByTestId('dt_bot_builder_real_banner')).not.toBeInTheDocument();
+            });
+
+            it('shows while a bot trades on a real account, and goes when it stops', () => {
+                startReal();
+                act(() => mockRunnerOptions.mock.calls[0][0].onStatus('running'));
+                expect(screen.getByTestId('dt_bot_builder_real_banner')).toHaveTextContent(
+                    'REAL MONEY: this bot is trading on account CR1'
+                );
+
+                act(() => mockRunnerOptions.mock.calls[0][0].onStatus('stopping'));
+                expect(screen.getByTestId('dt_bot_builder_real_banner')).toHaveTextContent('is stopping');
+
+                act(() => mockRunnerOptions.mock.calls[0][0].onStatus('stopped'));
+                expect(screen.queryByTestId('dt_bot_builder_real_banner')).not.toBeInTheDocument();
+            });
+
+            it('never shows on a demo account', () => {
+                renderPage(demo);
+                fireEvent.click(screen.getByText('Run'));
+                act(() => mockRunnerOptions.mock.calls[0][0].onStatus('running'));
+                expect(screen.queryByTestId('dt_bot_builder_real_banner')).not.toBeInTheDocument();
+            });
         });
 
         it('shows the statistics reported by the runner', () => {

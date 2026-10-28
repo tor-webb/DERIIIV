@@ -185,10 +185,23 @@ const topics = (): TTopic[] => [
     },
     {
         id: 'bot_limits',
-        keywords: ['take profit', 'stop loss', 'limit', 'limits', 'stop after', 'stop automatically', 'protect'],
+        keywords: [
+            'take profit',
+            'stop loss',
+            'limit',
+            'limits',
+            'stop after',
+            'stop automatically',
+            'protect',
+            'max stake',
+            'maximum stake',
+            'stake cap',
+            'lost contact',
+            'connection drops',
+        ],
         answer: () =>
             localize(
-                'In the Bot Builder run panel (Summary tab) you can set a Take profit, a Stop loss and Stop after trades. Once a limit is reached the bot stops by itself. Always set a stop loss, especially on a real account.'
+                'In the Bot Builder run panel (Summary tab) you can set a Take profit, a Stop loss, a Max stake per trade and Stop after trades. Once a limit is reached the bot stops by itself, and a trade above the max stake is never placed. On a real account the Stop loss and Max stake are required, and a red banner shows while the bot is trading. If the connection drops and the server stops answering, the bot asks again a few times, then stops and tells you which contract to check in Positions. Always set a stop loss, especially on a real account.'
             ),
         actions: () => [go(localize('Open Bot Builder'), routes.bot_builder)],
     },
