@@ -23,8 +23,14 @@ jest.mock('Stores/useTraderStores', () => ({
     }),
 }));
 
-let mockState: { rows: TMarketRow[]; is_loading: boolean; updated_at: number | null; retry: jest.Mock };
-jest.mock('../use-markets', () => ({ useMarkets: () => mockState }));
+let mockState: { rows: TMarketRow[]; is_loading: boolean; updated_at: number | null; retry: jest.Mock },
+    mockUseMarketsOptions: unknown;
+jest.mock('../use-markets', () => ({
+    useMarkets: (options: unknown) => {
+        mockUseMarketsOptions = options;
+        return mockState;
+    },
+}));
 
 const row = (overrides: Partial<TMarketRow> & { symbol: string }): TMarketRow => ({
     name: overrides.symbol,
@@ -36,6 +42,7 @@ const row = (overrides: Partial<TMarketRow> & { symbol: string }): TMarketRow =>
     range_pct: 0.5,
     volatility: 'medium',
     is_closed: false,
+    closes: [99, 101, 100],
     ...overrides,
 });
 
@@ -279,5 +286,119 @@ describe('<Markets />', () => {
     it('reminds the reader that volatility is not a forecast', () => {
         renderPage();
         expect(screen.getByText(/not which way it will go next/)).toBeInTheDocument();
+    });
+});
+
+describe('<Markets /> search, window, trend and charts', () => {
+    beforeEach(() => {
+        jest.clearAllMocks();
+        localStorage.clear();
+        mockStoreSymbol = 'R_100';
+        mockOnChange.mockResolvedValue(undefined);
+        mockState = { rows: ROWS, is_loading: false, updated_at: Date.now(), retry: jest.fn() };
+    });
+
+    const shownSymbols = () =>
+        within(screen.getByTestId('dt_markets_list'))
+            .getAllByTestId(/dt_markets_row_/)
+            .map(item => item.getAttribute('data-testid'));
+
+    it('filters the list as the reader types, by name or symbol, ignoring case and slashes', () => {
+        renderPage();
+        const box = screen.getByTestId('dt_markets_search');
+        fireEvent.change(box, { target: { value: 'eur/usd' } });
+        expect(shownSymbols()).toEqual(['dt_markets_row_frxEURUSD']);
+        fireEvent.change(box, { target: { value: 'VOLATILITY' } });
+        expect(shownSymbols()).toEqual(['dt_markets_row_R_10', 'dt_markets_row_R_100']);
+        fireEvent.change(box, { target: { value: 'r_100' } });
+        expect(shownSymbols()).toEqual(['dt_markets_row_R_100']);
+    });
+
+    it('works together with the Derived and Forex pills', () => {
+        renderPage();
+        fireEvent.click(screen.getByTestId('dt_markets_filter_forex'));
+        fireEvent.change(screen.getByTestId('dt_markets_search'), { target: { value: 'usd' } });
+        expect(shownSymbols()).toEqual(['dt_markets_row_frxEURUSD', 'dt_markets_row_frxGBPUSD']);
+        fireEvent.change(screen.getByTestId('dt_markets_search'), { target: { value: 'r_10' } });
+        expect(screen.getByTestId('dt_markets_empty')).toBeInTheDocument();
+    });
+
+    it('says which search found nothing, and brings the list back when the box is cleared', () => {
+        renderPage();
+        const box = screen.getByTestId('dt_markets_search');
+        fireEvent.change(box, { target: { value: 'zzz' } });
+        expect(screen.getByTestId('dt_markets_empty')).toHaveTextContent('No market matches "zzz".');
+        fireEvent.change(box, { target: { value: '' } });
+        expect(shownSymbols()).toHaveLength(4);
+    });
+
+    it('starts on 1h and asks for another window when a pill is pressed', () => {
+        renderPage();
+        expect(mockUseMarketsOptions).toEqual({ window_id: '1h' });
+        expect(screen.getByTestId('dt_markets_window_1h')).toHaveAttribute('aria-pressed', 'true');
+        fireEvent.click(screen.getByTestId('dt_markets_window_4h'));
+        expect(mockUseMarketsOptions).toEqual({ window_id: '4h' });
+        expect(screen.getByTestId('dt_markets_window_4h')).toHaveAttribute('aria-pressed', 'true');
+        expect(screen.getByTestId('dt_markets_window_1h')).toHaveAttribute('aria-pressed', 'false');
+        fireEvent.click(screen.getByTestId('dt_markets_window_1d'));
+        expect(mockUseMarketsOptions).toEqual({ window_id: '1d' });
+    });
+
+    it('relabels the columns and the movers from the window', () => {
+        renderPage();
+        expect(screen.getByText('1h change')).toBeInTheDocument();
+        expect(screen.getByText('Top gainers (1h)')).toBeInTheDocument();
+        fireEvent.click(screen.getByTestId('dt_markets_window_1d'));
+        expect(screen.getByText('1d change')).toBeInTheDocument();
+        expect(screen.getByText('1d range')).toBeInTheDocument();
+        expect(screen.getByText('Top losers (1d)')).toBeInTheDocument();
+        expect(screen.queryByText('1h change')).not.toBeInTheDocument();
+    });
+
+    it('draws a trend line for a market with prices, coloured by direction, and a dash when it has none', () => {
+        mockState = {
+            ...mockState,
+            rows: [
+                row({ symbol: 'R_10', change_pct: 1, closes: [1, 2, 3] }),
+                row({ symbol: 'R_25', change_pct: -1, closes: [3, 2, 1] }),
+                row({ symbol: 'R_50', change_pct: null, price: null, closes: [] }),
+            ],
+        };
+        renderPage();
+        const up = within(screen.getByTestId('dt_markets_row_R_10')).getByTestId('dt_markets_spark');
+        const down = within(screen.getByTestId('dt_markets_row_R_25')).getByTestId('dt_markets_spark');
+        expect(up).toHaveClass('markets__spark--up');
+        expect(down).toHaveClass('markets__spark--down');
+        expect(within(up).getByTestId('dt_markets_spark_line')).toHaveAttribute('points');
+        expect(
+            within(screen.getByTestId('dt_markets_row_R_50')).queryByTestId('dt_markets_spark')
+        ).not.toBeInTheDocument();
+    });
+
+    it('opens Charts for the market, switching the symbol first', async () => {
+        renderPage();
+        fireEvent.click(screen.getByTestId('dt_markets_chart_frxEURUSD'));
+        await waitFor(() => expect(screen.getByTestId('dt_location')).toHaveTextContent('/charts?symbol=frxEURUSD'));
+        expect(mockOnChange).toHaveBeenCalledWith({ target: { name: 'symbol', value: 'frxEURUSD' } });
+        expect(mockProcessContracts).toHaveBeenCalledTimes(1);
+    });
+
+    it('does not switch the symbol again when Charts is opened for the current market', async () => {
+        renderPage();
+        fireEvent.click(screen.getByTestId('dt_markets_chart_R_100'));
+        await waitFor(() => expect(screen.getByTestId('dt_location')).toHaveTextContent('/charts?symbol=R_100'));
+        expect(mockOnChange).not.toHaveBeenCalled();
+    });
+
+    it('still opens Charts when switching the symbol fails', async () => {
+        mockOnChange.mockRejectedValue(new Error('no'));
+        renderPage();
+        fireEvent.click(screen.getByTestId('dt_markets_chart_frxEURUSD'));
+        await waitFor(() => expect(screen.getByTestId('dt_location')).toHaveTextContent('/charts?symbol=frxEURUSD'));
+    });
+
+    it('turns the Charts button off for an unavailable market', () => {
+        renderPage();
+        expect(screen.getByTestId('dt_markets_chart_frxGBPUSD')).toBeDisabled();
     });
 });

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { WS } from '@deriv/shared';
 
-import { MARKET_SYMBOLS, WINDOW_MINUTES } from './markets-config';
+import { DEFAULT_WINDOW, getWindow, MARKET_SYMBOLS, TWindowId } from './markets-config';
 import {
     applyTick,
     buildRow,
@@ -19,25 +19,42 @@ const FLUSH_MS = 1000;
 /** The "closed" check depends on the clock, so it is re-run now and then even when no tick arrives. */
 const CLOCK_EVERY_FLUSHES = 30;
 
-const loadHistory = async (symbol: string) =>
-    parseCandles(
+const loadHistory = async (symbol: string, window_id: TWindowId) => {
+    const { count, granularity } = getWindow(window_id);
+    return parseCandles(
         await WS.getTicksHistory({
             ticks_history: symbol,
             adjust_start_time: 1,
-            count: WINDOW_MINUTES,
+            count,
             end: 'latest',
             style: 'candles',
-            granularity: 60,
+            granularity,
         })
     );
+};
 
 const nowSeconds = () => Math.floor(Date.now() / 1000);
 
+type TUseMarketsOptions = {
+    /** Only load these markets (the Dashboard watchlist). Leave out for every listed market. */
+    symbols?: string[];
+    window_id?: TWindowId;
+};
+
 /**
- * Loads the last hour of one-minute candles for every market, then follows live ticks. Ticks are gathered as they
- * arrive and shown once a second, so twenty busy markets do not cause twenty re-renders a second.
+ * Loads the chosen window of candles (the last hour by default) for every market asked for, then follows live ticks.
+ * Ticks are gathered as they arrive and shown once a second, so twenty busy markets do not cause twenty re-renders
+ * a second. Changing the window or the symbols starts the load again.
  */
-export const useMarkets = () => {
+export const useMarkets = ({ symbols, window_id = DEFAULT_WINDOW }: TUseMarketsOptions = {}) => {
+    const symbols_key = symbols ? symbols.join(',') : null;
+    const markets = React.useMemo(
+        () =>
+            symbols_key === null
+                ? MARKET_SYMBOLS
+                : MARKET_SYMBOLS.filter(({ symbol }) => symbols_key.split(',').includes(symbol)),
+        [symbols_key]
+    );
     const [entries, setEntries] = React.useState<Record<string, TMarketEntry>>({});
     const [now, setNow] = React.useState(nowSeconds);
     const [updated_at, setUpdatedAt] = React.useState<number | null>(null);
@@ -82,15 +99,15 @@ export const useMarkets = () => {
         };
 
         const run = async () => {
-            for (let start = 0; start < MARKET_SYMBOLS.length; start += BATCH_SIZE) {
-                const batch = MARKET_SYMBOLS.slice(start, start + BATCH_SIZE);
+            for (let start = 0; start < markets.length; start += BATCH_SIZE) {
+                const batch = markets.slice(start, start + BATCH_SIZE);
                 // eslint-disable-next-line no-await-in-loop
                 await Promise.all(
                     batch.map(async ({ symbol }) => {
                         try {
-                            const parsed = await loadHistory(symbol);
+                            const parsed = await loadHistory(symbol, window_id);
                             live[symbol] = parsed
-                                ? entryFromCandles(parsed.candles, parsed.pip_size)
+                                ? entryFromCandles(parsed.candles, parsed.pip_size, getWindow(window_id).granularity)
                                 : { status: 'unavailable' };
                         } catch {
                             live[symbol] = { status: 'unavailable' };
@@ -101,9 +118,7 @@ export const useMarkets = () => {
                 is_dirty = true;
                 flush();
             }
-            MARKET_SYMBOLS.filter(({ symbol }) => live[symbol]?.status === 'ready').forEach(({ symbol }) =>
-                follow(symbol)
-            );
+            markets.filter(({ symbol }) => live[symbol]?.status === 'ready').forEach(({ symbol }) => follow(symbol));
         };
         run();
 
@@ -118,11 +133,11 @@ export const useMarkets = () => {
                 }
             });
         };
-    }, [attempt]);
+    }, [attempt, markets, window_id]);
 
     const rows: TMarketRow[] = React.useMemo(
-        () => withVolatilityLevels(MARKET_SYMBOLS.map(market => buildRow(market, entries[market.symbol], now))),
-        [entries, now]
+        () => withVolatilityLevels(markets.map(market => buildRow(market, entries[market.symbol], now))),
+        [markets, entries, now]
     );
 
     return {

@@ -134,4 +134,81 @@ describe('useMarkets', () => {
         await settle();
         expect(mockHistory).toHaveBeenCalledTimes(MARKET_SYMBOLS.length);
     });
+
+    it('asks for 5-minute candles for the 4h window and hourly candles for 1d', async () => {
+        mockHistory.mockResolvedValue(history(10, 11));
+        const { unmount } = renderHook(() => useMarkets({ window_id: '4h' }));
+        await settle();
+        expect(mockHistory.mock.calls[0][0]).toMatchObject({ granularity: 300, count: 48, style: 'candles' });
+        unmount();
+
+        mockHistory.mockClear();
+        renderHook(() => useMarkets({ window_id: '1d' }));
+        await settle();
+        expect(mockHistory.mock.calls[0][0]).toMatchObject({ granularity: 3600, count: 24, style: 'candles' });
+    });
+
+    it('loads again, and stops the old ticks, when the window changes', async () => {
+        const unsubscribe = jest.fn();
+        mockSubscribe.mockReturnValue({ unsubscribe });
+        mockHistory.mockResolvedValue(history(10, 11));
+        const { rerender } = renderHook(({ window_id }) => useMarkets({ window_id }), {
+            initialProps: { window_id: '1h' as '1h' | '4h' },
+        });
+        await settle();
+        mockHistory.mockClear();
+        rerender({ window_id: '4h' });
+        await settle();
+        expect(unsubscribe).toHaveBeenCalledTimes(MARKET_SYMBOLS.length);
+        expect(mockHistory).toHaveBeenCalledTimes(MARKET_SYMBOLS.length);
+        expect(mockHistory.mock.calls[0][0]).toMatchObject({ granularity: 300 });
+    });
+
+    it('does not reload when it is re-rendered with the same window', async () => {
+        mockHistory.mockResolvedValue(history(10, 11));
+        const { rerender } = renderHook(() => useMarkets({ window_id: '1h' }));
+        await settle();
+        mockHistory.mockClear();
+        rerender();
+        await settle();
+        expect(mockHistory).not.toHaveBeenCalled();
+    });
+
+    it('loads only the markets asked for, and follows only those', async () => {
+        mockHistory.mockResolvedValue(history(10, 11));
+        const { result } = renderHook(() => useMarkets({ symbols: ['R_10', 'frxEURUSD'] }));
+        await settle();
+        expect(mockHistory.mock.calls.map(call => call[0].ticks_history).sort()).toEqual(['R_10', 'frxEURUSD']);
+        expect(mockSubscribe.mock.calls.map(call => call[0]).sort()).toEqual(['R_10', 'frxEURUSD']);
+        expect(result.current.rows.map(row => row.symbol)).toEqual(['R_10', 'frxEURUSD']);
+    });
+
+    it('opens no connections at all for an empty list of markets', async () => {
+        const { result } = renderHook(() => useMarkets({ symbols: [] }));
+        await settle();
+        expect(mockHistory).not.toHaveBeenCalled();
+        expect(mockSubscribe).not.toHaveBeenCalled();
+        expect(result.current.rows).toEqual([]);
+        expect(result.current.is_loading).toBe(false);
+    });
+
+    it('ignores symbols that are not listed', async () => {
+        mockHistory.mockResolvedValue(history(10, 11));
+        renderHook(() => useMarkets({ symbols: ['NOT_A_MARKET', 'R_25'] }));
+        await settle();
+        expect(mockHistory.mock.calls.map(call => call[0].ticks_history)).toEqual(['R_25']);
+    });
+
+    it('gives each row the closes of its candles for the sparkline', async () => {
+        mockHistory.mockResolvedValue(history(100, 105));
+        const { result } = renderHook(() => useMarkets({ symbols: ['R_10'] }));
+        await settle();
+        expect(result.current.rows[0].closes).toEqual([100, 105]);
+        const callback = mockSubscribe.mock.calls[0][1];
+        act(() => callback({ tick: { quote: 107, epoch: now(), pip_size: 2 } }));
+        act(() => {
+            jest.advanceTimersByTime(1000);
+        });
+        expect(result.current.rows[0].closes).toEqual([100, 107]);
+    });
 });

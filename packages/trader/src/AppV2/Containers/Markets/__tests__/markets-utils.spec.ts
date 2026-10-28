@@ -2,10 +2,12 @@ import { STALE_AFTER_SECONDS, WATCHLIST_STORAGE_KEY } from '../markets-config';
 import {
     applyTick,
     buildRow,
+    buildSparklinePoints,
     entryFromCandles,
     formatPercent,
     formatPrice,
     getTopMovers,
+    matchesSearch,
     parseCandles,
     readWatchlist,
     sortRows,
@@ -58,7 +60,12 @@ describe('parseCandles', () => {
 });
 
 describe('entries and rows', () => {
-    const entry = entryFromCandles([candle(NOW - 120, 100, 103, 99, 102), candle(NOW - 60, 102, 106, 101, 105)], 2);
+    const entry = entryFromCandles(
+        [candle(NOW - 120, 100, 103, 99, 102), candle(NOW - 60, 102, 106, 101, 105)],
+        2,
+        60,
+        NOW
+    );
 
     it('keeps the hour open, the hour high and low, and the newest close', () => {
         expect(entry).toEqual({
@@ -68,7 +75,8 @@ describe('entries and rows', () => {
             low: 99,
             last: 105,
             pip_size: 2,
-            updated: NOW - 60,
+            updated: NOW,
+            closes: [102, 105],
         });
     });
 
@@ -131,6 +139,7 @@ const row = (overrides: Partial<TMarketRow> & { symbol: string }): TMarketRow =>
     range_pct: 1,
     volatility: null,
     is_closed: false,
+    closes: [],
     ...overrides,
 });
 
@@ -242,5 +251,93 @@ describe('watchlist storage', () => {
     it('adds a market that is not starred and removes one that is', () => {
         expect(toggleSymbol(['R_10'], 'R_25')).toEqual(['R_10', 'R_25']);
         expect(toggleSymbol(['R_10', 'R_25'], 'R_10')).toEqual(['R_25']);
+    });
+});
+
+describe('entries for larger candles', () => {
+    it('does not count a market as stale just because an hourly candle opened up to an hour ago', () => {
+        const hourly = entryFromCandles([candle(NOW - 1800, 100, 101, 99, 100)], 2, 3600, NOW);
+        expect(hourly.updated).toBe(NOW);
+        expect(buildRow({ symbol: 'R_10', name: 'Vol 10', group: 'synthetic' }, hourly, NOW).is_closed).toBe(false);
+    });
+
+    it('still marks a market closed when the newest candle ended long ago', () => {
+        const old = entryFromCandles([candle(NOW - 86_400, 100, 101, 99, 100)], 2, 3600, NOW);
+        expect(old.updated).toBe(NOW - 86_400 + 3600);
+        expect(buildRow({ symbol: 'frxEURUSD', name: 'EUR/USD', group: 'forex' }, old, NOW).is_closed).toBe(true);
+    });
+
+    it('never reports a time after now', () => {
+        expect(entryFromCandles([candle(NOW - 10, 1, 1, 1, 1)], 2, 3600, NOW).updated).toBe(NOW);
+    });
+});
+
+describe('sparkline data', () => {
+    const base: TMarketEntry = {
+        status: 'ready',
+        open: 1,
+        high: 3,
+        low: 1,
+        last: 2,
+        pip_size: 2,
+        updated: 1,
+        closes: [1, 3, 2],
+    };
+
+    it('keeps the closes of every candle, oldest first', () => {
+        const entry = entryFromCandles([candle(1, 1, 2, 1, 2), candle(2, 2, 3, 2, 3)], 2, 60, 100);
+        expect(entry.closes).toEqual([2, 3]);
+    });
+
+    it('moves the last point with each live tick and leaves the rest alone', () => {
+        expect(applyTick(base, 5, 2).closes).toEqual([1, 3, 5]);
+        expect(base.closes).toEqual([1, 3, 2]);
+    });
+
+    it('starts the line from the first tick when there was no history', () => {
+        expect(applyTick({ status: 'unavailable' }, 7, 2).closes).toEqual([7]);
+    });
+
+    it('passes the closes to the row, and gives none to a market that has not loaded', () => {
+        const market = { symbol: 'R_10', name: 'Vol 10', group: 'synthetic' as const };
+        expect(buildRow(market, base, 5).closes).toEqual([1, 3, 2]);
+        expect(buildRow(market, undefined, 5).closes).toEqual([]);
+    });
+
+    it('draws the lowest price at the bottom and the highest at the top', () => {
+        const points = buildSparklinePoints([1, 3, 2], 100, 20, 2).split(' ');
+        expect(points).toEqual(['0.0,18.0', '50.0,2.0', '100.0,10.0']);
+    });
+
+    it('draws a flat line through the middle, and nothing for fewer than two prices', () => {
+        expect(buildSparklinePoints([5, 5, 5], 100, 20)).toBe('0.0,10.0 50.0,10.0 100.0,10.0');
+        expect(buildSparklinePoints([5], 100, 20)).toBe('');
+        expect(buildSparklinePoints([], 100, 20)).toBe('');
+    });
+});
+
+describe('matchesSearch', () => {
+    const eurusd = { symbol: 'frxEURUSD', name: 'EUR/USD' };
+    const vol = { symbol: '1HZ100V', name: 'Volatility 100 (1s) Index' };
+
+    it('matches everything when the box is empty or only spaces', () => {
+        expect(matchesSearch(eurusd, '')).toBe(true);
+        expect(matchesSearch(eurusd, '   ')).toBe(true);
+    });
+
+    it('ignores case, spaces and slashes, so "eur usd", "EUR/USD" and "eurusd" all find the pair', () => {
+        ['eur usd', 'EUR/USD', 'eurusd', 'Eur'].forEach(query => expect(matchesSearch(eurusd, query)).toBe(true));
+    });
+
+    it('matches the symbol as well as the name', () => {
+        expect(matchesSearch(vol, '1hz100v')).toBe(true);
+        expect(matchesSearch(vol, 'volatility 100')).toBe(true);
+        expect(matchesSearch(eurusd, 'frx')).toBe(true);
+    });
+
+    it('does not match something else, and a query of only punctuation matches everything', () => {
+        expect(matchesSearch(eurusd, 'gbp')).toBe(false);
+        expect(matchesSearch(vol, 'eurusd')).toBe(false);
+        expect(matchesSearch(eurusd, '/ /')).toBe(true);
     });
 });

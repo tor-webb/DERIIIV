@@ -13,7 +13,8 @@ Older notes: `docs/HANDOFF.md` (site-wide state), `docs/BOT_BUILDER_HANDOFF.md` 
 | Markets / Watchlist page (`/markets`)                      | Merged to `main` (PR #7).                  |
 | Help assistant knows Markets and Templates                 | PR #8, branch `assistant-and-market-bots`. |
 | "Build a bot for this market" (Markets row to Bot Builder) | PR #8.                                     |
-| Bot Builder safety (item A below)                          | Branch `bot-safety`, stacked on PR #8.     |
+| Bot Builder safety (item A below)                          | Merged to `main` (PR #9).                  |
+| Markets quick wins (item B below, all but `active_symbols`) | Branch `markets-quick-wins`.               |
 
 Both merged features and this branch's work have **never been looked at in a browser** and **never run against the
 live Deriv socket**. Section 3 lists the checks that need a person with a demo account. Do those before promoting the pages.
@@ -97,7 +98,27 @@ Goal: a bad bot or a dropped connection cannot hurt a user more than they chose.
 - Done when: unit tests with a fake API cover cap-exceeded, stalled contract and resubscribe (done); demo-account run shows each message (still owed, check 7).
 - Left for later: a socket that reconnects on its own does not tell the runner, so recovery relies on the watchdog's resubscribe; a connection-state hook from `APIProvider` / `socket_base.js` (`reconnect_handlers`) could resubscribe at once.
 
-### B. Markets quick wins
+### B. Markets quick wins (built on branch `markets-quick-wins`, except the `active_symbols` item)
+
+**What was built (2026-10-28, rebuilt after the first attempt was lost before it reached GitHub):**
+
+- **Search box** (`matchesSearch` in `markets-utils.ts`): matches name or symbol, ignoring case, spaces and slashes ("eur usd", "EUR/USD" and "eurusd" all find the pair). Works together with the Derived/Forex/Watchlist pills.
+- **Window switch 1h / 4h / 1d** (`WINDOWS` in `markets-config.ts`: 1h = 60 x 1-minute candles, 4h = 48 x 5-minute, 1d = 24 x 1-hour). `useMarkets({ window_id })` reloads when the window changes. Column headings and the movers titles follow the window. `entryFromCandles` takes the candle size so a live market on hourly candles is not shown as Closed before its first tick (`updated` = candle open + candle size, never later than now).
+- **Sparkline per row** (`sparkline.tsx`, `buildSparklinePoints`): inline SVG from the candle closes kept in each entry (`closes`); the last point follows live ticks. Colour is set on the SVG itself so the Dashboard can reuse it without `markets.scss`.
+- **Chart button** per row: same hand-off as Trade (`openWith` in `markets.tsx` sets the Trade store's symbol, then goes to `/charts?symbol=...`). `ChartsPage` keeps the store's symbol when it is available (`useDefaultSymbol`), so the chart opens on that market.
+- **Dashboard watchlist** (`Dashboard/watchlist-panel.tsx`): the starred markets with live price, signed change and sparkline. `useMarkets({ symbols })` loads only the starred markets and opens no connection when the list is empty. A row opens the Markets page. The list is read once when the Dashboard opens (stars changed on the Markets page show up on the next visit).
+- Help assistant `markets` topic and tests updated.
+
+**Not verified (needs a browser and a demo account):**
+
+1. The API accepting `granularity: 300, count: 48` and `granularity: 3600, count: 24` for every one of the 20 symbols (4h and 1d were chosen from the API's list of candle sizes, not tried live). A refused request shows the market as Unavailable.
+2. The row layout at 390 px and 1280 px: the row grew from 7 to 8 columns (Trend, plus a third button in the last cell). The phone layout in `markets.scss` was written without seeing it.
+3. Chart button: open Charts from a market that is not the current one, including after Trade or Charts was already open in the same session.
+4. The Dashboard panel at both widths, with 0, 1 and several starred markets.
+
+**Left to do in this item:** symbols from `active_symbols` instead of the fixed list (see the original note below).
+
+**Original plan for this item:**
 
 Goal: make the page faster to scan. All in `Containers/Markets/`.
 

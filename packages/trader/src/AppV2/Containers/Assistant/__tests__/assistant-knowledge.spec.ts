@@ -35,6 +35,10 @@ describe('getAssistantReply', () => {
         ['how do I add a market to my watchlist', 'markets'],
         ['which market should I trade', 'markets'],
         ['which markets are the most volatile', 'markets'],
+        ['how do I search for a market', 'markets'],
+        ['what is the trend line on the markets page', 'markets'],
+        ['can I change the time window to 4 hours', 'markets'],
+        ['how do I open a market in charts', 'markets'],
         ['are there any bot templates', 'bot_templates'],
         ['how do I import a bot template', 'bot_templates'],
         ['I want a ready made strategy', 'bot_templates'],
@@ -78,6 +82,8 @@ describe('getAssistantReply', () => {
         const markets = getAssistantReply('tell me about the watchlist', guest);
         expect(markets.actions.map(a => a.path)).toContain('/markets');
         expect(markets.text).toMatch(/not which way it will go/);
+        expect(markets.text).toMatch(/search box/);
+        expect(markets.text).toMatch(/Dashboard/);
         const templates = getAssistantReply('bot templates', guest);
         expect(templates.text).toMatch(/not advice/);
         expect(templates.text).toMatch(/demo account/);

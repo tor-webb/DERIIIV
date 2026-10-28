@@ -15,6 +15,8 @@ export type TMarketEntry = {
     pip_size?: number;
     /** Epoch of the newest candle or tick. */
     updated?: number;
+    /** Closing price of each candle in the window, oldest first. The last one follows live ticks. Drives the sparkline. */
+    closes?: number[];
 };
 
 export type TMarketRow = {
@@ -29,6 +31,8 @@ export type TMarketRow = {
     range_pct: number | null;
     volatility: TVolatilityLevel | null;
     is_closed: boolean;
+    /** Prices across the window, oldest first, for the sparkline. Empty until loaded. */
+    closes: number[];
 };
 
 const isPositive = (value: unknown): value is number =>
@@ -59,7 +63,17 @@ export const parseCandles = (response: unknown): { candles: TCandle[]; pip_size:
     return { candles, pip_size: Number.isInteger(pip_size) && pip_size >= 0 && pip_size <= 8 ? pip_size : 2 };
 };
 
-export const entryFromCandles = (candles: TCandle[], pip_size: number): TMarketEntry => {
+/**
+ * `granularity` is the candle size. A candle's epoch is when it opened, so for large candles the market may have ticked
+ * up to `granularity` seconds after it. Counting that time (but never beyond now) stops a live market on hourly candles
+ * from looking closed before its first tick arrives.
+ */
+export const entryFromCandles = (
+    candles: TCandle[],
+    pip_size: number,
+    granularity = 60,
+    now_seconds = Math.floor(Date.now() / 1000)
+): TMarketEntry => {
     const last_candle = candles[candles.length - 1];
     return {
         status: 'ready',
@@ -68,7 +82,8 @@ export const entryFromCandles = (candles: TCandle[], pip_size: number): TMarketE
         low: Math.min(...candles.map(candle => candle.low)),
         last: last_candle.close,
         pip_size,
-        updated: last_candle.epoch,
+        updated: Math.min(last_candle.epoch + granularity, Math.max(last_candle.epoch, now_seconds)),
+        closes: candles.map(candle => candle.close),
     };
 };
 
@@ -76,7 +91,16 @@ export const entryFromCandles = (candles: TCandle[], pip_size: number): TMarketE
 export const applyTick = (entry: TMarketEntry, quote: number, epoch: number): TMarketEntry => {
     if (!isPositive(quote)) return entry;
     if (entry.status !== 'ready') {
-        return { ...entry, status: 'ready', open: quote, high: quote, low: quote, last: quote, updated: epoch };
+        return {
+            ...entry,
+            status: 'ready',
+            open: quote,
+            high: quote,
+            low: quote,
+            last: quote,
+            updated: epoch,
+            closes: [quote],
+        };
     }
     return {
         ...entry,
@@ -84,6 +108,7 @@ export const applyTick = (entry: TMarketEntry, quote: number, epoch: number): TM
         high: Math.max(entry.high ?? quote, quote),
         low: Math.min(entry.low ?? quote, quote),
         updated: epoch,
+        closes: entry.closes?.length ? [...entry.closes.slice(0, -1), quote] : [quote],
     };
 };
 
@@ -102,6 +127,7 @@ export const buildRow = (
         range_pct: null,
         volatility: null,
         is_closed: false,
+        closes: [] as number[],
     };
     if (!entry || status !== 'ready' || !isPositive(entry.last) || !isPositive(entry.open)) return base;
 
@@ -113,6 +139,7 @@ export const buildRow = (
         price: entry.last,
         change_pct,
         range_pct,
+        closes: entry.closes ?? [],
         is_closed: entry.updated !== undefined && now_seconds - entry.updated > STALE_AFTER_SECONDS,
     };
 };
@@ -180,6 +207,35 @@ export const formatPercent = (value: number | null, with_sign = false) => {
     const text = Math.abs(value).toFixed(2);
     if (!with_sign || Number(text) === 0) return `${text}%`;
     return `${value > 0 ? '+' : '−'}${text}%`;
+};
+
+/** Lower case with spaces, slashes and punctuation removed, so "eur usd", "EUR/USD" and "eurusd" all match. */
+const normalizeSearch = (text: string) => text.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+/** True when the query is empty or appears in the market's name or symbol. */
+export const matchesSearch = (row: Pick<TMarketRow, 'name' | 'symbol'>, query: string): boolean => {
+    const needle = normalizeSearch(query);
+    if (!needle) return true;
+    return normalizeSearch(row.name).includes(needle) || normalizeSearch(row.symbol).includes(needle);
+};
+
+/**
+ * Turns prices into the `points` of an SVG polyline that fills a width x height box, with the lowest price at the
+ * bottom. A flat line sits in the middle. Fewer than two prices give no line.
+ */
+export const buildSparklinePoints = (values: number[], width: number, height: number, padding = 2): string => {
+    if (values.length < 2) return '';
+    const low = Math.min(...values);
+    const high = Math.max(...values);
+    const span = high - low;
+    const inner_height = height - padding * 2;
+    return values
+        .map((value, index) => {
+            const x = (index / (values.length - 1)) * width;
+            const y = span === 0 ? height / 2 : padding + (1 - (value - low) / span) * inner_height;
+            return `${x.toFixed(1)},${y.toFixed(1)}`;
+        })
+        .join(' ');
 };
 
 /* ----------------------------------------------------------------------------------------------- */

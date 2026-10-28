@@ -5,6 +5,8 @@ import { formatMoneyText, getBrandName, routes } from '@deriv/shared';
 import { observer, useStore } from '@deriv/stores';
 import { localize } from '@deriv-com/translations';
 
+import WatchlistPanel from './watchlist-panel';
+
 import './dashboard.scss';
 
 type TIconName =
@@ -224,6 +226,8 @@ const Dashboard = observer(() => {
                         </div>
                     )}
                 </section>
+
+                <WatchlistPanel />
 
                 <section className='dashboard__section'>
                     <h2 className='dashboard__section-title'>{localize('Trading tools')}</h2>
