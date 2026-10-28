@@ -3,6 +3,7 @@ import classNames from 'classnames';
 
 import { localize } from '@deriv-com/translations';
 
+import { TBotMarket } from './bot-markets';
 import { getBotTemplates, TBotTemplate, TTemplateLevel, TTemplateRisk } from './templates';
 
 import './templates-panel.scss';
@@ -12,6 +13,9 @@ type TTemplatesPanelProps = {
     is_disabled: boolean;
     /** True once a template has replaced the user's bot and that bot can still be brought back. */
     can_restore: boolean;
+    /** A market picked on the Markets page. The bots are built for it; without one each bot uses its own market. */
+    market?: TBotMarket | null;
+    onClearMarket?: () => void;
     onImport: (template: TBotTemplate) => void;
     onRestore: () => void;
     onClose: () => void;
@@ -28,8 +32,17 @@ const RISK_TEXT: Record<TTemplateRisk, () => string> = {
     high: () => localize('High risk'),
 };
 
-const TemplatesPanel = ({ is_disabled, can_restore, onImport, onRestore, onClose }: TTemplatesPanelProps) => {
-    const templates = React.useMemo(() => getBotTemplates(), []);
+const TemplatesPanel = ({
+    is_disabled,
+    can_restore,
+    market = null,
+    onClearMarket,
+    onImport,
+    onRestore,
+    onClose,
+}: TTemplatesPanelProps) => {
+    const symbol = market?.symbol;
+    const templates = React.useMemo(() => getBotTemplates(symbol), [symbol]);
 
     return (
         <aside
@@ -60,6 +73,21 @@ const TemplatesPanel = ({ is_disabled, can_restore, onImport, onRestore, onClose
                     'Templates are examples to learn from, not advice. No bot beats the odds, and every trade can lose its stake. Try them on a demo account first.'
                 )}
             </p>
+
+            {market && (
+                <div className='templates-panel__market' data-testid='dt_bot_templates_market'>
+                    <span>
+                        {localize('Bots for {{name}}.', { name: market.name })}
+                        {market.group === 'forex' &&
+                            ` ${localize('Forex has no digit or tick contracts, so these bots use 5 minute Rise/Fall contracts.')}`}
+                    </span>
+                    {onClearMarket && (
+                        <button type='button' className='templates-panel__link' onClick={onClearMarket}>
+                            {localize('Show all markets')}
+                        </button>
+                    )}
+                </div>
+            )}
 
             {can_restore && (
                 <div className='templates-panel__restore' data-testid='dt_bot_templates_restore'>

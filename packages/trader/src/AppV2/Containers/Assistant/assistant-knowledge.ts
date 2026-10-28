@@ -28,7 +28,7 @@ const topics = (): TTopic[] => [
         keywords: ['hello', 'hi', 'hey', 'good morning', 'good evening', 'start', 'help'],
         answer: () =>
             localize(
-                'Hi! I can show you around: trading, charts, the Bot Builder, the risk calculator, copy trading and your reports. Pick a question below or type your own.'
+                'Hi! I can show you around: trading, markets and your watchlist, charts, the Bot Builder and its ready-made bots, the risk calculator, copy trading and your reports. Pick a question below or type your own.'
             ),
     },
     {
@@ -96,6 +96,31 @@ const topics = (): TTopic[] => [
         actions: () => [go(localize('Go to Trade'), routes.index)],
     },
     {
+        id: 'markets',
+        keywords: [
+            'markets',
+            'market',
+            'watchlist',
+            'watch list',
+            'top movers',
+            'movers',
+            'gainers',
+            'losers',
+            'volatility',
+            'live prices',
+            'prices',
+            'which market',
+            'what to trade',
+            'what should i trade',
+            'star a market',
+        ],
+        answer: () =>
+            localize(
+                'The Markets page lists live prices for 20 markets (Volatility indices and forex pairs). For each one it shows the change and the range over the last hour, and a Low, Medium or High volatility label compared with similar markets. It also lists the top gainers and losers. Tap the star to add a market to your watchlist, which is saved in this browser. Trade opens the Trade page on that market, and Bot opens the Bot Builder with ready-made bots for it. Volatility shows how much a market has moved, not which way it will go next.'
+            ),
+        actions: () => [go(localize('Open Markets'), routes.markets), go(localize('Go to Trade'), routes.index)],
+    },
+    {
         id: 'charts',
         keywords: ['chart', 'charts', 'indicator', 'indicators', 'drawing', 'candles', 'analysis'],
         answer: () =>
@@ -110,6 +135,31 @@ const topics = (): TTopic[] => [
         answer: () =>
             localize(
                 'The Bot Builder lets you build a trading bot by snapping blocks together: set the market and contract in Trade parameters, say when to buy in Purchase conditions, and what to do after a result in Restart trading conditions. Press Run to start it and Stop to end it. A bot follows your rules exactly, so it can lose as fast as it can win.'
+            ),
+        actions: () => [go(localize('Open Bot Builder'), routes.bot_builder)],
+    },
+    {
+        id: 'bot_templates',
+        keywords: [
+            'template',
+            'templates',
+            'bot template',
+            'bot templates',
+            'import a template',
+            'import a bot template',
+            'strategy',
+            'strategies',
+            'strategy library',
+            'ready made',
+            'ready made bot',
+            'example bot',
+            'sample bot',
+            'starter bot',
+            'one tap',
+        ],
+        answer: () =>
+            localize(
+                'In the Bot Builder press Templates to see five ready-made bots: Rise/Fall with a steady stake, Even/Odd, Digit Over 2, a Win ladder and a capped Martingale. Press Import on one and it loads into the builder, where you can change any block. It replaces the bot on your workspace, and Bring it back restores your old bot until you reload the page. Templates are examples to learn from, not advice, so try them on a demo account first.'
             ),
         actions: () => [go(localize('Open Bot Builder'), routes.bot_builder)],
     },
@@ -254,6 +304,10 @@ const topics = (): TTopic[] => [
                 return localize('You are in the Bot Builder: build, import and run trading bots.');
             if (pathname.startsWith(routes.dashboard))
                 return localize('You are on the dashboard: your balance, account type and shortcuts to every tool.');
+            if (pathname.startsWith(routes.markets))
+                return localize(
+                    'You are on Markets: live prices, top movers, volatility and your watchlist. Pick a market, then open it on Trade or in the Bot Builder.'
+                );
             if (pathname.startsWith(routes.charts))
                 return localize('You are on Charts: live charts with indicators and drawing tools.');
             if (pathname.startsWith(routes.risk_calculator))
@@ -273,6 +327,8 @@ export const SUGGESTED_QUESTIONS = () => [
     localize('How do I import a bot?'),
     localize('Demo or real account?'),
     localize('How do I stop losing too much?'),
+    localize('Where are the ready-made bots?'),
+    localize('How do I use the watchlist?'),
 ];
 
 const normalise = (text: string) =>
@@ -313,7 +369,7 @@ export const getAssistantReply = (question: string, ctx: TAssistantContext): TAs
         return {
             id: 'fallback',
             text: localize(
-                'I did not quite get that. I can help with trading, charts, the Bot Builder (building, importing, running, limits), the risk calculator, copy trading, demo vs real accounts and your reports. Try one of the questions below.'
+                'I did not quite get that. I can help with trading, markets and the watchlist, charts, the Bot Builder (building, importing, ready-made templates, running, limits), the risk calculator, copy trading, demo vs real accounts and your reports. Try one of the questions below.'
             ),
             actions: [],
         };

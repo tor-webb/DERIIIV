@@ -260,6 +260,57 @@ describe('BotBuilder', () => {
             expect(screen.queryByTestId('dt_bot_templates_restore')).not.toBeInTheDocument();
         });
 
+        describe('opened from the Markets page', () => {
+            const openWith = (search: string) => window.history.pushState({}, '', `/bot-builder${search}`);
+
+            afterEach(() => window.history.pushState({}, '', '/'));
+
+            it('opens the library with bots built for that market', () => {
+                openWith('?market=frxEURUSD');
+                renderPage();
+                expect(screen.getByTestId('dt_bot_templates')).toBeInTheDocument();
+                expect(screen.getByTestId('dt_bot_templates_market')).toHaveTextContent('Bots for EUR/USD.');
+                expect(screen.getByTestId('dt_bot_templates_market')).toHaveTextContent('5 minute');
+                // digit bots do not exist on forex
+                expect(screen.queryByTestId('dt_bot_template_even_odd_basic')).not.toBeInTheDocument();
+                expect(screen.getByTestId('dt_bot_template_rise_fall_basic')).toHaveTextContent('EUR/USD');
+            });
+
+            it('shows all five bots for a Derived index', () => {
+                openWith('?market=R_50');
+                renderPage();
+                expect(screen.getByTestId('dt_bot_templates_market')).toHaveTextContent(
+                    'Bots for Volatility 50 Index.'
+                );
+                expect(screen.getByTestId('dt_bot_template_even_odd_basic')).toBeInTheDocument();
+            });
+
+            it('ignores a market it cannot trade, so the library stays closed', () => {
+                openWith('?market=frxNZDUSD');
+                renderPage();
+                expect(screen.queryByTestId('dt_bot_templates')).not.toBeInTheDocument();
+            });
+
+            it('goes back to every bot on its own market with Show all markets', () => {
+                openWith('?market=frxEURUSD');
+                renderPage();
+                fireEvent.click(screen.getByText('Show all markets'));
+                expect(screen.queryByTestId('dt_bot_templates_market')).not.toBeInTheDocument();
+                expect(screen.getByTestId('dt_bot_template_even_odd_basic')).toBeInTheDocument();
+                expect(window.location.search).toBe('');
+            });
+
+            it('loads the market bot and drops ?market= from the address', () => {
+                openWith('?market=frxEURUSD');
+                renderPage();
+                fireEvent.click(screen.getByTestId('dt_bot_template_import_rise_fall_basic'));
+                expect(mockLoadParsedBot).toHaveBeenCalledTimes(1);
+                const parsed = mockLoadParsedBot.mock.calls[0] as unknown as [unknown, { kind: string; dom: Element }];
+                expect(parsed[1].dom.outerHTML).toContain('frxEURUSD');
+                expect(window.location.search).toBe('');
+            });
+        });
+
         it('cannot import while a bot is running', () => {
             renderPage({ is_logged_in: true, is_virtual: true, loginid: 'VRTC1', currency: 'USD', balance: 10000 });
             fireEvent.click(screen.getByText('Run'));
