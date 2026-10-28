@@ -10,5 +10,6 @@ export type {
     TRunStatus,
     TTradeRequest,
     TTransaction,
+    TWatchdogOptions,
 } from './types';
 export { createWsBotApi } from './ws-adapter';

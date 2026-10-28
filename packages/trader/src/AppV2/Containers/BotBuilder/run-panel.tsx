@@ -16,7 +16,7 @@ import {
 
 export type TPanelTab = 'summary' | 'transactions' | 'journal';
 
-export type TRunLimitsInput = { max_trades: string; max_profit: string; max_loss: string };
+export type TRunLimitsInput = { max_trades: string; max_profit: string; max_loss: string; max_stake: string };
 
 type TRunPanelProps = {
     tab: TPanelTab;
@@ -207,6 +207,17 @@ const RunPanel = ({
                             />
                         </label>
                         <label>
+                            {localize('Max stake per trade')}
+                            <input
+                                type='number'
+                                min='0'
+                                value={limits.max_stake}
+                                disabled={is_active}
+                                placeholder={localize('No limit')}
+                                onChange={setLimit('max_stake')}
+                            />
+                        </label>
+                        <label>
                             {localize('Stop after trades')}
                             <input
                                 type='number'
@@ -220,7 +231,7 @@ const RunPanel = ({
                     </div>
                     <p className='run-panel__hint'>
                         {localize(
-                            'With a take profit or stop loss set, the bot keeps trading until one of them is reached or you press Stop.'
+                            'With a take profit or stop loss set, the bot keeps trading until one of them is reached or you press Stop. A trade above the max stake is never placed: the bot stops instead.'
                         )}
                     </p>
 

@@ -172,9 +172,27 @@ export type TLiveContract = {
 
 export type TRunStatus = 'idle' | 'running' | 'stopping' | 'stopped';
 
+/**
+ * How long the runner waits on the server before it acts, so a dropped connection cannot leave a bot waiting forever.
+ * All times are in milliseconds. The defaults suit the live socket; tests pass small values.
+ */
+export type TWatchdogOptions = {
+    /** No answer to a price proposal or a purchase after this long: the trade is given up. */
+    request_timeout_ms?: number;
+    /** No update on the open contract after this long: ask the server for the contract again. */
+    contract_stall_ms?: number;
+    /** After this many unanswered asks in a row, the bot stops and tells the person to check Positions. */
+    max_resubscribes?: number;
+};
+
 export type TRunLimits = {
     /** Stop after this many finished trades. */
     max_trades?: number;
+    /**
+     * The largest stake the bot may place on one trade (a positive number). A trade above it is never sent: the bot
+     * stops with a message instead. Guards against a stake that grows (a martingale) or a wrong number in a block.
+     */
+    max_stake?: number;
     /** Stop (stop loss) once the total loss reaches this amount (a positive number). */
     max_loss?: number;
     /** Stop (take profit) once the total profit reaches this amount (a positive number). */

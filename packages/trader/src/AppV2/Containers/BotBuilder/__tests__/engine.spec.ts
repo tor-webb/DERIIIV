@@ -15,6 +15,7 @@ import type {
     TStmt,
     TTradeRequest,
     TTransaction,
+    TWatchdogOptions,
 } from '../Engine/types';
 
 jest.mock('@deriv-com/translations', () => ({
@@ -503,7 +504,10 @@ const baseProgram = (overrides: Partial<TProgram> = {}): TProgram => ({
     ...overrides,
 });
 
-const setup = (program: TProgram, options: { balance?: number; limits?: TRunLimits } = {}) => {
+const setup = (
+    program: TProgram,
+    options: { balance?: number; limits?: TRunLimits; watchdog?: TWatchdogOptions } = {}
+) => {
     const api = createFakeApi();
     const logs: [TLevel, string][] = [];
     const transactions: TTransaction[] = [];
@@ -514,6 +518,7 @@ const setup = (program: TProgram, options: { balance?: number; limits?: TRunLimi
         currency: 'USD',
         getBalance: () => options.balance ?? 100,
         limits: options.limits,
+        watchdog: options.watchdog,
         onLog: (level, message) => logs.push([level, message]),
         onStats: jest.fn(),
         onStatus: jest.fn(),
@@ -987,6 +992,256 @@ describe('BotRunner', () => {
             await jest.advanceTimersByTimeAsync(1000);
             expect(runner.getStatus()).toBe('stopped');
             expect(logs.some(([, message]) => message.includes('did not ask to trade again'))).toBe(true);
+        });
+    });
+});
+
+describe('BotRunner safety', () => {
+    const lines = (logs: [TLevel, string][], level: TLevel) =>
+        logs.filter(([entry]) => entry === level).map(([, message]) => message);
+
+    const withStake = (v: number) =>
+        baseProgram({
+            options: { duration_unit: 't', duration: { t: 'num', v: 5 }, amount: { t: 'num', v }, prediction: null },
+        });
+
+    describe('maximum stake', () => {
+        it('stops without sending anything when the stake is above the cap', async () => {
+            const { api, runner, logs } = setup(withStake(6), { limits: { max_stake: 5 } });
+            runner.start();
+            api.emitTick(1);
+            await flush();
+
+            expect(api.calls.proposal).toHaveLength(0);
+            expect(api.calls.buy).toHaveLength(0);
+            expect(runner.getStatus()).toBe('stopped');
+            expect(lines(logs, 'error')[0]).toContain('above your maximum stake of 5 USD');
+        });
+
+        it('lets a stake equal to the cap through', async () => {
+            const { api, runner } = setup(withStake(5), { limits: { max_stake: 5 } });
+            runner.start();
+            api.emitTick(1);
+            await flush();
+            expect(api.calls.proposal).toHaveLength(1);
+            expect(api.calls.buy).toEqual([['prop-1', 5]]);
+        });
+
+        it('applies no cap when none is set', async () => {
+            const { api, runner } = setup(withStake(50));
+            runner.start();
+            api.emitTick(1);
+            await flush();
+            expect(api.calls.buy).toEqual([['prop-1', 50]]);
+        });
+
+        it('stops a stake that grows past the cap after a loss', async () => {
+            const program = baseProgram({
+                init: [{ t: 'set', name: 'stake', value: { t: 'num', v: 2 } }],
+                options: {
+                    duration_unit: 't',
+                    duration: { t: 'num', v: 5 },
+                    amount: { t: 'var', name: 'stake' },
+                    prediction: null,
+                },
+                after_purchase: [
+                    {
+                        t: 'set',
+                        name: 'stake',
+                        value: { t: 'arith', op: 'MULTIPLY', a: { t: 'var', name: 'stake' }, b: { t: 'num', v: 2 } },
+                    },
+                    { t: 'trade_again' },
+                ],
+            });
+            const { api, runner, logs } = setup(program, { limits: { max_stake: 6 } });
+            runner.start();
+            api.emitTick(1);
+            await flush();
+            api.resolveBuy({ buy: { contract_id: 77, buy_price: 2, payout: 3.9 } });
+            await flush();
+            api.emitContract({ profit: -2, sell_price: 0, is_sold: 1, status: 'lost' }); // next stake: 4, allowed
+            api.emitTick(2);
+            await flush();
+            expect(api.calls.proposal.map(item => item.amount)).toEqual([2, 4]);
+            api.resolveBuy({ buy: { contract_id: 77, buy_price: 4, payout: 7.8 } });
+            await flush();
+            api.emitContract({ profit: -4, sell_price: 0, is_sold: 1, status: 'lost' }); // next stake: 8, over the cap
+            api.emitTick(3);
+            await flush();
+
+            expect(api.calls.proposal).toHaveLength(2);
+            expect(runner.getStatus()).toBe('stopped');
+            expect(lines(logs, 'error')[0]).toContain('stake 8 USD');
+        });
+
+        it('refuses a price the server raised above the cap', async () => {
+            const { api, runner, logs } = setup(withStake(5), { limits: { max_stake: 5 } });
+            api.subscribeProposal = (_request, cb) => {
+                Promise.resolve().then(() => cb({ proposal: { id: 'prop-9', ask_price: 7 } }));
+                return { unsubscribe: () => undefined };
+            };
+            runner.start();
+            api.emitTick(1);
+            await flush();
+            expect(api.calls.buy).toHaveLength(0);
+            expect(runner.getStatus()).toBe('stopped');
+            expect(lines(logs, 'error')[0]).toContain('priced this trade at 7 USD');
+        });
+    });
+
+    describe('a connection that goes quiet', () => {
+        const watchdog: TWatchdogOptions = { request_timeout_ms: 1000, contract_stall_ms: 1000, max_resubscribes: 2 };
+
+        beforeEach(() => jest.useFakeTimers());
+        afterEach(() => jest.useRealTimers());
+
+        const openContract = async (api: TFakeApi) => {
+            api.emitTick(1);
+            await jest.advanceTimersByTimeAsync(0);
+            api.resolveBuy(bought);
+            await jest.advanceTimersByTimeAsync(0);
+        };
+
+        const countResubscribes = (api: TFakeApi) => {
+            const original = api.subscribeOpenContract;
+            const spy = jest.fn(original);
+            api.subscribeOpenContract = spy;
+            return spy;
+        };
+
+        it('asks for the open contract again when it goes quiet', async () => {
+            const { api, runner, logs } = setup(baseProgram(), { watchdog });
+            const asked = countResubscribes(api);
+            runner.start();
+            await openContract(api);
+            expect(asked).toHaveBeenCalledTimes(1);
+
+            await jest.advanceTimersByTimeAsync(1000);
+            expect(asked).toHaveBeenCalledTimes(2);
+            expect(runner.getStatus()).toBe('running');
+            expect(lines(logs, 'warn')[0]).toContain('No update on contract 77 for 1 seconds');
+            expect(lines(logs, 'warn')[0]).toContain('try 1 of 2');
+        });
+
+        it('finishes normally when the contract answers after being asked again', async () => {
+            const { api, runner, transactions } = setup(baseProgram(), { watchdog });
+            runner.start();
+            await openContract(api);
+            await jest.advanceTimersByTimeAsync(1000);
+
+            api.emitContract({ profit: 0.95, sell_price: 1.95, is_sold: 1, status: 'won' });
+            expect(runner.getStats()).toMatchObject({ runs: 1, won: 1 });
+            expect(transactions.map(item => item.status)).toEqual(['open', 'won']);
+
+            // nothing is left running to fire later
+            await jest.advanceTimersByTimeAsync(10_000);
+            expect(runner.getStatus()).toBe('running');
+        });
+
+        it('does not ask again while updates keep arriving', async () => {
+            const { api, runner } = setup(baseProgram(), { watchdog });
+            const asked = countResubscribes(api);
+            runner.start();
+            await openContract(api);
+
+            await jest.advanceTimersByTimeAsync(800);
+            api.emitContract({ profit: 0.1, bid_price: 1.1 });
+            await jest.advanceTimersByTimeAsync(800);
+            api.emitContract({ profit: 0.2, bid_price: 1.2 });
+            await jest.advanceTimersByTimeAsync(800);
+            expect(asked).toHaveBeenCalledTimes(1);
+        });
+
+        it('stops and names the contract when it never answers', async () => {
+            const { api, runner, logs, transactions, live } = setup(baseProgram(), { watchdog });
+            runner.start();
+            await openContract(api);
+
+            await jest.advanceTimersByTimeAsync(3000); // two asks, then it gives up
+            expect(runner.getStatus()).toBe('stopped');
+            const [message] = lines(logs, 'error');
+            expect(message).toContain('Lost contact with contract 77');
+            expect(message).toContain('Check Positions');
+            // the result is unknown, so the contract is not reported as won or lost
+            expect(transactions.map(item => item.status)).toEqual(['open']);
+            expect(runner.getStats().runs).toBe(0);
+            expect(live[live.length - 1]).toBeNull();
+        });
+
+        it('still gives up when the person pressed Stop while the contract was open', async () => {
+            const { api, runner } = setup(baseProgram(), { watchdog });
+            runner.start();
+            await openContract(api);
+            runner.stop();
+            expect(runner.getStatus()).toBe('stopping');
+
+            await jest.advanceTimersByTimeAsync(3000);
+            expect(runner.getStatus()).toBe('stopped');
+        });
+
+        it('stops when the purchase is never confirmed, and does not buy again', async () => {
+            const { api, runner, logs } = setup(baseProgram(), { watchdog });
+            runner.start();
+            api.emitTick(1);
+            await jest.advanceTimersByTimeAsync(0);
+            expect(api.calls.buy).toHaveLength(1);
+
+            await jest.advanceTimersByTimeAsync(1000);
+            expect(runner.getStatus()).toBe('stopped');
+            expect(lines(logs, 'error')[0]).toContain('check Positions before running the bot again');
+            api.emitTick(2);
+            await jest.advanceTimersByTimeAsync(0);
+            expect(api.calls.buy).toHaveLength(1);
+        });
+
+        it('reports a purchase that was confirmed after the bot gave up', async () => {
+            const { api, runner, logs } = setup(baseProgram(), { watchdog });
+            runner.start();
+            api.emitTick(1);
+            await jest.advanceTimersByTimeAsync(1000);
+            expect(runner.getStatus()).toBe('stopped');
+
+            api.resolveBuy(bought);
+            await jest.advanceTimersByTimeAsync(0);
+            expect(lines(logs, 'warn').some(message => message.includes('Contract 77 was bought after'))).toBe(true);
+            expect(runner.getStats().total_stake).toBe(0);
+        });
+
+        it('stops when no price comes back, without buying', async () => {
+            const { api, runner, logs } = setup(baseProgram(), { watchdog });
+            api.subscribeProposal = () => ({ unsubscribe: () => undefined }); // never answers
+            runner.start();
+            api.emitTick(1);
+            await jest.advanceTimersByTimeAsync(1000);
+
+            expect(runner.getStatus()).toBe('stopped');
+            expect(api.calls.buy).toHaveLength(0);
+            expect(lines(logs, 'error')[0]).toContain('did not send a price in time');
+        });
+
+        it('skips the trade and carries on when "restart on error" is set', async () => {
+            const program = baseProgram({ setup: { ...baseProgram().setup, restart_on_error: true } });
+            const { api, runner, logs } = setup(program, { watchdog });
+            api.subscribeProposal = () => ({ unsubscribe: () => undefined });
+            runner.start();
+            api.emitTick(1);
+            await jest.advanceTimersByTimeAsync(1000);
+
+            expect(runner.getStatus()).toBe('running');
+            expect(lines(logs, 'warn')[0]).toContain('Trade skipped');
+        });
+
+        it('leaves no watchdog behind once the bot has stopped', async () => {
+            const { api, runner } = setup(baseProgram(), { watchdog });
+            runner.start();
+            api.emitTick(1);
+            await jest.advanceTimersByTimeAsync(0);
+            api.resolveBuy(bought);
+            await jest.advanceTimersByTimeAsync(0);
+            api.emitContract({ profit: 1, is_sold: 1, status: 'won' });
+            runner.stop();
+            expect(runner.getStatus()).toBe('stopped');
+            expect(jest.getTimerCount()).toBe(0);
         });
     });
 });

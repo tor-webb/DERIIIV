@@ -25,6 +25,8 @@ describe('getAssistantReply', () => {
         ['where can I read the news and alerts', 'news'],
         ['is there a handout I can print', 'news'],
         ['how do I set a take profit', 'bot_limits'],
+        ['what is the max stake limit', 'bot_limits'],
+        ['what happens if my connection drops while a bot trades', 'bot_limits'],
         ['my bot is not running', 'bot_run'],
         ['where are my past trades', 'reports'],
         ['how do I download my statement', 'reports'],
@@ -62,6 +64,14 @@ describe('getAssistantReply', () => {
     it('tells you where you are from the current path', () => {
         expect(getAssistantReply('where am I', { ...guest, pathname: '/bot-builder' }).text).toMatch(/Bot Builder/);
         expect(getAssistantReply('where am I', { ...guest, pathname: '/' }).text).toMatch(/Trade page/);
+    });
+
+    it('explains the bot safety limits without promising results', () => {
+        const reply = getAssistantReply('what is the max stake limit', real);
+        expect(reply.text).toMatch(/Max stake per trade/);
+        expect(reply.text).toMatch(/real account/);
+        expect(reply.text).toMatch(/Positions/);
+        expect(reply.text).not.toMatch(/you will (win|profit)|always win|guarantee/i);
     });
 
     it('describes Markets and Templates without promising results', () => {

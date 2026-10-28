@@ -7,17 +7,33 @@ Older notes: `docs/HANDOFF.md` (site-wide state), `docs/BOT_BUILDER_HANDOFF.md` 
 
 ## 1. Where things stand
 
-| Item                                                       | State                                     |
-| ---------------------------------------------------------- | ----------------------------------------- |
-| Bot Templates (5 ready-made bots, one-tap import)          | Merged to `main` (PR #7).                 |
-| Markets / Watchlist page (`/markets`)                      | Merged to `main` (PR #7).                 |
-| Help assistant knows Markets and Templates                 | This branch: `assistant-and-market-bots`. |
-| "Build a bot for this market" (Markets row to Bot Builder) | This branch.                              |
+| Item                                                       | State                                      |
+| ---------------------------------------------------------- | ------------------------------------------ |
+| Bot Templates (5 ready-made bots, one-tap import)          | Merged to `main` (PR #7).                  |
+| Markets / Watchlist page (`/markets`)                      | Merged to `main` (PR #7).                  |
+| Help assistant knows Markets and Templates                 | PR #8, branch `assistant-and-market-bots`. |
+| "Build a bot for this market" (Markets row to Bot Builder) | PR #8.                                     |
+| Bot Builder safety (item A below)                          | Branch `bot-safety`, stacked on PR #8.     |
 
 Both merged features and this branch's work have **never been looked at in a browser** and **never run against the
 live Deriv socket**. Section 3 lists the checks that need a person with a demo account. Do those before promoting the pages.
 
-### What this branch changed
+### Bot Builder safety (branch `bot-safety`, roadmap item A)
+
+- **Max stake per trade** (`TRunLimits.max_stake`, a field in the run panel). `Engine/runner.ts` checks the stake in `buildRequest`
+  and again against the server's `ask_price` before buying. Over the cap, nothing is sent and the bot stops with a message
+  (it is not treated as a skippable error, so "restart on error" does not hide it). **Real accounts must set it** (like the stop loss);
+  demo has no cap. This is stricter than the roadmap's "sensible default" on purpose: a fixed default is wrong across currencies.
+- **Watchdogs** (`TWatchdogOptions`, defaults in `DEFAULT_WATCHDOG` in `runner.ts`; kept apart from the bot's own timeout blocks):
+    - Open contract with no update for 60 s: ask the server again (`subscribeOpenContract`), up to 3 times, then stop and log the
+      contract id with "Check Positions". The contract stays "Open" in Transactions; it is never reported as won or lost.
+    - Purchase not confirmed in 30 s: stop, and say it may still have been bought. A late answer is logged as a warning with the id.
+    - No price in 30 s: skip the trade (with "restart on error") or stop. A late price can never lead to a purchase.
+- **Real-money banner**: red strip at the top of the page while a bot runs or stops on a real account (`dt_bot_builder_real_banner`).
+- Tests: `engine.spec.ts` ("BotRunner safety", fake socket and fake timers) and `bot-builder.spec.tsx`. The Help assistant's limits topic covers all of it.
+- **Not yet seen against the live socket.** The 60 s and 30 s values are guesses. See check 7 in section 3.
+
+### What PR #8 changed
 
 - **Assistant** (`Containers/Assistant/assistant-knowledge.ts`): topics `markets` and `bot_templates`, a hint for the
   Markets page in "where am I", two new suggested questions, greeting and fallback text. Tests route eight new
@@ -63,19 +79,23 @@ live Deriv socket**. Section 3 lists the checks that need a person with a demo a
 4. **Forex bots:** load a bot from a forex row (Markets, Bot, Import), run it on demo, and read the `proposal` payload. Confirm 5 minute Rise/Fall is accepted for that pair. If the server wants a different minimum, change `FOREX_MINUTES` in `BotBuilder/templates.ts`.
 5. **Each template** (Rise/Fall, Even/Odd, Over 2, Win ladder, Martingale) once on demo; read the `proposal` payload (`underlying_symbol`, integer `duration`, `barrier` only for Over/Under).
 6. Open the Help button and ask: "where are the ready-made bots", "how do I use the watchlist", "which market should I trade".
+7. **Safety, on a demo account:** (a) set Max stake 1 and run a bot that stakes 2: it must stop before any `proposal` request. (b) Start a 5 minute bot, then use the browser's Network tab to go offline
+   for about 3 minutes while a contract is open: expect "No update on contract..." warnings, then the "Lost contact" stop. Go back online sooner and the contract should finish normally.
+   If the live server sends open-contract updates less often than every 60 s for long contracts (hours or days), raise `contract_stall_ms`. (c) On a real account the red banner must show while running.
 
 ## 4. The roadmap (agreed; build in this order)
 
 Each item lists the goal, where it goes, what to reuse, and how you know it is done. Every item also needs tests, the lint, types and build checks in section 2, a Help assistant topic, and a note in this file.
 
-### A. Bot Builder safety (highest priority, before promoting bots for real money)
+### A. Bot Builder safety (built on branch `bot-safety`; needs check 7 in section 3 before promoting bots)
 
 Goal: a bad bot or a dropped connection cannot hurt a user more than they chose.
 
 - **Maximum stake cap.** Today the interpreter rounds stakes to 2 decimals but accepts any size. Add a "Max stake per trade" field next to the existing limits in the run panel (`run-panel.tsx`, limits state `TRunLimitsInput` in `bot-builder.tsx`), pass it to `BotRunner` limits, and refuse (stop the bot with a clear message) any trade above it. Real accounts should default to a sensible cap, demo to none.
 - **Socket drop with an open contract.** `Engine/runner.ts` waits for contract updates forever if the socket dies. Add a watchdog: if no `proposal_open_contract` update for N seconds, resubscribe; after a few failures, stop the bot and show the contract id and "check Positions" in the journal. `Engine/ws-adapter.ts` is where the subscription is created.
 - **Real-account banner while running.** A persistent red strip in `bot-builder.tsx` while `run_status` is running or stopping on a non-virtual account.
-- Done when: unit tests with a fake API cover cap-exceeded, stalled contract and resubscribe; demo-account run shows each message.
+- Done when: unit tests with a fake API cover cap-exceeded, stalled contract and resubscribe (done); demo-account run shows each message (still owed, check 7).
+- Left for later: a socket that reconnects on its own does not tell the runner, so recovery relies on the watchdog's resubscribe; a connection-state hook from `APIProvider` / `socket_base.js` (`reconnect_handlers`) could resubscribe at once.
 
 ### B. Markets quick wins
 
@@ -139,4 +159,4 @@ Goal: a pop-up when a starred market moves more than a chosen amount in an hour.
 - Templates are examples, never advice; each card keeps its caution line. Both stake-changing bots cap their stake at 16 times the first stake.
 - Volatility on Markets is the last hour's range ranked within Derived or Forex separately; it is described as past movement, not a forecast.
 - The Help assistant is a keyword list, not live AI. New pages get a topic and tests.
-- Real accounts need a stop-loss limit and a confirmation before a bot runs (already built); item A adds to this, never relaxes it.
+- Real accounts need a stop-loss limit, a max stake per trade and a confirmation before a bot runs; never relax these.
