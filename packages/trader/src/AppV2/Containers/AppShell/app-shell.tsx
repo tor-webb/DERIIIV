@@ -20,6 +20,7 @@ import './app-shell.scss';
 const MOBILE_NAV_ROUTES = [
     routes.dashboard,
     routes.charts,
+    routes.markets,
     routes.bot_builder,
     routes.bulk_trader,
     routes.risk_calculator,

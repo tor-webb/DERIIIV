@@ -27,6 +27,7 @@ describe('TopNav', () => {
         renderTopNav();
         expect(screen.getByText('Dashboard')).toBeInTheDocument();
         expect(screen.getByText('Trade')).toBeInTheDocument();
+        expect(screen.getByText('Markets')).toBeInTheDocument();
         expect(screen.getByText('Charts')).toBeInTheDocument();
         expect(screen.getByText('Bot Builder')).toBeInTheDocument();
         expect(screen.getByText('Risk')).toBeInTheDocument();
@@ -56,6 +57,8 @@ describe('TopNav', () => {
         expect(screen.getByTestId('dt_location')).toHaveTextContent('/dashboard');
         fireEvent.click(screen.getByTestId('dt_top_nav_charts'));
         expect(screen.getByTestId('dt_location')).toHaveTextContent('/charts');
+        fireEvent.click(screen.getByTestId('dt_top_nav_markets'));
+        expect(screen.getByTestId('dt_location')).toHaveTextContent('/markets');
         fireEvent.click(screen.getByTestId('dt_top_nav_bot_builder'));
         expect(screen.getByTestId('dt_location')).toHaveTextContent('/bot-builder');
         fireEvent.click(screen.getByTestId('dt_top_nav_bulk_trader'));

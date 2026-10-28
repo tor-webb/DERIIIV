@@ -7,7 +7,18 @@ import { localize } from '@deriv-com/translations';
 
 import './dashboard.scss';
 
-type TIconName = 'trade' | 'chart' | 'bot' | 'bulk' | 'risk' | 'whatif' | 'learn' | 'copy' | 'positions' | 'reports';
+type TIconName =
+    | 'trade'
+    | 'markets'
+    | 'chart'
+    | 'bot'
+    | 'bulk'
+    | 'risk'
+    | 'whatif'
+    | 'learn'
+    | 'copy'
+    | 'positions'
+    | 'reports';
 
 type TTool = {
     id: string;
@@ -21,6 +32,7 @@ type TTool = {
 
 const ICON_PATHS: Record<TIconName, string> = {
     trade: 'M4 17l5-5 4 4 7-8M15 8h5v5',
+    markets: 'M4 19h16M6 15l3-4 3 2 4-6 2 3M6 15v4M12 13v6M16 7v12',
     chart: 'M5 20V10M12 20V4M19 20v-7',
     bot: 'M7 9h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2zM12 9V5M9 14h.01M15 14h.01M3 14v2M21 14v2',
     bulk: 'M4 7h4v4H4zM10 7h4v4h-4zM16 7h4v4h-4zM4 14h16M4 18h10',
@@ -57,6 +69,13 @@ const Dashboard = observer(() => {
             description: localize('Place Rise/Fall, Even/Odd and other contracts on live markets.'),
             path: routes.index,
             icon: 'trade',
+        },
+        {
+            id: 'markets',
+            title: localize('Markets'),
+            description: localize('Live prices, top movers and volatility, so you can pick a market before you trade.'),
+            path: routes.markets,
+            icon: 'markets',
         },
         {
             id: 'charts',

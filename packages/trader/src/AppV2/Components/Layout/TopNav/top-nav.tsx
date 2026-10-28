@@ -36,6 +36,7 @@ const TopNav = observer(({ is_mobile = false }: TTopNavProps) => {
     const items: TNavItem[] = [
         { id: 'dashboard', label: localize('Dashboard'), path: routes.dashboard },
         { id: 'trade', label: localize('Trade'), path: routes.index, exact: true },
+        { id: 'markets', label: localize('Markets'), path: routes.markets },
         { id: 'charts', label: localize('Charts'), path: routes.charts },
         { id: 'bot_builder', label: localize('Bot Builder'), path: routes.bot_builder },
         { id: 'bulk_trader', label: localize('Bulk Trader'), path: routes.bulk_trader },
