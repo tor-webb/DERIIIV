@@ -2,7 +2,7 @@
 
 ## PICK UP HERE (written 2026-10-27, read this block first)
 
-> **Newer (2026-10-28):** branch `bot-templates-and-markets` adds the Bot Templates drawer and the Markets page. Read `docs/TEMPLATES_AND_MARKETS_HANDOFF.md` for what is verified and the browser checks still owed.
+> **Newest (2026-10-28):** read `docs/ROADMAP_HANDOFF.md` first: state, repo tips, the browser checks still owed, and the full build roadmap (safety, Markets quick wins, saved bots, more blocks, trade journal, price alerts). Earlier that day Bot Templates and the Markets page were added; see `docs/TEMPLATES_AND_MARKETS_HANDOFF.md`.
 
 **State.** Everything is on `main` (head `6070369`), deployed and green. Every old branch is merged except `handoff-update`
 (one old notes-only commit, ignore it; safe to delete). `news-data` is a data branch written by a bot, never merge it.
