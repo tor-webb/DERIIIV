@@ -2,6 +2,10 @@ import * as Blockly from 'blockly';
 
 import { localize } from '@deriv-com/translations';
 
+import { MARKETS } from './bot-markets';
+
+export { MARKETS };
+
 /**
  * Block vocabulary. Block types and field names follow Deriv Bot so bots exported from Deriv Bot load here.
  * (`trade_definition`, `trade_definition_market`, `SYMBOL_LIST`, `PURCHASE_LIST`, `PREDICTION`, ...)
@@ -128,45 +132,6 @@ export const getBlocklyTheme = () =>
 /* ----------------------------------------------------------------------------------------------- */
 /* Markets and trade types                                                                          */
 /* ----------------------------------------------------------------------------------------------- */
-
-export const MARKETS: Record<
-    string,
-    { label: string; submarkets: Record<string, { label: string; symbols: [string, string][] }> }
-> = {
-    synthetic_index: {
-        label: 'Derived',
-        submarkets: {
-            random_index: {
-                label: 'Continuous Indices',
-                symbols: [
-                    ['Volatility 10 Index', 'R_10'],
-                    ['Volatility 25 Index', 'R_25'],
-                    ['Volatility 50 Index', 'R_50'],
-                    ['Volatility 75 Index', 'R_75'],
-                    ['Volatility 100 Index', 'R_100'],
-                    ['Volatility 10 (1s) Index', '1HZ10V'],
-                    ['Volatility 25 (1s) Index', '1HZ25V'],
-                    ['Volatility 50 (1s) Index', '1HZ50V'],
-                    ['Volatility 75 (1s) Index', '1HZ75V'],
-                    ['Volatility 100 (1s) Index', '1HZ100V'],
-                ],
-            },
-        },
-    },
-    forex: {
-        label: 'Forex',
-        submarkets: {
-            major_pairs: {
-                label: 'Major Pairs',
-                symbols: [
-                    ['EUR/USD', 'frxEURUSD'],
-                    ['GBP/USD', 'frxGBPUSD'],
-                    ['USD/JPY', 'frxUSDJPY'],
-                ],
-            },
-        },
-    },
-};
 
 export type TTradeTypeConfig = {
     category: string;

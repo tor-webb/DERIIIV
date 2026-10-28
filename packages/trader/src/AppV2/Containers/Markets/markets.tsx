@@ -7,6 +7,8 @@ import { localize } from '@deriv-com/translations';
 
 import { useTraderStore } from 'Stores/useTraderStores';
 
+import { findBotMarket } from '../BotBuilder/bot-markets';
+
 import {
     formatPercent,
     formatPrice,
@@ -115,6 +117,9 @@ const Markets = () => {
         }
         history.push({ pathname: routes.index, search: `?symbol=${encodeURIComponent(symbol)}` });
     };
+
+    const openBot = (symbol: string) =>
+        history.push({ pathname: routes.bot_builder, search: `?market=${encodeURIComponent(symbol)}` });
 
     const movers = React.useMemo(() => getTopMovers(rows), [rows]);
 
@@ -274,15 +279,32 @@ const Markets = () => {
                                         </span>
                                     </>
                                 )}
-                                <button
-                                    type='button'
-                                    className='markets__button markets__button--small'
-                                    disabled={row.status === 'unavailable'}
-                                    data-testid={`dt_markets_trade_${row.symbol}`}
-                                    onClick={() => openTrade(row.symbol)}
-                                >
-                                    {localize('Trade')}
-                                </button>
+                                <span className='markets__actions'>
+                                    <button
+                                        type='button'
+                                        className='markets__button markets__button--small markets__button--ghost'
+                                        disabled={row.status === 'unavailable' || !findBotMarket(row.symbol)}
+                                        title={
+                                            findBotMarket(row.symbol)
+                                                ? undefined
+                                                : localize('Bot Builder cannot trade this market yet')
+                                        }
+                                        aria-label={localize('Build a bot for {{name}}', { name: row.name })}
+                                        data-testid={`dt_markets_bot_${row.symbol}`}
+                                        onClick={() => openBot(row.symbol)}
+                                    >
+                                        {localize('Bot')}
+                                    </button>
+                                    <button
+                                        type='button'
+                                        className='markets__button markets__button--small'
+                                        disabled={row.status === 'unavailable'}
+                                        data-testid={`dt_markets_trade_${row.symbol}`}
+                                        onClick={() => openTrade(row.symbol)}
+                                    >
+                                        {localize('Trade')}
+                                    </button>
+                                </span>
                             </li>
                         );
                     })}

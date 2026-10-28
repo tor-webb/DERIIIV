@@ -12,7 +12,7 @@ const real = { is_logged_in: true, is_virtual: false, pathname: '/dashboard' };
 
 describe('getAssistantReply', () => {
     it('sends each suggested question to the right topic', () => {
-        const expected = ['trade', 'bot_what', 'bot_import', 'demo_real', 'bot_limits'];
+        const expected = ['trade', 'bot_what', 'bot_import', 'demo_real', 'bot_limits', 'bot_templates', 'markets'];
         SUGGESTED_QUESTIONS().forEach((question, index) => {
             expect(getAssistantReply(question, guest).id).toBe(expected[index]);
         });
@@ -29,6 +29,14 @@ describe('getAssistantReply', () => {
         ['where are my past trades', 'reports'],
         ['how do I download my statement', 'reports'],
         ['show me the charts and indicators', 'charts'],
+        ['where can I see live prices and the top movers', 'markets'],
+        ['how do I add a market to my watchlist', 'markets'],
+        ['which market should I trade', 'markets'],
+        ['which markets are the most volatile', 'markets'],
+        ['are there any bot templates', 'bot_templates'],
+        ['how do I import a bot template', 'bot_templates'],
+        ['I want a ready made strategy', 'bot_templates'],
+        ['import a bot from a file', 'bot_import'],
     ])('answers "%s" with the %s topic', (question, id) => {
         expect(getAssistantReply(question, guest).id).toBe(id);
     });
@@ -54,6 +62,20 @@ describe('getAssistantReply', () => {
     it('tells you where you are from the current path', () => {
         expect(getAssistantReply('where am I', { ...guest, pathname: '/bot-builder' }).text).toMatch(/Bot Builder/);
         expect(getAssistantReply('where am I', { ...guest, pathname: '/' }).text).toMatch(/Trade page/);
+    });
+
+    it('describes Markets and Templates without promising results', () => {
+        const markets = getAssistantReply('tell me about the watchlist', guest);
+        expect(markets.actions.map(a => a.path)).toContain('/markets');
+        expect(markets.text).toMatch(/not which way it will go/);
+        const templates = getAssistantReply('bot templates', guest);
+        expect(templates.text).toMatch(/not advice/);
+        expect(templates.text).toMatch(/demo account/);
+        expect(templates.text).not.toMatch(/you will (win|profit)|always win/i);
+    });
+
+    it('knows when you are on the Markets page', () => {
+        expect(getAssistantReply('where am I', { ...guest, pathname: '/markets' }).text).toMatch(/Markets/);
     });
 
     it('falls back with a helpful message when it does not understand', () => {

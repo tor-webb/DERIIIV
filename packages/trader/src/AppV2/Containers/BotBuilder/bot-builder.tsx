@@ -7,6 +7,7 @@ import { observer, useStore } from '@deriv/stores';
 import { localize } from '@deriv-com/translations';
 
 import { getBlocklyTheme, getToolbox, registerBlocks } from './blocks';
+import { findBotMarket } from './bot-markets';
 import {
     exportWorkspaceXml,
     formatTime,
@@ -61,6 +62,20 @@ const askUser = (message: string, kind: 'NUMBER' | 'TEXT'): number | string => {
     throw new Error(localize('The bot stopped because no number was entered.'));
 };
 
+/** The Markets page opens Bot Builder with `?market=SYMBOL`. Only a market that Bot Builder can trade is accepted. */
+const readMarketParam = () => findBotMarket(new URLSearchParams(window.location.search).get('market'));
+
+const dropMarketParam = () => {
+    try {
+        const url = new URL(window.location.href);
+        if (!url.searchParams.has('market')) return;
+        url.searchParams.delete('market');
+        window.history.replaceState(window.history.state, '', `${url.pathname}${url.search}${url.hash}`);
+    } catch {
+        // the address bar is only cosmetic here
+    }
+};
+
 const parseLimit = (value: string) => {
     const parsed = Number(value);
     return Number.isFinite(parsed) && parsed > 0 ? parsed : undefined;
@@ -91,7 +106,9 @@ const BotBuilder = observer(() => {
     const [tab, setTab] = React.useState<TPanelTab>('summary');
     const [journal, setJournal] = React.useState<TJournalEntry[]>([]);
     const [transactions, setTransactions] = React.useState<TTransaction[]>([]);
-    const [is_templates_open, setIsTemplatesOpen] = React.useState(false);
+    const [initial_market] = React.useState(readMarketParam);
+    const [chosen_market, setChosenMarket] = React.useState(initial_market);
+    const [is_templates_open, setIsTemplatesOpen] = React.useState(Boolean(initial_market));
     const [can_restore, setCanRestore] = React.useState(false);
 
     const log = React.useCallback((level: TJournalLevel, message: string) => {
@@ -298,6 +315,7 @@ const BotBuilder = observer(() => {
         previous_bot_ref.current = backup;
         setCanRestore(true);
         setIsTemplatesOpen(false);
+        dropMarketParam();
         saveWorkspaceToStorage(workspace);
         log(
             'success',
@@ -440,9 +458,17 @@ const BotBuilder = observer(() => {
                     <TemplatesPanel
                         is_disabled={is_active}
                         can_restore={can_restore}
+                        market={chosen_market}
+                        onClearMarket={() => {
+                            setChosenMarket(null);
+                            dropMarketParam();
+                        }}
                         onImport={importTemplate}
                         onRestore={restorePreviousBot}
-                        onClose={() => setIsTemplatesOpen(false)}
+                        onClose={() => {
+                            setIsTemplatesOpen(false);
+                            dropMarketParam();
+                        }}
                     />
                 )}
             </div>

@@ -1,6 +1,7 @@
 import * as Blockly from 'blockly';
 
 import { registerBlocks } from '../blocks';
+import { findBotMarket, MARKETS } from '../bot-markets';
 import { loadParsedBot, parseBotFile, validateBot } from '../bot-utils';
 import { compileProgram } from '../Engine/compile';
 import { execute, TInterpreterContext } from '../Engine/interpreter';
@@ -66,6 +67,59 @@ describe('bot templates', () => {
         expect(compiled.digit_over_2.options.prediction).toEqual({ t: 'num', v: 2 });
         expect(compiled.rise_fall_basic.options.duration).toEqual({ t: 'num', v: 5 });
         expect(compiled.even_odd_basic.options.duration).toEqual({ t: 'num', v: 1 });
+    });
+
+    describe('built for a market picked on the Markets page', () => {
+        const everySymbol = Object.values(MARKETS).flatMap(market =>
+            Object.values(market.submarkets).flatMap(submarket => submarket.symbols.map(([, symbol]) => symbol))
+        );
+
+        it("uses each bot's own market when no market is given or the market is unknown", () => {
+            const defaults = getBotTemplates();
+            expect(getBotTemplates(null).map(item => item.symbol)).toEqual(defaults.map(item => item.symbol));
+            expect(getBotTemplates('NOPE').map(item => item.symbol)).toEqual(defaults.map(item => item.symbol));
+            expect(defaults.find(item => item.id === 'digit_over_2')?.symbol).toBe('R_100');
+        });
+
+        it('offers all five bots on a Derived index, trading that index in ticks', () => {
+            const list = getBotTemplates('R_10');
+            expect(list).toHaveLength(5);
+            list.forEach(item => {
+                expect(item.symbol).toBe('R_10');
+                expect(item.facts[0]).toBe('Volatility 10 Index');
+                const program = compileProgram(loadTemplate(item.xml));
+                expect(program.setup.symbol).toBe('R_10');
+                expect(program.options.duration_unit).toBe('t');
+            });
+        });
+
+        it('mentions the chosen market in the description', () => {
+            const rise_fall = getBotTemplates('1HZ50V').find(item => item.id === 'rise_fall_basic');
+            expect(rise_fall?.description).toContain('Volatility 50 (1s) Index');
+        });
+
+        it('leaves out the digit bots on forex and uses 5 minute contracts', () => {
+            const list = getBotTemplates('frxEURUSD');
+            expect(list.map(item => item.id)).toEqual(['rise_fall_basic', 'win_ladder', 'martingale_rise_fall']);
+            list.forEach(item => {
+                expect(item.facts).toEqual(expect.arrayContaining(['EUR/USD', '5 minutes']));
+                const program = compileProgram(loadTemplate(item.xml));
+                expect(program.setup).toMatchObject({ symbol: 'frxEURUSD', trade_type: 'risefall' });
+                expect(program.options.duration_unit).toBe('m');
+                expect(program.options.duration).toEqual({ t: 'num', v: 5 });
+            });
+        });
+
+        it.each(everySymbol)('every bot built for %s imports, loads, validates and compiles', symbol => {
+            const list = getBotTemplates(symbol);
+            expect(list.length).toBeGreaterThanOrEqual(3);
+            list.forEach(item => {
+                const workspace = loadTemplate(item.xml);
+                expect(validateBot(workspace).filter(issue => issue.level === 'error')).toEqual([]);
+                expect(compileProgram(workspace).setup.symbol).toBe(symbol);
+            });
+            expect(findBotMarket(symbol)).not.toBeNull();
+        });
     });
 
     describe('stake changing bots, run through the interpreter', () => {

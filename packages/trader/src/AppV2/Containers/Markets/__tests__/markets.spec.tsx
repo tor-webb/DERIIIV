@@ -195,6 +195,40 @@ describe('<Markets />', () => {
         });
     });
 
+    describe('building a bot for a market', () => {
+        it('opens Bot Builder with the market in the address', async () => {
+            renderPage();
+            fireEvent.click(screen.getByTestId('dt_markets_bot_R_10'));
+            await waitFor(() =>
+                expect(screen.getByTestId('dt_location')).toHaveTextContent('/bot-builder?market=R_10')
+            );
+            expect(mockOnChange).not.toHaveBeenCalled();
+        });
+
+        it('works for a forex pair that Bot Builder trades', async () => {
+            renderPage();
+            fireEvent.click(screen.getByTestId('dt_markets_bot_frxEURUSD'));
+            await waitFor(() =>
+                expect(screen.getByTestId('dt_location')).toHaveTextContent('/bot-builder?market=frxEURUSD')
+            );
+        });
+
+        it('is switched off, with a reason, for a market Bot Builder cannot trade yet', () => {
+            mockState = { ...mockState, rows: [row({ symbol: 'frxNZDUSD', name: 'NZD/USD', group: 'forex' })] };
+            renderPage();
+            const button = screen.getByTestId('dt_markets_bot_frxNZDUSD');
+            expect(button).toBeDisabled();
+            expect(button).toHaveAttribute('title', 'Bot Builder cannot trade this market yet');
+            // Trade still works for it
+            expect(screen.getByTestId('dt_markets_trade_frxNZDUSD')).toBeEnabled();
+        });
+
+        it('is switched off for a market that is unavailable', () => {
+            renderPage();
+            expect(screen.getByTestId('dt_markets_bot_frxGBPUSD')).toBeDisabled();
+        });
+    });
+
     describe('loading and errors', () => {
         it('says it is loading until the first prices arrive', () => {
             mockState = {
