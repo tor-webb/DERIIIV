@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T15:18:26.766Z",
+ "updated": "2026-10-28T20:27:28.066Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,40 +12,274 @@
  },
  "items": [
   {
-   "id": "ci3cyv",
-   "title": "The one thing the chancellor didn't mention that will affect your pay",
-   "link": "https://www.bbc.co.uk/news/articles/clydn7r5pn1o?at_medium=RSS&at_campaign=rss",
-   "summary": "The point at which you start to pay tax, and the point where you tip into paying a higher rate of tax have been frozen for three more years.",
-   "published": "2026-10-28T15:11:48.000Z",
+   "id": "zboc02",
+   "title": "What we now know about the UK economy in four charts",
+   "link": "https://www.bbc.co.uk/news/articles/c9x28350ly07o?at_medium=RSS&at_campaign=rss",
+   "summary": "The Office for Budget Responsibility says higher energy prices will impact everything from prices and living standards to economic growth.",
+   "published": "2026-10-28T20:08:45.000Z",
    "source": "BBC Business",
    "category": "economy"
+  },
+  {
+   "id": "1g1plav",
+   "title": "What the Budget offers for under 25s - and what it leaves out",
+   "link": "https://www.bbc.co.uk/news/articles/c60e05yn3w9zo?at_medium=RSS&at_campaign=rss",
+   "summary": "The chancellor announced a series of measures which will impact under-25 year-olds from housing to minimum wage.",
+   "published": "2026-10-28T20:02:38.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "153u63v",
+   "title": "Economic and event calendar in Asia Thursday, October 29, 2026",
+   "link": "https://investinglive.com/news/economic-and-event-calendar-in-asia-thursday-october-29-2026/",
+   "summary": "Lower tier data only on the agenda for the session ahead. There are much-awiated earnings releases after the US RTH close, MSFT and Alphabet. (GOOGL) This article was written by Eamonn Sheridan at investinglive.com.",
+   "published": "2026-10-28T19:56:30.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1uu1wr9",
+   "title": "Dharshini David: Healey buys himself some time, but big questions still unanswered",
+   "link": "https://www.bbc.co.uk/news/articles/cqe9l4px0yzxo?at_medium=RSS&at_campaign=rss",
+   "summary": "The chancellor talked of charting a new course for Britain, but the impact of Iran war has limited his options.",
+   "published": "2026-10-28T19:51:01.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-10-28T19:46:45.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "10eyjv9",
+   "title": "Fed holds interest rates steady in last decision before midterms",
+   "link": "https://www.theguardian.com/business/2026/oct/28/fed-interest-rates-midterms",
+   "summary": "Fed chair Kevin Warsh said politics played no role in pause of interest rate hikes, despite inflation remaining above 3% The US Federal Reserve left interest rates unchanged on Wednesday during its last board meeting…",
+   "published": "2026-10-28T19:26:41.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "1f6zu15",
+   "title": "The before and after. A look at the changes in forex, rates, stocks through the FOMC decision and press conference.",
+   "link": "https://investinglive.com/central-banks/the-before-and-after-a-look-at-the-changes-in-forex-rates-stocks-through-the-fomc-decision-and-press-conference/",
+   "summary": "So what happened from right before the decision to the end of the Fed Warsh press conference at 3:04 PM ET. The before-and-after comparison shows a clear reaction: The USD fell against every currency shown,…",
+   "published": "2026-10-28T19:21:58.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "v4xvjd",
+   "title": "Elon Musk is a 'real genius', Putin says after satellite talks with SpaceX boss",
+   "link": "https://www.bbc.co.uk/news/articles/c63djl148n3eo?at_medium=RSS&at_campaign=rss",
+   "summary": "The Russian President praised Musk and said they are in \"close\" contact.",
+   "published": "2026-10-28T19:15:58.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "k84h10",
+   "title": "Sam Bankman-Fried wrote to actor portraying him in Netflix series",
+   "link": "https://cointelegraph.com/news/sam-bankman-fried-actor-anthony-boyle-netflix?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The former FTX CEO remains incarcerated as Irish actor Anthony Boyle portrays him in a series about the downfall of the crypto exchange and his relationship with Caroline Ellison.",
+   "published": "2026-10-28T19:10:40.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1xgr3bl",
+   "title": "Healey tells departments to make 1% cuts to fund defence",
+   "link": "https://www.bbc.co.uk/news/articles/c65ynl0px107o?at_medium=RSS&at_campaign=rss",
+   "summary": "The reduction in public spending will go towards paying for the Defence Investment Plan.",
+   "published": "2026-10-28T19:01:34.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1lh4wsz",
+   "title": "Healey unveils £100 for energy bills and bank tax in first Budget",
+   "link": "https://www.bbc.co.uk/news/articles/cqpvgxz3y49go?at_medium=RSS&at_campaign=rss",
+   "summary": "The chancellor targets the cost of living amid global economic turmoil but opposition parties say he has not been bold enough.",
+   "published": "2026-10-28T18:45:09.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1lbdfti",
+   "title": "Fed Chairman Kevin Warsh: More information will help determine appropriate policy steps",
+   "link": "https://investinglive.com/central-banks/fed-chairman-kevin-warsh-more-information-will-help-determine-appropriate-policy-steps/",
+   "summary": "Q3 GDP likely above 3%, led by healthy consumer spending Business likely rising at about a double digit pace Capex is historically high Employment conditions are positive The committee believes more information will…",
+   "published": "2026-10-28T18:34:51.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "vke0yl",
+   "title": "Qatar trying to convince Iran to allow UN nuclear inspectors - report",
+   "link": "https://investinglive.com/news/qatar-trying-to-convince-iran-to-allow-un-nuclear-inspectors-report/",
+   "summary": "Axios' Barak Ravid is out with a new report: Mediators led by Qatar are trying to restart negotiations after the midterms Qataris working to convince Iran to allow nuclear inspectors in return for some sanctions relief…",
+   "published": "2026-10-28T18:13:35.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "ci3cyv",
+   "title": "Tax thresholds remain unchanged - here's what it means for your pay",
+   "link": "https://www.bbc.co.uk/news/articles/clydn7r5pn1o?at_medium=RSS&at_campaign=rss",
+   "summary": "The point at which you start to pay tax, and the point where you tip into paying a higher rate of tax have been frozen for three more years.",
+   "published": "2026-10-28T18:12:24.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1x9vsio",
+   "title": "The full statement from the October 2026 FOMC rate decision",
+   "link": "https://investinglive.com/central-banks/the-full-statement-from-the-october-2026-fomc-rate-decision/",
+   "summary": "The full statement from the October 2026 rate decision: The Federal Open Market Committee approved the following statement for release by a 10 – 2 vote: The Committee decided to maintain the target range for the…",
+   "published": "2026-10-28T18:02:42.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "3u7n5i",
+   "title": "Strategy shareholders approve daily dividends for four preferred stocks",
+   "link": "https://cointelegraph.com/news/strategy-shareholders-approve-daily-dividends-for-four-preferred-stocks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The largest Bitcoin treasury company will begin daily dividend payments on STRC in November, with three other preferred securities following in January 2027.",
+   "published": "2026-10-28T18:00:54.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1nk79ds",
+   "title": "FOMC decision Oct 28: Rates left unchanged",
+   "link": "https://investinglive.com/central-banks/fomc-decision-oct-28/",
+   "summary": "The market flirted with pricing in an October rate hike for weeks but with little guidance from Chairman Kevin Warsh, the market ultimately tilted towards pricing in no move, with just a 7% chance at the time of the…",
+   "published": "2026-10-28T18:00:03.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "5h2i14",
+   "title": "Federal Reserve issues FOMC statement",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+   "summary": "Federal Reserve issues FOMC statement",
+   "published": "2026-10-28T18:00:00.000Z",
+   "source": "Federal Reserve",
+   "category": "economy"
+  },
+  {
+   "id": "ma6o2x",
+   "title": "Microsoft and Alphabet earnings after the close. What is expected?",
+   "link": "https://investinglive.com/stocks/microsoft-and-alphabet-earnings-after-the-close-what-is-expected/",
+   "summary": "Microsoft, and Alphabet report after today’s close, with investors looking for solid revenue growth and evidence that spending on artificial intelligence is translating into stronger business performance. Microsoft…",
+   "published": "2026-10-28T17:54:03.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "rofhs3",
+   "title": "Will I get the £100 energy payment and when will I receive it?",
+   "link": "https://www.bbc.co.uk/news/articles/c35yn8x748e9o?at_medium=RSS&at_campaign=rss",
+   "summary": "Here is what you need to know about the payment that millions will receive from January.",
+   "published": "2026-10-28T17:47:37.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "inzbj7",
+   "title": "For reference: The September 16 FOMC statement",
+   "link": "https://investinglive.com/central-banks/for-reference-the-september-16-fomc-statement/",
+   "summary": "It's always a good idea to re-read the prior FOMC statement before the new one is published. Don't expect the Warsh Fed to offer much in the way of guidance. The Federal Open Market Committee approved the following…",
+   "published": "2026-10-28T17:26:38.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1qkzoj0",
+   "title": "Crypto PAC spending before midterms possibly obscured after reported FEC hack",
+   "link": "https://cointelegraph.com/news/crypto-pac-spending-midterms-fec-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The FEC reported an “electronic filing system outage” on Tuesday as groups are expected to ramp up spending before the US midterm elections.",
+   "published": "2026-10-28T17:05:42.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1c3wiv9",
+   "title": "Iran's Araghchi: Iran continues to give diplomacy a chance to succeed",
+   "link": "https://investinglive.com/news/iran-s-araghchi-iran-continues-to-give-diplomacy-a-chance-to-succeed/",
+   "summary": "Post from Iran's foreign minister on twitter: While our Brave Armed Forces are fully prepared to defend the Homeland, Iran continues to give diplomacy a chance to succeed. We remain in close and ongoing contact with…",
+   "published": "2026-10-28T16:58:56.000Z",
+   "source": "investingLive",
+   "category": "forex"
   },
   {
    "id": "wyl4v",
    "title": "Budget 2026: Key points at a glance",
    "link": "https://www.bbc.co.uk/news/articles/c6x2zrjl7kjno?at_medium=RSS&at_campaign=rss",
    "summary": "Here’s what you need to know from John Healey’s first Budget, as the chancellor sets out the government’s tax and spending plans.",
-   "published": "2026-10-28T15:04:50.000Z",
+   "published": "2026-10-28T16:55:27.000Z",
    "source": "BBC Business",
    "category": "economy"
   },
   {
-   "id": "lbnw4g",
-   "title": "Budget 2026 live: Healey announces £100 energy payment for millions and rise in bank tax",
-   "link": "https://www.theguardian.com/uk-news/live/2026/oct/28/budget-2026-latest-updates-john-healey-andy-burnham-labour-uk-politics",
-   "summary": "Chancellor also announces tax relief for business founders, and funding to tackle rough sleeping and ‘new deal for datacentres’ Budget 2026: key points at a glance Martin Lewis said that, when he met John Healey this…",
-   "published": "2026-10-28T14:58:22.000Z",
-   "source": "The Guardian Business",
+   "id": "yebqo8",
+   "title": "Bitcoin price bounce rejected at 50-day trend line ahead of FOMC, earnings",
+   "link": "https://cointelegraph.com/markets/bitcoin-price-bounce-rejected-at-50-day-trend-line-ahead-of-fomc-earnings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Bitcoin failed to move past its 50-day simple moving average as market participants awaited the outcome of the FOMC meeting and key tech earnings.",
+   "published": "2026-10-28T16:53:26.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1dexstl",
+   "title": "Your pay, energy bills and savings: How the Budget affects you",
+   "link": "https://www.bbc.co.uk/news/articles/cr0j05vxlwjzo?at_medium=RSS&at_campaign=rss",
+   "summary": "Changes announced by Chancellor John Healey in his first Budget will affect your finances directly. Here's how.",
+   "published": "2026-10-28T16:43:35.000Z",
+   "source": "BBC Business",
    "category": "economy"
   },
   {
-   "id": "1jzxqfj",
-   "title": "UK growth forecast for 2027 slashed despite Healey’s budget measures",
-   "link": "https://www.theguardian.com/business/2026/oct/28/obr-slashes-uk-growth-forecast-for-2027-despite-healey-budget-measures",
-   "summary": "OBR outlook for living standards also downgraded as part of impact of Middle East conflict on economy Healey offers £100 payment to households to help navigate ‘global economic storms’ Budget 2026: key points at a…",
-   "published": "2026-10-28T14:57:29.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
+   "id": "1owfgu9",
+   "title": "Phantom launches Kalshi-powered prediction markets for US users",
+   "link": "https://cointelegraph.com/news/phantom-launches-kalshi-powered-prediction-markets-for-us-users?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The crypto wallet’s new integration offers CFTC-regulated event contracts through Kalshi, as prediction markets face growing legal challenges in the US.",
+   "published": "2026-10-28T16:40:02.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1baic6x",
+   "title": "Crude oil extends to a session high of $103.53 as Iran concerns keep buyers in control",
+   "link": "https://investinglive.com/commodities/crude-oil-extends-to-a-session-high-of-103-53-as-iran-concerns-keep-buyers-in-control/",
+   "summary": "Crude oil futures have extended to a new session high of $103.53, with the latest price up $3.59, or 3.57%, on the day. The move brings the price closer to the $103.92 high from earlier this week, with additional…",
+   "published": "2026-10-28T16:34:28.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "xuepfb",
+   "title": "AUDUSD ping-pongs between moving averages. What would break the stalemate?",
+   "link": "https://investinglive.com/technical-analysis/audusd-ping-pongs-between-moving-averages-what-would-break-the-stalemate/",
+   "summary": "The AUDUSD got a lift in Asian trading as Australia’s inflation data and hawkish comments from RBA Governor Michele Bullock gave buyers a reason to push higher. September headline inflation rose to 4.3% from 4.0%,…",
+   "published": "2026-10-28T16:13:53.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "94q4bo",
+   "title": "NZDUSD tumbles after surprise RBNZ hold. Sellers retain control as the rebound stalls.",
+   "link": "https://investinglive.com/technical-analysis/nzdusd-tumbles-after-surprise-rbnz-hold-sellers-retain-control-as-the-rebound-stalls/",
+   "summary": "The RBNZ held its cash rate at 2.75% on October 28, surprising markets that had heavily priced in a 25-basis-point hike to 3.00%. The probability of a hike ahead of the decision was estimated near 88%, with some…",
+   "published": "2026-10-28T15:02:06.000Z",
+   "source": "investingLive",
+   "category": "forex"
   },
   {
    "id": "1n589mz",
@@ -57,39 +291,21 @@
    "category": "economy"
   },
   {
-   "id": "1dexstl",
-   "title": "Your pay, energy bills and savings: How the Budget affects you",
-   "link": "https://www.bbc.co.uk/news/articles/cr0j05vxlwjzo?at_medium=RSS&at_campaign=rss",
-   "summary": "Changes announced by Chancellor John Healey in his first Budget will affect your finances directly. Here's how.",
-   "published": "2026-10-28T14:50:31.000Z",
-   "source": "BBC Business",
+   "id": "11g7jr9",
+   "title": "Trump says government to ‘terminate’ Biden-era methane emissions rules",
+   "link": "https://www.theguardian.com/us-news/2026/oct/27/trump-biden-era-methane-emissions-rules-oil-gas",
+   "summary": "Critics warn of climate danger as president in Texas claims change will save companies and consumers billions Donald Trump said his administration is “terminating” Biden-era regulations holding oil and gas companies…",
+   "published": "2026-10-28T14:30:29.000Z",
+   "source": "The Guardian Business",
    "category": "economy"
   },
   {
-   "id": "1ead15s",
-   "title": "BOC's Macklem: Our surveys show businesses are planning to pass on more of these cost increases",
-   "link": "https://investinglive.com/central-banks/boc-s-macklem-our-surveys-show-businesses-are-planning-to-pass-on-more-of-these-cost-increases/",
-   "summary": "Energy prices have been high for 8 months and look like they're going to stay high We are seeing more investment in the energy secretary Business can absorb higher costs for awhile but ultimately they pass them on Our…",
-   "published": "2026-10-28T14:44:23.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "177kzjn",
-   "title": "The weekly oil inventory data shows a drawdown of -1.892M vs expectations of a 0.015M build.",
-   "link": "https://investinglive.com/commodities/the-weekly-oil-inventory-data-shows-a-drawdown-of-1-892m-vs-expectations-of-a-0-015m-build/",
-   "summary": "For the week ending October 23: Crude oil inventories: −1.892 million barrels vs +0.015 million expected. Prior −3.060 million. Gasoline inventories: +3.870 million barrels vs −0.942 million expected. Prior −2.952…",
-   "published": "2026-10-28T14:30:17.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "q0llc5",
-   "title": "Give UK workers right to know colleagues’ pay to prevent disparities, says watchdog",
-   "link": "https://www.theguardian.com/money/2026/oct/28/uk-workers-right-know-colleagues-pay-disparities-gender-pay-gap-discrimination-watchdog-ehrc",
-   "summary": "EHRC says transparency needed to prevent pay discrimination, particularly against women Workers should have a legal right to know their colleagues’ pay to help prevent pay discrimination, particularly against women,…",
-   "published": "2026-10-28T13:58:01.000Z",
-   "source": "The Guardian Business",
+   "id": "1j0r1jb",
+   "title": "Remit for the Monetary Policy Committee - October 2026",
+   "link": "https://www.bankofengland.co.uk/letter/2026/mpc-remit-2026",
+   "summary": "Letter from the Chancellor to the Governor",
+   "published": "2026-10-28T14:16:49.000Z",
+   "source": "Bank of England",
    "category": "economy"
   },
   {
@@ -98,51 +314,6 @@
    "link": "https://cointelegraph.com/news/google-cloud-mpc-service-bitcoin-custody?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "summary": "Google Cloud has detailed its preview MPC service for institutional Bitcoin custody as it holds a New York symposium focused on digital asset security.",
    "published": "2026-10-28T13:47:51.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1wsdm54",
-   "title": "The full statement from the Bank of Canada rate decision for October 2026. Hikes by 25 basis points",
-   "link": "https://investinglive.com/central-banks/the-full-statement-from-the-bank-of-canada-rate-decision-for-october-2026-hikes-by-25-basis-points/",
-   "summary": "FOR IMMEDIATE RELEASE Media Relations Ottawa, Ontario October 28, 2026 Share this page on Facebook Share this page on X Share this page on LinkedIn Share this page by email The Bank of Canada today increased its target…",
-   "published": "2026-10-28T13:45:45.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "9klsod",
-   "title": "Bank of Canada rate decision: Hike to 2.50%",
-   "link": "https://investinglive.com/central-banks/bank-of-canada-rate-decision/",
-   "summary": "The market was pricing in a 78% chance of a rate hike Prior overnight rate was 2.25% Says inflation is higher and more persistent than in the July Report global economic activity has remained resilient, despite higher…",
-   "published": "2026-10-28T13:45:02.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1fpovi6",
-   "title": "Indian Rupee trims gains as higher oil prices put renewed pressure despite repeated RBI interventions",
-   "link": "https://investinglive.com/forex/indian-rupee-trims-gains-as-higher-oil-prices-put-renewed-pressure-despite-repeated-rbi-interventions/",
-   "summary": "USD: The Federal Reserve is widely expected to keep interest rates unchanged. With no new projections or dot plot expected at this meeting, changes in Fed Chair Warsh's or statement's language will be the main focus.…",
-   "published": "2026-10-28T13:43:50.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "30374n",
-   "title": "The USDCAD is trading in a neutral swing area ahead of the Bank of Canada rate decision",
-   "link": "https://investinglive.com/technical-analysis/the-usdcad-is-trading-in-a-neutral-swing-area-ahead-of-the-bank-of-canada-rate-decision/",
-   "summary": "BOC preview: A hike is favored, but the decision remains closely contested The Bank of Canada announces its rate decision at 9:45 AM ET, with expectations leaning toward a 25-basis-point increase to 2.50% from 2.25%.…",
-   "published": "2026-10-28T13:37:06.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-10-28T13:35:44.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
   },
@@ -156,24 +327,6 @@
    "category": "crypto"
   },
   {
-   "id": "wuqer2",
-   "title": "The market is pricing in a 78% chance of a Bank of Canada rate hike",
-   "link": "https://investinglive.com/central-banks/the-market-is-pricing-in-a-78-chance-of-a-bank-of-canada-rate-hike/",
-   "summary": "The Bank of Canada rate decision is due at 9:45 am ET and it's an uncertain one. The market shifted aggressively hawkish after comments from Macklem at the IMF meetings. That now has the market pricing in a 78% chance…",
-   "published": "2026-10-28T13:29:09.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "u9oiqf",
-   "title": "Crude oil is keeping the bullish bias by staying above the 100/200 hour MAs",
-   "link": "https://investinglive.com/commodities/crude-oil-is-keeping-the-bullish-bias-by-staying-above-the-100-200-hour-mas/",
-   "summary": "In the video above, I take a look at the technical picture for crude oil, where buyers continue to lean against the rising hourly moving averages. Those levels help define the bullish bias, the risk for buyers, and…",
-   "published": "2026-10-28T13:22:40.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1dqhefv",
    "title": "DTCC unit launches tokenization services",
    "link": "https://cointelegraph.com/news/dtcc-subsidiary-launches-tokenization-services?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -181,87 +334,6 @@
    "published": "2026-10-28T13:19:00.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "1vc1vcs",
-   "title": "Business secretary writes to Poundland owner as administration fears build",
-   "link": "https://www.theguardian.com/business/2026/oct/28/business-secretary-jonathan-reynolds-poundland-owner-gordon-brothers-administration-fears",
-   "summary": "Jonathan Reynolds has written to Gordon Brothers, which bought retailer for £1 last summer, to ‘establish the facts’ The business secretary has written to the owner of Poundland amid fears that the cut-price retailer…",
-   "published": "2026-10-28T13:16:12.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "wuiiza",
-   "title": "UK budget: Growth forecasts cut as Healey unveils £15 billion fiscal buffer",
-   "link": "https://investinglive.com/news/uk-budget-growth-forecasts-cut-as-healey-unveils-15-billion-fiscal-buffer/",
-   "summary": "The Office for Budget Responsibility (OBR) lowered its near-term growth forecasts but the government still expects to meet its fiscal rules, with £15 billion of headroom at the end of the forecast period. The headline…",
-   "published": "2026-10-28T12:59:28.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "r8c7wt",
-   "title": "GSK shares dive as weaker vaccine sales and restructuring charges unnerve investors",
-   "link": "https://www.theguardian.com/business/2026/oct/28/gsk-shares-dive-as-weaker-sales-and-mounting-costs-unnerve-investors",
-   "summary": "British pharma company reports declining profits amid concerns over looming patent loss for blockbuster HIV drug Business live – latest updates Shares in GSK slid on Wednesday despite the UK drugmaker reporting better…",
-   "published": "2026-10-28T12:44:37.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "1pxovry",
-   "title": "Budget 2026: key points at a glance",
-   "link": "https://www.theguardian.com/uk-news/2026/oct/28/budget-2026-key-points-john-healey",
-   "summary": "John Healey has announced his first budget – here are the main points, with political analysis Budget 2026 live – latest updates John Healey starts by saying that his budget is “delivered at a time when global…",
-   "published": "2026-10-28T12:40:45.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "1fppdu0",
-   "title": "US Wholesale inventories 0.6% vs 0.5% estimate",
-   "link": "https://investinglive.com/news/us-wholesale-inventories-0-6-vs-0-5-estimate/",
-   "summary": "Wholesale inventories: +0.6% MoM. Prior +0.5%, unrevised. Retail inventories: +0.3% MoM. Prior revised to +0.3% from +0.2%. Wholesale inventories: $1,011.5 billion, up 7.4% YoY. Retail inventories: $885.3 billion, up…",
-   "published": "2026-10-28T12:31:03.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1nu3v2l",
-   "title": "US September advance goods trade balance -134.9 billion vs -130.2 billion expected",
-   "link": "https://investinglive.com/news/us-september-advance-goods-trade-balance-vs-130-2-billion-expected/",
-   "summary": "Prior was -132.6 These are the two worst back-to-back months since just before Liberation Day, when goods were flooding into the US to try to front-run Trump's tariffs. Excluding Jan-Mar 2025, it's the worst two-month…",
-   "published": "2026-10-28T12:30:30.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "iroslj",
-   "title": "Microsoft and Alphabet report tonight. Wall Street's earnings recovery has a catch.",
-   "link": "https://investinglive.com/stocks/microsoft-and-alphabet-report-tonight-wall-street-s-earnings-recovery-has-a-catch/",
-   "summary": "Microsoft and Alphabet report tonight. Wall Street's earnings recovery has a catch. Earnings reactions are improving across more companies, but some heavyweight stocks are still dragging down the broader picture. Now a…",
-   "published": "2026-10-28T12:29:38.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "q73bic",
-   "title": "Bafta trustees may have broken charity law by accepting free guest tickets",
-   "link": "https://www.theguardian.com/culture/2026/oct/28/bafta-trustees-charity-law-accepting-free-guest-tickets",
-   "summary": "Chair of membership council says legal advice obtained at own expense suggests offences could have been committed Bafta trustees may have breached charity and company law by accepting free tickets for guests at the…",
-   "published": "2026-10-28T11:44:29.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "1b4g9vl",
-   "title": "‘Elonville’: US residents say Musk’s xAI offered to buy homes if they don’t sue over datacenter noise",
-   "link": "https://www.theguardian.com/us-news/2026/oct/28/datacenter-noise-lawsuit-elon-musk-mississippi",
-   "summary": "Several Mississippi homes have been purchased near datacenters and one resident said realtor outlined target to buy more than 400 People in a Mississippi neighborhood, many of whom dislike a nearby power plant central…",
-   "published": "2026-10-28T11:30:01.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
   },
   {
    "id": "1ero4bt",
@@ -291,24 +363,6 @@
    "category": "economy"
   },
   {
-   "id": "2sq06e",
-   "title": "Luxury cruise passengers stranded in Cambodia due to soaring fuel costs",
-   "link": "https://www.bbc.co.uk/news/articles/cwj342k62exyo?at_medium=RSS&at_campaign=rss",
-   "summary": "The Villa Vie Odyssey suspended its voyage and is working with passengers on \"temporary living arrangements\".",
-   "published": "2026-10-28T10:31:22.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "10eyjv9",
-   "title": "Fed set to hold interest rates steady in last decision before midterms",
-   "link": "https://www.theguardian.com/business/2026/oct/28/fed-interest-rates-midterms",
-   "summary": "US central bank last month raised rates for first time since 2023, in move that infuriated Donald Trump The US Federal Reserve is expected to leave interest rates unchanged on Wednesday during its last rate-setting…",
-   "published": "2026-10-28T10:00:03.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
    "id": "1anu4rr",
    "title": "Bitcoin price eyes $82K as Morgan Stanley strategist says most of correction is over",
    "link": "https://cointelegraph.com/markets/bitcoin-price-eyes-82k-as-morgan-stanley-strategist-says-most-of-correction-is-over?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -318,129 +372,39 @@
    "category": "crypto"
   },
   {
-   "id": "w0kfel",
-   "title": "Bitcoin ETF inflows climb to $176M as BTC rebounds above $80K",
-   "link": "https://cointelegraph.com/markets/bitcoin-etf-176-million-inflow-sentiment-rebounds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "US spot Bitcoin ETFs drew $286 million over two days, narrowing October’s net outflows to $26 million as the Crypto Fear & Greed Index remained neutral.",
-   "published": "2026-10-28T07:57:18.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1td2h1n",
-   "title": "Coinbase denies systems breach, says vendor exposed customer data",
-   "link": "https://cointelegraph.com/news/coinbase-analytics-provider-customer-data?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Coinbase said that an incident at analytics vendor Amplitude exposed some customers’ contact data, but it found no evidence of unauthorized access to its own systems.",
-   "published": "2026-10-28T07:42:55.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "7cqb7l",
-   "title": "Robinhood’s Tenev warns US tokenization uncertainty deters ‘serious assets’",
-   "link": "https://cointelegraph.com/news/robinhoods-tenev-warns-us-tokenization-uncertainty-deters-serious-assets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Robinhood CEO Vlad Tenev says tokenized equities need more than a temporary SEC exemption to flourish in the US.",
-   "published": "2026-10-28T03:55:57.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1s1ohks",
-   "title": "Bithumb discloses data leak after internal system breach: Report",
-   "link": "https://cointelegraph.com/news/bithumb-discloses-data-leak-after-internal-system-breach-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The breach impacted its in-house mobile system, used by employees for work and information sharing.",
-   "published": "2026-10-28T02:18:47.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1b5qcr4",
-   "title": "Discord is making public chats searchable on Google: How to opt out",
-   "link": "https://cointelegraph.com/news/discord-is-making-public-chats-searchable-on-google-how-to-opt-out?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Discord conversations on large public servers will soon reach audiences far beyond their communities, raising privacy concerns.",
-   "published": "2026-10-28T00:47:04.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "po3ayk",
-   "title": "Plan for multibillion-pound Sizewell nuclear plant a ‘terrible deal’ for UK taxpayers, MPs say",
-   "link": "https://www.theguardian.com/business/2026/oct/28/plan-for-multibillion-pound-sizewell-nuclear-plant-a-terrible-deal-for-uk-taxpayers-mps-say",
-   "summary": "The public accounts committee has said the risk to billpayers is ‘extraordinary’ The government’s plan to fund a multibillion-pound nuclear plant at the Sizewell site in Suffolk represents a “terrible deal” for the UK…",
-   "published": "2026-10-28T00:01:47.000Z",
+   "id": "57r7wb",
+   "title": "San Francisco estate sells for record $10m above listing price as AI boom drives up costs",
+   "link": "https://www.theguardian.com/us-news/2026/oct/27/san-francisco-real-estate-listing-price-ai",
+   "summary": "Eight-bedroom mansion listed at $18.5m sold for $28.5m and has a private garden and three-car garage A San Francisco estate sold for $10m above its listing price this month in a new record for the city as the…",
+   "published": "2026-10-27T20:23:03.000Z",
    "source": "The Guardian Business",
    "category": "economy"
   },
   {
-   "id": "8d0wxw",
-   "title": "'An annoying buzz': The search for stealthier drones",
-   "link": "https://www.bbc.co.uk/news/articles/ck1exgejq3xvo?at_medium=RSS&at_campaign=rss",
-   "summary": "As drone deliveries become more commonplace, their makers are looking for ways to make them quieter.",
-   "published": "2026-10-28T00:01:10.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "enxvr4",
-   "title": "China's families are now supporting more old people than kids",
-   "link": "https://www.bbc.co.uk/news/articles/cr20wzwyzl1qo?at_medium=RSS&at_campaign=rss",
-   "summary": "The latest figures mark a major milestone as Beijing grapples with an ageing population.",
-   "published": "2026-10-27T23:16:08.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "vfidgp",
-   "title": "Trump shows off tanker with ‘1m barrels of oil’ and floats Venezuela as 51st state",
-   "link": "https://www.theguardian.com/us-news/2026/oct/27/trump-oil-tanker-venezuela",
-   "summary": "President at Texas campaign rally hails deal struck with post-Maduro government as ‘greatest oil victory in history’ Donald Trump suggested Venezuela would become the 51st state of the United States on Tuesday as the…",
-   "published": "2026-10-27T23:07:06.000Z",
+   "id": "1z0hmjx",
+   "title": "The survival of American democracy depends on taxing billionaires",
+   "link": "https://www.theguardian.com/us-news/2026/oct/27/democracy-tax-billionaires",
+   "summary": "It is essential not just to fund the public goods the nation needs, it is indispensable to restore a sense of fairness Money doesn’t buy happiness, we’re told. Even some economists agree. The Nobel prize-winning…",
+   "published": "2026-10-27T11:00:36.000Z",
    "source": "The Guardian Business",
    "category": "economy"
   },
   {
-   "id": "rzyhcp",
-   "title": "AI bots flooded 2023 UK government consultation on disposable vapes ban",
-   "link": "https://www.theguardian.com/society/2026/oct/27/ai-bots-flooded-2023-uk-government-consultation-disposable-vapes-ban",
-   "summary": "Three-quarters of all responses were machine-generated in failed attempt to stop bill from passing into law, research finds AI bots flooded a government consultation with tens of thousands of fake responses in a failed…",
-   "published": "2026-10-27T22:30:45.000Z",
+   "id": "15owjdu",
+   "title": "Four takeaways from Anthropic’s potentially record-breaking stock market filing",
+   "link": "https://www.theguardian.com/technology/2026/oct/26/anthropic-stock-market-filing-takeaways",
+   "summary": "The AI company’s first public financial disclosures reveal explosive growth, huge costs and risks ranging from cyber-attacks to the limits of safeguards Anthropic has filed to go public on the US stock market,…",
+   "published": "2026-10-27T05:00:04.000Z",
    "source": "The Guardian Business",
    "category": "economy"
   },
   {
-   "id": "zkq1ba",
-   "title": "Landline switchover could cut people off in emergency, minister warned",
-   "link": "https://www.bbc.co.uk/news/articles/c6x29g1nlr51o?at_medium=RSS&at_campaign=rss",
-   "summary": "Plans to switch to digital landlines by January could leave remote areas of the UK vulnerable, MPs say.",
-   "published": "2026-10-27T20:54:48.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "1ogiewa",
-   "title": "Mbappé sorry for 'ill-judged' Mao remark after backlash in China",
-   "link": "https://www.bbc.co.uk/news/articles/cv62yg0erp8zo?at_medium=RSS&at_campaign=rss",
-   "summary": "The France star had referred to the former Chinese leader as a \"dictator\" during an interview about memes.",
-   "published": "2026-10-27T13:25:54.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "1nmjudn",
-   "title": "Rise in sales of radios and tinned foods, say retailers, after call to stock up",
-   "link": "https://www.bbc.co.uk/news/articles/c5rmy84np001o?at_medium=RSS&at_campaign=rss",
-   "summary": "Figures obtained by BBC Newsnight show large spikes in sales of torches, radios and power banks.",
-   "published": "2026-10-27T06:33:11.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "1vm0b2a",
-   "title": "Donald Trump's biggest economic problem looks strangely familiar",
-   "link": "https://www.bbc.co.uk/news/articles/cwvg0ddz1z77o?at_medium=RSS&at_campaign=rss",
-   "summary": "Donald Trump heads into the US midterm elections with an issue similar to his political foe Joe Biden.",
-   "published": "2026-10-27T06:01:11.000Z",
-   "source": "BBC Business",
+   "id": "51bbr0",
+   "title": "Chinese markets lose trillions as race for AI supremacy with US takes its toll",
+   "link": "https://www.theguardian.com/world/2026/oct/27/chinese-markets-lose-trillions-ai-race-beijing",
+   "summary": "Lack of profits and the threat posed by western countries are raising concern about the sustainability of Beijing’s AI boom Trillions of dollars have been wiped from China’s stock markets in recent months amid…",
+   "published": "2026-10-27T04:42:50.000Z",
+   "source": "The Guardian Business",
    "category": "economy"
   },
   {
@@ -450,6 +414,33 @@
    "summary": "",
    "published": "2026-10-27T00:00:00.000Z",
    "source": "ECB",
+   "category": "economy"
+  },
+  {
+   "id": "856pio",
+   "title": "‘We don’t have inflation’? Five charts show the US economic reality of Trump’s second term so far",
+   "link": "https://www.theguardian.com/us-news/2026/oct/26/trump-second-term-economy-charts",
+   "summary": "As the US midterm elections approach, we take a look at data to see a true picture of the US economy under Trump With the midterm elections fast approaching, many Americans have the economy on their minds. US voters…",
+   "published": "2026-10-26T11:00:42.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "b4npqc",
+   "title": "Should we tip on takeout? We weighed all angles and the answer is …",
+   "link": "https://www.theguardian.com/lifeandstyle/ng-interactive/2026/oct/26/tipping-etiquette-takeout-food-delivery",
+   "summary": "Adding gratuity doesn’t always make sense, but the obligation to has been entrenched as a societal norm You arrive at a pizza place to pick up your order. The credit-card screen asks if you would like to tip and gives…",
+   "published": "2026-10-26T11:00:41.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "1u9i7v1",
+   "title": "European gas prices soar to four-year high over winter supply fears",
+   "link": "https://www.theguardian.com/business/2026/oct/26/european-gas-prices-four-year-high-winter-supply-fears-middle-east",
+   "summary": "Jump fuelled by fears of further Middle East supply disruptions amid reports of US-Israeli plans to strike Iran European gas prices have jumped to levels not seen since 2022 as fears continue to grow around the…",
+   "published": "2026-10-26T10:35:24.000Z",
+   "source": "The Guardian Business",
    "category": "economy"
   },
   {
@@ -471,12 +462,39 @@
    "category": "economy"
   },
   {
+   "id": "1w1ym5l",
+   "title": "Volkswagen to build $4bn Audi SUV factory in US despite job cuts at home",
+   "link": "https://www.theguardian.com/business/2026/oct/25/volkswagen-to-build-4bn-audi-suv-factory-in-us-despite-job-cuts-at-home",
+   "summary": "VW investment, creating 4,500 jobs in Georgia, comes amid Trump’s damaging tariffs, intense Chinese competition and costly shift towards EVs Audi has said it will spend $4bn (£3bn) to build its first factory in the US,…",
+   "published": "2026-10-25T13:43:19.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
    "id": "mmvht5",
    "title": "Piero Cipollone: Interview with Milano Finanza",
    "link": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261024~ee2ba73cf3.en.html",
    "summary": "",
    "published": "2026-10-24T06:00:00.000Z",
    "source": "ECB",
+   "category": "economy"
+  },
+  {
+   "id": "1m1nw0m",
+   "title": "Trump drops some Canada tariffs in bid to boost embattled Susan Collins in Maine",
+   "link": "https://www.theguardian.com/us-news/2026/oct/23/susan-collins-maine-trump-tariffs-canada",
+   "summary": "Republican senator faces critical re-election battle in state where president’s trade war has outraged voters Donald Trump dropped some of the US’s tariffs on Canada on Friday to “better serve the public interest” the…",
+   "published": "2026-10-23T22:03:07.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "4gz2qo",
+   "title": "Oil price rises above $117 a barrel amid fears US will renew strikes on Iran",
+   "link": "https://www.theguardian.com/business/2026/oct/23/oil-five-month-high-fears-us-renews-strikes-iran",
+   "summary": "Brent crude increase follows Tehran threatening retaliatory attacks on Gulf refineries and datacentres Oil has hit its highest level in more than six months as fears of fresh escalation in the Middle East conflict grip…",
+   "published": "2026-10-23T16:48:28.000Z",
+   "source": "The Guardian Business",
    "category": "economy"
   },
   {
@@ -505,15 +523,6 @@
    "published": "2026-10-22T15:35:53.000Z",
    "source": "Bank of England",
    "category": "economy"
-  },
-  {
-   "id": "7537t6",
-   "title": "Goldman Sachs, JPMorgan and Morgan Stanley are dominating the AI stock boom. Here's their edge",
-   "link": "https://www.cnbc.com/2026/10/21/goldman-sachs-jpmorgan-morgan-stanley-ai-trading.html",
-   "summary": "Wall Street’s Big Three have generated $52 billion in equity trading revenue this year, capturing about 80% of the market on rising margin lending to hedge funds.",
-   "published": "2026-10-21T15:30:50.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
   }
  ]
 }
