@@ -137,6 +137,26 @@ const topics = (): TTopic[] => [
         actions: () => [go(localize('Open Charts'), routes.charts)],
     },
     {
+        id: 'journal',
+        keywords: [
+            'journal',
+            'trade journal',
+            'my results',
+            'my trades',
+            'my performance',
+            'performance',
+            'win rate',
+            'break even',
+            'how am i doing',
+            'trading history summary',
+        ],
+        answer: () =>
+            localize(
+                'The Journal page (log in first) sums up your latest finished trades on the account you are using: how many you won, your win rate next to the win rate you need just to break even, your net result, how your stake changed over time, and each market’s result. It describes trades that already closed. It cannot tell you what the next trade will do, and trading can lose money.'
+            ),
+        actions: () => [go(localize('Open Journal'), routes.journal)],
+    },
+    {
         id: 'bot_what',
         keywords: ['bot', 'bots', 'bot builder', 'robot', 'automate', 'automatic', 'blocks', 'what is a bot'],
         answer: () =>

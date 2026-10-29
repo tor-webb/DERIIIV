@@ -12,6 +12,7 @@ const Dashboard = lazy(() => import(/* webpackChunkName: "trader-dashboard" */ '
 const ChartsPage = lazy(() => import(/* webpackChunkName: "trader-charts" */ 'AppV2/Containers/ChartsPage'));
 const Markets = lazy(() => import(/* webpackChunkName: "trader-markets" */ 'AppV2/Containers/Markets'));
 const BotBuilder = lazy(() => import(/* webpackChunkName: "trader-bot-builder" */ 'AppV2/Containers/BotBuilder'));
+const Journal = lazy(() => import(/* webpackChunkName: "trader-journal" */ 'AppV2/Containers/Journal'));
 const RiskCalculator = lazy(
     () => import(/* webpackChunkName: "trader-risk-calculator" */ 'AppV2/Containers/RiskCalculator')
 );
@@ -58,6 +59,12 @@ const traderRoutes: TRouteConfigExtended[] = [
     {
         path: routes.bot_builder,
         component: BotBuilder,
+        exact: true,
+        default: false,
+    },
+    {
+        path: routes.journal,
+        component: Journal,
         exact: true,
         default: false,
     },

@@ -45,6 +45,9 @@ describe('getAssistantReply', () => {
         ['how do I import a bot template', 'bot_templates'],
         ['I want a ready made strategy', 'bot_templates'],
         ['import a bot from a file', 'bot_import'],
+        ['where is my trade journal', 'journal'],
+        ['what is my win rate and break even', 'journal'],
+        ['how am I doing overall', 'journal'],
     ])('answers "%s" with the %s topic', (question, id) => {
         expect(getAssistantReply(question, guest).id).toBe(id);
     });

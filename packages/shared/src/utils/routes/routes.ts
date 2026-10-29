@@ -6,6 +6,7 @@ export const routes = {
     markets: '/markets',
     bot_builder: '/bot-builder',
     risk_calculator: '/risk-calculator',
+    journal: '/journal',
     bulk_trader: '/bulk-trader',
     what_if: '/what-if',
     learn: '/learn',
