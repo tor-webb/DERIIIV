@@ -17,6 +17,7 @@ import {
     parseBotFile,
     restoreWorkspace,
     saveWorkspaceToStorage,
+    scanState,
     TJournalEntry,
     TJournalLevel,
     validateBot,
@@ -32,6 +33,17 @@ import {
     TTransaction,
 } from './Engine';
 import RunPanel, { TPanelTab, TRunLimitsInput } from './run-panel';
+import SaveTemplateDialog from './save-template-dialog';
+import {
+    cleanSavedBotName,
+    deleteSavedBot,
+    MAX_SAVED_BOTS,
+    readPreviousBot,
+    readSavedBots,
+    saveBotAsTemplate,
+    TSavedBot,
+    writePreviousBot,
+} from './saved-bots';
 import { TBotTemplate } from './templates';
 import TemplatesPanel from './templates-panel';
 
@@ -110,6 +122,16 @@ const BotBuilder = observer(() => {
     const [chosen_market, setChosenMarket] = React.useState(initial_market);
     const [is_templates_open, setIsTemplatesOpen] = React.useState(Boolean(initial_market));
     const [can_restore, setCanRestore] = React.useState(false);
+    const [saved_bots, setSavedBots] = React.useState<TSavedBot[]>(readSavedBots);
+    const [is_save_open, setIsSaveOpen] = React.useState(false);
+
+    // A bot that a template replaced before the page was reloaded can still be brought back.
+    React.useEffect(() => {
+        const previous = readPreviousBot();
+        if (!previous) return;
+        previous_bot_ref.current = previous;
+        setCanRestore(true);
+    }, []);
 
     const log = React.useCallback((level: TJournalLevel, message: string) => {
         entry_id_ref.current += 1;
@@ -304,45 +326,105 @@ const BotBuilder = observer(() => {
         validateBot(workspace).forEach(issue => log(issue.level, issue.message));
     };
 
-    const importTemplate = (template: TBotTemplate) => {
+    /**
+     * Replaces the bot on the workspace with one from a template or the saved list. The text goes through the same
+     * scan and loader as a file, and the bot it replaces is kept (also across a reload) so it can be brought back.
+     */
+    const replaceBotWith = (xml: string, name: string, failure: string) => {
         const workspace = workspace_ref.current;
         if (!workspace || is_active) return;
 
         setTab('journal');
-        const parsed = parseBotFile(template.xml);
+        const parsed = parseBotFile(xml);
         if (!parsed.ok) {
             parsed.errors.forEach(message => log('error', message));
             return;
         }
         const backup = Blockly.serialization.workspaces.save(workspace);
         if (!loadParsedBot(workspace, parsed)) {
-            log('error', localize('That template could not be loaded.'));
+            log('error', failure);
             return;
         }
         previous_bot_ref.current = backup;
+        writePreviousBot(backup);
         setCanRestore(true);
         setIsTemplatesOpen(false);
         dropMarketParam();
         saveWorkspaceToStorage(workspace);
         log(
             'success',
-            localize('Loaded the "{{name}}" template. Open Templates to bring your old bot back.', {
-                name: template.name,
-            })
+            localize('Loaded the "{{name}}" template. Open Templates to bring your old bot back.', { name })
         );
         validateBot(workspace).forEach(issue => log(issue.level, issue.message));
+    };
+
+    const importTemplate = (template: TBotTemplate) =>
+        replaceBotWith(template.xml, template.name, localize('That template could not be loaded.'));
+
+    const importSavedBot = (bot: TSavedBot) =>
+        replaceBotWith(bot.xml, bot.name, localize('That saved bot could not be loaded.'));
+
+    const deleteSaved = (id: string) => {
+        const name = saved_bots.find(bot => bot.id === id)?.name ?? '';
+        setSavedBots(deleteSavedBot(id));
+        setTab('journal');
+        log('info', localize('Deleted "{{name}}" from your saved bots.', { name }));
+    };
+
+    const saveAsTemplate = (name: string) => {
+        const workspace = workspace_ref.current;
+        if (!workspace) return;
+
+        setTab('journal');
+        const xml = exportWorkspaceXml(workspace);
+        // a bot that the importer would refuse is not worth keeping: it could never be loaded again
+        const check = parseBotFile(xml);
+        if (!check.ok) {
+            check.errors.forEach(message => log('error', message));
+            return;
+        }
+        const result = saveBotAsTemplate(name, xml);
+        if (!result.ok) {
+            const reasons = {
+                empty_name: localize('Give the bot a name first.'),
+                too_large: localize('This bot is too large to keep as a template.'),
+                full: localize('You can keep up to {{max}} bots. Delete one in Templates to make room.', {
+                    max: MAX_SAVED_BOTS,
+                }),
+                storage: localize('This browser would not store the bot (private mode or no space left).'),
+            };
+            log('error', reasons[result.reason]);
+            return;
+        }
+        setSavedBots(result.bots);
+        setIsSaveOpen(false);
+        log(
+            'success',
+            result.replaced
+                ? localize('Replaced "{{name}}" in your saved bots.', { name: cleanSavedBotName(name) })
+                : localize('Saved "{{name}}" to your templates.', { name: cleanSavedBotName(name) })
+        );
     };
 
     const restorePreviousBot = () => {
         const workspace = workspace_ref.current;
         const previous = previous_bot_ref.current;
         if (!workspace || !previous || is_active) return;
+        setTab('journal');
+        // it may have been read back from storage, so it is scanned like any other bot before it is loaded
+        if (scanState(previous).errors.length) {
+            previous_bot_ref.current = null;
+            writePreviousBot(null);
+            setCanRestore(false);
+            log('error', localize('Your previous bot could not be restored.'));
+            return;
+        }
         loadWorkspaceState(workspace, previous);
         saveWorkspaceToStorage(workspace);
         previous_bot_ref.current = null;
+        writePreviousBot(null);
         setCanRestore(false);
         setIsTemplatesOpen(false);
-        setTab('journal');
         log('info', localize('Your previous bot is back.'));
     };
 
@@ -392,6 +474,15 @@ const BotBuilder = observer(() => {
                             onClick={() => setIsTemplatesOpen(open => !open)}
                         >
                             {localize('Templates')}
+                        </button>
+                        <button
+                            type='button'
+                            className='bot-builder__tool'
+                            aria-expanded={is_save_open}
+                            data-testid='dt_bot_builder_save_template'
+                            onClick={() => setIsSaveOpen(open => !open)}
+                        >
+                            {localize('Save as template')}
                         </button>
                         <button type='button' className='bot-builder__tool' onClick={saveBot}>
                             {localize('Save')}
@@ -452,6 +543,9 @@ const BotBuilder = observer(() => {
                             onChange={importBot}
                         />
                     </div>
+                    {is_save_open && (
+                        <SaveTemplateDialog onSave={saveAsTemplate} onCancel={() => setIsSaveOpen(false)} />
+                    )}
                     <div
                         className='bot-builder__workspace'
                         ref={container_ref}
@@ -483,6 +577,9 @@ const BotBuilder = observer(() => {
                             dropMarketParam();
                         }}
                         onImport={importTemplate}
+                        saved_bots={saved_bots}
+                        onImportSaved={importSavedBot}
+                        onDeleteSaved={deleteSaved}
                         onRestore={restorePreviousBot}
                         onClose={() => {
                             setIsTemplatesOpen(false);

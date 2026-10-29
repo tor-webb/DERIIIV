@@ -33,6 +33,8 @@ describe('getAssistantReply', () => {
         ['show me the charts and indicators', 'charts'],
         ['where can I see live prices and the top movers', 'markets'],
         ['how do I add a market to my watchlist', 'markets'],
+        ['how do I save my bot as a template', 'bot_templates'],
+        ['where are my saved bots', 'bot_templates'],
         ['which market should I trade', 'markets'],
         ['which markets are the most volatile', 'markets'],
         ['are there any bot templates', 'bot_templates'],

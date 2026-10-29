@@ -111,6 +111,17 @@ Goal: make the page faster to scan. All in `Containers/Markets/`.
 
 ### C. Save your own bots as templates
 
+**Built (2026-10-29, branch `saved-bot-templates`).** Not yet seen in a browser.
+
+- `BotBuilder/saved-bots.ts` (no Blockly import): `readSavedBots`, `saveBotAsTemplate`, `deleteSavedBot`, plus `readPreviousBot` / `writePreviousBot`. Keys `bot_builder_saved_bots` (max 20 bots, 200,000 characters each, names cut to 60) and `bot_builder_previous` (one slot, up to the importer's 2,000,000 character limit). Saving under a name already used (ignoring case) replaces that bot. Quota errors, corrupt JSON, wrong shapes, repeated ids and oversized entries are all handled.
+- **Save as template** toolbar button opens a name form (`save-template-dialog.tsx`). The bot is exported to XML and run through `parseBotFile` first, so a bot the importer would refuse is never kept. It can be saved while a bot is running (it changes nothing on the workspace).
+- **Your saved bots** section in the Templates drawer, above the ready-made ones: Import (same `parseBotFile` then `loadParsedBot` path as a file, disabled while running) and Delete (asks twice).
+- **"Bring it back" survives a reload.** The replaced bot is written to `bot_builder_previous` and read back on mount. Because it comes from storage it is run through `scanState` before it loads, and is forgotten if it fails.
+- Help assistant `bot_templates` topic and tests updated.
+- Not done: a saved bot is XML only, so it does not remember the run limits; no rename; the list is per browser, not per account.
+
+**Original plan for this item:**
+
 Goal: "Bring it back" currently vanishes on reload; users should keep bots they like.
 
 - Add "Save as template" in the toolbar: name prompt, store `exportWorkspaceXml(workspace)` in `localStorage` (key `bot_builder_saved_bots`, cap about 20 and about 200 KB each, handle quota errors like `saveWorkspaceToStorage` does).

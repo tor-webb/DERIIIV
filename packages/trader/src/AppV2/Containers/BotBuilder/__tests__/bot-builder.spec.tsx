@@ -1,7 +1,14 @@
 import { mockStore, StoreProvider } from '@deriv/stores';
-import { act, fireEvent, render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen, within } from '@testing-library/react';
 
 import BotBuilder from '../bot-builder';
+import {
+    PREVIOUS_BOT_STORAGE_KEY,
+    readPreviousBot,
+    readSavedBots,
+    saveBotAsTemplate,
+    SAVED_BOTS_STORAGE_KEY,
+} from '../saved-bots';
 
 const mockWorkspace = {
     addChangeListener: jest.fn(),
@@ -16,7 +23,7 @@ jest.mock('blockly', () => ({
     inject: jest.fn(() => mockWorkspace),
     svgResize: jest.fn(),
     Events: { disable: jest.fn(), enable: jest.fn() },
-    serialization: { workspaces: { save: jest.fn(() => ({ marker: 'old bot' })) } },
+    serialization: { workspaces: { save: jest.fn(() => ({ marker: 'old bot', blocks: { blocks: [] } })) } },
 }));
 
 jest.mock('../blocks', () => ({
@@ -28,9 +35,12 @@ jest.mock('../blocks', () => ({
 
 const mockValidate = jest.fn();
 const mockLoadParsedBot = jest.fn(() => true);
+const GOOD_XML = '<xml is_dbot="true"><block type="trade_definition"></block></xml>';
+const mockExportXml = jest.fn(() => GOOD_XML);
 jest.mock('../bot-utils', () => ({
     ...jest.requireActual('../bot-utils'),
     loadParsedBot: (...args: unknown[]) => (mockLoadParsedBot as (...a: unknown[]) => boolean)(...args),
+    exportWorkspaceXml: () => mockExportXml(),
     loadWorkspaceState: jest.fn(),
     saveWorkspaceToStorage: jest.fn(),
     restoreWorkspace: jest.fn(),
@@ -66,7 +76,12 @@ const renderPage = (client: Record<string, unknown> = {}) =>
     );
 
 describe('BotBuilder', () => {
-    beforeEach(() => jest.clearAllMocks());
+    beforeEach(() => {
+        jest.clearAllMocks();
+        // saved bots and the replaced bot live in localStorage, so every test starts without them
+        localStorage.clear();
+        mockExportXml.mockReturnValue(GOOD_XML);
+    });
 
     it('injects the Blockly workspace and disposes it on unmount', () => {
         const { unmount } = renderPage();
@@ -310,10 +325,308 @@ describe('BotBuilder', () => {
             openTemplates();
             fireEvent.click(screen.getByText('Bring it back'));
 
-            expect(loadWorkspaceState).toHaveBeenCalledWith(mockWorkspace, { marker: 'old bot' });
+            expect(loadWorkspaceState).toHaveBeenCalledWith(mockWorkspace, {
+                marker: 'old bot',
+                blocks: { blocks: [] },
+            });
             expect(screen.getByText('Your previous bot is back.')).toBeInTheDocument();
             openTemplates();
             expect(screen.queryByTestId('dt_bot_templates_restore')).not.toBeInTheDocument();
+        });
+
+        describe('saving your own bots as templates', () => {
+            const openSave = () => fireEvent.click(screen.getByTestId('dt_bot_builder_save_template'));
+            const typeName = (name: string) =>
+                fireEvent.change(screen.getByTestId('dt_bot_save_template_name'), { target: { value: name } });
+            const submit = () => fireEvent.click(screen.getByTestId('dt_bot_save_template_submit'));
+            const saveAs = (name: string) => {
+                openSave();
+                typeName(name);
+                submit();
+            };
+
+            it('asks for a name, and will not save an empty one', () => {
+                renderPage();
+                expect(screen.queryByTestId('dt_bot_save_template')).not.toBeInTheDocument();
+                openSave();
+                expect(screen.getByTestId('dt_bot_save_template')).toBeInTheDocument();
+                expect(screen.getByTestId('dt_bot_save_template_submit')).toBeDisabled();
+                typeName('   ');
+                expect(screen.getByTestId('dt_bot_save_template_submit')).toBeDisabled();
+                typeName('My bot');
+                expect(screen.getByTestId('dt_bot_save_template_submit')).toBeEnabled();
+            });
+
+            it('closes without saving on Cancel and on Escape', () => {
+                renderPage();
+                openSave();
+                typeName('Nope');
+                fireEvent.click(screen.getByTestId('dt_bot_save_template_cancel'));
+                expect(screen.queryByTestId('dt_bot_save_template')).not.toBeInTheDocument();
+                openSave();
+                fireEvent.keyDown(screen.getByTestId('dt_bot_save_template'), { key: 'Escape' });
+                expect(screen.queryByTestId('dt_bot_save_template')).not.toBeInTheDocument();
+                expect(readSavedBots()).toEqual([]);
+            });
+
+            it('keeps the bot in this browser, closes the form and says so', () => {
+                renderPage();
+                saveAs('  My   steady bot ');
+                expect(readSavedBots()).toEqual([expect.objectContaining({ name: 'My steady bot', xml: GOOD_XML })]);
+                expect(screen.queryByTestId('dt_bot_save_template')).not.toBeInTheDocument();
+                expect(screen.getByText('Saved "My steady bot" to your templates.')).toBeInTheDocument();
+            });
+
+            it('lists the saved bot in the Templates drawer straight away', () => {
+                renderPage();
+                saveAs('My steady bot');
+                openTemplates();
+                expect(screen.getByTestId('dt_bot_saved_list')).toHaveTextContent('My steady bot');
+                expect(screen.queryByTestId('dt_bot_saved_empty')).not.toBeInTheDocument();
+            });
+
+            it('replaces the earlier bot when the name is used again', () => {
+                renderPage();
+                saveAs('My bot');
+                saveAs('my BOT');
+                expect(readSavedBots()).toHaveLength(1);
+                expect(screen.getByText('Replaced "my BOT" in your saved bots.')).toBeInTheDocument();
+            });
+
+            it('says so when the browser would not store it, and keeps the form open', () => {
+                renderPage();
+                openSave();
+                typeName('My bot');
+                const spy = jest.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {
+                    throw new DOMException('full', 'QuotaExceededError');
+                });
+                submit();
+                spy.mockRestore();
+                expect(screen.getByText(/would not store the bot/)).toBeInTheDocument();
+                expect(screen.getByTestId('dt_bot_save_template')).toBeInTheDocument();
+            });
+
+            it('says when the list is full', () => {
+                for (let index = 0; index < 20; index += 1) saveBotAsTemplate(`Bot ${index}`, GOOD_XML);
+                renderPage();
+                saveAs('One too many');
+                expect(screen.getByText(/You can keep up to 20 bots/)).toBeInTheDocument();
+                expect(readSavedBots()).toHaveLength(20);
+            });
+
+            it('does not keep a bot that the importer would refuse', () => {
+                mockExportXml.mockReturnValue('<xml><block type="not_a_real_block"></block></xml>');
+                renderPage();
+                saveAs('Broken');
+                expect(screen.getByText(/blocks that are not supported/)).toBeInTheDocument();
+                expect(readSavedBots()).toEqual([]);
+            });
+
+            it('can save while a bot is running, because saving changes nothing on the workspace', () => {
+                renderPage({ is_logged_in: true, is_virtual: true, loginid: 'VRTC1', balance: '10', currency: 'USD' });
+                fireEvent.click(screen.getByText('Run'));
+                act(() => mockRunnerOptions.mock.calls[0][0].onStatus('running'));
+                saveAs('While running');
+                expect(readSavedBots()).toHaveLength(1);
+            });
+
+            describe('the saved list in the drawer', () => {
+                beforeEach(() => {
+                    saveBotAsTemplate('Older', GOOD_XML, 1000);
+                    saveBotAsTemplate('Newer', GOOD_XML, 2000);
+                });
+
+                it('shows the saved bots, newest first, above the ready-made ones', () => {
+                    renderPage();
+                    openTemplates();
+                    const names = within(screen.getByTestId('dt_bot_saved_list'))
+                        .getAllByRole('heading', { level: 3 })
+                        .map(heading => heading.textContent);
+                    expect(names).toEqual(['Newer', 'Older']);
+                    expect(screen.getByText('Ready-made bots')).toBeInTheDocument();
+                });
+
+                it('loads a saved bot in one tap through the same loader as a file', () => {
+                    renderPage();
+                    openTemplates();
+                    const [newer] = readSavedBots();
+                    fireEvent.click(screen.getByTestId(`dt_bot_saved_import_${newer.id}`));
+                    expect(mockLoadParsedBot).toHaveBeenCalledTimes(1);
+                    expect(mockLoadParsedBot.mock.calls[0]).toEqual([
+                        mockWorkspace,
+                        expect.objectContaining({ ok: true, kind: 'xml' }),
+                    ]);
+                    expect(screen.queryByTestId('dt_bot_templates')).not.toBeInTheDocument();
+                    expect(screen.getByText(/Loaded the "Newer" template/)).toBeInTheDocument();
+                });
+
+                it('keeps the bot it replaced so it can be brought back', () => {
+                    renderPage();
+                    openTemplates();
+                    fireEvent.click(screen.getByTestId(`dt_bot_saved_import_${readSavedBots()[0].id}`));
+                    expect(readPreviousBot()).toEqual({ marker: 'old bot', blocks: { blocks: [] } });
+                    openTemplates();
+                    expect(screen.getByTestId('dt_bot_templates_restore')).toBeInTheDocument();
+                });
+
+                it('says so, and keeps the current bot, when a saved bot cannot be loaded', () => {
+                    mockLoadParsedBot.mockReturnValue(false);
+                    renderPage();
+                    openTemplates();
+                    fireEvent.click(screen.getByTestId(`dt_bot_saved_import_${readSavedBots()[0].id}`));
+                    expect(screen.getByText('That saved bot could not be loaded.')).toBeInTheDocument();
+                    expect(readPreviousBot()).toBeNull();
+                });
+
+                it('refuses a stored bot that the importer rejects, without touching the workspace', () => {
+                    localStorage.setItem(
+                        SAVED_BOTS_STORAGE_KEY,
+                        JSON.stringify([
+                            {
+                                id: 'evil',
+                                name: 'Evil',
+                                saved_at: 1,
+                                xml: '<xml><block type="not_a_real_block"></block></xml>',
+                            },
+                        ])
+                    );
+                    renderPage();
+                    openTemplates();
+                    fireEvent.click(screen.getByTestId('dt_bot_saved_import_evil'));
+                    expect(mockLoadParsedBot).not.toHaveBeenCalled();
+                    expect(screen.getByText(/blocks that are not supported/)).toBeInTheDocument();
+                });
+
+                it('turns Import off while a bot is running', () => {
+                    renderPage({
+                        is_logged_in: true,
+                        is_virtual: true,
+                        loginid: 'VRTC1',
+                        balance: '10',
+                        currency: 'USD',
+                    });
+                    fireEvent.click(screen.getByText('Run'));
+                    act(() => mockRunnerOptions.mock.calls[0][0].onStatus('running'));
+                    openTemplates();
+                    expect(screen.getByTestId(`dt_bot_saved_import_${readSavedBots()[0].id}`)).toBeDisabled();
+                });
+
+                it('asks twice before deleting, then removes the bot from the list and from storage', () => {
+                    renderPage();
+                    openTemplates();
+                    const [newer] = readSavedBots();
+                    const button = () => screen.getByTestId(`dt_bot_saved_delete_${newer.id}`);
+                    fireEvent.click(button());
+                    expect(button()).toHaveTextContent('Tap again to delete');
+                    expect(readSavedBots()).toHaveLength(2);
+                    fireEvent.click(button());
+                    expect(screen.queryByTestId(`dt_bot_saved_${newer.id}`)).not.toBeInTheDocument();
+                    expect(readSavedBots().map(bot => bot.name)).toEqual(['Older']);
+                    expect(screen.getByText('Deleted "Newer" from your saved bots.')).toBeInTheDocument();
+                });
+
+                it('starts the delete question over when a different bot is pressed', () => {
+                    renderPage();
+                    openTemplates();
+                    const [newer, older] = readSavedBots();
+                    fireEvent.click(screen.getByTestId(`dt_bot_saved_delete_${newer.id}`));
+                    fireEvent.click(screen.getByTestId(`dt_bot_saved_delete_${older.id}`));
+                    expect(readSavedBots()).toHaveLength(2);
+                    expect(screen.getByTestId(`dt_bot_saved_delete_${older.id}`)).toHaveTextContent(
+                        'Tap again to delete'
+                    );
+                    expect(screen.getByTestId(`dt_bot_saved_delete_${newer.id}`)).toHaveTextContent('Delete');
+                });
+            });
+
+            it('shows a hint instead of a list when nothing is saved, and survives corrupt storage', () => {
+                localStorage.setItem(SAVED_BOTS_STORAGE_KEY, '{not json');
+                renderPage();
+                openTemplates();
+                expect(screen.getByTestId('dt_bot_saved_empty')).toBeInTheDocument();
+                expect(screen.queryByTestId('dt_bot_saved_list')).not.toBeInTheDocument();
+            });
+        });
+
+        describe('"Bring it back" after a reload', () => {
+            it('remembers the replaced bot in this browser', () => {
+                renderPage();
+                openTemplates();
+                fireEvent.click(screen.getByTestId('dt_bot_template_import_digit_over_2'));
+                expect(readPreviousBot()).toEqual({ marker: 'old bot', blocks: { blocks: [] } });
+            });
+
+            it('offers it again after the page is reloaded, and restores it', () => {
+                const { unmount } = renderPage();
+                openTemplates();
+                fireEvent.click(screen.getByTestId('dt_bot_template_import_digit_over_2'));
+                unmount();
+
+                // eslint-disable-next-line @typescript-eslint/no-var-requires
+                const { loadWorkspaceState } = require('../bot-utils');
+                renderPage();
+                openTemplates();
+                expect(screen.getByTestId('dt_bot_templates_restore')).toBeInTheDocument();
+                loadWorkspaceState.mockClear();
+                fireEvent.click(screen.getByText('Bring it back'));
+                expect(loadWorkspaceState).toHaveBeenCalledWith(mockWorkspace, {
+                    marker: 'old bot',
+                    blocks: { blocks: [] },
+                });
+                expect(screen.getByText('Your previous bot is back.')).toBeInTheDocument();
+            });
+
+            it('forgets it once it has been brought back', () => {
+                renderPage();
+                openTemplates();
+                fireEvent.click(screen.getByTestId('dt_bot_template_import_digit_over_2'));
+                openTemplates();
+                fireEvent.click(screen.getByText('Bring it back'));
+                expect(localStorage.getItem(PREVIOUS_BOT_STORAGE_KEY)).toBeNull();
+            });
+
+            it('offers nothing when nothing was replaced', () => {
+                renderPage();
+                openTemplates();
+                expect(screen.queryByTestId('dt_bot_templates_restore')).not.toBeInTheDocument();
+            });
+
+            it('still works for this visit when the browser will not store the replaced bot', () => {
+                renderPage();
+                openTemplates();
+                const spy = jest.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {
+                    throw new DOMException('full', 'QuotaExceededError');
+                });
+                fireEvent.click(screen.getByTestId('dt_bot_template_import_digit_over_2'));
+                spy.mockRestore();
+                openTemplates();
+                expect(screen.getByTestId('dt_bot_templates_restore')).toBeInTheDocument();
+            });
+
+            it('refuses a stored replaced bot that does not pass the scan, and forgets it', () => {
+                localStorage.setItem(
+                    PREVIOUS_BOT_STORAGE_KEY,
+                    JSON.stringify({ blocks: { blocks: [{ type: 'not_a_real_block' }] } })
+                );
+                // eslint-disable-next-line @typescript-eslint/no-var-requires
+                const { loadWorkspaceState } = require('../bot-utils');
+                renderPage();
+                openTemplates();
+                loadWorkspaceState.mockClear();
+                fireEvent.click(screen.getByText('Bring it back'));
+                expect(loadWorkspaceState).not.toHaveBeenCalled();
+                expect(screen.getByText('Your previous bot could not be restored.')).toBeInTheDocument();
+                expect(localStorage.getItem(PREVIOUS_BOT_STORAGE_KEY)).toBeNull();
+                openTemplates();
+                expect(screen.queryByTestId('dt_bot_templates_restore')).not.toBeInTheDocument();
+            });
+
+            it('ignores a stored replaced bot that is not even an object', () => {
+                localStorage.setItem(PREVIOUS_BOT_STORAGE_KEY, '[1,2,3]');
+                renderPage();
+                openTemplates();
+                expect(screen.queryByTestId('dt_bot_templates_restore')).not.toBeInTheDocument();
+            });
         });
 
         describe('opened from the Markets page', () => {
