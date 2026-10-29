@@ -1,12 +1,15 @@
 import { localize } from '@deriv-com/translations';
 
-import type { TDataKind, TExpr, TLevel, TNumberProperty, TProcedure, TStmt, TValue } from './types';
+import { bollinger, direction, ema, NotEnoughData, rsi, sma } from './indicators';
+import type { TDataKind, TExpr, TLevel, TNumberProperty, TProcedure, TSeriesSource, TStmt, TValue } from './types';
 
 export class RuntimeError extends Error {}
 
 /** A bot that runs this many steps in one go is stuck in a loop. */
 export const MAX_STEPS = 50_000;
 const MAX_CALL_DEPTH = 64;
+/** The longest indicator period a bot may ask for. Longer than the history the runner keeps would never be ready. */
+export const MAX_INDICATOR_PERIOD = 500;
 
 class BreakSignal {}
 class ContinueSignal {}
@@ -22,6 +25,8 @@ export type TInterpreterContext = {
     vars: Map<string, TValue>;
     procedures?: Record<string, TProcedure>;
     read: (kind: TDataKind) => TValue;
+    /** Recent prices for indicators, oldest first. */
+    series?: (source: TSeriesSource) => number[];
     notify: (level: TLevel, message: string) => void;
     purchase: (contract_type: string) => void;
     sell: () => void;
@@ -126,6 +131,28 @@ const hasProperty = (prop: TNumberProperty, n: number, divisor: number): boolean
     }
 };
 
+const INDICATOR_NAME = { sma: 'SMA', ema: 'EMA', rsi: 'RSI', bb: 'Bollinger Bands' } as const;
+
+const readSeries = (ctx: TState, source: TSeriesSource): number[] => {
+    if (!ctx.series) {
+        throw new RuntimeError(localize('This bot reads prices, which are not available here.'));
+    }
+    return ctx.series(source);
+};
+
+const readPeriod = (value: TValue, name: string): number => {
+    const period = Math.floor(toNumber(value));
+    if (period < 1 || period > MAX_INDICATOR_PERIOD) {
+        throw new RuntimeError(
+            localize('The {{name}} period must be a whole number from 1 to {{max}}.', {
+                name,
+                max: MAX_INDICATOR_PERIOD,
+            })
+        );
+    }
+    return period;
+};
+
 const callProcedure = (ctx: TState, name: string, args: TExpr[]): TValue | null => {
     const procedure = ctx.procedures?.[name];
     if (!procedure) {
@@ -159,6 +186,57 @@ const evaluateState = (expr: TExpr, ctx: TState): TValue => {
             return expr.v;
         case 'null':
             return null;
+        case 'indicator': {
+            const name = INDICATOR_NAME[expr.ind];
+            const period = readPeriod(evaluateState(expr.period, ctx), name);
+            const prices = readSeries(ctx, expr.source);
+            try {
+                switch (expr.ind) {
+                    case 'sma':
+                        return checkFinite(sma(prices, period));
+                    case 'ema':
+                        return checkFinite(ema(prices, period));
+                    case 'rsi':
+                        return checkFinite(rsi(prices, period));
+                    default:
+                        return checkFinite(
+                            bollinger(
+                                prices,
+                                period,
+                                expr.band ?? 'middle',
+                                expr.up ? toNumber(evaluateState(expr.up, ctx)) : 2,
+                                expr.down ? toNumber(evaluateState(expr.down, ctx)) : 2
+                            )
+                        );
+                }
+            } catch (error) {
+                if (!(error instanceof NotEnoughData)) throw error;
+                throw new RuntimeError(
+                    localize(
+                        'Not enough price history for the {{name}} with a period of {{period}}: it needs {{needed}} prices and only {{have}} are available. Use a shorter period.',
+                        { name, period, needed: error.needed, have: error.have }
+                    )
+                );
+            }
+        }
+        case 'candle': {
+            const index = Math.floor(toNumber(evaluateState(expr.index, ctx)));
+            const prices = readSeries(ctx, { kind: 'candles', field: expr.field });
+            if (index < 1 || index > prices.length) {
+                throw new RuntimeError(
+                    localize(
+                        'The bot asked for candle number {{index}} from the end, but only {{have}} are available.',
+                        {
+                            index,
+                            have: prices.length,
+                        }
+                    )
+                );
+            }
+            return prices[prices.length - index];
+        }
+        case 'direction':
+            return direction(readSeries(ctx, { kind: 'ticks' })) === expr.dir;
         case 'var':
             return lookup(ctx, expr.name);
         case 'data':

@@ -31,6 +31,14 @@ export const BLOCK_TYPES = {
     BALANCE: 'balance',
     TOTAL_PROFIT: 'total_profit',
     TOTAL_RUNS: 'total_runs',
+    TICKS: 'ticks',
+    OHLC_VALUES: 'ohlc_values',
+    READ_OHLC: 'read_ohlc',
+    SMA: 'sma',
+    EMA: 'ema',
+    RSI: 'rsi',
+    BOLLINGER: 'bb',
+    CHECK_DIRECTION: 'check_direction',
     READ_DETAILS: 'read_details',
     CONTRACT_CHECK_RESULT: 'contract_check_result',
     NOTIFY: 'notify',
@@ -223,6 +231,30 @@ export const CANDLE_INTERVAL_OPTIONS: [string, string][] = [
  * it is negative after a loss). The others follow Binary Bot's order and are NOT confirmed against Deriv Bot's
  * dropdown yet; indexes 6 to 10 are listed so imported bots keep their value, but the compiler refuses them.
  */
+/**
+ * Indicator and candle blocks. The type and field names (`ticks`, `ohlc_values`, `read_ohlc`, `sma`, `ema`, `rsi`, `bb`,
+ * `check_direction`, `INPUT_LIST`, `PERIOD`, `OHLCFIELD_LIST`, `BBRESULT_LIST`, `CHECK_DIRECTION`) follow Deriv Bot as
+ * remembered, and are NOT yet confirmed against a real exported bot. See docs/ROADMAP_HANDOFF.md, item D.
+ */
+export const CANDLE_FIELD_OPTIONS: [string, string][] = [
+    ['Open', 'open'],
+    ['High', 'high'],
+    ['Low', 'low'],
+    ['Close', 'close'],
+];
+
+export const BAND_OPTIONS: [string, string][] = [
+    ['Upper', 'upper'],
+    ['Middle', 'middle'],
+    ['Lower', 'lower'],
+];
+
+export const DIRECTION_OPTIONS: [string, string][] = [
+    ['Rise', 'rise'],
+    ['Fall', 'fall'],
+    ['No change', 'no_change'],
+];
+
 export const READ_DETAILS_OPTIONS: [string, string][] = [
     ['Contract ID', '1'],
     ['Buy price', '2'],
@@ -413,6 +445,86 @@ export const registerBlocks = () => {
             output: 'Number',
             colour: COLOURS.analysis,
             tooltip: localize('The last digit of the most recent tick price.'),
+        },
+        {
+            type: BLOCK_TYPES.TICKS,
+            message0: localize('Ticks list'),
+            output: 'Array',
+            colour: COLOURS.analysis,
+            tooltip: localize(
+                'The recent tick prices of the selected market. Plug it into an indicator such as the moving average.'
+            ),
+        },
+        {
+            type: BLOCK_TYPES.OHLC_VALUES,
+            message0: localize('Candles list: %1 values'),
+            args0: [{ type: 'field_dropdown', name: 'OHLCFIELD_LIST', options: asOptions(CANDLE_FIELD_OPTIONS) }],
+            output: 'Array',
+            colour: COLOURS.analysis,
+            tooltip: localize(
+                'The open, high, low or close price of each recent candle. The candle size is set in the Candle interval block. The newest candle is still forming.'
+            ),
+        },
+        {
+            type: BLOCK_TYPES.READ_OHLC,
+            message0: localize('In candles read %1 value # %2 from end'),
+            args0: [
+                { type: 'field_dropdown', name: 'OHLCFIELD_LIST', options: asOptions(CANDLE_FIELD_OPTIONS) },
+                { type: 'input_value', name: 'CANDLEINDEX', check: 'Number' },
+            ],
+            inputsInline: true,
+            output: 'Number',
+            colour: COLOURS.analysis,
+            tooltip: localize('One price of one recent candle. Number 1 is the newest candle, 2 the one before it.'),
+        },
+        ...[
+            [BLOCK_TYPES.SMA, localize('Simple moving average'), localize('The average of the last prices.')],
+            [
+                BLOCK_TYPES.EMA,
+                localize('Exponential moving average'),
+                localize('An average that gives more weight to the newest prices.'),
+            ],
+            [
+                BLOCK_TYPES.RSI,
+                localize('Relative strength index'),
+                localize('A number from 0 to 100 comparing recent rises with recent falls.'),
+            ],
+        ].map(([type, label, tooltip]) => ({
+            type,
+            message0: `${label} %1 ${localize('period')} %2`,
+            args0: [
+                { type: 'input_value', name: 'INPUT_LIST', check: 'Array' },
+                { type: 'input_value', name: 'PERIOD', check: 'Number' },
+            ],
+            inputsInline: true,
+            output: 'Number',
+            colour: COLOURS.analysis,
+            tooltip,
+        })),
+        {
+            type: BLOCK_TYPES.BOLLINGER,
+            message0: localize('Bollinger band %1 of %2 period %3 up x %4 down x %5'),
+            args0: [
+                { type: 'field_dropdown', name: 'BBRESULT_LIST', options: asOptions(BAND_OPTIONS) },
+                { type: 'input_value', name: 'INPUT_LIST', check: 'Array' },
+                { type: 'input_value', name: 'PERIOD', check: 'Number' },
+                { type: 'input_value', name: 'UPMULTIPLIER', check: 'Number' },
+                { type: 'input_value', name: 'DOWNMULTIPLIER', check: 'Number' },
+            ],
+            inputsInline: true,
+            output: 'Number',
+            colour: COLOURS.analysis,
+            tooltip: localize(
+                'The average, with a band above and below it that is wider when prices have been moving more.'
+            ),
+        },
+        {
+            type: BLOCK_TYPES.CHECK_DIRECTION,
+            message0: localize('Last tick direction is %1'),
+            args0: [{ type: 'field_dropdown', name: 'CHECK_DIRECTION', options: asOptions(DIRECTION_OPTIONS) }],
+            output: 'Boolean',
+            colour: COLOURS.analysis,
+            tooltip: localize('True when the newest tick is higher, lower or the same as the one before it.'),
         },
         {
             type: BLOCK_TYPES.BALANCE,
@@ -705,6 +817,25 @@ export const getToolbox = (): Blockly.utils.toolbox.ToolboxDefinition => ({
             contents: [
                 { kind: 'block', type: BLOCK_TYPES.TICK },
                 { kind: 'block', type: BLOCK_TYPES.LAST_DIGIT },
+                { kind: 'block', type: BLOCK_TYPES.CHECK_DIRECTION },
+                { kind: 'block', type: BLOCK_TYPES.TICKS },
+                { kind: 'block', type: BLOCK_TYPES.OHLC_VALUES },
+                { kind: 'block', type: BLOCK_TYPES.READ_OHLC, inputs: { CANDLEINDEX: num(1) } },
+                ...[BLOCK_TYPES.SMA, BLOCK_TYPES.EMA, BLOCK_TYPES.RSI].map(type => ({
+                    kind: 'block' as const,
+                    type,
+                    inputs: { INPUT_LIST: { block: { type: BLOCK_TYPES.TICKS } }, PERIOD: num(10) },
+                })),
+                {
+                    kind: 'block',
+                    type: BLOCK_TYPES.BOLLINGER,
+                    inputs: {
+                        INPUT_LIST: { block: { type: BLOCK_TYPES.TICKS } },
+                        PERIOD: num(20),
+                        UPMULTIPLIER: num(2),
+                        DOWNMULTIPLIER: num(2),
+                    },
+                },
                 { kind: 'block', type: BLOCK_TYPES.READ_DETAILS },
             ],
         },
