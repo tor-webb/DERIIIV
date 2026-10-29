@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T00:13:17.813Z",
+ "updated": "2026-10-29T06:10:36.128Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -11,6 +11,168 @@
   "The Guardian Business /business/rss": 12
  },
  "items": [
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-10-29T06:00:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "3scxwe",
+   "title": "Much ado about nothing? Fed chair Warsh talks up a storm but December rate hike bets barely budge",
+   "link": "https://investinglive.com/central-banks/much-ado-about-nothing-fed-chair-warsh-talks-up-a-storm-but-december-rate-hike-bets-barely-budge/",
+   "summary": "After all that waiting and wondering, what exactly did we learn from the Fed yesterday? Judging by the market reaction and pricing, I would say not a whole lot. Fed chair Warsh spent a good chunk of time talking, even…",
+   "published": "2026-10-29T05:19:00.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "5t9ium",
+   "title": "Your fridge could one day stake Ether, launch memecoins: CFTC chair",
+   "link": "https://cointelegraph.com/news/a-fridge-that-launches-memecoins-cftc-floats-ai-crypto-future?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "CFTC chair Mike Selig says autonomous AI agents could challenge financial rules built around human traders, and regulators need to adapt.",
+   "published": "2026-10-29T04:39:49.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1z04r9j",
+   "title": "US futures tumble as Alphabet earnings revive AI spending fears, Amazon is next in the firing line",
+   "link": "https://investinglive.com/stocks/us-futures-tumble-as-alphabet-earnings-revive-ai-spending-fears-amazon-is-next-in-the-firing-line/",
+   "summary": "Heading into the big tech earnings releases yesterday, Wall Street was hoping for a little reassurance that all those billions being poured into AI would eventually pay off. Instead, Alphabet has just handed investors…",
+   "published": "2026-10-29T04:37:49.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1faub6x",
+   "title": "investingLive Asia-Pacific market news: Oil eases on Vance’s Iran outreach",
+   "link": "https://investinglive.com/news/investinglive-asia-pacific-market-news-oil-eases-on-vance-s-iran-outreach/",
+   "summary": "RBA set for fifth 2026 hike to 4.85% as banks flag risk of another move in February More on Samsung: shares slide up to 6.6% as shareholder-return plan is delayed to January US government builds $30bn stock portfolio…",
+   "published": "2026-10-29T03:33:33.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1ghyjn9",
+   "title": "Tampered Ledger wallets cost Singapore users $2.7M: Police",
+   "link": "https://cointelegraph.com/news/tampered-ledger-wallets-cost-singapore-users-27m-police?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Police say at least two cases were reported as early as Sept. 10, nearly a month before the wider incident became public.",
+   "published": "2026-10-29T03:16:32.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1052vme",
+   "title": "Hello Kitty maker cuts ties with Japanese spy drama after China backlash",
+   "link": "https://www.bbc.co.uk/news/articles/cry4x177jlnyo?at_medium=RSS&at_campaign=rss",
+   "summary": "Sanrio has apologised after its merchandise line with Japanese TV series Vivant drew criticism.",
+   "published": "2026-10-29T03:16:19.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "7g7fk5",
+   "title": "RBA set for fifth 2026 hike to 4.85% as banks flag risk of another move in February",
+   "link": "https://investinglive.com/central-banks/rba-set-for-fifth-2026-hike-to-4-85-as-banks-flag-risk-of-another-move-in-february/",
+   "summary": "With major banks now aligned on a November hike, the decision itself is close to fully priced. The market focus shifts to the RBA’s guidance and whether it leaves the door open to February, which is where the…",
+   "published": "2026-10-29T03:13:07.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "p986aa",
+   "title": "More on Samsung: shares slide up to 6.6% as shareholder-return plan is delayed to January",
+   "link": "https://investinglive.com/stocks/more-on-samsung-shares-slide-up-to-6-6-as-shareholder-return-plan-is-delayed-to-january/",
+   "summary": "The reaction suggests investors in memory chips are now pricing capital returns, not just earnings, so a payout delay can outweigh a record quarter. Analysts see scope for near-term rotation from Samsung into SK Hynix…",
+   "published": "2026-10-29T02:45:44.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1sgferc",
+   "title": "US government builds $30bn stock portfolio across 43 deals in chips, minerals and quantum",
+   "link": "https://investinglive.com/stocks/us-government-builds-30bn-stock-portfolio-across-43-deals-in-chips-minerals-and-quantum/",
+   "summary": "For investors, a government stake has become a recurring catalyst in chips, critical minerals and quantum computing. Announcements have tended to support the share prices of the companies involved, and they add a…",
+   "published": "2026-10-29T01:53:17.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1w5zmqm",
+   "title": "Microsoft profits soar days after announcing thousands of layoffs",
+   "link": "https://www.bbc.co.uk/news/articles/c6m24klyjr8no?at_medium=RSS&at_campaign=rss",
+   "summary": "The week, the Windows developer said it would offer buyouts to 60,000 workers as it looks to curb costs.",
+   "published": "2026-10-29T01:27:40.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "oi3ppo",
+   "title": "Alphabet slides over 9% after hours as search miss and $9bn cash burn overshadow Cloud",
+   "link": "https://investinglive.com/stocks/alphabet-slides-over-9-after-hours-as-search-miss-and-9bn-cash-burn-overshadow-cloud/",
+   "summary": "The market is rewarding AI spending that generates cash and punishing spending that consumes it, judging by Microsoft’s after-hours gain against Alphabet’s slide. For the AI supply chain, Alphabet’s guidance for…",
+   "published": "2026-10-29T01:25:48.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "8zyvy5",
+   "title": "PBOC sets USD/ CNY reference rate for today at 6.7147 (vs. estimate at 6.6596)",
+   "link": "https://investinglive.com/central-banks/pboc-sets-usd-cny-reference-rate-for-today-at-6-7147-vs-estimate-at-6-6596/",
+   "summary": "The PBOC allows the yuan to fluctuate within a +/- 2% range, around this reference rate. More here on this. CNY strongest seeting since 2 February, 2023. PBOC injects 1 trillion yuan through overnight reverse repos…",
+   "published": "2026-10-29T01:15:27.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "jnfear",
+   "title": "Fed’s hawkish rate hold keeps pressure on Bitcoin: Analysts",
+   "link": "https://cointelegraph.com/markets/bitcoin-faces-fresh-pressure-after-feds-hawkish-rate-hold-analysts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Traders are pricing in a 78% chance of a December rate hike, while analysts say Treasury yields, the US dollar and upcoming inflation data could determine Bitcoin’s next move.",
+   "published": "2026-10-29T01:12:01.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "rrdbhq",
+   "title": "Samsung Q3 operating profit jumps ninefold to record 107 trillion won on AI chip boom",
+   "link": "https://investinglive.com/stocks/samsung-q3-operating-profit-jumps-ninefold-to-record-107-trillion-won-on-ai-chip-boom/",
+   "summary": "Samsung’s guidance that the chip shortage will deepen next year is the most market-relevant line. It points to continued pricing power for memory makers and supports the read-through from SK Hynix’s upbeat outlook a…",
+   "published": "2026-10-29T01:01:54.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "fzieuf",
+   "title": "RBNZ’s Breman says chances of a December rate hike are high after surprise hold at 2.75%",
+   "link": "https://investinglive.com/central-banks/rbnz-s-breman-says-chances-of-a-december-rate-hike-are-high-after-surprise-hold-at-2-75/",
+   "summary": "Breman’s comments push back against the dovish reading of Wednesday’s hold and look aimed at steadying the New Zealand dollar, which she has said could add to imported inflation if it stays weak. Pricing of around 77%…",
+   "published": "2026-10-29T00:55:08.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "75axam",
+   "title": "The view from China: CITIC Securities still sees a 25bp Fed hike in December",
+   "link": "https://investinglive.com/central-banks/the-view-from-china-citic-securities-still-sees-a-25bp-fed-hike-in-december/",
+   "summary": "CITIC’s call reinforces the market’s December hike pricing, but its view that the terminal rate stays near current levels points to a shallow end to the cycle rather than an extended run of increases. That combination…",
+   "published": "2026-10-29T00:28:53.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1dzq8re",
+   "title": "NZ business confidence rises to +53 as pricing intentions hit highest since May",
+   "link": "https://investinglive.com/central-banks/nz-business-confidence-rises-to-53-as-pricing-intentions-hit-highest-since-may/",
+   "summary": "Firmer pricing intentions and inflation expectations stuck around 3.3% give the RBNZ little reason to ease off its tightening. The resilient activity readings also undercut any argument that the oil shock is crushing…",
+   "published": "2026-10-29T00:15:14.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
   {
    "id": "kgr6ki",
    "title": "I earn £30,000. I'm angry there was no fuel duty cut in the Budget",
@@ -30,60 +192,6 @@
    "category": "economy"
   },
   {
-   "id": "mt5bo4",
-   "title": "Oil - The UAE’s second Hormuz bypass pipeline gets its firm timing; early 2027",
-   "link": "https://investinglive.com/commodities/oil-the-uae-s-second-hormuz-bypass-pipeline-gets-its-firm-timing-early-2027/",
-   "summary": "For oil, the report offers a medium-term offset to Hormuz risk rather than near-term relief, since no new bypass capacity arrives before early 2027. Until then, Gulf supply remains exposed to any renewed escalation, so…",
-   "published": "2026-10-28T23:57:00.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "ii5b7o",
-   "title": "Peltz-led group offers $1.4bn to take Wendy’s private at $7.35 a share, a 20% premium",
-   "link": "https://investinglive.com/stocks/peltz-led-group-offers-1-4bn-to-take-wendy-s-private-at-7-35-a-share-a-20-premium/",
-   "summary": "Shares peaked at around $7.20, below the $7.35 offer, which suggests the market is pricing some risk that the deal won’t complete on these terms. The independent committee could push for a higher price, or the bid…",
-   "published": "2026-10-28T23:29:52.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1fl4sl8",
-   "title": "Hong Kong holds base rate at 4.25%: why the HKMA always moves in lockstep with the Fed",
-   "link": "https://investinglive.com/central-banks/hong-kong-holds-base-rate-at-4-25-why-the-hkma-always-moves-in-lockstep-with-the-fed/",
-   "summary": "For Hong Kong, the decision confirms that local borrowing costs stay tied to the Fed’s hiking path, regardless of domestic conditions. Mortgage holders and property developers are most exposed, because a December Fed…",
-   "published": "2026-10-28T23:24:29.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1wpo5z0",
-   "title": "Microsoft sees $170bn capex in fiscal 2027 but says it will stay cash flow positive",
-   "link": "https://investinglive.com/stocks/microsoft-sees-170bn-capex-in-fiscal-2027-but-says-it-will-stay-cash-flow-positive/",
-   "summary": "The capex guidance is the number that matters for the AI supply chain. Spending of more than $50 billion next quarter and around $170 billion for the year, led by CPUs and GPUs, points to sustained demand for…",
-   "published": "2026-10-28T23:00:51.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "13cqjbi",
-   "title": "Gold heads for its biggest yearly drop in 11 years as the Iran war lifts yields and the dollar",
-   "link": "https://investinglive.com/commodities/gold-heads-for-its-biggest-yearly-drop-in-11-years-as-the-iran-war-lifts-yields-and-the-dollar/",
-   "summary": "The poll shows the gold outlook is being driven by the Iran war’s knock-on effects rather than by safe-haven buying. Higher oil prices have fed through to yields, the dollar and expectations that rates will stay high,…",
-   "published": "2026-10-28T22:41:36.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1liq2lf",
-   "title": "Strategy's bitcoin buying hinges on one number: STRC at $100",
-   "link": "https://investinglive.com/cryptocurrency/strategy-s-bitcoin-buying-hinges-on-one-number-strc-at-100/",
-   "summary": "What is happening Strategy, the largest corporate holder of bitcoin, bought no bitcoin in the week of October 19 to 25. Instead it spent $204.9 million buying back its own STRC preferred shares, according to its…",
-   "published": "2026-10-28T22:26:36.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1mop1ij",
    "title": "Embattled CBS leader Bari Weiss downplays concerns about weak 60 Minutes ratings",
    "link": "https://www.theguardian.com/media/2026/oct/28/bari-weiss-cbs-news-60-minutes",
@@ -93,24 +201,6 @@
    "category": "economy"
   },
   {
-   "id": "1g1k5ax",
-   "title": "Recap: Fed holds at 3.75%-4% in 10-2 vote as Cook dissents for a hike, December move in focus",
-   "link": "https://investinglive.com/central-banks/recap-fed-holds-at-3-75-4-in-10-2-vote-as-cook-dissents-for-a-hike-december-move-in-focus/",
-   "summary": "A hold with two hawkish dissents and no pushback from Warsh on December pricing keeps the bias firmly toward tightening, which supports Treasury yields and the dollar into year end. Cook’s dissent matters for rate…",
-   "published": "2026-10-28T22:02:29.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "111xr91",
-   "title": "US bitcoin reserve buying 'very soon'? What has to happen first",
-   "link": "https://investinglive.com/cryptocurrency/us-bitcoin-reserve-buying-very-soon-what-has-to-happen-first/",
-   "summary": "What was said A Bitcoin Archive post on X this week ran under the banner \"$200K+ BITCOIN INCOMING\", relaying a claim that U.S. Senator Bill Hagerty says the Strategic Bitcoin Reserve may start buying BTC \"very soon\"…",
-   "published": "2026-10-28T21:47:00.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1apmko8",
    "title": "Canadian ‘crypto king’ case to go to jury as criminal trial winds down",
    "link": "https://cointelegraph.com/news/canada-crypto-king-jury-criminal-trial-closing?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -118,42 +208,6 @@
    "published": "2026-10-28T21:35:52.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "ox4ueh",
-   "title": "ICYMI: Oracle jumps around 11% on $225bn 2030 revenue goal and $20bn cap on new funding",
-   "link": "https://investinglive.com/stocks/icymi-oracle-jumps-around-11-on-225bn-2030-revenue-goal-and-20bn-cap-on-new-funding/",
-   "summary": "The rally suggests investors had been pricing in more financing risk than profitability risk, so a hard ceiling on new funding did as much work as the revenue target. A capped equity component also limits dilution…",
-   "published": "2026-10-28T21:23:08.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1l71w8e",
-   "title": "UBS sees limited gold downside as three demand pillars set a floor near $4,000",
-   "link": "https://investinglive.com/commodities/ubs-sees-limited-gold-downside-as-three-demand-pillars-set-a-floor-near-4-000/",
-   "summary": "UBS’s view makes $4,000 an ounce ( or just below ) the level to watch: a sustained break below it would challenge the bank’s dip-buyer floor thesis. Last week’s ETF outflows show that shorter-term investment money has…",
-   "published": "2026-10-28T21:06:52.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1w6fsem",
-   "title": "investingLive Americas FX news wrap 28 Oct: Fed holds rates, yield curve steepens as Big Tech earnings diverge",
-   "link": "https://investinglive.com/news/investinglive-americas-fx-news-wrap-28-oct-fed-holds-rates-yield-curve-steepens-as-big-tech-earnings-diverge/",
-   "summary": "Vance writes to Iran hard-liner Rezaei to revive talks as Trump weighs new strikes Alphabet Q3: Google Cloud revenue jumps 103% but search and ad sales miss forecasts Microsoft Q1 beats as Azure grows 48% and capex…",
-   "published": "2026-10-28T20:56:52.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "8hwc2y",
-   "title": "Vance writes to Iran hard-liner Rezaei to revive talks as Trump weighs new strikes",
-   "link": "https://investinglive.com/commodities/vance-writes-to-iran-hard-liner-rezaei-to-revive-talks-as-trump-weighs-new-strikes/",
-   "summary": "For oil, the report adds a two-way risk ahead of next week’s midterms. A credible negotiating channel offers the first sign in months that Hormuz shipping could eventually be unlocked, which would ease the supply…",
-   "published": "2026-10-28T20:20:05.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "zboc02",
@@ -183,15 +237,6 @@
    "category": "economy"
   },
   {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-10-28T19:46:45.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "10eyjv9",
    "title": "Fed holds interest rates steady in last decision before midterms",
    "link": "https://www.theguardian.com/business/2026/oct/28/fed-interest-rates-midterms",
@@ -217,15 +262,6 @@
    "published": "2026-10-28T19:10:40.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "1xgr3bl",
-   "title": "Healey tells departments to make 1% cuts to fund defence",
-   "link": "https://www.bbc.co.uk/news/articles/c65ynl0px107o?at_medium=RSS&at_campaign=rss",
-   "summary": "The reduction in public spending will go towards paying for the Defence Investment Plan.",
-   "published": "2026-10-28T19:01:34.000Z",
-   "source": "BBC Business",
-   "category": "economy"
   },
   {
    "id": "1lh4wsz",
@@ -280,15 +316,6 @@
    "published": "2026-10-28T17:05:42.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "wyl4v",
-   "title": "Budget 2026: Key points at a glance",
-   "link": "https://www.bbc.co.uk/news/articles/c6x2zrjl7kjno?at_medium=RSS&at_campaign=rss",
-   "summary": "Here’s what you need to know from John Healey’s first Budget, as the chancellor sets out the government’s tax and spending plans.",
-   "published": "2026-10-28T16:55:27.000Z",
-   "source": "BBC Business",
-   "category": "economy"
   },
   {
    "id": "yebqo8",
@@ -350,33 +377,6 @@
    "link": "https://cointelegraph.com/magazine/cybersecuritys-black-october-how-to-protect-yourself?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "summary": "Each day brings news of another AI-powered attack, or a newly discovered vulnerability. Here’s what’s happening and how ordinary people can protect themselves online.",
    "published": "2026-10-28T13:30:00.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1dqhefv",
-   "title": "DTCC unit launches tokenization services",
-   "link": "https://cointelegraph.com/news/dtcc-subsidiary-launches-tokenization-services?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The post-trade market infrastructure provider said the tokenization services will create a “practical path” for tokenized securities adoption.",
-   "published": "2026-10-28T13:19:00.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1ero4bt",
-   "title": "Settlement concerns prompt Euronext to halt CoinShares’ Zcash ETP ahead of debut",
-   "link": "https://cointelegraph.com/news/euronext-suspends-coinshares-zcash-etp-debut?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "A Euronext spokesperson told Cointelegraph the suspension was due to “operational settlement requirements” and remains in effect until settlement operations are supported by the CSD.",
-   "published": "2026-10-28T11:24:07.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "153gzyv",
-   "title": "Mirae Asset Securities issues tokenized notes on Solana",
-   "link": "https://cointelegraph.com/news/mirae-asset-securities-tokenized-notes-solana?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The company’s Hong Kong unit issued six-month notes under its $3 billion program, extending blockchain-based distribution to institutional investors.",
-   "published": "2026-10-28T11:05:33.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
   },
