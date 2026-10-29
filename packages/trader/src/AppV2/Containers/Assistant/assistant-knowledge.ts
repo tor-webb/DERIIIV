@@ -163,10 +163,16 @@ const topics = (): TTopic[] => [
             'sample bot',
             'starter bot',
             'one tap',
+            'save my bot',
+            'save a bot',
+            'save as template',
+            'my own template',
+            'saved bots',
+            'keep my bot',
         ],
         answer: () =>
             localize(
-                'In the Bot Builder press Templates to see five ready-made bots: Rise/Fall with a steady stake, Even/Odd, Digit Over 2, a Win ladder and a capped Martingale. Press Import on one and it loads into the builder, where you can change any block. It replaces the bot on your workspace, and Bring it back restores your old bot until you reload the page. Templates are examples to learn from, not advice, so try them on a demo account first.'
+                'In the Bot Builder press Templates to see five ready-made bots: Rise/Fall with a steady stake, Even/Odd, Digit Over 2, a Win ladder and a capped Martingale. Press Import on one and it loads into the builder, where you can change any block. It replaces the bot on your workspace, and Bring it back restores your old bot, even after you reload the page. To keep a bot of your own, press Save as template, give it a name, and it appears under Your saved bots in Templates, where you can import or delete it. Saved bots stay in this browser only, up to 20, so use Save to download a file if you want a copy elsewhere. Templates are examples to learn from, not advice, so try them on a demo account first.'
             ),
         actions: () => [go(localize('Open Bot Builder'), routes.bot_builder)],
     },

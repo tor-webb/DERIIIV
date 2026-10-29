@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { localize } from '@deriv-com/translations';
 
 import { TBotMarket } from './bot-markets';
+import { TSavedBot } from './saved-bots';
 import { getBotTemplates, TBotTemplate, TTemplateLevel, TTemplateRisk } from './templates';
 
 import './templates-panel.scss';
@@ -17,6 +18,10 @@ type TTemplatesPanelProps = {
     market?: TBotMarket | null;
     onClearMarket?: () => void;
     onImport: (template: TBotTemplate) => void;
+    /** The bots the person saved in this browser, newest first. */
+    saved_bots?: TSavedBot[];
+    onImportSaved?: (bot: TSavedBot) => void;
+    onDeleteSaved?: (id: string) => void;
     onRestore: () => void;
     onClose: () => void;
 };
@@ -38,9 +43,14 @@ const TemplatesPanel = ({
     market = null,
     onClearMarket,
     onImport,
+    saved_bots = [],
+    onImportSaved,
+    onDeleteSaved,
     onRestore,
     onClose,
 }: TTemplatesPanelProps) => {
+    /** Deleting is permanent, so the first press asks and the second one deletes. */
+    const [pending_delete, setPendingDelete] = React.useState<string | null>(null);
     const symbol = market?.symbol;
     const templates = React.useMemo(() => getBotTemplates(symbol), [symbol]);
 
@@ -98,6 +108,60 @@ const TemplatesPanel = ({
                 </div>
             )}
 
+            <h3 className='templates-panel__section-title'>{localize('Your saved bots')}</h3>
+            {saved_bots.length === 0 ? (
+                <p className='templates-panel__hint' data-testid='dt_bot_saved_empty'>
+                    {localize(
+                        'Bots you keep with "Save as template" appear here, so you can load them again in one tap.'
+                    )}
+                </p>
+            ) : (
+                <ul className='templates-panel__list' data-testid='dt_bot_saved_list'>
+                    {saved_bots.map(bot => (
+                        <li key={bot.id} className='templates-panel__card' data-testid={`dt_bot_saved_${bot.id}`}>
+                            <div className='templates-panel__card-top'>
+                                <h3 className='templates-panel__card-title'>{bot.name}</h3>
+                                {bot.saved_at > 0 && (
+                                    <span className='templates-panel__saved-date'>
+                                        {new Date(bot.saved_at).toLocaleDateString()}
+                                    </span>
+                                )}
+                            </div>
+                            <div className='templates-panel__card-actions'>
+                                <button
+                                    type='button'
+                                    className='templates-panel__import'
+                                    disabled={is_disabled}
+                                    data-testid={`dt_bot_saved_import_${bot.id}`}
+                                    onClick={() => onImportSaved?.(bot)}
+                                >
+                                    {localize('Import')}
+                                </button>
+                                <button
+                                    type='button'
+                                    className={classNames('templates-panel__delete', {
+                                        'templates-panel__delete--confirm': pending_delete === bot.id,
+                                    })}
+                                    aria-label={localize('Delete {{name}}', { name: bot.name })}
+                                    data-testid={`dt_bot_saved_delete_${bot.id}`}
+                                    onClick={() => {
+                                        if (pending_delete !== bot.id) {
+                                            setPendingDelete(bot.id);
+                                            return;
+                                        }
+                                        setPendingDelete(null);
+                                        onDeleteSaved?.(bot.id);
+                                    }}
+                                >
+                                    {pending_delete === bot.id ? localize('Tap again to delete') : localize('Delete')}
+                                </button>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+            )}
+
+            <h3 className='templates-panel__section-title'>{localize('Ready-made bots')}</h3>
             <ul className='templates-panel__list'>
                 {templates.map(template => (
                     <li

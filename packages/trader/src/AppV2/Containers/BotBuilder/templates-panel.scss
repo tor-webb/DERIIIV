@@ -217,4 +217,133 @@
             cursor: not-allowed;
         }
     }
+
+    &__section-title {
+        margin: 0;
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        opacity: 0.7;
+    }
+
+    &__hint {
+        margin: 0;
+        font-size: 1.2rem;
+        opacity: 0.7;
+    }
+
+    &__saved-date {
+        font-size: 1.2rem;
+        opacity: 0.65;
+    }
+
+    &__card-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    &__delete {
+        height: 3.6rem;
+        padding: 0 1.6rem;
+        border: 1px solid #b3261e;
+        border-radius: 0.8rem;
+        background-color: transparent;
+        color: #b3261e;
+        font: inherit;
+        font-size: 1.3rem;
+        font-weight: 700;
+        cursor: pointer;
+
+        &--confirm {
+            background-color: #b3261e;
+            color: #fff;
+        }
+
+        &:focus-visible {
+            outline: 2px solid #b3261e;
+            outline-offset: 2px;
+        }
+    }
+}
+
+// The small form that names a bot before it is kept as a template.
+.save-template {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 1.2rem;
+    padding: 1.2rem 1.6rem;
+    border-bottom: 1px solid var(--color-surface-border);
+    background-color: var(--color-surface-primary);
+    color: var(--color-text-primary);
+
+    &__label {
+        display: flex;
+        flex: 1 1 24rem;
+        flex-direction: column;
+        gap: 0.4rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    &__input {
+        height: 3.6rem;
+        padding: 0 1.2rem;
+        border: 1px solid var(--color-surface-border);
+        border-radius: 0.8rem;
+        background-color: var(--color-surface-section);
+        color: inherit;
+        font: inherit;
+        font-size: 1.4rem;
+        font-weight: 400;
+
+        &:focus-visible {
+            outline: 2px solid var(--brand-primary);
+            outline-offset: 2px;
+        }
+    }
+
+    &__hint {
+        flex: 1 1 100%;
+        font-size: 1.2rem;
+        opacity: 0.7;
+        order: 3;
+    }
+
+    &__actions {
+        display: flex;
+        gap: 0.8rem;
+    }
+
+    &__button {
+        height: 3.6rem;
+        padding: 0 2rem;
+        border: 0;
+        border-radius: 0.8rem;
+        background-color: var(--brand-primary);
+        color: #fff;
+        font: inherit;
+        font-size: 1.3rem;
+        font-weight: 700;
+        cursor: pointer;
+
+        &--ghost {
+            border: 1px solid var(--brand-primary);
+            background-color: transparent;
+            color: var(--brand-primary);
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--brand-primary);
+            outline-offset: 2px;
+        }
+
+        &:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+    }
 }
