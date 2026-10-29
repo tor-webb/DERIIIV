@@ -113,10 +113,17 @@ const topics = (): TTopic[] => [
             'what to trade',
             'what should i trade',
             'star a market',
+            'find a market',
+            'search for a market',
+            'search markets',
+            'trend line',
+            'sparkline',
+            'time window',
+            'open in charts',
         ],
         answer: () =>
             localize(
-                'The Markets page lists live prices for 20 markets (Volatility indices and forex pairs). For each one it shows the change and the range over the last hour, and a Low, Medium or High volatility label compared with similar markets. It also lists the top gainers and losers. Tap the star to add a market to your watchlist, which is saved in this browser. Trade opens the Trade page on that market, and Bot opens the Bot Builder with ready-made bots for it. Volatility shows how much a market has moved, not which way it will go next.'
+                'The Markets page lists live prices for 20 markets (Volatility indices and forex pairs). For each one it shows the change and the range over the last hour (switch to 4 hours or 1 day with the buttons above the list), a small trend line, and a Low, Medium or High volatility label compared with similar markets. Use the search box to find a market by name or symbol. It also lists the top gainers and losers. Tap the star to add a market to your watchlist, which is saved in this browser and shown on your Dashboard. Trade opens the Trade page on that market, Chart opens it in Charts, and Bot opens the Bot Builder with ready-made bots for it. Volatility and the trend line show how much a market has moved, not which way it will go next.'
             ),
         actions: () => [go(localize('Open Markets'), routes.markets), go(localize('Go to Trade'), routes.index)],
     },

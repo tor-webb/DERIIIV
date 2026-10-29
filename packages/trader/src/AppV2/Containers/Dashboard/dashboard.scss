@@ -162,6 +162,92 @@
         }
     }
 
+    /* ---- watchlist panel ---- */
+
+    &__watch-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @include mobile-screen {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__watch-row {
+        display: grid;
+        grid-template-columns: 1fr auto auto auto;
+        align-items: center;
+        gap: 1.2rem;
+        width: 100%;
+        padding: 1.2rem 1.6rem;
+        border: 1px solid #e3e6ea;
+        border-radius: 1.2rem;
+        background-color: #fff;
+        color: inherit;
+        font: inherit;
+        font-size: 1.4rem;
+        text-align: left;
+        cursor: pointer;
+
+        &:hover {
+            border-color: var(--brand-primary);
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--brand-primary);
+            outline-offset: 2px;
+        }
+    }
+
+    &__watch-name {
+        font-weight: 700;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__watch-price {
+        font-variant-numeric: tabular-nums;
+        font-weight: 600;
+    }
+
+    &__watch-change {
+        min-width: 6.4rem;
+        font-variant-numeric: tabular-nums;
+        font-weight: 700;
+        text-align: right;
+
+        &--up {
+            color: #14663a;
+        }
+
+        &--down {
+            color: #b3261e;
+        }
+    }
+
+    &__watch-muted,
+    &__watch-empty {
+        margin: 0;
+        font-size: 1.4rem;
+        opacity: 0.75;
+    }
+
+    &__watch-link {
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: var(--brand-primary);
+        font: inherit;
+        font-weight: 700;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
     &__section {
         margin-bottom: 3.2rem;
     }

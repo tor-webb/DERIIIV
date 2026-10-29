@@ -26,8 +26,26 @@ export const MARKET_SYMBOLS: TWatchSymbol[] = [
     { symbol: 'frxGBPJPY', name: 'GBP/JPY', group: 'forex' },
 ];
 
-/** How many one-minute candles make up the "last hour" the page measures change and volatility over. */
-export const WINDOW_MINUTES = 60;
+export type TWindowId = '1h' | '4h' | '1d';
+
+export type TWindow = {
+    id: TWindowId;
+    /** Candle size in seconds, one of the sizes the API accepts. */
+    granularity: number;
+    /** How many candles are loaded, so granularity x count is the span the page measures over. */
+    count: number;
+};
+
+/** The spans the page can measure change and volatility over. 4h and 1d are untested against the live server. */
+export const WINDOWS: TWindow[] = [
+    { id: '1h', granularity: 60, count: 60 },
+    { id: '4h', granularity: 300, count: 48 },
+    { id: '1d', granularity: 3600, count: 24 },
+];
+
+export const DEFAULT_WINDOW: TWindowId = '1h';
+
+export const getWindow = (id: TWindowId): TWindow => WINDOWS.find(item => item.id === id) ?? WINDOWS[0];
 
 /** A market whose last candle is older than this has stopped ticking (closed for the weekend, or paused). */
 export const STALE_AFTER_SECONDS = 10 * 60;
