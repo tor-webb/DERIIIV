@@ -33,6 +33,11 @@ export type TMarketRow = {
     is_closed: boolean;
     /** Prices across the window, oldest first, for the sparkline. Empty until loaded. */
     closes: number[];
+    /**
+     * Where the price sits between the window's low (0) and high (1). Null when the range is flat or the market has not
+     * loaded. Optional so rows built by hand (tests, other pages) need not set it. Used by the scanner.
+     */
+    range_position?: number | null;
 };
 
 const isPositive = (value: unknown): value is number =>
@@ -128,17 +133,23 @@ export const buildRow = (
         volatility: null,
         is_closed: false,
         closes: [] as number[],
+        range_position: null as number | null,
     };
     if (!entry || status !== 'ready' || !isPositive(entry.last) || !isPositive(entry.open)) return base;
 
     const change_pct = ((entry.last - entry.open) / entry.open) * 100;
     const range_pct =
         isPositive(entry.high) && isPositive(entry.low) ? ((entry.high - entry.low) / entry.low) * 100 : null;
+    const range_position =
+        isPositive(entry.high) && isPositive(entry.low) && entry.high > entry.low
+            ? Math.min(1, Math.max(0, (entry.last - entry.low) / (entry.high - entry.low)))
+            : null;
     return {
         ...base,
         price: entry.last,
         change_pct,
         range_pct,
+        range_position,
         closes: entry.closes ?? [],
         is_closed: entry.updated !== undefined && now_seconds - entry.updated > STALE_AFTER_SECONDS,
     };

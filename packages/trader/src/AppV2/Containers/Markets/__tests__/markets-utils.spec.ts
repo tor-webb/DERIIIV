@@ -88,6 +88,23 @@ describe('entries and rows', () => {
         expect(row.is_closed).toBe(false);
     });
 
+    it('places the price between the window low (0) and high (1)', () => {
+        const market = { symbol: 'R_10', name: 'Vol 10', group: 'synthetic' as const };
+        expect(buildRow(market, entry, NOW).range_position).toBeCloseTo(6 / 7, 6);
+        expect(buildRow(market, { ...entry, last: 99 }, NOW).range_position).toBe(0);
+        expect(buildRow(market, { ...entry, last: 106 }, NOW).range_position).toBe(1);
+        // a tick outside the stored range is clamped, never above 1 or below 0
+        expect(buildRow(market, { ...entry, last: 200 }, NOW).range_position).toBe(1);
+        expect(buildRow(market, { ...entry, last: 50 }, NOW).range_position).toBe(0);
+    });
+
+    it('has no position when the range is flat or the market has not loaded', () => {
+        const market = { symbol: 'R_10', name: 'Vol 10', group: 'synthetic' as const };
+        expect(buildRow(market, { ...entry, high: 100, low: 100, last: 100 }, NOW).range_position).toBeNull();
+        expect(buildRow(market, undefined, NOW).range_position).toBeNull();
+        expect(buildRow(market, { status: 'unavailable' }, NOW).range_position).toBeNull();
+    });
+
     it('marks a market closed when nothing has ticked for a while', () => {
         const old = { ...entry, updated: NOW - STALE_AFTER_SECONDS - 1 };
         expect(buildRow({ symbol: 'frxEURUSD', name: 'EUR/USD', group: 'forex' }, old, NOW).is_closed).toBe(true);

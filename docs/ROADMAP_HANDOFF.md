@@ -15,6 +15,7 @@ Older notes: `docs/HANDOFF.md` (site-wide state), `docs/BOT_BUILDER_HANDOFF.md` 
 | "Build a bot for this market" (Markets row to Bot Builder) | PR #8.                                     |
 | Bot Builder safety (item A below)                          | Merged to `main` (PR #9).                  |
 | Markets quick wins (item B below, all but `active_symbols`) | Branch `markets-quick-wins`.               |
+| Market scanner (item H below)                              | Branch `market-scanner`.                   |
 
 Both merged features and this branch's work have **never been looked at in a browser** and **never run against the
 live Deriv socket**. Section 3 lists the checks that need a person with a demo account. Do those before promoting the pages.
@@ -184,6 +185,21 @@ Goal: a pop-up when a starred market moves more than a chosen amount in an hour.
 - Bulk Trader decision (simulator stays; optionally a demo-account bulk bot through the Bot Builder engine).
 - Delete merged branches: `bot-deriv-compat`, `bot-run-engine`, `bot-builder-page`, `bot-templates-and-markets`, `assistant-and-market-bots` once merged; confirm `github-pages-fix` is dead first.
 - Check the latest "Deploy to GitHub Pages" run after every merge to `main`.
+
+### H. Market scanner (built 2026-10-29, branch `market-scanner`)
+
+Idea taken from what professional trading sites offer. Not yet seen in a browser.
+
+- **Scanner** button on Markets (`markets.tsx`) opens a panel of filters that narrow the list on top of the Derived/Forex/Watchlist pills and the search box:
+  direction (any, rising, falling), volatility (any, low, medium, high), smallest move (any, 0.05%, 0.1%, 0.25%, 0.5%), price in the range (anywhere, near the high, near the low) and "Open markets only".
+  The button shows how many filters are on, a line shows "N of M markets match", and "Clear filters" resets them. The filters follow the 1h/4h/1d window and are kept when the panel is closed; they are not saved between visits.
+- Logic is in `Markets/markets-scanner.ts` (pure, no React): `matchesScan`, `scanRows`, `countActiveScanFilters`, `DEFAULT_SCAN`, `MIN_MOVE_STEPS`, `NEAR_EDGE` (0.2, so "near" is the top or bottom fifth).
+- `TMarketRow.range_position` (new, optional, 0 = window low, 1 = window high, null when flat or not loaded) is set in `buildRow`. It is optional so rows built by hand do not need it.
+- **A closed, loading or unavailable market never passes a filter that needs its figures**; it is left out rather than guessed at. With no filter on, every market still shows.
+- Wording rule kept: the panel says the filters describe what a market already did, not where it will go. Do not rename them to "breakout", "overbought" or similar.
+- Help assistant `markets` topic has scanner keywords and text; tests added in `markets-scanner.spec.ts`, `markets-utils.spec.ts`, `markets.spec.tsx` and `assistant-knowledge.spec.ts`.
+- **Check in a browser:** the panel and pills at 390 px and 1280 px (`markets.scss`, written without seeing it); that the scan count and empty message read well when the 4h/1d window shows fewer live markets.
+- Ideas not built: saved scans, a "scan all 20" shortcut set (for example "Quiet markets"), showing `range_position` as a column, and scanning markets beyond the fixed list (needs the `active_symbols` item in B).
 
 ## 5. Decisions already made (do not undo without asking the user)
 
