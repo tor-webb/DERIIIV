@@ -12,6 +12,7 @@ import TopNav from 'AppV2/Components/Layout/TopNav';
 
 import Router from '../../Routes/router';
 import Assistant from '../Assistant';
+import PriceAlertNotifier from '../Markets/price-alert-notifier';
 import NewsNotifier from '../News/news-notifier';
 
 import './app-shell.scss';
@@ -65,6 +66,7 @@ const AppShell = observer(() => {
             </div>
             <Assistant />
             <NewsNotifier />
+            <PriceAlertNotifier />
         </div>
     );
 });

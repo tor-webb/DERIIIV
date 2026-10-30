@@ -1,4 +1,10 @@
-import { MARKET_SYMBOLS, STALE_AFTER_SECONDS, TMarketGroup, WATCHLIST_STORAGE_KEY } from './markets-config';
+import {
+    MARKET_SYMBOLS,
+    SETTINGS_CHANGED_EVENT,
+    STALE_AFTER_SECONDS,
+    TMarketGroup,
+    WATCHLIST_STORAGE_KEY,
+} from './markets-config';
 
 export type TCandle = { epoch: number; open: number; high: number; low: number; close: number };
 
@@ -242,7 +248,7 @@ export const buildSparklinePoints = (values: number[], width: number, height: nu
 /* Watchlist storage                                                                                */
 /* ----------------------------------------------------------------------------------------------- */
 
-const KNOWN_SYMBOLS = new Set(MARKET_SYMBOLS.map(market => market.symbol));
+export const KNOWN_SYMBOLS = new Set(MARKET_SYMBOLS.map(market => market.symbol));
 
 /** The starred markets. Anything unreadable or no longer listed is dropped rather than trusted. */
 export const readWatchlist = (): string[] => {
@@ -256,12 +262,22 @@ export const readWatchlist = (): string[] => {
     }
 };
 
+/** Tells a mounted price-alert watcher that the watchlist or the alert settings changed. */
+export const announceSettingsChanged = () => {
+    try {
+        window.dispatchEvent(new Event(SETTINGS_CHANGED_EVENT));
+    } catch {
+        // no window (tests of pure code)
+    }
+};
+
 export const writeWatchlist = (symbols: string[]) => {
     try {
         localStorage.setItem(WATCHLIST_STORAGE_KEY, JSON.stringify(symbols));
     } catch {
         // storage can be unavailable (private mode, quota); the stars still work until the page is closed
     }
+    announceSettingsChanged();
 };
 
 export const toggleSymbol = (symbols: string[], symbol: string): string[] =>

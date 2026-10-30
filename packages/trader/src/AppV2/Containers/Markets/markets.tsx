@@ -23,6 +23,7 @@ import {
     TVolatilityLevel,
     writeWatchlist,
 } from './markets-utils';
+import PriceAlertsPanel from './price-alerts-panel';
 import Sparkline from './sparkline';
 import { useMarkets } from './use-markets';
 
@@ -259,6 +260,8 @@ const Markets = () => {
                     </select>
                 </label>
             </div>
+
+            <PriceAlertsPanel watchlist={watchlist} />
 
             {visible.length === 0 ? (
                 <p className='markets__empty' data-testid='dt_markets_empty'>
