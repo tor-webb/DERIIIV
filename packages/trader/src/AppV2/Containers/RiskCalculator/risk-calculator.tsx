@@ -4,7 +4,7 @@ import { formatMoneyText, getBrandName } from '@deriv/shared';
 import { observer, useStore } from '@deriv/stores';
 import { localize } from '@deriv-com/translations';
 
-import { calcPositionSize, calcRewardRisk, calcStakePlan } from './risk-utils';
+import { calcPositionSize, calcRewardRisk, calcStakePlan, riskBand, riskGaugeFill, TRiskBand } from './risk-utils';
 
 import './risk-calculator.scss';
 
@@ -14,6 +14,15 @@ const toNumber = (value: string) => (value.trim() === '' ? NaN : Number(value));
 const money = (currency: string, value: number) => formatMoneyText(currency, value);
 const lotsText = (lots: number) => (lots > 0 && lots < 0.01 ? '<0.01' : lots.toFixed(2));
 const percent = (value: number) => `${value.toFixed(value < 1 && value > 0 ? 3 : 1)}%`;
+
+const RISK_PRESETS = [0.5, 1, 2, 5];
+
+const BAND_TEXT: Record<TRiskBand, () => string> = {
+    cautious: () => localize('Cautious'),
+    common: () => localize('In the common 1% to 2% range'),
+    high: () => localize('High'),
+    very_high: () => localize('Very high'),
+};
 
 type TFieldProps = {
     id: string;
@@ -45,8 +54,18 @@ const Field = ({ id, label, value, onChange, suffix, hint }: TFieldProps) => (
     </label>
 );
 
-const Result = ({ label, value, tone }: { label: string; value: string; tone?: 'good' | 'bad' }) => (
-    <div className='risk-calculator__result'>
+const Result = ({
+    label,
+    value,
+    tone,
+    hero,
+}: {
+    label: string;
+    value: string;
+    tone?: 'good' | 'bad';
+    hero?: boolean;
+}) => (
+    <div className={`risk-calculator__result${hero ? ' risk-calculator__result--hero' : ''}`}>
         <span className='risk-calculator__result-label'>{label}</span>
         <span
             className={`risk-calculator__result-value${tone ? ` risk-calculator__result-value--${tone}` : ''}`}
@@ -85,6 +104,7 @@ const RiskCalculator = observer(() => {
         win_rate: toNumber(win_rate),
     });
     const risk_is_high = toNumber(risk_percent) > 2;
+    const band = riskBand(toNumber(risk_percent));
 
     return (
         <main className='risk-calculator' data-testid='dt_risk_calculator'>
@@ -136,6 +156,26 @@ const RiskCalculator = observer(() => {
                         suffix='%'
                         hint={localize('Many traders keep this at 1% to 2%.')}
                     />
+                    <div
+                        className='risk-calculator__presets'
+                        role='group'
+                        aria-label={localize('Risk per trade presets')}
+                    >
+                        {RISK_PRESETS.map(preset => (
+                            <button
+                                key={preset}
+                                type='button'
+                                data-testid={`dt_risk_preset_${preset}`}
+                                aria-pressed={toNumber(risk_percent) === preset}
+                                className={`risk-calculator__preset${
+                                    toNumber(risk_percent) === preset ? ' risk-calculator__preset--active' : ''
+                                }`}
+                                onClick={() => setRiskPercent(String(preset))}
+                            >
+                                {preset}%
+                            </button>
+                        ))}
+                    </div>
                     {mode === 'position' ? (
                         <React.Fragment>
                             <Field
@@ -184,6 +224,19 @@ const RiskCalculator = observer(() => {
                 </div>
 
                 <div className='risk-calculator__results' aria-live='polite'>
+                    {band && (
+                        <div className='risk-calculator__gauge' data-testid='dt_risk_gauge'>
+                            <div className='risk-calculator__gauge-track' aria-hidden='true'>
+                                <span
+                                    className={`risk-calculator__gauge-fill risk-calculator__gauge-fill--${band}`}
+                                    style={{ width: `${riskGaugeFill(toNumber(risk_percent))}%` }}
+                                />
+                            </div>
+                            <span className='risk-calculator__gauge-label' data-testid='dt_risk_band'>
+                                {BAND_TEXT[band]()}
+                            </span>
+                        </div>
+                    )}
                     {risk_is_high && (
                         <p className='risk-calculator__warning' data-testid='dt_risk_warning'>
                             {localize('Risking more than 2% per trade can empty an account after a short losing run.')}
@@ -198,6 +251,7 @@ const RiskCalculator = observer(() => {
                                     value={money(currency, position.risk_amount)}
                                 />
                                 <Result
+                                    hero
                                     label={localize('Position size')}
                                     value={`${lotsText(position.lots)} ${localize('lots')}`}
                                 />
@@ -224,7 +278,7 @@ const RiskCalculator = observer(() => {
                     {mode === 'stake' &&
                         (plan ? (
                             <React.Fragment>
-                                <Result label={localize('Stake per trade')} value={money(currency, plan.stake)} />
+                                <Result hero label={localize('Stake per trade')} value={money(currency, plan.stake)} />
                                 <Result
                                     label={localize('Profit if it wins')}
                                     value={money(currency, plan.profit_if_win)}
@@ -253,7 +307,12 @@ const RiskCalculator = observer(() => {
                                             <tr key={streak.losses}>
                                                 <td>{streak.losses}</td>
                                                 <td>{percent(streak.probability)}</td>
-                                                <td>{percent(streak.drawdown)}</td>
+                                                <td>
+                                                    {percent(streak.drawdown)}
+                                                    <span className='risk-calculator__bar' aria-hidden='true'>
+                                                        <span style={{ width: `${Math.min(100, streak.drawdown)}%` }} />
+                                                    </span>
+                                                </td>
                                             </tr>
                                         ))}
                                     </tbody>

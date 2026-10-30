@@ -1,4 +1,4 @@
-import { calcPositionSize, calcRewardRisk, calcStakePlan } from '../risk-utils';
+import { calcPositionSize, calcRewardRisk, calcStakePlan, riskBand, riskGaugeFill } from '../risk-utils';
 
 describe('calcPositionSize', () => {
     it('sizes a position from balance, risk %, stop loss and pip value', () => {
@@ -66,5 +66,37 @@ describe('calcStakePlan', () => {
     it('returns null for a win rate outside 0 to 100 or empty inputs', () => {
         expect(calcStakePlan({ ...input, win_rate: 120 })).toBeNull();
         expect(calcStakePlan({ ...input, balance: NaN })).toBeNull();
+    });
+});
+
+describe('riskBand', () => {
+    it.each([
+        [0.5, 'cautious'],
+        [1, 'cautious'],
+        [1.01, 'common'],
+        [2, 'common'],
+        [2.01, 'high'],
+        [5, 'high'],
+        [5.01, 'very_high'],
+        [50, 'very_high'],
+    ])('puts %s%% in the %s band', (percent, band) => {
+        expect(riskBand(percent)).toBe(band);
+    });
+
+    it('has no band for zero, negative or missing numbers', () => {
+        [0, -1, NaN, Infinity].forEach(value => expect(riskBand(value)).toBeNull());
+    });
+});
+
+describe('riskGaugeFill', () => {
+    it('fills in proportion up to 10% and stops there', () => {
+        expect(riskGaugeFill(1)).toBe(10);
+        expect(riskGaugeFill(2.5)).toBe(25);
+        expect(riskGaugeFill(10)).toBe(100);
+        expect(riskGaugeFill(40)).toBe(100);
+    });
+
+    it('is empty for anything that is not a positive number', () => {
+        [0, -3, NaN].forEach(value => expect(riskGaugeFill(value)).toBe(0));
     });
 });

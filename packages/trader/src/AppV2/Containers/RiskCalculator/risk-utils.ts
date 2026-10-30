@@ -102,3 +102,21 @@ export const calcStakePlan = ({
         doubling_steps_affordable,
     };
 };
+
+export type TRiskBand = 'cautious' | 'common' | 'high' | 'very_high';
+
+/**
+ * Where a risk-per-trade percentage sits against the 1% to 2% many traders keep to. A description, not advice:
+ * it says nothing about whether any trade is a good one. Null for anything that is not a positive number.
+ */
+export const riskBand = (risk_percent: number): TRiskBand | null => {
+    if (!Number.isFinite(risk_percent) || risk_percent <= 0) return null;
+    if (risk_percent <= 1) return 'cautious';
+    if (risk_percent <= 2) return 'common';
+    if (risk_percent <= 5) return 'high';
+    return 'very_high';
+};
+
+/** How full the gauge is, from 0 to 100, on a scale where 10% of the balance at risk fills it. */
+export const riskGaugeFill = (risk_percent: number): number =>
+    Number.isFinite(risk_percent) && risk_percent > 0 ? Math.min(100, (risk_percent / 10) * 100) : 0;

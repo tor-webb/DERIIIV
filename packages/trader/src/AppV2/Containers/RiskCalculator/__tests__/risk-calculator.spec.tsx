@@ -53,4 +53,30 @@ describe('<RiskCalculator />', () => {
         expect(screen.getByText('If you lose in a row (fixed stake)')).toBeInTheDocument();
         expect(screen.getByTestId('dt_risk_martingale')).toHaveTextContent('fund 6 trades in a row');
     });
+
+    it('sets the risk with a preset button and shows which one is chosen', () => {
+        renderPage();
+        expect(screen.getByTestId('dt_risk_preset_1')).toHaveAttribute('aria-pressed', 'true');
+        fireEvent.click(screen.getByTestId('dt_risk_preset_5'));
+        expect(screen.getByTestId('dt_risk_risk_percent')).toHaveValue(5);
+        expect(screen.getByTestId('dt_risk_preset_5')).toHaveAttribute('aria-pressed', 'true');
+        expect(screen.getByTestId('dt_risk_preset_1')).toHaveAttribute('aria-pressed', 'false');
+    });
+
+    it('describes where the risk sits, in words, as the number changes', () => {
+        renderPage();
+        expect(screen.getByTestId('dt_risk_band')).toHaveTextContent('Cautious');
+        fireEvent.change(screen.getByTestId('dt_risk_risk_percent'), { target: { value: '2' } });
+        expect(screen.getByTestId('dt_risk_band')).toHaveTextContent('In the common 1% to 2% range');
+        fireEvent.change(screen.getByTestId('dt_risk_risk_percent'), { target: { value: '4' } });
+        expect(screen.getByTestId('dt_risk_band')).toHaveTextContent('High');
+        fireEvent.change(screen.getByTestId('dt_risk_risk_percent'), { target: { value: '8' } });
+        expect(screen.getByTestId('dt_risk_band')).toHaveTextContent('Very high');
+    });
+
+    it('hides the gauge when the risk is empty', () => {
+        renderPage();
+        fireEvent.change(screen.getByTestId('dt_risk_risk_percent'), { target: { value: '' } });
+        expect(screen.queryByTestId('dt_risk_gauge')).not.toBeInTheDocument();
+    });
 });
