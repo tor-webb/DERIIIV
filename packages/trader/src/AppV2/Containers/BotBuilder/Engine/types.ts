@@ -19,6 +19,13 @@ export type TDataKind =
     | 'detail_profit'
     | 'detail_sell_price';
 
+export type TCandleField = 'open' | 'high' | 'low' | 'close';
+
+/** The prices an indicator reads: every recent tick, or one price (open, high, low or close) of each recent candle. */
+export type TSeriesSource = { kind: 'ticks' } | { kind: 'candles'; field: TCandleField };
+
+export type TCandle = { epoch: number; open: number; high: number; low: number; close: number };
+
 export type TNumberProperty = 'EVEN' | 'ODD' | 'PRIME' | 'WHOLE' | 'POSITIVE' | 'NEGATIVE' | 'DIVISIBLE_BY';
 
 export type TExpr =
@@ -39,7 +46,21 @@ export type TExpr =
     | { t: 'round'; op: 'ROUND' | 'ROUNDUP' | 'ROUNDDOWN'; a: TExpr }
     | { t: 'rand'; from: TExpr; to: TExpr }
     | { t: 'join'; parts: TExpr[] }
-    | { t: 'call'; name: string; args: TExpr[] };
+    | { t: 'call'; name: string; args: TExpr[] }
+    /** The latest SMA, EMA, RSI or Bollinger value of the prices `source` reads. `band`, `up` and `down` are for `bb`. */
+    | {
+          t: 'indicator';
+          ind: 'sma' | 'ema' | 'rsi' | 'bb';
+          source: TSeriesSource;
+          period: TExpr;
+          band?: 'upper' | 'middle' | 'lower';
+          up?: TExpr;
+          down?: TExpr;
+      }
+    /** One price of one candle; `index` counts back from the newest candle, so 1 is the newest. */
+    | { t: 'candle'; field: TCandleField; index: TExpr }
+    /** True when the newest tick moved this way compared with the one before. */
+    | { t: 'direction'; dir: 'rise' | 'fall' | 'no_change' };
 
 export type TStmt =
     | { t: 'if'; branches: { cond: TExpr; body: TStmt[] }[]; otherwise: TStmt[] }
@@ -100,6 +121,11 @@ export type TProgram = {
      * `set_options` statement to say what to trade. Absent for the usual fixed duration and stake.
      */
     options_stack?: TStmt[] | null;
+    /**
+     * Which price histories the bot reads. The runner loads recent history for these before it starts judging
+     * purchase conditions, so a 20-period average is ready on the first tick instead of after 20 ticks.
+     */
+    series?: { ticks: boolean; candles: boolean };
 };
 
 /** What the runner sends to the API for one trade. */
@@ -121,7 +147,17 @@ export type TSubscription = { unsubscribe: () => void };
 export type TApiResponse = Record<string, any>;
 
 /** The slice of the trading socket the runner needs. Lets the runner be tested without a network. */
+export type THistoryRequest = {
+    symbol: string;
+    style: 'ticks' | 'candles';
+    /** Candle size in seconds. Only for `candles`. */
+    granularity?: number;
+    count: number;
+};
+
 export type TBotApi = {
+    /** Recent prices, for indicators. Optional so a bot that needs no history works with any API. */
+    getHistory?: (request: THistoryRequest) => Promise<TApiResponse>;
     subscribeTicks: (symbol: string, cb: (response: TApiResponse) => void) => TSubscription;
     subscribeProposal: (request: TTradeRequest, cb: (response: TApiResponse) => void) => TSubscription;
     buy: (proposal_id: string, price: number) => Promise<TApiResponse>;

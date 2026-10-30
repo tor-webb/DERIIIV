@@ -51,3 +51,6 @@ export const getWindow = (id: TWindowId): TWindow => WINDOWS.find(item => item.i
 export const STALE_AFTER_SECONDS = 10 * 60;
 
 export const WATCHLIST_STORAGE_KEY = 'markets_watchlist';
+
+/** Fired on `window` when the watchlist or the price-alert settings change, so a mounted watcher can pick them up. */
+export const SETTINGS_CHANGED_EVENT = 'markets-settings-changed';

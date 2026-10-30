@@ -1,0 +1,71 @@
+.price-alert-notifier {
+    position: fixed;
+    // top right, under the top bar, so it never sits on the News pop-up (bottom left)
+    top: calc(var(--top-nav-height, 6rem) + 1.2rem);
+    right: 1.6rem;
+    z-index: 121;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: min(36rem, calc(100vw - 3.2rem));
+
+    @include mobile-screen {
+        right: 1.2rem;
+        width: calc(100vw - 2.4rem);
+    }
+
+    &__card {
+        display: flex;
+        align-items: flex-start;
+        border-radius: 1.2rem;
+        background-color: var(--color-surface-card, #fff);
+        color: var(--color-text-primary);
+        box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.18);
+        border-left: 0.4rem solid var(--brand-secondary, var(--brand-primary));
+    }
+
+    &__body {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        padding: 1.2rem 0 1.2rem 1.4rem;
+        border: 0;
+        background: transparent;
+        color: inherit;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    &__label {
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        opacity: 0.65;
+    }
+
+    &__title {
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.35;
+    }
+
+    &__close {
+        min-width: 4.4rem;
+        min-height: 4.4rem;
+        border: 0;
+        background: transparent;
+        color: inherit;
+        font-size: 2.2rem;
+        cursor: pointer;
+        opacity: 0.6;
+    }
+
+    &__body:focus-visible,
+    &__close:focus-visible {
+        outline: 2px solid var(--brand-primary);
+        outline-offset: -2px;
+    }
+}

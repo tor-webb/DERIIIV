@@ -12,6 +12,7 @@ import TopNav from 'AppV2/Components/Layout/TopNav';
 
 import Router from '../../Routes/router';
 import Assistant from '../Assistant';
+import PriceAlertNotifier from '../Markets/price-alert-notifier';
 import NewsNotifier from '../News/news-notifier';
 
 import './app-shell.scss';
@@ -24,6 +25,7 @@ const MOBILE_NAV_ROUTES = [
     routes.bot_builder,
     routes.bulk_trader,
     routes.risk_calculator,
+    routes.journal,
     routes.what_if,
     routes.learn,
     routes.news,
@@ -64,6 +66,7 @@ const AppShell = observer(() => {
             </div>
             <Assistant />
             <NewsNotifier />
+            <PriceAlertNotifier />
         </div>
     );
 });

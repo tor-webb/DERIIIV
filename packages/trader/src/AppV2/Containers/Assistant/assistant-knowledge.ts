@@ -147,6 +147,72 @@ const topics = (): TTopic[] => [
         actions: () => [go(localize('Open Charts'), routes.charts)],
     },
     {
+        id: 'price_alerts',
+        keywords: [
+            'price alert',
+            'price alerts',
+            'alert me',
+            'notify me when',
+            'tell me when a market moves',
+            'market moves',
+            'big move',
+            'watchlist alert',
+            'alert when price',
+        ],
+        answer: () =>
+            localize(
+                'On the Markets page, star a market, then in Price alerts choose a move such as 1% for it. When that market is up or down by that much over the last hour, you get one pop-up, at most once an hour per market. Alerts only work while this site is open, there is a switch to turn them all off, and they describe a move that already happened. They are not advice to trade.'
+            ),
+        actions: () => [go(localize('Open Markets'), routes.markets)],
+    },
+    {
+        id: 'journal',
+        keywords: [
+            'journal',
+            'trade journal',
+            'my results',
+            'my trades',
+            'my performance',
+            'performance',
+            'win rate',
+            'break even',
+            'how am i doing',
+            'trading history summary',
+        ],
+        answer: () =>
+            localize(
+                'The Journal page (log in first) sums up your latest finished trades on the account you are using: how many you won, your win rate next to the win rate you need just to break even, your net result, how your stake changed over time, and each market’s result. It describes trades that already closed. It cannot tell you what the next trade will do, and trading can lose money.'
+            ),
+        actions: () => [go(localize('Open Journal'), routes.journal)],
+    },
+    {
+        id: 'bot_indicators',
+        keywords: [
+            'moving average',
+            'sma',
+            'ema',
+            'rsi',
+            'bollinger',
+            'bollinger bands',
+            'candle block',
+            'candles in a bot',
+            'check direction',
+            'indicator block',
+            'indicator blocks',
+            'indicators in a bot',
+            'bot indicator',
+            'rsi block',
+            'sma block',
+            'ema block',
+            'bollinger block',
+        ],
+        answer: () =>
+            localize(
+                'In the Bot Builder, the Analysis group has blocks for a simple moving average (SMA), an exponential moving average (EMA), the RSI and Bollinger bands, plus blocks to read a candle price and to check whether the last tick rose or fell. Plug a Ticks list or a Candles list block straight into an indicator, then use the result in a Purchase conditions test. When the bot starts it first loads recent prices, so the indicator has data from the first tick. If a period is longer than the history available, the bot stops and tells you instead of guessing. Indicators describe past prices and do not predict the next one, so try any bot on a demo account first.'
+            ),
+        actions: () => [go(localize('Open Bot Builder'), routes.bot_builder)],
+    },
+    {
         id: 'bot_what',
         keywords: ['bot', 'bots', 'bot builder', 'robot', 'automate', 'automatic', 'blocks', 'what is a bot'],
         answer: () =>

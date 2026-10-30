@@ -160,6 +160,14 @@ Goal: bots exported from Deriv Bot stop being refused. Order by user value: more
 - Wire the unused settings: `restart_buy_sell`, `candle_interval`, notify sound, account-currency stake label (currently hard-coded `USD` in templates and the block).
 - Done when: a real exported bot using the new blocks imports and runs on demo.
 
+**Status of the indicator part of D (branch `bot-indicators`):**
+
+- Built: SMA, EMA, RSI and Bollinger bands (`sma`, `ema`, `rsi`, `bb`), `ticks` and `ohlc_values` list blocks, `read_ohlc` (candle value, index 1 = newest) and `check_direction`. Maths is in `Engine/indicators.ts`, tested against a published RSI worked example.
+- The runner loads recent ticks (up to 1,000) and/or candles (up to 500, sized by the Candle interval block) before judging purchase conditions, and merges live ticks into them. Bots that read no prices request nothing, so existing bots are unchanged.
+- **UNCONFIRMED:** the block type names and field names (`sma`, `ema`, `rsi`, `bb`, `ticks`, `ohlc_values`, `read_ohlc`, `check_direction`, `INPUT_LIST`, `PERIOD`, `OHLCFIELD_LIST`, `BBRESULT_LIST`, `CHECK_DIRECTION`, `CANDLEINDEX`, `UPMULTIPLIER`, `DOWNMULTIPLIER`) were written from memory, not from a real Deriv Bot export. Get 2 or 3 real exports that use indicators and check them before telling users these bots import.
+- Not built: MACD, the array variants (SMAA, EMAA, RSIA, BBA), an indicator fed by a variable-held list (refused with a clear message), `ohlc` and `read_ohlc_obj`. The newest candle is still forming. The 4h and 1d candle windows are untested live.
+- Still owed: a demo-account run of an indicator bot.
+
 ### E. Trade journal and performance page
 
 Goal: show a user their own results honestly (win rate against break-even, best and worst markets, stake over time).
@@ -169,6 +177,12 @@ Goal: show a user their own results honestly (win rate against break-even, best 
 - Copy must state results are past and do not predict the future. No ranking of users, no "hot streak" language.
 - Done when: tests on the maths with fixed trade lists, an empty state, and a logged-out state that asks for login.
 
+**Status of E (branch `trade-journal`):**
+
+- Built: `/journal` (logged-in nav item), `Containers/Journal/` with pure maths in `journal-utils.ts` (break-even reuses `breakEvenWinRate`), `use-journal.ts` (one `WS.profitTable(500, 0, {})` call, reloads on account change), page with win rate against break-even, running result and stake lines, per-market table, last 20 / last 50 / all range buttons, empty, error, loading and logged-out states. Help assistant topic `journal`.
+- Limits: only the latest 500 trades are read (no paging). Break-even uses the average payout the server reported, so it is rough for contracts whose payout is not fixed (multipliers, accumulators). Dates are not shown or filterable yet.
+- Still owed: a look at the page in a browser on a demo account with real trades (layout at 390 and 1280 px).
+
 ### F. Price alerts for watchlisted markets
 
 Goal: a pop-up when a starred market moves more than a chosen amount in an hour.
@@ -177,6 +191,13 @@ Goal: a pop-up when a starred market moves more than a chosen amount in an hour.
 - Data: `use-markets.ts` already has live rows, but it only runs while the Markets page is open. Decide between a light shared hook mounted in `AppShell` for starred markets only (preferred) or alerts only while the page is open (simple, weaker).
 - Rate limit the pop-ups (one per market per hour) and let the user switch them off.
 - Done when: tests for threshold crossing, de-duplication, and storage.
+
+**Status of F (branch `price-alerts`):**
+
+- Built: per-market thresholds (0.25, 0.5, 1, 2 or 5 percent) chosen in a "Price alerts" panel on the Markets page, for starred markets only; a master on/off switch. Storage keys `markets_price_alerts`, `markets_price_alerts_off`, `markets_price_alerts_last` (when each market last alerted, so a reload does not repeat it). Pure logic in `Markets/price-alerts.ts`; the watcher `Markets/use-price-alerts.ts` is mounted app-wide through `PriceAlertNotifier` in `AppShell` and loads one hour of 1-minute candles for each watched market, then follows live ticks. Nothing runs when no market has a threshold.
+- Rules: a move is the net change from the price an hour ago (needs at least 30 minutes of prices), up or down; one pop-up per market per hour; closed markets (newest price over 10 minutes old) never alert. Pop-up sits top right so it does not overlap the News pop-up (bottom left).
+- Limits: alerts only work while the site is open in a browser tab (no push or background alerts). One shared threshold list per browser, not per account. Pop-up text shows the price unformatted (no pip size).
+- Still owed: a look at the pop-up and panel in a browser at 390 and 1280 px, and a live check that a real move triggers it.
 
 ### G. Smaller items already on the list
 

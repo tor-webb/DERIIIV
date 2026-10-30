@@ -5,12 +5,14 @@ import { localize } from '@deriv-com/translations';
 import { BLOCK_TYPES, TRADE_TYPES } from '../blocks';
 
 import type {
+    TCandleField,
     TDataKind,
     TExpr,
     TLevel,
     TNumberProperty,
     TProcedure,
     TProgram,
+    TSeriesSource,
     TStmt,
     TTradeOptions,
     TTradeSetup,
@@ -27,6 +29,10 @@ const missing = (block: Blockly.Block, input: string): never => {
     );
 };
 
+const throwCompile = (message: string): never => {
+    throw new CompileError(message);
+};
+
 const unsupported = (block: Blockly.Block): never => {
     throw new CompileError(localize('The "{{block}}" block is not supported in a bot yet.', { block: block.type }));
 };
@@ -41,6 +47,45 @@ const DEFAULT_INPUTS: Record<string, TExpr> = {
     [`${BLOCK_TYPES.TRADE_OPTIONS}.PREDICTION`]: { t: 'num', v: 0 },
     [`${BLOCK_TYPES.NOTIFY}.MESSAGE`]: { t: 'str', v: '' },
     [`${BLOCK_TYPES.TIMEOUT}.SECONDS`]: { t: 'num', v: 1 },
+    [`${BLOCK_TYPES.SMA}.PERIOD`]: { t: 'num', v: 10 },
+    [`${BLOCK_TYPES.EMA}.PERIOD`]: { t: 'num', v: 10 },
+    [`${BLOCK_TYPES.RSI}.PERIOD`]: { t: 'num', v: 14 },
+    [`${BLOCK_TYPES.BOLLINGER}.PERIOD`]: { t: 'num', v: 20 },
+    [`${BLOCK_TYPES.BOLLINGER}.UPMULTIPLIER`]: { t: 'num', v: 2 },
+    [`${BLOCK_TYPES.BOLLINGER}.DOWNMULTIPLIER`]: { t: 'num', v: 2 },
+    [`${BLOCK_TYPES.READ_OHLC}.CANDLEINDEX`]: { t: 'num', v: 1 },
+};
+
+const CANDLE_FIELDS: ReadonlySet<string> = new Set(['open', 'high', 'low', 'close']);
+
+const candleField = (block: Blockly.Block): TCandleField => {
+    const field = String(block.getFieldValue('OHLCFIELD_LIST'));
+    if (!CANDLE_FIELDS.has(field)) {
+        throw new CompileError(
+            localize('The "{{block}}" block uses "{{field}}", which is not supported in a bot yet.', {
+                block: block.type,
+                field,
+            })
+        );
+    }
+    return field as TCandleField;
+};
+
+/**
+ * Where an indicator reads its prices from. The list has to be a Ticks list or a Candles list block plugged straight
+ * into the indicator; a list held in a variable cannot be followed, so it is refused with an explanation.
+ */
+const indicatorSource = (block: Blockly.Block): TSeriesSource => {
+    const list = block.getInputTargetBlock('INPUT_LIST');
+    if (!list) return missing(block, 'INPUT_LIST');
+    if (list.type === BLOCK_TYPES.TICKS) return { kind: 'ticks' };
+    if (list.type === BLOCK_TYPES.OHLC_VALUES) return { kind: 'candles', field: candleField(list) };
+    return throwCompile(
+        localize(
+            'The "{{block}}" block must have a Ticks list or a Candles list block plugged straight into it. A list kept in a variable is not supported yet.',
+            { block: block.type }
+        )
+    );
 };
 
 const DATA_BLOCKS: Record<string, TDataKind> = {
@@ -155,6 +200,37 @@ export const compileExpr = (block: Blockly.Block): TExpr => {
             return { t: 'rand', from: compileInput(block, 'FROM'), to: compileInput(block, 'TO') };
         case BLOCK_TYPES.PROCEDURE_CALL_RETURN:
             return { t: 'call', name: String(block.getFieldValue('NAME')), args: compileArguments(block) };
+        case BLOCK_TYPES.SMA:
+        case BLOCK_TYPES.EMA:
+        case BLOCK_TYPES.RSI:
+            return {
+                t: 'indicator',
+                ind: block.type as 'sma' | 'ema' | 'rsi',
+                source: indicatorSource(block),
+                period: compileInput(block, 'PERIOD'),
+            };
+        case BLOCK_TYPES.BOLLINGER:
+            return {
+                t: 'indicator',
+                ind: 'bb',
+                source: indicatorSource(block),
+                period: compileInput(block, 'PERIOD'),
+                band: block.getFieldValue('BBRESULT_LIST') as 'upper' | 'middle' | 'lower',
+                up: compileInput(block, 'UPMULTIPLIER'),
+                down: compileInput(block, 'DOWNMULTIPLIER'),
+            };
+        case BLOCK_TYPES.READ_OHLC:
+            return { t: 'candle', field: candleField(block), index: compileInput(block, 'CANDLEINDEX') };
+        case BLOCK_TYPES.CHECK_DIRECTION:
+            return { t: 'direction', dir: block.getFieldValue('CHECK_DIRECTION') as 'rise' | 'fall' | 'no_change' };
+        case BLOCK_TYPES.TICKS:
+        case BLOCK_TYPES.OHLC_VALUES:
+            return throwCompile(
+                localize(
+                    'The "{{block}}" block is a list of prices. Plug it into an indicator block such as the moving average.',
+                    { block: block.type }
+                )
+            );
         default:
             return unsupported(block);
     }
@@ -332,6 +408,16 @@ const compileProcedures = (workspace: Blockly.Workspace): Record<string, TProced
     return procedures;
 };
 
+/** Which price histories the enabled blocks read, so the runner can load them before it starts. */
+const findSeriesUse = (workspace: Blockly.Workspace) => {
+    const blocks = workspace.getAllBlocks(false).filter(block => block.isEnabled() && !block.getInheritedDisabled());
+    const has = (...types: string[]) => blocks.some(block => types.includes(block.type));
+    return {
+        ticks: has(BLOCK_TYPES.TICKS, BLOCK_TYPES.CHECK_DIRECTION),
+        candles: has(BLOCK_TYPES.OHLC_VALUES, BLOCK_TYPES.READ_OHLC),
+    };
+};
+
 /** Turns the blocks on the workspace into a plain program the runner can execute. */
 export const compileProgram = (workspace: Blockly.Workspace): TProgram => {
     const trade_block = findRoot(workspace, BLOCK_TYPES.TRADE_DEFINITION);
@@ -357,5 +443,6 @@ export const compileProgram = (workspace: Blockly.Workspace): TProgram => {
         during_purchase: during_block ? compileStack(during_block.getInputTargetBlock('DURING_PURCHASE_STACK')) : [],
         after_purchase: compileStack(after_block.getInputTargetBlock('AFTERPURCHASE_STACK')),
         procedures: compileProcedures(workspace),
+        series: findSeriesUse(workspace),
     };
 };
