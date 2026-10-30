@@ -137,6 +137,25 @@ const topics = (): TTopic[] => [
         actions: () => [go(localize('Open Charts'), routes.charts)],
     },
     {
+        id: 'price_alerts',
+        keywords: [
+            'price alert',
+            'price alerts',
+            'alert me',
+            'notify me when',
+            'tell me when a market moves',
+            'market moves',
+            'big move',
+            'watchlist alert',
+            'alert when price',
+        ],
+        answer: () =>
+            localize(
+                'On the Markets page, star a market, then in Price alerts choose a move such as 1% for it. When that market is up or down by that much over the last hour, you get one pop-up, at most once an hour per market. Alerts only work while this site is open, there is a switch to turn them all off, and they describe a move that already happened. They are not advice to trade.'
+            ),
+        actions: () => [go(localize('Open Markets'), routes.markets)],
+    },
+    {
         id: 'journal',
         keywords: [
             'journal',

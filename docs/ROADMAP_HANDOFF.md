@@ -191,6 +191,13 @@ Goal: a pop-up when a starred market moves more than a chosen amount in an hour.
 - Rate limit the pop-ups (one per market per hour) and let the user switch them off.
 - Done when: tests for threshold crossing, de-duplication, and storage.
 
+**Status of F (branch `price-alerts`):**
+
+- Built: per-market thresholds (0.25, 0.5, 1, 2 or 5 percent) chosen in a "Price alerts" panel on the Markets page, for starred markets only; a master on/off switch. Storage keys `markets_price_alerts`, `markets_price_alerts_off`, `markets_price_alerts_last` (when each market last alerted, so a reload does not repeat it). Pure logic in `Markets/price-alerts.ts`; the watcher `Markets/use-price-alerts.ts` is mounted app-wide through `PriceAlertNotifier` in `AppShell` and loads one hour of 1-minute candles for each watched market, then follows live ticks. Nothing runs when no market has a threshold.
+- Rules: a move is the net change from the price an hour ago (needs at least 30 minutes of prices), up or down; one pop-up per market per hour; closed markets (newest price over 10 minutes old) never alert. Pop-up sits top right so it does not overlap the News pop-up (bottom left).
+- Limits: alerts only work while the site is open in a browser tab (no push or background alerts). One shared threshold list per browser, not per account. Pop-up text shows the price unformatted (no pip size).
+- Still owed: a look at the pop-up and panel in a browser at 390 and 1280 px, and a live check that a real move triggers it.
+
 ### G. Smaller items already on the list
 
 - Phone tab bar: pin the Menu tab; hide the grey "Not logged in" strip when logged out (`HANDOFF.md`).
