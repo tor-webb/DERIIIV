@@ -157,6 +157,33 @@ const topics = (): TTopic[] => [
         actions: () => [go(localize('Open Journal'), routes.journal)],
     },
     {
+        id: 'bot_indicators',
+        keywords: [
+            'moving average',
+            'sma',
+            'ema',
+            'rsi',
+            'bollinger',
+            'bollinger bands',
+            'candle block',
+            'candles in a bot',
+            'check direction',
+            'indicator block',
+            'indicator blocks',
+            'indicators in a bot',
+            'bot indicator',
+            'rsi block',
+            'sma block',
+            'ema block',
+            'bollinger block',
+        ],
+        answer: () =>
+            localize(
+                'In the Bot Builder, the Analysis group has blocks for a simple moving average (SMA), an exponential moving average (EMA), the RSI and Bollinger bands, plus blocks to read a candle price and to check whether the last tick rose or fell. Plug a Ticks list or a Candles list block straight into an indicator, then use the result in a Purchase conditions test. When the bot starts it first loads recent prices, so the indicator has data from the first tick. If a period is longer than the history available, the bot stops and tells you instead of guessing. Indicators describe past prices and do not predict the next one, so try any bot on a demo account first.'
+            ),
+        actions: () => [go(localize('Open Bot Builder'), routes.bot_builder)],
+    },
+    {
         id: 'bot_what',
         keywords: ['bot', 'bots', 'bot builder', 'robot', 'automate', 'automatic', 'blocks', 'what is a bot'],
         answer: () =>

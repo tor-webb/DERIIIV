@@ -48,6 +48,10 @@ describe('getAssistantReply', () => {
         ['where is my trade journal', 'journal'],
         ['what is my win rate and break even', 'journal'],
         ['how am I doing overall', 'journal'],
+        ['can my bot use a moving average', 'bot_indicators'],
+        ['is there an RSI block in the bot builder', 'bot_indicators'],
+        ['how do I use bollinger bands in a bot', 'bot_indicators'],
+        ['show me the charts and indicators', 'charts'],
     ])('answers "%s" with the %s topic', (question, id) => {
         expect(getAssistantReply(question, guest).id).toBe(id);
     });

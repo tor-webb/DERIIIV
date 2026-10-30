@@ -7,6 +7,7 @@ import type {
     TApiResponse,
     TBotApi,
     TBotStats,
+    TCandle,
     TDataKind,
     TExpr,
     TLevel,
@@ -14,6 +15,7 @@ import type {
     TProgram,
     TRunLimits,
     TRunStatus,
+    TSeriesSource,
     TStmt,
     TSubscription,
     TTradeRequest,
@@ -69,7 +71,66 @@ const DEFAULT_WATCHDOG: Required<TWatchdogOptions> = {
     max_resubscribes: 3,
 };
 
-type TGuard = 'proposal' | 'buy' | 'contract';
+type TGuard = 'proposal' | 'buy' | 'contract' | 'history';
+
+/** How many recent ticks and candles are kept for indicators, and how many are asked for when the bot starts. */
+const MAX_TICKS = 1000;
+const MAX_CANDLES = 500;
+
+type TTickPoint = { epoch: number; quote: number };
+
+const toNumbers = (values: unknown): number[] =>
+    Array.isArray(values) ? values.map(Number).filter(value => Number.isFinite(value)) : [];
+
+/** Earlier ticks first, then the live ones. A history tick at or after the first live tick is dropped, so none repeats. */
+export const mergeTicks = (history: TTickPoint[], live: TTickPoint[]): TTickPoint[] => {
+    const first_live = live.length ? live[0].epoch : Infinity;
+    return [...history.filter(point => point.epoch < first_live), ...live].slice(-MAX_TICKS);
+};
+
+/**
+ * Joins the candles from the server with the ones built from live ticks. Where both know the same candle, the server
+ * has the true open (the bot may have started mid-candle) and the live ticks have the newest close.
+ */
+export const mergeCandles = (history: TCandle[], live: TCandle[]): TCandle[] => {
+    const merged = new Map<number, TCandle>(history.map(candle => [candle.epoch, candle]));
+    live.forEach(candle => {
+        const known = merged.get(candle.epoch);
+        merged.set(
+            candle.epoch,
+            known
+                ? {
+                      epoch: candle.epoch,
+                      open: known.open,
+                      high: Math.max(known.high, candle.high),
+                      low: Math.min(known.low, candle.low),
+                      close: candle.close,
+                  }
+                : candle
+        );
+    });
+    return Array.from(merged.values())
+        .sort((a, b) => a.epoch - b.epoch)
+        .slice(-MAX_CANDLES);
+};
+
+/** Folds one tick into a list of candles of `granularity` seconds. */
+export const applyTickToCandles = (
+    candles: TCandle[],
+    quote: number,
+    epoch: number,
+    granularity: number
+): TCandle[] => {
+    const bucket = Math.floor(epoch / granularity) * granularity;
+    const last = candles[candles.length - 1];
+    if (last && last.epoch === bucket) {
+        return [
+            ...candles.slice(0, -1),
+            { ...last, high: Math.max(last.high, quote), low: Math.min(last.low, quote), close: quote },
+        ];
+    }
+    return [...candles, { epoch: bucket, open: quote, high: quote, low: quote, close: quote }].slice(-MAX_CANDLES);
+};
 
 const emptyStats = (): TBotStats => ({ runs: 0, won: 0, lost: 0, total_profit: 0, total_stake: 0, total_payout: 0 });
 
@@ -120,6 +181,11 @@ export class BotRunner {
 
     private last_tick = 0;
     private last_digit = 0;
+    private tick_points: TTickPoint[] = [];
+    private candles: TCandle[] = [];
+    /** True from the start until the recent prices the indicators need have arrived. Purchase conditions wait. */
+    private awaiting_history = false;
+    private history_token = 0;
     private contract: TContractInfo = emptyContract();
     private sell_available = false;
     private last_result: 'win' | 'loss' | null = null;
@@ -143,6 +209,7 @@ export class BotRunner {
         proposal: null,
         buy: null,
         contract: null,
+        history: null,
     };
     private buy_token = 0;
     private proposal_token = 0;
@@ -169,6 +236,10 @@ export class BotRunner {
         this.contract = emptyContract();
         this.last_result = null;
         this.consecutive_trade_errors = 0;
+        this.tick_points = [];
+        this.candles = [];
+        this.awaiting_history = false;
+        this.history_token += 1;
         this.options.onStatus(this.status);
         this.options.onStats(this.getStats());
         onLog(
@@ -186,8 +257,91 @@ export class BotRunner {
         this.picked_options = null;
         this.phase = program.options_stack ? 'preparing' : 'waiting';
         this.tick_sub = api.subscribeTicks(program.setup.symbol, response => this.onTick(response));
+        this.loadHistory();
         if (program.options_stack) this.runOptionsStack();
     }
+
+    /**
+     * Fetches the recent ticks and candles the bot's indicators read, so a 20-period average is ready on the first
+     * tick. Purchase conditions wait until they arrive. If they cannot be had, the bot stops and says why: an
+     * indicator on missing prices would be a guess.
+     */
+    private loadHistory() {
+        const { api, program } = this.options;
+        const { series, setup } = program;
+        if (!api.getHistory || !(series?.ticks || series?.candles)) return;
+
+        this.awaiting_history = true;
+        this.history_token += 1;
+        const token = this.history_token;
+        const is_current = () => token === this.history_token && this.status === 'running';
+        const failHistory = (message: string) => {
+            if (!is_current()) return;
+            this.disarmGuard('history');
+            this.awaiting_history = false;
+            this.fail(message);
+        };
+        this.armGuard('history', this.watchdogSettings().request_timeout_ms, () =>
+            failHistory(localize('Recent prices did not arrive in time, so the bot stopped. Try again.'))
+        );
+
+        let ticks_request: Promise<TApiResponse | null>, candles_request: Promise<TApiResponse | null>;
+        try {
+            ticks_request = series.ticks
+                ? api.getHistory({ symbol: setup.symbol, style: 'ticks', count: MAX_TICKS })
+                : Promise.resolve(null);
+            candles_request = series.candles
+                ? api.getHistory({
+                      symbol: setup.symbol,
+                      style: 'candles',
+                      granularity: setup.candle_interval,
+                      count: MAX_CANDLES,
+                  })
+                : Promise.resolve(null);
+        } catch (error) {
+            failHistory((error as { message?: string })?.message ?? errorMessage(undefined));
+            return;
+        }
+
+        Promise.all([ticks_request, candles_request]).then(
+            ([ticks, candles]) => {
+                if (!is_current()) return;
+                const bad = [ticks, candles].find(
+                    response => response && (response.error || (!response.history && !response.candles))
+                );
+                if (bad) {
+                    failHistory(errorMessage(bad));
+                    return;
+                }
+                if (ticks) {
+                    const prices = toNumbers(ticks.history?.prices);
+                    const times = toNumbers(ticks.history?.times);
+                    const earlier = prices.map((quote, index) => ({ quote, epoch: times[index] ?? index }));
+                    this.tick_points = mergeTicks(earlier, this.tick_points);
+                }
+                if (candles && Array.isArray(candles.candles)) {
+                    const earlier = (candles.candles as TApiResponse[])
+                        .map(item => ({
+                            epoch: Number(item?.epoch),
+                            open: Number(item?.open),
+                            high: Number(item?.high),
+                            low: Number(item?.low),
+                            close: Number(item?.close),
+                        }))
+                        .filter(item => Object.values(item).every(value => Number.isFinite(value)));
+                    this.candles = mergeCandles(earlier, this.candles);
+                }
+                this.disarmGuard('history');
+                this.awaiting_history = false;
+            },
+            (error: unknown) => failHistory((error as { message?: string })?.message ?? errorMessage(undefined))
+        );
+    }
+
+    private readSeries = (source: TSeriesSource): number[] =>
+        source.kind === 'ticks'
+            ? this.tick_points.map(point => point.quote)
+            : this.candles.map(candle => candle[source.field]);
 
     /** With run-time trade options, the trade parameters script runs before every trade and picks the options. */
     private beginNextTrade() {
@@ -340,6 +494,7 @@ export class BotRunner {
             vars: this.vars,
             procedures: this.options.program.procedures,
             read: this.read,
+            series: this.readSeries,
             notify: (level, message) => this.options.onLog(level, message),
             purchase: contract_type => {
                 requests.purchase = requests.purchase ?? contract_type;
@@ -420,10 +575,20 @@ export class BotRunner {
         this.last_tick = Number(quote);
         const digits = Number(quote).toFixed(Number.isInteger(pip_size) ? pip_size : 2);
         this.last_digit = Number(digits[digits.length - 1]);
+        this.recordTick(Number(quote), Number(response.tick.epoch));
 
-        if (this.phase !== 'waiting') return;
+        if (this.awaiting_history || this.phase !== 'waiting') return;
         const requests = this.runStack(this.options.program.before_purchase);
         if (requests) this.applyRequests(requests);
+    }
+
+    /** Keeps the newest ticks, and the candles built from them, for the indicator blocks. */
+    private recordTick(quote: number, epoch: number) {
+        const at = Number.isFinite(epoch) ? epoch : Math.floor(Date.now() / 1000);
+        this.tick_points = [...this.tick_points, { epoch: at, quote }].slice(-MAX_TICKS);
+        if (this.options.program.series?.candles) {
+            this.candles = applyTickToCandles(this.candles, quote, at, this.options.program.setup.candle_interval);
+        }
     }
 
     /** Works out this trade's request from the trade options. They are re-evaluated for every trade. */
