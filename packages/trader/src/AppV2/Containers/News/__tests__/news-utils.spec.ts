@@ -4,7 +4,9 @@ import {
     getRecommendations,
     getTags,
     isHighImpact,
+    isNewSince,
     loadNews,
+    matchesNewsSearch,
     parseFeed,
     pickAlerts,
     resetNewsCache,
@@ -173,5 +175,49 @@ describe('storage helpers', () => {
         expect(areAlertsOn()).toBe(true);
         window.localStorage.setItem(STORAGE_ALERTS_OFF, '1');
         expect(areAlertsOn()).toBe(false);
+    });
+});
+
+describe('matchesNewsSearch', () => {
+    const headline = { ...item('s', 'Fed holds interest rates steady', 1, 'Rates unchanged.'), source: 'FXStreet' };
+
+    it('matches everything when nothing is typed', () => {
+        expect(matchesNewsSearch(headline, '')).toBe(true);
+        expect(matchesNewsSearch(headline, '   ')).toBe(true);
+    });
+
+    it('matches the title, summary, source and category, ignoring case', () => {
+        expect(matchesNewsSearch(headline, 'FED')).toBe(true);
+        expect(matchesNewsSearch(headline, 'unchanged')).toBe(true);
+        expect(matchesNewsSearch(headline, 'fxstreet')).toBe(true);
+        expect(matchesNewsSearch({ ...headline, category: 'forex' }, 'forex')).toBe(true);
+    });
+
+    it('needs every word to match', () => {
+        expect(matchesNewsSearch(headline, 'fed rates')).toBe(true);
+        expect(matchesNewsSearch(headline, 'fed bitcoin')).toBe(false);
+    });
+
+    it('does not match something that is not there', () => {
+        expect(matchesNewsSearch(headline, 'oil')).toBe(false);
+    });
+});
+
+describe('isNewSince', () => {
+    const at = (hours: number) => item('n', 'Headline', hours);
+
+    it('is true only for a headline published after the last visit', () => {
+        const viewed = NOW - 3 * 3600000;
+        expect(isNewSince(at(1), viewed)).toBe(true);
+        expect(isNewSince(at(5), viewed)).toBe(false);
+        expect(isNewSince(at(3), viewed)).toBe(false);
+    });
+
+    it('marks nothing on a first visit', () => {
+        expect(isNewSince(at(0.5), 0)).toBe(false);
+    });
+
+    it('marks nothing when the date cannot be read', () => {
+        expect(isNewSince({ ...at(1), published: 'not a date' }, NOW - 3600000)).toBe(false);
     });
 });
