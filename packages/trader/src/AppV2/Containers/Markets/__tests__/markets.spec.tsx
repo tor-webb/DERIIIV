@@ -402,3 +402,207 @@ describe('<Markets /> search, window, trend and charts', () => {
         expect(screen.getByTestId('dt_markets_chart_frxGBPUSD')).toBeDisabled();
     });
 });
+
+describe('<Markets /> scanner', () => {
+    const SCAN_ROWS: TMarketRow[] = [
+        row({
+            symbol: 'R_10',
+            change_pct: 0.4,
+            volatility: 'low',
+            range_position: 0.9,
+        }),
+        row({
+            symbol: 'R_25',
+            change_pct: 0.08,
+            volatility: 'medium',
+            range_position: 0.5,
+        }),
+        row({
+            symbol: 'R_50',
+            change_pct: -0.6,
+            volatility: 'high',
+            range_position: 0.05,
+        }),
+        row({
+            symbol: 'frxEURUSD',
+            name: 'EUR/USD',
+            group: 'forex',
+            change_pct: -0.3,
+            volatility: null,
+            is_closed: true,
+            range_position: 0.1,
+        }),
+        row({
+            symbol: 'frxGBPUSD',
+            name: 'GBP/USD',
+            group: 'forex',
+            status: 'unavailable',
+            price: null,
+            change_pct: null,
+            volatility: null,
+        }),
+    ];
+
+    beforeEach(() => {
+        jest.clearAllMocks();
+        localStorage.clear();
+        mockStoreSymbol = 'R_100';
+        mockOnChange.mockResolvedValue(undefined);
+        mockState = { rows: SCAN_ROWS, is_loading: false, updated_at: Date.now(), retry: jest.fn() };
+    });
+
+    const shownSymbols = () =>
+        within(screen.getByTestId('dt_markets_list'))
+            .getAllByTestId(/dt_markets_row_/)
+            .map(item => item.getAttribute('data-testid')?.replace('dt_markets_row_', ''));
+
+    const openScanner = () => {
+        renderPage();
+        fireEvent.click(screen.getByTestId('dt_markets_scanner_toggle'));
+    };
+
+    const press = (id: string) => fireEvent.click(screen.getByTestId(`dt_markets_scan_${id}`));
+
+    it('is closed to start with, shows every market, and opens from the Scanner button', () => {
+        renderPage();
+        const toggle = screen.getByTestId('dt_markets_scanner_toggle');
+        expect(toggle).toHaveTextContent('Scanner');
+        expect(toggle).toHaveAttribute('aria-expanded', 'false');
+        expect(screen.queryByTestId('dt_markets_scanner')).not.toBeInTheDocument();
+        expect(shownSymbols()).toHaveLength(5);
+
+        fireEvent.click(toggle);
+        expect(toggle).toHaveAttribute('aria-expanded', 'true');
+        expect(screen.getByTestId('dt_markets_scanner')).toBeInTheDocument();
+        expect(screen.getByTestId('dt_markets_scan_direction_any')).toHaveAttribute('aria-pressed', 'true');
+        expect(screen.queryByTestId('dt_markets_scan_count')).not.toBeInTheDocument();
+    });
+
+    it('filters by direction and reports how many markets match', () => {
+        openScanner();
+        press('direction_up');
+        expect(shownSymbols()).toEqual(['R_10', 'R_25']);
+        expect(screen.getByTestId('dt_markets_scanner_toggle')).toHaveTextContent('Scanner (1)');
+        expect(screen.getByTestId('dt_markets_scan_count')).toHaveTextContent('2 of 5 markets match');
+        expect(screen.getByTestId('dt_markets_scan_direction_up')).toHaveAttribute('aria-pressed', 'true');
+        expect(screen.getByTestId('dt_markets_scan_direction_any')).toHaveAttribute('aria-pressed', 'false');
+    });
+
+    it('leaves out a closed market even though it fell', () => {
+        openScanner();
+        press('direction_down');
+        expect(shownSymbols()).toEqual(['R_50']);
+    });
+
+    it('filters by the smallest move', () => {
+        openScanner();
+        press('move_0.25');
+        expect(shownSymbols()).toEqual(['R_10', 'R_50']);
+        press('move_0.5');
+        expect(shownSymbols()).toEqual(['R_50']);
+        press('move_0');
+        expect(shownSymbols()).toHaveLength(5);
+    });
+
+    it('filters by volatility level', () => {
+        openScanner();
+        press('volatility_high');
+        expect(shownSymbols()).toEqual(['R_50']);
+        press('volatility_low');
+        expect(shownSymbols()).toEqual(['R_10']);
+    });
+
+    it('finds markets near the high or the low of the range', () => {
+        openScanner();
+        press('position_high');
+        expect(shownSymbols()).toEqual(['R_10']);
+        press('position_low');
+        expect(shownSymbols()).toEqual(['R_50']);
+    });
+
+    it('"open markets only" drops closed and unavailable markets', () => {
+        openScanner();
+        press('live');
+        expect(shownSymbols()).toEqual(['R_10', 'R_25', 'R_50']);
+        expect(screen.getByTestId('dt_markets_scanner_toggle')).toHaveTextContent('Scanner (1)');
+    });
+
+    it('combines filters, and counts them in the button', () => {
+        openScanner();
+        press('direction_up');
+        press('move_0.25');
+        press('position_high');
+        expect(shownSymbols()).toEqual(['R_10']);
+        expect(screen.getByTestId('dt_markets_scanner_toggle')).toHaveTextContent('Scanner (3)');
+        expect(screen.getByTestId('dt_markets_scan_count')).toHaveTextContent('1 of 5 markets match');
+    });
+
+    it('works on top of the group pills and the search box, and counts against what they leave', () => {
+        openScanner();
+        fireEvent.click(screen.getByTestId('dt_markets_filter_synthetic'));
+        press('direction_up');
+        expect(screen.getByTestId('dt_markets_scan_count')).toHaveTextContent('2 of 3 markets match');
+        fireEvent.change(screen.getByTestId('dt_markets_search'), { target: { value: 'r_25' } });
+        expect(shownSymbols()).toEqual(['R_25']);
+        expect(screen.getByTestId('dt_markets_scan_count')).toHaveTextContent('1 of 1 markets match');
+    });
+
+    it('still sorts what the scanner leaves', () => {
+        openScanner();
+        press('direction_up');
+        fireEvent.change(screen.getByTestId('dt_markets_sort'), { target: { value: 'change' } });
+        expect(shownSymbols()).toEqual(['R_10', 'R_25']);
+        press('direction_any');
+        press('move_0.05');
+        fireEvent.change(screen.getByTestId('dt_markets_sort'), { target: { value: 'change' } });
+        expect(shownSymbols()?.[0]).toBe('R_50');
+    });
+
+    it('says so when nothing matches, and the empty message points at the scanner', () => {
+        openScanner();
+        press('direction_up');
+        press('position_low');
+        expect(screen.queryByTestId('dt_markets_list')).not.toBeInTheDocument();
+        expect(screen.getByTestId('dt_markets_empty')).toHaveTextContent('No market matches the scanner filters.');
+        expect(screen.getByTestId('dt_markets_scan_count')).toHaveTextContent('0 of 5 markets match');
+    });
+
+    it('clears every filter at once', () => {
+        openScanner();
+        press('direction_down');
+        press('volatility_high');
+        press('live');
+        expect(shownSymbols()).toEqual(['R_50']);
+        fireEvent.click(screen.getByTestId('dt_markets_scan_clear'));
+        expect(shownSymbols()).toHaveLength(5);
+        expect(screen.getByTestId('dt_markets_scanner_toggle')).toHaveTextContent(/^Scanner$/);
+        expect(screen.queryByTestId('dt_markets_scan_clear')).not.toBeInTheDocument();
+        expect(screen.getByTestId('dt_markets_scan_direction_any')).toHaveAttribute('aria-pressed', 'true');
+        expect(screen.getByTestId('dt_markets_scan_live')).not.toBeChecked();
+    });
+
+    it('keeps the filters when the panel is closed again', () => {
+        openScanner();
+        press('direction_up');
+        fireEvent.click(screen.getByTestId('dt_markets_scanner_toggle'));
+        expect(screen.queryByTestId('dt_markets_scanner')).not.toBeInTheDocument();
+        expect(shownSymbols()).toEqual(['R_10', 'R_25']);
+        expect(screen.getByTestId('dt_markets_scan_count')).toBeInTheDocument();
+    });
+
+    it('names the chosen window in the labels, and says the filters describe the past', () => {
+        openScanner();
+        expect(screen.getByText('Direction (1h)')).toBeInTheDocument();
+        fireEvent.click(screen.getByTestId('dt_markets_window_1d'));
+        expect(screen.getByText('Direction (1d)')).toBeInTheDocument();
+        expect(screen.getByText(/top or bottom fifth of the 1d range/)).toBeInTheDocument();
+        expect(screen.getByText(/not where it will go next/)).toBeInTheDocument();
+    });
+
+    it('still opens a market from a row the scanner kept', async () => {
+        openScanner();
+        press('direction_down');
+        fireEvent.click(screen.getByTestId('dt_markets_trade_R_50'));
+        await waitFor(() => expect(screen.getByTestId('dt_location')).toHaveTextContent('/?symbol=R_50'));
+    });
+});

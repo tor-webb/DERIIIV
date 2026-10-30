@@ -11,6 +11,15 @@ import { findBotMarket } from '../BotBuilder/bot-markets';
 
 import { DEFAULT_WINDOW, TWindowId, WINDOWS } from './markets-config';
 import {
+    countActiveScanFilters,
+    DEFAULT_SCAN,
+    MIN_MOVE_STEPS,
+    scanRows,
+    TScanDirection,
+    TScanFilters,
+    TScanPosition,
+} from './markets-scanner';
+import {
     formatPercent,
     formatPrice,
     getTopMovers,
@@ -55,6 +64,37 @@ const VOLATILITY_TEXT: Record<TVolatilityLevel, () => string> = {
     medium: () => localize('Medium'),
     high: () => localize('High'),
 };
+
+type TScanGroupProps = {
+    label: string;
+    id: string;
+    value: string;
+    options: { id: string; label: string }[];
+    onChange: (value: string) => void;
+};
+
+/** One row of pill buttons in the scanner, e.g. Direction: Any / Rising / Falling. */
+const ScanGroup = ({ label, id, value, options, onChange }: TScanGroupProps) => (
+    <div className='markets__scan-group'>
+        <span className='markets__scan-label'>{label}</span>
+        <div className='markets__filters' role='group' aria-label={label}>
+            {options.map(option => (
+                <button
+                    key={option.id}
+                    type='button'
+                    className={classNames('markets__pill', 'markets__pill--small', {
+                        'markets__pill--active': value === option.id,
+                    })}
+                    aria-pressed={value === option.id}
+                    data-testid={`dt_markets_scan_${id}_${option.id}`}
+                    onClick={() => onChange(option.id)}
+                >
+                    {option.label}
+                </button>
+            ))}
+        </div>
+    </div>
+);
 
 const direction = (change_pct: number | null) => {
     if (change_pct === null || change_pct === 0) return 'flat';
@@ -111,6 +151,11 @@ const Markets = () => {
     const [filter, setFilter] = React.useState<TFilter>('all');
     const [sort, setSort] = React.useState<TSortKey>('name');
     const [watchlist, setWatchlist] = React.useState<string[]>(readWatchlist);
+    const [scan, setScan] = React.useState<TScanFilters>(DEFAULT_SCAN);
+    const [is_scanner_open, setScannerOpen] = React.useState(false);
+    const active_scan_count = countActiveScanFilters(scan);
+
+    const updateScan = (changes: Partial<TScanFilters>) => setScan(previous => ({ ...previous, ...changes }));
 
     const toggleWatch = (symbol: string) =>
         setWatchlist(previous => {
@@ -140,17 +185,17 @@ const Markets = () => {
 
     const movers = React.useMemo(() => getTopMovers(rows), [rows]);
 
-    const visible = React.useMemo(() => {
+    /** The markets the group pills and the search box leave in, before the scanner narrows them further. */
+    const listed = React.useMemo(() => {
         const filtered = rows.filter(row => {
             if (filter === 'watchlist') return watchlist.includes(row.symbol);
             if (filter === 'all') return true;
             return row.group === filter;
         });
-        return sortRows(
-            filtered.filter(row => matchesSearch(row, search)),
-            sort
-        );
-    }, [rows, filter, sort, watchlist, search]);
+        return filtered.filter(row => matchesSearch(row, search));
+    }, [rows, filter, watchlist, search]);
+
+    const visible = React.useMemo(() => sortRows(scanRows(listed, scan), sort), [listed, scan, sort]);
 
     let statusText = '';
     if (updated_at !== null) {
@@ -161,6 +206,8 @@ const Markets = () => {
 
     let emptyText = localize('No markets to show.');
     if (search.trim()) emptyText = localize('No market matches "{{search}}".', { search: search.trim() });
+    else if (active_scan_count > 0 && listed.length > 0)
+        emptyText = localize('No market matches the scanner filters. Loosen a filter or clear them all.');
     else if (filter === 'watchlist')
         emptyText = localize('Your watchlist is empty. Tap the star next to a market to add it.');
 
@@ -260,6 +307,108 @@ const Markets = () => {
                     </select>
                 </label>
             </div>
+
+            <div className='markets__scanner-bar'>
+                <button
+                    type='button'
+                    className={classNames('markets__pill', { 'markets__pill--active': active_scan_count > 0 })}
+                    aria-expanded={is_scanner_open}
+                    aria-controls='dt_markets_scanner'
+                    data-testid='dt_markets_scanner_toggle'
+                    onClick={() => setScannerOpen(open => !open)}
+                >
+                    {active_scan_count > 0
+                        ? localize('Scanner ({{count}})', { count: active_scan_count })
+                        : localize('Scanner')}
+                </button>
+                {active_scan_count > 0 && (
+                    <>
+                        <span className='markets__muted markets__muted--inline' data-testid='dt_markets_scan_count'>
+                            {localize('{{shown}} of {{total}} markets match', {
+                                shown: visible.length,
+                                total: listed.length,
+                            })}
+                        </span>
+                        <button
+                            type='button'
+                            className='markets__link'
+                            data-testid='dt_markets_scan_clear'
+                            onClick={() => setScan(DEFAULT_SCAN)}
+                        >
+                            {localize('Clear filters')}
+                        </button>
+                    </>
+                )}
+            </div>
+
+            {is_scanner_open && (
+                <section
+                    id='dt_markets_scanner'
+                    className='markets__scanner'
+                    aria-label={localize('Market scanner')}
+                    data-testid='dt_markets_scanner'
+                >
+                    <ScanGroup
+                        label={localize('Direction ({{window}})', { window: window_text })}
+                        id='direction'
+                        value={scan.direction}
+                        options={[
+                            { id: 'any', label: localize('Any') },
+                            { id: 'up', label: localize('Rising') },
+                            { id: 'down', label: localize('Falling') },
+                        ]}
+                        onChange={value => updateScan({ direction: value as TScanDirection })}
+                    />
+                    <ScanGroup
+                        label={localize('Volatility')}
+                        id='volatility'
+                        value={scan.volatility}
+                        options={[
+                            { id: 'any', label: localize('Any') },
+                            { id: 'low', label: VOLATILITY_TEXT.low() },
+                            { id: 'medium', label: VOLATILITY_TEXT.medium() },
+                            { id: 'high', label: VOLATILITY_TEXT.high() },
+                        ]}
+                        onChange={value => updateScan({ volatility: value as TScanFilters['volatility'] })}
+                    />
+                    <ScanGroup
+                        label={localize('Smallest move')}
+                        id='move'
+                        value={String(scan.min_move)}
+                        options={MIN_MOVE_STEPS.map(step => ({
+                            id: String(step),
+                            label: step === 0 ? localize('Any') : localize('{{value}}% or more', { value: step }),
+                        }))}
+                        onChange={value => updateScan({ min_move: Number(value) })}
+                    />
+                    <ScanGroup
+                        label={localize('Price in the range')}
+                        id='position'
+                        value={scan.position}
+                        options={[
+                            { id: 'any', label: localize('Anywhere') },
+                            { id: 'high', label: localize('Near the high') },
+                            { id: 'low', label: localize('Near the low') },
+                        ]}
+                        onChange={value => updateScan({ position: value as TScanPosition })}
+                    />
+                    <label className='markets__scan-check'>
+                        <input
+                            type='checkbox'
+                            checked={scan.live_only}
+                            data-testid='dt_markets_scan_live'
+                            onChange={event => updateScan({ live_only: event.target.checked })}
+                        />
+                        <span>{localize('Open markets only')}</span>
+                    </label>
+                    <p className='markets__muted markets__scan-hint'>
+                        {localize(
+                            'Near the high or low means the price is in the top or bottom fifth of the {{window}} range. These filters describe what a market has already done, not where it will go next.',
+                            { window: window_text }
+                        )}
+                    </p>
+                </section>
+            )}
 
             <PriceAlertsPanel watchlist={watchlist} />
 

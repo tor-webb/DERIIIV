@@ -41,6 +41,10 @@ describe('getAssistantReply', () => {
         ['what is the trend line on the markets page', 'markets'],
         ['can I change the time window to 4 hours', 'markets'],
         ['how do I open a market in charts', 'markets'],
+        ['is there a market scanner', 'markets'],
+        ['how can I filter markets by volatility', 'markets'],
+        ['show me markets near the high', 'markets'],
+        ['which markets are rising right now', 'markets'],
         ['are there any bot templates', 'bot_templates'],
         ['how do I import a bot template', 'bot_templates'],
         ['I want a ready made strategy', 'bot_templates'],
@@ -96,6 +100,8 @@ describe('getAssistantReply', () => {
         expect(markets.text).toMatch(/not which way it will go/);
         expect(markets.text).toMatch(/search box/);
         expect(markets.text).toMatch(/Dashboard/);
+        expect(markets.text).toMatch(/Scanner button/);
+        expect(markets.text).not.toMatch(/you will (win|profit)|always win/i);
         const templates = getAssistantReply('bot templates', guest);
         expect(templates.text).toMatch(/not advice/);
         expect(templates.text).toMatch(/demo account/);
