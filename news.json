@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T16:30:12.130Z",
+ "updated": "2026-10-30T21:00:03.185Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -11,6 +11,168 @@
   "The Guardian Business /business/rss": 12
  },
  "items": [
+  {
+   "id": "107rlxz",
+   "title": "US tech stocks see sharp falls as AI spending nears $1tn",
+   "link": "https://www.bbc.co.uk/news/articles/cvwy72e0n72yo?at_medium=RSS&at_campaign=rss",
+   "summary": "Shares in Intel continue to fall while the tech-heavy Nasdaq opens at its lowest level in more than two months.",
+   "published": "2026-10-30T20:34:46.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "zybzha",
+   "title": "Crypto giant Binance attempting to recover $6.3bn stolen in hack linked to North Korea",
+   "link": "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo?at_medium=RSS&at_campaign=rss",
+   "summary": "The cyber-attack, which the company describes as complex, is believed to be the largest ever of its kind.",
+   "published": "2026-10-30T20:10:56.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "lg7its",
+   "title": "Week ahead: Elections, rate decisions and jobs take center stage",
+   "link": "https://investinglive.com/news/week-ahead-elections-rate-decisions-and-jobs-take-center-stage/",
+   "summary": "Next week’s calendar gives traders plenty to work with. US congressional elections bring political uncertainty, the Reserve Bank of Australia and Bank of England are expected to raise rates, and Friday delivers…",
+   "published": "2026-10-30T19:13:02.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "l3d8nf",
+   "title": "Tether’s excess reserves nearly double to $8B as Q3 profit hits $1.5B",
+   "link": "https://cointelegraph.com/news/tethers-excess-reserves-nearly-double-to-8b-as-q3-profit-hits-15b?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The stablecoin issuer’s US Treasury holdings are comparable to those of major foreign holders, while its Bitcoin reserves were valued at $8.37 billion at the end of September.",
+   "published": "2026-10-30T19:01:58.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "hlitbp",
+   "title": "Earnings next week: Can Apple, Palantir and AMD restore confidence?",
+   "link": "https://investinglive.com/stocks/earnings-next-week-can-apple-palantir-and-amd-restore-confidence/",
+   "summary": "This week was not so great for investors looking to earnings to support the stock market. Some big-name reports brought sharp selling, highlighting how quickly buyers can turn into sellers when results or expectations…",
+   "published": "2026-10-30T18:53:01.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "v3ustp",
+   "title": "Tech sell-off drives US markets down by nearly $1tn after subpar earnings reports",
+   "link": "https://www.theguardian.com/technology/2026/oct/30/tech-stocks-drop-earnings-report",
+   "summary": "Big tech stocks falter as investors question whether billions being poured into AI can generate returns quickly enough A sell-off of tech stocks that began earlier this month and gained steam with disappointing…",
+   "published": "2026-10-30T18:27:51.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "1m0ffwj",
+   "title": "City of London chief tops UK Black Powerlist",
+   "link": "https://www.bbc.co.uk/news/articles/c98rz4pxm4ymo?at_medium=RSS&at_campaign=rss",
+   "summary": "Ian Thomas, who heads the City of London Corporation, tops the Black Powerlist in its 21st year.",
+   "published": "2026-10-30T18:00:24.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1o5j6qw",
+   "title": "Coinbase leads crypto stock selloff following $6.3B Binance hack",
+   "link": "https://cointelegraph.com/markets/coinbase-leads-crypto-stock-selloff-shares-tumble?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Circle, Strategy and other crypto-linked stocks fell sharply Friday, a day after Binance disclosed a $6.3 billion security breach.",
+   "published": "2026-10-30T17:48:27.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "3o0h6u",
+   "title": "Fed’s Logan: At least two more quarter-point rate hikes needed",
+   "link": "https://investinglive.com/central-banks/fed-s-logan-at-least-two-more-quarter-point-rate-hikes-needed/",
+   "summary": "Comments from Logan on the economy, inflation and monetary policy cross the wires: Fed needs at least two more quarter-point rate hikes. Skipping a meeting doesn’t change policy destination. Adjusting policy gradually…",
+   "published": "2026-10-30T17:33:27.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "sfav6x",
+   "title": "Anthropic may not secure investment-grade rating after IPO, FT reports",
+   "link": "https://investinglive.com/stocks/anthropic-may-not-secure-investment-grade-rating-after-ipo-ft-reports/",
+   "summary": "The Financial Times reports that Blackstone told Anthropic it may not obtain an investment-grade credit rating after its IPO: Blackstone says Anthropic may not obtain an IG rating after its IPO, FT reports. Stocks…",
+   "published": "2026-10-30T17:19:15.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "488s18",
+   "title": "Crypto Biz: Bitcoin’s quantum threat is becoming an economic problem",
+   "link": "https://cointelegraph.com/news/bitcoin-quantum-threat-ripple-bank-usdc-vaneck-crypto-biz?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Bitcoin faces mounting quantum security concerns as Ripple secures a US banking charter, USDC gains ground in Europe and VanEck adds BTC to a new ETF.",
+   "published": "2026-10-30T17:09:31.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1teauem",
+   "title": "Carney: Canada, EU working toward deepest possible partnership, short of accession",
+   "link": "https://investinglive.com/news/carney-canada-eu-working-toward-deepest-possible-partnership-short-of-accession/",
+   "summary": "Comments from Canada PM Carney cross the wires: Canada, EU working towards deepest possible partnership, short of accession. We will determine substance, scale and scope of this form of membership over coming months.…",
+   "published": "2026-10-30T17:08:44.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "qzhbx1",
+   "title": "Recap: How Binance’s record $6.3B hack unfolded",
+   "link": "https://cointelegraph.com/news/recap-binances-record-63b-hack-unfolded?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "A recap of Cointelegraph’s live coverage of the Binance hack, including early breach reports and the exchange’s full reimbursement pledge.",
+   "published": "2026-10-30T16:53:46.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "13ts2ah",
+   "title": "How has the Magnificent 7 done relatively to the broader stock indices today?",
+   "link": "https://investinglive.com/stocks/how-has-the-magnificent-7-done-relatively-to-the-broader-stock-indices-today/",
+   "summary": "With a broader US stock indices getting hammered today, now has the Magnificent 7 performed relatively, and what are the technicals saying for each individually. In a video above I take a look at the bias (bullish or…",
+   "published": "2026-10-30T16:52:41.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "oz5usy",
+   "title": "As it happened: Binance’s record $6.3B crypto hack",
+   "link": "https://cointelegraph.com/news/live-updates-binance-63b-hack-linked-to-north-koreas-tradertraitor?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "How Binance’s $6.3 billion hack unfolded, from the first onchain alerts to $3 billion in frozen funds and a widening security investigation.",
+   "published": "2026-10-30T16:49:50.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1kc3uio",
+   "title": "North Korea is likely culprit behind $6.3bn crypto hack, ‘largest heist in history’",
+   "link": "https://www.theguardian.com/business/2026/oct/29/binance-crypto-exchange-hack",
+   "summary": "Binance exchange says it will cover customer losses as it scrambles to freeze affected assets, with about $3bn located so far Q&A: How big a deal is the $6.3bn crypto heist? Tell us: have you been affected by the…",
+   "published": "2026-10-30T16:35:44.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "1cab3kg",
+   "title": "Fed’s Musalem: Moving sooner with rate hikes lessens risk of hit to broader economy",
+   "link": "https://investinglive.com/central-banks/fed-s-musalem-moving-sooner-with-rate-hikes-lessens-risk-of-hit-to-broader-economy/",
+   "summary": "Comments from the Fed’s Musalem cross the wires: Moving sooner with rate hikes lessens risk of hit to broader economy. US central bank will need to raise interest rates again “soon.” Incremental changes in rates better…",
+   "published": "2026-10-30T16:33:39.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "y3pkmv",
+   "title": "Fed’s Daly: AI matters for near- and medium-term policy",
+   "link": "https://investinglive.com/central-banks/fed-s-daly-ai-matters-for-near-and-medium-term-policy/",
+   "summary": "Comments from the Fed’s Daly cross the wires: AI really matters for how we think about policy in near and medium term. AI matters to price stability and employment mandates. Analysis: Daly is putting AI into the…",
+   "published": "2026-10-30T16:13:50.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
   {
    "id": "1hr6d58",
    "title": "Philip R. Lane: AI adoption in Europe",
@@ -39,15 +201,6 @@
    "category": "economy"
   },
   {
-   "id": "107rlxz",
-   "title": "US tech stocks see sharp falls over AI cost fears",
-   "link": "https://www.bbc.co.uk/news/articles/cvwy72e0n72yo?at_medium=RSS&at_campaign=rss",
-   "summary": "Shares in Intel continue to fall while the tech-heavy Nasdaq opens at its lowest level in more than two months.",
-   "published": "2026-10-30T15:46:28.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "1mp3txn",
    "title": "Fitch on UK Budget: Policy continuity leaves a tough delivery challenge",
    "link": "https://investinglive.com/news/fitch-on-uk-budget-policy-continuity-leaves-a-tough-delivery-challenge/",
@@ -58,7 +211,7 @@
   },
   {
    "id": "1t3g59r",
-   "title": "How big a deal is the $6.3bn crypto heist, who did it, and are investments safe?",
+   "title": "How big a deal is the $6.3bn Binance crypto heist, who did it, and are investments safe?",
    "link": "https://www.theguardian.com/business/2026/oct/30/crypto-heist-binance-who-did-it-are-investments-safe",
    "summary": "The incident at Binance could be the biggest theft of any kind in history. We answer some key questions North Korean group blamed for $6.3bn crypto heist Tell us: have you been affected? The world’s largest…",
    "published": "2026-10-30T15:17:01.000Z",
@@ -73,15 +226,6 @@
    "published": "2026-10-30T14:46:00.000Z",
    "source": "investingLive",
    "category": "forex"
-  },
-  {
-   "id": "oz5usy",
-   "title": "Live updates: Binance says $6.34B set aside to cover hack losses",
-   "link": "https://cointelegraph.com/news/live-updates-binance-63b-hack-linked-to-north-koreas-tradertraitor?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Follow live updates as Binance says $6.3 billion in assets have been stolen in a major hack. Around $3 billion in stolen funds have been frozen.",
-   "published": "2026-10-30T14:12:26.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1la066y",
@@ -129,15 +273,6 @@
    "category": "crypto"
   },
   {
-   "id": "guhmu1",
-   "title": "Bitcoin sellers jump on the risk-off bandwagon",
-   "link": "https://investinglive.com/cryptocurrency/bitcoin-sellers-jump-on-the-risk-off-bandwagon/",
-   "summary": "With US and European stocks moving lower, bitcoin is following the risk-off sentiment. However, the move also has a technical catalyst: a break below the consolidation range that had contained the price since October…",
-   "published": "2026-10-30T13:14:06.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "afvtl5",
    "title": "Binance working with FBI to recover assets following $6.3B hack",
    "link": "https://cointelegraph.com/news/binance-fbi-recover-assets-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -145,24 +280,6 @@
    "published": "2026-10-30T13:11:10.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "1kc3uio",
-   "title": "North Korean group blamed for $6.3bn Binance hack in biggest ever crypto heist",
-   "link": "https://www.theguardian.com/business/2026/oct/29/binance-crypto-exchange-hack",
-   "summary": "Cryptocurrency exchange scrambles to freeze affected assets, with about $3bn located so far, and says it will cover losses Q&A: How big a deal is the $6.3bn crypto heist? Tell us: have you been affected by the Binance…",
-   "published": "2026-10-30T12:48:40.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "1hyjky0",
-   "title": "Crude oil extends gains as traders hedge into weekend amid risks of US strikes on Iran",
-   "link": "https://investinglive.com/commodities/crude-oil-extends-gains-as-traders-hedge-into-weekend-amid-risks-of-us-strikes-on-iran/",
-   "summary": "Crude oil extended the gains into new highs yesterday after the Houthis targeted the Aramco oil company in widespread wave of missile attacks. The bullish momentum then accelerated after the Wall Street Journal…",
-   "published": "2026-10-30T12:46:38.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "ac8pv",
@@ -174,24 +291,6 @@
    "category": "crypto"
   },
   {
-   "id": "k6783a",
-   "title": "US employment cost index for Q3 +0.8% vs +0.8% expected",
-   "link": "https://investinglive.com/news/us-employment-cost-index-for-q3-0-8-vs-0-8-expected/",
-   "summary": "Prior quarter was +0.9% Employment benefits +0.9% vs +1.0% prior quarter Employment wages +0.7% vs +0.9% prior quarter The US Employment Cost Index (ECI) increased by 0.8% q/q in the third quarter, with both wages and…",
-   "published": "2026-10-30T12:30:08.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1ucw0u5",
-   "title": "Canada GDP for August 0.0% vs 0.2% estimate",
-   "link": "https://investinglive.com/news/canada-gdp-for-august-0-0-vs-0-2-estimate/",
-   "summary": "Prior Month 0.0% Details of the Canada GDP for the month of August: August real GDP: 0.0% MoM. Prior 0.0%. September advance estimate: -0.1% MoM. Q3 preliminary growth indication: +0.3% QoQ, not annualized. Breadth: 9…",
-   "published": "2026-10-30T12:30:07.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1puqems",
    "title": "What we know about Binance's $6.3bn hack",
    "link": "https://www.bbc.co.uk/news/videos/cv2d62e34rw5o?at_medium=RSS&at_campaign=rss",
@@ -201,15 +300,6 @@
    "category": "economy"
   },
   {
-   "id": "2jnljv",
-   "title": "Morning Kickstart: Tech hammered as Amazon and Intel tumble; oil rises despite peace talk",
-   "link": "https://investinglive.com/technical-analysis/morning-kickstart-tech-hammered-as-amazon-and-intel-tumble-oil-rises-despite-peace-talk/",
-   "summary": "Technology stocks are taking another hit heading into Friday’s North American session. Disappointing earnings from Amazon and a sharp negative reaction to Intel’s results are adding to concerns about the spending,…",
-   "published": "2026-10-30T12:16:26.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "18argk6",
    "title": "Google value plunges by $500bn as its own AI search hits ad sales",
    "link": "https://www.bbc.co.uk/news/articles/cm9qzdqpxy48o?at_medium=RSS&at_campaign=rss",
@@ -217,24 +307,6 @@
    "published": "2026-10-30T12:04:02.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "x7b908",
-   "title": "investingLive European session wrap: AI spending fears spook tech stocks; dollar falls alongside yields, gold",
-   "link": "https://investinglive.com/news/investinglive-european-session-wrap-ai-spending-fears-spook-tech-stocks-dollar-falls-alongside-yields-gold/",
-   "summary": "Headlines: What is spooking markets as stocks, Treasury yields and gold all fall today? Gold gets hit again by forced liquidations as equity losses mount; fundamental outlook increasingly positive BOJ governor Ueda…",
-   "published": "2026-10-30T11:46:54.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "u0shs0",
-   "title": "Ethereum tumbles as Binance hack triggers risk-off wave across crypto markets. What's next?",
-   "link": "https://investinglive.com/cryptocurrency/ethereum-tumbles-as-binance-hack-triggers-risk-off-wave-across-crypto-markets-what-s-next/",
-   "summary": "Ethereum tanked yesterday following the news of Binance security breach, which reportedly resulted in approximately $6.3 billion being drained from wallets across multiple blockchains. It was the largest cryptocurrency…",
-   "published": "2026-10-30T11:44:13.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "8ic2rp",
@@ -264,33 +336,6 @@
    "category": "economy"
   },
   {
-   "id": "qc7so0",
-   "title": "EIP-7702 didn’t cause Binance hack, but may have amplified losses",
-   "link": "https://cointelegraph.com/news/binance-hack-security-ethereum-eip-7702-role?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Security experts said attackers could have drained Binance’s wallets without EIP-7702, but the Ethereum upgrade may have helped bypass withdrawal safeguards.",
-   "published": "2026-10-30T11:00:10.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "k84mxj",
-   "title": "Binance hacker’s Bitcoin haul tops Coinbase’s corporate treasury",
-   "link": "https://cointelegraph.com/news/binance-hacker-bitcoin-holdings-exceed-coinbase-btc-treasury?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The attackers held 18,270 BTC early Friday, topping Coinbase’s reported corporate holdings, and an Ether stash exceeding 500,000 ETH.",
-   "published": "2026-10-30T10:54:30.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1du5p5i",
-   "title": "Italy October preliminary CPI +5.4% vs +4.6% y/y expected",
-   "link": "https://investinglive.com/news/italy-october-preliminary-cpi-5-4-vs-4-6-y-y-expected/",
-   "summary": "Prior +4.2% HICP +5.6% vs +4.6% y/y expected Prior +4.2% Inflation accelerated sharply in October 2026, but the increase was primarily driven by energy prices, with both regulated and non-regulated energy products…",
-   "published": "2026-10-30T10:01:45.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "ypycsr",
    "title": "Government corruption a top issue for US midterm voters, exclusive poll finds",
    "link": "https://www.theguardian.com/us-news/2026/oct/30/government-corruption-us-midterm-poll",
@@ -298,33 +343,6 @@
    "published": "2026-10-30T10:00:52.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "1n30fj1",
-   "title": "THORChain’s RUNE jumps 13% after Binance’s record $6.3B hack",
-   "link": "https://cointelegraph.com/markets/rune-token-surges-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "North Korean hackers previously used THORChain to move funds stolen from Bybit and Bitget, prompting calls for the protocol to intervene.",
-   "published": "2026-10-30T09:52:29.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1bjw7cq",
-   "title": "Crypto giant Binance hit by $6.3bn hack suspected to be largest in history",
-   "link": "https://www.bbc.co.uk/news/articles/cwg7xp8kx4v5o?at_medium=RSS&at_campaign=rss",
-   "summary": "Two analytics firms have attributed the incident to a North Korean hacking unit called TraderTraitor.",
-   "published": "2026-10-30T09:33:51.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "1rs4amb",
-   "title": "Trezor warns CryptoBilis buyers to move funds over suspected implant",
-   "link": "https://cointelegraph.com/news/trezor-cryptobilis-wallet-implant-funds-warning?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Trezor urged customers who bought devices from CryptoBilis since March to move their funds after a report of a suspected hardware implant.",
-   "published": "2026-10-30T09:26:45.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1s67o57",
@@ -341,6 +359,15 @@
    "link": "https://www.bbc.co.uk/news/articles/cm9qz428nnljo?at_medium=RSS&at_campaign=rss",
    "summary": "Video games are good at triggering nostalgia, a key reason why classic games keep getting remade.",
    "published": "2026-10-30T07:45:00.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "zhmh1b",
+   "title": "How Poundland grew from a market stall to a high street giant",
+   "link": "https://www.bbc.co.uk/news/articles/cw07304l5je7o?at_medium=RSS&at_campaign=rss",
+   "summary": "The retail giant - which started life at a Wolverhampton market - is now at threat of collapse.",
+   "published": "2026-10-30T06:08:22.000Z",
    "source": "BBC Business",
    "category": "economy"
   },
@@ -368,15 +395,6 @@
    "link": "https://www.bbc.co.uk/news/articles/cqrky1p4dlm7o?at_medium=RSS&at_campaign=rss",
    "summary": "Poundland's bosses are filing a notice of intention to appoint administrators to the business.",
    "published": "2026-10-29T19:11:10.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "oe345a",
-   "title": "US interest rates held steady and economy grows - what it means for you",
-   "link": "https://www.bbc.co.uk/news/articles/cr15jxzv4w24o?at_medium=RSS&at_campaign=rss",
-   "summary": "The Federal Reserve's interest rate decisions affect everything from mortgages to car loans",
-   "published": "2026-10-29T17:15:05.000Z",
    "source": "BBC Business",
    "category": "economy"
   },
@@ -432,15 +450,6 @@
    "summary": "Acquisition will supercharge DoorDash’s grocery delivery, ‘one of the hardest things to get right online’, CEO says DoorDash is gobbling up Instacart in a $17bn acquisition that will supercharge its grocery delivery…",
    "published": "2026-10-29T13:41:43.000Z",
    "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "7c6sva",
-   "title": "'Painful' years ahead, think tanks warn, as living standards set to fall",
-   "link": "https://www.bbc.co.uk/news/articles/c6z7x8214np7o?at_medium=RSS&at_campaign=rss",
-   "summary": "Budget forecasts show growth in living standards grinding almost to a halt.",
-   "published": "2026-10-29T13:19:24.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
@@ -531,15 +540,6 @@
    "summary": "Letter from the Chancellor to the Governor",
    "published": "2026-10-28T14:16:49.000Z",
    "source": "Bank of England",
-   "category": "economy"
-  },
-  {
-   "id": "1z0hmjx",
-   "title": "The survival of American democracy depends on taxing billionaires",
-   "link": "https://www.theguardian.com/us-news/2026/oct/27/democracy-tax-billionaires",
-   "summary": "It is essential not just to fund the public goods the nation needs, it is indispensable to restore a sense of fairness Money doesn’t buy happiness, we’re told. Even some economists agree. The Nobel prize-winning…",
-   "published": "2026-10-27T11:00:36.000Z",
-   "source": "The Guardian Business",
    "category": "economy"
   },
   {
