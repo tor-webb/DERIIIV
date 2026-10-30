@@ -30,7 +30,10 @@ const renderPage = () =>
     );
 
 describe('<Learn />', () => {
-    beforeEach(() => mockCommunity.mockReturnValue({ telegram_url: '', telegram_name: 'FiscoFX Community' }));
+    beforeEach(() => {
+        localStorage.clear();
+        mockCommunity.mockReturnValue({ telegram_url: '', telegram_name: 'FiscoFX Community' });
+    });
 
     it('opens on the first lessons and says it is education, not advice', () => {
         renderPage();
@@ -98,5 +101,51 @@ describe('<Learn />', () => {
         expect(screen.getByTestId('dt_learn_ready')).toHaveTextContent('All ticked');
         fireEvent.click(screen.getByTestId('dt_learn_check_calm'));
         expect(screen.getByTestId('dt_learn_ready')).toHaveTextContent('Tick each line honestly');
+    });
+
+    describe('reading progress', () => {
+        it('starts at none read and shows a reading time on each lesson', () => {
+            renderPage();
+            expect(screen.getByTestId('dt_learn_progress')).toHaveTextContent(/You have read 0 of \d+ lessons\./);
+            expect(screen.getByRole('progressbar', { name: 'Lessons read' })).toHaveAttribute('aria-valuenow', '0');
+            expect(screen.getByTestId('dt_learn_lesson_what_moves_prices')).toHaveTextContent(/\d+ min read/);
+        });
+
+        it('marks a lesson as read, updates the counts, and can undo it', () => {
+            renderPage();
+            const before = screen.getByTestId('dt_learn_count_basics').textContent as string;
+            expect(before).toMatch(/^0\/\d+$/);
+            fireEvent.click(screen.getByTestId('dt_learn_mark_what_moves_prices'));
+            expect(screen.getByTestId('dt_learn_mark_what_moves_prices')).toHaveAttribute('aria-pressed', 'true');
+            expect(screen.getByTestId('dt_learn_mark_what_moves_prices')).toHaveTextContent('Marked as read');
+            expect(screen.getByTestId('dt_learn_lesson_what_moves_prices')).toHaveClass('learn__lesson--read');
+            expect(screen.getByTestId('dt_learn_count_basics')).toHaveTextContent(/^1\//);
+            expect(screen.getByTestId('dt_learn_progress')).toHaveTextContent('You have read 1 of');
+            fireEvent.click(screen.getByTestId('dt_learn_mark_what_moves_prices'));
+            expect(screen.getByTestId('dt_learn_count_basics')).toHaveTextContent(before);
+        });
+
+        it('remembers what was read after the page is opened again', () => {
+            const view = renderPage();
+            fireEvent.click(screen.getByTestId('dt_learn_mark_what_moves_prices'));
+            view.unmount();
+            renderPage();
+            expect(screen.getByTestId('dt_learn_mark_what_moves_prices')).toHaveAttribute('aria-pressed', 'true');
+            expect(screen.getByTestId('dt_learn_progress')).toHaveTextContent('You have read 1 of');
+        });
+
+        it('shows a count on every topic tab but not on the glossary', () => {
+            renderPage();
+            expect(screen.getByTestId('dt_learn_count_charts')).toBeInTheDocument();
+            expect(screen.queryByTestId('dt_learn_count_glossary')).not.toBeInTheDocument();
+        });
+
+        it('still does not remember the pre-trade checklist', () => {
+            const view = renderPage();
+            fireEvent.click(screen.getByTestId('dt_learn_check_demo'));
+            view.unmount();
+            renderPage();
+            expect(screen.getByTestId('dt_learn_check_demo')).not.toBeChecked();
+        });
     });
 });
