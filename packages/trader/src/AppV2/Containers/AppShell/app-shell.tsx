@@ -24,6 +24,7 @@ const MOBILE_NAV_ROUTES = [
     routes.bot_builder,
     routes.bulk_trader,
     routes.risk_calculator,
+    routes.journal,
     routes.what_if,
     routes.learn,
     routes.news,

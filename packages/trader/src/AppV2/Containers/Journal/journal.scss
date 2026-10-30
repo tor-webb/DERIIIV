@@ -1,0 +1,210 @@
+.journal {
+    box-sizing: border-box;
+    min-height: calc(100vh - var(--top-nav-height, 0px));
+    padding: 4rem 2.4rem;
+    background-color: var(--color-surface-section);
+    color: var(--color-text-primary);
+    overflow-y: auto;
+
+    &__header,
+    &__ranges,
+    &__stats,
+    &__panel,
+    &__charts,
+    &__disclaimer,
+    &__text {
+        max-width: 96rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__header {
+        margin-bottom: 2.4rem;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 3.2rem;
+        font-weight: 800;
+    }
+
+    &__subtitle {
+        margin: 0.8rem auto 0;
+        max-width: 96rem;
+        font-size: 1.6rem;
+        opacity: 0.8;
+    }
+
+    &__ranges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-bottom: 1.6rem;
+    }
+
+    &__range,
+    &__button {
+        padding: 0.8rem 1.6rem;
+        border: 1px solid var(--color-border-normal, #ced2d9);
+        border-radius: 999px;
+        background: transparent;
+        color: inherit;
+        font-size: 1.4rem;
+        font-weight: 600;
+        cursor: pointer;
+
+        &--active {
+            border-color: var(--brand-primary);
+            background-color: var(--brand-primary);
+            color: var(--brand-white, #fff);
+        }
+    }
+
+    &__stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+        gap: 1.2rem;
+        margin-bottom: 1.6rem;
+    }
+
+    &__stat,
+    &__panel {
+        padding: 1.6rem;
+        border: 1px solid var(--color-border-normal, #ced2d9);
+        border-radius: 1.2rem;
+        background-color: var(--color-surface-card, var(--brand-white));
+    }
+
+    &__stat {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    &__stat-label {
+        font-size: 1.3rem;
+        opacity: 0.75;
+    }
+
+    &__stat-value {
+        font-size: 2.2rem;
+        font-weight: 800;
+
+        &--good {
+            color: var(--brand-success, #00b39b);
+        }
+
+        &--bad {
+            color: var(--brand-danger, #ec3f3f);
+        }
+    }
+
+    &__panel {
+        margin-bottom: 1.6rem;
+    }
+
+    &__panel-title {
+        margin: 0 0 0.8rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    &__text {
+        margin-top: 0;
+        margin-bottom: 0.8rem;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+
+    &__hint {
+        margin: 0.8rem 0 0;
+        font-size: 1.3rem;
+        opacity: 0.75;
+    }
+
+    &__state {
+        text-align: center;
+    }
+
+    &__meter {
+        position: relative;
+        height: 0.8rem;
+        border-radius: 999px;
+        background-color: var(--color-border-normal, #ced2d9);
+    }
+
+    &__meter-fill {
+        position: absolute;
+        inset: 0 auto 0 0;
+        border-radius: 999px;
+        background-color: var(--brand-primary);
+    }
+
+    &__meter-mark {
+        position: absolute;
+        top: -0.4rem;
+        bottom: -0.4rem;
+        width: 0.2rem;
+        background-color: var(--color-text-primary);
+    }
+
+    &__charts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+        gap: 1.6rem;
+
+        svg {
+            display: block;
+            width: 100%;
+            height: 6.4rem;
+        }
+    }
+
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 1.4rem;
+
+        th,
+        td {
+            padding: 0.8rem 0.4rem;
+            border-bottom: 1px solid var(--color-border-normal, #ced2d9);
+            text-align: right;
+        }
+
+        th:first-child {
+            text-align: left;
+        }
+
+        thead th {
+            font-weight: 600;
+            opacity: 0.75;
+        }
+    }
+
+    &__cell-result {
+        font-weight: 700;
+
+        &--good {
+            color: var(--brand-success, #00b39b);
+        }
+
+        &--bad {
+            color: var(--brand-danger, #ec3f3f);
+        }
+    }
+
+    &__disclaimer {
+        margin-top: 2.4rem;
+        font-size: 1.3rem;
+        opacity: 0.75;
+    }
+
+    @media (max-width: 600px) {
+        padding: 2.4rem 1.6rem;
+
+        &__title {
+            font-size: 2.6rem;
+        }
+    }
+}

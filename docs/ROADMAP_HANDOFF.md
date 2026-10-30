@@ -176,6 +176,12 @@ Goal: show a user their own results honestly (win rate against break-even, best 
 - Copy must state results are past and do not predict the future. No ranking of users, no "hot streak" language.
 - Done when: tests on the maths with fixed trade lists, an empty state, and a logged-out state that asks for login.
 
+**Status of E (branch `trade-journal`):**
+
+- Built: `/journal` (logged-in nav item), `Containers/Journal/` with pure maths in `journal-utils.ts` (break-even reuses `breakEvenWinRate`), `use-journal.ts` (one `WS.profitTable(500, 0, {})` call, reloads on account change), page with win rate against break-even, running result and stake lines, per-market table, last 20 / last 50 / all range buttons, empty, error, loading and logged-out states. Help assistant topic `journal`.
+- Limits: only the latest 500 trades are read (no paging). Break-even uses the average payout the server reported, so it is rough for contracts whose payout is not fixed (multipliers, accumulators). Dates are not shown or filterable yet.
+- Still owed: a look at the page in a browser on a demo account with real trades (layout at 390 and 1280 px).
+
 ### F. Price alerts for watchlisted markets
 
 Goal: a pop-up when a starred market moves more than a chosen amount in an hour.
