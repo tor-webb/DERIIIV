@@ -45,6 +45,10 @@ describe('getAssistantReply', () => {
         ['how do I import a bot template', 'bot_templates'],
         ['I want a ready made strategy', 'bot_templates'],
         ['import a bot from a file', 'bot_import'],
+        ['can my bot use a moving average', 'bot_indicators'],
+        ['is there an RSI block in the bot builder', 'bot_indicators'],
+        ['how do I use bollinger bands in a bot', 'bot_indicators'],
+        ['show me the charts and indicators', 'charts'],
     ])('answers "%s" with the %s topic', (question, id) => {
         expect(getAssistantReply(question, guest).id).toBe(id);
     });

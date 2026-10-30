@@ -3,6 +3,7 @@ export { BotRunner } from './runner';
 export type {
     TBotApi,
     TBotStats,
+    TCandle,
     TLevel,
     TLiveContract,
     TProgram,

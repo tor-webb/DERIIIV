@@ -159,6 +159,14 @@ Goal: bots exported from Deriv Bot stop being refused. Order by user value: more
 - Wire the unused settings: `restart_buy_sell`, `candle_interval`, notify sound, account-currency stake label (currently hard-coded `USD` in templates and the block).
 - Done when: a real exported bot using the new blocks imports and runs on demo.
 
+**Status of the indicator part of D (branch `bot-indicators`):**
+
+- Built: SMA, EMA, RSI and Bollinger bands (`sma`, `ema`, `rsi`, `bb`), `ticks` and `ohlc_values` list blocks, `read_ohlc` (candle value, index 1 = newest) and `check_direction`. Maths is in `Engine/indicators.ts`, tested against a published RSI worked example.
+- The runner loads recent ticks (up to 1,000) and/or candles (up to 500, sized by the Candle interval block) before judging purchase conditions, and merges live ticks into them. Bots that read no prices request nothing, so existing bots are unchanged.
+- **UNCONFIRMED:** the block type names and field names (`sma`, `ema`, `rsi`, `bb`, `ticks`, `ohlc_values`, `read_ohlc`, `check_direction`, `INPUT_LIST`, `PERIOD`, `OHLCFIELD_LIST`, `BBRESULT_LIST`, `CHECK_DIRECTION`, `CANDLEINDEX`, `UPMULTIPLIER`, `DOWNMULTIPLIER`) were written from memory, not from a real Deriv Bot export. Get 2 or 3 real exports that use indicators and check them before telling users these bots import.
+- Not built: MACD, the array variants (SMAA, EMAA, RSIA, BBA), an indicator fed by a variable-held list (refused with a clear message), `ohlc` and `read_ohlc_obj`. The newest candle is still forming. The 4h and 1d candle windows are untested live.
+- Still owed: a demo-account run of an indicator bot.
+
 ### E. Trade journal and performance page
 
 Goal: show a user their own results honestly (win rate against break-even, best and worst markets, stake over time).
