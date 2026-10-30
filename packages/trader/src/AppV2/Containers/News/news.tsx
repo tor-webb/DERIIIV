@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 import { observer } from '@deriv/stores';
 import { localize } from '@deriv-com/translations';
 
+import HandoutSheet from './handout-sheet';
 import {
     areAlertsOn,
     getCategories,
@@ -12,13 +13,15 @@ import {
     getTagLabel,
     getTags,
     isHighImpact,
+    isNewSince,
+    matchesNewsSearch,
+    readStore,
     STALE_AFTER_MS,
     STORAGE_ALERTS_OFF,
     STORAGE_VIEWED,
     timeAgo,
     writeStore,
 } from './news-utils';
-import HandoutSheet from './handout-sheet';
 import { useNews } from './use-news';
 
 import './news.scss';
@@ -30,13 +33,19 @@ const News = observer(() => {
     const { feed, is_loading, refresh } = useNews();
     const [category, setCategory] = React.useState('all');
     const [alerts_on, setAlertsOn] = React.useState(areAlertsOn);
+    const [search, setSearch] = React.useState('');
+    // when the page was last opened, read once before this visit overwrites it
+    const viewed_at = React.useRef(Number(readStore(STORAGE_VIEWED)) || 0);
 
     React.useEffect(() => {
         writeStore(STORAGE_VIEWED, String(Date.now()));
     }, [feed]);
 
     const categories = React.useMemo(getCategories, []);
-    const items = (feed?.items ?? []).filter(item => category === 'all' || item.category === category);
+    const searching = search.trim() !== '';
+    const items = (feed?.items ?? []).filter(
+        item => (category === 'all' || item.category === category) && matchesNewsSearch(item, search)
+    );
     const recommendations = React.useMemo(() => getRecommendations(feed), [feed]);
     const is_stale = feed?.updated ? Date.now() - Date.parse(feed.updated) > STALE_AFTER_MS : false;
     const top = (feed?.items ?? []).filter(isHighImpact).slice(0, TOP_FOR_HANDOUT);
@@ -108,13 +117,25 @@ const News = observer(() => {
                         ))}
                     </div>
 
+                    <input
+                        type='search'
+                        className='news__search'
+                        value={search}
+                        placeholder={localize('Search headlines')}
+                        aria-label={localize('Search headlines')}
+                        data-testid='dt_news_search'
+                        onChange={event => setSearch(event.target.value)}
+                    />
+
                     {items.length === 0 ? (
                         <p className='news__empty' data-testid='dt_news_empty'>
-                            {feed
-                                ? localize('No headlines in this category yet.')
-                                : localize(
-                                      'We could not load the news feed. Check your connection and press Refresh. The tips and handout below still work.'
-                                  )}
+                            {feed && searching
+                                ? localize('No headlines match "{{search}}".', { search: search.trim() })
+                                : feed
+                                  ? localize('No headlines in this category yet.')
+                                  : localize(
+                                        'We could not load the news feed. Check your connection and press Refresh. The tips and handout below still work.'
+                                    )}
                         </p>
                     ) : (
                         <ul className='news__list'>
@@ -133,6 +154,11 @@ const News = observer(() => {
                                     </span>
                                     {item.summary && <p className='news__item-summary'>{item.summary}</p>}
                                     <span className='news__chips'>
+                                        {isNewSince(item, viewed_at.current) && (
+                                            <span className='news__chip news__chip--new' data-testid='dt_news_new'>
+                                                {localize('New')}
+                                            </span>
+                                        )}
                                         {isHighImpact(item) && (
                                             <span className='news__chip news__chip--impact'>
                                                 {localize('Can move markets')}

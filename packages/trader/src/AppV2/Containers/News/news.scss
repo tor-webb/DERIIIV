@@ -83,6 +83,24 @@
         }
     }
 
+    &__search {
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 4.4rem;
+        margin-bottom: 1.2rem;
+        padding: 0 1.2rem;
+        border: 1px solid var(--color-border-normal, #ced2d9);
+        border-radius: 0.8rem;
+        background: transparent;
+        color: inherit;
+        font-size: 1.5rem;
+
+        &:focus {
+            outline: 2px solid var(--brand-primary);
+            outline-offset: 1px;
+        }
+    }
+
     &__tabs {
         display: flex;
         flex-wrap: wrap;
@@ -175,6 +193,11 @@
 
         &--impact {
             background-color: rgba(255, 173, 58, 0.28);
+        }
+
+        &--new {
+            background-color: var(--brand-primary);
+            color: var(--brand-white, #fff);
         }
     }
 

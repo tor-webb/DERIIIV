@@ -2,8 +2,8 @@ import { MemoryRouter, Route } from 'react-router-dom';
 
 import { fireEvent, render, screen } from '@testing-library/react';
 
-import { resetNewsCache, STORAGE_ALERTS_OFF, STORAGE_SEEN } from '../news-utils';
 import NewsNotifier from '../news-notifier';
+import { resetNewsCache, STORAGE_ALERTS_OFF, STORAGE_SEEN } from '../news-utils';
 
 jest.mock('@deriv-com/translations', () => ({
     localize: (text: string, values?: Record<string, string | number>) =>

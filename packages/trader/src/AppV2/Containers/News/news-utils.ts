@@ -196,6 +196,27 @@ export const writeSeen = (ids: string[]) => writeStore(STORAGE_SEEN, JSON.string
 
 export const areAlertsOn = () => readStore(STORAGE_ALERTS_OFF) !== '1';
 
+/**
+ * True when every word typed appears in the headline, summary, source or category (ignoring case). An empty search
+ * matches everything.
+ */
+export const matchesNewsSearch = (item: TNewsItem, query: string): boolean => {
+    const words = query.toLowerCase().split(/\s+/).filter(Boolean);
+    if (!words.length) return true;
+    const text = `${item.title} ${item.summary} ${item.source} ${item.category}`.toLowerCase();
+    return words.every(word => text.includes(word));
+};
+
+/**
+ * True when the headline was published after the page was last opened. A person who has never opened the page sees
+ * nothing marked, so a first visit is not a wall of "New" labels (the same rule the unread badge follows).
+ */
+export const isNewSince = (item: TNewsItem, viewed_ms: number): boolean => {
+    if (!viewed_ms) return false;
+    const published = Date.parse(item.published);
+    return Number.isFinite(published) && published > viewed_ms;
+};
+
 export const countUnread = (feed: TNewsFeed | null) => {
     if (!feed) return 0;
     const viewed = Number(readStore(STORAGE_VIEWED)) || 0;

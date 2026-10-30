@@ -4,7 +4,7 @@ import { mockStore, StoreProvider } from '@deriv/stores';
 import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 
 import News from '../news';
-import { resetNewsCache, STORAGE_ALERTS_OFF } from '../news-utils';
+import { resetNewsCache, STORAGE_ALERTS_OFF, STORAGE_VIEWED } from '../news-utils';
 
 jest.mock('@deriv-com/translations', () => ({
     Localize: ({ i18n_default_text }: { i18n_default_text: string }) => <>{i18n_default_text}</>,
@@ -83,6 +83,38 @@ describe('<News />', () => {
         expect(screen.getByTestId('dt_news_empty')).toHaveTextContent(/No headlines in this category/);
     });
 
+    it('searches headlines, says when nothing matches, and combines with the category', async () => {
+        mockFeed(FEED);
+        renderNews();
+        await screen.findAllByTestId('dt_news_item');
+        fireEvent.change(screen.getByTestId('dt_news_search'), { target: { value: 'bitcoin' } });
+        expect(screen.getAllByTestId('dt_news_item')).toHaveLength(1);
+        fireEvent.change(screen.getByTestId('dt_news_search'), { target: { value: 'zzzz' } });
+        expect(screen.getByTestId('dt_news_empty')).toHaveTextContent('No headlines match "zzzz".');
+        fireEvent.change(screen.getByTestId('dt_news_search'), { target: { value: 'fed' } });
+        fireEvent.click(screen.getByTestId('dt_news_tab_crypto'));
+        expect(screen.getByTestId('dt_news_empty')).toBeInTheDocument();
+    });
+
+    it('marks headlines published since the last visit as new', async () => {
+        window.localStorage.setItem(STORAGE_VIEWED, String(Date.now() - 90 * 60000));
+        mockFeed(FEED);
+        renderNews();
+        await screen.findAllByTestId('dt_news_item');
+        // "a" was published 1 hour ago (after the visit 90 minutes ago), "b" 2 hours ago (before it)
+        expect(screen.getAllByTestId('dt_news_new')).toHaveLength(1);
+        const [fed, bitcoin] = screen.getAllByTestId('dt_news_item');
+        expect(within(fed).getByTestId('dt_news_new')).toBeInTheDocument();
+        expect(within(bitcoin).queryByTestId('dt_news_new')).not.toBeInTheDocument();
+    });
+
+    it('marks nothing as new on a first visit', async () => {
+        mockFeed(FEED);
+        renderNews();
+        await screen.findAllByTestId('dt_news_item');
+        expect(screen.queryByTestId('dt_news_new')).not.toBeInTheDocument();
+    });
+
     it('recommends tools from the headlines and opens them', async () => {
         mockFeed(FEED);
         renderNews();
@@ -110,9 +142,9 @@ describe('<News />', () => {
         mockFeed(FEED);
         renderNews();
         const toggle = await screen.findByTestId('dt_news_alerts_toggle');
-        expect(toggle).toHaveAttribute('aria-checked', 'true');
+        expect(toggle).toBeChecked();
         fireEvent.click(toggle);
-        expect(toggle).toHaveAttribute('aria-checked', 'false');
+        expect(toggle).not.toBeChecked();
         expect(window.localStorage.getItem(STORAGE_ALERTS_OFF)).toBe('1');
     });
 
