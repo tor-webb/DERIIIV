@@ -107,10 +107,7 @@ describe('<Learn />', () => {
         it('starts at none read and shows a reading time on each lesson', () => {
             renderPage();
             expect(screen.getByTestId('dt_learn_progress')).toHaveTextContent(/You have read 0 of \d+ lessons\./);
-            expect(screen.getByTestId('dt_learn_progress').querySelector('[role=progressbar]')).toHaveAttribute(
-                'aria-valuenow',
-                '0'
-            );
+            expect(screen.getByRole('progressbar', { name: 'Lessons read' })).toHaveAttribute('aria-valuenow', '0');
             expect(screen.getByTestId('dt_learn_lesson_what_moves_prices')).toHaveTextContent(/\d+ min read/);
         });
 
@@ -129,9 +126,9 @@ describe('<Learn />', () => {
         });
 
         it('remembers what was read after the page is opened again', () => {
-            const first = renderPage();
+            const view = renderPage();
             fireEvent.click(screen.getByTestId('dt_learn_mark_what_moves_prices'));
-            first.unmount();
+            view.unmount();
             renderPage();
             expect(screen.getByTestId('dt_learn_mark_what_moves_prices')).toHaveAttribute('aria-pressed', 'true');
             expect(screen.getByTestId('dt_learn_progress')).toHaveTextContent('You have read 1 of');
@@ -144,9 +141,9 @@ describe('<Learn />', () => {
         });
 
         it('still does not remember the pre-trade checklist', () => {
-            const first = renderPage();
+            const view = renderPage();
             fireEvent.click(screen.getByTestId('dt_learn_check_demo'));
-            first.unmount();
+            view.unmount();
             renderPage();
             expect(screen.getByTestId('dt_learn_check_demo')).not.toBeChecked();
         });
