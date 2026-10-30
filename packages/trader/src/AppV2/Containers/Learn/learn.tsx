@@ -6,6 +6,14 @@ import { observer } from '@deriv/stores';
 import { localize } from '@deriv-com/translations';
 
 import { getChecklist, getGlossary, getTopics } from './learn-content';
+import {
+    overallProgress,
+    readingMinutes,
+    readLessonsRead,
+    toggleRead,
+    topicProgress,
+    writeLessonsRead,
+} from './learn-progress';
 
 import './learn.scss';
 
@@ -54,12 +62,29 @@ const Learn = observer(() => {
     const [tab, setTab] = React.useState(topics[0].id);
     const [search, setSearch] = React.useState('');
     const [checked, setChecked] = React.useState<Record<string, boolean>>({});
+    const [read, setRead] = React.useState<string[]>(() =>
+        readLessonsRead(topics.flatMap(item => item.lessons.map(lesson => lesson.id)))
+    );
+    const overall = overallProgress(topics, read);
+
+    const toggleLesson = (id: string) =>
+        setRead(previous => {
+            const next = toggleRead(previous, id);
+            writeLessonsRead(next);
+            return next;
+        });
 
     const topic = topics.find(item => item.id === tab);
     const query = search.trim().toLowerCase();
     const matches = glossary.filter(
         entry => !query || entry.term.toLowerCase().includes(query) || entry.meaning.toLowerCase().includes(query)
     );
+    const tabCount = (id: string) => {
+        const found = topics.find(item => item.id === id);
+        if (!found) return '';
+        const { done, total } = topicProgress(found, read);
+        return `${done}/${total}`;
+    };
     const ready = checklist.every(item => checked[item.id]);
 
     return (
@@ -79,6 +104,25 @@ const Learn = observer(() => {
                 )}
             </p>
 
+            <section className='learn__progress' data-testid='dt_learn_progress'>
+                <div className='learn__progress-text'>
+                    {localize('You have read {{done}} of {{total}} lessons.', {
+                        done: overall.done,
+                        total: overall.total,
+                    })}
+                </div>
+                <div
+                    className='learn__progress-track'
+                    role='progressbar'
+                    aria-label={localize('Lessons read')}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                    aria-valuenow={overall.percent}
+                >
+                    <span className='learn__progress-fill' style={{ width: `${overall.percent}%` }} />
+                </div>
+            </section>
+
             <div className='learn__tabs' role='tablist' aria-label={localize('Lesson topics')}>
                 {[
                     ...topics.map(item => ({ id: item.id, label: item.label })),
@@ -94,6 +138,11 @@ const Learn = observer(() => {
                         onClick={() => setTab(item.id)}
                     >
                         {item.label}
+                        {item.id !== GLOSSARY_TAB && (
+                            <span className='learn__tab-count' data-testid={`dt_learn_count_${item.id}`}>
+                                {tabCount(item.id)}
+                            </span>
+                        )}
                     </button>
                 ))}
             </div>
@@ -106,9 +155,15 @@ const Learn = observer(() => {
                             {topic.lessons.map(lesson => (
                                 <article
                                     key={lesson.id}
-                                    className='learn__lesson'
+                                    className={`learn__lesson${read.includes(lesson.id) ? ' learn__lesson--read' : ''}`}
                                     data-testid={`dt_learn_lesson_${lesson.id}`}
                                 >
+                                    <p className='learn__lesson-meta'>
+                                        {localize('{{minutes}} min read', { minutes: readingMinutes(lesson) })}
+                                        {read.includes(lesson.id) && (
+                                            <span className='learn__lesson-done'> · {localize('Read')}</span>
+                                        )}
+                                    </p>
                                     <h2 className='learn__lesson-title'>{lesson.title}</h2>
                                     <p className='learn__lesson-summary'>{lesson.summary}</p>
                                     {lesson.body.map(paragraph => (
@@ -121,6 +176,17 @@ const Learn = observer(() => {
                                             <li key={point}>{point}</li>
                                         ))}
                                     </ul>
+                                    <button
+                                        type='button'
+                                        className='learn__mark'
+                                        aria-pressed={read.includes(lesson.id)}
+                                        data-testid={`dt_learn_mark_${lesson.id}`}
+                                        onClick={() => toggleLesson(lesson.id)}
+                                    >
+                                        {read.includes(lesson.id)
+                                            ? localize('Marked as read')
+                                            : localize('Mark as read')}
+                                    </button>
                                     {lesson.try_it && (
                                         <button
                                             type='button'
