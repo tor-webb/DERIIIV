@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T06:35:21.345Z",
+ "updated": "2026-10-31T13:16:17.635Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -11,6 +11,33 @@
   "The Guardian Business /business/rss": 12
  },
  "items": [
+  {
+   "id": "1rdgt0i",
+   "title": "Blockchain investigator Chainalysis hit by cybersecurity incident",
+   "link": "https://cointelegraph.com/news/blockchain-investigator-chainalysis-hit-by-cybersecurity-incident?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Chainalysis has engaged world-class third-party experts to support a review of its security and strengthen its defenses.",
+   "published": "2026-10-31T11:22:49.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "ierefv",
+   "title": "The staggering $446m Elon Musk has spent on the US midterms – visualized",
+   "link": "https://www.theguardian.com/us-news/ng-interactive/2026/oct/31/elon-musk-midterms-spending-visualized",
+   "summary": "The tech mogul’s midterm donations backing Republicans have made him the largest single-cycle political donor in modern US history Elon Musk has poured so much money into US politics this midterms election cycle that…",
+   "published": "2026-10-31T10:00:40.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "14lb0g7",
+   "title": "Binance $6.3B record hack sparks pre-election political clashes",
+   "link": "https://cointelegraph.com/news/binance-63b-record-hack-sparks-pre-election-political-chatter?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Some political and administration figures tried to make hay of the biggest-ever crypto heist.",
+   "published": "2026-10-31T09:58:50.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
   {
    "id": "9fi95v",
    "title": "Binance hackers raced to move billions before it could be frozen",
@@ -291,15 +318,6 @@
    "category": "crypto"
   },
   {
-   "id": "ac8pv",
-   "title": "Binance says it holds $5B in matching tokens to cover hack losses",
-   "link": "https://cointelegraph.com/news/binance-5-billion-replacement-crypto-in-custody?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The exchange said it set aside more than $6.34 billion to cover losses and would include the assets in its next proof-of-reserves report.",
-   "published": "2026-10-30T12:41:43.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1puqems",
    "title": "What we know about Binance's $6.3bn hack",
    "link": "https://www.bbc.co.uk/news/videos/cv2d62e34rw5o?at_medium=RSS&at_campaign=rss",
@@ -316,15 +334,6 @@
    "published": "2026-10-30T12:04:02.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "8ic2rp",
-   "title": "Zcash grants group offers $124M compromise as governance backlash grows",
-   "link": "https://cointelegraph.com/news/zcash-grants-46m-proposal-governance-backlash?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Zcash Community Grants proposed redirecting about $124 million in existing and future funding toward mining rewards, but critics say the plan fails to address governance and accountability concerns.",
-   "published": "2026-10-30T11:36:23.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1eryzfa",
@@ -504,15 +513,6 @@
    "summary": "The Bank of England has today launched a consultation supporting central counterparties (CCPs) acceptance of tokenised forms of eligible collateral.",
    "published": "2026-10-29T10:00:00.000Z",
    "source": "Bank of England",
-   "category": "economy"
-  },
-  {
-   "id": "1mop1ij",
-   "title": "Embattled CBS leader Bari Weiss downplays concerns about weak 60 Minutes ratings",
-   "link": "https://www.theguardian.com/media/2026/oct/28/bari-weiss-cbs-news-60-minutes",
-   "summary": "CBS News editor-in-chief sidesteps viewership concerns and says flagship show doing ‘tremendously well’ CBS News’ editor-in-chief, Bari Weiss, has spoken publicly for the first time about the ratings challenges the…",
-   "published": "2026-10-28T22:22:19.000Z",
-   "source": "The Guardian Business",
    "category": "economy"
   },
   {
