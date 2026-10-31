@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T21:00:03.185Z",
+ "updated": "2026-10-31T00:39:29.475Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,6 +12,42 @@
  },
  "items": [
   {
+   "id": "9fi95v",
+   "title": "Binance hackers raced to move billions before it could be frozen",
+   "link": "https://cointelegraph.com/magazine/binance-hackers-raced-to-move-billions-before-could-be-frozen?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Attackers raced to convert stolen stablecoins into crypto that issuers could not freeze as industry players like Tether and Circle moved to immobilize billions of dollars in assets.",
+   "published": "2026-10-30T22:00:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "qf33fz",
+   "title": "investingLive Americas FX news wrap 30 Oct: It’s a wrap: Nasdaq tumbles as AI costs worry investors; Fed speakers keep hikes in play",
+   "link": "https://investinglive.com/news/investinglive-americas-fx-news-wrap-30-oct-it-s-a-wrap-nasdaq-tumbles-as-ai-costs-worry-investors-fed-speakers-keep-hikes-in-play/",
+   "summary": "Nasdaq suffers worst month since March 2025 as technology stocks tumble Bitcoin tests key support as Binance security fears weigh Week ahead: Elections, rate decisions and jobs take center stage Earnings next week: Can…",
+   "published": "2026-10-30T21:38:16.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "zybzha",
+   "title": "Crypto giant Binance attempting to recover $6.3bn stolen in hack linked to North Korea",
+   "link": "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo?at_medium=RSS&at_campaign=rss",
+   "summary": "The cyber-attack, which the company describes as complex, is believed to be the largest ever of its kind.",
+   "published": "2026-10-30T21:13:14.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "9naztn",
+   "title": "Nasdaq suffers worst month since March 2025 as technology stocks tumble",
+   "link": "https://investinglive.com/stocks/nasdaq-suffers-worst-month-since-march-2025-as-technology-stocks-tumble/",
+   "summary": "US stocks are trading sharply lower in the final session of October, with the Nasdaq indices again leading the declines. The selling caps a difficult month for technology, with the Nasdaq Composite down 5.30%—its worst…",
+   "published": "2026-10-30T20:39:12.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
    "id": "107rlxz",
    "title": "US tech stocks see sharp falls as AI spending nears $1tn",
    "link": "https://www.bbc.co.uk/news/articles/cvwy72e0n72yo?at_medium=RSS&at_campaign=rss",
@@ -21,13 +57,13 @@
    "category": "economy"
   },
   {
-   "id": "zybzha",
-   "title": "Crypto giant Binance attempting to recover $6.3bn stolen in hack linked to North Korea",
-   "link": "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo?at_medium=RSS&at_campaign=rss",
-   "summary": "The cyber-attack, which the company describes as complex, is believed to be the largest ever of its kind.",
-   "published": "2026-10-30T20:10:56.000Z",
-   "source": "BBC Business",
-   "category": "economy"
+   "id": "1auqjtz",
+   "title": "Bitcoin tests key support as Binance security fears weigh",
+   "link": "https://investinglive.com/cryptocurrency/bitcoin-tests-key-support-as-binance-security-fears-weigh/",
+   "summary": "Bitcoin is trading to new session lows, bringing its 100-day moving average at $76,139 into focus. The low so far has reached $76,172, leaving the price just $33 above a key technical level that could help define the…",
+   "published": "2026-10-30T20:19:44.000Z",
+   "source": "investingLive",
+   "category": "forex"
   },
   {
    "id": "lg7its",
@@ -219,15 +255,6 @@
    "category": "economy"
   },
   {
-   "id": "1o2tqga",
-   "title": "Gold tumbles despite lower yields. Technicals show the way.",
-   "link": "https://investinglive.com/commodities/gold-tumbles-despite-lower-yields-technicals-show-the-way/",
-   "summary": "Lower yields fail to provide support Gold is moving sharply lower despite a decline in US Treasury yields. The 10-year yield is down 5 basis points to 4.939%, a move that would normally provide some support for the…",
-   "published": "2026-10-30T14:46:00.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1la066y",
    "title": "Here’s what happened in crypto today",
    "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -246,24 +273,6 @@
    "category": "economy"
   },
   {
-   "id": "8t909x",
-   "title": "Nasdaq leads stocks lower as investors question the cost of AI growth",
-   "link": "https://investinglive.com/stocks/nasdaq-leads-stocks-lower-as-investors-question-the-cost-of-ai-growth/",
-   "summary": "US stocks are trading lower, with the Nasdaq indices taking the biggest hit as investors reassess the earnings outlook—and the cost of delivering on the AI growth story. Dow: Down 176.04 points, or 0.34%, at 52,172.21.…",
-   "published": "2026-10-30T13:55:41.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1cnyon7",
-   "title": "Fed's Barkin: Direction of travel is straightforward for the Fed",
-   "link": "https://investinglive.com/central-banks/fed-s-barkin-direction-of-travel-is-straightforward-for-the-fed/",
-   "summary": "Comments from the Fed’s Barkin cross the wires: Direction of travel is “straightforward” for the Fed, the question is pace. A gradual approach is a good way to go right now. A lot of cost pressures are hitting American…",
-   "published": "2026-10-30T13:41:13.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1q20tp",
    "title": "Will gold’s ‘infinite mint bug’ make Bitcoin more valuable?",
    "link": "https://cointelegraph.com/magazine/will-golds-infinite-mint-bug-make-bitcoin-more-valuable?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -274,9 +283,9 @@
   },
   {
    "id": "afvtl5",
-   "title": "Binance working with FBI to recover assets following $6.3B hack",
+   "title": "FBI and Secret Service join response to Binance’s $6.3B hack",
    "link": "https://cointelegraph.com/news/binance-fbi-recover-assets-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Binance is working with law enforcement to recover $3 billion that is frozen, after setting aside more than $6.3 billion from the company’s funds to cover the shortfall.",
+   "summary": "US agencies are investigating the theft and helping trace stolen assets, while Binance says about $3 billion has been frozen.",
    "published": "2026-10-30T13:11:10.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
@@ -314,15 +323,6 @@
    "link": "https://cointelegraph.com/news/zcash-grants-46m-proposal-governance-backlash?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "summary": "Zcash Community Grants proposed redirecting about $124 million in existing and future funding toward mining rewards, but critics say the plan fails to address governance and accountability concerns.",
    "published": "2026-10-30T11:36:23.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "mkw82b",
-   "title": "Bitcoin price metrics hint at rebound as $1.6B liquidations follow Binance hack",
-   "link": "https://cointelegraph.com/markets/bitcoin-price-metrics-hint-at-rebound-as-16b-liquidations-follow-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitcoin held above $76,000 after a $6.3 billion Binance hack and a tech-stock sell-off, as momentum indicators pointed to a possible rebound.",
-   "published": "2026-10-30T11:29:23.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
   },
