@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T04:36:36.244Z",
+ "updated": "2026-11-01T11:37:59.201Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -11,6 +11,42 @@
   "The Guardian Business /business/rss": 12
  },
  "items": [
+  {
+   "id": "1rn90ck",
+   "title": "Binance says phase one of withdrawals opens after $6.3B hack",
+   "link": "https://cointelegraph.com/news/binance-says-phase-one-of-withdrawals-opens-after-63b-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The crypto exchange said it has begun phased withdrawals after the record hack the FBI has blamed on North Korea.",
+   "published": "2026-11-01T09:38:18.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1bff5xp",
+   "title": "Crypto firm Binance covers 90% of losses after $6.3bn hack",
+   "link": "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o?at_medium=RSS&at_campaign=rss",
+   "summary": "The Federal Bureau of Investigation (FBI) says North Korea was responsible for the hack.",
+   "published": "2026-11-01T09:28:06.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "8h67va",
+   "title": "FBI blames North Korea for record $6.3B Binance hack",
+   "link": "https://cointelegraph.com/news/fbi-blames-north-korea-for-record-63b-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "US agency seeks private-sector help to block further money-laundering of stolen digital assets.",
+   "published": "2026-11-01T07:44:38.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "15afxz8",
+   "title": "No more washing up: How Airbnb's new house rules have divided hosts and guests",
+   "link": "https://www.bbc.co.uk/news/articles/ckjwez8g5dyeo?at_medium=RSS&at_campaign=rss",
+   "summary": "Airbnb hosts must stop asking guests to wash-up or take out bins under rules coming into force in November.",
+   "published": "2026-11-01T00:17:05.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
   {
    "id": "1ombvj0",
    "title": "Binance says 90% of stolen assets replenished, targets Sunday withdrawals",
@@ -219,15 +255,6 @@
    "category": "forex"
   },
   {
-   "id": "488s18",
-   "title": "Crypto Biz: Bitcoin’s quantum threat is becoming an economic problem",
-   "link": "https://cointelegraph.com/news/bitcoin-quantum-threat-ripple-bank-usdc-vaneck-crypto-biz?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitcoin faces mounting quantum security concerns as Ripple secures a US banking charter, USDC gains ground in Europe and VanEck adds BTC to a new ETF.",
-   "published": "2026-10-30T17:09:31.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1teauem",
    "title": "Carney: Canada, EU working toward deepest possible partnership, short of accession",
    "link": "https://investinglive.com/news/carney-canada-eu-working-toward-deepest-possible-partnership-short-of-accession/",
@@ -235,15 +262,6 @@
    "published": "2026-10-30T17:08:44.000Z",
    "source": "investingLive",
    "category": "forex"
-  },
-  {
-   "id": "qzhbx1",
-   "title": "Recap: How Binance’s record $6.3B hack unfolded",
-   "link": "https://cointelegraph.com/news/recap-binances-record-63b-hack-unfolded?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "A recap of Cointelegraph’s live coverage of the Binance hack, including early breach reports and the exchange’s full reimbursement pledge.",
-   "published": "2026-10-30T16:53:46.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "13ts2ah",
@@ -323,15 +341,6 @@
    "link": "https://www.bbc.co.uk/news/videos/cv2d62e34rw5o?at_medium=RSS&at_campaign=rss",
    "summary": "Cyber correspondent Joe Tidy explains more about what is suspected to be the biggest hack in history.",
    "published": "2026-10-30T12:27:28.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "18argk6",
-   "title": "Google value plunges by $500bn as its own AI search hits ad sales",
-   "link": "https://www.bbc.co.uk/news/articles/cm9qzdqpxy48o?at_medium=RSS&at_campaign=rss",
-   "summary": "Google spooked investors so badly that its stock hit a six-month low, after it revealed its AI own search summaries were affecting ad revenue.",
-   "published": "2026-10-30T12:04:02.000Z",
    "source": "BBC Business",
    "category": "economy"
   },
@@ -423,15 +432,6 @@
    "summary": "",
    "published": "2026-10-29T15:50:00.000Z",
    "source": "ECB",
-   "category": "economy"
-  },
-  {
-   "id": "9cjkef",
-   "title": "Faisal Islam: This Budget was micro and that was deliberate",
-   "link": "https://www.bbc.co.uk/news/articles/cwx283zynnv3o?at_medium=RSS&at_campaign=rss",
-   "summary": "Chancellor John Healey's plans fall short of radical action to create a promised new economic model.",
-   "published": "2026-10-29T15:48:44.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
