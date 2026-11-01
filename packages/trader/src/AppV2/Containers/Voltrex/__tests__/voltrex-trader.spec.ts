@@ -283,7 +283,10 @@ describe('emergency stop', () => {
 
 describe('auto-trading', () => {
     const config = { strategy: 'confluence' as const, stake: 1, categories: ['volatility' as const] };
-    const flush = () => new Promise(resolve => setTimeout(resolve, 0));
+    const flush = () =>
+        new Promise(resolve => {
+            setTimeout(resolve, 0);
+        });
 
     it('refuses to start on a real account or with a stake above the maximum', () => {
         expect(setup({ is_virtual: false }).trader.startAuto(config)).not.toBeNull();
@@ -395,7 +398,10 @@ describe('auto-trading', () => {
         let release: (value: TRiseFallSpec) => void = () => undefined;
         const { trader, runners } = setup({
             rows: [row('R_10', true)],
-            getSpec: () => new Promise<TRiseFallSpec>(resolve => (release = resolve)),
+            getSpec: () =>
+                new Promise<TRiseFallSpec>(resolve => {
+                    release = resolve;
+                }),
         });
         trader.startAuto(config);
         trader.emergencyStop();

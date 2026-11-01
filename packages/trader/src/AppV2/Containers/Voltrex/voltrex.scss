@@ -1,0 +1,952 @@
+// The Voltrex page is a dark terminal whatever the site theme is, so its colours are defined here, on the page only.
+.voltrex {
+    --vx-bg: #05070f;
+    --vx-panel: #0a1020;
+    --vx-panel-2: #0e1730;
+    --vx-border: rgba(0, 229, 255, 0.18);
+    --vx-text: #e6f1ff;
+    --vx-muted: #8ea2c4;
+    --vx-cyan: #00e5ff;
+    --vx-blue: #2f6bff;
+    --vx-purple: #a259ff;
+    --vx-buy: #19e68c;
+    --vx-sell: #ff4d6d;
+    --vx-warn: #ffb020;
+
+    box-sizing: border-box;
+    min-height: calc(100vh - var(--top-nav-height, 0px));
+    padding: 2.4rem;
+    background:
+        radial-gradient(60rem 30rem at 15% -10%, rgba(47, 107, 255, 0.18), transparent 60%),
+        radial-gradient(50rem 30rem at 95% 0%, rgba(162, 89, 255, 0.14), transparent 60%), var(--vx-bg);
+    color: var(--vx-text);
+    overflow-y: auto;
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    // ---------- header ----------
+    &__header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        margin: 0 0 0.4rem;
+        font-size: 3.2rem;
+        font-weight: 800;
+        letter-spacing: 0.2rem;
+        background: linear-gradient(90deg, var(--vx-cyan), var(--vx-blue) 55%, var(--vx-purple));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0 0 2.4rem rgba(0, 229, 255, 0.25);
+    }
+
+    &__status {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, auto));
+        gap: 0.8rem 2.4rem;
+        margin: 0;
+        padding: 1.2rem 1.6rem;
+        border: 1px solid var(--vx-border);
+        border-radius: 1.2rem;
+        background: var(--vx-panel);
+
+        dt {
+            font-size: 1.1rem;
+            letter-spacing: 0.1rem;
+            text-transform: uppercase;
+            color: var(--vx-muted);
+        }
+
+        dd {
+            margin: 0.2rem 0 0;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+    }
+
+    &__dot {
+        display: inline-block;
+        width: 0.8rem;
+        height: 0.8rem;
+        margin-right: 0.6rem;
+        border-radius: 50%;
+        background: var(--vx-sell);
+
+        &--on {
+            background: var(--vx-buy);
+            box-shadow: 0 0 0.8rem var(--vx-buy);
+        }
+    }
+
+    // ---------- layout ----------
+    &__layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.65fr) minmax(32rem, 1fr);
+        gap: 1.6rem;
+        align-items: start;
+    }
+
+    &__main,
+    &__side {
+        min-width: 0;
+    }
+
+    &__trade {
+        grid-column: 1 / -1;
+        min-width: 0;
+    }
+
+    &__bottom {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.6rem;
+        margin-top: 1.6rem;
+    }
+
+    // ---------- shared parts ----------
+    &__panel {
+        min-width: 0;
+        padding: 1.6rem;
+        border: 1px solid var(--vx-border);
+        border-radius: 1.4rem;
+        background: linear-gradient(180deg, var(--vx-panel-2), var(--vx-panel));
+        box-shadow:
+            0 0 0 1px rgba(255, 255, 255, 0.02) inset,
+            0 1.2rem 3.2rem rgba(0, 0, 0, 0.35);
+    }
+
+    &__panel-title {
+        margin: 0 0 0.8rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--vx-text);
+    }
+
+    &__subtitle {
+        margin: 1.6rem 0 0.8rem;
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 0.06rem;
+        text-transform: uppercase;
+        color: var(--vx-cyan);
+    }
+
+    &__muted {
+        color: var(--vx-muted);
+        font-size: 1.3rem;
+    }
+
+    &__note {
+        margin: 0.8rem 0;
+        padding: 0.8rem 1.2rem;
+        border-left: 0.3rem solid var(--vx-purple);
+        border-radius: 0.4rem;
+        background: rgba(162, 89, 255, 0.08);
+        color: var(--vx-muted);
+        font-size: 1.2rem;
+    }
+
+    &__alert {
+        margin: 0.8rem 0;
+        padding: 1rem 1.2rem;
+        border: 1px solid var(--vx-warn);
+        border-radius: 0.8rem;
+        background: rgba(255, 176, 32, 0.08);
+        font-size: 1.3rem;
+    }
+
+    &__error {
+        margin: 0.4rem 0;
+        color: var(--vx-sell);
+        font-size: 1.3rem;
+    }
+
+    &__link {
+        padding: 0;
+        border: 0;
+        background: none;
+        color: var(--vx-cyan);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    &__tone {
+        &--buy {
+            color: var(--vx-buy);
+        }
+
+        &--sell {
+            color: var(--vx-sell);
+        }
+
+        &--neutral {
+            color: var(--vx-muted);
+        }
+    }
+
+    &__badge {
+        display: inline-block;
+        padding: 0.2rem 1rem;
+        border: 1px solid currentcolor;
+        border-radius: 999px;
+        font-size: 1.2rem;
+        font-weight: 800;
+        letter-spacing: 0.08rem;
+
+        &--off {
+            color: var(--vx-muted);
+        }
+
+        &--running {
+            color: var(--vx-buy);
+            box-shadow: 0 0 1rem rgba(25, 230, 140, 0.35);
+        }
+
+        &--paused {
+            color: var(--vx-warn);
+        }
+    }
+
+    &__level {
+        font-size: 1.2rem;
+        font-weight: 700;
+
+        &--low {
+            color: var(--vx-blue);
+        }
+
+        &--medium {
+            color: var(--vx-warn);
+        }
+
+        &--high {
+            color: var(--vx-sell);
+        }
+    }
+
+    &__live {
+        display: inline-block;
+        width: 0.6rem;
+        height: 0.6rem;
+        margin-left: 0.6rem;
+        border-radius: 50%;
+        background: var(--vx-cyan);
+        box-shadow: 0 0 0.6rem var(--vx-cyan);
+        animation: voltrex-pulse 1.6s ease-in-out infinite;
+    }
+
+    &__input {
+        width: 100%;
+        min-height: 4rem;
+        padding: 0.6rem 1rem;
+        border: 1px solid var(--vx-border);
+        border-radius: 0.8rem;
+        background: #060b18;
+        color: var(--vx-text);
+        font-size: 1.4rem;
+
+        &:focus-visible {
+            outline: 2px solid var(--vx-cyan);
+            outline-offset: 1px;
+        }
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        margin-bottom: 0.8rem;
+        min-width: 0;
+        flex: 1;
+
+        > span {
+            font-size: 1.2rem;
+            color: var(--vx-muted);
+        }
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        align-items: flex-end;
+    }
+
+    &__check {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 1.3rem;
+        color: var(--vx-muted);
+    }
+
+    &__chip {
+        padding: 0.5rem 1.2rem;
+        border: 1px solid var(--vx-border);
+        border-radius: 999px;
+        background: transparent;
+        color: var(--vx-muted);
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition:
+            background 0.15s ease,
+            color 0.15s ease,
+            box-shadow 0.15s ease;
+
+        &:hover {
+            color: var(--vx-text);
+        }
+
+        &--on {
+            border-color: var(--vx-cyan);
+            background: rgba(0, 229, 255, 0.12);
+            color: var(--vx-cyan);
+            box-shadow: 0 0 1rem rgba(0, 229, 255, 0.2);
+        }
+    }
+
+    &__button {
+        min-height: 4rem;
+        padding: 0.8rem 1.6rem;
+        border: 1px solid var(--vx-border);
+        border-radius: 0.8rem;
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--vx-text);
+        font-size: 1.4rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition:
+            transform 0.1s ease,
+            box-shadow 0.15s ease;
+
+        &:hover:not(:disabled) {
+            box-shadow: 0 0 1.2rem rgba(0, 229, 255, 0.25);
+        }
+
+        &:active:not(:disabled) {
+            transform: translateY(1px);
+        }
+
+        &:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--vx-cyan);
+            outline-offset: 2px;
+        }
+
+        small {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 400;
+            opacity: 0.85;
+        }
+
+        &--primary {
+            border-color: var(--vx-cyan);
+            background: linear-gradient(90deg, rgba(0, 229, 255, 0.2), rgba(47, 107, 255, 0.25));
+        }
+
+        &--buy {
+            flex: 1;
+            border-color: var(--vx-buy);
+            color: var(--vx-buy);
+            background: rgba(25, 230, 140, 0.1);
+        }
+
+        &--sell {
+            flex: 1;
+            border-color: var(--vx-sell);
+            color: var(--vx-sell);
+            background: rgba(255, 77, 109, 0.1);
+        }
+
+        &--danger {
+            border-color: var(--vx-sell);
+            background: rgba(255, 77, 109, 0.2);
+            color: #fff;
+        }
+    }
+}
+
+// ---------- scanner ----------
+.voltrex-scanner {
+    &__top {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 0.8rem;
+    }
+
+    &__chips,
+    &__rank {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin: 0.8rem 0;
+    }
+
+    &__tools {
+        display: grid;
+        grid-template-columns: minmax(16rem, 1.4fr) minmax(12rem, 0.8fr) auto auto;
+        align-items: center;
+        gap: 0.8rem;
+        margin-bottom: 1.2rem;
+    }
+
+    &__rank {
+        margin: 0;
+    }
+
+    &__scroll {
+        max-height: 62rem;
+        overflow: auto;
+        border-radius: 1rem;
+    }
+
+    &__empty {
+        padding: 2.4rem;
+        text-align: center;
+    }
+}
+
+.voltrex-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.3rem;
+
+    th {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        padding: 1rem 0.8rem;
+        background: #0a1226;
+        color: var(--vx-muted);
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 0.08rem;
+        text-align: left;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 0.9rem 0.8rem;
+        border-top: 1px solid rgba(142, 162, 196, 0.1);
+        white-space: nowrap;
+    }
+
+    &__num {
+        font-variant-numeric: tabular-nums;
+    }
+
+    &__sort {
+        padding: 0;
+        border: 0;
+        background: none;
+        color: inherit;
+        font: inherit;
+        letter-spacing: inherit;
+        text-transform: inherit;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--vx-cyan);
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--vx-cyan);
+        }
+    }
+
+    &__name {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        border: 0;
+        background: none;
+        color: var(--vx-text);
+        font-size: 1.3rem;
+        text-align: left;
+        cursor: pointer;
+
+        &:focus-visible {
+            outline: 2px solid var(--vx-cyan);
+        }
+    }
+
+    &__row {
+        transition: background 0.15s ease;
+
+        &:hover {
+            background: rgba(0, 229, 255, 0.05);
+        }
+
+        &--selected {
+            background: rgba(47, 107, 255, 0.16);
+            box-shadow: inset 0.3rem 0 0 var(--vx-cyan);
+        }
+    }
+}
+
+// ---------- detail ----------
+.voltrex-detail {
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.2rem;
+    }
+
+    &__price {
+        text-align: right;
+
+        strong {
+            display: block;
+            font-size: 2.4rem;
+            font-variant-numeric: tabular-nums;
+        }
+
+        span {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+        margin: 0.4rem 0 1.2rem;
+        font-size: 1.2rem;
+        color: var(--vx-muted);
+    }
+
+    &__key {
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 1.4rem;
+            height: 0.2rem;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+            background: currentcolor;
+        }
+
+        &--fast {
+            color: var(--vx-cyan);
+        }
+
+        &--slow {
+            color: var(--vx-purple);
+        }
+
+        &--band {
+            color: var(--vx-blue);
+        }
+    }
+
+    &__signal {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        margin-bottom: 1.2rem;
+
+        .voltrex__badge {
+            padding: 0.4rem 1.8rem;
+            font-size: 1.8rem;
+        }
+    }
+
+    &__meters {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+    }
+
+    &__meter-top {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.2rem;
+        color: var(--vx-muted);
+
+        strong {
+            color: var(--vx-text);
+        }
+    }
+
+    &__meter-track {
+        height: 0.6rem;
+        margin-top: 0.4rem;
+        border-radius: 999px;
+        background: rgba(142, 162, 196, 0.18);
+        overflow: hidden;
+    }
+
+    &__meter-fill {
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, var(--vx-blue), var(--vx-cyan));
+        transition: width 0.4s ease;
+    }
+
+    &__readings {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 0.5rem 1.2rem;
+        margin: 0;
+        font-size: 1.3rem;
+
+        dt {
+            color: var(--vx-muted);
+        }
+
+        dd {
+            margin: 0;
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+    }
+
+    &__reasons {
+        margin: 0;
+        padding-left: 1.8rem;
+        font-size: 1.3rem;
+        line-height: 1.5;
+
+        li + li {
+            margin-top: 0.4rem;
+        }
+    }
+}
+
+.voltrex-chart {
+    display: block;
+    width: 100%;
+    height: 26rem;
+    border-radius: 1rem;
+    background: #060b18;
+
+    &--empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--vx-muted);
+        font-size: 1.3rem;
+    }
+
+    &__grid {
+        stroke: rgba(142, 162, 196, 0.14);
+        stroke-width: 1;
+    }
+
+    &__label {
+        fill: #8ea2c4;
+        font-size: 10px;
+    }
+
+    &__band {
+        fill: none;
+        stroke: #2f6bff;
+        stroke-width: 1;
+        stroke-dasharray: 3 3;
+        opacity: 0.75;
+    }
+
+    &__ema {
+        fill: none;
+        stroke-width: 1.5;
+
+        &--fast {
+            stroke: #00e5ff;
+        }
+
+        &--slow {
+            stroke: #a259ff;
+        }
+    }
+
+    &__level {
+        stroke-width: 1;
+        stroke-dasharray: 6 4;
+
+        &--support {
+            stroke: #19e68c;
+        }
+
+        &--resistance {
+            stroke: #ff4d6d;
+        }
+    }
+
+    &__candle {
+        &--up {
+            stroke: #19e68c;
+            fill: #19e68c;
+        }
+
+        &--down {
+            stroke: #ff4d6d;
+            fill: #ff4d6d;
+        }
+    }
+}
+
+// ---------- trading ----------
+.voltrex-trade {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 2.4rem;
+
+    > .voltrex__panel-title,
+    > .voltrex-emergency {
+        grid-column: 1 / -1;
+    }
+
+    &__section {
+        min-width: 0;
+    }
+
+    &__sides {
+        margin-top: 0.8rem;
+    }
+}
+
+.voltrex-risk__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 1.2rem;
+}
+
+.voltrex-emergency {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
+
+    &__button {
+        width: 100%;
+        letter-spacing: 0.2rem;
+        box-shadow: 0 0 1.6rem rgba(255, 77, 109, 0.35);
+    }
+
+    &--on {
+        padding: 1rem 1.2rem;
+        border: 1px solid var(--vx-sell);
+        border-radius: 0.8rem;
+        background: rgba(255, 77, 109, 0.12);
+        font-weight: 700;
+    }
+}
+
+.voltrex-confirm {
+    margin-top: 0.8rem;
+    padding: 1.2rem;
+    border: 1px solid var(--vx-cyan);
+    border-radius: 1rem;
+    background: rgba(0, 229, 255, 0.06);
+    font-size: 1.3rem;
+
+    p {
+        margin: 0 0 0.8rem;
+    }
+}
+
+.voltrex-log {
+    max-height: 22rem;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    list-style: none;
+    font-size: 1.2rem;
+
+    &__item {
+        padding: 0.4rem 0;
+        border-top: 1px solid rgba(142, 162, 196, 0.1);
+
+        time {
+            color: var(--vx-muted);
+        }
+
+        &--error {
+            color: var(--vx-sell);
+        }
+
+        &--warn {
+            color: var(--vx-warn);
+        }
+
+        &--success {
+            color: var(--vx-buy);
+        }
+    }
+}
+
+.voltrex-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.3rem;
+
+    &__item {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) auto;
+        gap: 0.8rem;
+        align-items: center;
+        padding: 0.8rem 0;
+        border-top: 1px solid rgba(142, 162, 196, 0.1);
+
+        strong {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}
+
+@keyframes voltrex-pulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.35;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .voltrex__live {
+        animation: none;
+    }
+
+    .voltrex__chip,
+    .voltrex__button,
+    .voltrex-detail__meter-fill,
+    .voltrex-table__row {
+        transition: none;
+    }
+}
+
+// ---------- tablets and phones ----------
+@media (max-width: 1100px) {
+    .voltrex {
+        &__layout {
+            grid-template-columns: minmax(0, 1fr);
+        }
+
+        &__bottom {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        &__status {
+            grid-template-columns: repeat(2, minmax(0, auto));
+        }
+    }
+
+    .voltrex-trade {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .voltrex {
+        padding: 1.6rem 1.2rem;
+
+        &__title {
+            font-size: 2.4rem;
+        }
+
+        &__bottom {
+            grid-template-columns: minmax(0, 1fr);
+        }
+
+        &__status {
+            width: 100%;
+        }
+    }
+
+    .voltrex-scanner__tools {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .voltrex-scanner__scroll {
+        max-height: none;
+    }
+
+    // each market becomes a card, so no sideways scrolling is needed
+    .voltrex-table {
+        thead {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+        }
+
+        &,
+        tbody,
+        tr,
+        td {
+            display: block;
+            width: 100%;
+        }
+
+        tr {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.2rem 1.2rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border: 1px solid var(--vx-border);
+            border-radius: 1rem;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        td {
+            display: flex;
+            justify-content: space-between;
+            gap: 0.8rem;
+            padding: 0.4rem 0;
+            border: 0;
+            white-space: normal;
+
+            &:before {
+                content: attr(data-label);
+                color: var(--vx-muted);
+                font-size: 1.1rem;
+                text-transform: uppercase;
+            }
+
+            &:first-child {
+                grid-column: 1 / -1;
+                padding-bottom: 0.8rem;
+
+                &:before {
+                    content: none;
+                }
+            }
+        }
+    }
+
+    .voltrex-risk__grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .voltrex-detail__meters {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

@@ -38,6 +38,7 @@ const TopNav = observer(({ is_mobile = false }: TTopNavProps) => {
         { id: 'trade', label: localize('Trade'), path: routes.index, exact: true },
         { id: 'markets', label: localize('Markets'), path: routes.markets },
         { id: 'charts', label: localize('Charts'), path: routes.charts },
+        { id: 'voltrex', label: localize('VOLTREX SCANNER'), path: routes.voltrex },
         { id: 'bot_builder', label: localize('Bot Builder'), path: routes.bot_builder },
         { id: 'bulk_trader', label: localize('Bulk Trader'), path: routes.bulk_trader },
         { id: 'risk_calculator', label: localize('Risk'), path: routes.risk_calculator },

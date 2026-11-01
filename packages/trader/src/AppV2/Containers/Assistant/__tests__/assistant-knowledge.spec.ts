@@ -55,6 +55,8 @@ describe('getAssistantReply', () => {
         ['can I get a price alert when a market moves', 'price_alerts'],
         ['notify me when my watchlist market has a big move', 'price_alerts'],
         ['how do I turn off price alerts', 'price_alerts'],
+        ['what is the voltrex scanner', 'voltrex'],
+        ['where is the emergency stop', 'voltrex'],
         ['where is my trade journal', 'journal'],
         ['what is my win rate and break even', 'journal'],
         ['how am I doing overall', 'journal'],

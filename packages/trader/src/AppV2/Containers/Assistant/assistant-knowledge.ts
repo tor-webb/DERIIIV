@@ -173,6 +173,25 @@ const topics = (): TTopic[] => [
         actions: () => [go(localize('Open Markets'), routes.markets)],
     },
     {
+        id: 'voltrex',
+        keywords: [
+            'voltrex',
+            'voltrex scanner',
+            'ai scanner',
+            'scan every market',
+            'all markets scanner',
+            'emergency stop',
+            'auto trading panel',
+            'signal strength',
+            'buy sell signals',
+        ],
+        answer: () =>
+            localize(
+                'VOLTREX SCANNER reads every market Deriv offers and works out a BUY, SELL or NEUTRAL reading from standard indicators (RSI, MACD, moving averages, Bollinger Bands, momentum, support and resistance) on two timeframes, with the reasons shown. Strength and agreement say how well the indicators line up. They are not the chance that a trade wins, and no reading can predict the next price. You can place Rise/Fall trades by hand (you confirm each one), or switch on auto-trading, which works on demo accounts only and obeys your risk limits: maximum stake, daily loss, open trades, losses in a row and a profit target. The emergency stop blocks new orders at once. Trading can lose money.'
+            ),
+        actions: () => [go(localize('Open VOLTREX SCANNER'), routes.voltrex)],
+    },
+    {
         id: 'journal',
         keywords: [
             'journal',
