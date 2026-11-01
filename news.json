@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T11:37:59.201Z",
+ "updated": "2026-11-01T17:34:22.781Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,11 +12,38 @@
  },
  "items": [
   {
-   "id": "1rn90ck",
-   "title": "Binance says phase one of withdrawals opens after $6.3B hack",
-   "link": "https://cointelegraph.com/news/binance-says-phase-one-of-withdrawals-opens-after-63b-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The crypto exchange said it has begun phased withdrawals after the record hack the FBI has blamed on North Korea.",
-   "published": "2026-11-01T09:38:18.000Z",
+   "id": "i0mizc",
+   "title": "Thousands of jobs at Virgin Media O2 to be cut",
+   "link": "https://www.bbc.co.uk/news/articles/c6rry8x9d9qko?at_medium=RSS&at_campaign=rss",
+   "summary": "The broadband provider has not finalised the number of roles to be axed but it will likely be a sizeable chunk of its workforce, the BBC understands.",
+   "published": "2026-11-01T16:57:14.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1dnz26k",
+   "title": "What protects Japan’s economy? And what does it mean for the yen?",
+   "link": "https://investinglive.com/education/what-protects-japan-s-economy-and-what-does-it-mean-for-the-yen/",
+   "summary": "What protects Japan’s economy? And what does it mean for the yen? Japan has global businesses, valuable overseas investments and a central bank moving away from years of very low interest rates. But a strong economy…",
+   "published": "2026-11-01T16:50:19.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-11-01T14:17:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "y99xp6",
+   "title": "DeepSeek developing AI agent requiring less human input: Report",
+   "link": "https://cointelegraph.com/news/deepseek-developing-ai-agent-requiring-less-human-input-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The proposal comes amid intense competition among AI developers, including US companies Anthropic and OpenAI, the SCMP said.",
+   "published": "2026-11-01T13:40:33.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
   },
@@ -25,9 +52,36 @@
    "title": "Crypto firm Binance covers 90% of losses after $6.3bn hack",
    "link": "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o?at_medium=RSS&at_campaign=rss",
    "summary": "The Federal Bureau of Investigation (FBI) says North Korea was responsible for the hack.",
-   "published": "2026-11-01T09:28:06.000Z",
+   "published": "2026-11-01T13:11:37.000Z",
    "source": "BBC Business",
    "category": "economy"
+  },
+  {
+   "id": "8ulhl8",
+   "title": "The US-China trade war seems to have subsided – but the sense of calm is misleading",
+   "link": "https://www.theguardian.com/world/2026/nov/01/us-china-trade-war-trump-xi",
+   "summary": "A truce has cooled the trade conflict, but neither country has done anything to limit the outbreak of new hostilities Donald Trump ’s trade wars have largely fallen off the headlines. Fears of new tariffs flare up from…",
+   "published": "2026-11-01T12:00:12.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "1fbryhp",
+   "title": "Affordability top of mind for voters in final sprint to midterms: ‘I have to pick between medicine or groceries’",
+   "link": "https://www.theguardian.com/us-news/2026/nov/01/affordability-voters-final-sprint-midterms",
+   "summary": "Cost of living has loomed over this election cycle as workers and unions champion candidates fighting for higher wages and tackling rising prices For millions of Americans heading to the polls on Tuesday, affordability…",
+   "published": "2026-11-01T12:00:11.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "1rn90ck",
+   "title": "Binance says phase one of withdrawals opens after $6.3B hack",
+   "link": "https://cointelegraph.com/news/binance-says-phase-one-of-withdrawals-opens-after-63b-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The crypto exchange said it has begun phased withdrawals after the record hack the FBI has blamed on North Korea.",
+   "published": "2026-11-01T09:38:18.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
   },
   {
    "id": "8h67va",
@@ -66,15 +120,6 @@
    "category": "crypto"
   },
   {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-10-31T15:09:55.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1x1r212",
    "title": "Bitcoin turns 18: Has the original rebel grown up?",
    "link": "https://cointelegraph.com/magazine/bitcoin-turns-18-has-the-original-rebel-grown-up?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -109,6 +154,15 @@
    "published": "2026-10-31T11:22:49.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
+  },
+  {
+   "id": "20etxw",
+   "title": "The Trump administration wants to give married parents money to stay at home. Will it be enough?",
+   "link": "https://www.theguardian.com/money/2026/oct/31/trump-married-parents-payments",
+   "summary": "Experts say the proposed program prioritizes parents in ‘traditional families’, ignoring the flexibility needed that all families need to support themselves Erica Hall and her husband knew that raising kids wouldn’t be…",
+   "published": "2026-10-31T10:00:41.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
   },
   {
    "id": "ierefv",
@@ -228,15 +282,6 @@
    "category": "economy"
   },
   {
-   "id": "1o5j6qw",
-   "title": "Coinbase leads crypto stock selloff following $6.3B Binance hack",
-   "link": "https://cointelegraph.com/markets/coinbase-leads-crypto-stock-selloff-shares-tumble?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Circle, Strategy and other crypto-linked stocks fell sharply Friday, a day after Binance disclosed a $6.3 billion security breach.",
-   "published": "2026-10-30T17:48:27.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "3o0h6u",
    "title": "Fed’s Logan: At least two more quarter-point rate hikes needed",
    "link": "https://investinglive.com/central-banks/fed-s-logan-at-least-two-more-quarter-point-rate-hikes-needed/",
@@ -287,15 +332,6 @@
    "link": "https://investinglive.com/central-banks/fed-s-musalem-moving-sooner-with-rate-hikes-lessens-risk-of-hit-to-broader-economy/",
    "summary": "Comments from the Fed’s Musalem cross the wires: Moving sooner with rate hikes lessens risk of hit to broader economy. US central bank will need to raise interest rates again “soon.” Incremental changes in rates better…",
    "published": "2026-10-30T16:33:39.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "y3pkmv",
-   "title": "Fed’s Daly: AI matters for near- and medium-term policy",
-   "link": "https://investinglive.com/central-banks/fed-s-daly-ai-matters-for-near-and-medium-term-policy/",
-   "summary": "Comments from the Fed’s Daly cross the wires: AI really matters for how we think about policy in near and medium term. AI matters to price stability and employment mandates. Analysis: Daly is putting AI into the…",
-   "published": "2026-10-30T16:13:50.000Z",
    "source": "investingLive",
    "category": "forex"
   },
@@ -372,15 +408,6 @@
    "category": "economy"
   },
   {
-   "id": "1jvee1w",
-   "title": "How video game remakes tap the power of nostalgia",
-   "link": "https://www.bbc.co.uk/news/articles/cm9qz428nnljo?at_medium=RSS&at_campaign=rss",
-   "summary": "Video games are good at triggering nostalgia, a key reason why classic games keep getting remade.",
-   "published": "2026-10-30T07:45:00.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "zhmh1b",
    "title": "How Poundland grew from a market stall to a high street giant",
    "link": "https://www.bbc.co.uk/news/articles/cw07304l5je7o?at_medium=RSS&at_campaign=rss",
@@ -414,15 +441,6 @@
    "summary": "Poundland's bosses are filing a notice of intention to appoint administrators to the business.",
    "published": "2026-10-29T19:11:10.000Z",
    "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "m5fb7w",
-   "title": "Europe’s central bank chief, Christine Lagarde, steps down for ‘freedom of speech’",
-   "link": "https://www.theguardian.com/world/2026/oct/29/european-central-bank-chief-christine-lagarde-to-step-down-nine-months-early",
-   "summary": "Possible candidate to run World Economic Forum departs ECB nine months early, saying she wants to speak her mind about world affairs Christine Lagarde, the eurozone’s top central banker, has said she is stepping down…",
-   "published": "2026-10-29T16:05:50.000Z",
-   "source": "The Guardian Business",
    "category": "economy"
   },
   {
@@ -516,15 +534,6 @@
    "category": "economy"
   },
   {
-   "id": "10eyjv9",
-   "title": "Fed holds interest rates steady in last decision before midterms",
-   "link": "https://www.theguardian.com/business/2026/oct/28/fed-interest-rates-midterms",
-   "summary": "Fed chair Kevin Warsh said politics played no role in pause of interest rate hikes, despite inflation remaining above 3% The US Federal Reserve left interest rates unchanged on Wednesday during its last board meeting…",
-   "published": "2026-10-28T19:26:41.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
    "id": "5h2i14",
    "title": "Federal Reserve issues FOMC statement",
    "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
@@ -549,15 +558,6 @@
    "summary": "",
    "published": "2026-10-27T00:00:00.000Z",
    "source": "ECB",
-   "category": "economy"
-  },
-  {
-   "id": "856pio",
-   "title": "‘We don’t have inflation’? Five charts show the US economic reality of Trump’s second term so far",
-   "link": "https://www.theguardian.com/us-news/2026/oct/26/trump-second-term-economy-charts",
-   "summary": "As the US midterm elections approach, we take a look at data to see a true picture of the US economy under Trump With the midterm elections fast approaching, many Americans have the economy on their minds. US voters…",
-   "published": "2026-10-26T11:00:42.000Z",
-   "source": "The Guardian Business",
    "category": "economy"
   },
   {
