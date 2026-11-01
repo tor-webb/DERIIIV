@@ -16,6 +16,7 @@ Older notes: `docs/HANDOFF.md` (site-wide state), `docs/BOT_BUILDER_HANDOFF.md` 
 | Bot Builder safety (item A below)                          | Merged to `main` (PR #9).                  |
 | Markets quick wins (item B below, all but `active_symbols`) | Branch `markets-quick-wins`.               |
 | Market scanner (item H below)                              | Branch `market-scanner`.                   |
+| Trade from the scan (item I below)                          | Branch `scanner-auto-trade`.               |
 
 Both merged features and this branch's work have **never been looked at in a browser** and **never run against the
 live Deriv socket**. Section 3 lists the checks that need a person with a demo account. Do those before promoting the pages.
@@ -221,6 +222,20 @@ Idea taken from what professional trading sites offer. Not yet seen in a browser
 - Help assistant `markets` topic has scanner keywords and text; tests added in `markets-scanner.spec.ts`, `markets-utils.spec.ts`, `markets.spec.tsx` and `assistant-knowledge.spec.ts`.
 - **Check in a browser:** the panel and pills at 390 px and 1280 px (`markets.scss`, written without seeing it); that the scan count and empty message read well when the 4h/1d window shows fewer live markets.
 - Ideas not built: saved scans, a "scan all 20" shortcut set (for example "Quiet markets"), showing `range_position` as a column, and scanning markets beyond the fixed list (needs the `active_symbols` item in B).
+
+### I. Trade from the scan (built 2026-10-30, branch `scanner-auto-trade`)
+
+Asked for by the user: the scanner should find entries and trade them, by hand or automatically. Not seen in a browser and **never run against the live socket**.
+
+- **Manual:** under the scanner filters, a "Trade from the scan" card shows the **top match** (biggest move among markets Bot Builder can trade) with a button that opens the Trade page on it (same hand-off as the row's Trade button). Works on any account.
+- **Auto, demo accounts only:** pick "with the move" or "against the move", a stake, max trades (1 to 50), a required stop loss (at least one stake), an optional take profit and 10 s or more between trades, then Start. Each match buys one Rise/Fall contract (5 ticks on Derived, 5 minutes on forex, the same durations as the templates), waits, and looks again.
+- **Files:** `Markets/scan-trader-logic.ts` (pure, no Blockly: `pickEntry`, `validateAuto`, `buildScanProgram`, `sessionStopReason`), `Markets/scan-trader.ts` (the `ScanTrader` controller), `Markets/scan-trader-panel.tsx` (UI). The controller is **loaded on demand** (`import('./scan-trader')` on Start) because `BotRunner` imports `blocks.ts`, which imports Blockly; the Markets chunk must stay light. Moving `PREDICTION_CONTRACTS` out of `blocks.ts` would let the runner load without Blockly.
+- **It reuses the Bot Builder engine**: each trade is a `BotRunner` run of a generated one-trade `TProgram` with `max_trades: 1` and `max_stake` equal to the stake, so the stake cap, the check of the server's price against the cap, the balance check and the connection watchdogs all apply. The controller keeps the session totals and enforces stop loss, take profit and trade count across runs.
+- **Safety rules, all tested:** demo only (refused in both the panel and `ScanTrader.start`; the panel also stops a running trader if the account switches to a real one or the page is left); one trade at a time; at least one movement filter must be on ("open markets only" alone is not a signal); a run that places nothing (price refused, balance too low, no trade within 45 s) **stops the session instead of retrying**; closed, loading, unavailable, flat and untradeable markets are never picked.
+- **Real accounts stay off on purpose.** Do not enable them until the checks below are done on a demo account, and then only with the same mandatory stop loss, max stake and confirmation as Bot Builder (see section 5).
+- **Honesty:** the card says the scan shows what a market already did and either choice can lose the stake. A scan is not an edge: Derived indices are random, and contracts carry a built-in margin. Never label a match "best entry", "signal", "oversold" and so on.
+- **Check on a demo account:** (1) start with a loose filter and a 1 stake, confirm one `proposal` per match with `underlying_symbol`, `duration` 5, `duration_unit` `t` (Derived) or `m` (forex) and `contract_type` CALL/PUT; (2) confirm it waits between trades and does not double-buy; (3) stop loss, take profit and max trades each end the session; (4) press Stop while a contract is open: it should say "Stopping once the open trade finishes" and record the result; (5) look at the panel at 390 px and 1280 px (`scan-trader-panel.scss`, written unseen); (6) switch the account to a real one while it runs: it must stop.
+- Not built: real-money auto-trading, other contract types or durations, a per-market allow list, a "wait for the open contract to finish before the scan moves on" mode that holds several markets, saving the settings between visits.
 
 ## 5. Decisions already made (do not undo without asking the user)
 

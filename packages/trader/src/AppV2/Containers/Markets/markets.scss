@@ -200,6 +200,10 @@
         background-color: var(--color-surface-primary);
     }
 
+    &__scanner[hidden] {
+        display: none;
+    }
+
     &__scan-group {
         display: flex;
         flex-wrap: wrap;

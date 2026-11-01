@@ -33,6 +33,7 @@ import {
     writeWatchlist,
 } from './markets-utils';
 import PriceAlertsPanel from './price-alerts-panel';
+import ScanTraderPanel from './scan-trader-panel';
 import Sparkline from './sparkline';
 import { useMarkets } from './use-markets';
 
@@ -409,6 +410,11 @@ const Markets = () => {
                     </p>
                 </section>
             )}
+
+            {/* Always mounted, only hidden when the scanner is closed, so closing the panel never stops a running trader. */}
+            <div className='markets__scanner markets__scanner--trade' hidden={!is_scanner_open}>
+                <ScanTraderPanel rows={listed} filters={scan} window_text={window_text} onTrade={openTrade} />
+            </div>
 
             <PriceAlertsPanel watchlist={watchlist} />
 

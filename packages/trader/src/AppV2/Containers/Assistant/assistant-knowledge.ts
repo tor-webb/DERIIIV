@@ -130,10 +130,17 @@ const topics = (): TTopic[] => [
             'near the low',
             'rising markets',
             'falling markets',
+            'auto trade',
+            'auto trading',
+            'automatic trading',
+            'trade automatically',
+            'automatically trade',
+            'top match',
+            'trade from the scan',
         ],
         answer: () =>
             localize(
-                'The Markets page lists live prices for 20 markets (Volatility indices and forex pairs). For each one it shows the change and the range over the last hour (switch to 4 hours or 1 day with the buttons above the list), a small trend line, and a Low, Medium or High volatility label compared with similar markets. Use the search box to find a market by name or symbol. The Scanner button opens filters for rising or falling markets, a volatility level, a smallest move, whether the price is near the high or low of the range, and open markets only. It also lists the top gainers and losers. Tap the star to add a market to your watchlist, which is saved in this browser and shown on your Dashboard. Trade opens the Trade page on that market, Chart opens it in Charts, and Bot opens the Bot Builder with ready-made bots for it. Volatility and the trend line show how much a market has moved, not which way it will go next.'
+                'The Markets page lists live prices for 20 markets (Volatility indices and forex pairs). For each one it shows the change and the range over the last hour (switch to 4 hours or 1 day with the buttons above the list), a small trend line, and a Low, Medium or High volatility label compared with similar markets. Use the search box to find a market by name or symbol. The Scanner button opens filters for rising or falling markets, a volatility level, a smallest move, whether the price is near the high or low of the range, and open markets only. Under the filters, Trade from the scan shows the top match, which you can open on the Trade page, and on a demo account it can place demo Rise or Fall trades on matching markets by itself until your stop loss, take profit or trade limit is reached. Auto-trade is off on real accounts, and a match shows what a market already did, not what it will do. The page also lists the top gainers and losers. Tap the star to add a market to your watchlist, which is saved in this browser and shown on your Dashboard. Trade opens the Trade page on that market, Chart opens it in Charts, and Bot opens the Bot Builder with ready-made bots for it. Volatility and the trend line show how much a market has moved, not which way it will go next.'
             ),
         actions: () => [go(localize('Open Markets'), routes.markets), go(localize('Go to Trade'), routes.index)],
     },

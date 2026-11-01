@@ -45,6 +45,9 @@ describe('getAssistantReply', () => {
         ['how can I filter markets by volatility', 'markets'],
         ['show me markets near the high', 'markets'],
         ['which markets are rising right now', 'markets'],
+        ['can it trade automatically from the scanner', 'markets'],
+        ['is there auto trading on the markets page', 'markets'],
+        ['what is the top match', 'markets'],
         ['are there any bot templates', 'bot_templates'],
         ['how do I import a bot template', 'bot_templates'],
         ['I want a ready made strategy', 'bot_templates'],
@@ -101,6 +104,8 @@ describe('getAssistantReply', () => {
         expect(markets.text).toMatch(/search box/);
         expect(markets.text).toMatch(/Dashboard/);
         expect(markets.text).toMatch(/Scanner button/);
+        expect(markets.text).toMatch(/Auto-trade is off on real accounts/);
+        expect(markets.text).toMatch(/not what it will do/);
         expect(markets.text).not.toMatch(/you will (win|profit)|always win/i);
         const templates = getAssistantReply('bot templates', guest);
         expect(templates.text).toMatch(/not advice/);

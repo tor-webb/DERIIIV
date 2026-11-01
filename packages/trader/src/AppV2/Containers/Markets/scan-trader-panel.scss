@@ -1,0 +1,200 @@
+// Sits in its own card under the scanner filters on the Markets page, so it reuses the same tokens and pill look.
+.scan-trader {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    color: var(--color-text-primary);
+
+    &__title {
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+
+    &__subtitle {
+        margin: 0.8rem 0 0;
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+
+    &__text,
+    &__hint,
+    &__session {
+        margin: 0;
+        font-size: 1.3rem;
+    }
+
+    &__hint {
+        font-size: 1.2rem;
+        opacity: 0.7;
+    }
+
+    &__top {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    &__notice {
+        margin: 0;
+        padding: 1rem 1.2rem;
+        border: 1px solid #f0b9b3;
+        border-radius: 0.8rem;
+        background-color: #fdeaea;
+        color: #7a1f17;
+        font-size: 1.3rem;
+    }
+
+    &__fields {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        gap: 1.2rem 1.6rem;
+    }
+
+    &__group {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.8rem;
+        flex-basis: 100%;
+    }
+
+    &__label {
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+
+        input {
+            width: 12rem;
+            height: 3.6rem;
+            padding: 0 1rem;
+            border: 1px solid var(--color-surface-border);
+            border-radius: 0.8rem;
+            background-color: var(--color-surface-primary);
+            color: inherit;
+            font: inherit;
+            font-size: 1.3rem;
+
+            &:disabled {
+                opacity: 0.6;
+            }
+
+            &:focus-visible {
+                outline: 2px solid var(--brand-primary);
+                outline-offset: 2px;
+            }
+        }
+    }
+
+    &__pill {
+        height: 3rem;
+        padding: 0 1.2rem;
+        border: 1px solid var(--color-surface-border);
+        border-radius: 10rem;
+        background-color: var(--color-surface-primary);
+        color: inherit;
+        font: inherit;
+        font-size: 1.2rem;
+        font-weight: 600;
+        cursor: pointer;
+
+        &--active {
+            border-color: var(--brand-primary);
+            background-color: var(--brand-primary);
+            color: #fff;
+        }
+
+        &:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--brand-primary);
+            outline-offset: 2px;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    &__button {
+        height: 3.6rem;
+        padding: 0 2rem;
+        border: 0;
+        border-radius: 0.8rem;
+        background-color: var(--brand-primary);
+        color: #fff;
+        font: inherit;
+        font-size: 1.3rem;
+        font-weight: 700;
+        cursor: pointer;
+
+        &--stop {
+            background-color: #b3261e;
+        }
+
+        &:hover:not(:disabled) {
+            opacity: 0.9;
+        }
+
+        &:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--brand-primary);
+            outline-offset: 2px;
+        }
+    }
+
+    &__status {
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    &__log {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        max-height: 18rem;
+        margin: 0;
+        padding: 1rem 1.2rem;
+        overflow-y: auto;
+        border: 1px solid var(--color-surface-border);
+        border-radius: 0.8rem;
+        background-color: var(--color-surface-section);
+        list-style: none;
+    }
+
+    &__line {
+        font-size: 1.2rem;
+
+        &--success {
+            color: #14663a;
+        }
+
+        &--warn {
+            color: #6b4d00;
+        }
+
+        &--error {
+            color: #b3261e;
+            font-weight: 600;
+        }
+    }
+}
