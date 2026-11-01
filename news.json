@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T17:34:22.781Z",
+ "updated": "2026-11-01T21:38:00.646Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -11,6 +11,24 @@
   "The Guardian Business /business/rss": 12
  },
  "items": [
+  {
+   "id": "1bpaq3w",
+   "title": "China’s factory and services PMI gauges both drop below 50 as fourth quarter starts on a weak note",
+   "link": "https://investinglive.com/news/china-s-factory-and-services-pmi-gauges-both-drop-below-50-as-fourth-quarter-starts-on-a-weak-note/",
+   "summary": "Because the data came out on a Saturday, Monday’s Asian session is the first chance for markets to price the miss. Softer Chinese factory demand is usually a headwind for industrial metals such as copper and iron ore,…",
+   "published": "2026-11-01T21:00:13.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "hh27ya",
+   "title": "Iran says two tankers hit mines in Hormuz as Tehran offers two-day reopening plan",
+   "link": "https://investinglive.com/commodities/iran-says-two-tankers-hit-mines-in-hormuz-as-tehran-offers-two-day-reopening-plan/",
+   "summary": "A claim that mines are now disabling tankers in Hormuz, including a supertanker, raises the perceived physical risk of every transit, not just those Iran targets, and is likely to feed through to freight rates,…",
+   "published": "2026-11-01T20:51:29.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
   {
    "id": "i0mizc",
    "title": "Thousands of jobs at Virgin Media O2 to be cut",
@@ -309,15 +327,6 @@
    "category": "forex"
   },
   {
-   "id": "13ts2ah",
-   "title": "How has the Magnificent 7 done relatively to the broader stock indices today?",
-   "link": "https://investinglive.com/stocks/how-has-the-magnificent-7-done-relatively-to-the-broader-stock-indices-today/",
-   "summary": "With a broader US stock indices getting hammered today, now has the Magnificent 7 performed relatively, and what are the technicals saying for each individually. In a video above I take a look at the bias (bullish or…",
-   "published": "2026-10-30T16:52:41.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1kc3uio",
    "title": "North Korea is likely culprit behind $6.3bn crypto hack, ‘largest heist in history’",
    "link": "https://www.theguardian.com/business/2026/oct/29/binance-crypto-exchange-hack",
@@ -325,15 +334,6 @@
    "published": "2026-10-30T16:35:44.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "1cab3kg",
-   "title": "Fed’s Musalem: Moving sooner with rate hikes lessens risk of hit to broader economy",
-   "link": "https://investinglive.com/central-banks/fed-s-musalem-moving-sooner-with-rate-hikes-lessens-risk-of-hit-to-broader-economy/",
-   "summary": "Comments from the Fed’s Musalem cross the wires: Moving sooner with rate hikes lessens risk of hit to broader economy. US central bank will need to raise interest rates again “soon.” Incremental changes in rates better…",
-   "published": "2026-10-30T16:33:39.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "1hr6d58",
