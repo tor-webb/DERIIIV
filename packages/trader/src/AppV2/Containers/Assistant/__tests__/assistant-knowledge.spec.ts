@@ -45,6 +45,9 @@ describe('getAssistantReply', () => {
         ['how can I filter markets by volatility', 'markets'],
         ['show me markets near the high', 'markets'],
         ['which markets are rising right now', 'markets'],
+        ['can it trade automatically from the scanner', 'markets'],
+        ['is there auto trading on the markets page', 'markets'],
+        ['what is the top match', 'markets'],
         ['are there any bot templates', 'bot_templates'],
         ['how do I import a bot template', 'bot_templates'],
         ['I want a ready made strategy', 'bot_templates'],
@@ -52,6 +55,8 @@ describe('getAssistantReply', () => {
         ['can I get a price alert when a market moves', 'price_alerts'],
         ['notify me when my watchlist market has a big move', 'price_alerts'],
         ['how do I turn off price alerts', 'price_alerts'],
+        ['what is the voltrex scanner', 'voltrex'],
+        ['where is the emergency stop', 'voltrex'],
         ['where is my trade journal', 'journal'],
         ['what is my win rate and break even', 'journal'],
         ['how am I doing overall', 'journal'],
@@ -101,6 +106,8 @@ describe('getAssistantReply', () => {
         expect(markets.text).toMatch(/search box/);
         expect(markets.text).toMatch(/Dashboard/);
         expect(markets.text).toMatch(/Scanner button/);
+        expect(markets.text).toMatch(/Auto-trade is off on real accounts/);
+        expect(markets.text).toMatch(/not what it will do/);
         expect(markets.text).not.toMatch(/you will (win|profit)|always win/i);
         const templates = getAssistantReply('bot templates', guest);
         expect(templates.text).toMatch(/not advice/);

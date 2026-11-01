@@ -32,6 +32,31 @@ jest.mock('../use-markets', () => ({
     },
 }));
 
+// The trade panel needs the account store and has its own tests; here it is a stub that shows what the page hands it.
+jest.mock('../scan-trader-panel', () => ({
+    __esModule: true,
+    default: ({
+        rows,
+        filters,
+        window_text,
+        onTrade,
+    }: {
+        rows: { symbol: string }[];
+        filters: { direction: string };
+        window_text: string;
+        onTrade: (symbol: string) => void;
+    }) => (
+        <div data-testid='dt_scan_trader_stub'>
+            <span data-testid='dt_scan_trader_stub_rows'>{rows.map(item => item.symbol).join(',')}</span>
+            <span data-testid='dt_scan_trader_stub_direction'>{filters.direction}</span>
+            <span data-testid='dt_scan_trader_stub_window'>{window_text}</span>
+            <button type='button' data-testid='dt_scan_trader_stub_trade' onClick={() => onTrade('R_50')}>
+                trade
+            </button>
+        </div>
+    ),
+}));
+
 const row = (overrides: Partial<TMarketRow> & { symbol: string }): TMarketRow => ({
     name: overrides.symbol,
     group: 'synthetic',
@@ -604,5 +629,49 @@ describe('<Markets /> scanner', () => {
         press('direction_down');
         fireEvent.click(screen.getByTestId('dt_markets_trade_R_50'));
         await waitFor(() => expect(screen.getByTestId('dt_location')).toHaveTextContent('/?symbol=R_50'));
+    });
+
+    describe('trade panel', () => {
+        const panelRows = () => screen.getByTestId('dt_scan_trader_stub_rows').textContent;
+
+        it('is hidden, but kept mounted, until the scanner is opened', () => {
+            renderPage();
+            expect(screen.getByTestId('dt_scan_trader_stub')).not.toBeVisible();
+            fireEvent.click(screen.getByTestId('dt_markets_scanner_toggle'));
+            expect(screen.getByTestId('dt_scan_trader_stub')).toBeVisible();
+        });
+
+        it('stays mounted when the scanner is closed again, so a running trader is not stopped', () => {
+            openScanner();
+            const panel = screen.getByTestId('dt_scan_trader_stub');
+            fireEvent.click(screen.getByTestId('dt_markets_scanner_toggle'));
+            expect(screen.getByTestId('dt_scan_trader_stub')).toBe(panel);
+            expect(panel).not.toBeVisible();
+        });
+
+        it('gets the markets the pills and search leave, the scanner filters and the window', () => {
+            openScanner();
+            expect(panelRows()).toBe('R_10,R_25,R_50,frxEURUSD,frxGBPUSD');
+            expect(screen.getByTestId('dt_scan_trader_stub_direction')).toHaveTextContent('any');
+            press('direction_up');
+            expect(screen.getByTestId('dt_scan_trader_stub_direction')).toHaveTextContent('up');
+            // the panel applies the scan itself, so it still gets every market the pills leave in
+            expect(panelRows()).toBe('R_10,R_25,R_50,frxEURUSD,frxGBPUSD');
+
+            fireEvent.click(screen.getByTestId('dt_markets_filter_forex'));
+            expect(panelRows()).toBe('frxEURUSD,frxGBPUSD');
+            fireEvent.change(screen.getByTestId('dt_markets_search'), { target: { value: 'eur' } });
+            expect(panelRows()).toBe('frxEURUSD');
+
+            fireEvent.click(screen.getByTestId('dt_markets_window_4h'));
+            expect(screen.getByTestId('dt_scan_trader_stub_window')).toHaveTextContent('4h');
+        });
+
+        it('opens the Trade page when the panel asks to trade a market by hand', async () => {
+            openScanner();
+            fireEvent.click(screen.getByTestId('dt_scan_trader_stub_trade'));
+            await waitFor(() => expect(screen.getByTestId('dt_location')).toHaveTextContent('/?symbol=R_50'));
+            expect(mockOnChange).toHaveBeenCalledWith({ target: { name: 'symbol', value: 'R_50' } });
+        });
     });
 });
