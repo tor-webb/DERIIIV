@@ -187,6 +187,24 @@ Only `https://t.me/...` and `https://telegram.me/...` links are accepted. Anythi
 
 ---
 
+## WhatsApp contact
+
+The Learn page shows an "Ask us on WhatsApp" card when `whatsapp.numbers` in `brand.config.json` lists at least one number.
+A visitor types a question, taps a number, and WhatsApp opens (`https://wa.me/<number>?text=...`) with the question ready
+to send. The message only travels inside the link: this site stores and sends nothing.
+
+```json
+"whatsapp": {
+    "numbers": ["254700000000", "15551234567"]
+}
+```
+
+Write each number in international form. A leading `+`, spaces and dashes are removed. A number that is not 8 to 15 digits,
+or that starts with `0`, is ignored, and at most 5 numbers are shown. The numbers are public once the site is built.
+Leave the list empty to hide the card. Rebuild after editing the file.
+
+---
+
 ## Logo Requirements
 
 ### Brand SVG logos (`assets/brand/`)

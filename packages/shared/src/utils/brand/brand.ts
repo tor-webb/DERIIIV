@@ -325,3 +325,39 @@ export const getCommunityConfig = (): TCommunityConfig => {
         telegram_name: (community?.telegram_name ?? '').trim() || `${getBrandName()} Community`,
     };
 };
+
+export type TWhatsAppConfig = {
+    /** WhatsApp numbers in international form with digits only (no +, spaces or leading zeros), for example 254700000000. */
+    numbers: string[];
+};
+
+const MAX_WHATSAPP_NUMBERS = 5;
+
+/**
+ * Tidies a phone number typed with a plus, spaces, dashes or brackets into digits only, or returns null when it is not a
+ * plausible international number (8 to 15 digits, not starting with 0). A mistyped value is never turned into a link.
+ */
+export const normaliseWhatsAppNumber = (value: unknown): string | null => {
+    if (typeof value !== 'string') return null;
+    const digits = value
+        .trim()
+        .replace(/^\+/, '')
+        .replace(/[\s\-()]/g, '');
+    return /^[1-9]\d{7,14}$/.test(digits) ? digits : null;
+};
+
+/** The link that opens a WhatsApp chat with the number, with `message` already typed in the box. */
+export const buildWhatsAppLink = (number: string, message = ''): string =>
+    `https://wa.me/${number}${message.trim() ? `?text=${encodeURIComponent(message.trim())}` : ''}`;
+
+/** WhatsApp settings from `whatsapp` in brand.config.json. Numbers that are not valid are dropped, repeats removed. */
+export const getWhatsAppConfig = (): TWhatsAppConfig => {
+    const whatsapp = (config_data as Record<string, unknown>).whatsapp as { numbers?: unknown } | undefined;
+    const raw = Array.isArray(whatsapp?.numbers) ? whatsapp?.numbers : [];
+    const numbers: string[] = [];
+    raw.forEach(item => {
+        const number = normaliseWhatsAppNumber(item);
+        if (number && !numbers.includes(number) && numbers.length < MAX_WHATSAPP_NUMBERS) numbers.push(number);
+    });
+    return { numbers };
+};

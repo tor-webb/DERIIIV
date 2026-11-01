@@ -72,6 +72,9 @@
         "telegram_url": "",
         "telegram_name": "FiscoFX Community"
     },
+    "whatsapp": {
+        "numbers": ["254748404496", "13074573763"]
+    },
     "features": {
         "dark_mode": true,
         "language_switcher": false
