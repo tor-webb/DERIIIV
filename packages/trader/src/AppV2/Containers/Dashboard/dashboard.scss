@@ -184,9 +184,9 @@
         gap: 1.2rem;
         width: 100%;
         padding: 1.2rem 1.6rem;
-        border: 1px solid #e3e6ea;
+        border: 1px solid var(--color-surface-border, #e3e6ea);
         border-radius: 1.2rem;
-        background-color: #fff;
+        background-color: var(--color-surface-primary, #fff);
         color: inherit;
         font: inherit;
         font-size: 1.4rem;
@@ -288,9 +288,9 @@
         align-items: flex-start;
         gap: 1.4rem;
         padding: 2rem;
-        border: 1px solid #e3e6ea;
+        border: 1px solid var(--color-surface-border, #e3e6ea);
         border-radius: 1.2rem;
-        background-color: #fff;
+        background-color: var(--color-surface-primary, #fff);
         color: inherit;
         font: inherit;
         text-align: left;

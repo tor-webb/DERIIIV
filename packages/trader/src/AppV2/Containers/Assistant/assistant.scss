@@ -124,7 +124,7 @@
             padding: 0.5rem 1rem;
             border: 1px solid var(--brand-primary, #0d5cff);
             border-radius: 1.6rem;
-            background: #fff;
+            background: var(--color-surface-primary, #fff);
             color: var(--brand-primary, #0d5cff);
             font-weight: 700;
             cursor: pointer;

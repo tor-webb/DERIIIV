@@ -3,15 +3,34 @@
     flex-direction: column;
     width: 100%;
     height: calc(100vh - var(--top-nav-height, 0px));
-    background-color: #fff;
-    // The page is always white, so it always uses the light colours, even when the rest of the site is in dark mode
-    color: #0e0e0e;
+    background-color: var(--bb-surface);
+    --bb-surface: #fff;
+    --bb-text: #0e0e0e;
+    --bb-muted: #5f666d;
+    --bb-section: #f2f3f4;
+    --bb-hover: #e6e9ec;
+    --bb-track: #dfe3e6;
+    --bb-border: #dfe3e6;
+    --bb-danger-bg: #fdeaea;
+    --bb-danger-text: #7a1f17;
+    --bb-danger-border: #f0b9b3;
+    --bb-ok-bg: #e3f6ee;
+    --bb-ok-text: #0e6b4b;
+    --bb-live-bg: #e4f4f3;
+    --bb-warn-bg: #fff7e0;
+    --bb-warn-bg-2: #fff1cc;
+    --bb-warn-text: #6b4d00;
+    --bb-ok-card-bg: #dff5e8;
+    --bb-ok-card-text: #14663a;
+
+    // Colours follow the site theme: light by default, dark when the site is in dark mode (see the end of this file)
+    color: var(--bb-text);
     color-scheme: light;
-    --color-text-primary: #0e0e0e;
-    --color-surface-border: #dfe3e6;
-    --color-surface-section: #f2f3f4;
-    --color-surface-primary: #fff;
-    --brand-neutral: #5f666d;
+    --color-text-primary: var(--bb-text);
+    --color-surface-border: var(--bb-border);
+    --color-surface-section: var(--bb-section);
+    --color-surface-primary: var(--bb-surface);
+    --brand-neutral: var(--bb-muted);
 
     @include mobile-screen {
         height: auto;
@@ -47,7 +66,7 @@
         padding: 0.4rem 0.8rem;
         border: 1px solid var(--color-surface-border);
         border-radius: 0.8rem;
-        background-color: #fff;
+        background-color: var(--bb-surface);
         overflow-x: auto;
     }
 
@@ -104,7 +123,7 @@
         flex: 1;
         min-width: 0;
         min-height: 0;
-        background-color: #fff;
+        background-color: var(--bb-surface);
     }
 
     /* ---- footer: account badge and the Run / Stop bar ---- */
@@ -117,7 +136,7 @@
         gap: 1.2rem;
         padding: 0.8rem 1.6rem;
         border-top: 1px solid var(--color-surface-border);
-        background-color: #fff;
+        background-color: var(--bb-surface);
     }
 
     &__account {
@@ -125,8 +144,8 @@
         left: 1.6rem;
         padding: 0.4rem 1rem;
         border-radius: 10rem;
-        background-color: #e3f6ee;
-        color: #0e6b4b;
+        background-color: var(--bb-ok-bg);
+        color: var(--bb-ok-text);
         font-size: 1.2rem;
         font-weight: 700;
 
@@ -135,8 +154,8 @@
         }
 
         &--real {
-            background-color: #fdeaea;
-            color: #a52a1f;
+            background-color: var(--bb-danger-bg);
+            color: var(--bb-danger-text);
         }
     }
 
@@ -147,7 +166,7 @@
         height: 4.8rem;
         border: 1px solid var(--color-surface-border);
         border-radius: 0.6rem;
-        background-color: #fff;
+        background-color: var(--bb-surface);
         overflow: hidden;
     }
 
@@ -204,7 +223,7 @@
             width: 1.4rem;
             height: 1.4rem;
             border-radius: 0.2rem;
-            background-color: #fff;
+            background-color: var(--bb-surface);
         }
     }
 
@@ -228,7 +247,7 @@
         position: relative;
         height: 0.4rem;
         border-radius: 0.4rem;
-        background-color: #e6e9ec;
+        background-color: var(--bb-hover);
         overflow: hidden;
 
         &--on:after {
@@ -302,8 +321,8 @@
         justify-content: space-between;
         gap: 1.6rem;
         padding: 1.2rem 1.6rem;
-        border-top: 1px solid #f0b9b3;
-        background-color: #fdeaea;
+        border-top: 1px solid var(--bb-danger-border);
+        background-color: var(--bb-danger-bg);
 
         @include mobile-screen {
             flex-direction: column;
@@ -314,7 +333,7 @@
     &__confirm-text {
         margin: 0;
         font-size: 1.3rem;
-        color: #7a1f17;
+        color: var(--bb-danger-text);
     }
 
     &__confirm-actions {
@@ -337,7 +356,7 @@
 /* Blockly: a plain white category list like Deriv Bot's, no coloured stripe on each row */
 .bot-builder .blocklyToolboxDiv {
     border-right: 1px solid var(--color-surface-border);
-    background-color: #fff;
+    background-color: var(--bb-surface);
 }
 
 .bot-builder .blocklyToolboxCategory {
@@ -346,17 +365,17 @@
 }
 
 .bot-builder .blocklyToolboxCategoryLabel {
-    color: #0e0e0e;
+    color: var(--bb-text);
     font-size: 1.4rem;
     font-weight: 700;
 }
 
 .bot-builder .blocklyToolboxSelected {
-    background-color: #f2f3f4 !important;
+    background-color: var(--bb-section) !important;
 }
 
 .bot-builder .blocklyFlyoutBackground {
-    fill: #f2f3f4;
+    fill: var(--bb-section);
 }
 
 /* Light grey blocks need dark text; the green section blocks keep Blockly's white */
@@ -379,7 +398,7 @@
     flex-shrink: 0;
     min-height: 0;
     border-left: 1px solid var(--color-surface-border);
-    background-color: #fff;
+    background-color: var(--bb-surface);
 
     @include mobile-screen {
         width: 100%;
@@ -406,8 +425,8 @@
         cursor: pointer;
 
         &--active {
-            border-bottom-color: #0e0e0e;
-            color: #0e0e0e;
+            border-bottom-color: var(--bb-text);
+            color: var(--bb-text);
         }
 
         &:focus-visible {
@@ -450,7 +469,7 @@
     &__live {
         padding: 1.2rem 1.4rem;
         border-radius: 0.8rem;
-        background: linear-gradient(180deg, #e4f4f3 0%, #fff 70%);
+        background: linear-gradient(180deg, var(--bb-live-bg) 0%, #fff 70%);
     }
 
     &__live-head {
@@ -503,7 +522,7 @@
     &__progress {
         height: 0.6rem;
         border-radius: 0.6rem;
-        background-color: #dfe3e6;
+        background-color: var(--bb-track);
         overflow: hidden;
 
         span {
@@ -534,7 +553,7 @@
 
         dt {
             font-size: 1.2rem;
-            color: #4c545b;
+            color: var(--bb-muted);
         }
 
         dd {
@@ -575,7 +594,7 @@
             border-radius: 0.6rem;
             font: inherit;
             font-size: 1.3rem;
-            background: #fff;
+            background: var(--bb-surface);
             color: var(--color-text-primary);
         }
     }
@@ -586,7 +605,7 @@
         margin-top: auto;
         padding: 1.2rem;
         border-radius: 0.8rem;
-        background-color: #f2f3f4;
+        background-color: var(--bb-section);
     }
 
     &__stats {
@@ -613,8 +632,8 @@
         height: 4.2rem;
         border: 1px solid var(--color-surface-border);
         border-radius: 0.6rem;
-        background: #fff;
-        color: #0e0e0e;
+        background: var(--bb-surface);
+        color: var(--bb-text);
         font: inherit;
         font-size: 1.5rem;
         font-weight: 700;
@@ -636,10 +655,10 @@
     &__action {
         height: 4rem;
         padding: 0 1.8rem;
-        border: 1px solid #0e0e0e;
+        border: 1px solid var(--bb-text);
         border-radius: 0.6rem;
-        background: #fff;
-        color: #0e0e0e;
+        background: var(--bb-surface);
+        color: var(--bb-text);
         font: inherit;
         font-size: 1.4rem;
         font-weight: 700;
@@ -652,8 +671,8 @@
         }
 
         &[aria-pressed='true'] {
-            background-color: #0e0e0e;
-            color: #fff;
+            background-color: var(--bb-text);
+            color: var(--bb-surface);
         }
     }
 
@@ -664,7 +683,7 @@
         margin: 0;
         padding: 1rem 1.2rem;
         border-radius: 0.8rem;
-        background-color: #f2f3f4;
+        background-color: var(--bb-section);
         font-size: 1.2rem;
 
         dt {
@@ -714,7 +733,7 @@
 
         &:hover,
         &--selected {
-            background-color: #e6e9ec;
+            background-color: var(--bb-hover);
         }
 
         &:focus-visible {
@@ -753,7 +772,7 @@
         height: 1.2rem;
         border: 0.3rem solid;
         border-radius: 50%;
-        background: #fff;
+        background: var(--bb-surface);
 
         &--entry {
             border-color: #ff444f;
@@ -782,7 +801,7 @@
         padding: 0.8rem 1rem;
         border-left: 0.3rem solid var(--brand-neutral);
         border-radius: 0.4rem;
-        background-color: #f2f3f4;
+        background-color: var(--bb-section);
         font-size: 1.3rem;
 
         &--success {
@@ -888,8 +907,8 @@
             padding: 0 1rem;
             border: 1px solid var(--color-surface-border);
             border-radius: 0.8rem;
-            background: #fff;
-            color: #0e0e0e;
+            background: var(--bb-surface);
+            color: var(--bb-text);
             font: inherit;
             font-size: 1.2rem;
             font-weight: 700;
@@ -934,7 +953,7 @@
             z-index: 60;
             display: none;
             flex-direction: column;
-            background: #fff;
+            background: var(--bb-surface);
 
             &--open {
                 display: flex;
@@ -953,10 +972,10 @@
         &__sheet-close {
             height: 4rem;
             padding: 0 1.6rem;
-            border: 1px solid #0e0e0e;
+            border: 1px solid var(--bb-text);
             border-radius: 0.8rem;
-            background: #fff;
-            color: #0e0e0e;
+            background: var(--bb-surface);
+            color: var(--bb-text);
             font: inherit;
             font-size: 1.4rem;
             font-weight: 700;
@@ -983,5 +1002,54 @@
     .bot-builder .blocklyToolboxCategoryLabel {
         font-size: 1.4rem;
         white-space: nowrap;
+    }
+}
+
+/* ---- theme colours ---- */
+
+.theme--dark .bot-builder {
+    --bb-surface: #0e1117;
+    --bb-text: #e8ecf1;
+    --bb-muted: #9aa4b2;
+    --bb-section: #1a1f28;
+    --bb-hover: #232a35;
+    --bb-track: #2a313c;
+    --bb-border: #2a313c;
+    --bb-danger-bg: #3a1a18;
+    --bb-danger-text: #ffb4ab;
+    --bb-danger-border: #6b2a25;
+    --bb-ok-bg: #12301f;
+    --bb-ok-text: #7fe0b0;
+    --bb-live-bg: #11302f;
+    --bb-warn-bg: #33290a;
+    --bb-warn-bg-2: #3f3210;
+    --bb-warn-text: #f3d27a;
+    --bb-ok-card-bg: #12301f;
+    --bb-ok-card-text: #7fe0b0;
+    color-scheme: dark;
+
+    // Blockly paints its own surfaces; in dark mode they take the page colours (the blocks keep their colours)
+    .blocklySvg {
+        background-color: var(--bb-surface) !important;
+    }
+
+    .blocklyToolboxDiv {
+        background-color: var(--bb-surface) !important;
+    }
+
+    .blocklyToolboxCategoryLabel {
+        color: var(--bb-text);
+    }
+
+    .blocklyFlyoutBackground {
+        fill: var(--bb-section);
+    }
+
+    .blocklyToolboxSelected {
+        background-color: var(--bb-hover) !important;
+    }
+
+    .blocklyMainBackground {
+        stroke: var(--bb-border);
     }
 }

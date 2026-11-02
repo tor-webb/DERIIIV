@@ -69,8 +69,8 @@
         margin: 0;
         padding: 1rem 1.2rem;
         border-radius: 0.8rem;
-        background-color: #fff7e0;
-        color: #5c4500;
+        background-color: var(--bb-warn-bg);
+        color: var(--bb-warn-text);
         font-size: 1.2rem;
     }
 
@@ -146,18 +146,18 @@
         font-weight: 700;
 
         &--low {
-            background-color: #dff5e8;
-            color: #14663a;
+            background-color: var(--bb-ok-card-bg);
+            color: var(--bb-ok-card-text);
         }
 
         &--medium {
-            background-color: #fff1cc;
-            color: #6b4d00;
+            background-color: var(--bb-warn-bg-2);
+            color: var(--bb-warn-text);
         }
 
         &--high {
-            background-color: #fdeaea;
-            color: #7a1f17;
+            background-color: var(--bb-danger-bg);
+            color: var(--bb-danger-text);
         }
     }
 
@@ -187,7 +187,7 @@
     &__caution {
         margin: 0;
         font-size: 1.2rem;
-        color: #7a1f17;
+        color: var(--bb-danger-text);
     }
 
     &__import {
