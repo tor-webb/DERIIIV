@@ -40,7 +40,7 @@ const report = (overrides: Partial<TScanReport> = {}): TScanReport => ({
     accepted: 3,
     qualified: 0,
     closest: { name: 'Volatility 75 Index', direction: 'BUY', strength: 22 },
-    min_strength: 30,
+    min_strength: 25,
     note: 'Markets fit the strategy, but none reaches your minimum strength yet.',
     ...overrides,
 });
@@ -141,7 +141,7 @@ describe('<VoltrexEngine />', () => {
         render(<VoltrexEngine {...base} auto='running' scan={report()} />);
         const line = screen.getByTestId('voltrex-engine-auto');
         expect(line).toHaveTextContent('Scan #4: 12 markets in scope, 5 with a signal, 0 meet your limits.');
-        expect(line).toHaveTextContent('Closest: Volatility 75 Index BUY 22 (needs 30).');
+        expect(line).toHaveTextContent('Closest: Volatility 75 Index BUY 22 (needs 25).');
         expect(line).toHaveTextContent('none reaches your minimum strength');
     });
 

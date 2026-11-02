@@ -155,3 +155,9 @@ describe('rollDay', () => {
         expect(today(new Date(2026, 10, 1))).toBe('2026-11-01');
     });
 });
+
+describe('default minimum strength', () => {
+    it('is 25, the weakest reading that counts as a signal', () => {
+        expect(DEFAULT_RISK.min_strength).toBe(25);
+    });
+});

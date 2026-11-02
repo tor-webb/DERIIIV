@@ -34,7 +34,9 @@ const write = (key: string, value: unknown) => {
 /** The saved risk settings, with anything missing or invalid replaced by the defaults. */
 export const loadRiskSettings = (): TRiskSettings => {
     const saved = read<Partial<TRiskSettings>>(RISK_KEY) ?? {};
-    const merged = { ...DEFAULT_RISK, ...saved };
+    // earlier defaults (50, then 30) were saved as if chosen; they move to the new default, any other value is kept
+    const kept = saved.min_strength === 50 || saved.min_strength === 30 ? { ...saved, min_strength: undefined } : saved;
+    const merged = { ...DEFAULT_RISK, ...kept, min_strength: kept.min_strength ?? DEFAULT_RISK.min_strength };
     return validateRisk(merged) ? DEFAULT_RISK : merged;
 };
 
