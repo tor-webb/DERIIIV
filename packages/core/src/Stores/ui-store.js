@@ -1,12 +1,28 @@
 import { action, autorun, computed, makeObservable, observable } from 'mobx';
 
-import { isMobile, isTouchDevice } from '@deriv/shared';
+import { isTouchDevice } from '@deriv/shared';
 
 import { MAX_MOBILE_WIDTH, MAX_TABLET_WIDTH } from 'Constants/ui';
 
 import BaseStore from './base-store';
 
 const store_name = 'ui_store';
+
+// The site starts in light mode. A dark setting that was only saved because the phone itself was in dark mode is
+// cleared once; after that the toggle in the menu is the only thing that changes it.
+const resetSavedDarkMode = () => {
+    try {
+        if (window.localStorage.getItem('theme_default_light')) return;
+        const saved = JSON.parse(window.localStorage.getItem(store_name) ?? 'null');
+        if (saved?.is_dark_mode_on) {
+            window.localStorage.setItem(store_name, JSON.stringify({ ...saved, is_dark_mode_on: false }));
+        }
+        window.localStorage.setItem('theme_default_light', '1');
+    } catch {
+        // storage can be blocked; the default below still applies
+    }
+};
+resetSavedDarkMode();
 
 export default class UIStore extends BaseStore {
     url_hashed_values = '';
@@ -22,7 +38,7 @@ export default class UIStore extends BaseStore {
     settings_extension = undefined;
     notification_messages_ui = undefined;
 
-    is_dark_mode_on = window?.matchMedia?.('(prefers-color-scheme: dark)').matches && isMobile();
+    is_dark_mode_on = false;
     is_settings_modal_on = false;
     is_mobile_language_menu_open = false;
 
