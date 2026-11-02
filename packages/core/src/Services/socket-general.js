@@ -82,6 +82,8 @@ const BinarySocketGeneral = (() => {
                 }
                 break;
             case 'RateLimit':
+                // the VOLTREX scanner tags its history requests and backs off by itself, so no full-screen error
+                if (response?.echo_req?.passthrough?.scanner === 'voltrex') break;
                 common_store.setError(true, {
                     message: localize('You have reached the rate limit of requests per second. Please try later.'),
                 });

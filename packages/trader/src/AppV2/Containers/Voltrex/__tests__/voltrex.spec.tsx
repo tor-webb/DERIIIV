@@ -1,3 +1,4 @@
+import { pacing, resetPacer } from '../voltrex-pacer';
 import { MemoryRouter } from 'react-router-dom';
 
 import { WS } from '@deriv/shared';
@@ -105,6 +106,10 @@ const SLOW = { timeout: 5000 };
 
 describe('<Voltrex />', () => {
     beforeEach(() => {
+        pacing.gap_ms = 0;
+        pacing.backoff_ms = 0;
+        pacing.symbols_retry_ms = 0;
+        resetPacer();
         Object.values(ws).forEach(fn => typeof fn === 'function' && fn.mockReset());
         ws.storage.contractsFor.mockReset();
         ws.activeSymbols.mockResolvedValue(SYMBOLS);
@@ -313,5 +318,26 @@ describe('<Voltrex />', () => {
         ws.activeSymbols.mockResolvedValue(SYMBOLS);
         fireEvent.click(screen.getByRole('button', { name: 'Try again' }));
         await screen.findByTestId('voltrex-row-R_100', undefined, SLOW);
+    });
+
+    it('asks again, instead of marking a market unavailable, when the server says it is being asked too often', async () => {
+        let calls = 0;
+        ws.getTicksHistory.mockImplementation(async (request: { granularity: number }) => {
+            calls += 1;
+            return calls <= 2
+                ? { error: { code: 'RateLimit', message: 'slow down' } }
+                : candlesFor(request.granularity);
+        });
+        renderPage();
+        const row = await screen.findByTestId('voltrex-row-R_100', undefined, SLOW);
+        await waitFor(() => expect(within(row).getByText('BUY')).toBeInTheDocument(), SLOW);
+        expect(ws.getTicksHistory.mock.calls[0][0].passthrough).toEqual({ scanner: 'voltrex' });
+    });
+
+    it('asks for the list of markets again when the first answer is empty', async () => {
+        ws.activeSymbols.mockResolvedValueOnce({ active_symbols: [] }).mockResolvedValue(SYMBOLS);
+        renderPage();
+        await screen.findByTestId('voltrex-row-R_100', undefined, SLOW);
+        expect(ws.activeSymbols.mock.calls.length).toBeGreaterThanOrEqual(2);
     });
 });

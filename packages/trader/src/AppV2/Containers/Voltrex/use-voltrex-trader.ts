@@ -1,3 +1,4 @@
+import { backOff, isRateLimit, waitTurn } from './voltrex-pacer';
 import React from 'react';
 
 import { WS } from '@deriv/shared';
@@ -81,7 +82,17 @@ export const useVoltrexTrader = (rows: TScanRow[]) => {
         if (cached) return cached;
         const request = (async () => {
             try {
-                return parseRiseFall(await WS.storage.contractsFor(symbol));
+                // one turn at a time, and again after a pause if the server said "too many requests"
+                let response;
+                for (let attempt = 0; attempt < 3; attempt += 1) {
+                    // eslint-disable-next-line no-await-in-loop
+                    await waitTurn();
+                    // eslint-disable-next-line no-await-in-loop
+                    response = await WS.storage.contractsFor(symbol);
+                    if (!isRateLimit(response)) break;
+                    backOff();
+                }
+                return parseRiseFall(response);
             } catch {
                 specs.current.delete(symbol);
                 return null;
