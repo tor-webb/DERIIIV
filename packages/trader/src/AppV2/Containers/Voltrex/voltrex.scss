@@ -1,26 +1,44 @@
-// The Voltrex page is a dark terminal whatever the site theme is, so its colours are defined here, on the page only.
+// The Voltrex page follows the site theme: light by default, and dark when the site is in dark mode. Its colours are
+// defined here, on the page only. The "-rgb" values let a colour be used at any opacity: rgb(var(--vx-cyan-rgb) / 0.2).
 .voltrex {
-    --vx-bg: #05070f;
-    --vx-panel: #0a1020;
-    --vx-panel-2: #0e1730;
-    --vx-border: rgba(0, 229, 255, 0.18);
-    --vx-text: #e6f1ff;
-    --vx-muted: #8ea2c4;
-    --vx-cyan: #00e5ff;
-    --vx-blue: #2f6bff;
-    --vx-purple: #a259ff;
-    --vx-buy: #19e68c;
-    --vx-sell: #ff4d6d;
-    --vx-warn: #ffb020;
+    --vx-bg: #f4f7fc;
+    --vx-panel: #fff;
+    --vx-panel-2: #eef3fb;
+    --vx-inset: #f1f5fb;
+    --vx-inset-2: #e8eef8;
+    --vx-border: rgb(20 90 140 / 22%);
+    --vx-text: #0d1b33;
+    --vx-muted: #56657f;
+    --vx-term-text: #0b5f78;
+    --vx-cyan: #0088aa;
+    --vx-blue: #2450d8;
+    --vx-purple: #6b32d6;
+    --vx-buy: #0a8f58;
+    --vx-sell: #d3274a;
+    --vx-warn: #b87500;
+    --vx-cyan-rgb: 0 136 170;
+    --vx-blue-rgb: 36 80 216;
+    --vx-purple-rgb: 107 50 214;
+    --vx-buy-rgb: 10 143 88;
+    --vx-sell-rgb: 211 39 74;
+    --vx-warn-rgb: 184 117 0;
+    --vx-muted-rgb: 86 101 127;
+    --vx-wash-rgb: 15 30 60;
+    --vx-bg-rgb: 244 247 252;
+    --vx-panel-rgb: 255 255 255;
+    --vx-panel2-rgb: 238 243 251;
+    --vx-inset-rgb: 241 245 251;
+    --vx-shadow-rgb: 30 50 90;
+    --vx-on-accent: #fff;
 
     box-sizing: border-box;
     min-height: calc(100vh - var(--top-nav-height, 0px));
     padding: 2.4rem;
     background:
-        linear-gradient(rgba(0, 229, 255, 0.035) 1px, transparent 1px) 0 0 / 4rem 4rem,
-        linear-gradient(90deg, rgba(0, 229, 255, 0.035) 1px, transparent 1px) 0 0 / 4rem 4rem,
-        radial-gradient(60rem 30rem at 15% -10%, rgba(47, 107, 255, 0.18), transparent 60%),
-        radial-gradient(50rem 30rem at 95% 0%, rgba(162, 89, 255, 0.14), transparent 60%),
+        linear-gradient(rgb(var(--vx-cyan-rgb) / 0.035) 1px, transparent 1px) 0 0 / 4rem 4rem,
+        linear-gradient(90deg, rgb(var(--vx-cyan-rgb) / 0.035) 1px, transparent 1px) 0 0 / 4rem 4rem,
+        radial-gradient(60rem 30rem at 15% -10%, rgb(var(--vx-blue-rgb) / 0.18), transparent 60%),
+        radial-gradient(50rem 30rem at 95% 0%, rgb(var(--vx-purple-rgb) / 0.14), transparent 60%),
         var(--vx-bg);
     color: var(--vx-text);
     overflow-y: auto;
@@ -50,7 +68,7 @@
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
-        text-shadow: 0 0 2.4rem rgba(0, 229, 255, 0.25);
+        text-shadow: 0 0 2.4rem rgb(var(--vx-cyan-rgb) / 0.25);
     }
 
     &__status {
@@ -124,8 +142,8 @@
         border-radius: 1.4rem;
         background: linear-gradient(180deg, var(--vx-panel-2), var(--vx-panel));
         box-shadow:
-            0 0 0 1px rgba(255, 255, 255, 0.02) inset,
-            0 1.2rem 3.2rem rgba(0, 0, 0, 0.35);
+            0 0 0 1px rgb(var(--vx-wash-rgb) / 0.02) inset,
+            0 1.2rem 3.2rem rgb(var(--vx-shadow-rgb) / 0.35);
     }
 
     &__panel-title {
@@ -154,7 +172,7 @@
         padding: 0.8rem 1.2rem;
         border-left: 0.3rem solid var(--vx-purple);
         border-radius: 0.4rem;
-        background: rgba(162, 89, 255, 0.08);
+        background: rgb(var(--vx-purple-rgb) / 0.08);
         color: var(--vx-muted);
         font-size: 1.2rem;
     }
@@ -164,7 +182,7 @@
         padding: 1rem 1.2rem;
         border: 1px solid var(--vx-warn);
         border-radius: 0.8rem;
-        background: rgba(255, 176, 32, 0.08);
+        background: rgb(var(--vx-warn-rgb) / 0.08);
         font-size: 1.3rem;
     }
 
@@ -212,7 +230,7 @@
 
         &--running {
             color: var(--vx-buy);
-            box-shadow: 0 0 1rem rgba(25, 230, 140, 0.35);
+            box-shadow: 0 0 1rem rgb(var(--vx-buy-rgb) / 0.35);
         }
 
         &--paused {
@@ -254,7 +272,7 @@
         padding: 0.6rem 1rem;
         border: 1px solid var(--vx-border);
         border-radius: 0.8rem;
-        background: #060b18;
+        background: var(--vx-inset);
         color: var(--vx-text);
         font-size: 1.4rem;
 
@@ -312,9 +330,9 @@
 
         &--on {
             border-color: var(--vx-cyan);
-            background: rgba(0, 229, 255, 0.12);
+            background: rgb(var(--vx-cyan-rgb) / 0.12);
             color: var(--vx-cyan);
-            box-shadow: 0 0 1rem rgba(0, 229, 255, 0.2);
+            box-shadow: 0 0 1rem rgb(var(--vx-cyan-rgb) / 0.2);
         }
     }
 
@@ -323,7 +341,7 @@
         padding: 0.8rem 1.6rem;
         border: 1px solid var(--vx-border);
         border-radius: 0.8rem;
-        background: rgba(255, 255, 255, 0.04);
+        background: rgb(var(--vx-wash-rgb) / 0.04);
         color: var(--vx-text);
         font-size: 1.4rem;
         font-weight: 700;
@@ -333,7 +351,7 @@
             box-shadow 0.15s ease;
 
         &:hover:not(:disabled) {
-            box-shadow: 0 0 1.2rem rgba(0, 229, 255, 0.25);
+            box-shadow: 0 0 1.2rem rgb(var(--vx-cyan-rgb) / 0.25);
         }
 
         &:active:not(:disabled) {
@@ -359,27 +377,27 @@
 
         &--primary {
             border-color: var(--vx-cyan);
-            background: linear-gradient(90deg, rgba(0, 229, 255, 0.2), rgba(47, 107, 255, 0.25));
+            background: linear-gradient(90deg, rgb(var(--vx-cyan-rgb) / 0.2), rgb(var(--vx-blue-rgb) / 0.25));
         }
 
         &--buy {
             flex: 1;
             border-color: var(--vx-buy);
             color: var(--vx-buy);
-            background: rgba(25, 230, 140, 0.1);
+            background: rgb(var(--vx-buy-rgb) / 0.1);
         }
 
         &--sell {
             flex: 1;
             border-color: var(--vx-sell);
             color: var(--vx-sell);
-            background: rgba(255, 77, 109, 0.1);
+            background: rgb(var(--vx-sell-rgb) / 0.1);
         }
 
         &--danger {
             border-color: var(--vx-sell);
-            background: rgba(255, 77, 109, 0.2);
-            color: #fff;
+            background: rgb(var(--vx-sell-rgb) / 0.2);
+            color: var(--vx-text);
         }
     }
 }
@@ -436,7 +454,7 @@
         top: 0;
         z-index: 1;
         padding: 1rem 0.8rem;
-        background: #0a1226;
+        background: var(--vx-inset-2);
         color: var(--vx-muted);
         font-size: 1.1rem;
         font-weight: 700;
@@ -448,7 +466,7 @@
 
     td {
         padding: 0.9rem 0.8rem;
-        border-top: 1px solid rgba(142, 162, 196, 0.1);
+        border-top: 1px solid rgb(var(--vx-muted-rgb) / 0.1);
         white-space: nowrap;
     }
 
@@ -496,11 +514,11 @@
         transition: background 0.15s ease;
 
         &:hover {
-            background: rgba(0, 229, 255, 0.05);
+            background: rgb(var(--vx-cyan-rgb) / 0.05);
         }
 
         &--selected {
-            background: rgba(47, 107, 255, 0.16);
+            background: rgb(var(--vx-blue-rgb) / 0.16);
             box-shadow: inset 0.3rem 0 0 var(--vx-cyan);
         }
     }
@@ -594,7 +612,7 @@
         height: 0.6rem;
         margin-top: 0.4rem;
         border-radius: 999px;
-        background: rgba(142, 162, 196, 0.18);
+        background: rgb(var(--vx-muted-rgb) / 0.18);
         overflow: hidden;
     }
 
@@ -640,7 +658,7 @@
     width: 100%;
     height: 26rem;
     border-radius: 1rem;
-    background: #060b18;
+    background: var(--vx-inset);
 
     &--empty {
         display: flex;
@@ -651,18 +669,18 @@
     }
 
     &__grid {
-        stroke: rgba(142, 162, 196, 0.14);
+        stroke: rgb(var(--vx-muted-rgb) / 0.14);
         stroke-width: 1;
     }
 
     &__label {
-        fill: #8ea2c4;
+        fill: var(--vx-muted);
         font-size: 10px;
     }
 
     &__band {
         fill: none;
-        stroke: #2f6bff;
+        stroke: var(--vx-blue);
         stroke-width: 1;
         stroke-dasharray: 3 3;
         opacity: 0.75;
@@ -673,11 +691,11 @@
         stroke-width: 1.5;
 
         &--fast {
-            stroke: #00e5ff;
+            stroke: var(--vx-cyan);
         }
 
         &--slow {
-            stroke: #a259ff;
+            stroke: var(--vx-purple);
         }
     }
 
@@ -686,23 +704,23 @@
         stroke-dasharray: 6 4;
 
         &--support {
-            stroke: #19e68c;
+            stroke: var(--vx-buy);
         }
 
         &--resistance {
-            stroke: #ff4d6d;
+            stroke: var(--vx-sell);
         }
     }
 
     &__candle {
         &--up {
-            stroke: #19e68c;
-            fill: #19e68c;
+            stroke: var(--vx-buy);
+            fill: var(--vx-buy);
         }
 
         &--down {
-            stroke: #ff4d6d;
-            fill: #ff4d6d;
+            stroke: var(--vx-sell);
+            fill: var(--vx-sell);
         }
     }
 }
@@ -743,14 +761,14 @@
     &__button {
         width: 100%;
         letter-spacing: 0.2rem;
-        box-shadow: 0 0 1.6rem rgba(255, 77, 109, 0.35);
+        box-shadow: 0 0 1.6rem rgb(var(--vx-sell-rgb) / 0.35);
     }
 
     &--on {
         padding: 1rem 1.2rem;
         border: 1px solid var(--vx-sell);
         border-radius: 0.8rem;
-        background: rgba(255, 77, 109, 0.12);
+        background: rgb(var(--vx-sell-rgb) / 0.12);
         font-weight: 700;
     }
 }
@@ -760,7 +778,7 @@
     padding: 1.2rem;
     border: 1px solid var(--vx-cyan);
     border-radius: 1rem;
-    background: rgba(0, 229, 255, 0.06);
+    background: rgb(var(--vx-cyan-rgb) / 0.06);
     font-size: 1.3rem;
 
     p {
@@ -778,7 +796,7 @@
 
     &__item {
         padding: 0.4rem 0;
-        border-top: 1px solid rgba(142, 162, 196, 0.1);
+        border-top: 1px solid rgb(var(--vx-muted-rgb) / 0.1);
 
         time {
             color: var(--vx-muted);
@@ -810,7 +828,7 @@
         gap: 0.8rem;
         align-items: center;
         padding: 0.8rem 0;
-        border-top: 1px solid rgba(142, 162, 196, 0.1);
+        border-top: 1px solid rgb(var(--vx-muted-rgb) / 0.1);
 
         strong {
             overflow: hidden;
@@ -916,7 +934,7 @@
             padding: 1rem;
             border: 1px solid var(--vx-border);
             border-radius: 1rem;
-            background: rgba(255, 255, 255, 0.02);
+            background: rgb(var(--vx-wash-rgb) / 0.02);
         }
 
         td {
@@ -970,8 +988,8 @@
     padding: 1.6rem 2rem;
     border: 1px solid var(--vx-border);
     border-radius: 1.4rem;
-    background: linear-gradient(120deg, rgba(14, 23, 48, 0.95), rgba(10, 16, 32, 0.95));
-    box-shadow: 0 0 3rem rgba(0, 229, 255, 0.08);
+    background: linear-gradient(120deg, rgb(var(--vx-panel2-rgb) / 0.95), rgb(var(--vx-panel-rgb) / 0.95));
+    box-shadow: 0 0 3rem rgb(var(--vx-cyan-rgb) / 0.08);
     overflow: hidden;
 
     // a thin line that travels across the strip, only while something is really scanning or trading
@@ -993,12 +1011,12 @@
 
     &--executing {
         border-color: var(--vx-purple);
-        box-shadow: 0 0 3.2rem rgba(162, 89, 255, 0.35);
+        box-shadow: 0 0 3.2rem rgb(var(--vx-purple-rgb) / 0.35);
     }
 
     &--emergency {
         border-color: var(--vx-sell);
-        box-shadow: 0 0 3.2rem rgba(255, 77, 109, 0.3);
+        box-shadow: 0 0 3.2rem rgb(var(--vx-sell-rgb) / 0.3);
     }
 
     &__body {
@@ -1016,17 +1034,17 @@
         font-weight: 800;
         letter-spacing: 0.25rem;
         color: var(--vx-cyan);
-        text-shadow: 0 0 1.2rem rgba(0, 229, 255, 0.5);
+        text-shadow: 0 0 1.2rem rgb(var(--vx-cyan-rgb) / 0.5);
     }
 
     &--executing &__mode {
         color: var(--vx-purple);
-        text-shadow: 0 0 1.2rem rgba(162, 89, 255, 0.7);
+        text-shadow: 0 0 1.2rem rgb(var(--vx-purple-rgb) / 0.7);
     }
 
     &--emergency &__mode {
         color: var(--vx-sell);
-        text-shadow: 0 0 1.2rem rgba(255, 77, 109, 0.6);
+        text-shadow: 0 0 1.2rem rgb(var(--vx-sell-rgb) / 0.6);
     }
 
     &__pulse {
@@ -1055,7 +1073,7 @@
         flex: 1;
         height: 0.6rem;
         border-radius: 999px;
-        background: rgba(142, 162, 196, 0.18);
+        background: rgb(var(--vx-muted-rgb) / 0.18);
         overflow: hidden;
     }
 
@@ -1096,7 +1114,7 @@
         padding: 0.6rem 1rem;
         border-left: 0.3rem solid var(--vx-cyan);
         border-radius: 0.4rem;
-        background: rgba(0, 229, 255, 0.07);
+        background: rgb(var(--vx-cyan-rgb) / 0.07);
         font-family: ui-monospace, 'SF Mono', 'Menlo', 'Consolas', monospace;
         font-size: 1.2rem;
         letter-spacing: 0.04rem;
@@ -1104,7 +1122,7 @@
 
     &--executing &__trade {
         border-left-color: var(--vx-purple);
-        background: rgba(162, 89, 255, 0.14);
+        background: rgb(var(--vx-purple-rgb) / 0.14);
         animation: voltrex-flash 0.9s ease-in-out infinite;
     }
 
@@ -1114,12 +1132,12 @@
         max-height: 8.4rem;
         overflow: hidden;
         border-radius: 0.8rem;
-        background: #03060d;
+        background: var(--vx-inset);
         list-style: none;
         font-family: ui-monospace, 'SF Mono', 'Menlo', 'Consolas', monospace;
         font-size: 1.1rem;
         line-height: 1.5;
-        color: #7fe9ff;
+        color: var(--vx-term-text);
 
         li {
             overflow-wrap: anywhere;
@@ -1144,12 +1162,12 @@
     flex: none;
     width: 18rem;
     height: 18rem;
-    border: 1px solid rgba(0, 229, 255, 0.45);
+    border: 1px solid rgb(var(--vx-cyan-rgb) / 0.45);
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(0, 229, 255, 0.12), rgba(3, 6, 13, 0.95) 72%);
+    background: radial-gradient(circle, rgb(var(--vx-cyan-rgb) / 0.12), rgb(var(--vx-inset-rgb) / 0.95) 72%);
     box-shadow:
-        0 0 2.4rem rgba(0, 229, 255, 0.3),
-        inset 0 0 2rem rgba(0, 229, 255, 0.15);
+        0 0 2.4rem rgb(var(--vx-cyan-rgb) / 0.3),
+        inset 0 0 2rem rgb(var(--vx-cyan-rgb) / 0.15);
     overflow: hidden;
 
     &__rings {
@@ -1161,16 +1179,20 @@
                 circle at center,
                 transparent 0,
                 transparent calc(16.6% - 1px),
-                rgba(0, 229, 255, 0.22) calc(16.6% - 1px),
-                rgba(0, 229, 255, 0.22) 16.6%
+                rgb(var(--vx-cyan-rgb) / 0.22) calc(16.6% - 1px),
+                rgb(var(--vx-cyan-rgb) / 0.22) 16.6%
             ),
             linear-gradient(
                 90deg,
                 transparent calc(50% - 0.5px),
-                rgba(0, 229, 255, 0.2) 50%,
+                rgb(var(--vx-cyan-rgb) / 0.2) 50%,
                 transparent calc(50% + 0.5px)
             ),
-            linear-gradient(transparent calc(50% - 0.5px), rgba(0, 229, 255, 0.2) 50%, transparent calc(50% + 0.5px));
+            linear-gradient(
+                transparent calc(50% - 0.5px),
+                rgb(var(--vx-cyan-rgb) / 0.2) 50%,
+                transparent calc(50% + 0.5px)
+            );
     }
 
     // the sweep turns only while something is scanning or trading; on standby it is dim and still
@@ -1180,10 +1202,10 @@
         border-radius: 50%;
         background: conic-gradient(
             from 0deg,
-            rgba(0, 229, 255, 0) 0deg,
-            rgba(0, 229, 255, 0) 250deg,
-            rgba(0, 229, 255, 0.6) 359deg,
-            rgba(0, 229, 255, 0) 360deg
+            rgb(var(--vx-cyan-rgb) / 0) 0deg,
+            rgb(var(--vx-cyan-rgb) / 0) 250deg,
+            rgb(var(--vx-cyan-rgb) / 0.6) 359deg,
+            rgb(var(--vx-cyan-rgb) / 0) 360deg
         );
         opacity: 0.25;
     }
@@ -1204,7 +1226,7 @@
         }
 
         &--trade {
-            outline: 0.2rem solid #fff;
+            outline: 0.2rem solid var(--vx-text);
             outline-offset: 0.3rem;
             animation: voltrex-ring 1s ease-in-out infinite;
         }
@@ -1239,7 +1261,7 @@
     padding: 0.6rem 0.4rem;
     border: 1px solid var(--vx-border);
     border-radius: 0.8rem;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgb(var(--vx-wash-rgb) / 0.03);
     color: var(--vx-muted);
     font-size: 1.3rem;
     font-weight: 700;
@@ -1247,9 +1269,9 @@
 
     &--on {
         border-color: var(--vx-cyan);
-        background: rgba(0, 229, 255, 0.14);
+        background: rgb(var(--vx-cyan-rgb) / 0.14);
         color: var(--vx-cyan);
-        box-shadow: 0 0 1.2rem rgba(0, 229, 255, 0.25);
+        box-shadow: 0 0 1.2rem rgb(var(--vx-cyan-rgb) / 0.25);
     }
 
     &:focus-visible {
@@ -1300,11 +1322,11 @@
 @keyframes voltrex-flash {
     0%,
     100% {
-        box-shadow: 0 0 0 rgba(162, 89, 255, 0);
+        box-shadow: 0 0 0 rgb(var(--vx-purple-rgb) / 0);
     }
 
     50% {
-        box-shadow: 0 0 1.6rem rgba(162, 89, 255, 0.6);
+        box-shadow: 0 0 1.6rem rgb(var(--vx-purple-rgb) / 0.6);
     }
 }
 
@@ -1349,7 +1371,7 @@
             margin: 0 -1.2rem 1.2rem;
             padding: 0.8rem 1.2rem;
             border-bottom: 1px solid var(--vx-border);
-            background: rgba(5, 7, 15, 0.94);
+            background: rgb(var(--vx-bg-rgb) / 0.94);
             backdrop-filter: blur(0.8rem);
         }
 
@@ -1407,4 +1429,37 @@
         min-height: 3.6rem;
         padding: 0.6rem 1.4rem;
     }
+}
+
+// dark mode: the same names, the neon terminal colours
+.theme--dark .voltrex {
+    --vx-bg: #05070f;
+    --vx-panel: #0a1020;
+    --vx-panel-2: #0e1730;
+    --vx-inset: #060b18;
+    --vx-inset-2: #0a1226;
+    --vx-border: rgb(0 229 255 / 18%);
+    --vx-text: #e6f1ff;
+    --vx-muted: #8ea2c4;
+    --vx-term-text: #7fe9ff;
+    --vx-cyan: #00e5ff;
+    --vx-blue: #2f6bff;
+    --vx-purple: #a259ff;
+    --vx-buy: #19e68c;
+    --vx-sell: #ff4d6d;
+    --vx-warn: #ffb020;
+    --vx-cyan-rgb: 0 229 255;
+    --vx-blue-rgb: 47 107 255;
+    --vx-purple-rgb: 162 89 255;
+    --vx-buy-rgb: 25 230 140;
+    --vx-sell-rgb: 255 77 109;
+    --vx-warn-rgb: 255 176 32;
+    --vx-muted-rgb: 142 162 196;
+    --vx-wash-rgb: 255 255 255;
+    --vx-bg-rgb: 5 7 15;
+    --vx-panel-rgb: 10 16 32;
+    --vx-panel2-rgb: 14 23 48;
+    --vx-inset-rgb: 3 6 13;
+    --vx-shadow-rgb: 0 0 0;
+    --vx-on-accent: #fff;
 }
