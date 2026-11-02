@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T01:12:35.716Z",
+ "updated": "2026-11-02T07:55:24.234Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,67 +12,148 @@
  },
  "items": [
   {
-   "id": "177stw9",
-   "title": "Japan’s Katayama says US-Japan FX statement ‘alive’, warns on disorderly yen moves",
-   "link": "https://investinglive.com/forex/japan-s-katayama-says-us-japan-fx-statement-alive-warns-on-disorderly-yen-moves/",
-   "summary": "Katayama’s remarks keep the threat of intervention in the background without signalling that action is imminent, and the yen’s weakness on the session suggests markets see little immediate deterrent. Her refusal to…",
-   "published": "2026-11-02T00:55:14.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "dp55c1",
-   "title": "Japan factory PMI slips to 53.3, a seven-month low, as cost pressures pick up",
-   "link": "https://investinglive.com/news/japan-factory-pmi-slips-to-53-3-a-seven-month-low-as-cost-pressures-pick-up/",
-   "summary": "The survey keeps Japan’s factory sector in solid expansion while showing price pressure starting to build again, which supports the case for continued policy normalisation by the Bank of Japan. Stronger input inflation…",
-   "published": "2026-11-02T00:49:58.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "15j1k0a",
-   "title": "Binance users withdraw $3.6bn after record crypto hack",
+   "title": "Binance users withdraw $3.6bn after largest-ever crypto hack",
    "link": "https://www.bbc.co.uk/news/articles/cwj34gdmnly4o?at_medium=RSS&at_campaign=rss",
-   "summary": "The exchange froze transactions in the wake of the incident, which impacted $6.3bn worth of digital assets.",
-   "published": "2026-11-02T00:43:35.000Z",
+   "summary": "The exchange froze transactions following the incident which has been linked to a North Korean group.",
+   "published": "2026-11-02T07:42:33.000Z",
    "source": "BBC Business",
    "category": "economy"
   },
   {
-   "id": "1jrkggr",
-   "title": "Japan weighs ¥5,000 annual payment for low-income workers under new benefit plan",
-   "link": "https://investinglive.com/news/japan-weighs-5-000-annual-payment-for-low-income-workers-under-new-benefit-plan/",
-   "summary": "The benefit itself is modest in scale, but it sits alongside a proposed two-year cut to the consumption tax on food, which keeps Japan’s fiscal trajectory in focus for bond investors. Any sign that the combined package…",
-   "published": "2026-11-02T00:41:27.000Z",
+   "id": "4ynrne",
+   "title": "Chart of the day: Gold is in trouble and things could get a whole lot uglier",
+   "link": "https://investinglive.com/technical-analysis/chart-of-the-day-gold-is-in-trouble-and-things-could-get-a-whole-lot-uglier/",
+   "summary": "It's a rather troubling time for gold after having dropped to its lowest in over a year at the end of last week. And just when you think things couldn't get any worse for the precious metal, the technicals are now…",
+   "published": "2026-11-02T06:57:42.000Z",
    "source": "investingLive",
    "category": "forex"
   },
   {
-   "id": "30qsyr",
-   "title": "PBOC is expected to set the USD/CNY reference rate at 6.6625 – Reuters estimate",
-   "link": "https://investinglive.com/central-banks/pboc-is-expected-to-set-the-usd-cny-reference-rate-at-6-6625-reuters-estimate/",
-   "summary": "Earlier, some important news: China’s central bank, regulators to meet on stock support after record 12-week slide - The People’s Bank of China is due to set the daily USD/CNY reference rate at around 0115 GMT (2115 US…",
-   "published": "2026-11-02T00:21:11.000Z",
+   "id": "pk1wnq",
+   "title": "FX option expiries for 2 November 10am New York cut",
+   "link": "https://investinglive.com/orders/fx-option-expiries-for-2-november-10am-new-york-cut/",
+   "summary": "There are just a couple of key expiry levels to take note of on the day, as highlighted in bold below. The first one is for EUR/USD at the 1.1150 level, with the strike keeping just a little over 30 pips from the spot…",
+   "published": "2026-11-02T06:20:48.000Z",
    "source": "investingLive",
    "category": "forex"
   },
   {
-   "id": "2180fi",
-   "title": "JPMorgan joins hike call for RBA’s November meeting, sees tightening bias persisting",
-   "link": "https://investinglive.com/central-banks/jpmorgan-joins-hike-call-for-rba-s-november-meeting-sees-tightening-bias-persisting/",
-   "summary": "With a hike almost fully priced, the bigger risk for the Australian dollar and short-dated bond yields may be a surprise hold rather than the move itself. Attention is likely to shift to the RBA’s guidance and the…",
-   "published": "2026-11-02T00:08:20.000Z",
+   "id": "3krnrw",
+   "title": "BOJ continues to reaffirm that inflation is here to stay, so what's stopping another rate hike?",
+   "link": "https://investinglive.com/central-banks/boj-continues-to-reaffirm-that-inflation-is-here-to-stay-so-what-s-stopping-another-rate-hike/",
+   "summary": "After their decision to leave interest rates unchanged at 1.25% last week, the BOJ is once again reinforcing the message that underlying inflation has reached levels consistent with its 2% target. There is a sense that…",
+   "published": "2026-11-02T05:56:17.000Z",
    "source": "investingLive",
    "category": "forex"
   },
   {
-   "id": "zu5byi",
-   "title": "Gold price analysis today: Is the sharp selloff creating a buying opportunity or another trap?",
-   "link": "https://investinglive.com/commodities/gold-price-analysis-today-is-the-sharp-selloff-creating-a-buying-opportunity-or-another-trap/",
-   "summary": "While I'm considering this gold swing-long trade idea, I'm also watching several developments across other markets. In crypto, I'm following Bitcoin's attempt to defend $76,300 support and potentially break above…",
-   "published": "2026-11-02T00:01:40.000Z",
+   "id": "1fq3t1s",
+   "title": "US midterms 2026: Is Trump about to lose his grip on Congress?",
+   "link": "https://investinglive.com/news/us-midterms-2026-is-trump-about-to-lose-his-grip-on-congress/",
+   "summary": "I reckon that US president Trump might be in for a rude awakening after tomorrow. Or perhaps he is already aware of his current predicament, although I wouldn't put it past him to refuse to accept that reality. Either…",
+   "published": "2026-11-02T05:34:36.000Z",
    "source": "investingLive",
    "category": "forex"
+  },
+  {
+   "id": "oa0p9",
+   "title": "BTCPay Server warns of hot wallet thefts running on outdated software",
+   "link": "https://cointelegraph.com/news/btcpay-server-hot-wallet-thefts-older-versions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "BTCPay Server urged operators to shut down their servers after receiving reports of unauthorized attackers draining funds from hot wallets.",
+   "published": "2026-11-02T05:34:02.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1n17hvp",
+   "title": "investingLive Asia-Pacific market news: Oil eases on Doha talks",
+   "link": "https://investinglive.com/news/investinglive-asia-pacific-market-news-oil-eases-on-doha-talks/",
+   "summary": "Deutsche Bank stands alone with RBA hold call as 31 of 32 economists tip a hike Goldman lifts December Brent forecast to $105 on Middle East and Russia supply risks Tucker Carlson claims Trump weighing nuclear strike…",
+   "published": "2026-11-02T04:32:13.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1dy9rah",
+   "title": "Gold’s slide to one-year low: margin calls amplified a fall driven by Fed hike bets",
+   "link": "https://investinglive.com/commodities/gold-s-slide-to-one-year-low-margin-calls-amplified-a-fall-driven-by-fed-hike-bets/",
+   "summary": "If margin-call selling was a major factor on Friday, part of the decline could reverse once leveraged positions are cleared, which is why Commerzbank expects a recovery. That makes the tech sector an unusual short-term…",
+   "published": "2026-11-02T04:08:05.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1kot2o8",
+   "title": "Bank of Korea probes financial firms’ exposure to crypto risks",
+   "link": "https://cointelegraph.com/news/bank-of-korea-probes-financial-firms-exposure-to-crypto-risks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The central bank is surveying 31 financial institutions on how a major exchange shutdown, prolonged crypto downturn or losses at another firm could affect their operations.",
+   "published": "2026-11-02T03:55:50.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "lx6dy7",
+   "title": "Deutsche Bank stands alone with RBA hold call as 31 of 32 economists tip a hike",
+   "link": "https://investinglive.com/central-banks/deutsche-bank-stands-alone-with-rba-hold-call-as-31-of-32-economists-tip-a-hike/",
+   "summary": "With a hike close to fully priced, the asymmetry is clear. A hold, as Deutsche Bank expects, would likely knock the Australian dollar lower and rally short-dated government bonds, while a hike would largely confirm…",
+   "published": "2026-11-02T03:55:16.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1snidvd",
+   "title": "Goldman lifts December Brent forecast to $105 on Middle East and Russia supply risks",
+   "link": "https://investinglive.com/commodities/goldman-lifts-december-brent-forecast-to-105-on-middle-east-and-russia-supply-risks/",
+   "summary": "Goldman’s upgrade reinforces the case that oil’s geopolitical premium is likely to persist even if diplomacy produces short-term relief. The bank’s view that a lasting breakthrough will be difficult runs counter to…",
+   "published": "2026-11-02T03:34:06.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "l5kdty",
+   "title": "Tucker Carlson claims Trump weighing nuclear strike on Iran’s Pickaxe Mountain",
+   "link": "https://investinglive.com/commodities/tucker-carlson-claims-trump-weighing-nuclear-strike-on-iran-s-pickaxe-mountain/",
+   "summary": "For oil, the claim matters less for its specifics than for what it says about the risk around Tuesday’s midterms. Even without the nuclear element, the confirmed reporting points to a real chance of renewed US strikes…",
+   "published": "2026-11-02T03:23:58.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1pw7liz",
+   "title": "Election scenarios: Morgan Stanley’s Wilson says buy midterm dip, sees S&P 500 at 8,000 after correction",
+   "link": "https://investinglive.com/stock-market-update/election-scenarios-morgan-stanley-s-wilson-says-buy-midterm-dip-sees-s-p-500-at-8-000-after-correction/",
+   "summary": "Wilson’s view gives investors a framework for Tuesday’s midterms: expect volatility first, then a buying opportunity. A pullback toward 7,100 would be a meaningful drawdown from record highs, so traders are likely to…",
+   "published": "2026-11-02T02:36:43.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "r5rv9s",
+   "title": "Bitcoin forecast today: The rebound looks better, but $79,000 is the real test",
+   "link": "https://investinglive.com/cryptocurrency/bitcoin-forecast-today-the-rebound-looks-better-but-79-000-is-the-real-test/",
+   "summary": "Bitcoin forecast today: The rebound looks better, but $79,000 is the real test Markets are opening the week with several interesting developments worth following at investingLive. Oil prices have slipped as Iran…",
+   "published": "2026-11-02T02:14:48.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "13gbvie",
+   "title": "Tanker hit by two projectiles off Saudi coast as Gulf incidents reach 10 in three days",
+   "link": "https://investinglive.com/commodities/tanker-hit-by-two-projectiles-off-saudi-coast-as-gulf-incidents-reach-10-in-three-days/",
+   "summary": "The location of the latest strike matters most for oil. A tanker hit in the northern Gulf, far from Hormuz and near Saudi and Kuwaiti export routes, suggests the risk to shipping is spreading to waters that had been…",
+   "published": "2026-11-02T02:12:55.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "ctpc2p",
+   "title": "THORChain halts swaps after block reorg bug, slowing Binance hackers",
+   "link": "https://cointelegraph.com/news/thorchain-halts-swaps-after-block-reorg-bug-slowing-binance-hackers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "THORChain node operators paused swaps involving assets on 10 networks, including Bitcoin, Ethereum, Solana and Tron.",
+   "published": "2026-11-02T01:51:48.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
   },
   {
    "id": "1a04kh8",
@@ -84,15 +165,6 @@
    "category": "crypto"
   },
   {
-   "id": "5jq4j5",
-   "title": "Bank of America’s Hartnett says buy tech bonds as relative returns hit 30-year low",
-   "link": "https://investinglive.com/stock-market-update/bank-of-america-s-hartnett-says-buy-tech-bonds-as-relative-returns-hit-30-year-low/",
-   "summary": "Hartnett’s call puts tech credit in contrast with tech equities. Bond investors are being paid more to fund the AI build-out, while shareholders are losing the buyback support that underpinned megacap returns for…",
-   "published": "2026-11-01T23:56:22.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "9bqmr0",
    "title": "Don't get caught out by new Buy Now Pay Later rules",
    "link": "https://www.bbc.co.uk/news/articles/crpdgp4y017go?at_medium=RSS&at_campaign=rss",
@@ -102,17 +174,8 @@
    "category": "economy"
   },
   {
-   "id": "548p8b",
-   "title": "BTCPay Server tells operators to shut down after reports of hot wallets being drained",
-   "link": "https://investinglive.com/cryptocurrency/btcpay-server-tells-operators-to-shut-down-after-reports-of-hot-wallets-being-drained/",
-   "summary": "BTCPay Server, the open-source software many merchants use to accept Bitcoin payments without a third-party processor, has told operators to shut down their instances after receiving reports that hot wallets on…",
-   "published": "2026-11-01T23:30:01.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1seugew",
-   "title": "Billions flee Binance on reopen, THORChain founder opposes coin freeze: Hodler’s Digest",
+   "title": "THORChain founder rejects freeze request, CZ thanks Secret Service: Hodler’s Digest",
    "link": "https://cointelegraph.com/magazine/36b-flees-binance-on-reopen-thorchain-co-founder-opposes-coin-freeze-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "summary": "Binance has reopened withdrawals following the world’s biggest ever hack, and THORChain co-founder argues it should not halt the protocol to comply with FBI demands.",
    "published": "2026-11-01T23:09:13.000Z",
@@ -120,46 +183,10 @@
    "category": "crypto"
   },
   {
-   "id": "53e3v1",
-   "title": "US clocks fall back: Wall Street opens an hour later for traders in Asia and Europe",
-   "link": "https://investinglive.com/news/us-clocks-fall-back-wall-street-opens-an-hour-later-for-traders-in-asia-and-europe/",
-   "summary": "The change doesn’t alter exchange hours, but it does shift when global liquidity overlaps. Asia-Pacific desks now see US cash trading start and finish an hour later on their clocks, which narrows the gap between the…",
-   "published": "2026-11-01T23:06:59.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "t43qpf",
-   "title": "ICYMI - Ukrainian drones hit three Russian refineries in 72 hours, ending US-sought pause",
-   "link": "https://investinglive.com/commodities/icymi-ukrainian-drones-hit-three-russian-refineries-in-72-hours-ending-us-sought-pause/",
-   "summary": "The renewed campaign puts Russian refined product supply back in focus, particularly diesel, at a time when the Iran war has already tightened global energy markets. Damage to processing units, including a diesel…",
-   "published": "2026-11-01T22:47:35.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "kv76z3",
-   "title": "Australia’s AI investment ambitions hit by another data centre setback",
-   "link": "https://investinglive.com/news/australia-s-ai-investment-ambitions-hit-by-another-data-centre-setback/",
-   "summary": "The delay adds to a run of setbacks that point to rising execution risk across Australia’s (and global) data centre sector, where permitting, energy supply and community opposition are all lengthening timelines. Listed…",
-   "published": "2026-11-01T22:17:21.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "km58gr",
-   "title": "Australia’s factory PMI stuck at 49.6 as new orders drop at fastest pace since 2024",
-   "link": "https://investinglive.com/news/australia-s-factory-pmi-stuck-at-49-6-as-new-orders-drop-at-fastest-pace-since-2024/",
-   "summary": "The survey has an uncomfortable mix for policymakers: demand and output are contracting, but input costs and selling prices are rising faster. Firms cited higher interest rates among the reasons for weaker orders,…",
-   "published": "2026-11-01T22:08:20.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "i0mizc",
-   "title": "Thousands of jobs at Virgin Media O2 to be cut",
+   "title": "Virgin Media O2 set to cut thousands of jobs to reduce costs",
    "link": "https://www.bbc.co.uk/news/articles/c6rry8x9d9qko?at_medium=RSS&at_campaign=rss",
-   "summary": "The broadband provider has not finalised the number of roles to be axed but it will likely be a sizeable chunk of its workforce, the BBC understands.",
+   "summary": "The broadband firm has not finalised numbers but it is likely be a sizeable chunk of staff, the BBC understands.",
    "published": "2026-11-01T16:57:14.000Z",
    "source": "BBC Business",
    "category": "economy"
@@ -264,24 +291,6 @@
    "category": "crypto"
   },
   {
-   "id": "2mfyht",
-   "title": "Texas brothers sentenced to 15 years in prison for armed crypto robbery, kidnapping",
-   "link": "https://cointelegraph.com/news/texas-brothers-sentenced-to-15-years-in-prison-for-armed-crypto-robbery-kidnapping?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Home invasions became the most common form of crypto wrench attacks worldwide during the first half of 2026, rising to 20 incidents from one.",
-   "published": "2026-10-31T13:37:49.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1rdgt0i",
-   "title": "Blockchain investigator Chainalysis hit by cybersecurity incident",
-   "link": "https://cointelegraph.com/news/blockchain-investigator-chainalysis-hit-by-cybersecurity-incident?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The company said some non-sensitive customer data was exposed, including user IDs, names and email addresses.",
-   "published": "2026-10-31T11:22:49.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "20etxw",
    "title": "The Trump administration wants to give married parents money to stay at home. Will it be enough?",
    "link": "https://www.theguardian.com/money/2026/oct/31/trump-married-parents-payments",
@@ -298,15 +307,6 @@
    "published": "2026-10-31T10:00:40.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "14lb0g7",
-   "title": "Binance $6.3B record hack sparks pre-election political clashes",
-   "link": "https://cointelegraph.com/news/binance-63b-record-hack-sparks-pre-election-political-chatter?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Some political and administration figures tried to make hay of the biggest-ever crypto heist.",
-   "published": "2026-10-31T09:58:50.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "10yn17j",
@@ -566,15 +566,6 @@
    "link": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261026~bde7b6d11a.en.html",
    "summary": "",
    "published": "2026-10-26T09:00:00.000Z",
-   "source": "ECB",
-   "category": "economy"
-  },
-  {
-   "id": "1evl412",
-   "title": "Frank Elderson: Taking action for nature – investing in economic resilience and prosperity",
-   "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261026~d903d7ad85.en.html",
-   "summary": "",
-   "published": "2026-10-26T05:00:00.000Z",
    "source": "ECB",
    "category": "economy"
   }
