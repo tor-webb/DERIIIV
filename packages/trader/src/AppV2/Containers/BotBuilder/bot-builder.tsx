@@ -93,6 +93,9 @@ const parseLimit = (value: string) => {
     return Number.isFinite(parsed) && parsed > 0 ? parsed : undefined;
 };
 
+/** On a phone the block categories sit in a row along the top, so the workspace keeps the whole width. */
+const isPhone = () => typeof window !== 'undefined' && !!window.matchMedia?.('(max-width: 768px)').matches;
+
 const STATUS_TEXT: Record<TRunStatus, () => string> = {
     idle: () => localize('Bot is not running'),
     running: () => localize('Bot is running'),
@@ -124,6 +127,8 @@ const BotBuilder = observer(() => {
     const [can_restore, setCanRestore] = React.useState(false);
     const [saved_bots, setSavedBots] = React.useState<TSavedBot[]>(readSavedBots);
     const [is_save_open, setIsSaveOpen] = React.useState(false);
+    /** Phones show the Summary / Transactions / Journal panel as a full-screen sheet opened from the bottom bar. */
+    const [is_sheet_open, setIsSheetOpen] = React.useState(false);
 
     // A bot that a template replaced before the page was reloaded can still be brought back.
     React.useEffect(() => {
@@ -144,7 +149,10 @@ const BotBuilder = observer(() => {
         if (!container) return undefined;
 
         registerBlocks();
+        const is_phone = isPhone();
         const workspace = Blockly.inject(container, {
+            horizontalLayout: is_phone,
+            toolboxPosition: 'start',
             toolbox: getToolbox(),
             theme: getBlocklyTheme(),
             trashcan: true,
@@ -553,19 +561,35 @@ const BotBuilder = observer(() => {
                     />
                 </section>
 
-                <RunPanel
-                    tab={tab}
-                    onTabChange={setTab}
-                    stats={stats}
-                    live={live}
-                    transactions={transactions}
-                    journal={journal}
-                    currency={client.currency}
-                    is_active={is_active}
-                    limits={limits}
-                    onLimitsChange={setLimits}
-                    onReset={resetStats}
-                />
+                <div
+                    className={classNames('bot-builder__sheet', is_sheet_open && 'bot-builder__sheet--open')}
+                    data-testid='dt_bot_builder_sheet'
+                >
+                    <div className='bot-builder__sheet-bar'>
+                        <strong>{localize('Summary & trades')}</strong>
+                        <button
+                            type='button'
+                            className='bot-builder__sheet-close'
+                            onClick={() => setIsSheetOpen(false)}
+                            data-testid='dt_bot_builder_sheet_close'
+                        >
+                            {localize('Close')}
+                        </button>
+                    </div>
+                    <RunPanel
+                        tab={tab}
+                        onTabChange={setTab}
+                        stats={stats}
+                        live={live}
+                        transactions={transactions}
+                        journal={journal}
+                        currency={client.currency}
+                        is_active={is_active}
+                        limits={limits}
+                        onLimitsChange={setLimits}
+                        onReset={resetStats}
+                    />
+                </div>
 
                 {is_templates_open && (
                     <TemplatesPanel
@@ -617,6 +641,29 @@ const BotBuilder = observer(() => {
             )}
 
             <footer className='bot-builder__footer'>
+                <button
+                    type='button'
+                    className={classNames('bot-builder__positions', is_active && 'bot-builder__positions--live')}
+                    onClick={() => {
+                        setTab(live ? 'summary' : 'transactions');
+                        setIsSheetOpen(true);
+                    }}
+                    data-testid='dt_bot_builder_positions'
+                >
+                    <span>{localize('Positions')}</span>
+                    <span className='bot-builder__positions-count'>{transactions.length}</span>
+                    <span
+                        className={classNames(
+                            'bot-builder__positions-profit',
+                            stats.total_profit < 0
+                                ? 'bot-builder__positions-profit--down'
+                                : 'bot-builder__positions-profit--up'
+                        )}
+                    >
+                        {stats.total_profit > 0 ? '+' : ''}
+                        {stats.total_profit.toFixed(2)}
+                    </span>
+                </button>
                 {client.is_logged_in && (
                     <span
                         className={classNames('bot-builder__account', {

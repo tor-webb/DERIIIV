@@ -1,3 +1,5 @@
+import * as Blockly from 'blockly';
+
 import { mockStore, StoreProvider } from '@deriv/stores';
 import { act, fireEvent, render, screen, within } from '@testing-library/react';
 
@@ -687,5 +689,28 @@ describe('BotBuilder', () => {
             openTemplates();
             expect(screen.getByTestId('dt_bot_template_import_rise_fall_basic')).toBeDisabled();
         });
+    });
+
+    it('opens the summary and trades panel as a sheet from the Positions button, and closes it again', () => {
+        renderPage();
+        const sheet = screen.getByTestId('dt_bot_builder_sheet');
+        expect(sheet).not.toHaveClass('bot-builder__sheet--open');
+        fireEvent.click(screen.getByTestId('dt_bot_builder_positions'));
+        expect(sheet).toHaveClass('bot-builder__sheet--open');
+        expect(screen.getByRole('tab', { name: 'Transactions' })).toHaveAttribute('aria-selected', 'true');
+        fireEvent.click(screen.getByTestId('dt_bot_builder_sheet_close'));
+        expect(sheet).not.toHaveClass('bot-builder__sheet--open');
+    });
+
+    it('lays the block categories out in a row on a phone only', () => {
+        const inject = Blockly.inject as jest.Mock;
+        inject.mockClear();
+        window.matchMedia = jest.fn().mockReturnValue({ matches: true }) as unknown as typeof window.matchMedia;
+        renderPage();
+        expect(inject.mock.calls[0][1]).toEqual(expect.objectContaining({ horizontalLayout: true }));
+        inject.mockClear();
+        window.matchMedia = jest.fn().mockReturnValue({ matches: false }) as unknown as typeof window.matchMedia;
+        renderPage();
+        expect(inject.mock.calls[0][1]).toEqual(expect.objectContaining({ horizontalLayout: false }));
     });
 });
