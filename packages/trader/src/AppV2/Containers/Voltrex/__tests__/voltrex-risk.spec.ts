@@ -15,7 +15,13 @@ jest.mock('@deriv-com/translations', () => ({
         values ? text.replace(/{{(\w+)}}/g, (_match, key) => String(values[key])) : text,
 }));
 
-const settings: TRiskSettings = { ...DEFAULT_RISK, max_stake: 5, max_daily_loss: 10, max_open_trades: 2 };
+const settings: TRiskSettings = {
+    ...DEFAULT_RISK,
+    max_stake: 5,
+    max_daily_loss: 10,
+    max_open_trades: 2,
+    min_strength: 50,
+};
 const auto = { stake: 1, strength: 80, source: 'auto' as const };
 
 describe('validateRisk', () => {

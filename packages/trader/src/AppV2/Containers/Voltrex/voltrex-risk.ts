@@ -25,7 +25,8 @@ export const DEFAULT_RISK: TRiskSettings = {
     max_open_trades: 2,
     max_consecutive_losses: 3,
     daily_profit_target: 0,
-    min_strength: 50,
+    // a clear trend scores about 50 and most markets sit well below it, so 50 left auto-trading with nothing to do
+    min_strength: 30,
 };
 
 export const LIMITS = { max_open_trades: 10, min_strength: 100 };

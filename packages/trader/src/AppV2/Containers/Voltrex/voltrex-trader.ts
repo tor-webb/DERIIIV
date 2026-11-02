@@ -73,7 +73,27 @@ export type TAutoConfig = {
 
 export type TLogEntry = { time: number; level: TLevel; message: string };
 
+/** What the last look at the scanner found, so it is clear why auto-trading did or did not trade. */
+export type TScanReport = {
+    at: number;
+    /** Number of looks so far this session. */
+    scans: number;
+    /** Markets in the chosen categories, and how many of them have no analysis yet (loading, closed, no data). */
+    in_scope: number;
+    waiting: number;
+    /** Markets with a BUY or SELL reading, and how many the strategy accepts, and how many of those pass the minimum. */
+    signals: number;
+    accepted: number;
+    qualified: number;
+    /** The analysed market with the highest strength, even if it does not qualify. */
+    closest: { name: string; direction: string; strength: number } | null;
+    min_strength: number;
+    /** What happened last: a trade placed, or the reason none was. */
+    note: string;
+};
+
 export type TTraderSnapshot = {
+    scan: TScanReport | null;
     trades: TTrade[];
     risk: TRiskState;
     auto: TAutoState;
@@ -126,6 +146,11 @@ export class VoltrexTrader {
     private last_closed = new Map<string, number>();
     private auto_timer: ReturnType<typeof setInterval> | null = null;
     private cycling = false;
+    private scan: TScanReport | null = null;
+    private scans = 0;
+    private last_scan_log = 0;
+    private last_attempt = '';
+    private no_spec = new Set<string>();
     private next_id = 1;
     private disposed = false;
 
@@ -139,6 +164,7 @@ export class VoltrexTrader {
     private now = () => (this.options.now ? this.options.now() : Date.now());
 
     getSnapshot = (): TTraderSnapshot => ({
+        scan: this.scan,
         trades: this.trades.map(trade => ({ ...trade })),
         risk: { ...this.risk, open_stakes: [...this.risk.open_stakes] },
         auto: this.auto,
@@ -150,6 +176,16 @@ export class VoltrexTrader {
     }
 
     private write(level: TLevel, message: string) {
+        // the same message again within half a minute (a limit that is hit on every look) is not written twice
+        const previous = this.log[this.log.length - 1];
+        if (
+            previous &&
+            previous.message === message &&
+            previous.level === level &&
+            this.now() - previous.time < 30_000
+        ) {
+            return;
+        }
         this.log = [...this.log.slice(-(MAX_LOG_KEPT - 1)), { time: this.now(), level, message }];
     }
 
@@ -391,6 +427,10 @@ export class VoltrexTrader {
         if (stop) return fail(stop);
 
         this.auto_config = config;
+        this.scan = null;
+        this.scans = 0;
+        this.last_scan_log = 0;
+        this.no_spec.clear();
         this.auto = 'running';
         this.write(
             'info',
@@ -449,21 +489,66 @@ export class VoltrexTrader {
             const config = this.auto_config;
             const risk = this.options.getRisk();
             const cooldown = this.options.symbol_cooldown_ms ?? DEFAULT_SYMBOL_COOLDOWN_MS;
-            const candidates = this.options
-                .getRows()
-                .filter(row => row.status === 'ready' && row.signal && config.categories.includes(row.category))
-                .filter(row => {
-                    const closed_at = this.last_closed.get(row.symbol);
-                    return closed_at === undefined || this.now() - closed_at >= cooldown;
-                })
-                .map(row => ({
-                    row,
-                    idea: evaluateStrategy(config.strategy, row.signal as NonNullable<TScanRow['signal']>),
-                }))
-                .filter(item => item.idea && item.idea.strength >= risk.min_strength)
+            const in_scope = this.options.getRows().filter(row => config.categories.includes(row.category));
+            const analysed = in_scope.filter(row => row.status === 'ready' && row.signal);
+            const rested = analysed.filter(row => {
+                const closed_at = this.last_closed.get(row.symbol);
+                return closed_at === undefined || this.now() - closed_at >= cooldown;
+            });
+            const ideas = rested.map(row => ({
+                row,
+                idea: evaluateStrategy(config.strategy, row.signal as NonNullable<TScanRow['signal']>),
+            }));
+            const accepted = ideas.filter(item => item.idea);
+            const candidates = accepted
+                .filter(item => (item.idea?.strength ?? 0) >= risk.min_strength)
                 .sort((a, b) => (b.idea?.strength ?? 0) - (a.idea?.strength ?? 0));
-
+            const closest = [...analysed].sort((a, b) => (b.signal?.strength ?? 0) - (a.signal?.strength ?? 0))[0];
+            this.last_attempt = '';
             await this.tryCandidates(candidates, config);
+
+            this.scans += 1;
+            let note = this.last_attempt;
+            if (!note) {
+                if (!in_scope.length) note = localize('No markets in the chosen categories.');
+                else if (!analysed.length) note = localize('Waiting for the first analysis of these markets…');
+                else if (!accepted.length) {
+                    note = localize('No market fits the {{strategy}} strategy right now.', {
+                        strategy: config.strategy,
+                    });
+                } else note = localize('Markets fit the strategy, but none reaches your minimum strength yet.');
+            }
+            this.scan = {
+                at: this.now(),
+                scans: this.scans,
+                in_scope: in_scope.length,
+                waiting: in_scope.length - analysed.length,
+                signals: analysed.filter(row => row.signal?.direction !== 'NEUTRAL').length,
+                accepted: accepted.length,
+                qualified: candidates.length,
+                closest: closest?.signal
+                    ? { name: closest.name, direction: closest.signal.direction, strength: closest.signal.strength }
+                    : null,
+                min_strength: risk.min_strength,
+                note,
+            };
+            // one line in the log a minute, so the log shows the scan is alive without filling up
+            if (this.now() - this.last_scan_log >= 60_000) {
+                this.last_scan_log = this.now();
+                this.write(
+                    'info',
+                    localize(
+                        'Scan: {{analysed}} markets analysed, {{signals}} with a signal, {{qualified}} meet your limits. {{note}}',
+                        {
+                            analysed: analysed.length,
+                            signals: this.scan.signals,
+                            qualified: candidates.length,
+                            note,
+                        }
+                    )
+                );
+            }
+            this.emit();
         } finally {
             this.cycling = false;
         }
@@ -485,6 +570,13 @@ export class VoltrexTrader {
         const spec = is_busy ? null : await this.options.getSpec(row.symbol).catch(() => null);
         if (this.auto !== 'running' || this.risk.emergency_stop) return;
         if (!spec) {
+            if (!is_busy && !this.no_spec.has(row.symbol)) {
+                this.no_spec.add(row.symbol);
+                this.write(
+                    'warn',
+                    localize('{{name}}: Rise/Fall is not offered, so it is skipped.', { name: row.name })
+                );
+            }
             await this.tryCandidates(rest, config);
             return;
         }
@@ -503,6 +595,9 @@ export class VoltrexTrader {
             },
             spec
         );
+        this.last_attempt = result.ok
+            ? localize('Placed a trade on {{name}}.', { name: row.name })
+            : `${row.name}: ${result.reason}`;
         if (!result.ok && result.scope === 'market') await this.tryCandidates(rest, config);
     }
 

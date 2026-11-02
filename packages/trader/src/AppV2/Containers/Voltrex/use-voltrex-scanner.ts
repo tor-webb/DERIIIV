@@ -7,6 +7,7 @@ import { parseCandles } from '../Markets/markets-utils';
 import { analyseMarket, TSignal, TVolatilityLevel, volatilityLevels } from './voltrex-analysis';
 import {
     applyTickToCandles,
+    CATEGORIES,
     CONFIRM_FRAME,
     dayChangePct,
     LIVE_TICK_LIMIT,
@@ -157,7 +158,12 @@ export const useVoltrexScanner = ({ selected }: TOptions) => {
         };
 
         const runQueue = async () => {
-            const queue = symbols.filter(item => item.is_open).map(item => item.symbol);
+            // the main categories first, so the first markets to appear (and to trade) are the ones people use most
+            const order = (category: string) => CATEGORIES.findIndex(item => item.id === category);
+            const queue = symbols
+                .filter(item => item.is_open)
+                .sort((a, b) => order(a.category) - order(b.category))
+                .map(item => item.symbol);
             const worker = async () => {
                 while (active && queue.length) {
                     const symbol = queue.shift() as string;

@@ -12,6 +12,8 @@ type TProps = {
     confirm: TCandle[];
     primary_label: string;
     confirm_label: string;
+    /** Phones show one section at a time; this jumps to the trading section for the market shown. */
+    onTrade?: () => void;
 };
 
 const digits = (value: number | null, places = 2) => (value === null ? '–' : value.toFixed(places));
@@ -47,7 +49,7 @@ const ALIGNMENT_TEXT = () => ({
 });
 
 /** The selected market: price, signal, the chart, the indicator readings and the reasons for the signal. */
-const VoltrexDetail = ({ row, primary, confirm, primary_label, confirm_label }: TProps) => {
+const VoltrexDetail = ({ row, primary, confirm, primary_label, confirm_label, onTrade }: TProps) => {
     if (!row) {
         return (
             <section className='voltrex__panel voltrex-detail' aria-label={localize('Selected market')}>
@@ -101,6 +103,17 @@ const VoltrexDetail = ({ row, primary, confirm, primary_label, confirm_label }: 
                 <span className='voltrex-detail__key voltrex-detail__key--band'>{localize('Bollinger')}</span>
                 <span className='voltrex__muted'>{primary_label}</span>
             </div>
+
+            {onTrade && (
+                <button
+                    type='button'
+                    className='voltrex__button voltrex__button--primary voltrex__phone-only'
+                    onClick={onTrade}
+                    data-testid='voltrex-go-trade'
+                >
+                    {localize('Trade this market')}
+                </button>
+            )}
 
             {!signal ? (
                 <p className='voltrex__muted' data-testid='voltrex-detail-pending'>

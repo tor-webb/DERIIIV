@@ -410,3 +410,79 @@ describe('auto-trading', () => {
         expect(runners).toHaveLength(0);
     });
 });
+
+describe('scan report', () => {
+    const config = { strategy: 'confluence' as const, stake: 1, categories: ['volatility' as const] };
+    const flush = () =>
+        new Promise(resolve => {
+            setTimeout(resolve, 0);
+        });
+
+    it('says why nothing was traded when markets fit the strategy but none reaches the minimum strength', async () => {
+        const { trader, runners, last } = setup({ rows: [row('R_10', true)], risk: { min_strength: 100 } });
+        trader.startAuto(config);
+        await flush();
+        const scan = last().scan;
+        expect(runners).toHaveLength(0);
+        expect(scan).toMatchObject({ in_scope: 1, waiting: 0, qualified: 0, min_strength: 100 });
+        expect(scan?.accepted).toBe(1);
+        expect(scan?.closest?.name).toBe('R_10');
+        expect(scan?.note).toMatch(/none reaches your minimum strength/);
+        trader.dispose();
+    });
+
+    it('reports markets that are still loading, and markets outside the chosen categories', async () => {
+        const { trader, last } = setup({
+            rows: [
+                row('R_10', true, { status: 'loading', signal: null }),
+                row('frxEURUSD', true, { category: 'forex' }),
+            ],
+        });
+        trader.startAuto(config);
+        await flush();
+        expect(last().scan).toMatchObject({ in_scope: 1, waiting: 1, qualified: 0 });
+        expect(last().scan?.note).toMatch(/Waiting for the first analysis/);
+        trader.dispose();
+    });
+
+    it('says a trade was placed, and counts the qualifying markets', async () => {
+        const { trader, last } = setup({ rows: [row('R_10', true), row('R_25', false)] });
+        trader.startAuto(config);
+        await flush();
+        await flush();
+        expect(last().scan?.qualified).toBe(2);
+        expect(last().scan?.note).toMatch(/Placed a trade on/);
+        trader.dispose();
+    });
+
+    it('writes the same refusal once, not on every look', async () => {
+        const { trader, last } = setup({
+            rows: [row('R_10', true), row('R_25', true)],
+            risk: { max_open_trades: 1 },
+            now: () => 5_000_000,
+        });
+        trader.startAuto(config);
+        await flush();
+        await trader.cycle();
+        await trader.cycle();
+        await trader.cycle();
+        const refusals = last().log.filter(entry => /open trades/.test(entry.message));
+        expect(refusals).toHaveLength(1);
+        trader.dispose();
+    });
+
+    it('warns once, not on every look, about a market that does not offer Rise/Fall', async () => {
+        const { trader, last, runners } = setup({
+            rows: [row('R_10', true)],
+            getSpec: async () => null,
+            now: () => 7_000_000,
+        });
+        trader.startAuto(config);
+        await flush();
+        await trader.cycle();
+        await trader.cycle();
+        expect(runners).toHaveLength(0);
+        expect(last().log.filter(entry => /not offered/.test(entry.message))).toHaveLength(1);
+        trader.dispose();
+    });
+});
