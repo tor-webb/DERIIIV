@@ -19,6 +19,7 @@ import {
     TSymbolInfo,
 } from './voltrex-config';
 import { TCandle } from './voltrex-indicators';
+import { backOff, isRateLimit, pacing, SCANNER_PASSTHROUGH, waitTurn } from './voltrex-pacer';
 
 export type TScanStatus = 'loading' | 'ready' | 'unavailable' | 'closed';
 
@@ -42,17 +43,34 @@ type TEntry = {
 
 const FLUSH_MS = 1000;
 
-const loadFrame = async (symbol: string, frame: TFrameConfig) =>
-    parseCandles(
-        await WS.getTicksHistory({
+const MAX_RATE_RETRIES = 3;
+const SYMBOL_ATTEMPTS = 4;
+const RETRY_LOADING_MS = 30 * 1000;
+
+/** Thrown when the server keeps refusing for being asked too often, so the market is retried later rather than marked unavailable. */
+class RateLimited extends Error {}
+
+const loadFrame = async (symbol: string, frame: TFrameConfig) => {
+    let attempts = 0;
+    while (attempts <= MAX_RATE_RETRIES) {
+        // eslint-disable-next-line no-await-in-loop
+        await waitTurn();
+        // eslint-disable-next-line no-await-in-loop
+        const response = await WS.getTicksHistory({
             ticks_history: symbol,
             adjust_start_time: 1,
             count: frame.count,
             end: 'latest',
             style: 'candles',
             granularity: frame.granularity,
-        })
-    );
+            passthrough: SCANNER_PASSTHROUGH,
+        });
+        if (!isRateLimit(response)) return parseCandles(response);
+        backOff();
+        attempts += 1;
+    }
+    throw new RateLimited();
+};
 
 type TOptions = { selected: string | null };
 
@@ -73,19 +91,35 @@ export const useVoltrexScanner = ({ selected }: TOptions) => {
     const selected_ref = React.useRef(selected);
     selected_ref.current = selected;
 
-    // 1. discover the markets
+    // 1. discover the markets (asked again a few times if the server is busy)
     React.useEffect(() => {
         let active = true;
         setSymbolsError(false);
         (async () => {
-            try {
-                const list = parseActiveSymbols(await WS.activeSymbols('brief'));
-                if (!active) return;
-                if (!list.length) setSymbolsError(true);
-                setSymbols(list);
-            } catch {
-                if (active) setSymbolsError(true);
+            let attempts = 0;
+            while (active && attempts < SYMBOL_ATTEMPTS) {
+                attempts += 1;
+                try {
+                    // eslint-disable-next-line no-await-in-loop
+                    await waitTurn();
+                    // eslint-disable-next-line no-await-in-loop
+                    const response = await WS.activeSymbols('brief');
+                    if (!active) return;
+                    if (isRateLimit(response)) backOff();
+                    const list = parseActiveSymbols(response);
+                    if (list.length) {
+                        setSymbols(list);
+                        return;
+                    }
+                } catch {
+                    // try again below
+                }
+                // eslint-disable-next-line no-await-in-loop
+                await new Promise(resolve => {
+                    setTimeout(resolve, pacing.symbols_retry_ms);
+                });
             }
+            if (active) setSymbolsError(true);
         })();
         return () => {
             active = false;
@@ -151,8 +185,11 @@ export const useVoltrexScanner = ({ selected }: TOptions) => {
                     };
                     dirty.add(symbol);
                 }
-            } catch {
-                if (active) current[symbol] = { ...current[symbol], status: 'unavailable', signal: null };
+            } catch (error) {
+                // a market the server was too busy to answer stays "loading" and is asked again on the next pass
+                const had_data = current[symbol]?.status === 'ready';
+                const status = error instanceof RateLimited ? (had_data && 'ready') || 'loading' : 'unavailable';
+                if (active) current[symbol] = { ...current[symbol], status: status as TScanStatus };
             }
             is_dirty = true;
         };
@@ -177,7 +214,10 @@ export const useVoltrexScanner = ({ selected }: TOptions) => {
         let reload: ReturnType<typeof setTimeout>;
         const cycle = async () => {
             await runQueue();
-            if (active) reload = setTimeout(cycle, REFRESH_MS);
+            if (!active) return;
+            // markets the server was too busy to answer are asked again soon; otherwise everything refreshes in a few minutes
+            const waiting = Object.values(current).some(item => item.status === 'loading');
+            reload = setTimeout(cycle, waiting ? RETRY_LOADING_MS : REFRESH_MS);
         };
         cycle();
 
@@ -204,28 +244,39 @@ export const useVoltrexScanner = ({ selected }: TOptions) => {
         };
     }, [symbols]);
 
-    // 3. follow live ticks for the chosen set (one subscription per market, shared with the rest of the platform)
+    // 3. follow live ticks for the chosen set (one subscription per market, started one turn at a time so a burst of
+    // subscriptions cannot trip the server's request limit)
     React.useEffect(() => {
-        const wanted = new Set(live_key ? live_key.split(',') : []);
+        const wanted = live_key ? live_key.split(',') : [];
         const subscriptions: Record<string, { unsubscribe: () => void }> = {};
-        wanted.forEach(symbol => {
-            try {
-                const subscription = WS.subscribeTicks(symbol, (response: Record<string, unknown>) => {
-                    const tick = response?.tick as { quote?: unknown; epoch?: unknown } | undefined;
-                    if (!tick) return;
-                    window.dispatchEvent(
-                        new CustomEvent('voltrex-tick', {
-                            detail: { symbol, quote: Number(tick.quote), epoch: Number(tick.epoch) },
-                        })
-                    );
-                });
-                if (subscription) subscriptions[symbol] = subscription;
-            } catch {
-                // this market keeps its last loaded price
-            }
-        });
-        live_symbols.current = new Set(Object.keys(subscriptions));
+        let active = true;
+        live_symbols.current = new Set();
+        (async () => {
+            const start = async (symbol: string) => {
+                await waitTurn();
+                if (!active) return;
+                try {
+                    const subscription = WS.subscribeTicks(symbol, (response: Record<string, unknown>) => {
+                        const tick = response?.tick as { quote?: unknown; epoch?: unknown } | undefined;
+                        if (!tick) return;
+                        window.dispatchEvent(
+                            new CustomEvent('voltrex-tick', {
+                                detail: { symbol, quote: Number(tick.quote), epoch: Number(tick.epoch) },
+                            })
+                        );
+                    });
+                    if (subscription) {
+                        subscriptions[symbol] = subscription;
+                        live_symbols.current.add(symbol);
+                    }
+                } catch {
+                    // this market keeps its last loaded price
+                }
+            };
+            await wanted.reduce((chain, symbol) => chain.then(() => start(symbol)), Promise.resolve());
+        })();
         return () => {
+            active = false;
             Object.values(subscriptions).forEach(subscription => {
                 try {
                     subscription.unsubscribe();
