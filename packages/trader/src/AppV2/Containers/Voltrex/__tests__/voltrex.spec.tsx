@@ -273,6 +273,39 @@ describe('<Voltrex />', () => {
         expect(screen.getByTestId('voltrex-status')).toHaveTextContent('REAL CR1');
     });
 
+    it('shows the scanning engine, and one section at a time through the tabs', async () => {
+        renderPage();
+        expect(screen.getByTestId('voltrex-engine')).toBeInTheDocument();
+        const page = screen.getByTestId('voltrex-page');
+        expect(page).toHaveAttribute('data-view', 'scan');
+        fireEvent.click(screen.getByTestId('voltrex-tab-trade'));
+        expect(page).toHaveAttribute('data-view', 'trade');
+        expect(screen.getByTestId('voltrex-tab-trade')).toHaveAttribute('aria-pressed', 'true');
+        expect(screen.getByTestId('voltrex-tab-scan')).toHaveAttribute('aria-pressed', 'false');
+        fireEvent.click(screen.getByTestId('voltrex-tab-activity'));
+        expect(page).toHaveAttribute('data-view', 'activity');
+        await screen.findByTestId('voltrex-row-R_100', undefined, SLOW);
+    });
+
+    it('opens the market view when a market is chosen on a phone, and stays put on a wide screen', async () => {
+        const original = window.matchMedia;
+        window.matchMedia = jest.fn().mockReturnValue({ matches: true }) as unknown as typeof window.matchMedia;
+        renderPage();
+        const row = await screen.findByTestId('voltrex-row-R_100', undefined, SLOW);
+        fireEvent.click(within(row).getByRole('button', { name: /Volatility 100 Index/ }));
+        expect(screen.getByTestId('voltrex-page')).toHaveAttribute('data-view', 'market');
+        fireEvent.click(screen.getByTestId('voltrex-go-trade'));
+        expect(screen.getByTestId('voltrex-page')).toHaveAttribute('data-view', 'trade');
+        window.matchMedia = original;
+    });
+
+    it('stays on the scanner view when a market is chosen on a wide screen', async () => {
+        renderPage();
+        const row = await screen.findByTestId('voltrex-row-R_100', undefined, SLOW);
+        fireEvent.click(within(row).getByRole('button', { name: /Volatility 100 Index/ }));
+        expect(screen.getByTestId('voltrex-page')).toHaveAttribute('data-view', 'scan');
+    });
+
     it('shows a retry when the list of markets cannot be loaded', async () => {
         ws.activeSymbols.mockRejectedValue(new Error('offline'));
         renderPage();

@@ -68,4 +68,15 @@
             margin-left: 0;
         }
     }
+
+    // Phones: the page container has a fixed height and hides overflow, so any page taller than the screen was cut
+    // off with no way to reach the rest. Every page except Trade (which scrolls inside itself) scrolls here instead.
+    @include mobile-screen {
+        &--off-trade .app-shell__main-content {
+            overflow-x: hidden;
+            overflow-y: auto;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+        }
+    }
 }

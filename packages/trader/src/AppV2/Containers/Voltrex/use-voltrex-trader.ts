@@ -44,7 +44,7 @@ export const loadDayState = (loginid: string): TRiskState => {
     return rollDay({ ...emptyRiskState(saved.day), ...saved, open_stakes: [] });
 };
 
-const EMPTY: TTraderSnapshot = { trades: [], risk: emptyRiskState(), auto: 'off', log: [] };
+const EMPTY: TTraderSnapshot = { scan: null, trades: [], risk: emptyRiskState(), auto: 'off', log: [] };
 
 type TSpecState = Map<string, Promise<TRiseFallSpec | null>>;
 
