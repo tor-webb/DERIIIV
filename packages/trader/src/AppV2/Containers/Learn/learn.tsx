@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { getBrandName, getCommunityConfig } from '@deriv/shared';
+import { buildWhatsAppLink, getBrandName, getCommunityConfig, getWhatsAppConfig } from '@deriv/shared';
 import { observer } from '@deriv/stores';
 import { localize } from '@deriv-com/translations';
 
@@ -18,6 +18,63 @@ import {
 import './learn.scss';
 
 const GLOSSARY_TAB = 'glossary';
+
+const MAX_QUESTION_LENGTH = 500;
+
+type TWhatsAppCardProps = { numbers: string[] };
+
+/**
+ * Lets a visitor type a question, then tap a number to open WhatsApp with that question ready to send. The message
+ * travels in the link only; nothing is stored or sent by this site.
+ */
+const WhatsAppCard = ({ numbers }: TWhatsAppCardProps) => {
+    const [question, setQuestion] = React.useState('');
+    if (!numbers.length) return null;
+    const brand = getBrandName();
+    const message = question.trim()
+        ? localize('Hello, I have a question about {{brand}}: {{question}}', { brand, question: question.trim() })
+        : localize('Hello, I have a question about {{brand}}.', { brand });
+
+    return (
+        <section className='learn__whatsapp' data-testid='dt_learn_whatsapp'>
+            <h2 className='learn__community-title'>{localize('Ask us on WhatsApp')}</h2>
+            <p className='learn__community-text'>
+                {localize(
+                    'Type your question, then tap a number. WhatsApp opens with your message ready to send. You choose whether to send it.'
+                )}
+            </p>
+            <label className='learn__search' htmlFor='learn_whatsapp_question'>
+                <span className='learn__search-label'>{localize('Your question')}</span>
+                <textarea
+                    id='learn_whatsapp_question'
+                    className='learn__input learn__textarea'
+                    rows={3}
+                    maxLength={MAX_QUESTION_LENGTH}
+                    value={question}
+                    data-testid='dt_learn_whatsapp_question'
+                    onChange={event => setQuestion(event.target.value)}
+                />
+            </label>
+            <div className='learn__whatsapp-links'>
+                {numbers.map((number, index) => (
+                    <a
+                        key={number}
+                        className='learn__button'
+                        data-testid={`dt_learn_whatsapp_link_${index}`}
+                        href={buildWhatsAppLink(number, message)}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                    >
+                        {localize('WhatsApp +{{number}}', { number })}
+                    </a>
+                ))}
+            </div>
+            <p className='learn__rules'>
+                {localize('Never send passwords, codes or card details in a chat, and staff will never ask for them.')}
+            </p>
+        </section>
+    );
+};
 
 type TCommunityCardProps = { url: string; name: string };
 
@@ -58,6 +115,7 @@ const Learn = observer(() => {
     const glossary = React.useMemo(getGlossary, []);
     const checklist = React.useMemo(getChecklist, []);
     const { telegram_url, telegram_name } = getCommunityConfig();
+    const { numbers: whatsapp_numbers } = getWhatsAppConfig();
 
     const [tab, setTab] = React.useState(topics[0].id);
     const [search, setSearch] = React.useState('');
@@ -262,6 +320,7 @@ const Learn = observer(() => {
             </section>
 
             <CommunityCard url={telegram_url} name={telegram_name} />
+            <WhatsAppCard numbers={whatsapp_numbers} />
         </main>
     );
 });

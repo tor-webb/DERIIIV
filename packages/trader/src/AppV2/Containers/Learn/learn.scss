@@ -13,6 +13,7 @@
     &__tabs,
     &__content,
     &__checklist,
+    &__whatsapp,
     &__community {
         max-width: 96rem;
         margin-left: auto;
@@ -160,6 +161,7 @@
 
     &__lesson,
     &__checklist,
+    &__whatsapp,
     &__community {
         box-sizing: border-box;
         display: flex;
@@ -173,6 +175,7 @@
     }
 
     &__checklist,
+    &__whatsapp,
     &__community {
         margin-top: 2.4rem;
     }
@@ -232,6 +235,17 @@
     &__button {
         background-color: var(--brand-primary);
         color: var(--brand-white);
+    }
+
+    &__textarea {
+        resize: vertical;
+        font-family: inherit;
+    }
+
+    &__whatsapp-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
     }
 
     &__soon {

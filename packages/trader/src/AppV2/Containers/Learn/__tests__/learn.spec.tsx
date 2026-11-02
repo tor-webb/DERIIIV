@@ -148,4 +148,44 @@ describe('<Learn />', () => {
             expect(screen.getByTestId('dt_learn_check_demo')).not.toBeChecked();
         });
     });
+
+    describe('WhatsApp', () => {
+        it('shows a link for each number that opens a chat', () => {
+            renderPage();
+            expect(screen.getByTestId('dt_learn_whatsapp')).toHaveTextContent('Ask us on WhatsApp');
+            const first = screen.getByTestId('dt_learn_whatsapp_link_0');
+            const second = screen.getByTestId('dt_learn_whatsapp_link_1');
+            expect(first).toHaveTextContent('WhatsApp +254748404496');
+            expect(second).toHaveTextContent('WhatsApp +13074573763');
+            expect(first).toHaveAttribute('href', expect.stringMatching(/^https:\/\/wa\.me\/254748404496\?text=/));
+            expect(second).toHaveAttribute('href', expect.stringMatching(/^https:\/\/wa\.me\/13074573763\?text=/));
+            expect(first).toHaveAttribute('target', '_blank');
+            expect(first).toHaveAttribute('rel', expect.stringContaining('noopener'));
+        });
+
+        it('puts the typed question into both links', () => {
+            renderPage();
+            fireEvent.change(screen.getByTestId('dt_learn_whatsapp_question'), {
+                target: { value: 'How do I start on a demo account?' },
+            });
+            ['dt_learn_whatsapp_link_0', 'dt_learn_whatsapp_link_1'].forEach(id => {
+                const url = new URL(screen.getByTestId(id).getAttribute('href') as string);
+                expect(url.searchParams.get('text')).toMatch(/question about .*: How do I start on a demo account\?$/);
+            });
+        });
+
+        it('sends a plain greeting when nothing is typed', () => {
+            renderPage();
+            const url = new URL(screen.getByTestId('dt_learn_whatsapp_link_0').getAttribute('href') as string);
+            expect(url.searchParams.get('text')).toMatch(/^Hello, I have a question about .+\.$/);
+        });
+
+        it('limits the question length and warns never to share passwords', () => {
+            renderPage();
+            expect(screen.getByTestId('dt_learn_whatsapp_question')).toHaveAttribute('maxlength', '500');
+            expect(screen.getByTestId('dt_learn_whatsapp')).toHaveTextContent(
+                'Never send passwords, codes or card details'
+            );
+        });
+    });
 });
