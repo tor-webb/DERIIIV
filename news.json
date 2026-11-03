@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T07:06:20.678Z",
+ "updated": "2026-11-03T15:23:39.246Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,31 +12,328 @@
  },
  "items": [
   {
-   "id": "er8rt1",
-   "title": "Apple unsure when more foldable iPhones will be available after selling out",
-   "link": "https://www.bbc.co.uk/news/articles/c6n8dn457ypko?at_medium=RSS&at_campaign=rss",
-   "summary": "Apple’s foldable iPhone Duo was a hit with people willing to spend $2,000 on a new mobile.",
-   "published": "2026-11-03T07:03:03.000Z",
+   "id": "z48fe2",
+   "title": "Stock market after midterm elections: What S&P 500 history shows",
+   "link": "https://www.cnbc.com/2026/11/02/stock-market-after-midterm-elections-sp-500-history.html",
+   "summary": "Midterms historically precede a strong year for the S&P 500. What to know if Democrats win back Congress",
+   "published": "2026-11-03T15:19:38.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "mk2s1m",
+   "title": "Asda hires ex-Morrisons boss in bid to grow firm",
+   "link": "https://www.bbc.co.uk/news/articles/c6vg0xzd0ln4o?at_medium=RSS&at_campaign=rss",
+   "summary": "David Potts takes charge of Asda, which is based in Leeds, with immediate effect.",
+   "published": "2026-11-03T15:12:35.000Z",
    "source": "BBC Business",
    "category": "economy"
   },
   {
-   "id": "1qdjn50",
-   "title": "US-Iran deal still out of reach despite fresh diplomatic hopes ahead of US midterms",
-   "link": "https://investinglive.com/news/us-iran-deal-still-out-of-reach-despite-fresh-diplomatic-hopes-ahead-of-us-midterms/",
-   "summary": "And round and round we go. We started the week with renewed optimism that the US and Iran might finally be inching towards a diplomatic breakthrough. That led to oil prices tumbling on Monday as hopes of a potential…",
-   "published": "2026-11-03T06:56:06.000Z",
+   "id": "t8nfbk",
+   "title": "Mining giant joins fight to stop killer toad march across Australia",
+   "link": "https://www.bbc.co.uk/news/articles/c3dxw8p99ervo?at_medium=RSS&at_campaign=rss",
+   "summary": "Rio Tinto is jointly funding a A$28m \"toad containment zoe\" to protect the Pilbara region.",
+   "published": "2026-11-03T15:05:01.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1ovep5o",
+   "title": "Tough to buy into the Iran headlines in the context of the election",
+   "link": "https://investinglive.com/news/tough-to-buy-into-the-iran-headlines-in-the-context-of-the-election/",
+   "summary": "There are more headlines crossing suggesting positive developments in Iran-US talks, with Al-Arabiya now carrying similar headlines to the earlier ones that weighed on oil. In contrast, here is Iran security chief…",
+   "published": "2026-11-03T14:36:49.000Z",
    "source": "investingLive",
    "category": "forex"
   },
   {
-   "id": "rtfvf7",
-   "title": "HFM Brings a New Trading Experience to The Trading Festival Mexico 2026",
-   "link": "https://investinglive.com/education/hfm-brings-a-new-trading-experience-to-the-trading-festival-mexico-2027/",
-   "summary": "As access to global financial markets continues to evolve, traders are looking beyond the number of instruments a broker offers. Trust, flexibility, technology and trading conditions are increasingly central to the…",
-   "published": "2026-11-03T06:54:53.000Z",
+   "id": "a1e12j",
+   "title": "Bitcoin sellers had their shot and missed. Now it is the buyers’ turn.",
+   "link": "https://investinglive.com/cryptocurrency/bitcoin-sellers-had-their-shot-and-missed-now-it-is-the-buyers-turn/",
+   "summary": "Sellers could not deliver the downside break The bitcoin sellers had their opportunity to take more control. On Friday, Monday and again today, the price traded to (and even below today) its 100 day moving average,…",
+   "published": "2026-11-03T14:06:36.000Z",
    "source": "investingLive",
    "category": "forex"
+  },
+  {
+   "id": "11olgar",
+   "title": "What’s at stake for crypto as the US votes in the 2026 midterms?",
+   "link": "https://cointelegraph.com/news/us-midterms-2026-stake-crypto-election-day?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Crypto groups spent about $176 million ahead of the US midterms, with control of Congress and the future of crypto legislation at stake.",
+   "published": "2026-11-03T13:53:07.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-11-03T13:50:51.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "i2bccr",
+   "title": "Trump on Israel: The aid gets cut off at year-end",
+   "link": "https://investinglive.com/news/trump-on-israel-the-aid-gets-cut-off-at-year-end/",
+   "summary": "Trump spoke on Fox News and Israel came up. The comments appear to be putting some downward pressure on oil, with the sense that there are some lines being drawn between the US and Israel. The market is extending that…",
+   "published": "2026-11-03T13:46:40.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "84xxk1",
+   "title": "How markets price geopolitical risk: Why de-escalation headlines can trigger major market moves",
+   "link": "https://investinglive.com/education/how-markets-price-geopolitical-risk-why-de-escalation-headlines-can-trigger-major-market-moves/",
+   "summary": "Geopolitical events can have a significant impact on financial markets, especially when they threaten global energy supplies, trade routes or economic stability. Markets constantly assess the potential economic…",
+   "published": "2026-11-03T13:42:39.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "12l7fno",
+   "title": "Never tell me the odds: Prediction markets see Democrats taking control of House and Senate",
+   "link": "https://investinglive.com/news/never-tell-me-the-odds-prediction-markets-see-democrats-taking-control-of-house-and-senate/",
+   "summary": "Prediction markets are pointing to a Democratic sweep of Congress in today's US midterm elections, with the odds of Democrats taking control of the Senate rising sharply in recent weeks. As of around 8 am ET on…",
+   "published": "2026-11-03T13:38:23.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1uihbsa",
+   "title": "Texas governor race tightens in prediction markets, but Abbott remains favored",
+   "link": "https://www.cnbc.com/2026/11/02/texas-governor-prediction-markets-abbott-hinojosa.html",
+   "summary": "Prediction markets still show the Republican incumbent favored to win a fourth term, but the odds have narrowed in recent weeks.",
+   "published": "2026-11-03T13:33:11.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "mx9bwd",
+   "title": "Moscow Exchange to launch Bitcoin, Ether and USDT trading in December",
+   "link": "https://cointelegraph.com/news/moscow-exchange-bitcoin-ether-usdt-trading-december?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Moscow Exchange plans to launch crypto trading on Dec. 1 under Russia’s new law, with annual purchase limits for non-qualified investors.",
+   "published": "2026-11-03T13:15:47.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1aqhiyt",
+   "title": "Morning Kickstart: Election uncertainty, Iran tensions and rising yields frame the session",
+   "link": "https://investinglive.com/technical-analysis/morning-kickstart-election-uncertainty-iran-tensions-and-rising-yields-frame-the-session/",
+   "summary": "The balance of power is up for grabs as US voters head to the polls for the midterm elections. For traders, however, the election outcome is an after-the-close event. The North American session will first have to…",
+   "published": "2026-11-03T13:13:19.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "sv5fdo",
+   "title": "Stocks making the biggest moves premarket: Pfizer, Apple, Palantir, Zebra Technologies & more",
+   "link": "https://www.cnbc.com/2026/11/03/stocks-making-the-biggest-moves-premarket-pfe-pltr-aapl-zbra.html",
+   "summary": "These are the stocks posting the largest moves premarket.",
+   "published": "2026-11-03T12:47:45.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "1nep3pd",
+   "title": "NEAR token sinks 7% as proposal to cut annual token issuance passes",
+   "link": "https://cointelegraph.com/markets/near-sinks-7-proposal-cut-annual-token-issuance-passes?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The proposed issuance cut would prevent 11.8 million NEAR from entering circulation over two years, worth about $45 million at today’s price.",
+   "published": "2026-11-03T12:30:13.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1p7euv0",
+   "title": "investingLive European news wrap: Markets remain cautious as focus shifts to US midterm elections",
+   "link": "https://investinglive.com/news/investinglive-european-news-wrap-markets-remain-cautious-as-focus-shifts-to-us-midterm-elections/",
+   "summary": "Headlines: The S&P 500 stays on the back foot amid geopolitical uncertainty as US midterm elections loom. What's next? Solana remains under pressure as markets weigh US-Iran talks, Fed risks and US midterm elections…",
+   "published": "2026-11-03T12:28:15.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "108dca7",
+   "title": "UK and EU agree draft deal to scrap Brexit red tape over food exports",
+   "link": "https://www.bbc.co.uk/news/articles/cmp3grwre9xdo?at_medium=RSS&at_campaign=rss",
+   "summary": "The food deal, ahead of a UK-EU summit later this month, is the most significant part of the so-called Brexit reset agreed so far.",
+   "published": "2026-11-03T12:07:59.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "el63p6",
+   "title": "Squeezing the Lemon: Why Brokers' Growth Is Already in Their Systems",
+   "link": "https://investinglive.com/education/squeezing-the-lemon-why-brokers-growth-is-already-in-their-systems/",
+   "summary": "On November 24, Alex Piliavsky joins the panel \"Your Broker's Growth Is Elsewhere: Ahead of 2027\" on the Craft Stage at Old Billingsgate. He plans to argue that it isn't elsewhere at all. Piliavsky began his career at…",
+   "published": "2026-11-03T12:07:50.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "oo5gcv",
+   "title": "Drivers may get compensation offers before car finance saga ends",
+   "link": "https://www.bbc.co.uk/news/articles/cqrky5nxxn4po?at_medium=RSS&at_campaign=rss",
+   "summary": "The regulator says it supports lenders offering early compensation offers, as long as they are fair.",
+   "published": "2026-11-03T11:56:31.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1sa93ed",
+   "title": "Binance’s net inflows turn positive at $2.3B as withdrawals expand",
+   "link": "https://cointelegraph.com/news/binances-daily-inflows-positive-18b-withdrawals?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Binance led exchanges in 24-hour net inflows, reversing Monday’s heavy outflows as it restored access to funds after its $6.3 billion hack.",
+   "published": "2026-11-03T11:32:02.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "wggh9t",
+   "title": "The S&P 500 stays on the back foot amid geopolitical uncertainty as US midterm elections loom. What's next?",
+   "link": "https://investinglive.com/stocks/the-s-p-500-stays-on-the-back-foot-amid-geopolitical-uncertainty-as-us-midterm-elections-loom-what-s-next/",
+   "summary": "The S&P 500 sold off sharply last week as weakness in technology and AI-related stocks weighed on the index. Concerns about the profitability of massive AI investments, disappointing corporate earnings and rising…",
+   "published": "2026-11-03T11:21:24.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "vm053b",
+   "title": "'Quiet quitting' could be hitting the economy - here's why",
+   "link": "https://www.bbc.co.uk/news/articles/cw23d5z87drpo?at_medium=RSS&at_campaign=rss",
+   "summary": "Britons have become less engaged with the jobs they do and are less willing to put in extra effort, a report has found.",
+   "published": "2026-11-03T11:15:51.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "er8rt1",
+   "title": "Apple unsure when it will get more foldable iPhones ahead of Christmas",
+   "link": "https://www.bbc.co.uk/news/articles/c6n8dn457ypko?at_medium=RSS&at_campaign=rss",
+   "summary": "The tech giant reports strong sales but admits \"constraints\" are affecting supplies of the iPhone Duo.",
+   "published": "2026-11-03T11:10:37.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "sn64fp",
+   "title": "‘In the trenches’: Wisconsin’s struggling small businesses could turn a Trump ally’s district blue",
+   "link": "https://www.theguardian.com/us-news/2026/nov/03/small-business-economy-wisconsin-house-race",
+   "summary": "Affordability and small businesses’ economic woes feature heavily in the House race for Wisconsin’s third district After 18 years in business, Erin Klaus is closing her storefront, a handmade artisan market in downtown…",
+   "published": "2026-11-03T11:00:57.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "pr482",
+   "title": "Solana remains under pressure as markets weigh US-Iran talks, Fed risks and US midterm elections",
+   "link": "https://investinglive.com/cryptocurrency/solana-remains-under-pressure-as-markets-weigh-us-iran-talks-fed-risks-and-us-midterm-elections/",
+   "summary": "Solana sold off sharply on Thursday following the news of the Binance hack, with concerns about potential contagion across the crypto ecosystem weighing on sentiment. The increase in liquidations amplified the…",
+   "published": "2026-11-03T10:54:55.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "127183j",
+   "title": "France postpones 2027 budget vote, crypto exit-tax proposals scrapped",
+   "link": "https://cointelegraph.com/news/france-postpones-2027-budget-vote-reject-crypto-exit-tax?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The National Assembly postponed the vote on the budget’s revenue section for the second time, while the Nov. 17 deadline for the first reading examination nears.",
+   "published": "2026-11-03T10:49:26.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1avxj85",
+   "title": "Crude oil trims losses as US strikes Iran's Qeshm Island while CIA Director calls for continued economic pressure",
+   "link": "https://investinglive.com/commodities/crude-oil-trims-losses-as-us-strikes-iran-s-qeshm-island-while-cia-director-calls-for-continued-economic-pressure/",
+   "summary": "Crude oil extended the losses yesterday as hopes for a US-Iran deal strengthened after Iran’s President said the Supreme Leader had granted the government additional authority regarding negotiations. Markets…",
+   "published": "2026-11-03T10:27:05.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "wgh9jf",
+   "title": "Three warning signs the tech selloff isn't over as Wall Street sentiment hangs by a thread",
+   "link": "https://investinglive.com/stocks/three-warning-signs-the-tech-selloff-isn-t-over-as-wall-street-sentiment-hangs-by-a-thread/",
+   "summary": "It's not the first time this year that Wall Street is being put in a position with its back against the wall this year. But somehow, there is a different air of vulnerability to the latest selloff in tech shares than…",
+   "published": "2026-11-03T10:11:58.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "ep6a9",
+   "title": "Bitcoin price threatens $77.7K support loss with recent buyers underwater",
+   "link": "https://cointelegraph.com/markets/bitcoin-price-support-loss-recent-buyers-underwater?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Bitcoin fell below the realized price of the one-to-three-month-old buyer cohort in a move that risked flipping it to new resistance.",
+   "published": "2026-11-03T10:04:05.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1ay4hpk",
+   "title": "Regulators explore credit union reforms to support growth, innovation and better outcomes for members",
+   "link": "https://www.bankofengland.co.uk/news/2026/november/regulators-explore-credit-union-reforms-to-support-growth-innovation-and-better-outcomes-for-members",
+   "summary": "Credit unions could benefit from several ideas put forward today by the Prudential Regulation Authority and Financial Conduct Authority aimed at helping the sector grow, innovate and meet the changing needs of their…",
+   "published": "2026-11-03T10:00:00.000Z",
+   "source": "Bank of England",
+   "category": "economy"
+  },
+  {
+   "id": "tg6f08",
+   "title": "Apple warns of ‘unprecedented’ rise in memory chip prices",
+   "link": "https://www.theguardian.com/technology/2026/nov/02/apple-third-quarter-revenue-earnings",
+   "summary": "iPhone maker says decision to raise prices has offset some of impact, as revenues are stronger than expected Business live – latest updates Apple has warned of an “unprecedented” rise in memory chip prices, as it…",
+   "published": "2026-11-03T09:01:19.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "1iyhdji",
+   "title": "ARK buys $17M in Coinbase, Circle shares while trimming Bullish",
+   "link": "https://cointelegraph.com/news/ark-buys-coinbase-circle-trims-bullish?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "ARK Invest added Coinbase and Circle shares across two trading sessions while selling about $8 million in Bullish as crypto stocks declined.",
+   "published": "2026-11-03T08:35:13.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1r2x6u7",
+   "title": "North Korea denies being behind record $6.3bn Binance hack",
+   "link": "https://www.bbc.co.uk/news/articles/c6rey4v53exgo?at_medium=RSS&at_campaign=rss",
+   "summary": "US government agencies and cyber analysts have blamed Pyongyang for the record-breaking heist.",
+   "published": "2026-11-03T08:33:20.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "ve8ya7",
+   "title": "Kraken restricts accounts amid suspected $133M EU crypto theft",
+   "link": "https://cointelegraph.com/news/zachxbt-eu-crypto-theft-133m-alleged-cover-up?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Crypto.com also took steps to block funds tied to the suspected theft, while Kraken said its systems and customer accounts were not compromised.",
+   "published": "2026-11-03T08:18:22.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "fhlie5",
+   "title": "From scooters to shampoo - the people saving hundreds from dumpster diving",
+   "link": "https://www.bbc.co.uk/news/articles/cm86zdp2ygqno?at_medium=RSS&at_campaign=rss",
+   "summary": "The men and women who rummage through commercial bins to take clothes and other items.",
+   "published": "2026-11-03T07:50:14.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "3ydgmp",
+   "title": "BlackRock’s IBIT sees biggest Bitcoin ETF outflows since June",
+   "link": "https://cointelegraph.com/markets/blackrocks-ibit-biggest-bitcoin-etf-outflow-june?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "BlackRock’s Bitcoin ETF shed $405.3 million on Monday as US spot Bitcoin funds opened November with nearly $399 million in net outflows.",
+   "published": "2026-11-03T07:49:51.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
   },
   {
    "id": "1vhey5m",
@@ -48,42 +345,6 @@
    "category": "markets"
   },
   {
-   "id": "dxm6fr",
-   "title": "FX option expiries for 3 November 10am New York cut",
-   "link": "https://investinglive.com/orders/fx-option-expiries-for-3-november-10am-new-york-cut/",
-   "summary": "There is just one key expiry level to take note of on the day, as highlighted in bold below. That being for EUR/USD at the 1.1200 level, which sits less than 10 pips away from the spot price. The expiries could help…",
-   "published": "2026-11-03T06:25:56.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1r2x6u7",
-   "title": "North Korea denies being behind record $6.3bn Binance hack",
-   "link": "https://www.bbc.co.uk/news/articles/c6rey4v53exgo?at_medium=RSS&at_campaign=rss",
-   "summary": "US government agencies and cyber analysts have blamed Pyongyang for the record-breaking heist.",
-   "published": "2026-11-03T06:22:29.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-11-03T06:00:00.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1iypo4p",
-   "title": "RBA governor Bullock says it might be that this rate hike might not be enough",
-   "link": "https://investinglive.com/central-banks/rba-governor-bullock-says-it-might-be-that-this-rate-hike-might-not-be-enough/",
-   "summary": "In case you missed it, the RBA raised its cash rate by 25 bps to 4.85% today in a less straightforward 6-3 vote. That takes the cash rate to the highest level in 18 years, with the central bank trying not to pre-commit…",
-   "published": "2026-11-03T05:28:40.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1fxq4i7",
    "title": "Crypto.com to withdraw Hong Kong consumer app citing regulatory changes",
    "link": "https://cointelegraph.com/news/crypto-com-hong-kong-app-shutdown-license-pending?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -91,33 +352,6 @@
    "published": "2026-11-03T05:10:19.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "9xpbxo",
-   "title": "Apple earnings beat fails to impress Wall Street as tech shares struggle ahead of US midterms",
-   "link": "https://investinglive.com/stocks/apple-earnings-beat-fails-to-impress-wall-street-as-tech-shares-struggle-ahead-of-us-midterms/",
-   "summary": "Another week and it's another big tech name that is finding out that even beating earnings estimates isn't good enough for Wall Street these days. Apple is that next big name to be struck down and the timing couldn't…",
-   "published": "2026-11-03T04:52:07.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1867nmt",
-   "title": "RBA’s Bullock offers no guidance, says it is probably good to wait for data after hike",
-   "link": "https://investinglive.com/central-banks/rba-s-bullock-offers-no-guidance-says-it-is-probably-good-to-wait-for-data-after-hike/",
-   "summary": "Earlier: Bullock’s comments sent a mixed signal for the Australian dollar and the front end of the curve. Her warning that inflation is largely locked in for the next year, and that unemployment must rise further,…",
-   "published": "2026-11-03T04:44:44.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "dkgruz",
-   "title": "investingLive Asia-Pacific market news: RBA hikes to 18-year high",
-   "link": "https://investinglive.com/news/investinglive-asia-pacific-market-news-rba-hikes-to-18-year-high/",
-   "summary": "Apple and Palantir beat earnings. Why did both stocks fall? More: RBA lifts cash rate to 4.85% in split 6-3 vote, sees inflation above 3% until late 2027 Reserve Bank of Australia (RBA) 25bp rate hike, as widely…",
-   "published": "2026-11-03T04:19:24.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "edfu3f",
@@ -129,69 +363,6 @@
    "category": "crypto"
   },
   {
-   "id": "sidlti",
-   "title": "UK warns AI ransomware attack on infrastructure ‘highly likely’ by 2028",
-   "link": "https://cointelegraph.com/news/uk-warns-ai-ransomware-attack-on-infrastructure-highly-likely-by-2028?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The warning comes as UK cyber officials also flag growing threats from state-backed hackers targeting government officials and politicians.",
-   "published": "2026-11-03T03:58:45.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1ql7j7g",
-   "title": "Apple and Palantir beat earnings. Why did both stocks fall?",
-   "link": "https://investinglive.com/stocks/apple-and-palantir-beat-earnings-why-did-both-stocks-fall/",
-   "summary": "Apple and Palantir beat earnings. Wall Street is still hard to impress Apple's profit-margin outlook and Palantir's demanding growth expectations have left investors cautious despite strong reported numbers. Our…",
-   "published": "2026-11-03T03:55:32.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1a0ibtt",
-   "title": "More: RBA lifts cash rate to 4.85% in split 6-3 vote, sees inflation above 3% until late 2027",
-   "link": "https://investinglive.com/central-banks/more-rba-lifts-cash-rate-to-4-85-in-split-6-3-vote-sees-inflation-above-3-until-late-2027/",
-   "summary": "For the Australian dollar, the hike delivers little that was not already priced. Markets had assigned an 85% chance to the move, and around one and a half increases by mid-2027 were priced before the meeting. The…",
-   "published": "2026-11-03T03:39:21.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1sr6k4a",
-   "title": "Reserve Bank of Australia (RBA) 25bp rate hike, as widely expected",
-   "link": "https://investinglive.com/central-banks/reserve-bank-of-australia-rba-25bp-rate-hike-as-widely-expected/",
-   "summary": "The Reserve Bank of Australia raised its cash rate by 25 basis points to 4.85% on Tuesday, its fifth increase of 2026 and the highest level since 2008. The decision was far from unanimous, though: six board members…",
-   "published": "2026-11-03T03:30:15.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1c4e2qq",
-   "title": "After the Binance hack, the simple security rule regulators keep coming back to, hot vs. cold wallets",
-   "link": "https://investinglive.com/education/after-the-binance-hack-the-simple-security-rule-regulators-keep-coming-back-to-hot-vs-cold-wallets/",
-   "summary": "South Korea's financial regulator wants local crypto exchanges to keep more customer assets in cold wallets, offline storage that hackers cannot reach over the internet. The push follows last week's $6.3 billion theft…",
-   "published": "2026-11-03T03:21:07.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "4mu3gi",
-   "title": "Binance begins second withdrawal phase, exchange outflows slow",
-   "link": "https://cointelegraph.com/news/binance-begins-second-withdrawal-phase-following-record-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The exchange says additional assets will become available for withdrawal from 04:00 UTC on Tuesday as security checks are completed, following an initial reopening on Sunday.",
-   "published": "2026-11-03T03:03:44.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1ruuxqa",
-   "title": "Nasdaq’s worst month since March 2025 puts returns on AI spending in focus, says BlackRock",
-   "link": "https://investinglive.com/stocks/nasdaq-s-worst-month-since-march-2025-puts-returns-on-ai-spending-in-focus-says-blackrock/",
-   "summary": "The flip in earnings leadership supports a broadening of the US equity market away from megacap tech. That favours equal-weight and non-tech exposure over the concentrated index leaders. BlackRock’s emphasis on credit…",
-   "published": "2026-11-03T02:52:50.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1etljb4",
    "title": "Christmas 2026 stamps unveiled by Royal Mail",
    "link": "https://www.bbc.co.uk/news/articles/cw62yeq7958ro?at_medium=RSS&at_campaign=rss",
@@ -201,96 +372,6 @@
    "category": "economy"
   },
   {
-   "id": "108dca7",
-   "title": "UK and EU agree draft deal to scrap Brexit red tape over food exports",
-   "link": "https://www.bbc.co.uk/news/articles/cmp3grwre9xdo?at_medium=RSS&at_campaign=rss",
-   "summary": "The food deal, ahead of a UK-EU summit later this month, is the most significant part of the so-called Brexit reset agreed so far.",
-   "published": "2026-11-03T02:11:13.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "1t6qmpd",
-   "title": "South Korea urges exchanges to boost cold storage after Binance hack",
-   "link": "https://cointelegraph.com/news/south-korea-urges-exchanges-to-boost-cold-storage-after-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "South Korean crypto exchanges are already required to hold at least 80% of customer crypto in cold wallets, but the regulator is urging more.",
-   "published": "2026-11-03T01:32:39.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "fhlie5",
-   "title": "From scooters to shampoo - the people saving hundreds from dumpster diving",
-   "link": "https://www.bbc.co.uk/news/articles/cm86zdp2ygqno?at_medium=RSS&at_campaign=rss",
-   "summary": "The men and women who rummage through commercial bins to take clothes and other items.",
-   "published": "2026-11-03T00:41:36.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "z48fe2",
-   "title": "Stock market after midterm elections: What S&P 500 history shows",
-   "link": "https://www.cnbc.com/2026/11/02/stock-market-after-midterm-elections-sp-500-history.html",
-   "summary": "Midterms historically precede a strong year for the S&P 500. What to know if Democrats win back Congress",
-   "published": "2026-11-02T23:13:34.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
-   "id": "kyklyg",
-   "title": "North Korea denies role in $6.3B Binance hack, points finger at US",
-   "link": "https://cointelegraph.com/news/north-korea-denies-role-in-63b-binance-hack-points-finger-at-us?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Pyongyang has pushed back against the FBI’s attribution of the Binance attack, with Kim Yo Jong calling the US allegations politically motivated.",
-   "published": "2026-11-02T23:07:07.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1hqwsmk",
-   "title": "New Jersey drops Coinbase staking order ahead of crypto’s midterm test",
-   "link": "https://cointelegraph.com/news/new-jersey-coinbase-staking?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "New Jersey lifted its staking ban and dropped a $5 million penalty, clearing the way for Coinbase to restore staking access for users in the US state.",
-   "published": "2026-11-02T22:22:30.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "nwsno7",
-   "title": "AI poses greater threat to Bitcoin than quantum computing, Swan founder says",
-   "link": "https://cointelegraph.com/news/ai-hackers-threat-bitcoin-quantum-computing-swan?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The Swan Bitcoin founder warned that hackers are using large language models to exploit security flaws with just a few prompts.",
-   "published": "2026-11-02T21:54:41.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "stctmh",
-   "title": "Crypto investigators flag suspected $106M theft, $786K Solana bot drain",
-   "link": "https://cointelegraph.com/news/zachxbt-flags-suspected-106m-crypto-theft-as-solana-bot-faces-possible-786k-drain?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "A European entity may have lost $106 million from exchange accounts, while a wallet associated with a Solana arbitrage bot may have lost another $786,000.",
-   "published": "2026-11-02T21:16:24.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1uihbsa",
-   "title": "Texas governor race tightens in prediction markets, but Abbott remains favored",
-   "link": "https://www.cnbc.com/2026/11/02/texas-governor-prediction-markets-abbott-hinojosa.html",
-   "summary": "Prediction markets still show the Republican incumbent favored to win a fourth term, but the odds have narrowed in recent weeks.",
-   "published": "2026-11-02T21:13:43.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
-   "id": "1noazwc",
-   "title": "Coinbase hit with 50% price target cut as post-earnings rout deepens",
-   "link": "https://cointelegraph.com/news/morgan-stanley-cuts-coinbase-target-to-120-as-earnings-recovery-outlook-weakens?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Slowing trading activity and fallout from the Binance hack are clouding Coinbase’s revenue prospects, prompting Morgan Stanley to lower its rating on the stock.",
-   "published": "2026-11-02T20:22:23.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "oj721d",
    "title": "Stocks making the biggest moves midday: Oracle, SpaceX, Tempus AI, Rivian & more",
    "link": "https://www.cnbc.com/2026/11/02/stocks-making-the-biggest-moves-midday-orcl-spcx-tem-rivn.html",
@@ -298,15 +379,6 @@
    "published": "2026-11-02T20:00:16.000Z",
    "source": "CNBC Finance",
    "category": "markets"
-  },
-  {
-   "id": "1c7h79g",
-   "title": "Bitcoin risks drop below $76K as 7% oil slide fails to spark BTC price rally",
-   "link": "https://cointelegraph.com/markets/bitcoin-risks-sub-76k-drop-as-7-fall-in-oil-fails-to-spark-btc-price-rally?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitcoin fell around 1.7% on Monday as stocks pared early gains fueled by hopes of a diplomatic resolution to the US-Iran war.",
-   "published": "2026-11-02T19:27:58.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "134lgwa",
@@ -381,33 +453,6 @@
    "category": "economy"
   },
   {
-   "id": "15j1k0a",
-   "title": "Binance users withdraw $3.6bn after largest-ever crypto hack",
-   "link": "https://www.bbc.co.uk/news/articles/cwj34gdmnly4o?at_medium=RSS&at_campaign=rss",
-   "summary": "The exchange froze transactions following the incident which has been linked to a North Korean group.",
-   "published": "2026-11-02T07:42:33.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "9bqmr0",
-   "title": "Don't get caught out by new Buy Now Pay Later rules",
-   "link": "https://www.bbc.co.uk/news/articles/crpdgp4y017go?at_medium=RSS&at_campaign=rss",
-   "summary": "New affordability checks mean you could be blocked from using Buy Now Pay Later but here are ways to avoid it.",
-   "published": "2026-11-01T23:34:49.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "i0mizc",
-   "title": "Virgin Media O2 set to cut thousands of jobs to reduce costs",
-   "link": "https://www.bbc.co.uk/news/articles/c6rry8x9d9qko?at_medium=RSS&at_campaign=rss",
-   "summary": "The broadband firm has not finalised numbers but it is likely be a sizeable chunk of staff, the BBC understands.",
-   "published": "2026-11-01T16:57:14.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "8ulhl8",
    "title": "The US-China trade war seems to have subsided – but the sense of calm is misleading",
    "link": "https://www.theguardian.com/world/2026/nov/01/us-china-trade-war-trump-xi",
@@ -423,15 +468,6 @@
    "summary": "Cost of living has loomed over this election cycle as workers and unions champion candidates fighting for higher wages and tackling rising prices For millions of Americans heading to the polls on Tuesday, affordability…",
    "published": "2026-11-01T12:00:11.000Z",
    "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "15afxz8",
-   "title": "No more washing up: How Airbnb's new house rules have divided hosts and guests",
-   "link": "https://www.bbc.co.uk/news/articles/ckjwez8g5dyeo?at_medium=RSS&at_campaign=rss",
-   "summary": "Airbnb hosts must stop asking guests to wash-up or take out bins under rules coming into force in November.",
-   "published": "2026-11-01T00:17:05.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
@@ -478,15 +514,6 @@
    "published": "2026-10-30T20:18:49.000Z",
    "source": "CNBC Finance",
    "category": "markets"
-  },
-  {
-   "id": "v3ustp",
-   "title": "Tech sell-off drives US markets down by nearly $1tn after subpar earnings reports",
-   "link": "https://www.theguardian.com/technology/2026/oct/30/tech-stocks-drop-earnings-report",
-   "summary": "Big tech stocks falter as investors question whether billions being poured into AI can generate returns quickly enough A sell-off of tech stocks that began earlier this month and gained steam with disappointing…",
-   "published": "2026-10-30T18:27:51.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
   },
   {
    "id": "1hbjl4y",
@@ -570,15 +597,6 @@
    "category": "economy"
   },
   {
-   "id": "14lgmlw",
-   "title": "Aon CEO warns AI data center insurance risks could threaten financing",
-   "link": "https://www.cnbc.com/2026/10/29/aon-ai-data-center-insurance-financing.html",
-   "summary": "Aon CEO Greg Case said concentration risk at AI data centers could constrain insurance capacity and alter financing for new projects.",
-   "published": "2026-10-29T20:12:29.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
    "id": "9xtvwg",
    "title": "Piero Cipollone: Next-day securities settlement, tokenisation and the transformation of Europe’s financial infrastructure",
    "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261029~e9b57c3495.en.html",
@@ -612,15 +630,6 @@
    "summary": "",
    "published": "2026-10-29T13:15:00.000Z",
    "source": "ECB",
-   "category": "economy"
-  },
-  {
-   "id": "gyc0rt",
-   "title": "US economy grows faster than expected but inflation rises to 3.7%",
-   "link": "https://www.theguardian.com/business/2026/oct/29/economy-growth-third-quarter",
-   "summary": "Commerce department data contrasts with sharp deterioration in consumer sentiment as midterms loom The US economy grew faster than expected in the third quarter while inflation accelerated in September, according to…",
-   "published": "2026-10-29T13:09:00.000Z",
-   "source": "The Guardian Business",
    "category": "economy"
   },
   {
