@@ -24,8 +24,6 @@ const STATUS_TEXT = () => ({
     failed: localize('Not placed'),
 });
 
-const sideText = (side: 'CALL' | 'PUT') => (side === 'CALL' ? localize('Rise') : localize('Fall'));
-
 const tone = (value: number) => {
     if (value > 0) return 'voltrex__tone--buy';
     return value < 0 ? 'voltrex__tone--sell' : undefined;
@@ -50,7 +48,7 @@ const VoltrexActivity = ({ trades, events, stats, currency }: TProps) => {
                             <li key={trade.id} className='voltrex-list__item'>
                                 <strong>{trade.name}</strong>
                                 <span>
-                                    {sideText(trade.side)} · {trade.stake.toFixed(2)} ·{' '}
+                                    {trade.label} · {trade.stake.toFixed(2)} ·{' '}
                                     {trade.source === 'auto' ? localize('auto') : localize('manual')}
                                 </span>
                                 <span className='voltrex__badge voltrex__badge--running'>
@@ -72,8 +70,7 @@ const VoltrexActivity = ({ trades, events, stats, currency }: TProps) => {
                             <li key={trade.id} className='voltrex-list__item'>
                                 <strong>{trade.name}</strong>
                                 <span>
-                                    {sideText(trade.side)} ·{' '}
-                                    {trade.source === 'auto' ? localize('auto') : localize('manual')}
+                                    {trade.label} · {trade.source === 'auto' ? localize('auto') : localize('manual')}
                                 </span>
                                 <span
                                     className={classNames(

@@ -20,7 +20,9 @@ const trade = (overrides: Partial<TTrade> = {}): TTrade => ({
     id: 1,
     symbol: 'R_10',
     name: 'Volatility 10 Index',
-    side: 'CALL',
+    product: 'rise_fall',
+    contract_type: 'CALL',
+    label: 'Rise',
     stake: 1,
     duration: 5,
     duration_unit: 't',
@@ -127,7 +129,12 @@ describe('<VoltrexEngine />', () => {
     it('describes the latest trade as live, won, lost or not placed', () => {
         const { rerender } = render(<VoltrexEngine {...base} trades={[trade({ status: 'open' })]} />);
         expect(screen.getByTestId('voltrex-engine-trade')).toHaveTextContent('LIVE Rise');
-        rerender(<VoltrexEngine {...base} trades={[trade({ status: 'won', profit: 0.95, side: 'PUT' })]} />);
+        rerender(
+            <VoltrexEngine
+                {...base}
+                trades={[trade({ status: 'won', profit: 0.95, contract_type: 'PUT', label: 'Fall' })]}
+            />
+        );
         expect(screen.getByTestId('voltrex-engine-trade')).toHaveTextContent(
             'WON Fall · Volatility 10 Index · 1.00 +0.95'
         );

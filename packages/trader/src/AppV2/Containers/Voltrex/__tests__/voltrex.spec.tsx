@@ -1,4 +1,3 @@
-import { pacing, resetPacer } from '../voltrex-pacer';
 import { MemoryRouter } from 'react-router-dom';
 
 import { WS } from '@deriv/shared';
@@ -6,6 +5,7 @@ import { mockStore, StoreProvider } from '@deriv/stores';
 import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 
 import Voltrex from '../voltrex';
+import { pacing, resetPacer } from '../voltrex-pacer';
 
 jest.mock('@deriv-com/translations', () => ({
     Localize: ({ i18n_default_text }: { i18n_default_text: string }) => <>{i18n_default_text}</>,
