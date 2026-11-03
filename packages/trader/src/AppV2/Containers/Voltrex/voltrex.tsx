@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { observer, useStore } from '@deriv/stores';
 import { localize } from '@deriv-com/translations';
 
+import { useVoltrexDigits } from './use-voltrex-digits';
 import { useVoltrexScanner } from './use-voltrex-scanner';
 import { useVoltrexTrader } from './use-voltrex-trader';
 import VoltrexActivity from './voltrex-activity';
@@ -11,6 +12,8 @@ import type { TSignalDirection } from './voltrex-analysis';
 import { CONFIRM_FRAME, PRIMARY_FRAME } from './voltrex-config';
 import VoltrexDetail from './voltrex-detail';
 import VoltrexEngine from './voltrex-engine';
+import VoltrexLab from './voltrex-lab';
+import { isDigitProduct } from './voltrex-products';
 import VoltrexScannerTable from './voltrex-scanner-table';
 import { performance, signalChanges, TSignalEvent } from './voltrex-stats';
 import { DEFAULT_FILTERS, TSortDirection, TSortKey, TTableFilters } from './voltrex-table';
@@ -19,6 +22,8 @@ import VoltrexTradePanel from './voltrex-trade-panel';
 import './voltrex.scss';
 
 const MAX_EVENTS = 40;
+const MAX_DIGIT_MARKETS = 30;
+const DIGIT_CATEGORIES = ['volatility', 'jump', 'step', 'other_synthetic'];
 
 type TView = 'scan' | 'market' | 'trade' | 'activity';
 
@@ -44,9 +49,32 @@ const Voltrex = observer(() => {
     const top = React.useRef<HTMLElement>(null);
     const last_seen = React.useRef<Record<string, TSignalDirection>>({});
 
-    const scanner = useVoltrexScanner({ selected });
+    // markets whose last digits are followed: the selected one, and (while auto-trading uses a digit contract) every
+    // open synthetic market in its categories
+    const [digit_markets, setDigitMarkets] = React.useState<{ symbol: string; pip_size: number }[]>([]);
+    const digit_key = digit_markets.map(item => item.symbol).join(',');
+    const digits = useVoltrexDigits(digit_markets);
+    const scanner = useVoltrexScanner({ selected, extra_live: digit_markets.map(item => item.symbol) });
     const { rows, updated_at } = scanner;
-    const trader = useVoltrexTrader(rows);
+    const trader = useVoltrexTrader(rows, digits.getDigits);
+    const auto_scope = trader.snapshot.auto_scope;
+    const wants_digits = !!auto_scope?.products.some(isDigitProduct);
+    const scope_key = auto_scope ? auto_scope.categories.join(',') : '';
+
+    React.useEffect(() => {
+        const next = rows
+            .filter(
+                item =>
+                    item.is_open &&
+                    DIGIT_CATEGORIES.includes(item.category) &&
+                    (item.symbol === selected || (wants_digits && auto_scope?.categories.includes(item.category)))
+            )
+            .slice(0, MAX_DIGIT_MARKETS)
+            .map(item => ({ symbol: item.symbol, pip_size: item.pip_size }));
+        if (next.map(item => item.symbol).join(',') !== digit_key) setDigitMarkets(next);
+        // the auto-trading scope is read through its key
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [rows.length, selected, wants_digits, scope_key, digit_key]);
 
     // open the strongest signal once, so the side panel is not empty while the first markets load
     React.useEffect(() => {
@@ -187,6 +215,11 @@ const Voltrex = observer(() => {
                         confirm_label={CONFIRM_FRAME.label}
                         onTrade={() => show('trade')}
                     />
+                    <VoltrexLab
+                        row={row}
+                        stats={selected ? digits.getStats(selected) : null}
+                        min_strength={trader.risk.min_strength}
+                    />
                 </aside>
                 <div className='voltrex__trade'>
                     <VoltrexTradePanel
@@ -195,6 +228,7 @@ const Voltrex = observer(() => {
                         onSelect={setSelected}
                         trader={trader}
                         is_logged_in={client.is_logged_in}
+                        getStats={digits.getStats}
                     />
                 </div>
             </div>

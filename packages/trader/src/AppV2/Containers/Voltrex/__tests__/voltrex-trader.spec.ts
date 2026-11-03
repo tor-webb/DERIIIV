@@ -2,6 +2,7 @@ import type { TScanRow } from '../use-voltrex-scanner';
 import { analyseMarket } from '../voltrex-analysis';
 import { TRiseFallSpec } from '../voltrex-contracts';
 import { DEFAULT_RISK, emptyRiskState, TRiskSettings } from '../voltrex-risk';
+import { EMPTY_SPECS, TMarketSpecs } from '../voltrex-specs';
 import { TOrder, TTraderOptions, TTraderSnapshot, VoltrexTrader } from '../voltrex-trader';
 
 jest.mock('@deriv-com/translations', () => ({
@@ -16,6 +17,7 @@ type TFakeRunner = {
 };
 
 const SPEC: TRiseFallSpec = { ticks: { min: 1, max: 10 }, minutes: { min: 1, max: 60 } };
+const SPECS: TMarketSpecs = { ...EMPTY_SPECS, rise_fall: SPEC };
 
 const candles = (up: boolean) =>
     Array.from({ length: 120 }, (_item, index) => {
@@ -43,10 +45,8 @@ const row = (symbol: string, up = true, overrides: Partial<TScanRow> = {}): TSca
 const order = (overrides: Partial<TOrder> = {}): TOrder => ({
     symbol: 'R_100',
     name: 'Volatility 100 Index',
-    side: 'CALL',
+    choice: { product: 'rise_fall', contract_type: 'CALL', label: 'Rise', duration: 5, duration_unit: 't' },
     stake: 1,
-    duration: 5,
-    duration_unit: 't',
     source: 'manual',
     why: 'test',
     ...overrides,
@@ -127,7 +127,7 @@ const finish = (runner: TFakeRunner, profit: number, contract_id = 1) => {
 describe('placing a manual trade', () => {
     it('starts one engine run with a one-trade program, a stake cap and a loss cap equal to the stake', () => {
         const { trader, runners } = setup();
-        const result = trader.place(order({ stake: 2 }), SPEC);
+        const result = trader.place(order({ stake: 2 }), SPECS);
         expect(result.ok).toBe(true);
         expect(runners).toHaveLength(1);
         expect(runners[0].start).toHaveBeenCalledTimes(1);
@@ -143,7 +143,7 @@ describe('placing a manual trade', () => {
 
     it('follows the contract from placing to open, and records a win once', () => {
         const { trader, runners, last } = setup();
-        trader.place(order(), SPEC);
+        trader.place(order(), SPECS);
         expect(last().trades[0].status).toBe('placing');
         finish(runners[0], 0.95);
         const snapshot = last();
@@ -153,7 +153,7 @@ describe('placing a manual trade', () => {
 
     it('records a loss and counts it in the streak', () => {
         const { trader, runners, last } = setup();
-        trader.place(order(), SPEC);
+        trader.place(order(), SPECS);
         finish(runners[0], -1);
         expect(last().trades[0]).toMatchObject({ status: 'lost', profit: -1 });
         expect(last().risk).toMatchObject({ realised_profit: -1, consecutive_losses: 1 });
@@ -161,7 +161,7 @@ describe('placing a manual trade', () => {
 
     it('marks a run that placed nothing as failed and records no result', () => {
         const { trader, runners, last } = setup();
-        trader.place(order(), SPEC);
+        trader.place(order(), SPECS);
         runners[0].options.onStatus('stopped');
         expect(last().trades[0].status).toBe('failed');
         expect(last().risk).toMatchObject({ realised_profit: 0, consecutive_losses: 0, open_stakes: [] });
@@ -170,7 +170,7 @@ describe('placing a manual trade', () => {
     it('gives up a run that never opens a contract', () => {
         jest.useFakeTimers();
         const { trader, runners } = setup({ entry_timeout_ms: 1000 });
-        trader.place(order(), SPEC);
+        trader.place(order(), SPECS);
         jest.advanceTimersByTime(1001);
         expect(runners[0].stop).toHaveBeenCalled();
         jest.useRealTimers();
@@ -180,21 +180,24 @@ describe('placing a manual trade', () => {
 describe('refusing an order', () => {
     it('refuses, without starting anything, when a risk limit or a rule is broken', () => {
         const { trader, runners } = setup({ risk: { max_stake: 5 } });
-        const cases: [Partial<TOrder>, TRiseFallSpec | null][] = [
-            [{ stake: 6 }, SPEC],
-            [{ stake: 0 }, SPEC],
-            [{ duration: 99 }, SPEC],
-            [{ duration_unit: 'm', duration: 90 }, SPEC],
+        const rise = (duration: number, duration_unit: 't' | 'm'): Partial<TOrder> => ({
+            choice: { product: 'rise_fall', contract_type: 'CALL', label: 'Rise', duration, duration_unit },
+        });
+        const cases: [Partial<TOrder>, TMarketSpecs | null][] = [
+            [{ stake: 6 }, SPECS],
+            [{ stake: 0 }, SPECS],
+            [rise(99, 't'), SPECS],
+            [rise(90, 'm'), SPECS],
             [{}, null],
         ];
-        cases.forEach(([change, spec]) => expect(trader.place(order(change), spec).ok).toBe(false));
+        cases.forEach(([change, specs]) => expect(trader.place(order(change), specs).ok).toBe(false));
         expect(runners).toHaveLength(0);
     });
 
     it('refuses a second trade on a market that already has one, even when called twice at once', () => {
         const { trader, runners } = setup();
-        const first = trader.place(order(), SPEC);
-        const second = trader.place(order(), SPEC);
+        const first = trader.place(order(), SPECS);
+        const second = trader.place(order(), SPECS);
         expect(first.ok).toBe(true);
         expect(second).toMatchObject({ ok: false, scope: 'market' });
         expect(runners).toHaveLength(1);
@@ -202,51 +205,51 @@ describe('refusing an order', () => {
 
     it('lets the market be traded again once the first trade has finished', () => {
         const { trader, runners } = setup();
-        trader.place(order(), SPEC);
+        trader.place(order(), SPECS);
         finish(runners[0], 1);
-        expect(trader.place(order(), SPEC).ok).toBe(true);
+        expect(trader.place(order(), SPECS).ok).toBe(true);
     });
 
     it('counts trades that are still being placed against the open-trade limit', () => {
         const { trader, runners } = setup({ risk: { max_open_trades: 1 } });
-        expect(trader.place(order({ symbol: 'R_10' }), SPEC).ok).toBe(true);
-        expect(trader.place(order({ symbol: 'R_25' }), SPEC)).toMatchObject({ ok: false, scope: 'account' });
+        expect(trader.place(order({ symbol: 'R_10' }), SPECS).ok).toBe(true);
+        expect(trader.place(order({ symbol: 'R_25' }), SPECS)).toMatchObject({ ok: false, scope: 'account' });
         expect(runners).toHaveLength(1);
     });
 
     it('counts open stakes against the daily loss limit', () => {
         const { trader } = setup({ risk: { max_daily_loss: 3, max_stake: 5, max_open_trades: 5 } });
-        expect(trader.place(order({ symbol: 'R_10', stake: 2 }), SPEC).ok).toBe(true);
-        expect(trader.place(order({ symbol: 'R_25', stake: 2 }), SPEC).ok).toBe(false);
-        expect(trader.place(order({ symbol: 'R_50', stake: 1 }), SPEC).ok).toBe(true);
+        expect(trader.place(order({ symbol: 'R_10', stake: 2 }), SPECS).ok).toBe(true);
+        expect(trader.place(order({ symbol: 'R_25', stake: 2 }), SPECS).ok).toBe(false);
+        expect(trader.place(order({ symbol: 'R_50', stake: 1 }), SPECS).ok).toBe(true);
     });
 
     it('never lets auto orders onto a real account', () => {
         const { trader, runners } = setup({ is_virtual: false });
-        const result = trader.place(order({ source: 'auto', strength: 90 }), SPEC);
+        const result = trader.place(order({ source: 'auto', strength: 90 }), SPECS);
         expect(result.ok).toBe(false);
         expect(runners).toHaveLength(0);
-        expect(trader.place(order(), SPEC).ok).toBe(true);
+        expect(trader.place(order(), SPECS).ok).toBe(true);
     });
 });
 
 describe('emergency stop', () => {
     it('cancels trades that are not bought yet, switches auto off and refuses new orders at once', () => {
         const { trader, runners, last } = setup();
-        trader.place(order({ symbol: 'R_10' }), SPEC);
-        trader.place(order({ symbol: 'R_25' }), SPEC);
+        trader.place(order({ symbol: 'R_10' }), SPECS);
+        trader.place(order({ symbol: 'R_25' }), SPECS);
         trader.emergencyStop();
         expect(runners[0].stop).toHaveBeenCalled();
         expect(runners[1].stop).toHaveBeenCalled();
         expect(last().risk.emergency_stop).toBe(true);
         expect(last().auto).toBe('off');
-        expect(trader.place(order({ symbol: 'R_50' }), SPEC)).toMatchObject({ ok: false });
+        expect(trader.place(order({ symbol: 'R_50' }), SPECS)).toMatchObject({ ok: false });
         expect(runners).toHaveLength(2);
     });
 
     it('leaves a contract that is already open to finish, and records its result', () => {
         const { trader, runners, last } = setup();
-        trader.place(order(), SPEC);
+        trader.place(order(), SPECS);
         runners[0].options.onTransaction?.({
             contract_id: 7,
             contract_type: 'CALL',
@@ -268,9 +271,9 @@ describe('emergency stop', () => {
     it('allows trading again only after it is reset', () => {
         const { trader } = setup();
         trader.emergencyStop();
-        expect(trader.place(order(), SPEC).ok).toBe(false);
+        expect(trader.place(order(), SPECS).ok).toBe(false);
         trader.resetEmergency();
-        expect(trader.place(order(), SPEC).ok).toBe(true);
+        expect(trader.place(order(), SPECS).ok).toBe(true);
     });
 
     it('refuses to start auto-trading while it is on', () => {
@@ -451,7 +454,7 @@ describe('scan report', () => {
         await flush();
         await flush();
         expect(last().scan?.qualified).toBe(2);
-        expect(last().scan?.note).toMatch(/Placed a trade on/);
+        expect(last().scan?.note).toMatch(/Placed Rise on/);
         trader.dispose();
     });
 

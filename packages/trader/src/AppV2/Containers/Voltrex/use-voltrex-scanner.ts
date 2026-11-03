@@ -72,14 +72,19 @@ const loadFrame = async (symbol: string, frame: TFrameConfig) => {
     throw new RateLimited();
 };
 
-type TOptions = { selected: string | null };
+type TOptions = {
+    selected: string | null;
+    /** More markets to follow live (the digit contracts need every tick), on top of the selected one and the strongest. */
+    extra_live?: string[];
+};
 
 /**
  * Finds every market the server offers, loads candles for the open ones (a few at a time, over the platform's one
  * shared socket), analyses them, and follows live ticks for the selected market and the strongest signals. Markets
  * without a live subscription show the close of their last loaded candle and are reloaded every few minutes.
  */
-export const useVoltrexScanner = ({ selected }: TOptions) => {
+export const useVoltrexScanner = ({ selected, extra_live }: TOptions) => {
+    const extra_key = (extra_live ?? []).slice().sort().join(',');
     const [symbols, setSymbols] = React.useState<TSymbolInfo[]>([]);
     const [symbols_error, setSymbolsError] = React.useState(false);
     const [version, setVersion] = React.useState(0);
@@ -245,47 +250,91 @@ export const useVoltrexScanner = ({ selected }: TOptions) => {
     }, [symbols]);
 
     // 3. follow live ticks for the chosen set (one subscription per market, started one turn at a time so a burst of
-    // subscriptions cannot trip the server's request limit)
-    React.useEffect(() => {
-        const wanted = live_key ? live_key.split(',') : [];
-        const subscriptions: Record<string, { unsubscribe: () => void }> = {};
-        let active = true;
-        live_symbols.current = new Set();
-        (async () => {
-            const start = async (symbol: string) => {
-                await waitTurn();
-                if (!active) return;
-                try {
-                    const subscription = WS.subscribeTicks(symbol, (response: Record<string, unknown>) => {
-                        const tick = response?.tick as { quote?: unknown; epoch?: unknown } | undefined;
-                        if (!tick) return;
-                        window.dispatchEvent(
-                            new CustomEvent('voltrex-tick', {
-                                detail: { symbol, quote: Number(tick.quote), epoch: Number(tick.epoch) },
-                            })
-                        );
+    // subscriptions cannot trip the server's request limit). Only the markets that joined or left the set change.
+    const subscriptions = React.useRef<Record<string, { unsubscribe: () => void }>>({});
+    const starting = React.useRef<Set<string>>(new Set());
+    const wanted_ref = React.useRef<Set<string>>(new Set());
+    const syncing = React.useRef(false);
+
+    const sync = React.useCallback(async () => {
+        if (syncing.current) return;
+        syncing.current = true;
+        try {
+            let work = true;
+            while (work) {
+                work = false;
+                const wanted = wanted_ref.current;
+                Object.keys(subscriptions.current)
+                    .filter(symbol => !wanted.has(symbol))
+                    .forEach(symbol => {
+                        try {
+                            subscriptions.current[symbol].unsubscribe();
+                        } catch {
+                            // already closed
+                        }
+                        delete subscriptions.current[symbol];
+                        live_symbols.current.delete(symbol);
                     });
-                    if (subscription) {
-                        subscriptions[symbol] = subscription;
-                        live_symbols.current.add(symbol);
+                const next = Array.from(wanted).find(symbol => !subscriptions.current[symbol]);
+                if (next && !starting.current.has(next)) {
+                    work = true;
+                    starting.current.add(next);
+                    // eslint-disable-next-line no-await-in-loop
+                    await waitTurn();
+                    starting.current.delete(next);
+                    if (wanted_ref.current.has(next) && !subscriptions.current[next]) {
+                        try {
+                            const subscription = WS.subscribeTicks(next, (response: Record<string, unknown>) => {
+                                const tick = response?.tick as { quote?: unknown; epoch?: unknown } | undefined;
+                                if (!tick) return;
+                                window.dispatchEvent(
+                                    new CustomEvent('voltrex-tick', {
+                                        detail: { symbol: next, quote: Number(tick.quote), epoch: Number(tick.epoch) },
+                                    })
+                                );
+                            });
+                            if (subscription) {
+                                subscriptions.current[next] = subscription;
+                                live_symbols.current.add(next);
+                            } else {
+                                // nothing to follow: leave it out so the loop does not ask again
+                                wanted_ref.current.delete(next);
+                            }
+                        } catch {
+                            // this market keeps its last loaded price
+                            wanted_ref.current.delete(next);
+                        }
                     }
-                } catch {
-                    // this market keeps its last loaded price
                 }
-            };
-            await wanted.reduce((chain, symbol) => chain.then(() => start(symbol)), Promise.resolve());
-        })();
-        return () => {
-            active = false;
-            Object.values(subscriptions).forEach(subscription => {
+            }
+        } finally {
+            syncing.current = false;
+        }
+    }, []);
+
+    React.useEffect(() => {
+        const wanted = new Set<string>([
+            ...(live_key ? live_key.split(',') : []),
+            ...(extra_key ? extra_key.split(',') : []),
+        ]);
+        wanted_ref.current = wanted;
+        sync();
+    }, [live_key, extra_key, sync]);
+
+    React.useEffect(
+        () => () => {
+            wanted_ref.current = new Set();
+            Object.values(subscriptions.current).forEach(subscription => {
                 try {
                     subscription.unsubscribe();
                 } catch {
                     // already closed
                 }
             });
-        };
-    }, [live_key]);
+            subscriptions.current = {};
+        },
+        []
+    );
 
     const rows: TScanRow[] = React.useMemo(() => {
         const base = symbols.map(info => {

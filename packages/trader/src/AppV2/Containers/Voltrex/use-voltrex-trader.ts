@@ -1,4 +1,3 @@
-import { backOff, isRateLimit, waitTurn } from './voltrex-pacer';
 import React from 'react';
 
 import { WS } from '@deriv/shared';
@@ -7,8 +6,9 @@ import { useStore } from '@deriv/stores';
 import type { TBotApi } from '../BotBuilder/Engine/types';
 
 import type { TScanRow } from './use-voltrex-scanner';
-import { parseRiseFall, TRiseFallSpec } from './voltrex-contracts';
+import { backOff, isRateLimit, waitTurn } from './voltrex-pacer';
 import { DEFAULT_RISK, emptyRiskState, rollDay, TRiskSettings, TRiskState, validateRisk } from './voltrex-risk';
+import { EMPTY_SPECS, parseSpecs, TMarketSpecs } from './voltrex-specs';
 import type { TAutoConfig, TOrder, TPlaceResult, TTraderSnapshot, VoltrexTrader } from './voltrex-trader';
 
 const RISK_KEY = 'voltrex_risk_settings';
@@ -47,16 +47,23 @@ export const loadDayState = (loginid: string): TRiskState => {
     return rollDay({ ...emptyRiskState(saved.day), ...saved, open_stakes: [] });
 };
 
-const EMPTY: TTraderSnapshot = { scan: null, trades: [], risk: emptyRiskState(), auto: 'off', log: [] };
+const EMPTY: TTraderSnapshot = {
+    auto_scope: null,
+    scan: null,
+    trades: [],
+    risk: emptyRiskState(),
+    auto: 'off',
+    log: [],
+};
 
-type TSpecState = Map<string, Promise<TRiseFallSpec | null>>;
+type TSpecState = Map<string, Promise<TMarketSpecs>>;
 
 /**
  * Owns the trade controller for the page. The controller (and with it the Bot Builder engine) is loaded the first time
  * it is needed, uses the platform's shared socket, and is shut down when the page closes: anything not yet bought is
  * cancelled and auto-trading stops. Contracts already open keep running on the server and stay in the portfolio.
  */
-export const useVoltrexTrader = (rows: TScanRow[]) => {
+export const useVoltrexTrader = (rows: TScanRow[], getDigits?: (symbol: string) => number[]) => {
     const { client } = useStore();
     const { balance, currency, is_virtual } = client;
     const loginid = client.loginid ?? '';
@@ -79,7 +86,7 @@ export const useVoltrexTrader = (rows: TScanRow[]) => {
         if (!validateRisk(next)) write(RISK_KEY, next);
     }, []);
 
-    const getSpec = React.useCallback((symbol: string) => {
+    const getSpecs = React.useCallback((symbol: string) => {
         const cached = specs.current.get(symbol);
         if (cached) return cached;
         const request = (async () => {
@@ -94,15 +101,20 @@ export const useVoltrexTrader = (rows: TScanRow[]) => {
                     if (!isRateLimit(response)) break;
                     backOff();
                 }
-                return parseRiseFall(response);
+                return parseSpecs(response);
             } catch {
                 specs.current.delete(symbol);
-                return null;
+                return EMPTY_SPECS;
             }
         })();
         specs.current.set(symbol, request);
         return request;
     }, []);
+
+    const getSpec = React.useCallback(async (symbol: string) => (await getSpecs(symbol)).rise_fall, [getSpecs]);
+
+    const digits_ref = React.useRef(getDigits);
+    digits_ref.current = getDigits;
 
     const ensure = React.useCallback((): Promise<VoltrexTrader> => {
         if (trader.current) return Promise.resolve(trader.current);
@@ -120,6 +132,8 @@ export const useVoltrexTrader = (rows: TScanRow[]) => {
                 getRisk: () => risk_ref.current,
                 getRows: () => rows_ref.current,
                 getSpec,
+                getSpecs,
+                getDigits: symbol => digits_ref.current?.(symbol) ?? [],
                 initial_risk: loadDayState(loginid),
                 onChange: next => {
                     setSnapshot(next);
@@ -132,7 +146,7 @@ export const useVoltrexTrader = (rows: TScanRow[]) => {
         })();
         loading.current = created;
         return created;
-    }, [currency, getSpec, is_virtual, loginid]);
+    }, [currency, getSpec, getSpecs, is_virtual, loginid]);
 
     // a different account (or its type) needs a controller of its own
     React.useEffect(
@@ -146,7 +160,8 @@ export const useVoltrexTrader = (rows: TScanRow[]) => {
     );
 
     const place = React.useCallback(
-        async (order: TOrder, spec: TRiseFallSpec | null): Promise<TPlaceResult> => (await ensure()).place(order, spec),
+        async (order: TOrder, market_specs: TMarketSpecs | null): Promise<TPlaceResult> =>
+            (await ensure()).place(order, market_specs),
         [ensure]
     );
 
@@ -166,5 +181,33 @@ export const useVoltrexTrader = (rows: TScanRow[]) => {
 
     const updateAuto = React.useCallback((config: TAutoConfig) => trader.current?.updateAutoConfig(config), []);
 
-    return { snapshot, risk, updateRisk, place, startAuto, control, updateAuto, getSpec, is_virtual, currency };
+    const quoteTouch = React.useCallback(
+        async (row: TScanRow, minutes: number, barrier?: string) => {
+            const instance = await ensure();
+            const idea = await instance.quoteTouch(row, minutes, barrier);
+            return idea
+                ? {
+                      strength: idea.strength,
+                      why: idea.why,
+                      choice: idea.build({ ...EMPTY_SPECS, touch: { ticks: null, minutes: { min: 1, max: 1440 } } }),
+                  }
+                : { error: instance.last_quote_error };
+        },
+        [ensure]
+    );
+
+    return {
+        snapshot,
+        risk,
+        updateRisk,
+        place,
+        startAuto,
+        control,
+        updateAuto,
+        getSpec,
+        getSpecs,
+        quoteTouch,
+        is_virtual,
+        currency,
+    };
 };

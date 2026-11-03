@@ -11,7 +11,12 @@ import type { useVoltrexTrader } from './use-voltrex-trader';
 import type { TStrategyId } from './voltrex-analysis';
 import { CATEGORIES, TCategoryId } from './voltrex-config';
 import { defaultDuration, TDurationUnit, TRiseFallSpec, validateDuration } from './voltrex-contracts';
+import type { TDigitStats } from './voltrex-digits';
+import { DEFAULT_ENTRY_SETTINGS } from './voltrex-entries';
+import VoltrexProductTrade from './voltrex-product-trade';
+import { PRODUCT_IDS, productLabel, TProductId } from './voltrex-products';
 import { checkOrder, LIMITS, TRiskSettings, validateRisk } from './voltrex-risk';
+import { EMPTY_SPECS } from './voltrex-specs';
 
 type TTrader = ReturnType<typeof useVoltrexTrader>;
 
@@ -21,6 +26,8 @@ type TProps = {
     onSelect: (symbol: string) => void;
     trader: TTrader;
     is_logged_in: boolean;
+    /** Digit statistics for a market, when they are being followed. */
+    getStats?: (symbol: string) => TDigitStats | null;
 };
 
 const money = (value: number, currency: string) => `${value.toFixed(2)} ${currency}`;
@@ -148,8 +155,9 @@ const useQuote = (
     return quote;
 };
 
-const ManualTrade = ({ rows, selected, onSelect, trader, is_logged_in }: TProps) => {
+const ManualTrade = ({ rows, selected, onSelect, trader, is_logged_in, getStats }: TProps) => {
     const { snapshot, risk, currency, is_virtual, getSpec } = trader;
+    const [product, setProduct] = React.useState<TProductId>('rise_fall');
     const [stake_text, setStakeText] = React.useState('1');
     const [unit, setUnit] = React.useState<TDurationUnit>('t');
     const [duration_text, setDurationText] = React.useState('5');
@@ -202,14 +210,18 @@ const ManualTrade = ({ rows, selected, onSelect, trader, is_logged_in }: TProps)
             {
                 symbol: row.symbol,
                 name: row.name,
-                side: confirming,
+                choice: {
+                    product: 'rise_fall',
+                    contract_type: confirming,
+                    label: confirming === 'CALL' ? localize('Rise') : localize('Fall'),
+                    duration,
+                    duration_unit: unit,
+                },
                 stake,
-                duration,
-                duration_unit: unit,
                 source: 'manual',
                 why: localize('Placed by hand from the scanner.'),
             },
-            spec
+            { ...EMPTY_SPECS, rise_fall: spec }
         );
         setBusy(false);
         setConfirming(null);
@@ -227,6 +239,23 @@ const ManualTrade = ({ rows, selected, onSelect, trader, is_logged_in }: TProps)
     return (
         <div className='voltrex-trade__section' data-testid='voltrex-manual'>
             <h3 className='voltrex__subtitle'>{localize('Manual trade')}</h3>
+            <div className='voltrex__field'>
+                <span>{localize('Contract type')}</span>
+                <div className='voltrex-scanner__chips' role='group' aria-label={localize('Contract type')}>
+                    {PRODUCT_IDS.map(id => (
+                        <button
+                            key={id}
+                            type='button'
+                            className={classNames('voltrex__chip', product === id && 'voltrex__chip--on')}
+                            aria-pressed={product === id}
+                            onClick={() => setProduct(id)}
+                            data-testid={`voltrex-product-${id}`}
+                        >
+                            {productLabel(id)}
+                        </button>
+                    ))}
+                </div>
+            </div>
             <label className='voltrex__field'>
                 <span>{localize('Market')}</span>
                 <select
@@ -246,128 +275,144 @@ const ManualTrade = ({ rows, selected, onSelect, trader, is_logged_in }: TProps)
                 </select>
             </label>
 
-            <p className='voltrex__muted' data-testid='voltrex-spec-state'>
-                {!selected && localize('Choose a market to see what it offers.')}
-                {selected && spec === undefined && localize('Checking what this market offers…')}
-                {selected && spec === null && localize('Rise/Fall trades are not offered on this market.')}
-                {selected && spec && localize('Contract: Rise/Fall (the only type this page trades).')}
-            </p>
-
-            <div className='voltrex__row'>
-                <label className='voltrex__field'>
-                    <span>{localize('Stake ({{currency}})', { currency })}</span>
-                    <input
-                        className='voltrex__input'
-                        type='number'
-                        inputMode='decimal'
-                        min='0'
-                        step='0.01'
-                        value={stake_text}
-                        onChange={event => setStakeText(event.target.value)}
-                        data-testid='voltrex-stake'
-                    />
-                </label>
-                <label className='voltrex__field'>
-                    <span>{localize('Duration')}</span>
-                    <div className='voltrex__row'>
-                        <input
-                            className='voltrex__input'
-                            type='number'
-                            min='1'
-                            step='1'
-                            value={duration_text}
-                            onChange={event => setDurationText(event.target.value)}
-                            data-testid='voltrex-duration'
-                        />
-                        <select
-                            className='voltrex__input'
-                            aria-label={localize('Duration unit')}
-                            value={unit}
-                            onChange={event => setUnit(event.target.value as TDurationUnit)}
-                        >
-                            {(!spec || spec.ticks) && <option value='t'>{localize('ticks')}</option>}
-                            {(!spec || spec.minutes) && <option value='m'>{localize('minutes')}</option>}
-                        </select>
-                    </div>
-                </label>
-            </div>
-            {spec && (
-                <p className='voltrex__muted'>
-                    {unit === 't' && spec.ticks && localize('Allowed: {{min}} to {{max}} ticks.', spec.ticks)}
-                    {unit === 'm' && spec.minutes && localize('Allowed: {{min}} to {{max}} minutes.', spec.minutes)}
-                </p>
-            )}
-            {(duration_problem || (stake > 0 && risk_problem)) && (
-                <p className='voltrex__error' role='alert' data-testid='voltrex-manual-problem'>
-                    {duration_problem ?? risk_problem}
-                </p>
+            {product !== 'rise_fall' && (
+                <VoltrexProductTrade
+                    product={product}
+                    row={row}
+                    trader={trader}
+                    is_logged_in={is_logged_in}
+                    stats={selected && getStats ? getStats(selected) : null}
+                />
             )}
 
-            {confirming ? (
-                <div className='voltrex-confirm' role='alertdialog' aria-label={localize('Confirm trade')}>
-                    <p>
-                        <strong>{confirming === 'CALL' ? localize('Rise') : localize('Fall')}</strong>{' '}
-                        {localize('on {{name}} for {{duration}} {{unit}}, stake {{stake}}.', {
-                            name: row?.name,
-                            duration,
-                            unit: unit === 't' ? localize('ticks') : localize('minutes'),
-                            stake: money(stake, currency),
-                        })}
+            {product === 'rise_fall' && (
+                <>
+                    <p className='voltrex__muted' data-testid='voltrex-spec-state'>
+                        {!selected && localize('Choose a market to see what it offers.')}
+                        {selected && spec === undefined && localize('Checking what this market offers…')}
+                        {selected && spec === null && localize('Rise/Fall trades are not offered on this market.')}
+                        {selected && spec && localize('Contract: Rise/Fall.')}
                     </p>
-                    <p className='voltrex__muted'>
-                        {localize('The most you can lose on this trade is the stake. Account: {{type}}.', {
-                            type: is_virtual ? localize('DEMO') : localize('REAL MONEY'),
-                        })}
-                    </p>
+
                     <div className='voltrex__row'>
-                        <button
-                            type='button'
-                            className='voltrex__button voltrex__button--primary'
-                            disabled={busy}
-                            onClick={confirm}
-                            data-testid='voltrex-confirm'
-                        >
-                            {localize('Confirm and place trade')}
-                        </button>
-                        <button
-                            type='button'
-                            className='voltrex__button'
-                            disabled={busy}
-                            onClick={() => setConfirming(null)}
-                        >
-                            {localize('Cancel')}
-                        </button>
+                        <label className='voltrex__field'>
+                            <span>{localize('Stake ({{currency}})', { currency })}</span>
+                            <input
+                                className='voltrex__input'
+                                type='number'
+                                inputMode='decimal'
+                                min='0'
+                                step='0.01'
+                                value={stake_text}
+                                onChange={event => setStakeText(event.target.value)}
+                                data-testid='voltrex-stake'
+                            />
+                        </label>
+                        <label className='voltrex__field'>
+                            <span>{localize('Duration')}</span>
+                            <div className='voltrex__row'>
+                                <input
+                                    className='voltrex__input'
+                                    type='number'
+                                    min='1'
+                                    step='1'
+                                    value={duration_text}
+                                    onChange={event => setDurationText(event.target.value)}
+                                    data-testid='voltrex-duration'
+                                />
+                                <select
+                                    className='voltrex__input'
+                                    aria-label={localize('Duration unit')}
+                                    value={unit}
+                                    onChange={event => setUnit(event.target.value as TDurationUnit)}
+                                >
+                                    {(!spec || spec.ticks) && <option value='t'>{localize('ticks')}</option>}
+                                    {(!spec || spec.minutes) && <option value='m'>{localize('minutes')}</option>}
+                                </select>
+                            </div>
+                        </label>
                     </div>
-                </div>
-            ) : (
-                <div className='voltrex__row voltrex-trade__sides'>
-                    <button
-                        type='button'
-                        className='voltrex__button voltrex__button--buy'
-                        disabled={!ready}
-                        onClick={() => setConfirming('CALL')}
-                        data-testid='voltrex-rise'
-                    >
-                        {localize('Rise ▲ (BUY)')}
-                        <small>{quote_text(rise)}</small>
-                    </button>
-                    <button
-                        type='button'
-                        className='voltrex__button voltrex__button--sell'
-                        disabled={!ready}
-                        onClick={() => setConfirming('PUT')}
-                        data-testid='voltrex-fall'
-                    >
-                        {localize('Fall ▼ (SELL)')}
-                        <small>{quote_text(fall)}</small>
-                    </button>
-                </div>
-            )}
-            {!is_logged_in && <p className='voltrex__muted'>{localize('Log in to place trades.')}</p>}
-            {message && (
-                <p className='voltrex__muted' role='status' data-testid='voltrex-manual-message'>
-                    {message}
-                </p>
+                    {spec && (
+                        <p className='voltrex__muted'>
+                            {unit === 't' && spec.ticks && localize('Allowed: {{min}} to {{max}} ticks.', spec.ticks)}
+                            {unit === 'm' &&
+                                spec.minutes &&
+                                localize('Allowed: {{min}} to {{max}} minutes.', spec.minutes)}
+                        </p>
+                    )}
+                    {(duration_problem || (stake > 0 && risk_problem)) && (
+                        <p className='voltrex__error' role='alert' data-testid='voltrex-manual-problem'>
+                            {duration_problem ?? risk_problem}
+                        </p>
+                    )}
+
+                    {confirming ? (
+                        <div className='voltrex-confirm' role='alertdialog' aria-label={localize('Confirm trade')}>
+                            <p>
+                                <strong>{confirming === 'CALL' ? localize('Rise') : localize('Fall')}</strong>{' '}
+                                {localize('on {{name}} for {{duration}} {{unit}}, stake {{stake}}.', {
+                                    name: row?.name,
+                                    duration,
+                                    unit: unit === 't' ? localize('ticks') : localize('minutes'),
+                                    stake: money(stake, currency),
+                                })}
+                            </p>
+                            <p className='voltrex__muted'>
+                                {localize('The most you can lose on this trade is the stake. Account: {{type}}.', {
+                                    type: is_virtual ? localize('DEMO') : localize('REAL MONEY'),
+                                })}
+                            </p>
+                            <div className='voltrex__row'>
+                                <button
+                                    type='button'
+                                    className='voltrex__button voltrex__button--primary'
+                                    disabled={busy}
+                                    onClick={confirm}
+                                    data-testid='voltrex-confirm'
+                                >
+                                    {localize('Confirm and place trade')}
+                                </button>
+                                <button
+                                    type='button'
+                                    className='voltrex__button'
+                                    disabled={busy}
+                                    onClick={() => setConfirming(null)}
+                                >
+                                    {localize('Cancel')}
+                                </button>
+                            </div>
+                        </div>
+                    ) : (
+                        <div className='voltrex__row voltrex-trade__sides'>
+                            <button
+                                type='button'
+                                className='voltrex__button voltrex__button--buy'
+                                disabled={!ready}
+                                onClick={() => setConfirming('CALL')}
+                                data-testid='voltrex-rise'
+                            >
+                                {localize('Rise ▲ (BUY)')}
+                                <small>{quote_text(rise)}</small>
+                            </button>
+                            <button
+                                type='button'
+                                className='voltrex__button voltrex__button--sell'
+                                disabled={!ready}
+                                onClick={() => setConfirming('PUT')}
+                                data-testid='voltrex-fall'
+                            >
+                                {localize('Fall ▼ (SELL)')}
+                                <small>{quote_text(fall)}</small>
+                            </button>
+                        </div>
+                    )}
+                    {!is_logged_in && <p className='voltrex__muted'>{localize('Log in to place trades.')}</p>}
+                    {message && (
+                        <p className='voltrex__muted' role='status' data-testid='voltrex-manual-message'>
+                            {message}
+                        </p>
+                    )}
+                </>
             )}
             {last_manual && (
                 <p className='voltrex__muted' data-testid='voltrex-manual-status'>
@@ -388,16 +433,35 @@ const AutoTrade = ({ rows, trader }: TProps) => {
     const [strategy, setStrategy] = React.useState<TStrategyId>('confluence');
     const [stake_text, setStakeText] = React.useState('1');
     const [categories, setCategories] = React.useState<TCategoryId[]>(['volatility']);
+    const [products, setProducts] = React.useState<TProductId[]>(['rise_fall']);
+    const [take_profit_pct, setTakeProfitPct] = React.useState(String(DEFAULT_ENTRY_SETTINGS.take_profit_pct));
+    const [stop_loss_pct, setStopLossPct] = React.useState(String(DEFAULT_ENTRY_SETTINGS.stop_loss_pct));
+    const [max_hold, setMaxHold] = React.useState(String(DEFAULT_ENTRY_SETTINGS.max_hold_minutes));
     const [problem, setProblem] = React.useState('');
 
     const available = CATEGORIES.filter(category => rows.some(row => row.category === category.id));
     const stake = Number(stake_text);
-    const config = { strategy, stake, categories };
+    const entry = {
+        ...DEFAULT_ENTRY_SETTINGS,
+        take_profit_pct: Number(take_profit_pct) > 0 ? Number(take_profit_pct) : DEFAULT_ENTRY_SETTINGS.take_profit_pct,
+        stop_loss_pct:
+            Number(stop_loss_pct) > 0 ? Math.min(100, Number(stop_loss_pct)) : DEFAULT_ENTRY_SETTINGS.stop_loss_pct,
+        max_hold_minutes: Number(max_hold) >= 0 ? Number(max_hold) : DEFAULT_ENTRY_SETTINGS.max_hold_minutes,
+    };
+    const config = { strategy, stake, categories, products, entry };
     const state = snapshot.auto;
 
     React.useEffect(() => {
-        updateAuto({ strategy, stake, categories });
-    }, [strategy, stake, categories, updateAuto]);
+        updateAuto({ strategy, stake, categories, products, entry });
+        // `entry` is rebuilt from the three text fields on every render
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [strategy, stake, categories, products, take_profit_pct, stop_loss_pct, max_hold, updateAuto]);
+
+    const toggleProduct = (id: TProductId) =>
+        setProducts(current => {
+            const next = current.includes(id) ? current.filter(item => item !== id) : [...current, id];
+            return next.length ? next : current;
+        });
 
     const toggle = (id: TCategoryId) =>
         setCategories(current => (current.includes(id) ? current.filter(item => item !== id) : [...current, id]));
@@ -443,6 +507,67 @@ const AutoTrade = ({ rows, trader }: TProps) => {
                 </select>
             </label>
             <p className='voltrex__muted'>{STRATEGIES.find(item => item.id === strategy)?.text()}</p>
+
+            <div className='voltrex__field'>
+                <span>{localize('Contract types to trade')}</span>
+                <div className='voltrex-scanner__chips' role='group' aria-label={localize('Contract types to trade')}>
+                    {PRODUCT_IDS.map(id => (
+                        <button
+                            key={id}
+                            type='button'
+                            className={classNames('voltrex__chip', products.includes(id) && 'voltrex__chip--on')}
+                            aria-pressed={products.includes(id)}
+                            onClick={() => toggleProduct(id)}
+                            data-testid={`voltrex-auto-product-${id}`}
+                        >
+                            {productLabel(id)}
+                        </button>
+                    ))}
+                </div>
+            </div>
+            {(products.includes('accumulator') || products.includes('multiplier')) && (
+                <div className='voltrex__row'>
+                    <label className='voltrex__field'>
+                        <span>{localize('Take profit (% of stake)')}</span>
+                        <input
+                            className='voltrex__input'
+                            type='number'
+                            min='1'
+                            step='1'
+                            value={take_profit_pct}
+                            onChange={event => setTakeProfitPct(event.target.value)}
+                            data-testid='voltrex-auto-take-profit'
+                        />
+                    </label>
+                    {products.includes('multiplier') && (
+                        <label className='voltrex__field'>
+                            <span>{localize('Stop loss (% of stake)')}</span>
+                            <input
+                                className='voltrex__input'
+                                type='number'
+                                min='1'
+                                max='100'
+                                step='1'
+                                value={stop_loss_pct}
+                                onChange={event => setStopLossPct(event.target.value)}
+                                data-testid='voltrex-auto-stop-loss'
+                            />
+                        </label>
+                    )}
+                    <label className='voltrex__field'>
+                        <span>{localize('Longest hold (minutes, 0 = none)')}</span>
+                        <input
+                            className='voltrex__input'
+                            type='number'
+                            min='0'
+                            step='1'
+                            value={max_hold}
+                            onChange={event => setMaxHold(event.target.value)}
+                            data-testid='voltrex-auto-max-hold'
+                        />
+                    </label>
+                </div>
+            )}
 
             <div className='voltrex__field'>
                 <span>{localize('Markets to trade')}</span>

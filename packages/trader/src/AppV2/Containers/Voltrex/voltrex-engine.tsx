@@ -52,11 +52,9 @@ const modeOf = (props: TProps, executing: boolean): TMode => {
     return { id: 'live', label: localize('LIVE · STANDBY') };
 };
 
-const sideText = (side: 'CALL' | 'PUT') => (side === 'CALL' ? localize('Rise') : localize('Fall'));
-
 const tradeLine = (trade: TTrade | undefined) => {
     if (!trade) return localize('No trade yet. Executions will appear here.');
-    const base = `${sideText(trade.side)} · ${trade.name} · ${trade.stake.toFixed(2)}`;
+    const base = `${trade.label} · ${trade.name} · ${trade.stake.toFixed(2)}`;
     if (trade.status === 'placing') return localize('EXECUTING {{trade}}', { trade: base });
     if (trade.status === 'open') return localize('LIVE {{trade}}', { trade: base });
     if (trade.status === 'failed') return localize('NOT PLACED {{trade}}', { trade: base });
