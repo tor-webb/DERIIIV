@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T01:33:33.017Z",
+ "updated": "2026-11-04T08:32:30.162Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,13 +12,202 @@
  },
  "items": [
   {
-   "id": "ssl2yh",
-   "title": "US midterms election 2026 live: Democratic Senate odds climb above 90%",
-   "link": "https://cointelegraph.com/news/us-midterms-2026-live-results-and-what-they-mean-for-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Follow live coverage of the 2026 US midterm elections, including key congressional races, crypto-backed candidates and what the results could mean for digital asset regulation.",
-   "published": "2026-11-04T01:20:56.000Z",
+   "id": "86lbvk",
+   "title": "Poundland supplier 'will lose millions' if retailer collapses",
+   "link": "https://www.bbc.co.uk/news/articles/ck240mm3e42do?at_medium=RSS&at_campaign=rss",
+   "summary": "One of Poundland's suppliers will lose millions if it collapses, while other suppliers have said they would go under.",
+   "published": "2026-11-04T08:05:32.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "8qpqxi",
+   "title": "Democrats win US House to secure control of Congress in midterms",
+   "link": "https://cointelegraph.com/news/democrats-win-us-house-congress-control?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Democrats will take control of House committees in January 2027, giving them power to investigate President Donald Trump’s administration.",
+   "published": "2026-11-04T07:50:27.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
+  },
+  {
+   "id": "ybanxj",
+   "title": "What are the main events for today?",
+   "link": "https://investinglive.com/news/what-are-the-main-events-for-today-78/",
+   "summary": "EUROPEAN SESSION In the European session, we get the final services PMI for the major Eurozone economies and the UK. The data won't change anything for the respective central banks, so the market reaction will likely…",
+   "published": "2026-11-04T07:35:47.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1xb3q2z",
+   "title": "Treasury yields fall as investors crowd into bonds for safety amid election stock sell-off",
+   "link": "https://www.cnbc.com/2026/11/03/treasury-yields-fall-as-democrats-win-big-in-us-midterm-elections.html",
+   "summary": "Treasury yields fell on Tuesday night, as investors sought shelter from a sell-off in equity futures sparked by big victories from Democrats in the U.S. midterm elections.",
+   "published": "2026-11-04T07:27:48.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "1dmhech",
+   "title": "Bitcoin bounces from 7-week low under $76K as Democrats sweep Congress",
+   "link": "https://cointelegraph.com/markets/bitcoin-bounces-from-7-week-low-under-76k-as-democrats-eye-congress-sweep?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Bitcoin price downside reached a seven-week-low of $75,618 as 24-hour crypto long liquidations neared $300 million.",
+   "published": "2026-11-04T07:25:47.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "2b6g7s",
+   "title": "FX option expiries for 4 November 10am New York cut",
+   "link": "https://investinglive.com/orders/fx-option-expiries-for-4-november-10am-new-york-cut/",
+   "summary": "There are a few key expiry levels to take note of on the day, as highlighted in bold below. The first one is for EUR/USD at the 1.1250 level, with the strike currently keeping within 30 pips of the spot price. Amid the…",
+   "published": "2026-11-04T07:19:13.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "ssl2yh",
+   "title": "US midterm elections 2026 live: Democrats win House, securing control of Congress",
+   "link": "https://cointelegraph.com/news/us-midterms-2026-live-results-and-what-they-mean-for-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Follow live coverage of the 2026 US midterm elections, including key congressional races, crypto-backed candidates and what the results could mean for digital asset regulation.",
+   "published": "2026-11-04T06:40:13.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "ne0d7",
+   "title": "US futures continue to trim losses after early beatdown but AI worries linger",
+   "link": "https://investinglive.com/stocks/us-futures-continue-to-trim-losses-after-early-beatdown-but-ai-worries-linger/",
+   "summary": "As we look to the session ahead, it seems that Wall Street has finally decided to pick itself up off the floor. But after the beating earlier today, I wouldn't be rushing to vindicate this bounce and label it as a…",
+   "published": "2026-11-04T06:20:46.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-11-04T06:03:33.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "djeqzn",
+   "title": "Ethereum dev targets 2028 for quantum resistance, a year early",
+   "link": "https://cointelegraph.com/news/ethereum-post-quantum-transition-2028-target?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Ethereum researcher Justin Drake said it is their “hope” that Ethereum will achieve its post-quantum and post-AI transition by December 2028.",
+   "published": "2026-11-04T05:46:33.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1izbd2z",
+   "title": "US midterms 2026: Who would've thought that a war would be a bad idea?",
+   "link": "https://investinglive.com/news/us-midterms-2026-who-would-ve-thought-that-a-war-would-be-a-bad-idea/",
+   "summary": "Well, well, well. Who would've thought that starting a war might not be the greatest way to win over voters? That especially when ordinary Americans are the ones feeling the pinch and getting hit where it hurts most,…",
+   "published": "2026-11-04T05:44:22.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1kzljds",
+   "title": "investingLive Asia-Pacific market news: Stocks slide as Trump slammed in mid terms loss",
+   "link": "https://investinglive.com/news/investinglive-asia-pacific-market-news-stocks-slide-as-trump-slammed-in-mid-terms-loss/",
+   "summary": "China’s yuan slides to two-week low as PBOC moves to slow its rally Iran’s IRGC says four tankers destroyed by mines south of Hormuz, two vessels detained Trump allies are pointing to the Iran war as the reason for the…",
+   "published": "2026-11-04T04:45:26.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1evshyi",
+   "title": "Democrats claim control of the US Senate",
+   "link": "https://cointelegraph.com/news/democrats-flip-us-senate-as-crypto-industry-faces-policy-reset?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The shift in Senate control could change the path for the CLARITY Act, reshape committee leadership and bring closer scrutiny of Trump’s crypto businesses.",
+   "published": "2026-11-04T04:40:44.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "8aui57",
+   "title": "China’s yuan slides to two-week low as PBOC moves to slow its rally",
+   "link": "https://investinglive.com/forex/china-s-yuan-slides-to-two-week-low-as-pboc-moves-to-slow-its-rally/",
+   "summary": "The PBOC’s moves draw a clear line under how fast it will let the yuan strengthen, which may cap further gains against the dollar and the trade-weighted basket in the near term. A softer yuan could weigh modestly on…",
+   "published": "2026-11-04T04:16:19.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1y55966",
+   "title": "Iran’s IRGC says four tankers destroyed by mines south of Hormuz, two vessels detained",
+   "link": "https://investinglive.com/commodities/iran-s-irgc-says-four-tankers-destroyed-by-mines-south-of-hormuz-two-vessels-detained/",
+   "summary": "The claim cuts directly against the early dip in crude, shifting attention from diplomacy and the US midterms back to physical supply risk in the Gulf. Mining is a more serious threat to shipping than isolated attacks,…",
+   "published": "2026-11-04T03:44:09.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "djwdvp",
+   "title": "Trump allies are pointing to the Iran war as the reason for the election disaster",
+   "link": "https://investinglive.com/news/trump-allies-are-pointing-to-the-iran-war-as-the-reason-for-the-election-disaster/",
+   "summary": "The joke tonight is that Trump went to Iran for regime change and he got it, only in the USA. The numbers so far are ghastly for Republicans in a huge blue wave, including multiple major upsets and a possible Senate…",
+   "published": "2026-11-04T03:40:39.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "o5cjy5",
+   "title": "ZachXBT identifies French bank as alleged victim of $133M crypto theft",
+   "link": "https://cointelegraph.com/news/zachxbt-french-bank-credit-mutuel-arkea-133m-crypto-theft?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The French bank has not confirmed its alleged involvement in the crypto theft, which ZachXBT said could have resulted in losses exceeding $133 million.",
+   "published": "2026-11-04T03:35:30.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1kqr9vw",
+   "title": "US futures slide as Democrats lead midterm count, AI data centre fears hit tech",
+   "link": "https://investinglive.com/stock-market-update/us-futures-slide-as-democrats-lead-midterm-count-ai-data-centre-fears-hit-tech/",
+   "summary": "Nasdaq futures underperforming the S&P 500 points to a sector story, not just a broad political discount: the market is singling out AI infrastructure as the area most exposed to a shift in Washington. That puts…",
+   "published": "2026-11-04T03:13:35.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "18ezqff",
+   "title": "Nikkei drops 3% as Democratic midterm gains hit AI and chip stocks",
+   "link": "https://investinglive.com/stock-market-update/nikkei-drops-3-as-democratic-midterm-gains-hit-ai-and-chip-stocks/",
+   "summary": "The sell-off shows US political risk being priced directly into the AI supply chain, with Japan’s chip equipment, memory and cable makers treated as proxies for US data centre spending. The narrow breadth suggests a…",
+   "published": "2026-11-04T03:02:04.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1korg1d",
+   "title": "Update: Iran says Hormuz stays shut until demands met as US deal remains far off",
+   "link": "https://investinglive.com/commodities/update-iran-says-hormuz-stays-shut-until-demands-met-as-us-deal-remains-far-off/",
+   "summary": "For oil, the key detail is that Iran has explicitly tied the reopening of the Strait of Hormuz to sanctions relief, the end of the US naval blockade and the release of frozen funds. That makes any supply normalisation…",
+   "published": "2026-11-04T02:26:30.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "195ohj",
+   "title": "China services PMI slows to 50.8 in October as price cuts meet rising costs",
+   "link": "https://investinglive.com/news/china-services-pmi-slows-to-50-8-in-october-as-price-cuts-meet-rising-costs/",
+   "summary": "The data adds to the picture of a Chinese economy still growing but struggling with weak pricing power, which helps explain why authorities are leaning on targeted support such as this week’s expanded buyback lending .…",
+   "published": "2026-11-04T01:59:46.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "10x3xrp",
+   "title": "No more rice grains in Kellogg's Rice Krispies due to changing weather",
+   "link": "https://www.bbc.co.uk/news/articles/cqvg0y44ym7vo?at_medium=RSS&at_campaign=rss",
+   "summary": "The new recipes mean cereal packaging will now include a 'contains wheat gluten' warning.",
+   "published": "2026-11-04T01:36:06.000Z",
+   "source": "BBC Business",
+   "category": "economy"
   },
   {
    "id": "410bz7",
@@ -30,33 +219,6 @@
    "category": "crypto"
   },
   {
-   "id": "lz6lkt",
-   "title": "Tesla misled South Korean buyers over Full Self-Driving, consumer group alleges",
-   "link": "https://investinglive.com/stocks/tesla-misled-south-korean-buyers-over-full-self-driving-consumer-group-alleges/",
-   "summary": "The direct financial hit to Tesla is likely small, but the case adds to regulatory and reputational risk around Full Self-Driving, a product central to the company’s valuation story. A cease-and-desist order or fines…",
-   "published": "2026-11-04T00:43:38.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "85w6o0",
-   "title": "PBOC is expected to set the USD/CNY reference rate at 6.6811 – Reuters estimate",
-   "link": "https://investinglive.com/central-banks/pboc-is-expected-to-set-the-usd-cny-reference-rate-at-6-6811-reuters-estimate/",
-   "summary": "Yesterday the PNoC made moves to slow the yuan appreciation: China’s PBOC lifts FX reserve ratio to 6%: what it means for the yuan, AUD --- The People’s Bank of China is due to set the daily USD/CNY reference rate at…",
-   "published": "2026-11-04T00:29:08.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "g49sks",
-   "title": "India gold demand seen at six-year low in 2026 as high prices and weak monsoon bite",
-   "link": "https://investinglive.com/commodities/india-gold-demand-seen-at-six-year-low-in-2026-as-high-prices-and-weak-monsoon-bite/",
-   "summary": "Weak Indian buying removes an important source of physical support for gold, leaving prices more reliant on central bank purchases and fund inflows. Lower imports would ease pressure on India’s trade deficit and offer…",
-   "published": "2026-11-04T00:16:42.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "eyuq7n",
    "title": "Canva announces major job cuts after 'our hardest year yet'",
    "link": "https://www.bbc.co.uk/news/articles/cw77pg7neydmo?at_medium=RSS&at_campaign=rss",
@@ -66,29 +228,11 @@
    "category": "economy"
   },
   {
-   "id": "1dlx6xs",
-   "title": "The very early results in Kentucky show a massive swing towards Democrats",
-   "link": "https://investinglive.com/news/the-very-early-results-in-kentucky-show-a-massive-swing-towards-democrats/",
-   "summary": "I highlighted KY-06 as an early district to watch as a barometer of today's vote and now some real results are crossing and betting markets are moving. In Anderson County, the numbers show the Republican Alvarado…",
-   "published": "2026-11-04T00:06:55.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "oy5u4u",
    "title": "Graduates are managing AI - but are they learning much else?",
    "link": "https://www.bbc.co.uk/news/articles/c820vz6wyp65o?at_medium=RSS&at_campaign=rss",
    "summary": "Graduates are spending more time managing AI, but are they missing out on other work experience?",
    "published": "2026-11-04T00:04:35.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "86lbvk",
-   "title": "Poundland supplier 'will lose millions' if retailer collapses",
-   "link": "https://www.bbc.co.uk/news/articles/ck240mm3e42do?at_medium=RSS&at_campaign=rss",
-   "summary": "One of Poundland's suppliers will lose millions if it collapses, while other suppliers have said they would go under.",
-   "published": "2026-11-04T00:03:17.000Z",
    "source": "BBC Business",
    "category": "economy"
   },
@@ -102,51 +246,6 @@
    "category": "crypto"
   },
   {
-   "id": "mvizmy",
-   "title": "Trump says no immediate plan to strike Iran as Netanyahu hints at attack this week",
-   "link": "https://investinglive.com/commodities/trump-says-no-immediate-plan-to-strike-iran-as-netanyahu-hints-at-attack-this-week/",
-   "summary": "Trump’s remarks could take some heat out of crude, as they reduce the near-term chance of a fresh US-led escalation that markets had begun to price after Netanyahu’s hints. Any relief is likely to be limited, because…",
-   "published": "2026-11-03T23:52:00.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "vuy8kh",
-   "title": "BMW issues second profit warning, says car business could slip into operating loss",
-   "link": "https://investinglive.com/stocks/bmw-issues-second-profit-warning-says-car-business-could-slip-into-operating-loss/",
-   "summary": "The warning adds pressure on European auto stocks heading into Frankfurt’s open, with Mercedes-Benz and Volkswagen exposed to the same China weakness. The cut is partly self-inflicted, through faster restructuring and…",
-   "published": "2026-11-03T23:40:05.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "33kr9y",
-   "title": "Central bank gold buying jumps 42% in Q3 as high prices hit jewellery demand, WGC says",
-   "link": "https://investinglive.com/commodities/central-bank-gold-buying-jumps-42-in-q3-as-high-prices-hit-jewellery-demand-wgc-says/",
-   "summary": "The split in demand matters for price support: central banks tend to buy steadily rather than chase prices, so their stepped-up purchases act as a floor under gold in a way retail demand cannot. The weakness in…",
-   "published": "2026-11-03T23:06:01.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "atn5ra",
-   "title": "US warns of Houthi threat to Saudi airports and infrastructure, curbs travel to oil areas",
-   "link": "https://investinglive.com/commodities/us-warns-of-houthi-threat-to-saudi-airports-and-infrastructure-curbs-travel-to-oil-areas/",
-   "summary": "For oil, the alert matters less for what has happened than for where Washington now sees risk. By naming Qatif and Yanbu, it points to the possibility of strikes on processing and export infrastructure, not just…",
-   "published": "2026-11-03T22:42:41.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-11-03T22:39:18.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1wliep4",
    "title": "US tech stocks recover after selloff spooks investors over AI spending",
    "link": "https://www.theguardian.com/business/2026/nov/03/us-tech-stocks-recovery-ai-spending",
@@ -156,24 +255,6 @@
    "category": "economy"
   },
   {
-   "id": "12uv301",
-   "title": "Carney says US trade talks to intensify as Washington asks less and offers mor",
-   "link": "https://investinglive.com/news/carney-says-us-trade-talks-to-intensify-as-washington-asks-less-and-offers-mor/",
-   "summary": "Carney’s remarks offer modest support for the Canadian dollar, as any easing of the 50% US tariff would lift a weight on Canadian exporters and the growth outlook. The lack of a timeline limits how much a trade-deal…",
-   "published": "2026-11-03T22:16:39.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "hsike4",
-   "title": "Oil: Private survey of inventory shows a huge headline crude oil draw vs. build expected",
-   "link": "https://investinglive.com/commodities/oil-private-survey-of-inventory-shows-a-huge-headline-crude-oil-draw-vs-build-expected/",
-   "summary": "Via oilprice.com: Expectations I had seen centred on: Crude +1.9mn bbls Gasoline 0 Distillate +0.4mn Cushing +0.5mn This article was written by Eamonn Sheridan at investinglive.com.",
-   "published": "2026-11-03T22:06:51.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1d4wes4",
    "title": "SpaceX blocks tokenized stock listing on OKXICE despite offshore trading boom",
    "link": "https://cointelegraph.com/news/spacex-tokenization-okxice?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -181,24 +262,6 @@
    "published": "2026-11-03T21:47:20.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "ow9jwh",
-   "title": "NZ Q3 Unemployment rate 5.7% (expected 5.5%, prior 5.6%)",
-   "link": "https://investinglive.com/news/nz-q3-unemployment-rate-5-7-expected-5-5-prior-5-6/",
-   "summary": "The miss on every major measure is likely to weigh on the New Zealand dollar and trim pricing for a December rate hike. The kiwi was already near a cycle low against the Australian dollar after last week’s RBNZ hold,…",
-   "published": "2026-11-03T21:45:23.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1n2o3os",
-   "title": "investingLive Americas market news wrap: Job openings jump as the US votes",
-   "link": "https://investinglive.com/news/investinglive-americas-market-news-wrap-job-openings-jump-as-the-us-votes/",
-   "summary": "JOLTs Job openings 7.523M vs 7.100M estimate US September factory orders +1.8% vs +1.2% expected Trump on Israel: The aid gets cut off at year-end Never tell me the odds: Prediction markets see Democrats taking control…",
-   "published": "2026-11-03T21:42:05.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "108dca7",
@@ -237,24 +300,6 @@
    "category": "markets"
   },
   {
-   "id": "kwah9",
-   "title": "Wall Street killed Bitcoin’s wild rallies: 10x’s Markus Thielen",
-   "link": "https://cointelegraph.com/magazine/wall-street-killed-bitcoins-wild-rallies-markus-thielen?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Markus Thielen sees Bitcoin reaching $90,000 by year-end, questions institutional ETF demand and says Ethereum must do more for holders.",
-   "published": "2026-11-03T16:47:01.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "fojeci",
-   "title": "Binance traces $6.3B hack to fake job interviews, compromised AI tool",
-   "link": "https://cointelegraph.com/news/binance-fake-job-interviews-compromised-ai-tool-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Hackers exploited compromised employee computers and stolen credentials to breach Binance’s wallet infrastructure, according to the exchange’s investigation.",
-   "published": "2026-11-03T16:44:06.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1qlxhvl",
    "title": "Binance says fake job interviews used as part of $6.3bn crypto hack",
    "link": "https://www.bbc.co.uk/news/articles/ck5ynwz9gy67o?at_medium=RSS&at_campaign=rss",
@@ -262,15 +307,6 @@
    "published": "2026-11-03T16:19:29.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "d4q4lp",
-   "title": "Bitcoin price defends $76K lows as analysts see stocks pricing in ‘political gridlock’",
-   "link": "https://cointelegraph.com/markets/bitcoin-price-defends-76k-lows-as-analysis-sees-stocks-pricing-in-political-gridlock?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitcoin made modest gains at the start of Wall Street trading on Tuesday as markets awaited cues from the US midterm elections.",
-   "published": "2026-11-03T15:44:42.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "mk2s1m",
@@ -285,19 +321,10 @@
    "id": "t8nfbk",
    "title": "Mining giant joins fight to stop killer toad march across Australia",
    "link": "https://www.bbc.co.uk/news/articles/c3dxw8p99ervo?at_medium=RSS&at_campaign=rss",
-   "summary": "Rio Tinto is jointly funding a A$28m \"toad containment zoe\" to protect the Pilbara region.",
+   "summary": "Rio Tinto is jointly funding a A$28m \"toad containment zone\" to protect the Pilbara region.",
    "published": "2026-11-03T15:05:01.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "11olgar",
-   "title": "What’s at stake for crypto as the US votes in the 2026 midterms?",
-   "link": "https://cointelegraph.com/news/us-midterms-2026-stake-crypto-election-day?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Crypto groups spent about $176 million ahead of the US midterms, with control of Congress and the future of crypto legislation at stake.",
-   "published": "2026-11-03T13:53:07.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1uihbsa",
@@ -307,15 +334,6 @@
    "published": "2026-11-03T13:33:11.000Z",
    "source": "CNBC Finance",
    "category": "markets"
-  },
-  {
-   "id": "mx9bwd",
-   "title": "Moscow Exchange to launch Bitcoin, Ether and USDT trading in December",
-   "link": "https://cointelegraph.com/news/moscow-exchange-bitcoin-ether-usdt-trading-december?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Moscow Exchange plans to launch crypto trading on Dec. 1 under Russia’s new law, with annual purchase limits for non-qualified investors.",
-   "published": "2026-11-03T13:15:47.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "sv5fdo",
@@ -369,15 +387,6 @@
    "summary": "iPhone maker says decision to raise prices has offset some of impact, as revenues are stronger than expected Business live – latest updates Apple has warned of an “unprecedented” rise in memory chip prices, as it…",
    "published": "2026-11-03T09:01:19.000Z",
    "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "1r2x6u7",
-   "title": "North Korea denies being behind record $6.3bn Binance hack",
-   "link": "https://www.bbc.co.uk/news/articles/c6rey4v53exgo?at_medium=RSS&at_campaign=rss",
-   "summary": "US government agencies and cyber analysts have blamed Pyongyang for the record-breaking heist.",
-   "published": "2026-11-03T08:33:20.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
@@ -512,15 +521,6 @@
    "link": "https://www.cnbc.com/2026/10/30/musalem-fed-monetary-policy-tightening.html",
    "summary": "The comments from Federal Reserve Presidents Alberto Musalem and Lorie Logan offer the first morsels of insight into what leaders at the Fed see happening next.",
    "published": "2026-10-30T21:53:10.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
-   "id": "1shj433",
-   "title": "Some Polymarket user funds stolen by hackers; exchange referring matter to U.K. authorities",
-   "link": "https://www.cnbc.com/2026/10/29/polymarket-reports-outage-on-international-exchange-halts-trading.html",
-   "summary": "The outage comes just days before the platform is expected to experience heightened trading during the U.S. midterm elections.",
-   "published": "2026-10-30T20:18:49.000Z",
    "source": "CNBC Finance",
    "category": "markets"
   },
