@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T16:48:38.778Z",
+ "updated": "2026-11-04T22:23:47.522Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,49 +12,211 @@
  },
  "items": [
   {
-   "id": "1xb3q2z",
-   "title": "10-year Treasury yield is little changed as traders mull over Democrats' midterm victories",
-   "link": "https://www.cnbc.com/2026/11/03/treasury-yields-fall-as-democrats-win-big-in-us-midterm-elections.html",
-   "summary": "Treasury yields were last little changed Wednesday as investors weighed big wins from Democrats in the U.S. midterm elections.",
-   "published": "2026-11-04T16:23:53.000Z",
+   "id": "1wa9y96",
+   "title": "Stocks making the biggest moves after hours: Coherent, AppLovin, Expedia, Qualcomm and more",
+   "link": "https://www.cnbc.com/2026/11/04/stocks-making-the-biggest-moves-after-hours-cohr-app-expe-more.html",
+   "summary": "These are the stocks posting the largest moves after hours.",
+   "published": "2026-11-04T22:04:55.000Z",
    "source": "CNBC Finance",
    "category": "markets"
   },
   {
-   "id": "wlnw17",
-   "title": "US stock markets and government bonds rally while dollar falls after Democrats secure Congress – as it happened",
-   "link": "https://www.theguardian.com/business/live/2026/nov/04/dollar-falls-while-gold-us-treasury-bonds-rally-markets-react-democrats-midterm-election-victory-marks-spencer-latest-live-updates",
-   "summary": "European shares also power ahead as markets react to blue wave in US midterm elections And Chris Turner , global head of markets at ING, says: Investors will be parsing what this all means. For example, Gina Hinojosa…",
-   "published": "2026-11-04T16:11:26.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
+   "id": "1m8g0te",
+   "title": "SoftBank faces two hits as Arm slide meets US rotation out of AI, leaving Nikkei exposed",
+   "link": "https://investinglive.com/stocks/softbank-faces-two-hits-as-arm-slide-meets-us-rotation-out-of-ai-leaving-nikkei-exposed/",
+   "summary": "The divergence on Wall Street sets up a likely split in Tokyo, where AI-linked heavyweights could trail even as the broader market draws support from strong global risk appetite. Falling oil is a modest positive for…",
+   "published": "2026-11-04T21:45:17.000Z",
+   "source": "investingLive",
+   "category": "forex"
   },
   {
    "id": "1jp9m7m",
-   "title": "Elon Musk's millions fail to deliver Texas for the Republicans in fierce midterms",
+   "title": "Elon Musk's millions failed to deliver Republican wins in fierce midterms",
    "link": "https://www.bbc.co.uk/news/articles/cv8ez3p3ge5ko?at_medium=RSS&at_campaign=rss",
-   "summary": "The billionaire's political action committee (Pac) contributed $47m (£35m) to Ken Paxton's campaign.",
-   "published": "2026-11-04T15:51:37.000Z",
+   "summary": "Musk spent nearly $500m in the 2026 US midterm elections, an individual election spending record.",
+   "published": "2026-11-04T21:41:15.000Z",
    "source": "BBC Business",
    "category": "economy"
+  },
+  {
+   "id": "v5hol9",
+   "title": "Pound rises to its highest level since the Brexit referendum",
+   "link": "https://www.bbc.co.uk/news/articles/c6lykq2qjn2vo?at_medium=RSS&at_campaign=rss",
+   "summary": "Pound reaches highest level against a basket of currencies since the Brexit referendum a decade ago",
+   "published": "2026-11-04T21:35:50.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "16vvg0q",
+   "title": "How Aussie Bitcoiners can avoid 2027’s shock CGT hike: Part 1",
+   "link": "https://cointelegraph.com/magazine/how-aussie-bitcoiners-can-avoid-2027s-shock-cgt-increase-part-1?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "From setting up an SMSF or a company, to just leaving the country entirely, here are some strategies Australian Bitcoiners can employ to deal with 2027’s massive CGT hike.",
+   "published": "2026-11-04T21:30:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "s6rt03",
+   "title": "Dow surges 1,570 points as investors rotate out of AI and chip stocks",
+   "link": "https://investinglive.com/stocks/dow-surges-1-570-points-as-investors-rotate-out-of-ai-and-chip-stocks/",
+   "summary": "US stocks closed sharply higher on Wednesday, with the Dow Industrial Average leading the way with a 3.03% gain. The S&P 500, Nasdaq Composite and Russell 2000 also advanced, but the Nasdaq 100 lagged as selling in…",
+   "published": "2026-11-04T21:28:14.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "e956jo",
+   "title": "Snap user count falls short at 495 million as profit beat offsets slight revenue miss",
+   "link": "https://investinglive.com/stocks/snap-user-count-falls-short-at-495-million-as-profit-beat-offsets-slight-revenue-miss/",
+   "summary": "The share reaction was not available at the time of writing, but the mix points to a tug of war between margin-focused and growth-focused investors. A user miss tends to weigh more heavily on social media stocks than a…",
+   "published": "2026-11-04T21:26:41.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "cp468l",
+   "title": "Arm shares fall 5% after hours despite Q2 beat as outlook only edges past forecasts",
+   "link": "https://investinglive.com/stocks/arm-shares-fall-5-after-hours-despite-q2-beat-as-outlook-only-edges-past-forecasts/",
+   "summary": "A 5% fall on a beat in both earnings and revenue shows how high the bar had been set, with the market treating guidance that only matches consensus as a disappointment. The reaction may weigh on AI-linked chip names in…",
+   "published": "2026-11-04T21:20:58.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1xb3q2z",
+   "title": "10-year Treasury yield slides as traders mull over Democrats' midterm victories, oil prices drop",
+   "link": "https://www.cnbc.com/2026/11/03/treasury-yields-fall-as-democrats-win-big-in-us-midterm-elections.html",
+   "summary": "Treasury yields were last little changed Wednesday as investors weighed big wins from Democrats in the U.S. midterm elections.",
+   "published": "2026-11-04T21:18:44.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "17idtz3",
+   "title": "Qualcomm beats Q4 forecasts, shares slip 2% as profit guidance comes in light",
+   "link": "https://investinglive.com/stocks/qualcomm-beats-q4-forecasts-shares-slip-2-as-profit-guidance-comes-in-light/",
+   "summary": "The after-hours move suggests investors are pricing the guidance rather than the quarter, with the gap between a firm revenue outlook and a softer earnings range pointing to margin pressure as the key risk. A beat that…",
+   "published": "2026-11-04T21:12:53.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1954p2s",
+   "title": "Economic and event calendar in Asia Thursday, November 5, 2026 - we hear from the Bank of Japan",
+   "link": "https://investinglive.com/central-banks/economic-and-event-calendar-in-asia-thursday-november-5-2026-we-hear-from-the-bank-of-japan/",
+   "summary": "BoJ minutes due on the September hike that split the board The Bank of Japan releases the full minutes of its September 17 and 18 policy meeting at 8:50 a.m. Tokyo time on Thursday, and they cover one of the most…",
+   "published": "2026-11-04T21:03:26.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1183wsi",
+   "title": "investingLive Americas market news wrap: Oil crushed as Republicans blame war for loss",
+   "link": "https://investinglive.com/news/investinglive-americas-market-news-wrap-oil-crushed-as-republicans-blame-war-for-loss/",
+   "summary": "October US ISM services 54.5 vs 54.8 expected US final October S&P Global services PMI 56.1 vs 57.9 prelim US September international trade balance -105.0B vs -108.0B expected Canada Trade Balance ($C) for September…",
+   "published": "2026-11-04T20:30:28.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "k8cciy",
+   "title": "NZDUSD buyers defend the floor. Can they break the ceiling?",
+   "link": "https://investinglive.com/technical-analysis/nzdusd-buyers-defend-the-floor-can-they-break-the-ceiling/",
+   "summary": "The NZDUSD moved lower after weaker New Zealand jobs data early in the new trading day, but sellers could not push the price below a familiar floor near 0.5579 (see green circles on the chart below). That level has…",
+   "published": "2026-11-04T20:17:10.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1xr7c4q",
+   "title": "The market is making a big bet on ending the Iran war",
+   "link": "https://investinglive.com/commodities/the-market-is-making-a-big-bet-on-ending-the-iran-war/",
+   "summary": "If endless Middle East wars were on the ballot, it's safe to say how it would have gone. Republicans are openly blaming the war for the midterm rout and the market is taking that at face value. The indication is that…",
+   "published": "2026-11-04T19:59:17.000Z",
+   "source": "investingLive",
+   "category": "forex"
   },
   {
    "id": "86lbvk",
    "title": "Poundland owner in crunch talks as retailer's collapse looms",
    "link": "https://www.bbc.co.uk/news/articles/ck240mm3e42do?at_medium=RSS&at_campaign=rss",
    "summary": "Gordon Brothers will meet Jonathan Reynolds on Wednesday as the investment firm faces scrutiny over Poundland.",
-   "published": "2026-11-04T15:45:11.000Z",
+   "published": "2026-11-04T19:44:46.000Z",
    "source": "BBC Business",
    "category": "economy"
   },
   {
-   "id": "g1olxr",
-   "title": "EIA weekly US crude oil inventories -865K vs +877K expected",
-   "link": "https://investinglive.com/news/eia-weekly-us-crude-oil-inventories-k-vs-877k-expected/",
-   "summary": "Prior was -1892K Gasoline -222K vs +153K expected Distillates -3565K vs -100K expected API data from late yesterday: Crude -5267K Gasoline +1427K Distillates -270K It's all about Trump and the Iran war today. There's a…",
-   "published": "2026-11-04T15:30:08.000Z",
+   "id": "10x3xrp",
+   "title": "Kellogg's admits snap, crackle and pop is quieter after uproar over Rice Krispies recipe change",
+   "link": "https://www.bbc.co.uk/news/articles/cqvg0y44ym7vo?at_medium=RSS&at_campaign=rss",
+   "summary": "The cereal giant has changed the recipes for Rice Krispies and Coco Pops, sparking a backlash online.",
+   "published": "2026-11-04T19:38:53.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "12shebr",
+   "title": "Gold is taking it clue from the USD and yields moving lower. Technicals are also giving the buyers a push.",
+   "link": "https://investinglive.com/commodities/gold-is-taking-it-clue-from-the-usd-and-yields-moving-lower-technicals-are-also-giving-the-buyers-a-push/",
+   "summary": "Gold is trading up more than $130, or 3.3%, at $4061.80. The price reached a high of $4070.53 after trading as low as $3919.93. Lower Treasury yields and a weaker US dollar are helping fuel the gains. The US 10-year…",
+   "published": "2026-11-04T19:38:22.000Z",
    "source": "investingLive",
    "category": "forex"
+  },
+  {
+   "id": "61ecpj",
+   "title": "The market is telling the hyperscalers it's happy about a slower data center buildout",
+   "link": "https://investinglive.com/news/the-market-is-telling-the-hyperscalers-it-s-happy-about-a-slower-data-center-buildout/",
+   "summary": "Perhaps the clearest takeaway from Tuesday's US midterms is that data centers are unpopular. After a short-lived construction boom, they provide little ongoing employment and drive up local energy costs. There were 41…",
+   "published": "2026-11-04T19:19:37.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1cg4xa8",
+   "title": "Trump-linked tokens lead crypto losses after Democrats sweep in the US midterms",
+   "link": "https://cointelegraph.com/news/trump-linked-tokens-lead-crypto-losses-after-democrats-sweep-in-the-us-midterms?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The official Trump and World Liberty Financial tokens were the two biggest losers among the top 100 cryptocurrencies on Wednesday, even as Bitcoin and Ether rallied.",
+   "published": "2026-11-04T19:15:39.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "xr20ji",
+   "title": "Riot shares surge on $28B AI lease as Hut 8 sinks on revenue miss",
+   "link": "https://cointelegraph.com/news/riots-28b-ai-deal-lifts-shares-as-hut-8-faces-transition-costs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Bitcoin miner Riot sold BTC to finance its AI expansion, while Hut 8 reported falling revenue and rising costs before its major data center leases generate income.",
+   "published": "2026-11-04T18:47:56.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "ia80ry",
+   "title": "Trump says election loss was largely a result of the Iran war",
+   "link": "https://investinglive.com/news/trump-says-election-loss-was-largely-a-result-of-the-iran-war/",
+   "summary": "It's largely true election loss was the result of the Iran war It was worth it You can't let Iran have a nuclear weapon I'll get along probably with Democrats If I were on the ballot we would have won We weren't able…",
+   "published": "2026-11-04T18:15:38.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1lu4e9n",
+   "title": "Circle’s ARC token sale lifts earnings as lower yields weigh on USDC income",
+   "link": "https://cointelegraph.com/news/circles-arc-token-sale-earnings-yields-usdc-income?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Circle is looking to payments fees and future staking rewards to diversify revenue as its core stablecoin business faces pressure from lower yields and growing competition.",
+   "published": "2026-11-04T18:02:42.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "fyywqv",
+   "title": "US stocks rise, dollar slides as investors digest Democrats’ midterm victories",
+   "link": "https://www.theguardian.com/business/2026/nov/04/us-dollar-slides-democrats-midterm-election-win-growth-fears",
+   "summary": "Government bond yields fall while initial fears ease over impact of election results on world’s biggest economy US midterm elections – live updates After US midterms, what will lame-duck Trump mean for global economy?…",
+   "published": "2026-11-04T16:38:28.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
   },
   {
    "id": "1n2tg7f",
@@ -66,31 +228,13 @@
    "category": "crypto"
   },
   {
-   "id": "hu4opb",
-   "title": "Stocks surge, but buyers still have technical work to do",
-   "link": "https://investinglive.com/stocks/stocks-surge-but-buyers-still-have-technical-work-to-do/",
-   "summary": "US stocks are sharply higher, with the Dow up 2.06%, the S&P 500 up 1.75%, the Nasdaq Composite up 2.40% and the Nasdaq 100 up 2.03%. The run to the upside - especially in the tech heavy Nasdaq indices are interesting…",
-   "published": "2026-11-04T15:16:25.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "10x3xrp",
-   "title": "Kellogg's admits snap, crackle and pop is quieter after uproar over Rice Krispies recipe change",
-   "link": "https://www.bbc.co.uk/news/articles/cqvg0y44ym7vo?at_medium=RSS&at_campaign=rss",
-   "summary": "The cereal giant has changed the recipes for Rice Krispies and Coco Pops, sparking a backlash online.",
-   "published": "2026-11-04T15:13:14.000Z",
-   "source": "BBC Business",
+   "id": "9rlq5c",
+   "title": "CVS Health to split pharmacy chain from health insurance",
+   "link": "https://www.theguardian.com/us-news/2026/nov/04/cvs-health-pharmacy-insurance",
+   "summary": "CVS Pharmacy will be separate from CVS Health, housing major insurer Aetna and benefits manager Caremark CVS Health, the largest US healthcare conglomerate valued at $117bn, has announced its plans split off its…",
+   "published": "2026-11-04T15:20:24.000Z",
+   "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "1lmubag",
-   "title": "October US ISM services 54.5 vs 54.8 expected",
-   "link": "https://investinglive.com/news/october-us-ism-services-vs-54-8-expected/",
-   "summary": "Prior was 54.9 Prices paid 73.0 vs 74.0 prior New orders 55.9 vs 59.8 prior Employment 51.4 vs 50.1 prior Business activity 53.8 vs 56.5 prior This is a step back from September and suggests there is no big…",
-   "published": "2026-11-04T15:00:06.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "1a5k1tk",
@@ -100,24 +244,6 @@
    "published": "2026-11-04T14:51:45.000Z",
    "source": "Bank of England",
    "category": "economy"
-  },
-  {
-   "id": "1lraki0",
-   "title": "US final October S&P Global services PMI 56.1 vs 57.9 prelim",
-   "link": "https://investinglive.com/news/us-final-october-s-p-global-services-pmi-56-1-vs-57-9-prelim/",
-   "summary": "Prelim was 57.9 Prior was 58.8 Composite PMI 55.9 vs 57.6 prelim Coimposite prior was 58.4 Sentiment regarding future activity fell to its lowest since May Demand was reported to be high Sentiment was overall at its…",
-   "published": "2026-11-04T14:50:16.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "81at9n",
-   "title": "The biggest loser of the US elections was data centers",
-   "link": "https://investinglive.com/news/the-biggest-loser-of-the-us-elections-was-data-centers/",
-   "summary": "One of the clearest messages from Tuesday's US midterm elections had nothing to do with Republicans or Democrats. It was a resounding rejection of data centers. Communities across the country voted on dozens of ballot…",
-   "published": "2026-11-04T14:05:55.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "1la066y",
@@ -138,15 +264,6 @@
    "category": "crypto"
   },
   {
-   "id": "188u2o5",
-   "title": "How Congressional control shapes US fiscal policy and financial markets",
-   "link": "https://investinglive.com/education/how-congressional-control-shapes-us-fiscal-policy-and-financial-markets/",
-   "summary": "US elections can have a significant impact on financial markets, not only because they determine who controls the government but also because they influence expectations about future fiscal policy. One of the most…",
-   "published": "2026-11-04T13:42:49.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1c9d6wu",
    "title": "Stocks making the biggest moves premarket: Trump Media, Tesla, CoreWeave, Novo Nordisk and more",
    "link": "https://www.cnbc.com/2026/11/04/stocks-making-the-biggest-moves-premarket-djt-tsla-crwv-nvo.html",
@@ -154,60 +271,6 @@
    "published": "2026-11-04T13:32:54.000Z",
    "source": "CNBC Finance",
    "category": "markets"
-  },
-  {
-   "id": "gw1kg7",
-   "title": "Canada Trade Balance ($C) for September +5.35B vs +4.1B estimate",
-   "link": "https://investinglive.com/news/canada-trade-balance-c-for-september-5-35b-vs-4-1b-estimate/",
-   "summary": "Prior month +4.2B The details of the Canada Trade Balance for the month of September: Merchandise trade balance: C$5.4 billion surplus. Prior C$4.95 billion surplus 9revised from C$4.20B. Exports: +0.2% MoM to C$78.6…",
-   "published": "2026-11-04T13:30:14.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "ai9onv",
-   "title": "US September international trade balance -105.0B vs -108.0B expected",
-   "link": "https://investinglive.com/news/us-september-international-trade-balance-105-0b-vs-108-0b-expected/",
-   "summary": "Prior was -$105.6 billion Goods trade balance -135.0B vs -$134.9 billion prelim US-China balance -$21.87 vs -$18.4 prior Exports $321.51 billion vs $315.67 billion prior Imports of capital goods are a good measure of…",
-   "published": "2026-11-04T13:30:10.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "n3exad",
-   "title": "Morning Kickstart: Dollar falls, stocks rise as Democrats take Congress",
-   "link": "https://investinglive.com/technical-analysis/morning-kickstart-dollar-falls-stocks-rise-as-democrats-take-congress/",
-   "summary": "The US dollar is lower, Treasury yields are falling and US stocks are trading higher as markets digest a major shift in Washington. Democrats have won control of both the House and Senate, setting up divided government…",
-   "published": "2026-11-04T13:16:47.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1xsfki0",
-   "title": "US October ADP employment +86K vs +65K expected",
-   "link": "https://investinglive.com/news/us-october-adp-employment-86k-vs-65k-expected/",
-   "summary": "Details Prior was +90K Construction +13K vs +15K prior Manufacturing -1K vs +17K prior Natural resources and mining -8K vs -1K prior Financial activities +15K vs -16K prior Professional and business services -27K vs…",
-   "published": "2026-11-04T13:15:12.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1tqvyna",
-   "title": "investingLive European session wrap: Stocks rebound, gold soars as dollar tumbles after blue sweep in US midterms",
-   "link": "https://investinglive.com/news/investinglive-european-session-wrap-stocks-rebound-gold-soars-as-dollar-tumbles-after-blue-sweep-in-us-midterms/",
-   "summary": "Headlines: US midterms 2026: Who would've thought that a war would be a bad idea? US futures continue to trim losses after early beatdown but AI worries linger Macro pulse: What if good news for stocks turns into bad…",
-   "published": "2026-11-04T12:49:16.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "9iruss",
-   "title": "EUR/USD rebounds as midterm results put the dollar under pressure as markets reassess fiscal outlook",
-   "link": "https://investinglive.com/forex/eur-usd-rebounds-as-midterm-results-put-the-dollar-under-pressure-as-markets-reassess-fiscal-outlook/",
-   "summary": "USD: The Democrats’ victory in the US midterm elections has weighed on the US dollar on expected fiscal restraint. This also comes amid an overstretched market, as long dollar has been one of the most crowded trades…",
-   "published": "2026-11-04T12:43:34.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "uauwlr",
@@ -260,42 +323,6 @@
    "link": "https://cointelegraph.com/news/us-midterms-2026-live-results-and-what-they-mean-for-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "summary": "Democrats won control of Congress in the 2026 US midterms. Catch up on key races, crypto-backed candidates and the outlook for crypto regulation.",
    "published": "2026-11-04T09:27:34.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "59xsg2",
-   "title": "Binance hackers move 81% of stolen Solana, route funds via THORChain",
-   "link": "https://cointelegraph.com/news/binance-hackers-move-81-stolen-solana-route-thorchain?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The Binance attackers moved most of the stolen SOL and continued laundering funds through THORChain after the protocol resumed swaps.",
-   "published": "2026-11-04T09:15:55.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "8qpqxi",
-   "title": "Democrats win US House to secure control of Congress in midterms",
-   "link": "https://cointelegraph.com/news/democrats-win-us-house-congress-control?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Democrats will take control of House committees in January 2027, giving them power to investigate President Donald Trump’s administration.",
-   "published": "2026-11-04T07:50:27.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1dmhech",
-   "title": "Bitcoin bounces from 7-week low under $76K as Democrats sweep Congress",
-   "link": "https://cointelegraph.com/markets/bitcoin-bounces-from-7-week-low-under-76k-as-democrats-eye-congress-sweep?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitcoin price downside reached a seven-week-low of $75,618 as 24-hour crypto long liquidations neared $300 million.",
-   "published": "2026-11-04T07:25:47.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "djeqzn",
-   "title": "Ethereum dev targets 2028 for quantum resistance, a year early",
-   "link": "https://cointelegraph.com/news/ethereum-post-quantum-transition-2028-target?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Ethereum researcher Justin Drake said it is their “hope” that Ethereum will achieve its post-quantum and post-AI transition by December 2028.",
-   "published": "2026-11-04T05:46:33.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
   },
@@ -404,15 +431,6 @@
    "link": "https://www.bbc.co.uk/news/articles/cqrky5nxxn4po?at_medium=RSS&at_campaign=rss",
    "summary": "The regulator says it supports lenders offering early compensation offers, as long as they are fair.",
    "published": "2026-11-03T11:56:31.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "vm053b",
-   "title": "'Quiet quitting' could be hitting the economy - here's why",
-   "link": "https://www.bbc.co.uk/news/articles/cw23d5z87drpo?at_medium=RSS&at_campaign=rss",
-   "summary": "Britons have become less engaged with the jobs they do and are less willing to put in extra effort, a report has found.",
-   "published": "2026-11-03T11:15:51.000Z",
    "source": "BBC Business",
    "category": "economy"
   },
@@ -543,15 +561,6 @@
    "category": "economy"
   },
   {
-   "id": "ierefv",
-   "title": "The staggering $446m Elon Musk has spent on the US midterms – visualized",
-   "link": "https://www.theguardian.com/us-news/ng-interactive/2026/oct/31/elon-musk-midterms-spending-visualized",
-   "summary": "The tech mogul’s midterm donations backing Republicans have made him the largest single-cycle political donor in modern US history Elon Musk has poured so much money into US politics this midterms election cycle that…",
-   "published": "2026-10-31T10:00:40.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
    "id": "6hcfyy",
    "title": "Fed officials are already saying they’ll need to get back to hiking rates",
    "link": "https://www.cnbc.com/2026/10/30/musalem-fed-monetary-policy-tightening.html",
@@ -586,15 +595,6 @@
    "published": "2026-10-30T14:00:00.000Z",
    "source": "ECB",
    "category": "economy"
-  },
-  {
-   "id": "1tp3iyc",
-   "title": "Stocks making the biggest moves premarket: Intel, Amazon, Reddit, Chevron & more",
-   "link": "https://www.cnbc.com/2026/10/30/stocks-making-the-biggest-moves-premarket-intc-amzn-rddt-cvx.html",
-   "summary": "These are the stocks posting the largest moves premarket.",
-   "published": "2026-10-30T12:01:15.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
   },
   {
    "id": "1s67o57",
@@ -675,15 +675,6 @@
    "summary": "The Bank of England has today launched a consultation supporting central counterparties (CCPs) acceptance of tokenised forms of eligible collateral.",
    "published": "2026-10-29T10:00:00.000Z",
    "source": "Bank of England",
-   "category": "economy"
-  },
-  {
-   "id": "5h2i14",
-   "title": "Federal Reserve issues FOMC statement",
-   "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
-   "summary": "Federal Reserve issues FOMC statement",
-   "published": "2026-10-28T18:00:00.000Z",
-   "source": "Federal Reserve",
    "category": "economy"
   }
  ]
