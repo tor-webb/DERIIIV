@@ -222,6 +222,19 @@ export const validateChoice = (specs: TMarketSpecs, choice: TContractChoice, sta
     }
 };
 
+/**
+ * Digit statistics describe the past of a random sequence, so auto-trading asks for a clearer reading than the general
+ * minimum: at least two standard deviations from chance (strength 50). The person's own minimum applies if higher.
+ */
+export const DIGIT_AUTO_MIN_STRENGTH = 50;
+
+const resultWord = (profit: number) => {
+    if (profit > 0) return localize('won');
+    return profit < 0 ? localize('lost') : localize('broke even');
+};
+
+const minimumFor = (product: TProductId) => (isDigitProduct(product) ? DIGIT_AUTO_MIN_STRENGTH : 0);
+
 export class VoltrexTrader {
     private trades: TTrade[] = [];
     private risk: TRiskState;
@@ -507,7 +520,12 @@ export class VoltrexTrader {
             this.finishTrade(id, end.profit);
             return;
         }
-        this.update(id, { status: 'failed' });
+        if (end.kind === 'lost_contact') {
+            // the contract may still be open on the server, so it keeps counting against the limits
+            this.update(id, { status: 'open', contract_id: end.contract_id });
+        } else {
+            this.update(id, { status: 'failed' });
+        }
         this.write('error', `${trade.name}: ${end.reason}`);
         this.syncOpenStakes();
         this.emit();
@@ -524,7 +542,7 @@ export class VoltrexTrader {
             rounded >= 0 ? 'success' : 'warn',
             localize('{{name}}: {{result}}, {{profit}}.', {
                 name: trade.name,
-                result: rounded > 0 ? localize('won') : localize('lost'),
+                result: resultWord(rounded),
                 profit: `${rounded > 0 ? '+' : ''}${rounded.toFixed(2)}`,
             })
         );
@@ -909,7 +927,7 @@ export class VoltrexTrader {
             if (config.products?.includes('touch')) await this.lookAtTouch(rested);
             const accepted = this.collect(config, rested);
             const candidates = accepted
-                .filter(item => item.strength >= risk.min_strength)
+                .filter(item => item.strength >= Math.max(risk.min_strength, minimumFor(item.product)))
                 .sort((a, b) => b.strength - a.strength);
             const closest = [...analysed].sort((a, b) => (b.signal?.strength ?? 0) - (a.signal?.strength ?? 0))[0];
             this.last_attempt = '';
