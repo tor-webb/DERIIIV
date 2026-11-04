@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T21:11:17.602Z",
+ "updated": "2026-11-04T01:33:33.017Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,11 +12,191 @@
  },
  "items": [
   {
-   "id": "kiqewg",
-   "title": "AMD earnings preview: Adjusted EPS seen rising 62.5% as shares trade below key moving averages",
-   "link": "https://investinglive.com/stocks/amd-earnings-preview-adjusted-eps-seen-rising-62-5-as-shares-trade-below-key-moving-averages/",
-   "summary": "AMD reports third-quarter earnings after the close today, with the conference call scheduled for 5 p.m. ET. Analysts expect strong growth on both the top and bottom lines. Adjusted EPS: $1.95 expected vs. $1.20 a year…",
-   "published": "2026-11-03T20:55:44.000Z",
+   "id": "ssl2yh",
+   "title": "US midterms election 2026 live: Democratic Senate odds climb above 90%",
+   "link": "https://cointelegraph.com/news/us-midterms-2026-live-results-and-what-they-mean-for-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Follow live coverage of the 2026 US midterm elections, including key congressional races, crypto-backed candidates and what the results could mean for digital asset regulation.",
+   "published": "2026-11-04T01:20:56.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "410bz7",
+   "title": "1inch lawyer sees agencies driving US crypto regulation as midterms unfold",
+   "link": "https://cointelegraph.com/news/1inch-lawyer-sees-agencies-driving-us-crypto-regulation-as-midterms-unfold?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Crypto executives expect US regulators to drive crypto policymaking regardless of the midterm election outcome.",
+   "published": "2026-11-04T00:45:16.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "lz6lkt",
+   "title": "Tesla misled South Korean buyers over Full Self-Driving, consumer group alleges",
+   "link": "https://investinglive.com/stocks/tesla-misled-south-korean-buyers-over-full-self-driving-consumer-group-alleges/",
+   "summary": "The direct financial hit to Tesla is likely small, but the case adds to regulatory and reputational risk around Full Self-Driving, a product central to the company’s valuation story. A cease-and-desist order or fines…",
+   "published": "2026-11-04T00:43:38.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "85w6o0",
+   "title": "PBOC is expected to set the USD/CNY reference rate at 6.6811 – Reuters estimate",
+   "link": "https://investinglive.com/central-banks/pboc-is-expected-to-set-the-usd-cny-reference-rate-at-6-6811-reuters-estimate/",
+   "summary": "Yesterday the PNoC made moves to slow the yuan appreciation: China’s PBOC lifts FX reserve ratio to 6%: what it means for the yuan, AUD --- The People’s Bank of China is due to set the daily USD/CNY reference rate at…",
+   "published": "2026-11-04T00:29:08.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "g49sks",
+   "title": "India gold demand seen at six-year low in 2026 as high prices and weak monsoon bite",
+   "link": "https://investinglive.com/commodities/india-gold-demand-seen-at-six-year-low-in-2026-as-high-prices-and-weak-monsoon-bite/",
+   "summary": "Weak Indian buying removes an important source of physical support for gold, leaving prices more reliant on central bank purchases and fund inflows. Lower imports would ease pressure on India’s trade deficit and offer…",
+   "published": "2026-11-04T00:16:42.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "eyuq7n",
+   "title": "Canva announces major job cuts after 'our hardest year yet'",
+   "link": "https://www.bbc.co.uk/news/articles/cw77pg7neydmo?at_medium=RSS&at_campaign=rss",
+   "summary": "CEO Melanie Perkins says more than 1,000 staff will either lose their jobs or be asked to change roles.",
+   "published": "2026-11-04T00:09:35.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1dlx6xs",
+   "title": "The very early results in Kentucky show a massive swing towards Democrats",
+   "link": "https://investinglive.com/news/the-very-early-results-in-kentucky-show-a-massive-swing-towards-democrats/",
+   "summary": "I highlighted KY-06 as an early district to watch as a barometer of today's vote and now some real results are crossing and betting markets are moving. In Anderson County, the numbers show the Republican Alvarado…",
+   "published": "2026-11-04T00:06:55.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "oy5u4u",
+   "title": "Graduates are managing AI - but are they learning much else?",
+   "link": "https://www.bbc.co.uk/news/articles/c820vz6wyp65o?at_medium=RSS&at_campaign=rss",
+   "summary": "Graduates are spending more time managing AI, but are they missing out on other work experience?",
+   "published": "2026-11-04T00:04:35.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "86lbvk",
+   "title": "Poundland supplier 'will lose millions' if retailer collapses",
+   "link": "https://www.bbc.co.uk/news/articles/ck240mm3e42do?at_medium=RSS&at_campaign=rss",
+   "summary": "One of Poundland's suppliers will lose millions if it collapses, while other suppliers have said they would go under.",
+   "published": "2026-11-04T00:03:17.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "6pyirn",
+   "title": "RUNE rallies 15% as THORChain restarts most swaps after halt",
+   "link": "https://cointelegraph.com/markets/rune-rallies-15-as-thorchain-restarts-most-swaps-after-outage?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "THORChain has restored trading on Bitcoin, Ethereum and several other networks following a refund bug, while three chains remain paused.",
+   "published": "2026-11-03T23:56:09.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "mvizmy",
+   "title": "Trump says no immediate plan to strike Iran as Netanyahu hints at attack this week",
+   "link": "https://investinglive.com/commodities/trump-says-no-immediate-plan-to-strike-iran-as-netanyahu-hints-at-attack-this-week/",
+   "summary": "Trump’s remarks could take some heat out of crude, as they reduce the near-term chance of a fresh US-led escalation that markets had begun to price after Netanyahu’s hints. Any relief is likely to be limited, because…",
+   "published": "2026-11-03T23:52:00.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "vuy8kh",
+   "title": "BMW issues second profit warning, says car business could slip into operating loss",
+   "link": "https://investinglive.com/stocks/bmw-issues-second-profit-warning-says-car-business-could-slip-into-operating-loss/",
+   "summary": "The warning adds pressure on European auto stocks heading into Frankfurt’s open, with Mercedes-Benz and Volkswagen exposed to the same China weakness. The cut is partly self-inflicted, through faster restructuring and…",
+   "published": "2026-11-03T23:40:05.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "33kr9y",
+   "title": "Central bank gold buying jumps 42% in Q3 as high prices hit jewellery demand, WGC says",
+   "link": "https://investinglive.com/commodities/central-bank-gold-buying-jumps-42-in-q3-as-high-prices-hit-jewellery-demand-wgc-says/",
+   "summary": "The split in demand matters for price support: central banks tend to buy steadily rather than chase prices, so their stepped-up purchases act as a floor under gold in a way retail demand cannot. The weakness in…",
+   "published": "2026-11-03T23:06:01.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "atn5ra",
+   "title": "US warns of Houthi threat to Saudi airports and infrastructure, curbs travel to oil areas",
+   "link": "https://investinglive.com/commodities/us-warns-of-houthi-threat-to-saudi-airports-and-infrastructure-curbs-travel-to-oil-areas/",
+   "summary": "For oil, the alert matters less for what has happened than for where Washington now sees risk. By naming Qatif and Yanbu, it points to the possibility of strikes on processing and export infrastructure, not just…",
+   "published": "2026-11-03T22:42:41.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-11-03T22:39:18.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1wliep4",
+   "title": "US tech stocks recover after selloff spooks investors over AI spending",
+   "link": "https://www.theguardian.com/business/2026/nov/03/us-tech-stocks-recovery-ai-spending",
+   "summary": "Midterms didn’t appear to have huge impact, though predicted wins for Democrats could mean more regulation US tech stocks made a recovery on Tuesday afternoon after a selloff spooked investors over AI spending.…",
+   "published": "2026-11-03T22:18:45.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "12uv301",
+   "title": "Carney says US trade talks to intensify as Washington asks less and offers mor",
+   "link": "https://investinglive.com/news/carney-says-us-trade-talks-to-intensify-as-washington-asks-less-and-offers-mor/",
+   "summary": "Carney’s remarks offer modest support for the Canadian dollar, as any easing of the 50% US tariff would lift a weight on Canadian exporters and the growth outlook. The lack of a timeline limits how much a trade-deal…",
+   "published": "2026-11-03T22:16:39.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "hsike4",
+   "title": "Oil: Private survey of inventory shows a huge headline crude oil draw vs. build expected",
+   "link": "https://investinglive.com/commodities/oil-private-survey-of-inventory-shows-a-huge-headline-crude-oil-draw-vs-build-expected/",
+   "summary": "Via oilprice.com: Expectations I had seen centred on: Crude +1.9mn bbls Gasoline 0 Distillate +0.4mn Cushing +0.5mn This article was written by Eamonn Sheridan at investinglive.com.",
+   "published": "2026-11-03T22:06:51.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1d4wes4",
+   "title": "SpaceX blocks tokenized stock listing on OKXICE despite offshore trading boom",
+   "link": "https://cointelegraph.com/news/spacex-tokenization-okxice?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "SpaceX joined several other issuers objecting to OKXICE tokenized trading, months after crypto platforms offered tokens tied to its shares.",
+   "published": "2026-11-03T21:47:20.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "ow9jwh",
+   "title": "NZ Q3 Unemployment rate 5.7% (expected 5.5%, prior 5.6%)",
+   "link": "https://investinglive.com/news/nz-q3-unemployment-rate-5-7-expected-5-5-prior-5-6/",
+   "summary": "The miss on every major measure is likely to weigh on the New Zealand dollar and trim pricing for a December rate hike. The kiwi was already near a cycle low against the Australian dollar after last week’s RBNZ hold,…",
+   "published": "2026-11-03T21:45:23.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1n2o3os",
+   "title": "investingLive Americas market news wrap: Job openings jump as the US votes",
+   "link": "https://investinglive.com/news/investinglive-americas-market-news-wrap-job-openings-jump-as-the-us-votes/",
+   "summary": "JOLTs Job openings 7.523M vs 7.100M estimate US September factory orders +1.8% vs +1.2% expected Trump on Israel: The aid gets cut off at year-end Never tell me the odds: Prediction markets see Democrats taking control…",
+   "published": "2026-11-03T21:42:05.000Z",
    "source": "investingLive",
    "category": "forex"
   },
@@ -39,15 +219,6 @@
    "category": "crypto"
   },
   {
-   "id": "1qauwed",
-   "title": "US midterms: Poll closing times today",
-   "link": "https://investinglive.com/news/us-midterms-poll-closing-times-today/",
-   "summary": "Midterm election day continues in the United States without too much drama. All the talk of false flags and martial law on election day hasn't taken place and the polling disruptions have been minimal and certainly not…",
-   "published": "2026-11-03T20:09:25.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1wvfmu5",
    "title": "US midterms: Prediction markets favor Democrats in key crypto races",
    "link": "https://cointelegraph.com/news/us-midterm-prediction-markets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -57,15 +228,6 @@
    "category": "crypto"
   },
   {
-   "id": "1owsp0o",
-   "title": "If you squint, the odds are improving slightly for Republican Senate control",
-   "link": "https://investinglive.com/news/if-you-squint-the-odds-are-improving-slightly-for-republican-senate-control/",
-   "summary": "The latest prediction-market prices show another modest shift toward Republicans in Senate control, while House control is largely unchanged. The latter part makes me think the movement is variance in a relatively thin…",
-   "published": "2026-11-03T19:11:23.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "z48fe2",
    "title": "Stock market after midterm elections: What S&P 500 history shows",
    "link": "https://www.cnbc.com/2026/11/02/stock-market-after-midterm-elections-sp-500-history.html",
@@ -73,51 +235,6 @@
    "published": "2026-11-03T18:21:05.000Z",
    "source": "CNBC Finance",
    "category": "markets"
-  },
-  {
-   "id": "1ynq9vv",
-   "title": "ECB’s Nagel says a December rate hike is very likely to be necessary",
-   "link": "https://investinglive.com/central-banks/ecb-s-nagel-says-a-december-rate-hike-is-very-likely-to-be-necessary/",
-   "summary": "The ECB’s Nagel commented on inflation risks and the outlook for interest rates. A rate hike in December is very likely to be necessary. Inflationary pressures higher than expected in September. Approaching adverse…",
-   "published": "2026-11-03T18:18:31.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "uha8o9",
-   "title": "Iran tensions rise as report details U.S. strike contingency and intelligence divisions",
-   "link": "https://investinglive.com/news/iran-tensions-rise-as-report-details-u-s-strike-contingency-and-intelligence-divisions/",
-   "summary": "Reports surrounding Iran are putting the choice between diplomacy and renewed military action back in focus. The New York Times, citing sources, reports that Israel has shared intelligence with Washington asserting…",
-   "published": "2026-11-03T18:09:40.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1wfxgus",
-   "title": "European stocks close lower as yields climb. UK FTSE leads the declines",
-   "link": "https://investinglive.com/stocks/european-stocks-close-lower-as-yields-climb-uk-ftse-leads-the-declines/",
-   "summary": "As London/European traders head home, the major European stock indices are closing lower. The UK FTSE 100 led the declines with a fall of 1.14%, while Italy’s FTSE MIB finished little changed. Germany, France and Spain…",
-   "published": "2026-11-03T17:44:58.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1be40b2",
-   "title": "USDCAD buyers push away from support. Can they clear the next upside hurdles?",
-   "link": "https://investinglive.com/technical-analysis/usdcad-buyers-push-away-from-support-can-they-clear-the-next-upside-hurdles/",
-   "summary": "The USDCAD is pushing higher in the North American session, after sellers stalled the fall near a key downside target over the last three or so trading days. That support gave buyers a level to lean against. The…",
-   "published": "2026-11-03T17:22:25.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "d5kj2q",
-   "title": "History is kind to buyers of stock markets today",
-   "link": "https://investinglive.com/stocks/history-is-kind-to-buyers-of-stock-markets-today/",
-   "summary": "If history is any indication, it won't be the elephants or donkeys that win the election tonight, it will be the bulls. Here is a chart showing the return for the S&P 500 in the six months after election day. That's a…",
-   "published": "2026-11-03T17:14:32.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "kwah9",
@@ -138,22 +255,13 @@
    "category": "crypto"
   },
   {
-   "id": "1kbi59i",
-   "title": "USDCHF falls on firmer Swiss CPI, but buyers lean against the 100 day MA",
-   "link": "https://investinglive.com/technical-analysis/usdchf-falls-on-firmer-swiss-cpi-but-buyers-lean-against-the-100-day-ma/",
-   "summary": "The USDCHF moved lower during the European session after Swiss inflation came in stronger than expected. October CPI rose 0.2% versus an unchanged reading expected, while annual inflation increased to 1.5% from 1.0%,…",
-   "published": "2026-11-03T16:26:24.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1uzklmv",
-   "title": "BOC's Macklem: There could be a need to raise the policy rate further",
-   "link": "https://investinglive.com/central-banks/boc-s-macklem-there-could-be-a-need-to-raise-the-policy-rate-further/",
-   "summary": "From Bank of Canada Governor Tiff Macklem: There could be a need to raise the policy rate further Will proceed carefully given uncertainties Decisions will be taken one meeting at a time Outlook for inflation has…",
-   "published": "2026-11-03T16:08:34.000Z",
-   "source": "investingLive",
-   "category": "forex"
+   "id": "1qlxhvl",
+   "title": "Binance says fake job interviews used as part of $6.3bn crypto hack",
+   "link": "https://www.bbc.co.uk/news/articles/ck5ynwz9gy67o?at_medium=RSS&at_campaign=rss",
+   "summary": "An engineer was contacted through a legitimate job-hunting platform and invited to bogus job interviews with fake company representatives, Binance says.",
+   "published": "2026-11-03T16:19:29.000Z",
+   "source": "BBC Business",
+   "category": "economy"
   },
   {
    "id": "d4q4lp",
@@ -163,15 +271,6 @@
    "published": "2026-11-03T15:44:42.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "1vwncvr",
-   "title": "The broader US stock indices are making a play to the upside. Nasdaq indices bounce from the 200 day MAs",
-   "link": "https://investinglive.com/stocks/the-broader-us-stock-indices-are-making-a-play-to-the-upside-nasdaq-indices-bounce-from-the-200-day-mas/",
-   "summary": "The broader US stock indices are moving higher today after both the Nasdaq Composite and Nasdaq 100 approached their key 200-day moving averages yesterday. Buyers leaned against those technical barometers and stalled…",
-   "published": "2026-11-03T15:20:15.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "mk2s1m",
@@ -192,29 +291,11 @@
    "category": "economy"
   },
   {
-   "id": "1r5io48",
-   "title": "JOLTs Job openings 7.523M vs 7.100M estimate",
-   "link": "https://investinglive.com/news/jolts-job-openings-7-523m-vs-7-100m-estimate/",
-   "summary": "Prior month 7.079M revised to 7.19M Details of the JOLTs Job openings: Job openings: 7.523 million vs 7.190 million, up 333,000. August revised up by 111,000 to 7.2 million. Job openings rate: 4.5%. Hires: 5.402…",
-   "published": "2026-11-03T15:00:38.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "11olgar",
    "title": "What’s at stake for crypto as the US votes in the 2026 midterms?",
    "link": "https://cointelegraph.com/news/us-midterms-2026-stake-crypto-election-day?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "summary": "Crypto groups spent about $176 million ahead of the US midterms, with control of Congress and the future of crypto legislation at stake.",
    "published": "2026-11-03T13:53:07.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-11-03T13:50:51.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
   },
@@ -246,15 +327,6 @@
    "category": "markets"
   },
   {
-   "id": "1nep3pd",
-   "title": "NEAR token sinks 7% as proposal to cut annual token issuance passes",
-   "link": "https://cointelegraph.com/markets/near-sinks-7-proposal-cut-annual-token-issuance-passes?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The proposed issuance cut would prevent 11.8 million NEAR from entering circulation over two years, worth about $45 million at today’s price.",
-   "published": "2026-11-03T12:30:13.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "oo5gcv",
    "title": "Drivers may get compensation offers before car finance saga ends",
    "link": "https://www.bbc.co.uk/news/articles/cqrky5nxxn4po?at_medium=RSS&at_campaign=rss",
@@ -262,15 +334,6 @@
    "published": "2026-11-03T11:56:31.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "1sa93ed",
-   "title": "Binance’s net inflows turn positive at $2.3B as withdrawals expand",
-   "link": "https://cointelegraph.com/news/binances-daily-inflows-positive-18b-withdrawals?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Binance led exchanges in 24-hour net inflows, reversing Monday’s heavy outflows as it restored access to funds after its $6.3 billion hack.",
-   "published": "2026-11-03T11:32:02.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "vm053b",
@@ -282,40 +345,13 @@
    "category": "economy"
   },
   {
-   "id": "er8rt1",
-   "title": "Apple unsure when it will get more foldable iPhones ahead of Christmas",
-   "link": "https://www.bbc.co.uk/news/articles/c6n8dn457ypko?at_medium=RSS&at_campaign=rss",
-   "summary": "The tech giant reports strong sales but admits \"constraints\" are affecting supplies of the iPhone Duo.",
-   "published": "2026-11-03T11:10:37.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "sn64fp",
    "title": "‘In the trenches’: Wisconsin’s struggling small businesses could turn a Trump ally’s district blue",
    "link": "https://www.theguardian.com/us-news/2026/nov/03/small-business-economy-wisconsin-house-race",
-   "summary": "Affordability and small businesses’ economic woes feature heavily in the House race for Wisconsin’s third district After 18 years in business, Erin Klaus is closing her storefront, a handmade artisan market in downtown…",
+   "summary": "Affordability and small businesses’ economic woes feature heavily in the House race for Wisconsin’s third district US midterms 2026 live – latest updates Track live results from all 50 states After 18 years in…",
    "published": "2026-11-03T11:00:57.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "127183j",
-   "title": "France postpones 2027 budget vote, crypto exit-tax proposals scrapped",
-   "link": "https://cointelegraph.com/news/france-postpones-2027-budget-vote-reject-crypto-exit-tax?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The National Assembly postponed the vote on the budget’s revenue section for the second time, while the Nov. 17 deadline for the first reading examination nears.",
-   "published": "2026-11-03T10:49:26.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "ep6a9",
-   "title": "Bitcoin price threatens $77.7K support loss with recent buyers underwater",
-   "link": "https://cointelegraph.com/markets/bitcoin-price-support-loss-recent-buyers-underwater?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitcoin fell below the realized price of the one-to-three-month-old buyer cohort in a move that risked flipping it to new resistance.",
-   "published": "2026-11-03T10:04:05.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1ay4hpk",
@@ -363,15 +399,6 @@
    "category": "markets"
   },
   {
-   "id": "1etljb4",
-   "title": "Christmas 2026 stamps unveiled by Royal Mail",
-   "link": "https://www.bbc.co.uk/news/articles/cw62yeq7958ro?at_medium=RSS&at_campaign=rss",
-   "summary": "The annual Christmas collection of five stamps feature scenes from the Nativity.",
-   "published": "2026-11-03T02:27:50.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "oj721d",
    "title": "Stocks making the biggest moves midday: Oracle, SpaceX, Tempus AI, Rivian & more",
    "link": "https://www.cnbc.com/2026/11/02/stocks-making-the-biggest-moves-midday-orcl-spcx-tem-rivn.html",
@@ -399,15 +426,6 @@
    "category": "economy"
   },
   {
-   "id": "xxf8cm",
-   "title": "Poundland's former owner offers to invest as minister prepares to meet board",
-   "link": "https://www.bbc.co.uk/news/articles/ck1wv1j0xgywo?at_medium=RSS&at_campaign=rss",
-   "summary": "Wolverhampton's Steve Smith said he wants to put some money back into the firm he started.",
-   "published": "2026-11-02T13:40:36.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "1i0gc6t",
    "title": "Stocks making the biggest moves premarket: CrowdStrike, Rivian, Micron & more",
    "link": "https://www.cnbc.com/2026/11/02/stocks-making-the-biggest-moves-premarket-crwd-rivn-mu.html",
@@ -415,15 +433,6 @@
    "published": "2026-11-02T12:49:35.000Z",
    "source": "CNBC Finance",
    "category": "markets"
-  },
-  {
-   "id": "w7i1st",
-   "title": "Ryanair says it may freeze workers' pay and raise airfares",
-   "link": "https://www.bbc.co.uk/news/articles/cr0qkve1x224o?at_medium=RSS&at_campaign=rss",
-   "summary": "The airline says fuel prices may rise by €2bn in 2028 unless there is an end to the US-Israel war with Iran.",
-   "published": "2026-11-02T12:22:10.000Z",
-   "source": "BBC Business",
-   "category": "economy"
   },
   {
    "id": "ar2jry",
@@ -559,15 +568,6 @@
    "published": "2026-10-30T12:01:15.000Z",
    "source": "CNBC Finance",
    "category": "markets"
-  },
-  {
-   "id": "ypycsr",
-   "title": "Government corruption a top issue for US midterm voters, exclusive poll finds",
-   "link": "https://www.theguardian.com/us-news/2026/oct/30/government-corruption-us-midterm-poll",
-   "summary": "Harris poll for Guardian finds 76% believe officials care more about self-enrichment than helping everyday Americans Government corruption has emerged as a top issue in the upcoming US midterm elections, with an…",
-   "published": "2026-10-30T10:00:52.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
   },
   {
    "id": "1s67o57",
