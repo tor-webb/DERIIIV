@@ -143,3 +143,95 @@ describe('placing a non-Rise/Fall trade', () => {
         expect(executors).toHaveLength(0);
     });
 });
+
+describe('a contract that is lost contact with', () => {
+    it('keeps counting as open, so the limits still see its stake', () => {
+        let options: { onEnd: (end: unknown) => void } | null = null;
+        const trader = new VoltrexTrader({
+            api: {} as never,
+            currency: 'USD',
+            is_virtual: true,
+            getBalance: () => 1000,
+            getRisk: () => ({ ...DEFAULT_RISK, max_open_trades: 3, max_daily_loss: 20 }),
+            getRows: () => [],
+            getSpec: async () => null,
+            initial_risk: emptyRiskState(),
+            onChange: () => undefined,
+            createExecutor: opts => {
+                options = opts as never;
+                return { start: jest.fn(), cancel: jest.fn(() => true) };
+            },
+        });
+        const result = trader.place(
+            {
+                symbol: 'R_100',
+                name: 'R_100',
+                choice: { product: 'accumulator', contract_type: 'ACCU', label: 'Accu', growth_rate: 0.01 },
+                stake: 2,
+                source: 'manual',
+                why: 'test',
+            },
+            SPECS
+        );
+        expect(result.ok).toBe(true);
+        (options as unknown as { onEnd: (end: unknown) => void }).onEnd({
+            kind: 'lost_contact',
+            reason: 'Lost contact',
+            contract_id: 9,
+        });
+        const snapshot = trader.getSnapshot();
+        expect(snapshot.trades[0]).toMatchObject({ status: 'open', contract_id: 9 });
+        expect(snapshot.risk.open_stakes).toEqual([2]);
+    });
+});
+
+describe('auto-trading digit products', () => {
+    const run = async (even_count: number) => {
+        const executors: unknown[] = [];
+        const digits = Array.from({ length: 100 }, (_item, index) => (index < even_count ? 2 : 1));
+        const trader = new VoltrexTrader({
+            api: {} as never,
+            currency: 'USD',
+            is_virtual: true,
+            getBalance: () => 1000,
+            getRisk: () => ({ ...DEFAULT_RISK, max_open_trades: 3, max_daily_loss: 20, min_strength: 25 }),
+            getRows: () => [
+                {
+                    symbol: 'R_100',
+                    name: 'R_100',
+                    category: 'volatility',
+                    status: 'ready',
+                    is_open: true,
+                    signal: { direction: 'NEUTRAL', strength: 0, score: 0 },
+                    volatility_level: 'medium',
+                } as never,
+            ],
+            getSpec: async () => null,
+            getSpecs: async () => SPECS,
+            getDigits: () => digits,
+            initial_risk: emptyRiskState(),
+            onChange: () => undefined,
+            createExecutor: () => {
+                const executor = { start: jest.fn(), cancel: jest.fn(() => true) };
+                executors.push(executor);
+                return executor;
+            },
+        });
+        trader.startAuto({ strategy: 'confluence', stake: 1, categories: ['volatility'], products: ['even_odd'] });
+        // starting auto-trading already looks once; wait for that look to finish, then look again
+        await new Promise(resolve => {
+            setTimeout(resolve, 20);
+        });
+        await trader.cycle();
+        trader.dispose();
+        return executors.length;
+    };
+
+    it('does not trade a reading weaker than strength 50, even with a lower minimum', async () => {
+        expect(await run(56)).toBe(0); // about 1.2 standard deviations: strength 30
+    });
+
+    it('trades a clearer reading', async () => {
+        expect(await run(65)).toBe(1); // 3 standard deviations: strength 75
+    });
+});
