@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T18:10:42.692Z",
+ "updated": "2026-11-05T23:46:11.271Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -13,12 +13,156 @@
  "items": [
   {
    "id": "mfq7na",
-   "title": "Shares in Musk's SpaceX plunge as tech and AI stocks fall",
+   "title": "Major tech stocks plunge as US midterms add to fears of AI slowdown",
    "link": "https://www.bbc.co.uk/news/articles/cmn04705rd8jo?at_medium=RSS&at_campaign=rss",
-   "summary": "The market has been reacting to possible tougher scrutiny of data centre construction and the AI industry following the US mid-terms",
-   "published": "2026-11-05T17:57:57.000Z",
+   "summary": "The market has been reacting to possible tougher scrutiny of data centre construction and the AI industry following the US midterms",
+   "published": "2026-11-05T23:21:34.000Z",
    "source": "BBC Business",
    "category": "economy"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-11-05T23:03:41.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1508tzc",
+   "title": "American Bitcoin’s $126M profit masks mining pressure as rivals turn to AI",
+   "link": "https://cointelegraph.com/news/american-bitcoins-126m-profit-masks-mining-pressure-ai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The Eric Trump-backed miner reported $126 million in quarterly net income, largely driven by gains on its Bitcoin holdings, despite rising mining costs and shrinking margins.",
+   "published": "2026-11-05T22:43:18.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "r6f3r",
+   "title": "Firms told to publish salaries in job adverts ahead of new law",
+   "link": "https://www.bbc.co.uk/news/articles/cmd9343z3zw2o?at_medium=RSS&at_campaign=rss",
+   "summary": "The goverment argues the change will help jobseekers and could help to prevent pay discrimination.",
+   "published": "2026-11-05T22:32:02.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1e093s5",
+   "title": "Nasdaq drops into correction territory — here’s what typically happens next",
+   "link": "https://www.cnbc.com/2026/11/05/nasdaq-drops-into-correction-territory-heres-what-typically-happens-next.html",
+   "summary": "Nasdaq’s slide into correction territory puts its history of recoveries in focus. Here's what history shows.",
+   "published": "2026-11-05T22:31:24.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "1uyrsyu",
+   "title": "Asian crypto exchanges batten down the hatches as hacks surge: Asia Express",
+   "link": "https://cointelegraph.com/magazine/asian-crypto-exchanges-bunker-down-as-hacks-surge-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Asian crypto exchanges are scrambling to tighten security on fears of a wave of potentially AI-assisted hacks, even as regional governments embrace tokenization and stablecoins.",
+   "published": "2026-11-05T22:18:42.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "7izmkb",
+   "title": "investingLive Americas FX news wrap 5 Nov: Nasdaq 100 plunges 6.36% as AI selloff spreads",
+   "link": "https://investinglive.com/news/investinglive-americas-fx-news-wrap-5-nov-nasdaq-100-plunges-6-36-as-ai-selloff-spreads/",
+   "summary": "Nasdaq 100 suffers worst day since 2020 Magnificent 7: What are the technicals telling traders for each of those companies him WTI crude oil settles at $90.52, up 2.72% as buyers defend key support Non-farm payrolls…",
+   "published": "2026-11-05T22:00:36.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "n26rar",
+   "title": "Crypto ally French Hill wins reelection but set to lose House chair",
+   "link": "https://cointelegraph.com/news/crypto-ally-french-hill-wins-reelection-arkansas?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Republican French Hill secured another term in Congress but will lose his leadership of the House Financial Services Committee when Democrats take control in January.",
+   "published": "2026-11-05T21:39:19.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "3ws5f4",
+   "title": "Nasdaq 100 suffers worst day since 2020",
+   "link": "https://investinglive.com/stocks/nasdaq-100-suffers-worst-day-since-2020/",
+   "summary": "The Nasdaq 100 fell 6.36% on Thursday, its worst day since 2020, as investors sold everything from memory and storage stocks to chip equipment makers and data-center suppliers. The Nasdaq Composite fell 5.52%, the S&P…",
+   "published": "2026-11-05T21:34:43.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "16xjpsp",
+   "title": "Nasdaq sees worst day in 18 months as investors bet on AI slowdown after Democrats’ election triumph",
+   "link": "https://www.theguardian.com/business/2026/nov/05/nasdaq-heading-for-worst-day-in-18-months-as-wall-street-sustains-widespread-losses",
+   "summary": "Nearly $2tn shaved off Nasdaq value as worries of curbs to AI datacenters ripple across bourses The Nasdaq share index had its worst day in 18 months after slumping 5.5% on Thursday amid growing signs that the…",
+   "published": "2026-11-05T21:23:18.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "ej9co9",
+   "title": "Magnificent 7: What are the technicals telling traders for each of those companies him",
+   "link": "https://investinglive.com/stocks/magnificent-7-what-are-the-technicals-telling-traders-for-each-of-those-companies-him/",
+   "summary": "In the video above, I take a look at the Magnificent 7 as the broader U.S. indices sell off sharply. The S&P 500 is down around 4%, the Nasdaq Composite is down 5.10%, and the Nasdaq 100 is down 5.75%. All seven stocks…",
+   "published": "2026-11-05T20:25:42.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "pd1rkl",
+   "title": "Top Democrats call to rein in AI buildout after midterms sweep: 'National data center moratorium now'",
+   "link": "https://www.cnbc.com/2026/11/05/democrats-data-center-restrictions-midterms.html",
+   "summary": "Democratic winners and progressive lawmakers are calling for tougher limits on AI and data centers after the 2026 midterm elections.",
+   "published": "2026-11-05T20:17:16.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "2krf4i",
+   "title": "WTI crude oil settles at $90.52, up 2.72% as buyers defend key support",
+   "link": "https://investinglive.com/commodities/wti-crude-oil-settles-at-90-52-up-2-72-as-buyers-defend-key-support/",
+   "summary": "U.S. crude oil futures settled at $90.52 a barrel on Thursday, up $2.40 or 2.72% from Wednesday’s $88.12 settlement. The rebound follows a drop of more than 8% on Wednesday, when the U.S. midterm results raised hopes…",
+   "published": "2026-11-05T19:41:26.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "53bls0",
+   "title": "The market is waiting for signals from Donald Trump",
+   "link": "https://investinglive.com/news/the-market-is-waiting-for-signals-from-donald-trump/",
+   "summary": "I spoke to Reuters earlier today about the state of markets and my comments boiled down to this: \"There are two ​paths Trump can go down - he can double down on unpopular trade ​wars or he can listen to the electorate…",
+   "published": "2026-11-05T19:04:30.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1p5n3f7",
+   "title": "Binance, Deribit revoke SignalPlus API keys after fake Teams invite attack",
+   "link": "https://cointelegraph.com/news/binance-deribit-revoke-signalplus-api-fake-teams-attack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "SignalPlus said attackers compromised an engineer’s computer in a breach that resulted in losses of less than $82,000, which the crypto trading platform pledged to reimburse in full.",
+   "published": "2026-11-05T19:02:19.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "14plzs0",
+   "title": "Fed, OCC check US banks after Binance hack as experts flag security risks",
+   "link": "https://cointelegraph.com/news/fed-occ-check-us-banks-binance-hack-security-risks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "US regulators reportedly contacted banks following last week’s $6.3 billion Binance security hack, while experts raised concerns about transaction security and crypto risks.",
+   "published": "2026-11-05T18:32:45.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "m9uteo",
+   "title": "Europe’s largest asset manager Amundi tokenizes equity index fund on Ethereum",
+   "link": "https://cointelegraph.com/news/amundi-tokenizes-european-equity-index-fund-ethereum?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The new share class offers blockchain-based exposure to an index tracking 600 companies across European markets.",
+   "published": "2026-11-05T18:09:38.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
   },
   {
    "id": "oai35p",
@@ -129,15 +273,6 @@
    "category": "forex"
   },
   {
-   "id": "1r7adwf",
-   "title": "Memory names getting smoked: Micron breaks the July low in 12% drop",
-   "link": "https://investinglive.com/stocks/memory-names-getting-smoked-micron-breaks-the-july-low-in-12-drop/",
-   "summary": "Shares of Micron have taken an ugly turn today, dropping 12% and breaking support at the July low. Chip stocks are down heavily as the market re-thinks the pace of the AI build out. There are a few reasons for the…",
-   "published": "2026-11-05T15:27:18.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "gs8q94",
    "title": "Drunk and dangerous e-bike riders face on-the-spot fines under crackdown",
    "link": "https://www.bbc.co.uk/news/articles/cmze4zk4d789o?at_medium=RSS&at_campaign=rss",
@@ -145,51 +280,6 @@
    "published": "2026-11-05T15:27:09.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "hu76uu",
-   "title": "Crude oil tests the key confluence area and finds willing buyers",
-   "link": "https://investinglive.com/commodities/crude-oil-tests-the-key-confluence-area-and-finds-willing-buyers/",
-   "summary": "Crude oil futures fell sharply yesterday as traders weighed the chances of an end to the war with Iran. Senate Democratic Leader Chuck Schumer said Democrats would push to end the war and pointed to support from some…",
-   "published": "2026-11-05T14:26:32.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "vc8f2g",
-   "title": "Fed's Barkin: Gradual pace of hikes \"makes sense\"",
-   "link": "https://investinglive.com/central-banks/fed-s-barkin-gradual-pace-of-hikes-makes-sense/",
-   "summary": "Policy is somewhere around neutral The path on policy is straightforward, the issue is pace and gradual \"makes sense\" Do not anticipate inflation will accelerate but also don't see it as falling at this point The set…",
-   "published": "2026-11-05T14:20:05.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1q58h9x",
-   "title": "Marco Rubio ‘on resignation watch’ - report",
-   "link": "https://investinglive.com/news/marco-rubio-on-resignation-watch-report/",
-   "summary": "The Independent reports that Marco Rubio \"is on resignation watch from both sides of the Atlantic in the expectation he will quit to lauch a bid to be the next US President\". The report cites \"senior party sources in…",
-   "published": "2026-11-05T14:11:21.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1cdyq5l",
-   "title": "Fed's Hammack: Gradual rate hikes are the best way to get inflation to target",
-   "link": "https://investinglive.com/central-banks/fed-s-hammack-gradual-rate-hikes-are-the-best-way-to-get-inflation-to-target/",
-   "summary": "Hammack voted for a hike at the last meeting so her view is that 'gradual' means every meeting. Other comments: Gradual rate hikes less disruptive Mon pol needs to move to a restrictive stance Gradual hikes are best…",
-   "published": "2026-11-05T13:52:45.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-11-05T13:46:01.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1j8095p",
@@ -264,15 +354,6 @@
    "category": "economy"
   },
   {
-   "id": "1uu6j0c",
-   "title": "Thailand to block Bitget in December over unlicensed crypto trading",
-   "link": "https://cointelegraph.com/news/thailand-block-bitget-december-unlicensed-crypto-trading?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Thailand’s SEC filed a criminal complaint against Bitget’s operator, with access to its website and app set to be blocked from Dec. 5.",
-   "published": "2026-11-05T11:33:20.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1xem8v4",
    "title": "Welsh aviation firm AerFin bought in £475m deal",
    "link": "https://www.bbc.co.uk/news/articles/cq203vjxnln7o?at_medium=RSS&at_campaign=rss",
@@ -291,15 +372,6 @@
    "category": "economy"
   },
   {
-   "id": "45kmkm",
-   "title": "Bitcoin win rate vs. S&P 500 recovers as post-midterm history favors stocks",
-   "link": "https://cointelegraph.com/markets/bitcoin-win-rate-sp-500-us-midterms-stocks-gains?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitcoin outperformed the S&P 500 in half of the past 90 US trading sessions, while historical midterm data highlights gains for stocks.",
-   "published": "2026-11-05T10:28:26.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1eak2f6",
    "title": "Second buyer makes rescue bid for Poundland as retailer faces collapse",
    "link": "https://www.bbc.co.uk/news/articles/c6lykq0kqwn7o?at_medium=RSS&at_campaign=rss",
@@ -309,24 +381,6 @@
    "category": "economy"
   },
   {
-   "id": "1iiyv7t",
-   "title": "South Korea seeks 4th crypto tax delay, targets 2029 start",
-   "link": "https://cointelegraph.com/news/south-korea-crypto-tax-fourth-delay-2029?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "South Korea is seeking a fourth delay to its 22% crypto tax, months after reaffirming plans to begin taxing digital asset gains in January 2027.",
-   "published": "2026-11-05T09:35:29.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "7ft3er",
-   "title": "France budget rejection sidelines stablecoin tax, wallet reporting",
-   "link": "https://cointelegraph.com/news/france-rejects-budget-revenue-sidelines-crypto-amendments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Three adopted amendments, including stablecoin taxation and self-custody reporting, fall away but could be reintroduced in the Senate.",
-   "published": "2026-11-05T09:04:42.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "sc626w",
    "title": "Tech barons cozied up to Trump. What will they do in newly blue America?",
    "link": "https://www.theguardian.com/technology/2026/nov/05/tech-barons-america-musk-bezos-zuckerberg",
@@ -334,15 +388,6 @@
    "published": "2026-11-05T09:00:02.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "snovzx",
-   "title": "Bitcoin, Ether ETFs draw $128M as crypto rebounds after midterms",
-   "link": "https://cointelegraph.com/markets/bitcoin-ether-etfs-turn-green-post-election-rebound?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Fidelity led Bitcoin ETF inflows, while BlackRock’s IBIT shed another $201 million, extending its outflow streak to four trading sessions.",
-   "published": "2026-11-05T08:22:30.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "hxt3bs",
@@ -361,15 +406,6 @@
    "published": "2026-11-05T07:30:00.000Z",
    "source": "ECB",
    "category": "economy"
-  },
-  {
-   "id": "1pkrwgi",
-   "title": "Crédit Mutuel Arkéa resumes operations after attack, assesses losses",
-   "link": "https://cointelegraph.com/news/credit-mutuel-arkea-resumes-operations-133m-crypto-theft?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The bank said customer funds were unaffected after attackers accessed its systems through a service provider’s platform.",
-   "published": "2026-11-05T07:23:06.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1fcozs9",
@@ -417,15 +453,6 @@
    "category": "markets"
   },
   {
-   "id": "10x3xrp",
-   "title": "Kellogg's admits snap, crackle and pop is quieter after uproar over Rice Krispies recipe change",
-   "link": "https://www.bbc.co.uk/news/articles/cqvg0y44ym7vo?at_medium=RSS&at_campaign=rss",
-   "summary": "The cereal giant has changed the recipes for Rice Krispies and Coco Pops, sparking a backlash online.",
-   "published": "2026-11-04T19:38:53.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "fyywqv",
    "title": "US stocks rise, dollar slides as investors digest Democrats’ midterm victories",
    "link": "https://www.theguardian.com/business/2026/nov/04/us-dollar-slides-democrats-midterm-election-win-growth-fears",
@@ -465,7 +492,7 @@
    "id": "uauwlr",
    "title": "Trump blamed Fox News for Republican losses even as network’s hosts went easy on him",
    "link": "https://www.theguardian.com/us-news/2026/nov/04/trump-blames-fox-news-republican-losses",
-   "summary": "Fox News pundits hardly criticized the US president in midterms coverage but Trump was still quick to cast blame US midterms 2026 live – latest updates Track live results from all 50 states Tell us: what do you want to…",
+   "summary": "Fox News pundits hardly criticized the US president in midterms coverage but Trump was still quick to cast blame US midterms 2026 live – latest updates Track live results from all 50 states Q&A: Ask your questions…",
    "published": "2026-11-04T12:30:29.000Z",
    "source": "The Guardian Business",
    "category": "economy"
@@ -496,15 +523,6 @@
    "published": "2026-11-03T22:18:45.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "z48fe2",
-   "title": "Stock market after midterm elections: What S&P 500 history shows",
-   "link": "https://www.cnbc.com/2026/11/02/stock-market-after-midterm-elections-sp-500-history.html",
-   "summary": "Midterms historically precede a strong year for the S&P 500. What to know if Democrats win back Congress",
-   "published": "2026-11-03T18:21:05.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
   },
   {
    "id": "1uihbsa",
@@ -570,15 +588,6 @@
    "category": "economy"
   },
   {
-   "id": "1i0gc6t",
-   "title": "Stocks making the biggest moves premarket: CrowdStrike, Rivian, Micron & more",
-   "link": "https://www.cnbc.com/2026/11/02/stocks-making-the-biggest-moves-premarket-crwd-rivn-mu.html",
-   "summary": "These are the stocks posting the largest moves in early trading.",
-   "published": "2026-11-02T12:49:35.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
    "id": "ar2jry",
    "title": "Texas voters on high gas prices under Trump: ‘Probably made me go more Democrat’",
    "link": "https://www.theguardian.com/us-news/2026/nov/02/texas-voters-trump-fuel-prices",
@@ -603,15 +612,6 @@
    "summary": "",
    "published": "2026-11-02T09:30:00.000Z",
    "source": "ECB",
-   "category": "economy"
-  },
-  {
-   "id": "1fbryhp",
-   "title": "Affordability top of mind for voters in final sprint to midterms: ‘I have to pick between medicine or groceries’",
-   "link": "https://www.theguardian.com/us-news/2026/nov/01/affordability-voters-final-sprint-midterms",
-   "summary": "Cost of living has loomed over this election cycle as workers and unions champion candidates fighting for higher wages and tackling rising prices For millions of Americans heading to the polls on Tuesday, affordability…",
-   "published": "2026-11-01T12:00:11.000Z",
-   "source": "The Guardian Business",
    "category": "economy"
   },
   {
@@ -648,15 +648,6 @@
    "summary": "",
    "published": "2026-10-30T09:00:00.000Z",
    "source": "ECB",
-   "category": "economy"
-  },
-  {
-   "id": "kyzhft",
-   "title": "Federal Reserve Board announces approval of application by The Bank of Nova Scotia",
-   "link": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261029a.htm",
-   "summary": "Federal Reserve Board announces approval of application by The Bank of Nova Scotia",
-   "published": "2026-10-29T20:30:00.000Z",
-   "source": "Federal Reserve",
    "category": "economy"
   }
  ]
