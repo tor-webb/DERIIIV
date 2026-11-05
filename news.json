@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T02:39:09.877Z",
+ "updated": "2026-11-05T10:17:20.558Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,13 +12,238 @@
  },
  "items": [
   {
-   "id": "1lrdl0d",
-   "title": "Sidecars and exam days: two Korean market quirks explained as the KOSPI slides 4%",
-   "link": "https://investinglive.com/education/sidecars-and-exam-days-two-korean-market-quirks-explained-as-the-kospi-slides-4/",
-   "summary": "A sidecar on a 4% down day signals forced or automated selling at pace, and traders will watch whether the pause steadies futures or merely delays further losses. Korea’s heavy weighting in chipmakers leaves it exposed…",
-   "published": "2026-11-05T01:59:24.000Z",
+   "id": "gs8q94",
+   "title": "Drunk and dangerous e-bike riders face on-the-spot fines under crackdown",
+   "link": "https://www.bbc.co.uk/news/articles/cmze4zk4d789o?at_medium=RSS&at_campaign=rss",
+   "summary": "A consultation will consider fines and other ways to clamp down on dangerous e-bike riders.",
+   "published": "2026-11-05T10:04:51.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1eak2f6",
+   "title": "Second buyer makes rescue bid for Poundland as retailer faces collapse",
+   "link": "https://www.bbc.co.uk/news/articles/c6lykq0kqwn7o?at_medium=RSS&at_campaign=rss",
+   "summary": "A little-known investment group has made a bid to buy the business.",
+   "published": "2026-11-05T09:46:32.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1iiyv7t",
+   "title": "South Korea seeks 4th crypto tax delay, targets 2029 start",
+   "link": "https://cointelegraph.com/news/south-korea-crypto-tax-fourth-delay-2029?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "South Korea is seeking a fourth delay to its 22% crypto tax, months after reaffirming plans to begin taxing digital asset gains in January 2027.",
+   "published": "2026-11-05T09:35:29.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "68z9dz",
+   "title": "Macro pulse: Wall Street's post-election rally reveals a curious divergence",
+   "link": "https://investinglive.com/education/macro-pulse-wall-street-s-post-election-rally-reveals-a-curious-divergence/",
+   "summary": "There's a post-election party in Wall Street but it seems that investors can't quite agree on the type of music to play. The Dow is dancing to one tune while the Nasdaq is moving to the beat of another. As for…",
+   "published": "2026-11-05T09:28:19.000Z",
    "source": "investingLive",
    "category": "forex"
+  },
+  {
+   "id": "1q18z2x",
+   "title": "Ethereum rallies on bets midterm defeat will push Trump towards Iran war exit. What's next?",
+   "link": "https://investinglive.com/cryptocurrency/ethereum-rallies-on-bets-midterm-defeat-will-push-trump-towards-iran-war-exit-what-s-next/",
+   "summary": "Ethereum whipsawed yesterday as the Democrats’ victory of both the House and the Senate initially weighed on the cryptocurrency before staging a strong rebound. It looks like the market believes the midterm loss will…",
+   "published": "2026-11-05T09:21:41.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "7ft3er",
+   "title": "France budget rejection sidelines stablecoin tax, wallet reporting",
+   "link": "https://cointelegraph.com/news/france-rejects-budget-revenue-sidelines-crypto-amendments?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Three adopted amendments, including stablecoin taxation and self-custody reporting, fall away but could be reintroduced in the Senate.",
+   "published": "2026-11-05T09:04:42.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "11n59xr",
+   "title": "European stock market open: Stocks push higher across the board but US tech woes linger",
+   "link": "https://investinglive.com/stocks/european-stock-market-open-stocks-push-higher-across-the-board-but-us-tech-woes-linger/",
+   "summary": "European equities are enjoying a solid start to the session with major indices seen opening higher across the board. While regional stocks are holding up well, just be wary that the more cautious mood in US futures…",
+   "published": "2026-11-05T08:32:04.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "snovzx",
+   "title": "Bitcoin, Ether ETFs draw $128M as crypto rebounds after midterms",
+   "link": "https://cointelegraph.com/markets/bitcoin-ether-etfs-turn-green-post-election-rebound?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Fidelity led Bitcoin ETF inflows, while BlackRock’s IBIT shed another $201 million, extending its outflow streak to four trading sessions.",
+   "published": "2026-11-05T08:22:30.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "162yf4w",
+   "title": "Gold's key breakout signals a potential trend reversal as Vance's comments fuel de-escalation bets",
+   "link": "https://investinglive.com/commodities/gold-s-key-breakout-signals-a-potential-trend-reversal-as-vance-s-comments-fuel-de-escalation-bets/",
+   "summary": "Gold extended the gains yesterday after breaking above a key trendline that’s been defining the downtrend since September. The breakout was driven by a selloff in oil prices after the US Vice President Vance blamed the…",
+   "published": "2026-11-05T08:21:43.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "hxt3bs",
+   "title": "Isabel Schnabel: Navigating stormy waters: reflections on monetary policy",
+   "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261105_1~5e97d9d5a0.en.html",
+   "summary": "",
+   "published": "2026-11-05T08:00:00.000Z",
+   "source": "ECB",
+   "category": "economy"
+  },
+  {
+   "id": "1d2ow28",
+   "title": "Gold price recovery gathers pace after US midterms but $4,200 remains a major hurdle",
+   "link": "https://investinglive.com/commodities/gold-price-recovery-gathers-pace-after-us-midterms-but-4-200-remains-a-major-hurdle/",
+   "summary": "It seems that gold is finally showing a bit of fighting spirit again this week. After the beating the precious metal has taken over the past two months, I would say that gold buyers have earned themselves a little…",
+   "published": "2026-11-05T07:36:12.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1l52h6u",
+   "title": "Piero Cipollone: Shaping the future of money",
+   "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261105~6495a0df6f.en.html",
+   "summary": "",
+   "published": "2026-11-05T07:30:00.000Z",
+   "source": "ECB",
+   "category": "economy"
+  },
+  {
+   "id": "ybanyg",
+   "title": "What are the main events for today?",
+   "link": "https://investinglive.com/news/what-are-the-main-events-for-today-79/",
+   "summary": "EUROPEAN SESSION In the European session, the main highlight is the Bank of England rate decision. The BoE is widely expected to raise interest rates by 25 bps to 4.00%, marking the first hike in the current tightening…",
+   "published": "2026-11-05T07:27:45.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1pkrwgi",
+   "title": "Crédit Mutuel Arkéa resumes operations after attack, assesses losses",
+   "link": "https://cointelegraph.com/news/credit-mutuel-arkea-resumes-operations-133m-crypto-theft?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The bank said customer funds were unaffected after attackers accessed its systems through a service provider’s platform.",
+   "published": "2026-11-05T07:23:06.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "5aqa0l",
+   "title": "Germany industrial orders rebound in September but manufacturing recovery remains fragile",
+   "link": "https://investinglive.com/news/germany-industrial-orders-rebound-in-september-but-manufacturing-recovery-remains-fragile/",
+   "summary": "Germany September industrial orders +4.4% vs +4.8% m/m expected Prior -10.6%; revised to -10.1% Germany September industrial orders +3.3% y/y Prior +3.2% (revised) The strong rebound in German manufacturing orders in…",
+   "published": "2026-11-05T07:01:06.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1ppuryx",
+   "title": "FX option expiries for 5 November 10am New York cut",
+   "link": "https://investinglive.com/orders/fx-option-expiries-for-5-november-10am-new-york-cut/",
+   "summary": "There are just a couple of key expiry levels to take note of on the day, as highlighted in bold below. They are for EUR/USD at the 1.1250 and 1.1275 levels, with the strike prices holding in between the spot price. As…",
+   "published": "2026-11-05T06:59:51.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "7bzvh",
+   "title": "What the Democratic midterms sweep changes for U.S.-China relations",
+   "link": "https://www.cnbc.com/2026/11/05/what-the-democrat-midterms-sweep-changes-for-us-china-tech-rivalry.html",
+   "summary": "Analysts note the growing risks around U.S. President Donald Trump's ability to maintain a fragile trade truce.",
+   "published": "2026-11-05T06:54:52.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "1v1dz4l",
+   "title": "US futures fall again as tech stocks stumble, can Wall Street pull off another comeback?",
+   "link": "https://investinglive.com/stocks/us-futures-fall-again-as-tech-stocks-stumble-can-wall-street-pull-off-another-comeback/",
+   "summary": "Just when you think that the worst might be over, the market looks to be deciding to throw another tantrum. After yesterday's impressive comeback, tech stocks are once again starting to give investors another headache…",
+   "published": "2026-11-05T06:27:07.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-11-05T06:21:12.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "yvvzke",
+   "title": "Binance, Polymarket seek Polygon hard fork to recover $6.8M in stolen crypto",
+   "link": "https://cointelegraph.com/news/polygon-hard-fork-binance-polymarket-6-8m-hack-recovery?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Polygon block producers have already frozen the stolen tokens, but a proposed hard fork would allow the funds to be recovered and returned to their owners.",
+   "published": "2026-11-05T06:02:29.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1fcozs9",
+   "title": "Food, fuel and taxes – can the Democrats do anything to ease cost of living pressures?",
+   "link": "https://www.bbc.co.uk/news/articles/ck1ex50x5q46o?at_medium=RSS&at_campaign=rss",
+   "summary": "Democrats will hold Congress but President Donald Trump still has the power to block their plans.",
+   "published": "2026-11-05T06:01:05.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1n3updk",
+   "title": "Nasdaq Futures Analysis for Day Traders Today: Bears Take Control Below 28,270 as Semiconductor Weakness Returns",
+   "link": "https://investinglive.com/technical-analysis/nasdaq-futures-analysis-for-day-traders-today-bears-take-control-below-28-270-as-semiconductor-weakness-returns/",
+   "summary": "Nasdaq Futures tradeCompass Today: Bears Take Control Below 28,270 as Semiconductor Weakness Returns Nasdaq-100 Futures (NQ) | November 5, 2026 tradeCompass directional score: -6 / +10 (Bearish) The Nasdaq futures…",
+   "published": "2026-11-05T05:46:28.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1bfwszj",
+   "title": "Oil prices plunge after US midterms as WTI crude faces a critical technical test",
+   "link": "https://investinglive.com/commodities/oil-prices-plunge-after-us-midterms-as-wti-crude-faces-a-critical-technical-test/",
+   "summary": "Apparently, the quickest way to bring oil prices back down is to give Trump a good old-fashioned electoral beating. That seems to be what the market is telling us after the Democrats swept the US midterms at least. WTI…",
+   "published": "2026-11-05T05:43:56.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "14rv4qp",
+   "title": "‘Lawyer up’: Democrats target Trump, Big Tech after midterm sweep",
+   "link": "https://cointelegraph.com/news/lawyer-up-democrats-target-trump-big-tech-after-midterm-sweep?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Democrats wasted little time after their midterm victory, warning tech CEOs to prepare for subpoenas and signaling fresh investigations into Trump’s business dealings.",
+   "published": "2026-11-05T04:52:49.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "vz6oap",
+   "title": "investingLive Asia-Pacific market news: Gold rocketed higher still",
+   "link": "https://investinglive.com/news/investinglive-asia-pacific-market-news-gold-rocketed-higher-still/",
+   "summary": "Bitcoin analysis after the US midterms: Bulls are back, but $82,000 could change everything 168 of 225 Nikkei stocks rise, but AI losses drag the index lower as the Topix rallies China blocks SoftBank’s $5.4 billion…",
+   "published": "2026-11-05T04:39:20.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "v5hol9",
+   "title": "Pound rises to its highest level since the Brexit referendum",
+   "link": "https://www.bbc.co.uk/news/articles/c6lykq2qjn2vo?at_medium=RSS&at_campaign=rss",
+   "summary": "Pound reaches highest level against a basket of currencies since the Brexit referendum a decade ago.",
+   "published": "2026-11-05T04:21:35.000Z",
+   "source": "BBC Business",
+   "category": "economy"
   },
   {
    "id": "7tkcn2",
@@ -30,67 +255,13 @@
    "category": "crypto"
   },
   {
-   "id": "1gums8s",
-   "title": "Bank of England preview: first hike to 4% expected as energy pushes inflation to 3.5%",
-   "link": "https://investinglive.com/central-banks/bank-of-england-preview-first-hike-to-4-expected-as-energy-pushes-inflation-to-3-5/",
-   "summary": "With a hike almost fully priced, sterling’s reaction will hinge on the vote split and guidance, with a 7-2 outcome and cautious language the most likely route to a softer pound. Gilts could rally if the Bank pushes…",
-   "published": "2026-11-05T01:41:12.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "xrqzoi",
-   "title": "Berkshire adds $27 million of Sirius XM as investors rotate from AI toward value stocks",
-   "link": "https://investinglive.com/stocks/berkshire-adds-27-million-of-sirius-xm-as-investors-rotate-from-ai-toward-value-stocks/",
-   "summary": "A Berkshire purchase tends to act as a sentiment signal for the target stock, which may help sustain Sirius XM’s rally as long as the broader rotation holds. More widely, it adds a high-profile example to the case for…",
-   "published": "2026-11-05T01:16:38.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1ydchob",
-   "title": "PBOC sets USD/ CNY reference rate for today at 6.7156 (vs. estimate at 6.6783)",
-   "link": "https://investinglive.com/central-banks/pboc-sets-usd-cny-reference-rate-for-today-at-6-7156-vs-estimate-at-6-6783/",
-   "summary": "The PBOC allows the yuan to fluctuate within a +/- 2% range, around this reference rate. More here on this. People's Bank of China injected 263 billion yuan of overnight reverse repurchase operations, @1.25% maturing…",
-   "published": "2026-11-05T01:15:20.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "13xetk4",
-   "title": "Australia's oldest department store David Jones collapses after 188 years",
+   "title": "Australia's oldest department store David Jones folds after 188 years",
    "link": "https://www.bbc.co.uk/news/articles/cky93z5y0171o?at_medium=RSS&at_campaign=rss",
    "summary": "The brand's 38 physical stores and online site will continue to operate while receivers review its operations.",
    "published": "2026-11-05T00:59:22.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "dc16zb",
-   "title": "Australia’s trade surplus jumps to A$2.8 billion, a seven-month high, on LNG and metals",
-   "link": "https://investinglive.com/news/australia-s-trade-surplus-jumps-to-a-2-8-billion-a-seven-month-high-on-lng-and-metals/",
-   "summary": "A stronger trade surplus is modestly supportive for the Australian dollar, reinforcing the currency’s link to commodity prices. With energy prices elevated by the Middle East conflict, Australia is better placed than…",
-   "published": "2026-11-05T00:48:59.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "172pmuf",
-   "title": "Japan services PMI edges up to 51.7, but composite slips to five-month low as hiring slows",
-   "link": "https://investinglive.com/news/japan-services-pmi-edges-up-to-51-7-but-composite-slips-to-five-month-low-as-hiring-slows/",
-   "summary": "The data offer something for both sides of the BoJ debate: historically sharp cost pressures support further tightening, while slowing hiring and weaker confidence give the cautious camp ammunition. On balance, the…",
-   "published": "2026-11-05T00:38:26.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1i5akx4",
-   "title": "PBOC is expected to set the USD/CNY reference rate at 6.6783 – Reuters estimate",
-   "link": "https://investinglive.com/central-banks/pboc-is-expected-to-set-the-usd-cny-reference-rate-at-6-6783-reuters-estimate/",
-   "summary": "Earlier this week: China’s PBOC lifts FX reserve ratio to 6%: what it means for the yuan, AUD - The People’s Bank of China is due to set the daily USD/CNY reference rate at around 0115 GMT (2115 US Eastern time), a…",
-   "published": "2026-11-05T00:25:01.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "hxgnwe",
@@ -102,74 +273,11 @@
    "category": "economy"
   },
   {
-   "id": "1f2fqsx",
-   "title": "BoJ minutes: board backed further hikes, flagged 50% oil surge as government urged caution",
-   "link": "https://investinglive.com/central-banks/boj-minutes-board-backed-further-hikes-flagged-50-oil-surge-as-government-urged-caution/",
-   "summary": "The minutes add a hawkish edge to the yen outlook, with talk of a faster pace and getting closer to neutral “relatively soon” supporting pricing for a December move. Against that, one member’s view that market…",
-   "published": "2026-11-04T23:58:27.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "uf5uj3",
-   "title": "AstraZeneca makes $10 billion offer for obesity drugmaker Rhythm, WSJ reports",
-   "link": "https://investinglive.com/stocks/astrazeneca-makes-10-billion-offer-for-obesity-drugmaker-rhythm-wsj-reports/",
-   "summary": "The roughly 13% gap between Rhythm’s close and the reported offer price leaves room for a further move if talks are confirmed, but also reflects the risk that no deal materialises. The report is likely to lift interest…",
-   "published": "2026-11-04T23:52:21.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1c801lp",
-   "title": "Goldman Sachs: 45% of planned US data centre capacity faces state pauses, but likely short-lived",
-   "link": "https://investinglive.com/stocks/goldman-sachs-45-of-planned-us-data-centre-capacity-faces-state-pauses-but-likely-short-lived/",
-   "summary": "The note gives investors a framework for Wednesday’s selloff in AI infrastructure stocks: a delay story rather than a demand collapse, which may limit further downside if pauses prove brief. A pull-forward of spending…",
-   "published": "2026-11-04T23:42:09.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "v5hol9",
-   "title": "Pound rises to its highest level since the Brexit referendum",
-   "link": "https://www.bbc.co.uk/news/articles/c6lykq2qjn2vo?at_medium=RSS&at_campaign=rss",
-   "summary": "Pound reaches highest level against a basket of currencies since the Brexit referendum a decade ago",
-   "published": "2026-11-04T23:30:28.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "1jtdryb",
-   "title": "ICYMI: ADNOC denies report of third Hormuz bypass pipeline that could open to other producers",
-   "link": "https://investinglive.com/commodities/adnoc-denies-report-of-third-hormuz-bypass-pipeline-that-could-open-to-other-producers/",
-   "summary": "A shared bypass line would chip away at the Hormuz risk premium over time by giving Gulf producers beyond the UAE a route to market that avoids the strait. With ADNOC’s denial, though, the report is unlikely to move…",
-   "published": "2026-11-04T23:27:44.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1lkh4ys",
    "title": "Mercado Bitcoin says phased reopening to begin Monday, will cover losses",
    "link": "https://cointelegraph.com/news/mercado-bitcoin-phased-reopening-to-begin-monday-pledges-to-cover-losses?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "summary": "Customers will initially be able to view their holdings, while withdrawals and trading remain suspended pending security checks.",
    "published": "2026-11-04T23:20:17.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1rmqxdb",
-   "title": "SNB watches for second-round Swiss inflation effects as December rate hike bets build",
-   "link": "https://investinglive.com/central-banks/snb-watches-for-second-round-swiss-inflation-effects-as-december-rate-hike-bets-build/",
-   "summary": "The comments are likely to firm pricing for a December hike, which would mark a turn from the lowest policy rate among major central banks and could lend support to the Swiss franc. With fuel and heating costs driving…",
-   "published": "2026-11-04T23:13:36.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-11-04T22:54:23.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
   },
@@ -228,15 +336,6 @@
    "category": "markets"
   },
   {
-   "id": "86lbvk",
-   "title": "Poundland owner in crunch talks as retailer's collapse looms",
-   "link": "https://www.bbc.co.uk/news/articles/ck240mm3e42do?at_medium=RSS&at_campaign=rss",
-   "summary": "Gordon Brothers will meet Jonathan Reynolds on Wednesday as the investment firm faces scrutiny over Poundland.",
-   "published": "2026-11-04T19:44:46.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "10x3xrp",
    "title": "Kellogg's admits snap, crackle and pop is quieter after uproar over Rice Krispies recipe change",
    "link": "https://www.bbc.co.uk/news/articles/cqvg0y44ym7vo?at_medium=RSS&at_campaign=rss",
@@ -246,33 +345,6 @@
    "category": "economy"
   },
   {
-   "id": "1cg4xa8",
-   "title": "Trump-linked tokens lead crypto losses after Democrats sweep in the US midterms",
-   "link": "https://cointelegraph.com/news/trump-linked-tokens-lead-crypto-losses-after-democrats-sweep-in-the-us-midterms?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The official Trump and World Liberty Financial tokens were the two biggest losers among the top 100 cryptocurrencies on Wednesday, even as Bitcoin and Ether rallied.",
-   "published": "2026-11-04T19:15:39.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "xr20ji",
-   "title": "Riot shares surge on $28B AI lease as Hut 8 sinks on revenue miss",
-   "link": "https://cointelegraph.com/news/riots-28b-ai-deal-lifts-shares-as-hut-8-faces-transition-costs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitcoin miner Riot sold BTC to finance its AI expansion, while Hut 8 reported falling revenue and rising costs before its major data center leases generate income.",
-   "published": "2026-11-04T18:47:56.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1lu4e9n",
-   "title": "Circle’s ARC token sale lifts earnings as lower yields weigh on USDC income",
-   "link": "https://cointelegraph.com/news/circles-arc-token-sale-earnings-yields-usdc-income?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Circle is looking to payments fees and future staking rewards to diversify revenue as its core stablecoin business faces pressure from lower yields and growing competition.",
-   "published": "2026-11-04T18:02:42.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "fyywqv",
    "title": "US stocks rise, dollar slides as investors digest Democrats’ midterm victories",
    "link": "https://www.theguardian.com/business/2026/nov/04/us-dollar-slides-democrats-midterm-election-win-growth-fears",
@@ -280,15 +352,6 @@
    "published": "2026-11-04T16:38:28.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "1n2tg7f",
-   "title": "Bitcoin hits $80.5K as US stocks rally on midterm election results",
-   "link": "https://cointelegraph.com/markets/bitcoin-price-us-stocks-rally-midterm-election-result?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitcoin climbed toward $80,500 as risk assets rallied on Democrats’ midterm election gains and oil prices fell.",
-   "published": "2026-11-04T15:29:23.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "9rlq5c",
@@ -309,15 +372,6 @@
    "category": "economy"
   },
   {
-   "id": "r65ani",
-   "title": "France backs reporting for self-custodied crypto worth 100K euros or more",
-   "link": "https://cointelegraph.com/news/france-approves-amendment-self-custodied-crypto-wallets-100k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The amendment would require taxpayers to report holdings worth at least $112,000, but the measure still needs to survive the budget process.",
-   "published": "2026-11-04T13:44:52.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1c9d6wu",
    "title": "Stocks making the biggest moves premarket: Trump Media, Tesla, CoreWeave, Novo Nordisk and more",
    "link": "https://www.cnbc.com/2026/11/04/stocks-making-the-biggest-moves-premarket-djt-tsla-crwv-nvo.html",
@@ -334,15 +388,6 @@
    "published": "2026-11-04T12:30:29.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "8kpgxd",
-   "title": "Canton’s CC rises 4% as SEC staff view it as ‘digital commodity’",
-   "link": "https://cointelegraph.com/markets/cantons-cc-rises-sec-no-action-letter-digital-commodity?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "SEC staff’s no-action letter covers CC earned by running infrastructure and applications, but is not a binding ruling on its legal status.",
-   "published": "2026-11-04T12:12:15.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "eyuq7n",
@@ -408,15 +453,6 @@
    "category": "economy"
   },
   {
-   "id": "mk2s1m",
-   "title": "Asda hires ex-Morrisons boss in bid to grow firm",
-   "link": "https://www.bbc.co.uk/news/articles/c6vg0xzd0ln4o?at_medium=RSS&at_campaign=rss",
-   "summary": "David Potts takes charge of Asda, which is based in Leeds, with immediate effect.",
-   "published": "2026-11-03T15:12:35.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "1uihbsa",
    "title": "Texas governor race tightens in prediction markets, but Abbott remains favored",
    "link": "https://www.cnbc.com/2026/11/02/texas-governor-prediction-markets-abbott-hinojosa.html",
@@ -433,15 +469,6 @@
    "published": "2026-11-03T12:47:45.000Z",
    "source": "CNBC Finance",
    "category": "markets"
-  },
-  {
-   "id": "oo5gcv",
-   "title": "Drivers may get compensation offers before car finance saga ends",
-   "link": "https://www.bbc.co.uk/news/articles/cqrky5nxxn4po?at_medium=RSS&at_campaign=rss",
-   "summary": "The regulator says it supports lenders offering early compensation offers, as long as they are fair.",
-   "published": "2026-11-03T11:56:31.000Z",
-   "source": "BBC Business",
-   "category": "economy"
   },
   {
    "id": "1ay4hpk",
@@ -561,15 +588,6 @@
    "category": "economy"
   },
   {
-   "id": "6hcfyy",
-   "title": "Fed officials are already saying they’ll need to get back to hiking rates",
-   "link": "https://www.cnbc.com/2026/10/30/musalem-fed-monetary-policy-tightening.html",
-   "summary": "The comments from Federal Reserve Presidents Alberto Musalem and Lorie Logan offer the first morsels of insight into what leaders at the Fed see happening next.",
-   "published": "2026-10-30T21:53:10.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
    "id": "1hbjl4y",
    "title": "Halloween gets pricier as chocolate costs climb — Hershey may feel the pinch",
    "link": "https://www.cnbc.com/2026/10/30/halloween-gets-pricier-as-chocolate-costs-rise-hershey-could-feel-it.html",
@@ -648,33 +666,6 @@
    "summary": "",
    "published": "2026-10-29T13:15:00.000Z",
    "source": "ECB",
-   "category": "economy"
-  },
-  {
-   "id": "1papbck",
-   "title": "Was Ralph Nader right about (almost) everything? His challenge to Democrats ahead of the midterm elections",
-   "link": "https://www.theguardian.com/us-news/2026/oct/29/ralph-nader-midterm-elections",
-   "summary": "The ex-presidential candidate tells Democrats to prosecute corruption and bring real change for the working class A corporate plutocracy. A broken healthcare system. Massive and widening inequality. Cash-soaked…",
-   "published": "2026-10-29T10:00:28.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "yheu3o",
-   "title": "ECB President Lagarde to step down on 7 February 2027",
-   "link": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261029~abbb6dc64b.en.html",
-   "summary": "",
-   "published": "2026-10-29T10:00:00.000Z",
-   "source": "ECB",
-   "category": "economy"
-  },
-  {
-   "id": "o7ba57",
-   "title": "Bank of England sets out approach to tokenised collateral in central clearing",
-   "link": "https://www.bankofengland.co.uk/news/2026/october/bank-of-england-sets-out-approach-to-tokenised-collateral-in-central-clearing",
-   "summary": "The Bank of England has today launched a consultation supporting central counterparties (CCPs) acceptance of tokenised forms of eligible collateral.",
-   "published": "2026-10-29T10:00:00.000Z",
-   "source": "Bank of England",
    "category": "economy"
   }
  ]
