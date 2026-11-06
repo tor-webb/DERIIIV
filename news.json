@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T23:46:11.271Z",
+ "updated": "2026-11-06T04:53:29.780Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,11 +12,47 @@
  },
  "items": [
   {
+   "id": "e7zr1d",
+   "title": "Nasdaq analysis after yesterday's crash: Is this the dip investors have been waiting for?",
+   "link": "https://investinglive.com/stocks/nasdaq-analysis-after-yesterday-s-crash-is-this-the-dip-investors-have-been-waiting-for/",
+   "summary": "Nasdaq futures rebound after a 16.6% plunge. Is this a dip to buy or a rally to sell? Nasdaq futures have bounced nearly 800 points from a major historical support zone, but Wall Street's earnings mood remains…",
+   "published": "2026-11-06T03:51:12.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
    "id": "mfq7na",
-   "title": "Major tech stocks plunge as US midterms add to fears of AI slowdown",
+   "title": "Global tech stocks plunge as US midterms add to AI slowdown fears",
    "link": "https://www.bbc.co.uk/news/articles/cmn04705rd8jo?at_medium=RSS&at_campaign=rss",
-   "summary": "The market has been reacting to possible tougher scrutiny of data centre construction and the AI industry following the US midterms",
-   "published": "2026-11-05T23:21:34.000Z",
+   "summary": "Investors have reacted to possible tougher scrutiny of data centre construction and the AI industry.",
+   "published": "2026-11-06T02:57:24.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "wh0ej4",
+   "title": "Core Scientific to quit Bitcoin mining by year-end as AI business surges",
+   "link": "https://cointelegraph.com/news/core-scientific-to-quit-bitcoin-mining-by-year-end-as-ai-business-surges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The former Bitcoin mining heavyweight plans to become a pure-play data center provider in 2027, with mining now accounting for just 7.5% of quarterly revenue.",
+   "published": "2026-11-06T00:19:49.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1bsydqk",
+   "title": "The engine parts that 'fight the laws of the universe'",
+   "link": "https://www.bbc.co.uk/news/articles/cwe9lmp1pyyxo?at_medium=RSS&at_campaign=rss",
+   "summary": "Investment has surged into the making of jet turbine blades - an extremely difficult component to make.",
+   "published": "2026-11-06T00:06:06.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1ir5p42",
+   "title": "'I was asked if I was a crier': Your worst job interviews revealed",
+   "link": "https://www.bbc.co.uk/news/articles/c3j4751pqnj8o?at_medium=RSS&at_campaign=rss",
+   "summary": "Bad job interviews can be horrible to experience in the moment, but there is a lot they can teach us about the world of work",
+   "published": "2026-11-06T00:02:52.000Z",
    "source": "BBC Business",
    "category": "economy"
   },
@@ -42,7 +78,7 @@
    "id": "r6f3r",
    "title": "Firms told to publish salaries in job adverts ahead of new law",
    "link": "https://www.bbc.co.uk/news/articles/cmd9343z3zw2o?at_medium=RSS&at_campaign=rss",
-   "summary": "The goverment argues the change will help jobseekers and could help to prevent pay discrimination.",
+   "summary": "The government argues the change will help jobseekers and could help to prevent pay discrimination.",
    "published": "2026-11-05T22:32:02.000Z",
    "source": "BBC Business",
    "category": "economy"
@@ -264,15 +300,6 @@
    "category": "forex"
   },
   {
-   "id": "ivr1jw",
-   "title": "US broader indices are getting hammered",
-   "link": "https://investinglive.com/stocks/us-broader-indices-are-getting-hammered/",
-   "summary": "This article was written by Greg Michalowski at investinglive.com.",
-   "published": "2026-11-05T15:46:56.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "gs8q94",
    "title": "Drunk and dangerous e-bike riders face on-the-spot fines under crackdown",
    "link": "https://www.bbc.co.uk/news/articles/cmze4zk4d789o?at_medium=RSS&at_campaign=rss",
@@ -336,15 +363,6 @@
    "category": "markets"
   },
   {
-   "id": "r3beo",
-   "title": "Trump’s memecoin ventures derailed CLARITY Act, Scaramucci says",
-   "link": "https://cointelegraph.com/news/scaramucci-trump-memecoins-clarity-act-failure?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The SkyBridge founder said disputes over ethics restrictions also stalled negotiations, with both sides responsible for the setback.",
-   "published": "2026-11-05T12:39:36.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1oeo88w",
    "title": "Bank rate increased to 4% - November 2026 Monetary Policy Summary and Minutes",
    "link": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/november-2026",
@@ -366,7 +384,7 @@
    "id": "r7qqgs",
    "title": "Rural voters were feeling left behind before the midterms, poll shows",
    "link": "https://www.theguardian.com/business/2026/nov/05/former-trump-voters-economy",
-   "summary": "Polling done for the Guardian shows plummeting support from a former key constituency of Donald Trump’s base Polling conducted by the Harris Poll for the Guardian before the election shows just how angry voters were…",
+   "summary": "Polling done for the Guardian shows plummeting support from a former key constituency of Donald Trump’s base Q&A: Ask your questions about Democrats’ win in the midterms Polling conducted by the Harris Poll for the…",
    "published": "2026-11-05T11:00:22.000Z",
    "source": "The Guardian Business",
    "category": "economy"
@@ -435,15 +453,6 @@
    "category": "markets"
   },
   {
-   "id": "1jp9m7m",
-   "title": "Elon Musk's millions failed to deliver Republican wins in fierce midterms",
-   "link": "https://www.bbc.co.uk/news/articles/cv8ez3p3ge5ko?at_medium=RSS&at_campaign=rss",
-   "summary": "Musk spent nearly $500m in the 2026 US midterm elections, an individual election spending record.",
-   "published": "2026-11-04T21:41:15.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "1xb3q2z",
    "title": "10-year Treasury yield slides as traders mull over Democrats' midterm victories, oil prices drop",
    "link": "https://www.cnbc.com/2026/11/03/treasury-yields-fall-as-democrats-win-big-in-us-midterm-elections.html",
@@ -495,15 +504,6 @@
    "summary": "Fox News pundits hardly criticized the US president in midterms coverage but Trump was still quick to cast blame US midterms 2026 live – latest updates Track live results from all 50 states Q&A: Ask your questions…",
    "published": "2026-11-04T12:30:29.000Z",
    "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "oy5u4u",
-   "title": "Graduates are managing AI - but are they learning much else?",
-   "link": "https://www.bbc.co.uk/news/articles/c820vz6wyp65o?at_medium=RSS&at_campaign=rss",
-   "summary": "Graduates are spending more time managing AI, but are they missing out on other work experience?",
-   "published": "2026-11-04T00:04:35.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
