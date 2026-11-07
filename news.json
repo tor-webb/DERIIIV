@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T11:28:09.536Z",
+ "updated": "2026-11-07T16:57:53.051Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,6 +12,69 @@
  },
  "items": [
   {
+   "id": "16a7m1s",
+   "title": "Why the prognosis for healthcare stocks is uncertain ahead of Congress’ new makeup",
+   "link": "https://www.cnbc.com/2026/11/07/healthcare-stocks-may-face-trouble-due-to-midterm-results.html",
+   "summary": "Healthcare stocks may struggle to find momentum as the Democrats get ready to take over Congress.",
+   "published": "2026-11-07T16:02:33.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "dzmrpk",
+   "title": "Berkshire Hathaway more than doubles buybacks in third quarter as earnings decline",
+   "link": "https://www.cnbc.com/2026/11/07/berkshire-hathaway-q3-2026-earnings-buybacks.html",
+   "summary": "Berkshire Hathaway said Saturday it accelerated its share repurchases during the third quarter, as operating and overall profits took a hit.",
+   "published": "2026-11-07T15:23:46.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-11-07T14:22:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "11zjyy7",
+   "title": "Ex-FBI counterintelligence agent stole almost $2.5M in crypto",
+   "link": "https://cointelegraph.com/news/ex-fbi-counterintelligence-agent-stole-almost-25m-in-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Yaroch paid off his debts and intended to use the proceeds to finance a new life in Portugal, where he planned to buy a vineyard.",
+   "published": "2026-11-07T14:16:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "179w2wt",
+   "title": "Standing in the way of slop bowls: the woman blocking food delivery robots",
+   "link": "https://www.theguardian.com/technology/ng-interactive/2026/nov/07/philadelphia-blocking-food-delivery-robots",
+   "summary": "Semi-retired professor Carolyn Marvin became a local celebrity facing down Philadelphia’s growing robot delivery army: ‘It’s my first amendment right to protest’ “One of you needs to be on the lookout for cops, while I…",
+   "published": "2026-11-07T14:00:12.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "1anoibb",
+   "title": "Christine Lagarde: Interview with Yomiuri Shimbun",
+   "link": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261107~e7b86fc4ce.en.html",
+   "summary": "",
+   "published": "2026-11-07T14:00:00.000Z",
+   "source": "ECB",
+   "category": "economy"
+  },
+  {
+   "id": "gezvbw",
+   "title": "Bitcoin holders have received eCash — What can you do with it?",
+   "link": "https://cointelegraph.com/magazine/bitcoin-holders-have-received-ecash-what-can-you-with-it?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Bitcoin’s eCash fork gives eligible holders an equivalent balance of ECX, but questions remain over where they can trade the tokens and what they can do with them.",
+   "published": "2026-11-07T13:30:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
    "id": "uk5tfw",
    "title": "US sanctions Canadian money-exchange firms over Iran ties",
    "link": "https://cointelegraph.com/news/us-sanctions-canadian-money-exchange-firms-over-iran-ties?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -19,6 +82,15 @@
    "published": "2026-11-07T11:10:47.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
+  },
+  {
+   "id": "alb5nr",
+   "title": "Trump may have lost but don’t bet Democrats can fix the economy",
+   "link": "https://www.theguardian.com/business/2026/nov/07/democrats-economy-affordability-crisis",
+   "summary": "There’s not much they can do over the next couple of years to alleviate angry voters’ stress over prices It was the economy, again. Although Donald Trump largely ignored it, voters’ acute concerns over the rising cost…",
+   "published": "2026-11-07T11:00:08.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
   },
   {
    "id": "1135ozq",
@@ -46,15 +118,6 @@
    "published": "2026-11-07T04:08:41.000Z",
    "source": "investingLive",
    "category": "forex"
-  },
-  {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-11-06T22:00:15.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1qd2a0s",
@@ -201,15 +264,6 @@
    "category": "forex"
   },
   {
-   "id": "nc5x4p",
-   "title": "Bitcoin price dips under $75K as crypto markets miss tech-stock rebound",
-   "link": "https://cointelegraph.com/markets/bitcoin-price-under-75k-crypto-markets-tech-stock?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "BTC price action stayed weak after US nonfarm payrolls data significantly beat forecasts, increasing bets of a December interest-rate hike.",
-   "published": "2026-11-06T17:49:33.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1vxqbeo",
    "title": "Microsoft is reportedly winding down it's Oracle deal to wind down AI cloud capacity",
    "link": "https://investinglive.com/news/microsoft-is-reportedly-winding-down-it-s-oracle-deal-to-wind-down-ai-cloud-capacity/",
@@ -298,15 +352,6 @@
    "published": "2026-11-06T15:25:43.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "z9p19z",
-   "title": "What Democrats’ US midterm sweep means for the CLARITY Act",
-   "link": "https://cointelegraph.com/magazine/clarity-act-faces-new-test-under-democratic-congress?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The CLARITY Act faces a new test as Democrats control Congress, raising questions over consumer protections, ethics and what the crypto industry may have to concede.",
-   "published": "2026-11-06T14:30:00.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "137dtrd",
@@ -507,15 +552,6 @@
    "category": "markets"
   },
   {
-   "id": "1xb3q2z",
-   "title": "10-year Treasury yield slides as traders mull over Democrats' midterm victories, oil prices drop",
-   "link": "https://www.cnbc.com/2026/11/03/treasury-yields-fall-as-democrats-win-big-in-us-midterm-elections.html",
-   "summary": "Treasury yields were last little changed Wednesday as investors weighed big wins from Democrats in the U.S. midterm elections.",
-   "published": "2026-11-04T21:18:44.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
    "id": "fyywqv",
    "title": "US stocks rise, dollar slides as investors digest Democrats’ midterm victories",
    "link": "https://www.theguardian.com/business/2026/nov/04/us-dollar-slides-democrats-midterm-election-win-growth-fears",
@@ -579,30 +615,12 @@
    "category": "economy"
   },
   {
-   "id": "sv5fdo",
-   "title": "Stocks making the biggest moves premarket: Pfizer, Apple, Palantir, Zebra Technologies & more",
-   "link": "https://www.cnbc.com/2026/11/03/stocks-making-the-biggest-moves-premarket-pfe-pltr-aapl-zbra.html",
-   "summary": "These are the stocks posting the largest moves premarket.",
-   "published": "2026-11-03T12:47:45.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
    "id": "1ay4hpk",
    "title": "Regulators explore credit union reforms to support growth, innovation and better outcomes for members",
    "link": "https://www.bankofengland.co.uk/news/2026/november/regulators-explore-credit-union-reforms-to-support-growth-innovation-and-better-outcomes-for-members",
    "summary": "Credit unions could benefit from several ideas put forward today by the Prudential Regulation Authority and Financial Conduct Authority aimed at helping the sector grow, innovate and meet the changing needs of their…",
    "published": "2026-11-03T10:00:00.000Z",
    "source": "Bank of England",
-   "category": "economy"
-  },
-  {
-   "id": "tg6f08",
-   "title": "Apple warns of ‘unprecedented’ rise in memory chip prices",
-   "link": "https://www.theguardian.com/technology/2026/nov/02/apple-third-quarter-revenue-earnings",
-   "summary": "iPhone maker says decision to raise prices has offset some of impact, as revenues are stronger than expected Business live – latest updates Apple has warned of an “unprecedented” rise in memory chip prices, as it…",
-   "published": "2026-11-03T09:01:19.000Z",
-   "source": "The Guardian Business",
    "category": "economy"
   },
   {
