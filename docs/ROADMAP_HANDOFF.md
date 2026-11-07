@@ -200,6 +200,14 @@ Goal: a pop-up when a starred market moves more than a chosen amount in an hour.
 - Limits: alerts only work while the site is open in a browser tab (no push or background alerts). One shared threshold list per browser, not per account. Pop-up text shows the price unformatted (no pip size).
 - Still owed: a look at the pop-up and panel in a browser at 390 and 1280 px, and a live check that a real move triggers it.
 
+### K. Crypto page (2026-11-07, branch `crypto-page`)
+
+- Route `/crypto` (`Containers/Crypto`), in the top nav and phone tab bar. Live OKX **public** data, read-only: spot and perpetual-futures tickers for 12 coins (polled every 5 s while the tab is visible), a candle chart (1m, 5m, 1h, 1d), the funding rate for perpetuals, a star watchlist (`crypto_watchlist` in `localStorage`), search.
+- Files: `okx.ts` (parsers, fetchers, formatting), `use-okx.ts` (polling hooks), `crypto.tsx`, `crypto.scss`.
+- **No orders can be placed.** OKX trading needs API keys; a static GitHub Pages site cannot keep keys secret. Real OKX trading would need a small backend that holds the keys, signs requests and enforces limits, and should start on OKX's demo trading. Not built.
+- **Not verified:** the sandbox cannot reach OKX, so the live endpoints (`/api/v5/market/tickers`, `/market/candles`, `/public/funding-rate`) and whether OKX allows browser (CORS) requests from the Pages domain were never checked. Tests use sample replies in OKX's documented shape. If the browser blocks the requests, the page shows the error with a retry button, and the fix is a small proxy.
+- Not yet: Deriv crypto trading (multipliers on Deriv's crypto markets) on this page; OKX WebSocket streaming instead of polling.
+
 ### G. Smaller items already on the list
 
 - Phone tab bar: pin the Menu tab; hide the grey "Not logged in" strip when logged out (`HANDOFF.md`).

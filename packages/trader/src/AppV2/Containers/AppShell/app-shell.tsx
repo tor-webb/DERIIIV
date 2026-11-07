@@ -22,6 +22,7 @@ const MOBILE_NAV_ROUTES = [
     routes.dashboard,
     routes.charts,
     routes.markets,
+    routes.crypto,
     routes.voltrex,
     routes.bot_builder,
     routes.bulk_trader,

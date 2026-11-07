@@ -11,6 +11,7 @@ const Trade = lazy(() => import(/* webpackChunkName: "trader-trade" */ 'AppV2/Co
 const Dashboard = lazy(() => import(/* webpackChunkName: "trader-dashboard" */ 'AppV2/Containers/Dashboard'));
 const ChartsPage = lazy(() => import(/* webpackChunkName: "trader-charts" */ 'AppV2/Containers/ChartsPage'));
 const Markets = lazy(() => import(/* webpackChunkName: "trader-markets" */ 'AppV2/Containers/Markets'));
+const Crypto = lazy(() => import(/* webpackChunkName: "trader-crypto" */ 'AppV2/Containers/Crypto'));
 const Voltrex = lazy(() => import(/* webpackChunkName: "trader-voltrex" */ 'AppV2/Containers/Voltrex'));
 const BotBuilder = lazy(() => import(/* webpackChunkName: "trader-bot-builder" */ 'AppV2/Containers/BotBuilder'));
 const Journal = lazy(() => import(/* webpackChunkName: "trader-journal" */ 'AppV2/Containers/Journal'));
@@ -54,6 +55,12 @@ const traderRoutes: TRouteConfigExtended[] = [
     {
         path: routes.markets,
         component: Markets,
+        exact: true,
+        default: false,
+    },
+    {
+        path: routes.crypto,
+        component: Crypto,
         exact: true,
         default: false,
     },
