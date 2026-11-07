@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T04:38:39.413Z",
+ "updated": "2026-11-07T11:28:09.536Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -11,6 +11,42 @@
   "The Guardian Business /business/rss": 12
  },
  "items": [
+  {
+   "id": "uk5tfw",
+   "title": "US sanctions Canadian money-exchange firms over Iran ties",
+   "link": "https://cointelegraph.com/news/us-sanctions-canadian-money-exchange-firms-over-iran-ties?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "US also offers as much as $20 million and possible relocation for information about Iran’s nuclear program.",
+   "published": "2026-11-07T11:10:47.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1135ozq",
+   "title": "Suspicious prediction market activity seen before election poll release: NYT",
+   "link": "https://cointelegraph.com/news/suspicious-prediction-market-activity-seen-before-election-poll-release-nyt?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Bets were placed shortly before two recent New York Times/Siena political polls were released to the public, according to a report.",
+   "published": "2026-11-07T09:10:35.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1y84s0a",
+   "title": "Nvidia may face a more hostile post-election Washington: Report",
+   "link": "https://cointelegraph.com/news/nvidia-may-be-facing-a-more-hostile-post-election-washington-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "CEO Jensen Huang’s relationship with President Donald Trump probably won’t save the company from a more adversarial Washington, Semafor says.",
+   "published": "2026-11-07T07:45:24.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "102q1ij",
+   "title": "Gold analysis: Buyers keep defending $4,040. Is $4,140 the next target?",
+   "link": "https://investinglive.com/commodities/gold-analysis-buyers-keep-defending-4-040-is-4-140-the-next-target/",
+   "summary": "Gold futures buyers keep returning near $4,040. Is $4,140 the next test? Gold's recovery looks more convincing than Friday's volatile price action suggests. Buyers have repeatedly defended an important support area,…",
+   "published": "2026-11-07T04:08:41.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
   {
    "id": "1la066y",
    "title": "Here’s what happened in crypto today",
@@ -255,15 +291,6 @@
    "category": "forex"
   },
   {
-   "id": "1rz5fwk",
-   "title": "Broader US stock indices bounce higher but still has work to do to give buyers more hope",
-   "link": "https://investinglive.com/stocks/broader-us-stock-indices-bounce-higher-but-still-has-work-to-do-to-give-buyers-more-hope/",
-   "summary": "The S&P 500, Nasdaq Composite and Nasdaq 100 are bouncing, but buyers still have key technical levels to reclaim. Yesterday’s selloff left the major US stock indices in a deep hole. The Nasdaq 100 fell 6.36%, its…",
-   "published": "2026-11-06T15:33:01.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "r6f3r",
    "title": "PM tells firms to publish salaries in job adverts ahead of new law",
    "link": "https://www.bbc.co.uk/news/articles/cmd9343z3zw2o?at_medium=RSS&at_campaign=rss",
@@ -282,15 +309,6 @@
    "category": "crypto"
   },
   {
-   "id": "1fi4jfd",
-   "title": "Nigeria sets new crypto licensing rules, bans algorithmic stablecoins",
-   "link": "https://cointelegraph.com/news/nigeria-algorithmic-stablecoin-ban-crypto-licensing?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Nigeria has banned algorithmic stablecoins and introduced reserve requirements for issuers as it expands central bank oversight of crypto payment services.",
-   "published": "2026-11-06T13:57:14.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "137dtrd",
    "title": "US job growth exceeds expectations in October despite economic uncertainty",
    "link": "https://www.theguardian.com/business/2026/nov/06/us-job-growth-october",
@@ -298,15 +316,6 @@
    "published": "2026-11-06T13:42:26.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "j99faf",
-   "title": "Ethereum devs won’t fork Glamsterdam on Hoodi until smart contract risks resolved",
-   "link": "https://cointelegraph.com/news/ethereum-devs-fork-glamsterdam-hoodi-smart-contract-risks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Ethereum developers are investigating concerns tied to eight smart contract invariants tied to Glamsterdam’s EIP-8037 and EIP-8038.",
-   "published": "2026-11-06T13:23:08.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1atrbrz",
@@ -325,15 +334,6 @@
    "published": "2026-11-06T12:38:05.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "1mheadv",
-   "title": "Solana’s Shanghai event halted over unauthorized promotion: Report",
-   "link": "https://cointelegraph.com/news/solana-shanghai-event-halted-unauthorized-promotion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Solana’s promotional campaigns through domestic entities allegedly violated China’s crypto-related restrictions, an unidentified PBOC official told China’s Financial News.",
-   "published": "2026-11-06T12:15:28.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "ljkqco",
@@ -621,15 +621,6 @@
    "summary": "",
    "published": "2026-11-02T09:30:00.000Z",
    "source": "ECB",
-   "category": "economy"
-  },
-  {
-   "id": "20etxw",
-   "title": "The Trump administration wants to give married parents money to stay at home. Will it be enough?",
-   "link": "https://www.theguardian.com/money/2026/oct/31/trump-married-parents-payments",
-   "summary": "Experts say the proposed program prioritizes parents in ‘traditional families’, ignoring the flexibility needed that all families need to support themselves Erica Hall and her husband knew that raising kids wouldn’t be…",
-   "published": "2026-10-31T10:00:41.000Z",
-   "source": "The Guardian Business",
    "category": "economy"
   }
  ]
