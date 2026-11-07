@@ -1562,3 +1562,87 @@
 .voltrex-digits__suggest {
     margin: 0.6rem 0;
 }
+
+.voltrex-alerts {
+    margin-top: 1.6rem;
+
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.8rem;
+        align-items: end;
+        margin: 0.8rem 0;
+
+        label {
+            display: grid;
+            gap: 0.3rem;
+            font-size: 1.2rem;
+            color: var(--vx-muted);
+        }
+
+        select,
+        input {
+            min-width: 0;
+            padding: 0.6rem 0.8rem;
+            border: 0.1rem solid var(--vx-border);
+            border-radius: 0.6rem;
+            background: var(--vx-inset);
+            color: var(--vx-text);
+            font-size: 1.3rem;
+        }
+    }
+
+    &__rules,
+    &__fired {
+        display: grid;
+        gap: 0.6rem;
+        margin: 0.8rem 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            gap: 0.8rem;
+            align-items: center;
+            font-size: 1.3rem;
+        }
+
+        button {
+            border: 0;
+            background: none;
+            color: inherit;
+            cursor: pointer;
+            text-align: left;
+        }
+    }
+
+    &__fired li button {
+        display: grid;
+        width: 100%;
+        gap: 0.2rem;
+        padding: 0.6rem 0.8rem;
+        border-radius: 0.6rem;
+        background: rgb(var(--vx-purple-rgb) / 0.08);
+
+        small {
+            color: var(--vx-muted);
+            font-size: 1.1rem;
+        }
+    }
+
+    &__sound {
+        display: flex;
+        gap: 0.6rem;
+        align-items: center;
+        font-size: 1.3rem;
+    }
+
+    &__clear {
+        border: 0;
+        background: none;
+        color: var(--vx-muted);
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+}

@@ -4,10 +4,13 @@ import classNames from 'classnames';
 import { observer, useStore } from '@deriv/stores';
 import { localize } from '@deriv-com/translations';
 
+import { useVoltrexAlerts } from './use-voltrex-alerts';
 import { useVoltrexDigits } from './use-voltrex-digits';
 import { useVoltrexScanner } from './use-voltrex-scanner';
 import { useVoltrexTrader } from './use-voltrex-trader';
 import VoltrexActivity from './voltrex-activity';
+import { ANY_MARKET } from './voltrex-alerts';
+import VoltrexAlertsPanel from './voltrex-alerts-panel';
 import type { TSignalDirection } from './voltrex-analysis';
 import { CONFIRM_FRAME, PRIMARY_FRAME } from './voltrex-config';
 import VoltrexDetail from './voltrex-detail';
@@ -57,6 +60,11 @@ const Voltrex = observer(() => {
     const scanner = useVoltrexScanner({ selected, extra_live: digit_markets.map(item => item.symbol) });
     const { rows, updated_at } = scanner;
     const trader = useVoltrexTrader(rows, digits.getDigits);
+    const alerts = useVoltrexAlerts(rows, digits.getStats, digits.version);
+    // digit alerts need the last digits of the markets they watch
+    const digit_rules = alerts.rules.filter(rule => isDigitProduct(rule.product));
+    const alert_any_digit = digit_rules.some(rule => rule.symbol === ANY_MARKET);
+    const alert_symbols = digit_rules.map(rule => rule.symbol).join(',');
     const auto_scope = trader.snapshot.auto_scope;
     const wants_digits = !!auto_scope?.products.some(isDigitProduct);
     const scope_key = auto_scope ? auto_scope.categories.join(',') : '';
@@ -67,14 +75,17 @@ const Voltrex = observer(() => {
                 item =>
                     item.is_open &&
                     DIGIT_CATEGORIES.includes(item.category) &&
-                    (item.symbol === selected || (wants_digits && auto_scope?.categories.includes(item.category)))
+                    (item.symbol === selected ||
+                        (wants_digits && auto_scope?.categories.includes(item.category)) ||
+                        alert_any_digit ||
+                        alert_symbols.split(',').includes(item.symbol))
             )
             .slice(0, MAX_DIGIT_MARKETS)
             .map(item => ({ symbol: item.symbol, pip_size: item.pip_size }));
         if (next.map(item => item.symbol).join(',') !== digit_key) setDigitMarkets(next);
         // the auto-trading scope is read through its key
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [rows.length, selected, wants_digits, scope_key, digit_key]);
+    }, [rows.length, selected, wants_digits, scope_key, digit_key, alert_any_digit, alert_symbols]);
 
     // open the strongest signal once, so the side panel is not empty while the first markets load
     React.useEffect(() => {
@@ -220,6 +231,7 @@ const Voltrex = observer(() => {
                         stats={selected ? digits.getStats(selected) : null}
                         min_strength={trader.risk.min_strength}
                     />
+                    <VoltrexAlertsPanel alerts={alerts} rows={rows} onSelect={pick} />
                 </aside>
                 <div className='voltrex__trade'>
                     <VoltrexTradePanel
