@@ -1,0 +1,230 @@
+// Same page frame and pill buttons as the Markets, News and Learn pages.
+.crypto {
+    box-sizing: border-box;
+    min-height: calc(100vh - var(--top-nav-height, 0px));
+    padding: 4rem 2.4rem;
+    background-color: var(--color-surface-section);
+    color: var(--color-text-primary);
+    overflow-y: auto;
+
+    @include mobile-screen {
+        padding: 2.4rem 1.6rem;
+    }
+
+    &__header,
+    &__controls,
+    &__error,
+    &__layout {
+        max-width: 112rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__header {
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 3.2rem;
+        font-weight: 800;
+    }
+
+    &__subtitle {
+        margin: 0.8rem 0 0;
+        font-size: 1.6rem;
+        opacity: 0.8;
+    }
+
+    &__note {
+        margin: 1.2rem 0 0;
+        padding: 1rem 1.4rem;
+        border: 1px solid var(--color-surface-border);
+        border-radius: 0.8rem;
+        font-size: 1.3rem;
+    }
+
+    &__controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+        align-items: center;
+        margin-bottom: 1.6rem;
+    }
+
+    &__tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    &__search {
+        flex: 1;
+        min-width: 14rem;
+        height: 3.6rem;
+        padding: 0 1.4rem;
+        border: 1px solid var(--color-surface-border);
+        border-radius: 10rem;
+        background-color: var(--color-surface-primary);
+        color: inherit;
+        font: inherit;
+        font-size: 1.3rem;
+    }
+
+    &__pill {
+        height: 3.6rem;
+        padding: 0 1.6rem;
+        border: 1px solid var(--color-surface-border);
+        border-radius: 10rem;
+        background-color: var(--color-surface-primary);
+        color: inherit;
+        font: inherit;
+        font-size: 1.3rem;
+        font-weight: 600;
+        cursor: pointer;
+
+        &--small {
+            height: 3rem;
+            padding: 0 1.2rem;
+            font-size: 1.2rem;
+        }
+
+        &--active {
+            border-color: var(--brand-primary);
+            background-color: var(--brand-primary);
+            color: #fff;
+        }
+    }
+
+    &__error {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.6rem;
+        margin-bottom: 1.6rem;
+        padding: 1.2rem 1.6rem;
+        border: 1px solid #f0b9b3;
+        border-radius: 0.8rem;
+        background-color: #fdecea;
+        color: #8c1d18;
+        font-size: 1.3rem;
+    }
+
+    &__layout {
+        display: grid;
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+        gap: 2rem;
+        align-items: start;
+
+        @include mobile-screen {
+            grid-template-columns: minmax(0, 1fr);
+        }
+    }
+
+    &__table,
+    &__detail {
+        padding: 1.6rem;
+        border: 1px solid var(--color-surface-border);
+        border-radius: 1.2rem;
+        background-color: var(--color-surface-primary);
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.3rem;
+        }
+
+        th,
+        td {
+            padding: 0.8rem 0.6rem;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        th:nth-child(-n + 2),
+        td:nth-child(-n + 2) {
+            text-align: left;
+        }
+
+        th {
+            font-weight: 600;
+            opacity: 0.7;
+        }
+
+        tbody tr {
+            border-top: 1px solid var(--color-surface-border);
+        }
+    }
+
+    &__row--selected {
+        background-color: rgb(128 128 128 / 0.1);
+    }
+
+    &__hide-small {
+        @include mobile-screen {
+            display: none;
+        }
+    }
+
+    &__coin {
+        border: 0;
+        background: none;
+        color: inherit;
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    &__star {
+        width: 3rem;
+        height: 3rem;
+        border: 0;
+        background: transparent;
+        color: inherit;
+        font-size: 1.8rem;
+        opacity: 0.55;
+        cursor: pointer;
+
+        &--on {
+            color: #c98a00;
+            opacity: 1;
+        }
+    }
+
+    &__change--up {
+        color: #14663a;
+    }
+
+    &__change--down {
+        color: #b3261e;
+    }
+
+    &__detail-title {
+        margin: 0 0 1rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    &__chart-svg {
+        width: 100%;
+        height: 22rem;
+        margin: 1.2rem 0;
+    }
+
+    &__candle--up {
+        fill: #14663a;
+        stroke: #14663a;
+    }
+
+    &__candle--down {
+        fill: #b3261e;
+        stroke: #b3261e;
+    }
+
+    &__funding,
+    &__muted {
+        margin: 0.8rem 0;
+        font-size: 1.3rem;
+        opacity: 0.8;
+    }
+}
