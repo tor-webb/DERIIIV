@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T06:28:29.229Z",
+ "updated": "2026-11-08T13:46:18.306Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -11,6 +11,60 @@
   "The Guardian Business /business/rss": 12
  },
  "items": [
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-11-08T13:33:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1jwe0r9",
+   "title": "Binance France emails announce closure of its users’ accounts on Dec. 31",
+   "link": "https://cointelegraph.com/news/binance-france-emails-announce-closure-of-its-users-accounts-on-dec-31?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Any assets left on the exchange will be charged monthly fees starting on Nov. 29, company says.",
+   "published": "2026-11-08T12:57:51.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1nypjvt",
+   "title": "Government 'looking seriously' at banning under-16s from Vinted and eBay",
+   "link": "https://www.bbc.co.uk/news/articles/cmzxjvpqrjxro?at_medium=RSS&at_campaign=rss",
+   "summary": "The culture secretary confirms reports they could be in the list of platforms set to be banned next March.",
+   "published": "2026-11-08T11:25:32.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "170igz0",
+   "title": "WTI oil price outlook: After a 17.5% slide, can buyers reclaim $92.53?",
+   "link": "https://investinglive.com/commodities/wti-oil-price-outlook-after-a-17-5-slide-can-buyers-reclaim-92-53/",
+   "summary": "Oil recovered from a sharp selloff, but buyers have struggled to hold higher prices. My analysis finds a bearish picture over the next several sessions, while the immediate outlook is much less decisive. Here are the…",
+   "published": "2026-11-08T10:43:36.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1gpmaa3",
+   "title": "Amsterdam protesters break into Microsoft data center construction site: Report",
+   "link": "https://cointelegraph.com/news/amsterdam-data-center-protesters-break-into-construction-site-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Dutch police said they detained 150-200 people for trespassing during the protest.",
+   "published": "2026-11-08T09:48:48.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "5w7ph2",
+   "title": "Binance’s finance chief Kaiser Ng to leave company, report says",
+   "link": "https://cointelegraph.com/news/binances-finance-chief-kaiser-ng-to-leave-company-report-says?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Ng will be replaced by Justin Yek, who was formerly vice-president of finance at Airwallex.",
+   "published": "2026-11-08T08:12:56.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
   {
    "id": "1ee9p50",
    "title": "Labubu hype seemed unstoppable, now the fluffy monster mania is dying",
@@ -37,15 +91,6 @@
    "published": "2026-11-07T15:23:46.000Z",
    "source": "CNBC Finance",
    "category": "markets"
-  },
-  {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-11-07T14:22:00.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "11zjyy7",
@@ -129,6 +174,15 @@
    "category": "forex"
   },
   {
+   "id": "1j3ea6t",
+   "title": "'My mortgage is going up £200 a month': How rising interest rates are hitting people's pockets",
+   "link": "https://www.bbc.co.uk/news/articles/c617kjqjvk12o?at_medium=RSS&at_campaign=rss",
+   "summary": "With UK interest rates set to rise, mortgages, credit cards and loans could get more expensive for millions.",
+   "published": "2026-11-07T01:41:36.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
    "id": "1qd2a0s",
    "title": "investingLive Americas market news wrap: Non-farm payrolls beat estimates",
    "link": "https://investinglive.com/news/investinglive-americas-market-news-wrap-non-farm-payrolls-beat-estimates/",
@@ -201,15 +255,6 @@
    "category": "crypto"
   },
   {
-   "id": "jp4bwh",
-   "title": "US 401(k) proposal leaves door open to altcoins, but hurdles remain",
-   "link": "https://cointelegraph.com/news/us-401k-proposal-leaves-door-open-altcoins-hurdles?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "While the proposal doesn’t exclude altcoins and smaller cryptocurrencies, experts say they could face challenges getting into retirement plans.",
-   "published": "2026-11-06T20:04:27.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1v4953m",
    "title": "Trump: We are talking to Iran, we are doing very well with Iran",
    "link": "https://investinglive.com/news/trump-we-are-talking-to-iran-we-are-doing-very-well-with-iran/",
@@ -237,15 +282,6 @@
    "category": "forex"
   },
   {
-   "id": "1jf0nia",
-   "title": "Russia finalizes crypto trading rules ahead of Nov. 17 rollout",
-   "link": "https://cointelegraph.com/news/russia-finalizes-crypto-trading-rules-november-rollout?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The rules allow retail investors to trade BTC, ETH and USDT through regulated intermediaries, with Moscow Exchange planning to launch crypto trading in December.",
-   "published": "2026-11-06T18:47:45.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "479r2d",
    "title": "Why the US midterms sparked an AI stock selloff",
    "link": "https://www.bbc.co.uk/news/articles/crlykkzwwpydo?at_medium=RSS&at_campaign=rss",
@@ -253,15 +289,6 @@
    "published": "2026-11-06T18:32:16.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "ve5ssx",
-   "title": "Strive buys 15,124 Bitcoin in October, closes in on top treasury holders",
-   "link": "https://cointelegraph.com/news/strive-buys-bitcoin-october-top-btc-corporate-holders?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitcoin treasury company Strive reported $509 million in third-quarter net income and purchased 15,124 BTC in October, bringing its total holdings to 43,124 BTC.",
-   "published": "2026-11-06T18:22:42.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1t5n7qh",
@@ -345,15 +372,6 @@
    "category": "forex"
   },
   {
-   "id": "hcozdf",
-   "title": "Iran reviewing proposals to curb nuclear program - report",
-   "link": "https://investinglive.com/news/iran-reviewing-proposals-to-curb-nuclear-program-report/",
-   "summary": "Iranian negotiators are reviewing proposals that would see Tehran curb its nuclear program, according to the Times of Israel. Iran had previously refused to put the issue on the table until its seven conditions were…",
-   "published": "2026-11-06T16:06:34.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "r6f3r",
    "title": "PM tells firms to publish salaries in job adverts ahead of new law",
    "link": "https://www.bbc.co.uk/news/articles/cmd9343z3zw2o?at_medium=RSS&at_campaign=rss",
@@ -405,15 +423,6 @@
    "summary": "",
    "published": "2026-11-06T09:00:00.000Z",
    "source": "ECB",
-   "category": "economy"
-  },
-  {
-   "id": "1bsydqk",
-   "title": "The engine parts that 'fight the laws of the universe'",
-   "link": "https://www.bbc.co.uk/news/articles/cwe9lmp1pyyxo?at_medium=RSS&at_campaign=rss",
-   "summary": "Investment has surged into the making of jet turbine blades - an extremely difficult component to make.",
-   "published": "2026-11-06T00:06:06.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
@@ -478,15 +487,6 @@
    "published": "2026-11-05T13:17:00.000Z",
    "source": "CNBC Finance",
    "category": "markets"
-  },
-  {
-   "id": "1mi3krp",
-   "title": "Three ways the interest rate rise could affect you",
-   "link": "https://www.bbc.co.uk/news/articles/cx4g1q3vlp62o?at_medium=RSS&at_campaign=rss",
-   "summary": "Job, loans and savings are all affected by the rise in interest rates announced by the Bank of England.",
-   "published": "2026-11-05T13:08:30.000Z",
-   "source": "BBC Business",
-   "category": "economy"
   },
   {
    "id": "7bzvh",
