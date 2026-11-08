@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T00:09:20.297Z",
+ "updated": "2026-11-08T06:28:29.229Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -11,6 +11,15 @@
   "The Guardian Business /business/rss": 12
  },
  "items": [
+  {
+   "id": "1ee9p50",
+   "title": "Labubu hype seemed unstoppable, now the fluffy monster mania is dying",
+   "link": "https://www.bbc.co.uk/news/articles/cmvg652l927lo?at_medium=RSS&at_campaign=rss",
+   "summary": "Parent company Pop Mart's revenue has fallen as appetite for the quirky collectible monsters wanes.",
+   "published": "2026-11-07T23:02:35.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
   {
    "id": "16a7m1s",
    "title": "Why the prognosis for healthcare stocks is uncertain ahead of Congress’ new makeup",
@@ -450,15 +459,6 @@
    "summary": "Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc",
    "published": "2026-11-05T16:00:00.000Z",
    "source": "Federal Reserve",
-   "category": "economy"
-  },
-  {
-   "id": "gs8q94",
-   "title": "Drunk and dangerous e-bike riders face on-the-spot fines under crackdown",
-   "link": "https://www.bbc.co.uk/news/articles/cmze4zk4d789o?at_medium=RSS&at_campaign=rss",
-   "summary": "A consultation will consider fines and other ways to clamp down on dangerous e-bike riders.",
-   "published": "2026-11-05T15:27:09.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
