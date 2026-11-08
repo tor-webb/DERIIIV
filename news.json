@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T13:46:18.306Z",
+ "updated": "2026-11-08T18:38:05.151Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -11,6 +11,15 @@
   "The Guardian Business /business/rss": 12
  },
  "items": [
+  {
+   "id": "1nypjvt",
+   "title": "Government 'looking seriously' at banning under-16s from Vinted and eBay",
+   "link": "https://www.bbc.co.uk/news/articles/cmzxjvpqrjxro?at_medium=RSS&at_campaign=rss",
+   "summary": "The culture secretary confirms reports they could be in the list of platforms set to be banned next March.",
+   "published": "2026-11-08T15:37:25.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
   {
    "id": "1la066y",
    "title": "Here’s what happened in crypto today",
@@ -28,15 +37,6 @@
    "published": "2026-11-08T12:57:51.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "1nypjvt",
-   "title": "Government 'looking seriously' at banning under-16s from Vinted and eBay",
-   "link": "https://www.bbc.co.uk/news/articles/cmzxjvpqrjxro?at_medium=RSS&at_campaign=rss",
-   "summary": "The culture secretary confirms reports they could be in the list of platforms set to be banned next March.",
-   "published": "2026-11-08T11:25:32.000Z",
-   "source": "BBC Business",
-   "category": "economy"
   },
   {
    "id": "170igz0",
@@ -67,7 +67,7 @@
   },
   {
    "id": "1ee9p50",
-   "title": "Labubu hype seemed unstoppable, now the fluffy monster mania is dying",
+   "title": "He spent $50,000 on Labubus but now the craze is dying",
    "link": "https://www.bbc.co.uk/news/articles/cmvg652l927lo?at_medium=RSS&at_campaign=rss",
    "summary": "Parent company Pop Mart's revenue has fallen as appetite for the quirky collectible monsters wanes.",
    "published": "2026-11-07T23:02:35.000Z",
