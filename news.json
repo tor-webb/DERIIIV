@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T22:38:33.726Z",
+ "updated": "2026-11-09T02:20:17.540Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,38 +12,137 @@
  },
  "items": [
   {
-   "id": "1q53adz",
-   "title": "NZD firms in early Asia as New Zealand faces weeks of political limbo",
-   "link": "https://investinglive.com/forex/nzd-firms-in-early-asia-as-new-zealand-faces-weeks-of-political-limbo/",
-   "summary": "The kiwi’s early gain looks more like a thin-liquidity Monday open than a verdict on the election. The result won’t be settled until the final count on November 27, and coalition talks could run for weeks after that. A…",
-   "published": "2026-11-08T21:59:03.000Z",
+   "id": "vkk6bh",
+   "title": "Gold ticks higher on softer oil, but Fed’s 80% December hike odds cap gain",
+   "link": "https://investinglive.com/commodities/gold-ticks-higher-on-softer-oil-but-fed-s-80-december-hike-odds-cap-gain/",
+   "summary": "In this war, gold trades through the oil, inflation and rates channel rather than as a safe haven. That makes crude the key cross-asset signal: softer oil helps bullion, and renewed escalation hurts it. Weekend…",
+   "published": "2026-11-09T01:00:09.000Z",
    "source": "investingLive",
    "category": "forex"
   },
   {
-   "id": "13fehax",
-   "title": "Suspected Iranian drone strike halts Iraq gas field, cuts two thirds of Kurdistan power",
-   "link": "https://investinglive.com/commodities/suspected-iranian-drone-strike-halts-iraq-gas-field-cuts-two-thirds-of-kurdistan-power/",
-   "summary": "The direct supply hit is regional. Khor Mor’s gas feeds Kurdistan’s power plants rather than export markets, so crude and LNG balances are largely untouched. The bigger signal for oil is that energy infrastructure in…",
-   "published": "2026-11-08T21:42:36.000Z",
+   "id": "dhn1jv",
+   "title": "Nvidia launches investigation into CEO's affair with suspected Chinese spy",
+   "link": "https://www.bbc.co.uk/news/articles/c3dxw10rjn9no?at_medium=RSS&at_campaign=rss",
+   "summary": "Jensen Huang also admitted to having been \"unfaithful\" to his wife and says he will cooperate with a security investigation.",
+   "published": "2026-11-09T00:50:06.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "kzcuy6",
+   "title": "Markets price three more BoE hikes, but analysts see a shallower path after move to 4%",
+   "link": "https://investinglive.com/central-banks/markets-price-three-more-boe-hikes-but-analysts-see-a-shallower-path-after-move-to-4/",
+   "summary": "The gap between futures pricing and analyst expectations is the key tension for UK assets. If the BoE delivers only one more hike, front-end gilt yields have room to fall and the curve could rally, which is why several…",
+   "published": "2026-11-09T00:47:37.000Z",
    "source": "investingLive",
    "category": "forex"
   },
   {
-   "id": "buu8ru",
-   "title": "Weekend: Trump says new Iran strikes ‘highly unlikely’ five times (but three carriers stay ready)",
-   "link": "https://investinglive.com/commodities/weekend-trump-says-new-iran-strikes-highly-unlikely-five-times-but-three-carriers-stay-ready/",
-   "summary": "For oil, Trump’s comments trim the risk that the US resumes strikes, which could take some of the war-risk premium out of crude. Physical supply risk hasn’t changed, though: Hormuz remains contested and tankers are…",
-   "published": "2026-11-08T21:26:24.000Z",
+   "id": "1e26ekv",
+   "title": "PBOC is expected to set the USD/CNY reference rate at 6.6799 – Reuters estimate",
+   "link": "https://investinglive.com/central-banks/pboc-is-expected-to-set-the-usd-cny-reference-rate-at-6-6799-reuters-estimate/",
+   "summary": "Earlier: China steps up market stabilisation push: three short-term priorities for equities The People’s Bank of China is due to set the daily USD/CNY reference rate at around 0115 GMT (2115 US Eastern time), a fixing…",
+   "published": "2026-11-09T00:25:26.000Z",
    "source": "investingLive",
    "category": "forex"
   },
   {
-   "id": "3tort3",
-   "title": "Three risks for Nvidia shares after Huang admits affair with suspected Chinese spy",
-   "link": "https://investinglive.com/stocks/three-risks-for-nvidia-shares-after-huang-admits-affair-with-suspected-chinese-spy/",
-   "summary": "Monday’s US session is the first chance for Nvidia shares to trade on the admission and the board inquiry, and the short-term risk leans lower. Three pressure points stand out. The first is key-person and governance…",
-   "published": "2026-11-08T21:09:04.000Z",
+   "id": "164cl13",
+   "title": "Doing these things now will help you save money at Christmas",
+   "link": "https://www.bbc.co.uk/news/articles/ck7vppll151mo?at_medium=RSS&at_campaign=rss",
+   "summary": "Small decisions made now can make a big difference to your festive finances, charities say, so here are some tips.",
+   "published": "2026-11-09T00:09:14.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "q15v1o",
+   "title": "Trump eyes Xi, Putin meeting at APEC on Iran war, says he’d ‘certainly take’ Huang",
+   "link": "https://investinglive.com/news/trump-eyes-xi-putin-meeting-at-apec-on-iran-war-says-he-d-certainly-take-huang/",
+   "summary": "For oil, a Trump, Xi and Putin meeting focused partly on ending the Iran war is a potential de-escalation catalyst. It sits awkwardly with Rubio’s assessment that talks with Tehran are not productive and with the…",
+   "published": "2026-11-08T23:56:26.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1dntxh5",
+   "title": "Recap - BOJ’s Ueda sees inflation near 2% but flags upside risks as energy costs bite",
+   "link": "https://investinglive.com/central-banks/recap-boj-s-ueda-sees-inflation-near-2-but-flags-upside-risks-as-energy-costs-bite/",
+   "summary": "Ueda’s acknowledgement of upside inflation risks, with energy costs set to push price growth higher into early next year, leans hawkish. It supports expectations that the BOJ will keep normalising policy, which is…",
+   "published": "2026-11-08T23:45:20.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "3rl0ci",
+   "title": "China steps up market stabilisation push: three short-term priorities for equities",
+   "link": "https://investinglive.com/stocks/china-steps-up-market-stabilisation-push-three-short-term-priorities-for-equities/",
+   "summary": "The State Council’s call reinforces the sense of a policy floor under Chinese equities. That should help cap downside volatility in mainland and Hong Kong shares, particularly at times of global risk aversion like the…",
+   "published": "2026-11-08T23:25:00.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "gudtbo",
+   "title": "China October inflation preview: CPI seen near 0.8%, PPI above 5%",
+   "link": "https://investinglive.com/news/china-october-inflation-preview-cpi-seen-near-0-8-ppi-above-5/",
+   "summary": "A PPI print above 5% alongside sub-1% CPI would reinforce the market’s read that China is importing cost pressure without the demand to pass it on. That is a negative mix for industrial profits and for confidence in…",
+   "published": "2026-11-08T23:07:15.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "110r5qz",
+   "title": "Vitalik ‘pivots’ ETH to store of value, crypto suffers after US midterms: Hodler’s Digest",
+   "link": "https://cointelegraph.com/magazine/vitaliks-pivots-to-eth-as-a-store-of-value-us-election-weighs-on-crypto-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Vitalik Buterin wants Ethereum to embrace a store of value narrative, upsetting Bitcoin maxis. The crypto industry faces an uncertain future following the US elections.",
+   "published": "2026-11-08T22:59:06.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "n288df",
+   "title": "Blumenthal sets Jan 4 deadline for Binance, Tether and Trump crypto firms as power shifts",
+   "link": "https://investinglive.com/cryptocurrency/blumenthal-sets-jan-4-deadline-for-binance-tether-and-trump-crypto-firms-as-power-shifts/",
+   "summary": "Traders have largely priced in the political shift. The bigger risk now is to timing: the market structure bill could slip down the agenda while the new majority prioritises investigations. Stablecoin liquidity is the…",
+   "published": "2026-11-08T22:54:53.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "16zkrxm",
+   "title": "Weekend: Houthis hit Riyadh’s Aramco Tower and target oil storage as Saudi supply risk grows",
+   "link": "https://investinglive.com/commodities/weekend-houthis-hit-riyadh-s-aramco-tower-and-target-oil-storage-as-saudi-supply-risk-grows/",
+   "summary": "This is an escalation risk for crude rather than a confirmed supply loss: Saudi Arabia reports minor damage and intercepted missiles, and no outage has been reported. What matters is the direction. Aramco storage is…",
+   "published": "2026-11-08T22:36:52.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "9lpfvz",
+   "title": "RBA’s Hunter warns AI could trigger sharp asset repricing as boom adds to inflation",
+   "link": "https://investinglive.com/central-banks/rba-s-hunter-warns-ai-could-trigger-sharp-asset-repricing-as-boom-adds-to-inflation/",
+   "summary": "Hunter’s description of AI as a near-term inflationary force supports the RBA’s tightening bias rather than pointing to relief. That underpins the Australian dollar on rate differentials and keeps the focus on the risk…",
+   "published": "2026-11-08T22:34:28.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "f8pbxr",
+   "title": "Is NVDA stock a buy or sell? Spy alert?",
+   "link": "https://investinglive.com/stocks/is-nvda-stock-a-buy-or-sell-spy-alert/",
+   "summary": "Nvidia stock: Sell, hold or trim after spy allegations? Why $181, $172 and $164 matter Nvidia's board has opened an investigation into reports involving CEO Jensen Huang and alleged Chinese espionage. For shareholders…",
+   "published": "2026-11-08T22:21:07.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "14lq9z5",
+   "title": "Rubio says Iran talks not productive as Tehran’s demands are unacceptable",
+   "link": "https://investinglive.com/commodities/rubio-says-iran-talks-not-productive-as-tehran-s-demands-are-unacceptable/",
+   "summary": "For oil, this is the more important signal of the weekend. Trump made avoiding renewed strikes conditional on progress in talks , and his Secretary of State now says there isn’t any. That pushes escalation risk back…",
+   "published": "2026-11-08T22:18:30.000Z",
    "source": "investingLive",
    "category": "forex"
   },
@@ -73,15 +172,6 @@
    "published": "2026-11-08T12:57:51.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "170igz0",
-   "title": "WTI oil price outlook: After a 17.5% slide, can buyers reclaim $92.53?",
-   "link": "https://investinglive.com/commodities/wti-oil-price-outlook-after-a-17-5-slide-can-buyers-reclaim-92-53/",
-   "summary": "Oil recovered from a sharp selloff, but buyers have struggled to hold higher prices. My analysis finds a bearish picture over the next several sessions, while the immediate outlook is much less decisive. Here are the…",
-   "published": "2026-11-08T10:43:36.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "1gpmaa3",
@@ -201,15 +291,6 @@
    "category": "crypto"
   },
   {
-   "id": "102q1ij",
-   "title": "Gold analysis: Buyers keep defending $4,040. Is $4,140 the next target?",
-   "link": "https://investinglive.com/commodities/gold-analysis-buyers-keep-defending-4-040-is-4-140-the-next-target/",
-   "summary": "Gold futures buyers keep returning near $4,040. Is $4,140 the next test? Gold's recovery looks more convincing than Friday's volatile price action suggests. Buyers have repeatedly defended an important support area,…",
-   "published": "2026-11-07T04:08:41.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1j3ea6t",
    "title": "'My mortgage is going up £200 a month': How rising interest rates are hitting people's pockets",
    "link": "https://www.bbc.co.uk/news/articles/c617kjqjvk12o?at_medium=RSS&at_campaign=rss",
@@ -219,15 +300,6 @@
    "category": "economy"
   },
   {
-   "id": "1qd2a0s",
-   "title": "investingLive Americas market news wrap: Non-farm payrolls beat estimates",
-   "link": "https://investinglive.com/news/investinglive-americas-market-news-wrap-non-farm-payrolls-beat-estimates/",
-   "summary": "US October non-farm payrolls +165K vs +65K expected Canada Employment change for October -4.7K vs 13.6K estimate. Unemployment rate 6.7%. Iran responds positively to latest mediator proposal - report November US UMich…",
-   "published": "2026-11-06T21:52:39.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "ohc9ku",
    "title": "Elon Musk appears to signal the end of the road for Cybertruck",
    "link": "https://www.bbc.co.uk/news/articles/cq1j33w7d232o?at_medium=RSS&at_campaign=rss",
@@ -235,15 +307,6 @@
    "published": "2026-11-06T21:49:50.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "k6t11v",
-   "title": "Equity close: Decent rebound or a dead-cat bounce",
-   "link": "https://investinglive.com/news/equity-close-decent-rebound-or-a-dead-cat-bounce/",
-   "summary": "US stock markets started strong and we saw 10% bounces in beaten-up memory stocks. It didn't last but it also didn't break down. Some notable names: MU +5.1% SNDK +3.5% INTC +7.7% SKHY +2.8% NVDA +2.8% QCOM +5.8% The…",
-   "published": "2026-11-06T21:08:42.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "359bhh",
@@ -282,24 +345,6 @@
    "category": "markets"
   },
   {
-   "id": "kwbx5t",
-   "title": "Binance hack is ‘cyber war,’ TRM Labs executive says",
-   "link": "https://cointelegraph.com/interview/trm-labs-binance-hack-interview?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "TRM Labs executive Ari Redbord called for governments to take offensive action against North Korean hackers following the record $6.3 billion Binance theft.",
-   "published": "2026-11-06T20:36:25.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1v4953m",
-   "title": "Trump: We are talking to Iran, we are doing very well with Iran",
-   "link": "https://investinglive.com/news/trump-we-are-talking-to-iran-we-are-doing-very-well-with-iran/",
-   "summary": "We are talking to Iran We are doing well with Iran I want Stephen Miller to run things well as chief of staff Stephen gets it, he'll do a great job I wanted to make a change It's not clear if Wiles quit or Trump…",
-   "published": "2026-11-06T20:02:33.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1dab0lx",
    "title": "Americans are on a 'treadmill of high inflation' and more rate hikes are likely, Fed's Daly says",
    "link": "https://www.cnbc.com/2026/11/06/fed-daly-interest-rates-inflation.html",
@@ -309,15 +354,6 @@
    "category": "markets"
   },
   {
-   "id": "1tpx1vv",
-   "title": "Trump chief of staff Susie Wiles to be replaced by Stephen Miller",
-   "link": "https://investinglive.com/news/trump-chief-of-staff-susie-wiles-to-be-replaced-by-stephen-miller/",
-   "summary": "White House chief of staff Susie Wiles will be leaving her post, President Trump reported. She will move over to the Trump political operation, he said. Her replacement is Stephen Miller, who Trump said is \"one of my…",
-   "published": "2026-11-06T19:00:41.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "479r2d",
    "title": "Why the US midterms sparked an AI stock selloff",
    "link": "https://www.bbc.co.uk/news/articles/crlykkzwwpydo?at_medium=RSS&at_campaign=rss",
@@ -325,24 +361,6 @@
    "published": "2026-11-06T18:32:16.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "1t5n7qh",
-   "title": "Fed's Daly: Jobs report is good news",
-   "link": "https://investinglive.com/central-banks/fed-s-daly-jobs-report-is-good-news/",
-   "summary": "The Fed’s Daly spoke on CNBC about the jobs report, wages and inflation. Job report good news Wage growth isn’t booming Real wages are falling Feel hopeful when think about American workforce On inflation, would like…",
-   "published": "2026-11-06T18:07:02.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1vxqbeo",
-   "title": "Microsoft is reportedly winding down it's Oracle deal to wind down AI cloud capacity",
-   "link": "https://investinglive.com/news/microsoft-is-reportedly-winding-down-it-s-oracle-deal-to-wind-down-ai-cloud-capacity/",
-   "summary": "US stocks are giving back some of their gains as a report circulates that Microsoft is winding down an arrangement with Oracle for AI cloud capacity. Details on the scope and timing of any wind-down remain unconfirmed.…",
-   "published": "2026-11-06T17:47:43.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "1duqyka",
@@ -444,15 +462,6 @@
    "category": "markets"
   },
   {
-   "id": "hxgnwe",
-   "title": "Interest rates hiked to 4% in first increase in over three years",
-   "link": "https://www.bbc.co.uk/news/articles/ck5ynw45jrgqo?at_medium=RSS&at_campaign=rss",
-   "summary": "Most analysts expected the increase from 3.75% to 4%.",
-   "published": "2026-11-05T17:09:55.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "13mwrga",
    "title": "Barkin sees interest rate hikes ahead, but at a gradual pace",
    "link": "https://www.cnbc.com/2026/11/05/barkin-sees-interest-rate-hikes-ahead-but-at-a-gradual-pace.html",
@@ -468,15 +477,6 @@
    "summary": "Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc",
    "published": "2026-11-05T16:00:00.000Z",
    "source": "Federal Reserve",
-   "category": "economy"
-  },
-  {
-   "id": "jdtpap",
-   "title": "Faisal Islam: How high will interest rates go?",
-   "link": "https://www.bbc.co.uk/news/articles/ckr5y0y37gv3o?at_medium=RSS&at_campaign=rss",
-   "summary": "The BBC's economics editor views one more interest rate as likely, but thinks that will be all.",
-   "published": "2026-11-05T13:17:10.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
