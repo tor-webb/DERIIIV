@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T01:46:40.820Z",
+ "updated": "2026-11-12T09:12:14.403Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,13 +12,175 @@
  },
  "items": [
   {
-   "id": "5t0yom",
-   "title": "TD Securities sees gold retesting $3,900 as Fed hike bets and a firm dollar bite",
-   "link": "https://investinglive.com/commodities/td-securities-sees-gold-retesting-3-900-as-fed-hike-bets-and-a-firm-dollar-bite/",
-   "summary": "With a December Fed hike close to fully priced, gold’s next leg depends on whether markets start to price a faster sequence of hikes. That makes Fed speakers and next month’s data more important for bullion than…",
-   "published": "2026-11-12T00:53:32.000Z",
+   "id": "v622aw",
+   "title": "Some under-25s should get fewer benefits, Milburn review to say",
+   "link": "https://www.bbc.co.uk/news/articles/cwn70l1628l0o?at_medium=RSS&at_campaign=rss",
+   "summary": "The proposed radical overhaul of the welfare system would move under-25s off the main sickness benefits.",
+   "published": "2026-11-12T08:59:08.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1airqz4",
+   "title": "UK economy grows at fastest rate for more than two years",
+   "link": "https://www.bbc.co.uk/news/articles/ck3rgd429zd5o?at_medium=RSS&at_campaign=rss",
+   "summary": "The UK economy grew by 0.7% in the three months to September, according to official figures.",
+   "published": "2026-11-12T08:46:52.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1fofqqa",
+   "title": "Gold erases post-midterms gains as higher real yields and US dollar hurt. What's next?",
+   "link": "https://investinglive.com/commodities/gold-erases-post-midterms-gains-as-higher-real-yields-and-us-dollar-hurt-what-s-next/",
+   "summary": "Gold extended the selloff yesterday as the hawkish repricing continued to weigh on the precious metal amid rising real yields and stronger US dollar. As a reminder, the drop was triggered by the surprisingly hawkish…",
+   "published": "2026-11-12T08:34:16.000Z",
    "source": "investingLive",
    "category": "forex"
+  },
+  {
+   "id": "1dawxt2",
+   "title": "European stock market open: DAX pushes to fresh record highs as Europe defies Wall Street jitters",
+   "link": "https://investinglive.com/stocks/european-stock-market-open-dax-pushes-to-fresh-record-highs-as-europe-defies-wall-street-jitters/",
+   "summary": "Europe's stock market party is showing no signs of winding down with the DAX is leading the celebrations on the week. Germany's benchmark index is up another 1.0% at the open, pushing to fresh record highs even as Wall…",
+   "published": "2026-11-12T08:23:15.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1mmpape",
+   "title": "Gold price faces a key test as $4,000 breaks and weekly support beckons",
+   "link": "https://investinglive.com/commodities/gold-price-faces-a-key-test-as-4-000-breaks-and-weekly-support-beckons/",
+   "summary": "It's not been a good week for gold. Just as it seemed like buyers might be looking to take a peek at a firmer run above $4,000, they are now being dragged back to the danger zone. After all the pushing and pulling this…",
+   "published": "2026-11-12T08:08:13.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "6r701l",
+   "title": "BlackRock Bitcoin ETF outflows hit $2B over nine sessions",
+   "link": "https://cointelegraph.com/markets/blackrock-bitcoin-etf-ibit-outflows-nine-day-streak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "US spot Bitcoin ETF outflows rose to nearly $300 million on Wednesday, up from $95 million a day earlier, as five-session withdrawals reached $1.44 billion.",
+   "published": "2026-11-12T08:06:48.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1rh1ps2",
+   "title": "China's Ministry of State Security thrust into the spotlight by Nvidia CEO affair",
+   "link": "https://www.cnbc.com/2026/11/12/china-ministry-state-security-nvidia-ceo.html",
+   "summary": "China's Ministry of State Security is getting attention after news of Nvidia CEO Jensen Huang's affair with an alleged MSS spy.",
+   "published": "2026-11-12T07:28:48.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "ybaoo4",
+   "title": "What are the main events for today?",
+   "link": "https://investinglive.com/news/what-are-the-main-events-for-today-84/",
+   "summary": "EUROPEAN SESSION In the European session, the only highlight was the UK GDP report which beat expectations across the board, keeping a rate hike in December firmly on the table. The monthly GDP rose 0.2% in September,…",
+   "published": "2026-11-12T07:28:20.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "wsajf2",
+   "title": "UK September GDP beats expectations as resilient growth keeps BOE December rate hike on track",
+   "link": "https://investinglive.com/news/uk-september-gdp-beats-expectations-as-resilient-growth-keeps-boe-december-rate-hike-on-track/",
+   "summary": "UK September monthly GDP +0.2% vs 0.0% m/m expected Prior +0.1%; revised to 0.0% The breakdown: Services output +0.2% vs 0.0% m/m expected Prior 0.0%; revised to -0.1% Industrial output +0.3% vs -0.3% m/m expected…",
+   "published": "2026-11-12T07:00:41.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1vh5c7h",
+   "title": "UK Q3 GDP meets estimates as resilient growth gives BOE more room to tackle inflation",
+   "link": "https://investinglive.com/news/uk-q3-gdp-meets-estimates-as-resilient-growth-gives-boe-more-room-to-tackle-inflation/",
+   "summary": "UK Q3 preliminary GDP +0.7% vs +0.7% q/q expected Prior +0.5% UK Q3 preliminary GDP +1.9% vs +1.9% y/y expected Prior +1.4% The quarterly report falls in line with estimates as the UK economy shows much resilience in…",
+   "published": "2026-11-12T07:00:23.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "wd4vs7",
+   "title": "FX option expiries for 12 November 10am New York cut",
+   "link": "https://investinglive.com/orders/fx-option-expiries-for-12-november-10am-new-york-cut/",
+   "summary": "There are just a couple of key expiry levels to take note of on the day, as highlighted in bold below. The first ones are for EUR/USD at the 1.1075 and 1.1100 levels, with the strikes keeping within 25 pips of the spot…",
+   "published": "2026-11-12T06:55:21.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "16i99qg",
+   "title": "Nasdaq futures are under pressure. Is it too late to short?",
+   "link": "https://investinglive.com/technical-analysis/nasdaq-futures-are-under-pressure-is-it-too-late-to-short/",
+   "summary": "With futures near 28,185, the first downside target is just 20 points away. A rebound toward 28,232–28,284 would give sellers a different risk-reward setup. Nasdaq-100 futures | November 12, 2026 | Overnight session…",
+   "published": "2026-11-12T06:25:25.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1iq338w",
+   "title": "BOJ policymaker Asada urges caution on further rate hikes even as December move remains firmly in play",
+   "link": "https://investinglive.com/central-banks/boj-policymaker-asada-urges-caution-on-further-rate-hikes-even-as-december-move-remains-firmly-in-play/",
+   "summary": "BOJ board member, Toichiro Asada, still isn't quite ready to jump on the rate hike bandwagon it would seem. The central bank's resident dove is once again preaching caution, warning that further tightening could…",
+   "published": "2026-11-12T06:22:17.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "hfh2zh",
+   "title": "AUD/USD faces a make-or-break test as dollar bulls turn up the heat",
+   "link": "https://investinglive.com/forex/aud-usd-faces-a-make-or-break-test-as-dollar-bulls-turn-up-the-heat/",
+   "summary": "With the dollar finding its swagger again this week, AUD/USD is now staring down a rather uncomfortable date with its March lows. The question now is will buyers finally put their foot down or are we about to see…",
+   "published": "2026-11-12T06:02:02.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-11-12T06:00:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1440vhp",
+   "title": "South Korea to permit crypto withdrawal freezes during hacking threats",
+   "link": "https://cointelegraph.com/news/south-korea-crypto-withdrawal-freezes-suspected-hacks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The move follows recent security incidents involving South Korean crypto exchanges, including GOPAX’s precautionary suspension of services and a $70,000 hot-wallet breach at Prabang.",
+   "published": "2026-11-12T05:54:48.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "dfteap",
+   "title": "Chinese tech firms reportedly rushing to secure more Nvidia chip capacity amid fears that spy scandal would spur tighter restrictions",
+   "link": "https://investinglive.com/news/chinese-tech-firms-reportedly-rushing-to-secure-more-nvidia-chip-capacity-amid-fears-that-spy-scandal-would-spur-tighter-restrictions/",
+   "summary": "Well, talk about a scandal sending everyone scrambling for the exits. Except in this case, Chinese tech firms aren't exactly looking to leave the party. Instead, they're trying to grab as much Nvidia computing power as…",
+   "published": "2026-11-12T05:44:01.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1e05yd5",
+   "title": "Nvidia stock plunges 8.6%, but AMD and Broadcom rally. Which chip stocks are worth buying?",
+   "link": "https://investinglive.com/stocks/nvidia-stock-plunges-8-6-but-amd-and-broadcom-rally-which-chip-stocks-are-worth-buying/",
+   "summary": "Nvidia plunges 8.6% after hours. AMD and Broadcom rise, but their valuations tell another story I'm keeping a very close eye on the escalating tech volatility today, starting with the fact that Nasdaq futures slid 0.8%…",
+   "published": "2026-11-12T05:18:09.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1qtgn1z",
+   "title": "Binance CSO unwittingly foreshadowed $6.3B hack tactic months before attack",
+   "link": "https://cointelegraph.com/news/binance-cso-foreshadowed-6b-hack-tactic-months-before-attack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "In a July interview, Binance chief security officer Jimmy Su explained how fake coding assessments could compromise employee devices, a tactic later used in the exchange’s record-breaking hack.",
+   "published": "2026-11-12T05:07:11.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
   },
   {
    "id": "1gy3w30",
@@ -28,33 +190,6 @@
    "published": "2026-11-12T00:49:05.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "1njzjc9",
-   "title": "United Airlines bans AI agents from booking flights: 3 reasons it matters beyond travel",
-   "link": "https://investinglive.com/stocks/united-airlines-bans-ai-agents-from-booking-flights-3-reasons-it-matters-beyond-travel/",
-   "summary": "This is a small story for United’s earnings, but a meaningful signal for the AI monetisation theme. Agentic commerce, where AI tools buy on a user’s behalf, is one of the main ways AI developers hope to turn assistants…",
-   "published": "2026-11-12T00:28:20.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "my7tu5",
-   "title": "PBOC is expected to set the USD/CNY reference rate at 6.6797 – Reuters estimate",
-   "link": "https://investinglive.com/central-banks/pboc-is-expected-to-set-the-usd-cny-reference-rate-at-6-6797-reuters-estimate/",
-   "summary": "The People’s Bank of China is due to set the daily USD/CNY reference rate at around 0115 GMT (2115 US Eastern time), a fixing that remains one of the most closely watched signals in Asian foreign exchange markets.…",
-   "published": "2026-11-12T00:27:46.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "gaz7y7",
-   "title": "Japan’s Mimura warns yen moves are too rapid as USD/JPY pushes back toward 160",
-   "link": "https://investinglive.com/forex/japan-s-mimura-warns-yen-moves-are-too-rapid-as-usd-jpy-pushes-back-toward-160/",
-   "summary": "Japan’s 2026 track record means USD/JPY near 160 now carries real two-way risk, and that should make traders more reluctant to chase fresh highs even if the trend stays up. The bigger driver remains the US-Japan rate…",
-   "published": "2026-11-12T00:20:13.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "obit4h",
@@ -75,42 +210,6 @@
    "category": "economy"
   },
   {
-   "id": "pc5vgf",
-   "title": "Japan wholesale inflation speeds up to 7.1%, beating forecasts and firming BoJ hike bets",
-   "link": "https://investinglive.com/central-banks/japan-wholesale-inflation-speeds-up-to-7-1-beating-forecasts-and-firming-boj-hike-bets/",
-   "summary": "The upside surprise adds to the case for a Bank of Japan hike in December. It should give the yen some support at the margin, although a Fed that is also on a hiking path after a hot US CPI limits how much the rate gap…",
-   "published": "2026-11-12T00:01:28.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1qbha6j",
-   "title": "UBS sees limited support for a 50bp Fed hike in December despite hot October CPI",
-   "link": "https://investinglive.com/central-banks/ubs-sees-limited-support-for-a-50bp-fed-hike-in-december-despite-hot-october-cpi/",
-   "summary": "With futures pricing slightly more than a full quarter-point hike for December, the 50bp debate is now a tail risk the market will react to on any Fed speaker headline. Treasury yields close to 5% keep the dollar…",
-   "published": "2026-11-11T23:49:50.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1j8qlw",
-   "title": "From smuggling indictment to 48% rebound: the Super Micro playbook Nvidia bulls are watching",
-   "link": "https://investinglive.com/stocks/from-smuggling-indictment-to-48-rebound-the-super-micro-playbook-nvidia-bulls-are-watching/",
-   "summary": "The Super Micro comparison gives dip buyers a narrative, but the stronger signal will come from the November 17 results and any board statement. Markets tend to recover from governance shocks faster when the business…",
-   "published": "2026-11-11T23:31:53.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "v622aw",
-   "title": "Some under-25s should get less benefits, Milburn review to say",
-   "link": "https://www.bbc.co.uk/news/articles/cwn70l1628l0o?at_medium=RSS&at_campaign=rss",
-   "summary": "The proposed radical overhaul of the welfare system would move under-25s off the main sickness benefits.",
-   "published": "2026-11-11T23:22:04.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "w1w8lu",
    "title": "Suiet wallet to shut down in latest exit from Sui ecosystem",
    "link": "https://cointelegraph.com/news/suiet-wallet-shut-down-latest-exit-sui-ecosystem?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -120,24 +219,6 @@
    "category": "crypto"
   },
   {
-   "id": "14wyo3",
-   "title": "Nasdaq futures drop 0.8% as WSJ says Nvidia board is preparing to oust CEO Huang",
-   "link": "https://investinglive.com/stock-market-update/nasdaq-futures-drop-0-8-as-wsj-says-nvidia-board-is-preparing-to-oust-ceo-huang/",
-   "summary": "The selling is concentrated in the AI supply chain rather than spread across the market, which is why Nasdaq futures are falling more than twice as fast as S&P futures. The next test is the Asian open. The Taiwan,…",
-   "published": "2026-11-11T23:14:04.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1bdh5tu",
-   "title": "Strategy (MSTR) is to be removed from MSCI Global Investable Market Indexes following MSCI's implementation of a new non-operating company rule.",
-   "link": "https://investinglive.com/stocks/strategy-mstr-is-to-be-removed-from-msci-global-investable-market-indexes-following-msci-s-implementation-of-a-new-non-operating-company-rule/",
-   "summary": "The immediate trade is the November 30 close, when index trackers have to sell. That event is well flagged and partly priced, so the reaction in the stock may come before the date rather than on it. The wider…",
-   "published": "2026-11-11T22:48:04.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1f8rd4s",
    "title": "Nvidia preparing to oust CEO Jensen Huang after affairs: WSJ",
    "link": "https://cointelegraph.com/news/nvidia-preparing-to-oust-ceo-jensen-huang-reports?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -145,33 +226,6 @@
    "published": "2026-11-11T22:44:47.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "1vdg54a",
-   "title": "Nvidia stock plunges after hours as New York Times reports new Jensen Huang relationship allegation",
-   "link": "https://investinglive.com/news/nvidia-stock-plunges-after-hours-as-new-york-times-reports-new-jensen-huang-relationship-allegation/",
-   "summary": "WOW \"NVIDIA PREPARING TO OUST NVIDIA CEO JENSEN HUANG\": WSJ NVDA shares reverse Wednesday's gains following a report that Nvidia's CEO had a relationship with an executive reporting to him. If confirmed, the…",
-   "published": "2026-11-11T22:16:20.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-11-11T22:15:26.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "yq4f8d",
-   "title": "Nvidia CEO Huang faces 2nd relationship report as NYT links him to senior executive",
-   "link": "https://investinglive.com/stocks/nvidia-ceo-huang-faces-2nd-relationship-report-as-nyt-links-him-to-senior-executive/",
-   "summary": "This shifts the Huang story from a national security question toward a corporate governance one, which is easier for investors to price and harder for the board to dismiss. A relationship with a direct report raises…",
-   "published": "2026-11-11T22:14:23.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "1ktzfy7",
@@ -189,24 +243,6 @@
    "summary": "Move comes as chipmaker reels from reports its CEO was having an affair with an alleged Chinese spy Nvidia has appointed a leading US law firm to conduct a “thorough and independent” investigation into the relationship…",
    "published": "2026-11-11T21:59:07.000Z",
    "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "1t1yqmq",
-   "title": "Lutnick stalls Trump’s third Nvidia chip diversion crackdown this year, Axios says",
-   "link": "https://investinglive.com/stocks/lutnick-stalls-trump-s-third-nvidia-chip-diversion-crackdown-this-year-axios-says/",
-   "summary": "For Nvidia, this adds another layer of policy uncertainty to a week already dominated by its board’s probe, and it keeps China-linked headline risk high heading into the requested House briefing. If enforcement…",
-   "published": "2026-11-11T21:42:20.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "15q4fms",
-   "title": "'Not the answer': Labour MPs speak out against Rosebank as decision looms",
-   "link": "https://www.bbc.co.uk/news/articles/cqp9dr79jkrzo?at_medium=RSS&at_campaign=rss",
-   "summary": "There is a growing expectation among senior Labour figures that drilling in the oil field will be given the green light.",
-   "published": "2026-11-11T21:42:20.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
@@ -260,33 +296,6 @@
    "link": "https://cointelegraph.com/markets/bitcoin-74k-stocks-us-bond-yield-inflation-cpi?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "summary": "Bitcoin traded in a narrow range as investors bought the dip in tech stocks and US bond yields climbed on high CPI inflation data.",
    "published": "2026-11-11T16:26:00.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1epytq",
-   "title": "Deutsche Bank launches crypto custody for companies and institutions",
-   "link": "https://cointelegraph.com/news/deutsche-bank-debuts-digital-asset-custody-services-eu?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Clients can store and transfer Bitcoin, Ether and select stablecoins through the bank, which manages their wallets and private keys.",
-   "published": "2026-11-11T14:02:18.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "n9z1na",
-   "title": "Paraguay bank collapse shows stablecoins can offer a lifeline... of sorts",
-   "link": "https://cointelegraph.com/magazine/paraguay-bank-collapse-shows-stablecoins-can-offer-a-lifeline-of-sorts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Ueno’s collapse exposed the fragility of digital banking in Paraguay, as customers scrambled for access to their money and stablecoins offered a lifeline.",
-   "published": "2026-11-11T13:30:00.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "cs1wvc",
-   "title": "Bitcoin Covenants Part 5: MATT and OP_CHECKCONTRACTVERIFY — How Bitcoin could carry state across transactions",
-   "link": "https://cointelegraph.com/research/bitcoin-covenants-part-5-matt-op-ccv?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "OP_CCV embeds contract state directly into Taproot output keys and enforces valid state transitions onchain. This makes it possible to achieve stateful contracts and compact fraud proofs.",
-   "published": "2026-11-11T13:26:18.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
   },
@@ -588,15 +597,6 @@
    "category": "markets"
   },
   {
-   "id": "ydi6y0",
-   "title": "The AI ‘credit card’ is getting costlier as CoreWeave bond yield tops 16%",
-   "link": "https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html",
-   "summary": "Coreweave's steep yields reflect stress in the AI debt markets as investors worry about a data center slowdown. What comes next.",
-   "published": "2026-11-06T17:09:53.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
    "id": "1098vne",
    "title": "ECB publishes consolidated banking data for end-June 2026",
    "link": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261106~356f2fc73a.en.html",
@@ -621,24 +621,6 @@
    "summary": "The Bank of England’s Monetary Policy Committee is responsible for making decisions about Bank Rate.",
    "published": "2026-11-05T12:00:00.000Z",
    "source": "Bank of England",
-   "category": "economy"
-  },
-  {
-   "id": "hxt3bs",
-   "title": "Isabel Schnabel: Navigating stormy waters: reflections on monetary policy",
-   "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261105_1~5e97d9d5a0.en.html",
-   "summary": "",
-   "published": "2026-11-05T08:00:00.000Z",
-   "source": "ECB",
-   "category": "economy"
-  },
-  {
-   "id": "1l52h6u",
-   "title": "Piero Cipollone: Shaping the future of money",
-   "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261105~6495a0df6f.en.html",
-   "summary": "",
-   "published": "2026-11-05T07:30:00.000Z",
-   "source": "ECB",
    "category": "economy"
   }
  ]
