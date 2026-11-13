@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T23:09:32.677Z",
+ "updated": "2026-11-13T03:30:21.183Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,13 +12,193 @@
  },
  "items": [
   {
-   "id": "1gndlcf",
-   "title": "UBS sees no RBA cuts until late 2027 as AI boom fuels inflation, growth slowing to 1.4%",
-   "link": "https://investinglive.com/central-banks/ubs-sees-no-rba-cuts-until-late-2027-as-ai-boom-fuels-inflation-growth-slowing-to-1-4/",
-   "summary": "UBS’s view is more hawkish than current market pricing, which has moved towards RBA cuts within months. That leaves front-end Australian bond yields exposed if upcoming inflation data run hot. For the Australian…",
-   "published": "2026-11-12T22:53:32.000Z",
+   "id": "ymxa6b",
+   "title": "How the Jensen Huang affair changes the outlook for U.S.-China relations",
+   "link": "https://www.cnbc.com/2026/11/13/jensen-huang-nvidia-us-china-relations.html",
+   "summary": "The political climate heading into next week's Trump-Xi summit is drastically different from the last meeting in September.",
+   "published": "2026-11-13T02:56:35.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "3lczud",
+   "title": "Iran’s Guards claim strike on US radar in Bahrain, warn firms over Hormuz oil trade",
+   "link": "https://investinglive.com/commodities/iran-s-guards-claim-strike-on-us-radar-in-bahrain-warn-firms-over-hormuz-oil-trade/",
+   "summary": "The claim is unverified, but it adds to the geopolitical risk premium in crude after a week in which Brent and WTI fell about 7%. The warning to companies matters most for oil: any hint that tanker operators,…",
+   "published": "2026-11-13T02:49:17.000Z",
    "source": "investingLive",
    "category": "forex"
+  },
+  {
+   "id": "1rwrxxd",
+   "title": "Anthropic IPO six times oversubscribed: what retail investors can realistically expect",
+   "link": "https://investinglive.com/stocks/anthropic-ipo-six-times-oversubscribed-what-retail-investors-can-realistically-expect/",
+   "summary": "Heavy oversubscription raises the chance of pricing above the $70 to $78 range, which would lift the amount raised and the valuation. Retail investors who miss out on allocations could add to buying pressure at the…",
+   "published": "2026-11-13T02:39:52.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1p7udv",
+   "title": "Scandal-hit Nvidia CEO Jensen Huang quits, plunging AI chipmaking giant into turmoil",
+   "link": "https://www.bbc.co.uk/news/articles/cmq5vd1wdgz6o?at_medium=RSS&at_campaign=rss",
+   "summary": "US lawmakers now want to question him over whether one of his alleged relationships was with a Chinese spy.",
+   "published": "2026-11-13T02:39:00.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1sg0zjt",
+   "title": "Microsoft struggling to restore service as global outage affects Outlook and Teams",
+   "link": "https://www.bbc.co.uk/news/articles/c5gm3g9ldz8xo?at_medium=RSS&at_campaign=rss",
+   "summary": "Microsoft said the outage was caused by servers unexpected becoming unavailable, straining other systems.",
+   "published": "2026-11-13T02:38:02.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "7f2u1y",
+   "title": "Trump nominates Hester Peirce successor among SEC, CFTC picks",
+   "link": "https://cointelegraph.com/news/trump-nominates-hester-peirce-successor-among-sec-cftc-picks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The White House also named a former CFTC commissioner and two CLARITY Act veterans as nominees to fill vacancies at the SEC and CFTC.",
+   "published": "2026-11-13T02:29:27.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "my5uh6",
+   "title": "Airlines face higher fuel bills as pre-war hedges expire and jet fuel holds near $150",
+   "link": "https://investinglive.com/commodities/airlines-face-higher-fuel-bills-as-pre-war-hedges-expire-and-jet-fuel-holds-near-150/",
+   "summary": "Expiring hedges mean airline earnings will become more exposed to swings in crude, keeping pressure on airline stocks even after this week’s pullback in oil. Any renewed jump in Brent on Middle East shipping risk would…",
+   "published": "2026-11-13T02:27:08.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "v3p7vt",
+   "title": "SMIC co-CEO sees 2026 revenue topping $12 billion as AI demand stretches chip upcycle",
+   "link": "https://investinglive.com/stocks/smic-co-ceo-sees-2026-revenue-topping-12-billion-as-ai-demand-stretches-chip-upcycle/",
+   "summary": "The results and full-year outlook support the argument that AI demand is spilling over from leading-edge chips into mature-node foundries. That is constructive for China’s chip supply chain, and it may help steady…",
+   "published": "2026-11-13T01:40:07.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1314sad",
+   "title": "Former Nvidia CEO Huang had third alleged affair: Reuters",
+   "link": "https://cointelegraph.com/news/former-nvidia-ceo-huang-had-third-alleged-affair-reuters?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Reuters reported that Jensen Huang had a relationship with another Nvidia employee, hours after he resigned as CEO.",
+   "published": "2026-11-13T01:26:27.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "khbeko",
+   "title": "Gold set for $3.3bn of index fund buying in January as rebalancing flips in its favour",
+   "link": "https://investinglive.com/commodities/gold-set-for-3-3bn-of-index-fund-buying-in-january-as-rebalancing-flips-in-its-favour/",
+   "summary": "The rebalancing gives gold a known (ps. be careful of known knowns in markets ...) source of demand in the second week of January. That could make traders reluctant to press short positions into year-end and encourage…",
+   "published": "2026-11-13T01:22:37.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1htjel3",
+   "title": "PBOC sets USD/ CNY reference rate for today at 6.7152 (vs. estimate at 6.6756)",
+   "link": "https://investinglive.com/central-banks/pboc-sets-usd-cny-reference-rate-for-today-at-6-7152-vs-estimate-at-6-6756/",
+   "summary": "The PBOC allows the yuan to fluctuate within a +/- 2% range, around this reference rate. More here on this. People's Bank of China injected 364 billion yuan of overnight reverse repurchase operations @1.25% People's…",
+   "published": "2026-11-13T01:15:30.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1foqc45",
+   "title": "ByteDance plans $6bn share buyback at about $400 billion valuation, up 20% in a year",
+   "link": "https://investinglive.com/stocks/bytedance-plans-6bn-share-buyback-at-about-400-billion-valuation-up-20-in-a-year/",
+   "summary": "The buyback gives a fresh benchmark for valuing Chinese tech and large private AI-linked companies. That could support sentiment toward listed Chinese internet peers and toward investors with ByteDance exposure, such…",
+   "published": "2026-11-13T01:10:25.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "6kt5qz",
+   "title": "Gemini’s quarterly retail trading volume sinks to 3-year low",
+   "link": "https://cointelegraph.com/markets/geminis-quarterly-retail-trading-volume-sinks-to-3-year-low?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Gemini’s third-quarter trading rebound masked a deepening retail slump.",
+   "published": "2026-11-13T00:52:42.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "g7xbmg",
+   "title": "Japan’s Katayama warns of one-sided yen moves near 160, will coordinate with US Treasury",
+   "link": "https://investinglive.com/news/japan-s-katayama-warns-of-one-sided-yen-moves-near-160-will-coordinate-with-us-treasury/",
+   "summary": "Katayama’s comments make intervention a more serious risk for anyone pushing dollar-yen above 160, especially as the US has now been confirmed as a willing partner. Expect choppy, headline-driven trading around that…",
+   "published": "2026-11-13T00:46:36.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "19egnbe",
+   "title": "Barclays sees oil risks skewed higher with Middle East flows still 15% below pre-war",
+   "link": "https://investinglive.com/commodities/barclays-sees-oil-risks-skewed-higher-with-middle-east-flows-still-15-below-pre-war/",
+   "summary": "Barclays’ view goes against the recent selling in crude. It suggests the roughly 7% fall in Brent and WTI over the past week has gone further than the data support while flows and inventories stay tight. Light…",
+   "published": "2026-11-13T00:27:25.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1hj66ed",
+   "title": "PBOC is expected to set the USD/CNY reference rate at 6.6756 – Reuters estimate",
+   "link": "https://investinglive.com/central-banks/pboc-is-expected-to-set-the-usd-cny-reference-rate-at-6-6756-reuters-estimate-0/",
+   "summary": "The People’s Bank of China is due to set the daily USD/CNY reference rate at around 0115 GMT (2115 US Eastern time), a fixing that remains one of the most closely watched signals in Asian foreign exchange markets.…",
+   "published": "2026-11-13T00:24:23.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "ehxxd1",
+   "title": "The rise of 'housefishing' - when does using AI go from enhancing to misleading?",
+   "link": "https://www.bbc.co.uk/news/articles/cm62y0wrnz9zo?at_medium=RSS&at_campaign=rss",
+   "summary": "Experts warn that using AI to enhance property images can go too far and mislead prospective buyers.",
+   "published": "2026-11-13T00:13:35.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1fas2zl",
+   "title": "Fed’s Williams says inflation stubbornly high and Fed still has work to do on policy",
+   "link": "https://investinglive.com/central-banks/fed-s-williams-says-inflation-stubbornly-high-and-fed-still-has-work-to-do-on-policy/",
+   "summary": "Williams’ remarks support pricing for a December hike and the dollar’s rate advantage, keeping front-end Treasury yields firm. His emphasis on acting “over time” and on a steady, data-led approach suggests no urgency…",
+   "published": "2026-11-13T00:06:28.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "lzq4tf",
+   "title": "Oil prices rise after Trump says no Iran deal needed: 'We've got their Strait'",
+   "link": "https://www.cnbc.com/2026/11/12/oil-prices-jump-after-trump-says-no-iran-deal-needed-weve-got-their-strait.html",
+   "summary": "Oil prices were mixed on Thursday, after the latest comments from President Donald Trump raised worries that an end to the U.S.-Iran war was not in sight.",
+   "published": "2026-11-13T00:01:19.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "14rdy2y",
+   "title": "US Treasury bought yen in July, its first intervention since 1998, as yen nears 160 again",
+   "link": "https://investinglive.com/central-banks/us-treasury-bought-yen-in-july-its-first-intervention-since-1998-as-yen-nears-160-again/",
+   "summary": "The report confirms that the US is a willing partner in yen support, not just a bystander. That raises the risk for anyone betting heavily on dollar-yen above 160, a level that now looks well defended. Positioning is…",
+   "published": "2026-11-12T23:43:48.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1monuu2",
+   "title": "Maple Finance’s strategy rift sends co-founder, COO to the exits",
+   "link": "https://cointelegraph.com/news/maple-finance-strategy-rift-co-founder-coo-exit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Maple Finance co-founder Joe Flanagan and COO Ryan O’Shea are leaving over disagreements about the firm’s direction as SYRUP falls despite revenue growth.",
+   "published": "2026-11-12T23:12:55.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
   },
   {
    "id": "v622aw",
@@ -28,15 +208,6 @@
    "published": "2026-11-12T22:51:18.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "2v2fcj",
-   "title": "Anthropic IPO targets around $1 trillion valuation, half the $2 trillion once whispered",
-   "link": "https://investinglive.com/stocks/anthropic-ipo-targets-around-1-trillion-valuation-half-the-2-trillion-once-whispered/",
-   "summary": "A listing of this size will test how much appetite there is for AI risk after the recent tech selloff. Strong demand would suggest investors still see value in leading AI names at lower valuations. The roughly $87bn…",
-   "published": "2026-11-12T22:37:13.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "1qhlgak",
@@ -57,15 +228,6 @@
    "category": "crypto"
   },
   {
-   "id": "1ix3yix",
-   "title": "Goldman sees AI spending hitting $1.4 trillion by end-2027, nearly 4% of the US economy",
-   "link": "https://investinglive.com/stocks/goldman-sees-ai-spending-hitting-1-4-trillion-by-end-2027-nearly-4-of-the-us-economy/",
-   "summary": "Goldman’s forecast supports the AI infrastructure trade, especially chipmakers, chip equipment makers and networking suppliers, which get the most from a spending path well above consensus. Its point that most AI…",
-   "published": "2026-11-12T22:11:16.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "ne84dc",
    "title": "Kalshi ends Donald Trump Jr. advisory role over Polymarket investment: Reuters",
    "link": "https://cointelegraph.com/news/kalshi-ends-donald-trump-jr-advisory-role-polymarket-investment?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -84,24 +246,6 @@
    "category": "crypto"
   },
   {
-   "id": "1phrgtc",
-   "title": "Cerebras raises 2026 outlook, sees revenue tripling in 2027 as $26bn backlog builds",
-   "link": "https://investinglive.com/stocks/cerebras-raises-2026-outlook-sees-revenue-tripling-in-2027-as-26bn-backlog-builds/",
-   "summary": "These results support the view that demand for AI inference is spreading beyond Nvidia to specialist chip designers. They give the AI infrastructure trade another sign that spending is shifting from training models to…",
-   "published": "2026-11-12T21:45:14.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "km0tz5",
-   "title": "NZ manufacturing PMI eases to 54.9 in October but extends expansion run to 16 months",
-   "link": "https://investinglive.com/news/nz-manufacturing-pmi-eases-to-54-9-in-october-but-extends-expansion-run-to-16-months/",
-   "summary": "A PMI still well above 50 gives little reason to doubt New Zealand’s recovery, so the small fall should do little to change the outlook for the RBNZ or the New Zealand dollar. The focus on fuel prices among survey…",
-   "published": "2026-11-12T21:43:34.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1sqetq4",
    "title": "Nvidia turmoil continues as Jensen Huang resigns over affairs scandal and company appoints interim CEO – as it happened",
    "link": "https://www.theguardian.com/technology/live/2026/nov/12/nvidia-ceo-jensen-huang-affairs-share-price-plunges-live-latest",
@@ -109,42 +253,6 @@
    "published": "2026-11-12T21:33:08.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "1xfpi5d",
-   "title": "Applied Materials beats on Q4 and guides above forecasts as chip equipment demand holds",
-   "link": "https://investinglive.com/stocks/applied-materials-beats-on-q4-and-guides-above-forecasts-as-chip-equipment-demand-holds/",
-   "summary": "Applied Materials is a bellwether for chip industry spending, so an above-consensus guide supports the wider semiconductor equipment group and the AI hardware trade. The outlook points to chipmakers still committing to…",
-   "published": "2026-11-12T21:27:51.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1pxx5cc",
-   "title": "Cisco beats and lifts FY27 view as AI revenue from hyperscalers set to more than double",
-   "link": "https://investinglive.com/stocks/cisco-beats-and-lifts-fy27-view-as-ai-revenue-from-hyperscalers-set-to-more-than-double/",
-   "summary": "A beat and raise this size should lend support to the AI infrastructure trade beyond Cisco itself. It suggests hyperscaler capex is still flowing into networking, not just into chips. The revenue raise puts the new…",
-   "published": "2026-11-12T21:21:11.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "mxshfv",
-   "title": "Economic and event calendar in Asia Friday, November 13, 2026 - NY Fed's Williams on the agenda",
-   "link": "https://investinglive.com/central-banks/economic-and-event-calendar-in-asia-friday-november-13-2026-ny-fed-s-williams-on-the-agenda/",
-   "summary": "New York Fed President John Williams will take part in a panel discussion at 6.30pm US Eastern time on Thursday (2330 GMT), at a UC Berkeley Alumni Salon event in New York. The format matters. This is a moderated panel…",
-   "published": "2026-11-12T21:03:40.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "wuejyb",
-   "title": "investingLive Americas market news wrap: Jensen Huang ousted from Nvidia",
-   "link": "https://investinglive.com/news/investinglive-americas-market-news-wrap-jensen-huang-ousted-from-nvidia/",
-   "summary": "US weekly initial jobless claims 200K vs 195K expected Fed's Hammack: We need to move to restrictive mon pol to lower inflation Jensen Huang ousted as CEO of Nvidia US October existing home sales 3.75m vs 3.85m…",
-   "published": "2026-11-12T21:03:31.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "1vy4csk",
@@ -156,15 +264,6 @@
    "category": "crypto"
   },
   {
-   "id": "1whwcg5",
-   "title": "Trump: I would consider a week-long campaign against Cuba",
-   "link": "https://investinglive.com/news/trump-i-would-consider-a-week-long-campaign-against-cuba/",
-   "summary": "Trump said he wants to \"get Cuba done\" before his term ends Would consider \"a little bit\" of military force Says I will not hesitate to use military force against Iran if necessary It sounds like the plan is to…",
-   "published": "2026-11-12T20:35:48.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1t2e9oj",
    "title": "DTCC Plans Solana Expansion as Wallet Rules Limit Access",
    "link": "https://cointelegraph.com/news/dtcc-plans-solana-expansion-wallet-rules-limit-access?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -174,38 +273,11 @@
    "category": "crypto"
   },
   {
-   "id": "l7hvhl",
-   "title": "Oil prices rise after Iran reports strikes",
-   "link": "https://investinglive.com/news/oil-prices-rise-after-iran-reports-strikes/",
-   "summary": "Iran’s state IRNA news agency reports: “Official sources have confirmed that Sirik in Hormozgan Province has been targeted minutes ago by the enemy”. There were reports earlier of explosions being heard in Sirik and it…",
-   "published": "2026-11-12T19:51:36.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1x1dwhw",
-   "title": "US October federal budget deficit sets a record",
-   "link": "https://investinglive.com/news/us-october-federal-budget-deficit-sets-a-record/",
-   "summary": "Outlays of $773 billion vs $689 billion in Oct 2025 Receipts $369 billion vs $404 billion in Oct 2025 Deficit of $404 billion vs $284 billion in Oct 2025 This numbe really puts things into perspective. Even if the US…",
-   "published": "2026-11-12T19:05:25.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1vm3v8t",
    "title": "In a policy switch, the Fed says its October 2027 meeting will not see a vote on interest rates",
    "link": "https://www.cnbc.com/2026/11/12/in-policy-switch-fed-says-its-october-2027-meeting-will-not-see-a-vote-on-interest-rates.html",
    "summary": "There will be seven voting meetings next year, with the October session set up as extra time for policy deliberation without a formal vote or post-meeting statement.",
    "published": "2026-11-12T19:05:25.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
-   "id": "lzq4tf",
-   "title": "Oil prices rise after Trump says no Iran deal needed: 'We've got their Strait'",
-   "link": "https://www.cnbc.com/2026/11/12/oil-prices-jump-after-trump-says-no-iran-deal-needed-weve-got-their-strait.html",
-   "summary": "Oil prices were mixed on Thursday, after the latest comments from President Donald Trump raised worries that an end to the U.S.-Iran war was not in sight.",
-   "published": "2026-11-12T19:04:21.000Z",
    "source": "CNBC Finance",
    "category": "markets"
   },
@@ -243,15 +315,6 @@
    "summary": "Sales of built units fell to 3.75m in October, down by 8.8% from last year, with mortgage rates at nearly three-year high US existing home sales hit a 16-year low in October as buyers were driven away by record-high…",
    "published": "2026-11-12T17:26:07.000Z",
    "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "5u1f7v",
-   "title": "The rise and fall of Jensen Huang - how the tech superstar became mired in scandal",
-   "link": "https://www.bbc.co.uk/news/articles/cmze750zg0jeo?at_medium=RSS&at_campaign=rss",
-   "summary": "Within days, Huang's status as a seemingly untouchable figure leading the global tech race has crumbled.",
-   "published": "2026-11-12T17:11:48.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
@@ -296,42 +359,6 @@
    "link": "https://cointelegraph.com/news/jensen-huang-resigns-nvidia-ceo-board-member?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "summary": "Colette Kress will remain Nvidia’s chief financial officer while serving as interim CEO as the board searches for a permanent successor.",
    "published": "2026-11-12T13:59:02.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1v5l5n3",
-   "title": "Bit Digital stock falls 5% in pre-market after Q3 revenue miss",
-   "link": "https://cointelegraph.com/news/bit-digital-stock-falls-q3-revenue-miss?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bit Digital’s $27 million third-quarter revenue came in 16% below analyst consensus estimates, marking an over $5 million shortfall.",
-   "published": "2026-11-12T13:52:39.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1rr3678",
-   "title": "Thailand proposes $148K daily cap on stablecoin deposits and withdrawals",
-   "link": "https://cointelegraph.com/news/thailand-tighter-stablecoin-rules-crypto-exchange?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Thailand’s SEC would set separate daily caps for stablecoin deposits and withdrawals and require customers to use wallets they own.",
-   "published": "2026-11-12T13:44:03.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "ps7omv",
-   "title": "Crypto hack losses equal 57 cents per $1 earned onchain: Ark’s Valente",
-   "link": "https://cointelegraph.com/news/crypto-hackers-stole-57-cents-every-1-earned-ark?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Crypto hackers stole $8.7 billion so far in 2026, surpassing the projected annual onchain revenue generated across the industry, according to ARK’s research director.",
-   "published": "2026-11-12T13:31:59.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "12etipc",
-   "title": "Are Alt-L1s over? Security, costs drive smaller chains to Ethereum",
-   "link": "https://cointelegraph.com/magazine/are-alt-l1s-over-security-costs-drive-smaller-chains-to-ethereum?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "L1 blockchains Zilliqa, Gnosis and Ronin join the Ethereum ecosystem as the costs of going it alone grow, and the security and liquidity advantages become too hard to resist.",
-   "published": "2026-11-12T13:30:00.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
   },
@@ -471,15 +498,6 @@
    "category": "markets"
   },
   {
-   "id": "1r486mk",
-   "title": "Kim Kardashian's Skims offers refunds for $148 advent calendar after backlash",
-   "link": "https://www.bbc.co.uk/news/articles/cqp8g8p53x6ko?at_medium=RSS&at_campaign=rss",
-   "summary": "The contents of the calendar, including hair clips and keychains, have been widely criticised on social media.",
-   "published": "2026-11-10T17:04:55.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "dufqak",
    "title": "Philip R. Lane: The science and practice of monetary policy communication: the ECB experience",
    "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261110_1~9725b7aa07.en.html",
@@ -512,15 +530,6 @@
    "link": "https://www.bbc.co.uk/news/articles/cqev3vl4ek33o?at_medium=RSS&at_campaign=rss",
    "summary": "Sales of essential goods such as hand sanitiser soar after the government called on households to be prepared for emergencies.",
    "published": "2026-11-10T15:10:20.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "154v0y2",
-   "title": "US inflation higher than expected in October - here's what is happening with prices",
-   "link": "https://www.bbc.co.uk/news/articles/cwy8lx3pg4k2o?at_medium=RSS&at_campaign=rss",
-   "summary": "Prices rose by 0.4% over the month, driven by increases in shelter, food and energy costs.",
-   "published": "2026-11-10T14:45:46.000Z",
    "source": "BBC Business",
    "category": "economy"
   },
@@ -604,15 +613,6 @@
    "published": "2026-11-09T11:00:07.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "16a7m1s",
-   "title": "Why the prognosis for healthcare stocks is uncertain ahead of Congress’ new makeup",
-   "link": "https://www.cnbc.com/2026/11/07/healthcare-stocks-may-face-trouble-due-to-midterm-results.html",
-   "summary": "Healthcare stocks may struggle to find momentum as the Democrats get ready to take over Congress.",
-   "published": "2026-11-07T16:02:33.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
   },
   {
    "id": "1anoibb",
