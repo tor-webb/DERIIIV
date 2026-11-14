@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T00:24:28.756Z",
+ "updated": "2026-11-14T06:51:12.768Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,11 +12,29 @@
  },
  "items": [
   {
+   "id": "1ps7vu",
+   "title": "Microsoft says services fully restored after for day-long global outage",
+   "link": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o?at_medium=RSS&at_campaign=rss",
+   "summary": "Efforts to address the underlying problem with Outlook, Teams and Copilot are complete, the tech firm says.",
+   "published": "2026-11-14T06:42:27.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "j60e7g",
+   "title": "Bitcoin ETFs shed $2.35B in two weeks as BlackRock’s losing streak hits 11 sessions",
+   "link": "https://cointelegraph.com/markets/bitcoin-etf-outflows-2-35-billion-blackrock-11-session-streak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "US spot Bitcoin ETFs recorded $185.4 million in net outflows Friday, with BlackRock’s IBIT accounting for $143.5 million and Fidelity’s FBTC shedding $41.9 million.",
+   "published": "2026-11-14T06:33:13.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
    "id": "y8xun8",
-   "title": "Nationwide FAA ground stop: nearly 11,000 flights delayed or canceled at airports across the US",
+   "title": "US aviation agency lifts nationwide ground stop affecting all air travel",
    "link": "https://www.theguardian.com/world/2026/nov/13/faa-nationwide-ground-stop-flights",
-   "summary": "Transportation secretary said stoppage is due to ‘communication issue’ and homeland security says there’s no indication of ‘nefarious attack’ FAA grounds thousands of flights – live The Federal Aviation Administration…",
-   "published": "2026-11-14T00:09:06.000Z",
+   "summary": "Sean Duffy, the transportation secretary, said the airspace was now open and the problem had been identified Chaos at US airports as stoppage grinds travel plans to a halt What to know about the rare nationwide ground…",
+   "published": "2026-11-14T02:15:53.000Z",
    "source": "The Guardian Business",
    "category": "economy"
   },
@@ -72,15 +90,6 @@
    "summary": "Agencies extend comment period for proposed third-party risk management guidance",
    "published": "2026-11-13T21:15:00.000Z",
    "source": "Federal Reserve",
-   "category": "economy"
-  },
-  {
-   "id": "1ps7vu",
-   "title": "Microsoft 'deeply sorry' for global outage after almost 24 hours of disruption",
-   "link": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o?at_medium=RSS&at_campaign=rss",
-   "summary": "Experts say the event is a \"stark reminder\" of how heavily the world relies on a small group of big tech providers.",
-   "published": "2026-11-13T21:14:22.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
@@ -305,15 +314,6 @@
    "link": "https://cointelegraph.com/news/unocoin-withdrawals-halted-bitgo-wallet-transfer-probe?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "summary": "Unocoin said the transfers were signed and broadcast outside BitGo’s platform, and BitGo said the account freeze worked as intended.",
    "published": "2026-11-13T09:58:21.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "157f5nt",
-   "title": "Bitcoin returns to 200-week trend line as analyst sees risk of $57.7K next",
-   "link": "https://cointelegraph.com/markets/bitcoin-returns-200-week-trend-line-analyst-sees-risk-57k-next?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitcoin price action interacted with its 200-week simple moving average for the first time since mid-August as it fell below $68,000.",
-   "published": "2026-11-13T09:39:05.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
   },
