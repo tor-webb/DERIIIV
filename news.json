@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T06:51:12.768Z",
+ "updated": "2026-11-14T13:55:26.858Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,8 +12,53 @@
  },
  "items": [
   {
+   "id": "4ff914",
+   "title": "Eric Trump-backed robot soldier startup can't pay staff after founder borrowed $4.6 million from company to buy home",
+   "link": "https://www.cnbc.com/2026/11/14/foundation-payroll-ceo-loan.html",
+   "summary": "Eric Trump-backed robot startup Foundation Future Industries has run low on cash and missed payroll, as CEO Sankaet Pathak faces scrutiny over a $4.6 million company loan.",
+   "published": "2026-11-14T12:00:01.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-11-14T11:28:12.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1domaow",
+   "title": "Microsoft confirms global outage resolved, rules out cyberattack",
+   "link": "https://cointelegraph.com/news/microsoft-365-outage-resolved-cyberattack-ruled-out?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Microsoft attributed the outage to a network capacity upgrade issue, confirming that the disruption was unrelated to cyberattacks or AI agents.",
+   "published": "2026-11-14T10:34:06.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "667mg4",
+   "title": "MegaETH parent cuts 20% of staff amid restructuring, AI push",
+   "link": "https://cointelegraph.com/news/megaeth-parent-cuts-20-percent-staff-ai-push?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "MegaETH co-founder Shuyao Kong said the restructuring affected employees who helped build the project’s blockchain, wallet and ecosystem.",
+   "published": "2026-11-14T08:12:30.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "14jqvdu",
+   "title": "Gold futures rose Friday, but the rally failed. What I’m watching next week",
+   "link": "https://investinglive.com/commodities/gold-futures-rose-friday-but-the-rally-failed-what-i-m-watching-next-week/",
+   "summary": "Gold's small Friday gain concealed a disappointing rally for buyers. The $3,879 area is an immediate test, while $3,820-$3,850 could become an important battleground if selling resumes. Gold futures finished Friday,…",
+   "published": "2026-11-14T07:42:55.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
    "id": "1ps7vu",
-   "title": "Microsoft says services fully restored after for day-long global outage",
+   "title": "Microsoft says services fully restored after day-long global outage",
    "link": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o?at_medium=RSS&at_campaign=rss",
    "summary": "Efforts to address the underlying problem with Outlook, Teams and Copilot are complete, the tech firm says.",
    "published": "2026-11-14T06:42:27.000Z",
@@ -22,7 +67,7 @@
   },
   {
    "id": "j60e7g",
-   "title": "Bitcoin ETFs shed $2.35B in two weeks as BlackRock’s losing streak hits 11 sessions",
+   "title": "Bitcoin ETFs shed $2.35B in 2 weeks, BlackRock’s losing streak hits 11",
    "link": "https://cointelegraph.com/markets/bitcoin-etf-outflows-2-35-billion-blackrock-11-session-streak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "summary": "US spot Bitcoin ETFs recorded $185.4 million in net outflows Friday, with BlackRock’s IBIT accounting for $143.5 million and Fidelity’s FBTC shedding $41.9 million.",
    "published": "2026-11-14T06:33:13.000Z",
@@ -30,11 +75,11 @@
    "category": "crypto"
   },
   {
-   "id": "y8xun8",
-   "title": "US aviation agency lifts nationwide ground stop affecting all air travel",
-   "link": "https://www.theguardian.com/world/2026/nov/13/faa-nationwide-ground-stop-flights",
-   "summary": "Sean Duffy, the transportation secretary, said the airspace was now open and the problem had been identified Chaos at US airports as stoppage grinds travel plans to a halt What to know about the rare nationwide ground…",
-   "published": "2026-11-14T02:15:53.000Z",
+   "id": "q0obni",
+   "title": "‘It’s frustrating’: chaos at US airports as stoppage grinds travel plans to a halt",
+   "link": "https://www.theguardian.com/us-news/2026/nov/13/us-airports-flight-stoppage",
+   "summary": "Travelers and crew feeling ‘pissed’ or ‘lucky’ depending on level of upset amid nationwide ground stop The decision to ground all flights on Friday by the US Federal Aviation Administration (FAA) threw airports and…",
+   "published": "2026-11-14T02:49:59.000Z",
    "source": "The Guardian Business",
    "category": "economy"
   },
@@ -46,15 +91,6 @@
    "published": "2026-11-13T23:42:18.000Z",
    "source": "CNBC Finance",
    "category": "markets"
-  },
-  {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-11-13T22:08:37.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "wuzn7o",
@@ -291,33 +327,6 @@
    "category": "economy"
   },
   {
-   "id": "ecmjdy",
-   "title": "Israeli police arrest five in $5M WhatsApp crypto trading probe",
-   "link": "https://cointelegraph.com/news/israel-police-arrest-five-5m-whatsapp-crypto-scheme?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Police suspect the group drew up fictitious loan agreements to disguise crypto trading proceeds it transferred directly into bank accounts.",
-   "published": "2026-11-13T12:19:01.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "194xz3c",
-   "title": "How have interest rate expectations changed after this week's events?",
-   "link": "https://investinglive.com/central-banks/how-have-interest-rate-expectations-changed-after-this-week-s-events-8/",
-   "summary": "Rate hikes by year-end Fed: 28 bps (88% probability of 25 bps rate hike at the next meeting; 12% of 50 bps hike) 2027: 88 bps BoE: 21 bps (85% probability of rate hike at the next meeting) 2027: 94 bps RBNZ: 20 bps…",
-   "published": "2026-11-13T12:01:49.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "5cnbdg",
-   "title": "Unocoin keeps deposits and withdrawals halted over suspect transfers",
-   "link": "https://cointelegraph.com/news/unocoin-withdrawals-halted-bitgo-wallet-transfer-probe?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Unocoin said the transfers were signed and broadcast outside BitGo’s platform, and BitGo said the account freeze worked as intended.",
-   "published": "2026-11-13T09:58:21.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1j9s3t2",
    "title": "Heat pumps: How much heat does your home really need?",
    "link": "https://www.bbc.co.uk/news/articles/cqy43zk3kk04o?at_medium=RSS&at_campaign=rss",
@@ -550,15 +559,6 @@
    "published": "2026-11-11T01:18:56.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "gby0d6",
-   "title": "Fed Governor Waller sees December hike likely, opens door to possible half-point increase",
-   "link": "https://www.cnbc.com/2026/11/10/fed-governor-waller-sees-december-hike-likely.html",
-   "summary": "The policymaker said he \"is leaning toward\" a rate increase in December and could support a half-point hike depending on inflation data.",
-   "published": "2026-11-10T17:13:44.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
   },
   {
    "id": "dufqak",
