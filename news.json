@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T13:55:26.858Z",
+ "updated": "2026-11-14T18:56:29.010Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -11,6 +11,15 @@
   "The Guardian Business /business/rss": 12
  },
  "items": [
+  {
+   "id": "831z6m",
+   "title": "How Nvidia turmoil and a Democratic Congress could reshape the AI trade, according to ETF experts",
+   "link": "https://www.cnbc.com/2026/11/14/nvidia-ai-trade-data-centers-congress.html",
+   "summary": "ETF experts say Nvidia’s leadership turmoil and Democratic control of Congress could shift AI demand to the benefit of other Big Tech stocks, rival chipmakers.",
+   "published": "2026-11-14T15:50:43.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
   {
    "id": "4ff914",
    "title": "Eric Trump-backed robot soldier startup can't pay staff after founder borrowed $4.6 million from company to buy home",
@@ -597,15 +606,6 @@
    "category": "economy"
   },
   {
-   "id": "1roivhy",
-   "title": "Polymarket says annualized revenue has topped $1.8 billion",
-   "link": "https://www.cnbc.com/2026/11/10/polymarket-annualized-revenue-us-growth.html",
-   "summary": "Amid growth of its U.S. exchange, the prediction market platform’s current annual run-rate is $1.8 billion.",
-   "published": "2026-11-10T13:00:01.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
    "id": "1h0mb2k",
    "title": "Nvidia and Jensen Huang sued in US over affair with alleged Chinese spy",
    "link": "https://www.theguardian.com/technology/2026/nov/10/nvidia-jensen-huang-sued-donald-trump-fbi",
@@ -639,15 +639,6 @@
    "summary": "Winning candidates promised to cut costs, rein in corporations, curb billionaire power and improve the economy Don’t worry, cash-strapped Americans, “relief is on the way”, the senator Chuck Schumer promised last week…",
    "published": "2026-11-09T11:00:07.000Z",
    "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "1anoibb",
-   "title": "Christine Lagarde: Interview with Yomiuri Shimbun",
-   "link": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261107~e7b86fc4ce.en.html",
-   "summary": "",
-   "published": "2026-11-07T14:00:00.000Z",
-   "source": "ECB",
    "category": "economy"
   }
  ]
