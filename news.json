@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T16:46:11.039Z",
+ "updated": "2026-11-15T21:27:30.213Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -11,6 +11,33 @@
   "The Guardian Business /business/rss": 12
  },
  "items": [
+  {
+   "id": "1h0cnau",
+   "title": "Lutnick faces questions over Nvidia spy scandal. His sons' firm has ties to the chipmaker",
+   "link": "https://www.cnbc.com/2026/11/13/howard-lutnick-nvidia-jensen-huang-china-cantor-fitzgerald.html",
+   "summary": "Jensen Huang’s resignation as Nvidia CEO has brought renewed scrutiny to Commerce Secretary Howard Lutnick and his family's financial ties to the chipmaker.",
+   "published": "2026-11-15T19:58:21.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "q4y07x",
+   "title": "Nvida stock analysis before its earnings",
+   "link": "https://investinglive.com/stocks/nvida-stock-analysis-before-its-earnings/",
+   "summary": "Nvidia stock lost 12.75% while Nasdaq futures gained 3%. Now comes the $167-$174 test Nvidia's sharp rebound from $148.80 was followed by another selloff. With earnings approaching and a new interim CEO in place, the…",
+   "published": "2026-11-15T16:51:20.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "10l7kms",
+   "title": "When the boss has an affair, the whole family business can pay the price",
+   "link": "https://www.theguardian.com/business/2026/nov/15/nvidia-ceo-jensen-huang-affair-business",
+   "summary": "Fallout from ex-Nvidia CEO Jensen Huang’s affair is the latest reminder of the shared toll paid when patriarchs cheat From Profumo to Petraeus to Gary Hart , Bill Gates and Bill Clinton , history is littered with older…",
+   "published": "2026-11-15T15:00:16.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
   {
    "id": "137zylb",
    "title": "Suspected China spy linked to Nvidia's ex-boss left in 2025, Megaspeed says",
@@ -73,6 +100,15 @@
    "published": "2026-11-15T06:27:26.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
+  },
+  {
+   "id": "11zuknm",
+   "title": "‘Jensen Huang lost his mind’: how AI’s smartest man fell for the world’s oldest trick",
+   "link": "https://www.theguardian.com/technology/2026/nov/14/jensen-huang-affair-nvidia-nightmare",
+   "summary": "Jensen Huang’s affair with a suspected spy is Silicon Valley’s worst nightmare come true The resignation this week of Nvidia’s founder and CEO Jensen Huang is one of the most astonishing corporate scandals in memory,…",
+   "published": "2026-11-15T06:00:06.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
   },
   {
    "id": "nariwg",
@@ -154,15 +190,6 @@
    "published": "2026-11-14T02:49:59.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "1h0cnau",
-   "title": "Lutnick faces questions over Nvidia spy scandal. His sons' firm has deep ties to the chipmaker",
-   "link": "https://www.cnbc.com/2026/11/13/howard-lutnick-nvidia-jensen-huang-china-cantor-fitzgerald.html",
-   "summary": "Jensen Huang’s resignation as Nvidia CEO has brought renewed scrutiny to Commerce Secretary Howard Lutnick and his family's financial ties to the chipmaker.",
-   "published": "2026-11-13T23:42:18.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
   },
   {
    "id": "t9pns0",
@@ -354,15 +381,6 @@
    "category": "forex"
   },
   {
-   "id": "1a084cb",
-   "title": "investingLive European session wrap: Wall Street eyes a rebound but rising Treasury yields keep traders on edge",
-   "link": "https://investinglive.com/news/investinglive-european-session-wrap-wall-street-eyes-a-rebound-but-rising-treasury-yields-keep-traders-on-edge/",
-   "summary": "Headlines: Wall Street steadies despite Nvidia drama but dip buyers are still walking a tight rope US bond market cracks resurface as higher for longer fears return to haunt Wall Street Higher real yields and stronger…",
-   "published": "2026-11-13T12:46:51.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1j9s3t2",
    "title": "Heat pumps: How much heat does your home really need?",
    "link": "https://www.bbc.co.uk/news/articles/cqy43zk3kk04o?at_medium=RSS&at_campaign=rss",
@@ -459,15 +477,6 @@
    "summary": "Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check services",
    "published": "2026-11-12T18:30:00.000Z",
    "source": "Federal Reserve",
-   "category": "economy"
-  },
-  {
-   "id": "1dls9d2",
-   "title": "Jensen Huang built an AI kingdom. Now he’s gone, will Nvidia’s ramparts be breached?",
-   "link": "https://www.theguardian.com/technology/2026/nov/12/jensen-huang-built-an-ai-kingdom-now-hes-gone-will-nvidias-ramparts-be-breached",
-   "summary": "CEO’s affair and resignation has brought company’s murky corporate contracts and supply chains into sharp focus Can the AI economy survive without its “central bank”? What does Jensen Huang’s fall mean for the world’s…",
-   "published": "2026-11-12T17:50:35.000Z",
-   "source": "The Guardian Business",
    "category": "economy"
   },
   {
@@ -603,15 +612,6 @@
    "summary": "",
    "published": "2026-11-10T14:00:00.000Z",
    "source": "ECB",
-   "category": "economy"
-  },
-  {
-   "id": "1h0mb2k",
-   "title": "Nvidia and Jensen Huang sued in US over affair with alleged Chinese spy",
-   "link": "https://www.theguardian.com/technology/2026/nov/10/nvidia-jensen-huang-sued-donald-trump-fbi",
-   "summary": "California lawsuit comes as Donald Trump says FBI is investigating tech CEO’s links with Alice Huang Nvidia’s board needs to do some succession planning – sharpish Nvidia and its chief executive, Jensen Huang, have…",
-   "published": "2026-11-10T12:45:54.000Z",
-   "source": "The Guardian Business",
    "category": "economy"
   },
   {
