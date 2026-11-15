@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T09:43:56.850Z",
+ "updated": "2026-11-15T16:46:11.039Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -11,6 +11,51 @@
   "The Guardian Business /business/rss": 12
  },
  "items": [
+  {
+   "id": "137zylb",
+   "title": "Suspected China spy linked to Nvidia's ex-boss left in 2025, Megaspeed says",
+   "link": "https://www.bbc.co.uk/news/articles/cmdx1vpprk9vo?at_medium=RSS&at_campaign=rss",
+   "summary": "The Nvidia scandal has raised questions over whether advanced AI chips ended up in China, despite US restrictions.",
+   "published": "2026-11-15T14:56:21.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "11nzp6",
+   "title": "Enterprise blockchain is going to come back from the dead",
+   "link": "https://cointelegraph.com/opinion/enterprise-blockchain-come-back-from-dead?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "With scalability, privacy tools and onchain liquidity improving, businesses may finally have the infrastructure to make enterprise blockchain work.",
+   "published": "2026-11-15T14:30:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "gd8l0x",
+   "title": "Minister backs legal right to job support for young people",
+   "link": "https://www.bbc.co.uk/news/articles/cqr7gn1zmlj1o?at_medium=RSS&at_campaign=rss",
+   "summary": "The work and pensions secretary said the level of support currently on offer was too vague.",
+   "published": "2026-11-15T13:06:15.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-11-15T11:18:48.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "87by4o",
+   "title": "Bitcoin falls to four-month low near $62K as crypto selloff deepens",
+   "link": "https://cointelegraph.com/markets/bitcoin-four-month-low-62k-crypto-market-selloff?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The global cryptocurrency market capitalization fell 4% to $2.26 trillion over 24 hours, while Ether and Solana posted double-digit weekly losses.",
+   "published": "2026-11-15T10:23:17.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
   {
    "id": "1lxr50w",
    "title": "Coinone warns of phishing, identity theft after customer data breach",
@@ -31,7 +76,7 @@
   },
   {
    "id": "nariwg",
-   "title": "Beauty advent calendars can cost hundreds - but are they value for money?",
+   "title": "Beauty advent calendars can cost hundreds but are they value for money?",
    "link": "https://www.bbc.co.uk/news/articles/cqn83l442724o?at_medium=RSS&at_campaign=rss",
    "summary": "Beauty calendars have become a Christmas staple and have become particularly popular with female shoppers.",
    "published": "2026-11-15T00:01:07.000Z",
@@ -55,15 +100,6 @@
    "published": "2026-11-14T12:00:01.000Z",
    "source": "CNBC Finance",
    "category": "markets"
-  },
-  {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-11-14T11:28:12.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1domaow",
@@ -228,15 +264,6 @@
    "category": "economy"
   },
   {
-   "id": "yxmrea",
-   "title": "Metaplanet swings to $170M loss as Bitcoin sale hits earnings",
-   "link": "https://cointelegraph.com/news/metaplanet-swings-170m-loss-bitcoin-sale-earnings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitcoin sales, valuation losses and rising borrowing costs weighed on the Japanese company’s earnings despite higher revenue and operating profit.",
-   "published": "2026-11-13T18:28:29.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "dqx2ap",
    "title": "The US consumer may be hitting a wall. A look at eight indicators",
    "link": "https://investinglive.com/news/the-us-consumer-may-be-hitting-a-wall-a-look-at-eight-indicators/",
@@ -262,15 +289,6 @@
    "published": "2026-11-13T17:20:32.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "1xhtyl6",
-   "title": "Bitcoin holds below $70K as stocks slip despite a cooler US PPI print",
-   "link": "https://cointelegraph.com/markets/bitcoin-below-70k-stocks-slip-cooler-us-ppi-print?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitcoin was down about 4% on the day amid a tepid market reaction to October’s US PPI reading, which came in below expected levels.",
-   "published": "2026-11-13T16:39:11.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "3brhxg",
@@ -476,24 +494,6 @@
    "link": "https://www.bbc.co.uk/news/articles/cqgm37dv20e8o?at_medium=RSS&at_campaign=rss",
    "summary": "Chief financial officer Colette Kress in in charge of Nvidia for now, but several others are in the frame as potential successors.",
    "published": "2026-11-12T15:10:32.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "22raha",
-   "title": "Faisal Islam: Why the UK economy is surprisingly resilient",
-   "link": "https://www.bbc.co.uk/news/articles/cj62p32k90wyo?at_medium=RSS&at_campaign=rss",
-   "summary": "The UK is seeing impressive growth, but will it last?",
-   "published": "2026-11-12T13:27:09.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "1airqz4",
-   "title": "UK economy grows at fastest rate for more than two years",
-   "link": "https://www.bbc.co.uk/news/articles/ck3rgd429zd5o?at_medium=RSS&at_campaign=rss",
-   "summary": "The UK economy grew by 0.7% in the three months to September, according to official figures.",
-   "published": "2026-11-12T11:20:25.000Z",
    "source": "BBC Business",
    "category": "economy"
   },
