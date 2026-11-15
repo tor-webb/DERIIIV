@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T22:52:30.355Z",
+ "updated": "2026-11-15T02:21:36.918Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -11,6 +11,15 @@
   "The Guardian Business /business/rss": 12
  },
  "items": [
+  {
+   "id": "nariwg",
+   "title": "Beauty advent calendars can cost hundreds - but are they value for money?",
+   "link": "https://www.bbc.co.uk/news/articles/cqn83l442724o?at_medium=RSS&at_campaign=rss",
+   "summary": "Beauty calendars have become a Christmas staple and have become particularly popular with female shoppers.",
+   "published": "2026-11-15T00:01:07.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
   {
    "id": "831z6m",
    "title": "How Nvidia turmoil and a Democratic Congress could reshape the AI trade, according to ETF experts",
@@ -100,6 +109,15 @@
    "published": "2026-11-13T23:42:18.000Z",
    "source": "CNBC Finance",
    "category": "markets"
+  },
+  {
+   "id": "t9pns0",
+   "title": "How the Jensen Huang scandal created a headache for business-friendly Singapore",
+   "link": "https://www.bbc.co.uk/news/articles/ck1exevgql4qo?at_medium=RSS&at_campaign=rss",
+   "summary": "The scandal has cast a spotlight on Singapore's success as a chip hub - and a location for alleged illicit trade.",
+   "published": "2026-11-13T23:00:31.000Z",
+   "source": "BBC Business",
+   "category": "economy"
   },
   {
    "id": "wuzn7o",
@@ -327,15 +345,6 @@
    "category": "forex"
   },
   {
-   "id": "v9t162",
-   "title": "How a sex scandal at Nvidia is putting pressure on the White House",
-   "link": "https://www.bbc.co.uk/news/articles/c67429m3vem3o?at_medium=RSS&at_campaign=rss",
-   "summary": "Jensen Huang's personal life may have triggered the crisis, but the questions now reach into the White House itself.",
-   "published": "2026-11-13T12:22:30.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "1j9s3t2",
    "title": "Heat pumps: How much heat does your home really need?",
    "link": "https://www.bbc.co.uk/news/articles/cqy43zk3kk04o?at_medium=RSS&at_campaign=rss",
@@ -467,15 +476,6 @@
    "link": "https://www.bbc.co.uk/news/articles/cqgm37dv20e8o?at_medium=RSS&at_campaign=rss",
    "summary": "Chief financial officer Colette Kress in in charge of Nvidia for now, but several others are in the frame as potential successors.",
    "published": "2026-11-12T15:10:32.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "1gy3w30",
-   "title": "Poundland gets more time to secure a rescue deal as emergency talks continue",
-   "link": "https://www.bbc.co.uk/news/articles/c3702jjkez4ko?at_medium=RSS&at_campaign=rss",
-   "summary": "A deadline to secure a buyer was set to expire at midnight, but the retailer now has an extra 10 days to find a buyer.",
-   "published": "2026-11-12T14:29:59.000Z",
    "source": "BBC Business",
    "category": "economy"
   },
