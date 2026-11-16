@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T01:18:24.440Z",
+ "updated": "2026-11-16T08:15:59.542Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,58 +12,193 @@
  },
  "items": [
   {
-   "id": "1ve9riy",
-   "title": "ICYMI: Fed’s Jefferson says inflation is the key signal for rates, with PCE still at 3.6%",
-   "link": "https://investinglive.com/central-banks/icymi-fed-s-jefferson-says-inflation-is-the-key-signal-for-rates-with-pce-still-at-3-6/",
-   "summary": "Jefferson’s comments support pricing for a December hike without adding to the half-point tail, which suits the steady, gradual camp. By naming energy as the main channel for broader inflation, he makes Fed…",
-   "published": "2026-11-16T00:53:15.000Z",
+   "id": "ybaopy",
+   "title": "What are the main events for today?",
+   "link": "https://investinglive.com/news/what-are-the-main-events-for-today-86/",
+   "summary": "EUROPEAN SESSION In the European session, we get the Swiss Q3 GDP and the Eurozone Industrial Production. None of the data will change anything for the respective central banks, so the market reaction will likely be…",
+   "published": "2026-11-16T07:34:56.000Z",
    "source": "investingLive",
    "category": "forex"
   },
   {
+   "id": "rbx83",
+   "title": "Nvidia earnings could test a fragile market. Five stocks are already offering clues",
+   "link": "https://investinglive.com/stocks/nvidia-earnings-could-test-a-fragile-market-five-stocks-are-already-offering-clues/",
+   "summary": "Nvidia earnings could test a fragile market. Five stocks are already offering clues. investingLive's latest earnings-mood assessment stands at just 4 out of 10. Recent results show a market willing to reward some…",
+   "published": "2026-11-16T06:55:45.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "oaclm1",
+   "title": "Gas starts flowing from Jackdaw after government green light",
+   "link": "https://www.bbc.co.uk/news/articles/c9x2elzm047po?at_medium=RSS&at_campaign=rss",
+   "summary": "Ministers last month announced the Jackdaw gas field, which lies 150 miles east of Aberdeen, had been approved after years of uncertainty.",
+   "published": "2026-11-16T06:24:08.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-11-16T06:00:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "287wbi",
+   "title": "Aster CEO suspects foul play after token plunges 32% in minutes",
+   "link": "https://cointelegraph.com/markets/aster-ceo-suspects-foul-play-after-token-plunges-32-in-minutes?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Aster’s CEO attributed the extreme volatility to highly leveraged liquidations but said the exchange remained operational.",
+   "published": "2026-11-16T05:28:40.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "dxl1es",
+   "title": "Asian chip stocks tumble ahead of Nvidia Q3 earnings",
+   "link": "https://cointelegraph.com/markets/asian-chip-stocks-tumble-ahead-of-nvidia-q3-earnings?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The weakness came amid a wider sell-off in regional equity markets, with Japan’s Nikkei 225 down 2% and South Korea’s Kospi losing 2.6%.",
+   "published": "2026-11-16T04:42:07.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1xrekqv",
+   "title": "investingLive Asia-Pacific market news: Chipmakers hit ahead of Nvidia",
+   "link": "https://investinglive.com/news/investinglive-asia-pacific-market-news-chipmakers-hit-ahead-of-nvidia/",
+   "summary": "AI: Daily quotas come to DeepSeek, a visible sign of China’s AI chip crunch BOJ’s Takata calls for nimble hikes after 1.5% bid, says neutral rate may top estimates Goldman sees Brent at $78 by end-2027 as oil surplus…",
+   "published": "2026-11-16T04:34:28.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "sx9k1",
+   "title": "AI: Daily quotas come to DeepSeek, a visible sign of China’s AI chip crunch",
+   "link": "https://investinglive.com/stocks/ai-daily-quotas-come-to-deepseek-a-visible-sign-of-china-s-ai-chip-crunch/",
+   "summary": "For investors, the DeepSeek report is a live data point in the debate over AI computing power. It suggests demand at China’s leading AI lab is running ahead of the chips it can get. Paired with the US plans to curb…",
+   "published": "2026-11-16T04:12:16.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "rm7tu",
+   "title": "BOJ’s Takata calls for nimble hikes after 1.5% bid, says neutral rate may top estimates",
+   "link": "https://investinglive.com/central-banks/boj-s-takata-calls-for-nimble-hikes-after-1-5-bid-says-neutral-rate-may-top-estimates/",
+   "summary": "Takata’s speech is the clearest public argument yet for a faster BOJ hiking pace than markets assume. He rejects a fixed quarterly rhythm and argues for reaching the middle of the neutral range early, which puts a move…",
+   "published": "2026-11-16T04:06:40.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1pt6irx",
+   "title": "China’s slowdown deepens in October as industrial output, retail sales, investment miss estimates",
+   "link": "https://www.cnbc.com/2026/11/16/china-retail-sales-october-industrial-output-investment.html",
+   "summary": "A deepening reliance on external demand leaves China more exposed to shocks abroad as domestic momentum fades, analysts say.",
+   "published": "2026-11-16T03:53:59.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "qncx0j",
+   "title": "Goldman sees Brent at $78 by end-2027 as oil surplus returns, flags near-term upside risk",
+   "link": "https://investinglive.com/commodities/goldman-sees-brent-at-78-by-end-2027-as-oil-surplus-returns-flags-near-term-upside-risk/",
+   "summary": "Goldman’s path implies Brent averaging nearly $8 below current levels next year, and about $18 lower by end-2027. That gives oil bears a solid medium-term anchor. In the near term, though, the market is still driven by…",
+   "published": "2026-11-16T03:47:23.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1ngxqon",
+   "title": "Records show $12bn Nvidia chips to China, US drafts licence rules on Nvidia chip exports",
+   "link": "https://investinglive.com/stocks/records-show-12bn-nvidia-chips-to-china-us-drafts-licence-rules-on-nvidia-chip-exports/",
+   "summary": "For Nvidia, the regulatory risk is now concrete just a day before results. Licence rules covering Malaysia, Indonesia and Singapore would put at risk a revenue stream that goes well beyond the officially reported China…",
+   "published": "2026-11-16T03:31:38.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "19myoxi",
+   "title": "China factory output slows to 4.8% in October, retail sales up just 0.4% as demand sags",
+   "link": "https://investinglive.com/news/china-factory-output-slows-to-4-8-in-october-retail-sales-up-just-0-4-as-demand-sags/",
+   "summary": "The data pushes in two directions for markets. Weak domestic demand and the investment slump support the case for more easing over time. But the view that no new stimulus will come this year limits any near-term “bad…",
+   "published": "2026-11-16T03:05:56.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "xi87m6",
+   "title": "Investors sue chip giant Intel after 29% stock plunge",
+   "link": "https://www.bbc.co.uk/news/articles/cw62p42p288do?at_medium=RSS&at_campaign=rss",
+   "summary": "A proposed class action says Intel hid the impact of slowing sales, inflating its shares.",
+   "published": "2026-11-16T03:04:01.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "11imsy2",
+   "title": "Japan economy shrinks 0.1% in Q3, first fall in 4 quarters as inflation hits households",
+   "link": "https://investinglive.com/news/japan-economy-shrinks-0-1-in-q3-first-fall-in-4-quarters-as-inflation-hits-households/",
+   "summary": "The pushback from economists matters more for markets than the headline miss. If weak consumption is read as a sign of inflation rather than a reason to pause, December hike pricing should hold. That limits any lasting…",
+   "published": "2026-11-16T02:44:54.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "lajujp",
+   "title": "Luxor CEO warns of AI ‘dark forest’ following Bitcoin miner hijack",
+   "link": "https://cointelegraph.com/news/luxor-ceo-warns-of-ai-dark-forest-after-bitcoin-miner-hijack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Attackers redirected customers’ Bitcoin mining power through Luxor’s Commander platform over the weekend, prompting its CEO to issue a warning to crypto businesses.",
+   "published": "2026-11-16T02:33:07.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "rsxla7",
+   "title": "Morgan Stanley goes max overweight global stocks, sees 15% S&P 500 upside on AI capex",
+   "link": "https://investinglive.com/stocks/morgan-stanley-goes-max-overweight-global-stocks-sees-15-s-p-500-upside-on-ai-capex/",
+   "summary": "A maximum overweight call from a major house is a timely counterweight to the AI jitters around Nvidia and the QTS debt pullback. It could encourage dip-buying in tech and in the wider set of AI beneficiaries. The…",
+   "published": "2026-11-16T02:11:08.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1mjvlcb",
+   "title": "China’s October data shows the economy losing momentum on retail sales and industry output",
+   "link": "https://investinglive.com/news/china-s-october-data-shows-the-economy-losing-momentum-on-retail-sales-and-industry-output/",
+   "summary": "China October activity data China’s October data shows the economy losing momentum on both fronts. Industrial output growth slowed to 4.8%, missing the 5.3% forecast and down from 5.5% in September. That is notable…",
+   "published": "2026-11-16T02:09:25.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "2jpdf4",
+   "title": "Oil price analysis: Sellers are losing momentum, but $86.75 remains the danger line",
+   "link": "https://investinglive.com/commodities/oil-price-analysis-sellers-are-losing-momentum-but-86-75-remains-the-danger-line/",
+   "summary": "WTI crude oil futures are trying to stabilize after breaking below a rising channel. Holding the $86.75-$87.25 zone could give buyers room to recover toward $92, while sustained weakness below it would keep $77-$79 in…",
+   "published": "2026-11-16T01:51:55.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "137zylb",
+   "title": "Suspected China spy linked to Nvidia's ex-boss left in 2025, Megaspeed says",
+   "link": "https://www.bbc.co.uk/news/articles/cmdx1vpprk9vo?at_medium=RSS&at_campaign=rss",
+   "summary": "The Nvidia scandal has raised questions over whether advanced AI chips ended up in China, despite US restrictions.",
+   "published": "2026-11-16T01:47:57.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
    "id": "ruxm9f",
-   "title": "Black Friday and tax return scams - don't fall for these",
+   "title": "Don't fall for this Black Friday scam - how to check it's a real deal",
    "link": "https://www.bbc.co.uk/news/articles/cm4gnlz2p61ko?at_medium=RSS&at_campaign=rss",
    "summary": "Tens of thousands of scams are reported to HMRC - so it has advice on how to spot a fake request and refund.",
    "published": "2026-11-16T00:50:39.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "poe5wy",
-   "title": "Weekend: Bessent urges Nvidia to hire an outsider CEO, pouring cold water on a Huang comeback",
-   "link": "https://investinglive.com/stocks/weekend-bessent-urges-nvidia-to-hire-an-outsider-ceo-pouring-cold-water-on-a-huang-comeback/",
-   "summary": "Bessent’s comments make Nvidia’s leadership question a political one. With a cabinet official openly favouring an outside hire, a Huang return becomes harder for the board to justify, and the recent rally in comeback…",
-   "published": "2026-11-16T00:34:13.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "15f7urp",
-   "title": "PBOC is expected to set the USD/CNY reference rate at 6.6771 – Reuters estimate",
-   "link": "https://investinglive.com/central-banks/pboc-is-expected-to-set-the-usd-cny-reference-rate-at-6-6771-reuters-estimate/",
-   "summary": "The People’s Bank of China is due to set the daily USD/CNY reference rate at around 0115 GMT (2115 US Eastern time), a fixing that remains one of the most closely watched signals in Asian foreign exchange markets.…",
-   "published": "2026-11-16T00:30:25.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "10lw8ha",
-   "title": "Japan Q3 GDP shrinks 0.1% annualised vs +0.3% expected as exports and consumers weigh",
-   "link": "https://investinglive.com/news/japan-q3-gdp-shrinks-0-1-annualised-vs-0-3-expected-as-exports-and-consumers-weigh/",
-   "summary": "A flat quarter made weak mainly by trade is unlikely to derail BoJ tightening plans by itself. Strong capex and positive domestic demand are the parts policymakers watch most closely. The miss still gives the yen…",
-   "published": "2026-11-15T23:57:57.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "3h6bd3",
-   "title": "US futures open firmer as Nasdaq leads, oil slips despite Iran tanker claims: 5 things",
-   "link": "https://investinglive.com/stocks/us-futures-open-firmer-as-nasdaq-leads-oil-slips-despite-iran-tanker-claims-5-things/",
-   "summary": "The opening tone is cautiously risk-on, but thin early liquidity means these moves are a tentative read rather than a settled direction. Oil’s restraint is the notable signal. With three US carrier groups now in the…",
-   "published": "2026-11-15T23:48:16.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "p84mhq",
@@ -73,24 +208,6 @@
    "published": "2026-11-15T23:47:45.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "1e304nu",
-   "title": "ECB bond market intervention warning from Governor Knot. Can’t replace sound fiscal policy,",
-   "link": "https://investinglive.com/central-banks/ecb-bond-market-intervention-warning-from-governor-knot-can-t-replace-sound-fiscal-policy/",
-   "summary": "Knot’s line on fiscal discipline matters most for euro zone sovereign spreads, especially French bonds against German Bunds. Markets will read it as a reminder that ECB support would be conditional rather than…",
-   "published": "2026-11-15T23:22:51.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1s1g5eg",
-   "title": "Trump out of public view since Wednesday, fuelling speculation on his wherabouts",
-   "link": "https://investinglive.com/news/trump-out-of-public-view-since-wednesday-fuelling-speculation-on-hiw-wherabouts/",
-   "summary": "For markets, this is a non-event as long as the official record keeps showing normal activity. Traders have learned to discount social media speculation about the president’s health, and nothing so far has moved oil,…",
-   "published": "2026-11-15T23:05:29.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "1tkwvoo",
@@ -103,48 +220,12 @@
   },
   {
    "id": "1it7s3g",
-   "title": "Cut national insurance for under-25s to create jobs, Milburn report to say",
+   "title": "Cut National Insurance for under-25s to create jobs, Milburn report to say",
    "link": "https://www.bbc.co.uk/news/articles/c6p9dzmj514ko?at_medium=RSS&at_campaign=rss",
    "summary": "The report being launched this week will suggest gradually reducing employment costs over five years.",
    "published": "2026-11-15T22:30:03.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "19asw5x",
-   "title": "Weekend - Blackstone’s QTS cuts AI data center debt sale 60% as investors push back on pricing",
-   "link": "https://investinglive.com/stocks/weekend-blackstone-s-qts-cuts-ai-data-center-debt-sale-60-as-investors-push-back-on-pricing/",
-   "summary": "For credit markets, the QTS cutback is an early sign that the price of financing AI infrastructure is starting to matter. Investors are putting limits on how much they will hold of repeat issuers and on concentrated…",
-   "published": "2026-11-15T22:28:27.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "137zylb",
-   "title": "Suspected China spy linked to Nvidia's ex-boss left in 2025, Megaspeed says",
-   "link": "https://www.bbc.co.uk/news/articles/cmdx1vpprk9vo?at_medium=RSS&at_campaign=rss",
-   "summary": "The Nvidia scandal has raised questions over whether advanced AI chips ended up in China, despite US restrictions.",
-   "published": "2026-11-15T22:24:20.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "b31lh5",
-   "title": "ICYMI - Trump extends Jones Act waiver 90 days, foreign tankers moving oil in US",
-   "link": "https://investinglive.com/commodities/icymi-trump-extends-jones-act-waiver-90-days-foreign-tankers-moving-oil-in-us/",
-   "summary": "For oil, the extension is a small but useful relief valve rather than a supply story. It does not add barrels to the market, but it moves them more efficiently between US regions. That should help limit regional price…",
-   "published": "2026-11-15T22:15:41.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1kk3afi",
-   "title": "Iran says supertanker with 2 million barrels sank after Hormuz mine strike, unconfirmed",
-   "link": "https://investinglive.com/commodities/iran-says-supertanker-with-2-million-barrels-sank-after-hormuz-mine-strike-unconfirmed/",
-   "summary": "Oil is the main channel for this news. A claimed sinking of a fully laden supertanker in the world’s most important crude chokepoint is likely to add to the risk premium in Brent and WTI when markets reopen (futures at…",
-   "published": "2026-11-15T22:00:50.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "1ad6fi0",
@@ -154,24 +235,6 @@
    "published": "2026-11-15T22:00:24.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "1v78x9x",
-   "title": "ECB’s Nagel says another rate hike ‘highly probable’ as energy prices push inflation",
-   "link": "https://investinglive.com/central-banks/ecb-s-nagel-says-another-rate-hike-highly-probable-as-energy-prices-push-inflation/",
-   "summary": "An explicit signal from the Bundesbank president that further tightening is likely should support the euro and push up short-dated euro zone yields, especially German two-year debt. Because he ties the risk directly to…",
-   "published": "2026-11-15T21:51:02.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1d6yk5j",
-   "title": "New Zealand services PSI hits 3.5-year high at 51.7, fifth straight month of growth",
-   "link": "https://investinglive.com/news/new-zealand-services-psi-hits-3-5-year-high-at-51-7-fifth-straight-month-of-growth/",
-   "summary": "A services reading at a multi-year high, led by new orders, strengthens the case that New Zealand’s recovery is spreading beyond a handful of sectors. That gives the New Zealand dollar modest support on the domestic…",
-   "published": "2026-11-15T21:42:46.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "1h0cnau",
@@ -210,17 +273,8 @@
    "category": "economy"
   },
   {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-11-15T11:18:48.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "87by4o",
-   "title": "Bitcoin falls to four-month low near $62K as crypto selloff deepens",
+   "title": "Bitcoin falls to 4-month low near $62K as crypto selloff deepens",
    "link": "https://cointelegraph.com/markets/bitcoin-four-month-low-62k-crypto-market-selloff?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "summary": "The global cryptocurrency market capitalization fell 4% to $2.26 trillion over 24 hours, while Ether and Solana posted double-digit weekly losses.",
    "published": "2026-11-15T10:23:17.000Z",
@@ -238,7 +292,7 @@
   },
   {
    "id": "1rbhfb6",
-   "title": "RWA protocol stUSDT winds down three years after $2.3B TVL peak",
+   "title": "RWA protocol stUSDT winds down 3 years after $2.3B TVL peak",
    "link": "https://cointelegraph.com/news/rwa-protocol-stusdt-winds-down-three-years-after-23b-tvl-peak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "summary": "The stUSDT team did not disclose a reason for winding down the RWA protocol but assured holders that all underlying assets remain fully backed.",
    "published": "2026-11-15T06:27:26.000Z",
@@ -309,15 +363,6 @@
    "category": "economy"
   },
   {
-   "id": "j60e7g",
-   "title": "Bitcoin ETFs shed $2.35B in 2 weeks, BlackRock’s losing streak hits 11",
-   "link": "https://cointelegraph.com/markets/bitcoin-etf-outflows-2-35-billion-blackrock-11-session-streak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "US spot Bitcoin ETFs recorded $185.4 million in net outflows Friday, with BlackRock’s IBIT accounting for $143.5 million and Fidelity’s FBTC shedding $41.9 million.",
-   "published": "2026-11-14T06:33:13.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "q0obni",
    "title": "‘It’s frustrating’: chaos at US airports as stoppage grinds travel plans to a halt",
    "link": "https://www.theguardian.com/us-news/2026/nov/13/us-airports-flight-stoppage",
@@ -334,24 +379,6 @@
    "published": "2026-11-13T23:00:31.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "149av6m",
-   "title": "OpenAI launches AI payments in ChatGPT with Visa, Mastercard and Amex",
-   "link": "https://cointelegraph.com/news/openai-ai-payments-chatgpt-wallet-visa-mastercard-amex?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "OpenAI’s new payment wallet lets AI agents complete purchases using existing card networks, with plans to eventually allow preauthorized transactions.",
-   "published": "2026-11-13T22:01:03.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "2nbswm",
-   "title": "Adam Back makes case for simpler security as Blockstream launches Bitcoin custody system",
-   "link": "https://cointelegraph.com/news/adam-back-simpler-security-blockstream-bitcoin-custody-system?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Blockstream’s new custody system, developed with Thales, uses dedicated hardware for transaction signing as Adam Back advocates for offline security to reduce cyber risks.",
-   "published": "2026-11-13T21:49:27.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1477oon",
@@ -435,15 +462,6 @@
    "category": "economy"
   },
   {
-   "id": "1p7udv",
-   "title": "Ex-Nvidia CEO Jensen Huang summoned to testify before Congress about affair with alleged Chinese spy",
-   "link": "https://www.bbc.co.uk/news/articles/cmq5vd1wdgz6o?at_medium=RSS&at_campaign=rss",
-   "summary": "Huang abruptly quit on Thursday as head of one of the world's most valuable companies after revelations of alleged extramarital affairs.",
-   "published": "2026-11-13T03:57:01.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "ymxa6b",
    "title": "How the Jensen Huang affair changes the outlook for U.S.-China relations",
    "link": "https://www.cnbc.com/2026/11/13/jensen-huang-nvidia-us-china-relations.html",
@@ -451,15 +469,6 @@
    "published": "2026-11-13T02:56:35.000Z",
    "source": "CNBC Finance",
    "category": "markets"
-  },
-  {
-   "id": "1srm695",
-   "title": "Burnham says 'win-win' deal can be agreed between UK and EU",
-   "link": "https://www.bbc.co.uk/news/articles/cm2l5n07l87vo?at_medium=RSS&at_campaign=rss",
-   "summary": "The prime minister says the deal could be \"more like the Brexit people thought they were voting for\" in 2016.",
-   "published": "2026-11-13T01:17:58.000Z",
-   "source": "BBC Business",
-   "category": "economy"
   },
   {
    "id": "lzq4tf",
@@ -586,15 +595,6 @@
    "published": "2026-11-10T16:45:00.000Z",
    "source": "ECB",
    "category": "economy"
-  },
-  {
-   "id": "1urhdz6",
-   "title": "U.S. gas prices fall below $4 for the first time since July",
-   "link": "https://www.cnbc.com/2026/11/10/us-gas-prices-below-four-dollars.html",
-   "summary": "Americans may finally find some relief at the pump.",
-   "published": "2026-11-10T16:29:09.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
   },
   {
    "id": "8se3uh",
