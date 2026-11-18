@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T19:38:23.309Z",
+ "updated": "2026-11-18T02:02:29.823Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,13 +12,229 @@
  },
  "items": [
   {
-   "id": "1q9059b",
-   "title": "Why Warren Buffet and Berkshire Hathaway keep going back to airlines",
-   "link": "https://investinglive.com/education/why-warren-buffet-and-berkshire-hathaway-keep-going-back-to-airlines/",
-   "summary": "Berkshire Hathaway is buying more Delta Air Lines and I think there's a fascinating story behind why Warren Buffett and his successors keep getting drawn back into the airline business. Berkshire's latest 13F filing,…",
-   "published": "2026-11-17T18:41:06.000Z",
+   "id": "pj8xwz",
+   "title": "Three things to watch as Trump, Xi and Putin meet in China",
+   "link": "https://www.cnbc.com/2026/11/18/apec-trump-xi-putin-shenzhen.html",
+   "summary": "U.S. President Donald Trump, Chinese President Xi Jinping and Russian President Vladimir Putin are set to meet in Shenzhen alongside an APEC leaders' meeting.",
+   "published": "2026-11-18T01:23:29.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "1y9xxxh",
+   "title": "Nvidia says it won't reinstate Huang as firm reports bumper results",
+   "link": "https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss",
+   "summary": "The AI chip giant reported strong quarterly earnings on Tuesday after the dramatic exit of Jensen Huang.",
+   "published": "2026-11-18T01:18:18.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "r9sqzh",
+   "title": "Australian wages jump 1.1%, strongest since 2023, but real pay falls for a fourth quarter",
+   "link": "https://investinglive.com/central-banks/australian-wages-beat-at-1-1-as-award-rise-hands-rba-hawks-a-fresh-argument/",
+   "summary": "The headline beat should support the Australian dollar and short-dated yields at the margin, as traders reassess how firmly they had ruled out another RBA hike. The detail limits the hawkish case, though. Private…",
+   "published": "2026-11-18T00:38:29.000Z",
    "source": "investingLive",
    "category": "forex"
+  },
+  {
+   "id": "zhdd5",
+   "title": "PBOC is expected to set the USD/CNY reference rate at 6.6654 – Reuters estimate",
+   "link": "https://investinglive.com/central-banks/pboc-is-expected-to-set-the-usd-cny-reference-rate-at-6-reuters-estimate-9/",
+   "summary": "The People’s Bank of China is due to set the daily USD/CNY reference rate at around 0115 GMT (2115 US Eastern time), a fixing that remains one of the most closely watched signals in Asian foreign exchange markets.…",
+   "published": "2026-11-18T00:29:15.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "yhwr61",
+   "title": "Nvidia board rejects Huang comeback despite record $116B quarter",
+   "link": "https://cointelegraph.com/markets/nvidia-board-rejects-huang-comeback-amid-record-116b-quarter?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Nvidia beat Wall Street’s revenue expectations by 5.6% and issued a stronger-than-expected sales forecast, while its board resisted growing calls for Jensen Huang’s reinstatement.",
+   "published": "2026-11-18T00:16:43.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "ly3y8u",
+   "title": "Japan’s trade deficit comes in at half the expected size as exports jump 20.5%",
+   "link": "https://investinglive.com/news/japan-s-trade-deficit-comes-in-at-half-the-expected-size-as-exports-jump-20-5/",
+   "summary": "The narrower deficit is mildly supportive for the yen because it reduces the yen sold to pay for imports. Rate differentials still dominate, though, and USD/JPY remains pinned near 160 while the Fed is on a hiking…",
+   "published": "2026-11-18T00:15:53.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "12cwcm8",
+   "title": "Europe plans to catch the next computer chip wave",
+   "link": "https://www.bbc.co.uk/news/articles/cqglwjd450k0o?at_medium=RSS&at_campaign=rss",
+   "summary": "Europe hopes to be a leader in a new generation of computer chips which use light to process data.",
+   "published": "2026-11-18T00:00:24.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "10czisc",
+   "title": "Back to the future! Nvidia earnings/forecast lifts Nasdaq futures 1.3%",
+   "link": "https://investinglive.com/stocks/back-to-the-future-nvidia-earnings-forecast-lifts-nasdaq-futures-1-3/",
+   "summary": "The bounce in Nasdaq futures should spread to Asia’s chip supply chain, with Taiwan, South Korea and Japan’s semiconductor names the most direct beneficiaries of Nvidia’s comments on pricing and supply deals. The…",
+   "published": "2026-11-17T23:46:21.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1hvd0wj",
+   "title": "Nvidia doubles revenue as board says it does not intend to reinstate Jensen Huang",
+   "link": "https://www.theguardian.com/technology/2026/nov/17/nvidia-third-quarter-revenue-jensen-huang",
+   "summary": "Company issues first earnings report after ouster of CEO over allegations of affair with suspected Chinese spy Nvidia “does not intend to reinstate Jensen as CEO”, the chairman of the company’s board said Tuesday.…",
+   "published": "2026-11-17T23:32:16.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "1hbng9u",
+   "title": "JPMorgan is working on AI agent transactions that don’t involve humans",
+   "link": "https://www.cnbc.com/2026/11/18/jpmorgan-hyundai-card-ai-agents-payments.html",
+   "summary": "JPMorgan and Hyundai Card are looking to expand the use of AI agents in financial transactions.",
+   "published": "2026-11-17T23:30:13.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "iswohv",
+   "title": "Supplier, lender, shareholder: how Nvidia became the \"Bank of AI\"",
+   "link": "https://investinglive.com/education/supplier-lender-shareholder-how-nvidia-became-the-bank-of-ai/",
+   "summary": "The commitments show how closely Nvidia’s fortunes are now tied to the financial health of AI labs and cloud providers, not just their appetite for chips. If funding conditions for those customers tighten, Nvidia faces…",
+   "published": "2026-11-17T23:26:58.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "iniydp",
+   "title": "Nvidia’s missing 10-Q: three reasons to be alert, not alarmed",
+   "link": "https://investinglive.com/stocks/nvidia-s-missing-10-q-three-reasons-to-be-alert-not-alarmed/",
+   "summary": "A delayed 10-Q keeps the governance overhang alive but does not undermine the reported numbers. A missed deadline or new legal disclosures would be the real trigger for selling. --- So far: Nvidia (price up) tops…",
+   "published": "2026-11-17T22:45:47.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-11-17T22:37:51.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1gz7gal",
+   "title": "Nvidia sees 75% revenue growth next year as Kress points to $2.5 trillion backlog",
+   "link": "https://investinglive.com/stocks/nvidia-sees-75-revenue-growth-next-year-as-kress-points-to-2-5-trillion-backlog/",
+   "summary": "A forecast of about 75% growth next year directly answers the worry that has weighed on AI stocks for the past month, which is that demand is peaking. The call turned sentiment, with the shares recovering from early…",
+   "published": "2026-11-17T22:31:11.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1s1qga4",
+   "title": "CFTC halts some Kalshi Trump mention markets over manipulation concerns",
+   "link": "https://cointelegraph.com/news/cftc-kalshi-trump-mention-markets-review?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The CFTC stayed Kalshi’s Trump-related mention markets after raising concerns about manipulation risks, giving the platform until Dec. 11 to defend its contracts.",
+   "published": "2026-11-17T22:20:04.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "5fz1ua",
+   "title": "Nvidia board shuts the door on Huang’s return, refuses to discuss his exit on call",
+   "link": "https://investinglive.com/stocks/nvidia-board-shuts-the-door-on-huang-s-return-refuses-to-discuss-his-exit-on-call/",
+   "summary": "The share dip shows investors care about leadership. A strong beat and higher guidance were not enough to hold the early after-hours gains once the board ruled out Huang’s return (note that investors are fickle and the…",
+   "published": "2026-11-17T22:14:38.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1oup68y",
+   "title": "Oil: Private inventory survey shows a headline crude oil build vs. draw expected",
+   "link": "https://investinglive.com/commodities/oil-private-inventory-survey-shows-a-headline-crude-oil-build-vs-draw-expected-1/",
+   "summary": "Via oilprice.com Expectations I had seen: Headline -0.5mn barrels Gasoline +1.6mn Distillates +1.1mn This article was written by Eamonn Sheridan at investinglive.com.",
+   "published": "2026-11-17T22:06:06.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1jg5ukl",
+   "title": "New Zealand producer prices rise again in Q3, though at a slower pace",
+   "link": "https://investinglive.com/news/new-zealand-producer-prices-rise-again-in-q3-though-at-a-slower-pace/",
+   "summary": "New Zealand producer prices Q3: Input prices: +0.7% q/q (prior +2.9%) Output prices: +0.8% q/q (prior +1.7%) Slower pace of gain suggests cost pressures on producers eased after a sharp jump in Q2. This article was…",
+   "published": "2026-11-17T22:06:00.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "177yupx",
+   "title": "Maple Finance CEO targets up to $15B in assets by the end of 2027",
+   "link": "https://cointelegraph.com/news/maple-finance-15b-assets-target-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Sidney Powell aims to reach $15 billion in assets under management by the end of 2027 as the firm looks to expand into tokenized lending and traditional finance.",
+   "published": "2026-11-17T21:56:35.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1ertqj5",
+   "title": "Judge extends deadline for Trump’s deposition in $10bn BBC lawsuit",
+   "link": "https://www.theguardian.com/us-news/2026/nov/17/trump-bbc-deposition-delay",
+   "summary": "President, who had agreed to sit for deposition in October but backed out, must now appear by 22 January Donald Trump has been granted a temporary delay before he must give a witness statement in his $10bn defamation…",
+   "published": "2026-11-17T21:45:58.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "17n9yny",
+   "title": "SEC reportedly probes Nvidia disclosures as Bessent demands answers within 10 days",
+   "link": "https://investinglive.com/stocks/sec-reportedly-probes-nvidia-disclosures-as-bessent-demands-answers-within-10-days/",
+   "summary": "The probe adds a fresh regulatory overhang just as the earnings beat gives the shares some relief, and it may limit how much of that rally holds. A disclosure investigation goes to the heart of how far investors can…",
+   "published": "2026-11-17T21:43:59.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1cg5zd4",
+   "title": "Nvidia hands three directors export control oversight days after Huang exit",
+   "link": "https://investinglive.com/stocks/nvidia-hands-three-directors-export-control-oversight-days-after-huang-exit/",
+   "summary": "The committee is unlikely to move the shares much, since the earnings beat is driving overnight trade. Its value is in reducing tail risk: a formal board-level response could help calm regulators and lawmakers who have…",
+   "published": "2026-11-17T21:36:48.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1yknm6p",
+   "title": "Eastern Europe crypto flows fall 7.9% as Ukraine draws $12B in stablecoins",
+   "link": "https://cointelegraph.com/news/eastern-europe-crypto-activity-decline-chainalysis?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Chainalysis found that Eastern Europe recorded the steepest decline in crypto activity of any region, while cross-border stablecoin transfers to Ukraine continued amid the ongoing war.",
+   "published": "2026-11-17T20:05:04.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1deeyte",
+   "title": "Speed camera fault may have allowed drivers to escape fines",
+   "link": "https://www.bbc.co.uk/news/articles/c5y4j7z373kzo?at_medium=RSS&at_campaign=rss",
+   "summary": "The Home Office has revoked approval that allowed footage from speed cameras to be used in evidence.",
+   "published": "2026-11-17T20:04:54.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1v3ye0q",
+   "title": "Government backs welfare shake-up to prevent 'lost generation'",
+   "link": "https://www.bbc.co.uk/news/articles/ck79210y125xo?at_medium=RSS&at_campaign=rss",
+   "summary": "Ex-minister Alan Milburn has set out plans to divert spending from benefits towards job support.",
+   "published": "2026-11-17T18:43:05.000Z",
+   "source": "BBC Business",
+   "category": "economy"
   },
   {
    "id": "8qv6gh",
@@ -39,15 +255,6 @@
    "category": "economy"
   },
   {
-   "id": "dvm12u",
-   "title": "Nvidia earnings after the close. The price is testing a key downside target. What are the key levels for traders?",
-   "link": "https://investinglive.com/stocks/nvidia-earnings-are-to-be-released-after-the-close-the-price-is-testing-a-key-downside-target/",
-   "summary": "Shares of Nvidia reached a all-time high price of $243.37 back on October 5. Since then, the price has fallen by -$94.57 or -38.86% to a cycle lows reached last week on November 12 at $148.80. Today, the price retested…",
-   "published": "2026-11-17T18:03:44.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1vhj2n2",
    "title": "Lighter incident exposes risks beyond withdrawal controls",
    "link": "https://cointelegraph.com/news/lighter-incident-exposes-risks-beyond-withdrawal-controls?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -66,11 +273,11 @@
    "category": "crypto"
   },
   {
-   "id": "1c2rnsf",
-   "title": "Markets drop ahead of Nvidia’s results; Jensen Huang says he’d be ‘honoured’ to return as CEO – as it happened",
-   "link": "https://www.theguardian.com/business/live/2026/nov/17/uk-jobs-market-wage-growth-payrolls-unemployment-milburn-china-us-chips-latest-news-updates",
-   "summary": "Rolling coverage of the latest economic and financial news Jensen Huang says he would be ‘honored’ to return to Nvidia as CEO Jensen Huang’s departure as Nvidia CEO becomes a political proxy war China has threatened to…",
-   "published": "2026-11-17T16:54:21.000Z",
+   "id": "1oagm42",
+   "title": "People in the US: how are you celebrating Thanksgiving this year amid rising costs in the US?",
+   "link": "https://www.theguardian.com/us-news/2026/nov/17/americans-celebrating-thanksgiving-costs-callout",
+   "summary": "Are you hosting or attending the holiday differently than years past? What are you cutting back on? Thanksgiving is fast approaching, when people traditionally get together to celebrate with family and friends on this…",
+   "published": "2026-11-17T17:04:50.000Z",
    "source": "The Guardian Business",
    "category": "economy"
   },
@@ -84,24 +291,6 @@
    "category": "crypto"
   },
   {
-   "id": "1mgizb7",
-   "title": "Flight to safety concerns from continued cyber issues send stocks lower, yields lower, gold higher, JPY and CHF up",
-   "link": "https://investinglive.com/technical-analysis/flight-to-safety-concerns-from-continued-cyber-issues-send-stocks-lower-yields-lower-gold-higher-jpy-and-chf-up/",
-   "summary": "Reports that the National Security Agency’s internal communications network is down have added uncertainty to trading. Reuters, citing CNN, reports that the scope is being investigated, with no immediate evidence of a…",
-   "published": "2026-11-17T16:15:53.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "4regzt",
-   "title": "Jensen Huang says open to return as CEO if board allows",
-   "link": "https://investinglive.com/stocks/jensen-huang-says-open-to-return-as-ceo-if-board-allows/",
-   "summary": "Shares of Nvidia are bouncing after founder Jensen Huang broke his silence. In a statement, he said he was open to returning as CEO if the board allows it. That news has helped the entire market. Yesterday, there was a…",
-   "published": "2026-11-17T16:00:14.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "wm1dom",
    "title": "We can't afford to hire under-25s, say firms. Will Milburn plans help?",
    "link": "https://www.bbc.co.uk/news/articles/c6d01e8m15mko?at_medium=RSS&at_campaign=rss",
@@ -109,78 +298,6 @@
    "published": "2026-11-17T15:56:04.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "gk9wvm",
-   "title": "It's getting tough to believe all these internet outages are a coincidence",
-   "link": "https://investinglive.com/news/it-s-getting-tough-to-believe-all-these-internet-outages-are-a-coincidence/",
-   "summary": "At some point, coinsidences become a pattern and we're now well-beyond that. CNN reports that the American National Security Agency's classified internal comms network—NSANet -- is down. It's a highly-classified nework…",
-   "published": "2026-11-17T15:49:38.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "h8tbcn",
-   "title": "Nasdaq stretching toward the swing area and 50% retracement targets. Key support being tested.",
-   "link": "https://investinglive.com/stocks/nasdaq-stretching-toward-the-swing-area-and-50-retracement-targets-key-support-being-tested/",
-   "summary": "The Nasdaq Composite has moved sharply lower after breaking below its rising trend channel and key moving averages. Those breaks shifted the technical bias in favor of the sellers. The question now is whether buyers…",
-   "published": "2026-11-17T15:11:02.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1deeyte",
-   "title": "Speed camera fault may have allowed drivers to escape fines",
-   "link": "https://www.bbc.co.uk/news/articles/c5y4j7z373kzo?at_medium=RSS&at_campaign=rss",
-   "summary": "The Home Office has revoked approval that allowed footage from speed cameras to be used in evidence.",
-   "published": "2026-11-17T15:08:48.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "pou9hk",
-   "title": "US Sept business inventories +0.5% vs +0.4% prior",
-   "link": "https://investinglive.com/news/us-sept-business-inventories-vs-0-4-prior/",
-   "summary": "Prior was +0.4% Retail inventories ex-autos +0.5% vs +0.4% prior This report is rarely a market mover but it's an input into GDP, so a strong number will boost tracking estimates and vice versa. For background, the…",
-   "published": "2026-11-17T15:08:21.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "hf6x5v",
-   "title": "US bank services returning to normal after major outage",
-   "link": "https://www.bbc.co.uk/news/articles/cj752wvqneq6o?at_medium=RSS&at_campaign=rss",
-   "summary": "Chase Bank, the largest US bank, said a software bug might be causing the issue, but that it was not \"systemic'\" or \"cyber-related\".",
-   "published": "2026-11-17T15:04:24.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "1ps8uo",
-   "title": "Home Depot earnings offer a mixed picture of the US consumer as spending improves but traffic remains weak",
-   "link": "https://investinglive.com/stocks/home-depot-earnings-offer-a-mixed-picture-of-the-us-consumer-as-spending-improves-but-traffic-remains-weak-0/",
-   "summary": "Home Depot reported better-than-expected third-quarter earnings and sales on Tuesday but shares fell 1.9% in premarket trading as the company faces margin pressure. It's the first of the major retailers to report this…",
-   "published": "2026-11-17T15:02:51.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "u44635",
-   "title": "NAHB housing market index for November 25 vs 29 estimate",
-   "link": "https://investinglive.com/news/nahb-housing-market-index-for-november-25-vs-29-estimate/",
-   "summary": "Prior 29 Builder confidence weakens across all components, with current sales posting the largest decline. The NAHB/Wells Fargo Housing Market Index fell 4 points to 25 in November from 29 in October. That is the…",
-   "published": "2026-11-17T15:00:21.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-11-17T14:54:40.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1a1a8l2",
@@ -199,33 +316,6 @@
    "published": "2026-11-17T14:25:45.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "ittwis",
-   "title": "Bitcoin is continuing the consolidation but sellers remain in control",
-   "link": "https://investinglive.com/cryptocurrency/bitcoin-is-continuing-the-consolidation-but-sellers-remain-in-control/",
-   "summary": "Sellers have controlled the technical breaks. Going back to November 5, Bitcoin fell below its 100 and 200 hour moving averages and its 100 day moving average—all on the same day. That series of breaks shifted control…",
-   "published": "2026-11-17T14:23:02.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "130rsjj",
-   "title": "US October industrial production -0.4% vs +0.1% expected",
-   "link": "https://investinglive.com/news/us-october-industrial-production-0-4-vs-0-1-expected/",
-   "summary": "Prior was +0.7% Capacity utilization 76.4% vs 76.8% exp Manufacturing output +0.3% vs +0.2% expected Prior manufacturing output +0.3% Mining -0.8% vs +0.2% prior Utilities -4.3% vs +3.5% prior Y/y +2.1% vs +2.25% prior…",
-   "published": "2026-11-17T14:17:35.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1p3w37",
-   "title": "Home Depot earnings offer a mixed picture of the US consumer as spending improves but traffic remains weak",
-   "link": "https://investinglive.com/stocks/home-depot-earnings-offer-a-mixed-picture-of-the-us-consumer-as-spending-improves-but-traffic-remains-weak/",
-   "summary": "Home Depot reported better-than-expected third-quarter earnings and sales on Tuesday but shares fell 1.9% in premarket trading as the company faces margin pressure. It's the first of the major retailers to report this…",
-   "published": "2026-11-17T14:10:19.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "1493r2w",
@@ -282,24 +372,6 @@
    "category": "crypto"
   },
   {
-   "id": "8asoyl",
-   "title": "US senators seek SEC answers on tokenized stock money laundering risks",
-   "link": "https://cointelegraph.com/news/us-senators-sec-tokenized-stock-safeguards?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Four Democratic senators asked who would be responsible for tokenized shares transferred outside regulated platforms and whether the SEC could freeze or recover those tokens.",
-   "published": "2026-11-17T11:36:26.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "agr6zd",
-   "title": "BlackRock’s Bitcoin ETF snaps $2.35B outflow streak amid extreme fear",
-   "link": "https://cointelegraph.com/markets/blackrock-ibit-outflow-streak-end-extreme-fear?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "BlackRock’s Bitcoin ETF ended 11 sessions of withdrawals totaling $2.35 billion, but CryptoQuant says one day of inflows is too early to signal a recovery.",
-   "published": "2026-11-17T11:18:18.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1m0v40x",
    "title": "US government confirms investigation into tech firm Megaspeed",
    "link": "https://www.bbc.co.uk/news/articles/cmn504nq5033o?at_medium=RSS&at_campaign=rss",
@@ -307,24 +379,6 @@
    "published": "2026-11-17T11:17:32.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "1airxcj",
-   "title": "Bitcoin realized loss metric beats June high as open interest eyes 2-year low",
-   "link": "https://cointelegraph.com/markets/bitcoin-realized-loss-metric-beats-june-high-open-interest-eyes-2-year-low?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitcoin short-term holders’ onchain spending notched the largest proportion of realized losses since February after BTC/USD dropped to $62,000.",
-   "published": "2026-11-17T11:14:05.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "10f8buf",
-   "title": "Google says hackers use AI agents to find and exploit software flaws",
-   "link": "https://cointelegraph.com/news/google-ai-agents-automated-cyberattacks-software-flaws?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Google says attackers are using AI agents to find and exploit software flaws automatically, reducing the time organizations have to apply patches.",
-   "published": "2026-11-17T10:05:59.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "kmyuva",
@@ -342,15 +396,6 @@
    "summary": "Airline acknowledges ‘technology issue that delayed flight departures’ in latest high-profile outage to affect Americans United ⁠Airlines said on ⁠Monday ⁠that it had resolved ⁠a widespread system ⁠outage, just three…",
    "published": "2026-11-17T02:57:06.000Z",
    "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "bjv11",
-   "title": "Nvidia dismisses 'Bring Jensen Back' campaign as Trump backs effort to reinstate ex boss",
-   "link": "https://www.bbc.co.uk/news/articles/cry49plv8v3go?at_medium=RSS&at_campaign=rss",
-   "summary": "A number of tech figures have backed an effort asking the AI chip giant to give Jensen Huang his job back.",
-   "published": "2026-11-17T02:37:53.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
@@ -453,15 +498,6 @@
    "category": "markets"
   },
   {
-   "id": "1it7s3g",
-   "title": "Create more jobs for under-25s by cutting National Insurance, key report urges",
-   "link": "https://www.bbc.co.uk/news/articles/c6p9dzmj514ko?at_medium=RSS&at_campaign=rss",
-   "summary": "Some parents are so desperate for their children to find a job that they've offered to pay their wages, one hairdresser has told the BBC.",
-   "published": "2026-11-16T13:19:33.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "1btp0ek",
    "title": "Frank Elderson: Smart supervision for small banks",
    "link": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261116_1~11dd7f62af.en.html",
@@ -525,30 +561,12 @@
    "category": "economy"
   },
   {
-   "id": "q0obni",
-   "title": "‘It’s frustrating’: chaos at US airports as stoppage grinds travel plans to a halt",
-   "link": "https://www.theguardian.com/us-news/2026/nov/13/us-airports-flight-stoppage",
-   "summary": "Travelers and crew feeling ‘pissed’ or ‘lucky’ depending on level of upset amid nationwide ground stop The decision to ground all flights on Friday by the US Federal Aviation Administration (FAA) threw airports and…",
-   "published": "2026-11-14T02:49:59.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
    "id": "1477oon",
    "title": "Agencies extend comment period for proposed third-party risk management guidance",
    "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm",
    "summary": "Agencies extend comment period for proposed third-party risk management guidance",
    "published": "2026-11-13T21:15:00.000Z",
    "source": "Federal Reserve",
-   "category": "economy"
-  },
-  {
-   "id": "1h79n4j",
-   "title": "Microsoft outage shakes up companies, schools and local governments across US",
-   "link": "https://www.theguardian.com/technology/2026/nov/13/microsoft-outage-shakes-up-companies-local-governments",
-   "summary": "Local officials warn some services remain unavailable even as Outlook starts to resume normal operations after outage The Microsoft Outlook outage has shaken up companies and local governments across the US that use…",
-   "published": "2026-11-13T21:13:59.000Z",
-   "source": "The Guardian Business",
    "category": "economy"
   },
   {
@@ -577,24 +595,6 @@
    "published": "2026-11-13T07:20:00.000Z",
    "source": "ECB",
    "category": "economy"
-  },
-  {
-   "id": "ymxa6b",
-   "title": "How the Jensen Huang affair changes the outlook for U.S.-China relations",
-   "link": "https://www.cnbc.com/2026/11/13/jensen-huang-nvidia-us-china-relations.html",
-   "summary": "The political climate heading into next week's Trump-Xi summit is drastically different from the last meeting in September.",
-   "published": "2026-11-13T02:56:35.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
-   "id": "1vm3v8t",
-   "title": "In a policy switch, the Fed says its October 2027 meeting will not see a vote on interest rates",
-   "link": "https://www.cnbc.com/2026/11/12/in-policy-switch-fed-says-its-october-2027-meeting-will-not-see-a-vote-on-interest-rates.html",
-   "summary": "There will be seven voting meetings next year, with the October session set up as extra time for policy deliberation without a formal vote or post-meeting statement.",
-   "published": "2026-11-12T19:05:25.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
   },
   {
    "id": "x8xkvp",
