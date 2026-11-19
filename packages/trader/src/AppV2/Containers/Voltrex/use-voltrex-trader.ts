@@ -13,6 +13,8 @@ import type { TAutoConfig, TOrder, TPlaceResult, TTraderSnapshot, VoltrexTrader 
 
 const RISK_KEY = 'voltrex_risk_settings';
 const DAY_KEY = 'voltrex_day_state_';
+/** How long a failed "what does this market sell" lookup is remembered before the market is asked again. */
+const SPECS_RETRY_MS = 15_000;
 
 const read = <T>(key: string): T | null => {
     try {
@@ -100,6 +102,14 @@ export const useVoltrexTrader = (rows: TScanRow[], getDigits?: (symbol: string) 
                     response = await WS.storage.contractsFor(symbol);
                     if (!isRateLimit(response)) break;
                     backOff();
+                }
+                // an error reply (such as RateLimit) says nothing about what the market sells, so it is not kept for
+                // the session: the market is asked again after a short pause instead of being treated as having
+                // no contracts at all
+                if (!(response as { contracts_for?: unknown } | undefined)?.contracts_for) {
+                    setTimeout(() => {
+                        specs.current.delete(symbol);
+                    }, SPECS_RETRY_MS);
                 }
                 return parseSpecs(response);
             } catch {

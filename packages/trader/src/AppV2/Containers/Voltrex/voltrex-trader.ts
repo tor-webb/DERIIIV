@@ -942,6 +942,11 @@ export class VoltrexTrader {
                     note = localize('No market fits the {{strategy}} strategy right now.', {
                         strategy: config.strategy,
                     });
+                } else if (candidates.length) {
+                    // they reach the minimum, but none could be placed (not offered, or a trade is already open)
+                    note = localize('{{count}} markets qualify, but none could be placed right now. See the log.', {
+                        count: candidates.length,
+                    });
                 } else note = localize('Markets fit the strategy, but none reaches your minimum strength yet.');
             }
             this.scan = {
