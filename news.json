@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T08:00:12.817Z",
+ "updated": "2026-11-20T17:05:47.599Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,13 +12,310 @@
  },
  "items": [
   {
-   "id": "gpy6jj",
-   "title": "Tinned goods and long-life milk boost retail sales after 'Be Ready' campaign launch",
-   "link": "https://www.bbc.co.uk/news/articles/ck053mzy2qqeo?at_medium=RSS&at_campaign=rss",
-   "summary": "People stocking up on long-life food drove retail sales higher October, according to official data.",
-   "published": "2026-11-20T07:44:29.000Z",
+   "id": "1ky1oiz",
+   "title": "Bitcoin falls below $60K for first time since July amid broader market selloff",
+   "link": "https://cointelegraph.com/markets/bitcoin-falls-below-60k-for-first-time-since-july-amid-broader-market-selloff?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Bitcoin fell nearly 6% as US stocks declined, with the Nasdaq dropping more than 2% and Anthropic shares losing almost 10%.",
+   "published": "2026-11-20T16:55:51.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "8dkrdr",
+   "title": "Faisal Islam: This cost-cutting UK-EU deal doesn't mean lower prices will follow",
+   "link": "https://www.bbc.co.uk/news/articles/cm1wr029evnqo?at_medium=RSS&at_campaign=rss",
+   "summary": "The trade deal is unlikely lower food prices for shoppers, but should boost the economy more than other post-Brexit agreements.",
+   "published": "2026-11-20T16:41:52.000Z",
    "source": "BBC Business",
    "category": "economy"
+  },
+  {
+   "id": "vzwb87",
+   "title": "Anthropic shares fall a day after blockbuster opening",
+   "link": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
+   "summary": "Other tech companies have also taken a hit as share markets broadly slump.",
+   "published": "2026-11-20T16:27:47.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "2c0726",
+   "title": "AI-linked stocks slide. Sandisk leads 14 names down more than 9%",
+   "link": "https://investinglive.com/stocks/ai-linked-stocks-slide-sandisk-leads-14-names-down-more-than-9/",
+   "summary": "Fourteen stocks on the AI watchlist are down more than 9%, with nine posting double-digit losses. The selling stretches from memory and storage to the companies that connect, power and operate AI data centers. Memory…",
+   "published": "2026-11-20T15:57:08.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "dsc998",
+   "title": "US Senate advances prediction market restrictions with DEATH BETS Act",
+   "link": "https://cointelegraph.com/news/us-senate-advances-prediction-market-restrictions-with-death-bets-act?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The Senate-approved bill would ban prediction market contracts tied to war, assassination and death amid concerns over potential insider trading on military events.",
+   "published": "2026-11-20T15:55:22.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1hw3v4l",
+   "title": "Bitcoin price drops to $60K as Anthropic drops to $87 in tech sell-off",
+   "link": "https://cointelegraph.com/markets/bitcoin-hits-new-20-week-low-anthropic-drops-87-tech-sell-off?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Bitcoin price strength felt pressure from falling US equities as traders reassessed AI prospects after Anthropic’s IPO.",
+   "published": "2026-11-20T15:52:06.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "12lgvjw",
+   "title": "Airbnb's divisive new house rules come into force",
+   "link": "https://www.bbc.co.uk/news/articles/cmx278n2genyo?at_medium=RSS&at_campaign=rss",
+   "summary": "New rules on what Airbnb hosts can reasonably ask guests to do could mean fewer chores but higher costs for customers.",
+   "published": "2026-11-20T15:48:35.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "98q3ci",
+   "title": "Bessent says Trump and Xi saw robust discussion on trade policy, AI",
+   "link": "https://investinglive.com/news/bessent-says-trump-and-xi-saw-robust-discussion-on-trade-policy-ai/",
+   "summary": "U.S. Treasury Secretary Bessent speaking on CNBC about Trump’s China trip, military AI and U.S. chip restrictions. Trump’s China trip saw robust discussion on trade policy, AI. Trump and Xi agreed that humans should be…",
+   "published": "2026-11-20T15:33:55.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "q6j8eo",
+   "title": "DBS bets it can lose the deposit and keep the client",
+   "link": "https://cointelegraph.com/news/dbs-bets-it-can-lose-the-deposit-and-keep-the-client?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The Singapore bank earned a record $208 million in transaction services fees in the third quarter — now it’s helping companies turn deposits into stablecoins they can spend without it.",
+   "published": "2026-11-20T15:32:30.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "wusjhl",
+   "title": "Anthropic shares slide as AI sell-off hits global markets - as it happened",
+   "link": "https://www.theguardian.com/business/live/2026/nov/20/asia-stocks-worst-anthropic-ipo-ai-stock-market-latest-updates-news",
+   "summary": "Rolling coverage of the latest economic and financial news California has served an investigative subpoena on Nvidia after a scandal that prompted the departure of co-founder and longtime chief executive Jensen Huang .…",
+   "published": "2026-11-20T15:25:09.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "bzravx",
+   "title": "Warsh wants Fed officials to talk less. Instead, they’re talking more",
+   "link": "https://www.cnbc.com/2026/11/20/warsh-fed-forward-guidance-rate-hikes.html",
+   "summary": "Fed officials have been rushing to the microphones lately while the Fed chairman stays on the sidelines.",
+   "published": "2026-11-20T15:20:54.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "1xwhqmg",
+   "title": "S&P 500 turns positive, but the Nasdaq indices remain in technical triage",
+   "link": "https://investinglive.com/stocks/s-p-500-turns-positive-but-the-nasdaq-indices-remain-in-technical-triage/",
+   "summary": "The broader U.S. stock indices opened lower and are trying to find their footing after the sharp declines seen recently. The S&P 500 has been the first of the three to move back into modest positive territory. The…",
+   "published": "2026-11-20T15:17:01.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "hwnnk4",
+   "title": "University of Michigan consumer sentiment 51.5 versus 51.5 estimate",
+   "link": "https://investinglive.com/news/university-of-michigan-consumer-sentiment-51-5-versus-51-5-estimate/",
+   "summary": "University of Michigan consumer sentiment: 51.5 vs 51.5 expected. Preliminary 51.0. October 48.0. Current economic conditions: 49.4 vs 51.6 expected. Preliminary 51.0. October 46.7. Consumer expectations: 52.9.…",
+   "published": "2026-11-20T15:04:05.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1hb8ltg",
+   "title": "Federal Reserve Board releases results from survey of senior financial officers at banks about their strategies and practices for managing reserve balances",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120a.htm",
+   "summary": "Federal Reserve Board releases results from survey of senior financial officers at banks about their strategies and practices for managing reserve balances",
+   "published": "2026-11-20T15:00:00.000Z",
+   "source": "Federal Reserve",
+   "category": "economy"
+  },
+  {
+   "id": "18i94iz",
+   "title": "Bitcoin tests key swing area low. A break below will target the 2026 lows",
+   "link": "https://investinglive.com/cryptocurrency/bitcoin-tests-key-swing-area-low-a-break-below-will-target-the-2026-lows/",
+   "summary": "Bitcoin moved to its lowest level since early July, trading down to $61,160. That took the price $23 below the $61,183 level that marks the bottom of a key swing area on the four-hour chart, but momentum faded and the…",
+   "published": "2026-11-20T14:22:41.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1x66jyf",
+   "title": "The bull market has a new problem. The 'smart money' is selling",
+   "link": "https://www.cnbc.com/2026/11/20/equity-issuance-bull-market-problem.html",
+   "summary": "Companies are shifting from share buybacks to stock issuance, adding new supply. Anthropic’s $81 billion IPO puts that demand to the test.",
+   "published": "2026-11-20T14:15:29.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "1hwrjd8",
+   "title": "Greer says US-China trade truce extension hinges on rare earths",
+   "link": "https://investinglive.com/news/greer-says-us-china-trade-truce-extension-hinges-on-rare-earths/",
+   "summary": "US Trade Representative Greer spoke on Bloomberg TV about the Trump-Xi meeting and the outlook for US-China trade. Section 301 investigations are expected before year-end. China brought up Taiwan at the talks. Any…",
+   "published": "2026-11-20T14:06:16.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1ez85l",
+   "title": "Canada retail sales comes in stronger at 0.8% vs 0.7% estimate. Core up 1.0% vs 0.7% estimate.",
+   "link": "https://investinglive.com/news/canada-retail-sales-comes-in-stronger-at-0-8-vs-0-7-estimate-core-up-1-0-vs-0-7-estimate/",
+   "summary": "Prior month 1.2% revised higher to 1.4% Details of the September 2026 stronger retail sales report Retail sales rose 0.8% MoM to C$75.3 billion. Statistics Canada’s advance estimate was +0.7%. August was initially…",
+   "published": "2026-11-20T13:30:24.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-11-20T13:29:58.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1n7y695",
+   "title": "U.S.-China trade, Taiwan and tech tensions remain unresolved as Trump returns from Asia",
+   "link": "https://www.cnbc.com/2026/11/20/apec-summit-trump-xi-china-trade-taiwan.html",
+   "summary": "Analysts note few concrete outcomes from the high-profile trilateral and other meetings for APEC in Shenzhen this week.",
+   "published": "2026-11-20T13:29:50.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "11tnah",
+   "title": "Morning Kickstart. Anthropic slides after its IPO and gold breaks lower",
+   "link": "https://investinglive.com/technical-analysis/morning-kickstart-anthropic-slides-after-its-ipo-and-gold-breaks-lower/",
+   "summary": "Anthropic (ANT) is giving back much of its first-day gain. The stock was trading at $87.72 at 7:43 AM ET, down $9.45, or 9.7%, from Thursday’s $97.17 close. The IPO was priced at $83, and the stock traded as high as…",
+   "published": "2026-11-20T13:25:32.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "19brffj",
+   "title": "Lagarde warns Europe could miss chance to unify tokenized markets",
+   "link": "https://cointelegraph.com/news/lagarde-europe-limited-window-tokenization-rules?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The ECB president said Europe’s market for tokenized securities could split into platforms that cannot settle trades with one another.",
+   "published": "2026-11-20T13:21:39.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "y2ivh",
+   "title": "The stock market's wealth effect: why it matters even if you don't own stocks",
+   "link": "https://investinglive.com/education/the-stock-market-s-wealth-effect-why-it-matters-even-if-you-don-t-own-stocks/",
+   "summary": "Equity market movements can have a significant impact on the economy through the so-called \"wealth effect\", changes in financial conditions and the influence on corporate investment and hiring decisions. People can be…",
+   "published": "2026-11-20T13:20:19.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1aw79hr",
+   "title": "GTA 6 drives spike in download demand, as estimated sales top $2.3bn",
+   "link": "https://www.bbc.co.uk/news/articles/c9zr5nyv5dj2o?at_medium=RSS&at_campaign=rss",
+   "summary": "Rockstar Games ended a 13-year wait with what is expected to be the biggest entertainment launch ever.",
+   "published": "2026-11-20T13:08:30.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1medx7",
+   "title": "Is ANT stock a buy or sell?",
+   "link": "https://investinglive.com/stocks/is-ant-stock-a-buy-or-sell/",
+   "summary": "Anthropic stock is sliding toward $83. Could Wall Street have a reason to defend its IPO price? Anthropic shares have surrendered much of their spectacular IPO debut as the AI sector comes under pressure. A closer…",
+   "published": "2026-11-20T12:45:20.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "qlkzal",
+   "title": "investingLive European news wrap: Stock markets remain under pressure, bonds rally on slowdown expectations",
+   "link": "https://investinglive.com/news/investinglive-european-news-wrap-stock-markets-remain-under-pressure-bonds-rally-on-slowdown-expectations/",
+   "summary": "Articles: How have interest rate expectations changed after this week's events? Zcash's bearish trend remains intact as the path to recovery depends on two major macro catalysts Is Nvidia stock a buy or sell? My…",
+   "published": "2026-11-20T12:31:26.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "194xz49",
+   "title": "How have interest rate expectations changed after this week's events?",
+   "link": "https://investinglive.com/central-banks/how-have-interest-rate-expectations-changed-after-this-week-s-events-9/",
+   "summary": "Rate hikes by year-end BoE: 20 bps (79% probability of rate hike at the next meeting) 2027: 82 bps RBNZ: 21 bps (83% probability of rate hike at the next meeting) 2027: 78 bps BoC: 15 bps (62% probability of rate hike…",
+   "published": "2026-11-20T11:41:42.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "p7v4hg",
+   "title": "Binance hacker moves nearly $600M in ETH, routes funds through THORChain, Chainflip",
+   "link": "https://cointelegraph.com/news/binance-hacker-600m-eth-routes-thorchain-chainflip?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "OnChain Lens tracked nearly $600 million in ETH transfers over two days as the Binance hackers moved the stolen funds through fresh wallets and cross-chain protocols to obscure their trail.",
+   "published": "2026-11-20T11:31:41.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1blr4u5",
+   "title": "VanEck to end Gemini ETF custody deals, keeps Coinbase",
+   "link": "https://cointelegraph.com/news/vaneck-gemini-etf-custody-end-keep-coinbase?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "VanEck plans to end Gemini’s custody agreements for three crypto ETFs in February 2027, while Coinbase will continue serving as a custodian for the funds.",
+   "published": "2026-11-20T10:54:38.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "e3tqwo",
+   "title": "Bitcoin nears repeat of chart pattern that preceded 2023’s $25K retest",
+   "link": "https://cointelegraph.com/markets/bitcoin-first-death-cross-repeat-2023-bottom-25k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Bitcoin’s 21-day moving average fell below its 200-day average, and analyst Keith Alan expects a second bearish crossover by Sunday.",
+   "published": "2026-11-20T10:29:10.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "gpy6jj",
+   "title": "Tinned food and long-life milk boost retail sales after 'Be Ready' campaign launch",
+   "link": "https://www.bbc.co.uk/news/articles/ck053mzy2qqeo?at_medium=RSS&at_campaign=rss",
+   "summary": "People stocking up on long-life food drove retail sales higher October, according to official data.",
+   "published": "2026-11-20T09:44:56.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "dkk7ck",
+   "title": "Christine Lagarde: Acting in time",
+   "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261120~e52bcc4db2.en.html",
+   "summary": "",
+   "published": "2026-11-20T08:30:00.000Z",
+   "source": "ECB",
+   "category": "economy"
+  },
+  {
+   "id": "101efki",
+   "title": "BlackRock’s IBIT loses record $541M amid Anthropic market debut",
+   "link": "https://cointelegraph.com/markets/blackrock-ibit-record-single-day-outflow?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "BlackRock’s IBIT posted its largest daily outflow on record, taking three-session outflows near $900 million as BTC dipped amid a broader market selloff.",
+   "published": "2026-11-20T08:18:42.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "14todld",
+   "title": "SEC charges 8 firms over fake crypto platforms tied to $37M fraud",
+   "link": "https://cointelegraph.com/news/sec-charges-eight-fake-crypto-platforms-37m-fraud?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The SEC says the operators showed investors fake certificates and pointed them to filings on the agency’s website as proof of regulatory approval.",
+   "published": "2026-11-20T08:03:34.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
   },
   {
    "id": "1alvmtb",
@@ -27,6 +324,15 @@
    "summary": "Would AI be a good judge of whether you should get a mortgage, car loan or mobile phone contract?",
    "published": "2026-11-20T07:32:19.000Z",
    "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "kcwb3j",
+   "title": "What impact has Brexit had on the UK and EU economies?",
+   "link": "https://www.theguardian.com/business/2026/nov/20/what-impact-brexit-uk-eu-economies",
+   "summary": "As talks are held in Brussels over closer relations, we examine the economic context and the challenges ahead UK-EU summit live: latest news updates The UK and EU will hold the second summit since Brexit on Friday…",
+   "published": "2026-11-20T07:00:26.000Z",
+   "source": "The Guardian Business",
    "category": "economy"
   },
   {
@@ -48,154 +354,10 @@
    "category": "economy"
   },
   {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-11-20T06:00:00.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "19st1mw",
-   "title": "investingLive Asia-Pacific market news: Red Friday as Asia’s AI trade unravels",
-   "link": "https://investinglive.com/news/investinglive-asia-pacific-market-news-red-friday-as-asia-s-ai-trade-unravels/",
-   "summary": "UBS cuts global stocks to Neutral, days after Morgan Stanley went maximum overweight No, the Fed isn’t pumping $1.756 billion into markets on Friday morning: what that viral post gets wrong A December BoJ hike may not…",
-   "published": "2026-11-20T04:39:38.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1srq0i0",
-   "title": "UBS cuts global stocks to Neutral, days after Morgan Stanley went maximum overweight",
-   "link": "https://investinglive.com/stock-market-update/ubs-cuts-global-stocks-to-neutral-days-after-morgan-stanley-went-maximum-overweight/",
-   "summary": "The split between two tier-one houses underlines how finely balanced the 2027 equity case is. Concentration in AI-linked megacaps is the fault line. UBS’s preference for the Eurozone, equal-weight US strategies,…",
-   "published": "2026-11-20T03:54:38.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1sul7xu",
-   "title": "Institutions pile back into US Bitcoin ETFs in Q3 after selling streak",
-   "link": "https://cointelegraph.com/markets/institutional-bitcoin-etf-holdings-clock-record-quarter-after-selling-streak?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Asset managers added the equivalent of 49,229 Bitcoin to their US Bitcoin ETF holdings in the third quarter, reversing three quarters of net selling.",
-   "published": "2026-11-20T03:33:22.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "b0yf5i",
-   "title": "No, the Fed isn’t pumping $1.756 billion into markets on Friday morning: what that viral post gets wrong",
-   "link": "https://investinglive.com/stocks/no-the-fed-isn-t-pumping-1-756-billion-into-markets-on-friday-morning-what-that-viral-post-gets-wrong/",
-   "summary": "These operations are pre-announced, small relative to the Treasury market and reserve-neutral, so they carry no policy signal. The real liquidity story is the Fed’s hiking path (eg. J.P. Morgan now sees three straight…",
-   "published": "2026-11-20T03:24:06.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1sg0uxc",
-   "title": "A December BoJ hike may not be enough: why a fuzzy endpoint keeps yen bears circling",
-   "link": "https://investinglive.com/central-banks/a-december-boj-hike-may-not-be-enough-why-a-fuzzy-endpoint-keeps-yen-bears-circling/",
-   "summary": "With a December hike largely priced, the yen’s direction now hinges on the BoJ’s guidance beyond it. A vague statement or a cautious press conference from Ueda on December 18 risks a “hike and sell” reaction like last…",
-   "published": "2026-11-20T02:58:28.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1aw79hr",
-   "title": "GTA 6 breaks records as estimated sales top $2.3bn",
-   "link": "https://www.bbc.co.uk/news/articles/c9zr5nyv5dj2o?at_medium=RSS&at_campaign=rss",
-   "summary": "Rockstar Games ended a 13-year wait with what is expected to be the biggest entertainment launch ever.",
-   "published": "2026-11-20T02:54:40.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "13cegy2",
-   "title": "No way back for oil after Hormuz, says IEA’s Birol, but Goldman still sees Brent at $78",
-   "link": "https://investinglive.com/commodities/no-way-back-for-oil-after-hormuz-says-iea-s-birol-but-goldman-still-sees-brent-at-78/",
-   "summary": "For oil, the two views point to a split between the structure of the market and the price. Long-dated risk premiums tied to Hormuz may persist as importers pay up for security of supply. Near-dated Brent faces pressure…",
-   "published": "2026-11-20T02:21:15.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "kiap7f",
-   "title": "US envoys float NATO membership for Ukraine in exchange for Donbas, WSJ reports",
-   "link": "https://investinglive.com/news/us-envoys-float-nato-membership-for-ukraine-in-exchange-for-donbas-wsj-reports/",
-   "summary": "The report shows active diplomacy but no convergence, so markets are unlikely to price a settlement soon. European defence stocks are the most headline-sensitive, and any sign of a breakthrough would test their rally.…",
-   "published": "2026-11-20T02:14:13.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "udlw5j",
-   "title": "ICYMI: AMD slides 8% as short seller Hunterbrook ties its firmware to a blacklisted Chinese firm",
-   "link": "https://investinglive.com/stocks/icymi-amd-slides-8-as-short-seller-hunterbrook-ties-its-firmware-to-a-blacklisted-chinese-firm/",
-   "summary": "The allegations add a legal and regulatory overhang to a stock already hit by tighter US export licensing this month. Commerce’s response, or silence, is now the key variable. The China and Singapore revenue figures…",
-   "published": "2026-11-20T01:53:51.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "iw1yvm",
-   "title": "Some analysts now see BoJ rates at 2.5% by mid-2027, despite slower underlying inflation",
-   "link": "https://investinglive.com/central-banks/some-analysts-now-see-boj-rates-at-2-5-by-mid-2027-despite-slower-underlying-inflation/",
-   "summary": "A 2.5% BoJ path is far from priced, so the forecast is more a marker of upside risk than a market mover. If the coming months show underlying inflation turning higher, front-end JGB yields would be the first to…",
-   "published": "2026-11-20T01:36:34.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "6bnkih",
-   "title": "US approved nearly 900,000 Nvidia and AMD AI chips for China. Raises more questions than answers.",
-   "link": "https://investinglive.com/news/us-approved-nearly-900-000-nvidia-and-amd-ai-chips-for-china-raises-more-questions-than-answers/",
-   "summary": "The disclosure adds to political pressure for tighter China chip rules, a risk for Nvidia and AMD’s China revenue at a time when AI and semiconductor shares are already being sold hard across Asia. Nvidia saying it has…",
-   "published": "2026-11-20T01:16:31.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "16yyidp",
-   "title": "PBOC sets USD/ CNY reference rate for today at 6.7131 (vs. estimate at 6.6731)",
-   "link": "https://investinglive.com/central-banks/pboc-sets-usd-cny-reference-rate-for-today-at-6-7131-vs-estimate-at-6-6731/",
-   "summary": "The PBOC allows the yuan to fluctuate within a +/- 2% range, around this reference rate. More here on this. injects 379.5 billion yuan of overnight reverse repurchase operations through fixed-rate 1.25% 767.5 billion…",
-   "published": "2026-11-20T01:15:39.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1dke7vf",
-   "title": "China holds loan prime rates for an 18th month as the overnight rate takes over",
-   "link": "https://investinglive.com/central-banks/china-holds-loan-prime-rates-for-an-18th-month-as-the-overnight-rate-takes-over/",
-   "summary": "A hold was expected, so it should leave the yuan and Chinese bond markets little changed. The five respondents who expected a cut show that easing talk is building, which keeps attention on the PBoC’s next steps…",
-   "published": "2026-11-20T01:01:05.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "x5njy5",
-   "title": "Nikkei slides 4.5% and KOSPI tumbles as Wall Street’s AI reversal hits Asian chipmakers",
-   "link": "https://investinglive.com/stock-market-update/nikkei-slides-4-5-and-kospi-tumbles-as-wall-street-s-ai-reversal-hits-asian-chipmakers/",
-   "summary": "The selloff is concentrated in the AI supply chain, so chip-heavy indices like the Nikkei, the KOSPI and Taiwan’s market are the most exposed if US tech fails to steady. With Tokyo shut until Tuesday, Japanese exposure…",
-   "published": "2026-11-20T00:52:21.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "12lgvjw",
-   "title": "Airbnb's divisive new house rules come into force",
-   "link": "https://www.bbc.co.uk/news/articles/cmx278n2genyo?at_medium=RSS&at_campaign=rss",
-   "summary": "New rules on what Airbnb hosts can reasonably ask guests to do could mean fewer chores but higher costs for customers.",
-   "published": "2026-11-20T00:12:28.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "mujyud",
-   "title": "Fish and eggs al desko? The dos and don'ts of the lunch break",
+   "title": "Fish and eggs al desko? The dos and don'ts of lunch at work",
    "link": "https://www.bbc.co.uk/news/articles/cwp8g4092zglo?at_medium=RSS&at_campaign=rss",
-   "summary": "What is acceptable to eat at your desk, without annoying your colleagues?",
+   "summary": "Eating at your desk? The dos and don'ts of lunch at work",
    "published": "2026-11-20T00:08:37.000Z",
    "source": "BBC Business",
    "category": "economy"
@@ -208,15 +370,6 @@
    "published": "2026-11-20T00:02:07.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "rmue45",
-   "title": "Ledger CTO Charles Guillemet to leave after nine years at company",
-   "link": "https://cointelegraph.com/news/ledger-cto-charles-guillemet-to-leave-after-nine-years-at-company?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Guillemet helped establish Ledger’s Donjon security lab and says his departure has been planned for months.",
-   "published": "2026-11-19T23:44:02.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "jurj07",
@@ -237,15 +390,6 @@
    "category": "economy"
   },
   {
-   "id": "7e6wwn",
-   "title": "Binance’s $6.5B freeze order, Hong Kong ‘suspicious’ of HYPE: Asia Express",
-   "link": "https://cointelegraph.com/magazine/binances-65b-freeze-order-hong-kong-suspicious-of-hype-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Binance obtains court orders freezing assets stolen in October’s hack. Hong Kong warns citizens about Hyperliquid, and Thai police arrest four foreigners linked to a crypto scam.",
-   "published": "2026-11-19T22:25:18.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "f4xbjd",
    "title": "Anthropic closes first day of public trading at $1.3tn valuation after largest-ever IPO",
    "link": "https://www.theguardian.com/technology/2026/nov/19/anthropic-public-trading-ipo",
@@ -255,33 +399,6 @@
    "category": "economy"
   },
   {
-   "id": "4qybup",
-   "title": "MoonPay seeks US bank charter for stablecoin, custody services",
-   "link": "https://cointelegraph.com/news/moonpay-seeks-us-bank-charter-for-stablecoin-custody-services?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "MoonPay’s proposed national trust bank would offer stablecoin issuance and redemption, reserve management and digital asset custody under federal oversight.",
-   "published": "2026-11-19T21:01:42.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "11rzceo",
-   "title": "Hyperliquid Anthropic futures priced within 1% of Nasdaq opening price",
-   "link": "https://cointelegraph.com/markets/hyperliquid-anthropic-futures-nasdaq-opening-price?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Hyperliquid traders priced Anthropic futures within 1% of the stock’s Nasdaq opening price, as trading surged ahead of the AI company’s IPO.",
-   "published": "2026-11-19T20:33:24.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1u3qgvo",
-   "title": "Trump’s SEC nominee Johnson backs formal rulemaking for tokenized stock trading",
-   "link": "https://cointelegraph.com/news/sec-nominees-johnson-levine-tokenized-stocks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Former CFTC Commissioner and Democrat Kristin Johnson and ex-SEC aide Steven Levine appeared before lawmakers Thursday.",
-   "published": "2026-11-19T20:06:34.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "6vj812",
    "title": "US ⁠judge allows Trump’s $15bn lawsuit against New York Times to proceed",
    "link": "https://www.theguardian.com/us-news/2026/nov/19/trump-lawsuit-new-york-times",
@@ -289,42 +406,6 @@
    "published": "2026-11-19T19:27:51.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "1iujd06",
-   "title": "Ethereum’s Glamsterdam upgrade could slip to May 2027 over compatibility concerns",
-   "link": "https://cointelegraph.com/news/ethereum-glamsterdam-could-slip-to-may-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Ethereum developers are weighing changes to gas pricing proposals that could disrupt existing smart contracts, after contacting at least 50 affected companies.",
-   "published": "2026-11-19T18:20:49.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1f6iehq",
-   "title": "Why higher rates could slow Bitcoin buying at treasury firms",
-   "link": "https://cointelegraph.com/news/why-higher-rates-could-slow-bitcoin-buying-at-treasury-firms?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "A treasury company can have years of dividends covered and still struggle to sell new shares on terms that make another Bitcoin purchase worthwhile.",
-   "published": "2026-11-19T18:09:32.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "ugcw9t",
-   "title": "Bitcoin price ignores Anthropic debut as ANT share price dips below $100",
-   "link": "https://cointelegraph.com/markets/bitcoin-price-ignores-anthropic-debut-ant-share-price-dips-below-100?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitcoin dropped toward a third retest of $62,000 as Anthropic debuted on the Nasdaq, hitting highs of $115 per share before dropping below $100.",
-   "published": "2026-11-19T18:06:50.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "cnt38e",
-   "title": "Anthropic shares open at $111.50, 34.3% above $83 IPO price",
-   "link": "https://cointelegraph.com/markets/anthropic-shares-expected-to-open-above-83-ipo-price?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The Claude chatbot maker began trading under the ticker ANT, with the company’s valuation at around $2 trillion at the opening price.",
-   "published": "2026-11-19T16:07:51.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "18315lc",
@@ -342,15 +423,6 @@
    "summary": "Union leaders from 19 countries urge reassessment of ties to Amazon, citing company’s poor record on worker rights More than 30 labor union leaders from 19 countries are calling on governments to review their public…",
    "published": "2026-11-19T14:05:21.000Z",
    "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "uj397w",
-   "title": "Viagogo may have broken law on hidden fees, watchdog provisionally finds",
-   "link": "https://www.bbc.co.uk/news/articles/cmvg2ex7j30lo?at_medium=RSS&at_campaign=rss",
-   "summary": "The UK's competition body says initial findings suggest the ticket-reselling website used drip pricing.",
-   "published": "2026-11-19T13:35:52.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
@@ -378,15 +450,6 @@
    "summary": "The Market Participants Group (MPG) is a senior-level forum for financial market participants to share their views on relevant themes and narratives in financial markets with members of the Bank of England’s Monetary…",
    "published": "2026-11-19T07:30:00.000Z",
    "source": "Bank of England",
-   "category": "economy"
-  },
-  {
-   "id": "492yq9",
-   "title": "McDonald's sex abuse: 'They were waiting for the younger girls to turn 18'",
-   "link": "https://www.bbc.co.uk/news/articles/c6x2eve321jno?at_medium=RSS&at_campaign=rss",
-   "summary": "A former McDonald's worker calls on the firm to “change the way they treat younger employees” as a judge rules a legal case against the chain can go ahead.",
-   "published": "2026-11-19T00:00:59.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
@@ -525,15 +588,6 @@
    "category": "economy"
   },
   {
-   "id": "1oagm42",
-   "title": "People in the US: how are you celebrating Thanksgiving this year amid rising costs in the US?",
-   "link": "https://www.theguardian.com/us-news/2026/nov/17/americans-celebrating-thanksgiving-costs-callout",
-   "summary": "Are you hosting or attending the holiday differently than years past? What are you cutting back on? Thanksgiving is fast approaching, when people traditionally get together to celebrate with family and friends on this…",
-   "published": "2026-11-17T17:04:50.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
    "id": "1493r2w",
    "title": "Deutsche Bank dismissed warnings about dealings with risky clients, reports claim",
    "link": "https://www.theguardian.com/business/2026/nov/17/deutsche-bank-dimissed-warnings-risky-clients-reports-claim",
@@ -561,24 +615,6 @@
    "category": "economy"
   },
   {
-   "id": "14g1z3l",
-   "title": "Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding",
-   "link": "https://www.cnbc.com/2026/11/16/berkshire-hathaway-raised-its-stake-in-delta-air-in-the-third-quarter.html",
-   "summary": "Berkshire Hathaway added to several stock positions in the third quarter while trimming others, including Bank of America.",
-   "published": "2026-11-16T23:01:19.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
-   "id": "19nx60l",
-   "title": "JPMorgan Chase says temporary software bug is affecting consumer banking",
-   "link": "https://www.cnbc.com/2026/11/16/jpmorgan-chase-technical-issue.html",
-   "summary": "CNBC's Eamon Javers reported there was no indication of bad actors involved and likewise no indication that a bug was impacting multiple banks at the same time.",
-   "published": "2026-11-16T22:14:47.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
    "id": "w0gbmk",
    "title": "The man with the golden touch: James Bond franchise is a money-spinner",
    "link": "https://www.theguardian.com/film/2026/nov/16/man-with-golden-touch-james-bond-franchise-money-spinner",
@@ -586,15 +622,6 @@
    "published": "2026-11-16T18:47:38.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "9nszo6",
-   "title": "Fed Chairman Kevin Warsh stresses importance of AI to economy, but says it could ‘disappoint’",
-   "link": "https://www.cnbc.com/2026/11/16/fed-ai-task-force-kevin-warsh.html",
-   "summary": "",
-   "published": "2026-11-16T18:46:07.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
   },
   {
    "id": "1btp0ek",
@@ -630,15 +657,6 @@
    "summary": "Agencies extend comment period for proposed third-party risk management guidance",
    "published": "2026-11-13T21:15:00.000Z",
    "source": "Federal Reserve",
-   "category": "economy"
-  },
-  {
-   "id": "qg9m75",
-   "title": "The Bank of England, the Monetary Authority of Singapore, and the Bank of Thailand: Project Meridian FX APAC",
-   "link": "https://www.bankofengland.co.uk/news/2026/november/the-boe-monetary-authority-of-singapore-and-bank-of-thailand-media-release",
-   "summary": "Joint media release",
-   "published": "2026-11-13T09:00:00.000Z",
-   "source": "Bank of England",
    "category": "economy"
   }
  ]
