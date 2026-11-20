@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T17:05:47.599Z",
+ "updated": "2026-11-20T23:15:06.952Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,6 +12,177 @@
  },
  "items": [
   {
+   "id": "1aw79hr",
+   "title": "GTA 6 sales hit $3.8bn in a single day - the biggest entertainment launch in history",
+   "link": "https://www.bbc.co.uk/news/articles/c9zr5nyv5dj2o?at_medium=RSS&at_campaign=rss",
+   "summary": "The mammoth figure surpasses every video game launch and single-day film box office record.",
+   "published": "2026-11-20T22:53:24.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "vzwb87",
+   "title": "Tech stock sell-off drags markets down as Anthropic shares slide",
+   "link": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
+   "summary": "Pressures weighed on US markets, with the S&P 500 and the Dow Jones Industrial Average pushed into correction territory.",
+   "published": "2026-11-20T22:42:47.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "5i0o59",
+   "title": "investingLive Americas FX news wrap 20 Nov: Stocks get hammered as Nasdaq plunges 5.28%",
+   "link": "https://investinglive.com/news/investinglive-americas-fx-news-wrap-20-nov-stocks-get-hammered-as-nasdaq-plunges-5-28/",
+   "summary": "Nasdaq 100 posts worst week since March 2020 Trump weighs renewed strikes on Iran as military warns of strain. FT Nvidia falls after SEC probe on potential accounting issues European stocks end a bruising week. German…",
+   "published": "2026-11-20T22:21:47.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "9678k1",
+   "title": "Nasdaq 100 posts worst week since March 2020",
+   "link": "https://investinglive.com/stocks/nasdaq-100-posts-worst-week-since-march-2020/",
+   "summary": "U.S. stocks closed sharply lower Friday, with the Nasdaq 100 falling 5.61% on the day and 10.43% for the week, its worst since March 2020. The Nasdaq Composite fell 5.28%, wiping out its gains for the year, while the…",
+   "published": "2026-11-20T22:03:17.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "lvwepp",
+   "title": "AUDUSD is the biggest mover of the major currencies this week. The price falls -2.30% for the week.",
+   "link": "https://investinglive.com/technical-analysis/audusd-is-the-biggest-mover-of-the-major-currencies-this-week-the-price-falls-2-30-for-the-week/",
+   "summary": "The AUDUSD is the weakest of the major currencies vs the greenback. It fell -2.3%. The price has now fallen for 10 consecutive days. That move has taken the price from a high on November 10 at 0.69296 to the low today…",
+   "published": "2026-11-20T21:46:41.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1nsb0fw",
+   "title": "Nasdaq erases all 2026 gains as AI sell-off dampens Anthropic’s second day of trading",
+   "link": "https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off",
+   "summary": "The Nasdaq lost trillions in value, with the AI startup’s IPO failing to buoy it as investors question huge sums being poured into AI buildout Who are Anthropic’s seven co-founders, now worth $180bn? As Anthropic’s…",
+   "published": "2026-11-20T21:38:17.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "1hby0vp",
+   "title": "Federal Reserve announces College Fed Challenge winners",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120b.htm",
+   "summary": "Federal Reserve announces College Fed Challenge winners",
+   "published": "2026-11-20T21:15:00.000Z",
+   "source": "Federal Reserve",
+   "category": "economy"
+  },
+  {
+   "id": "bzravx",
+   "title": "Warsh wants Fed officials to talk less. Instead, they’re talking more",
+   "link": "https://www.cnbc.com/2026/11/20/warsh-fed-forward-guidance-rate-hikes.html",
+   "summary": "Fed officials have been rushing to the microphones lately while the Fed chairman stays on the sidelines.",
+   "published": "2026-11-20T21:10:48.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "2ciab7",
+   "title": "Trump threatens ban on US firms building AI data centres overseas",
+   "link": "https://www.bbc.co.uk/news/articles/cmde1lw9y54ko?at_medium=RSS&at_campaign=rss",
+   "summary": "The US president provided little detail on the potential policy, saying others in his team were hearing about it for the first time.",
+   "published": "2026-11-20T20:54:12.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "14n5yyk",
+   "title": "Trump weighs renewed strikes on Iran as military warns of strain. FT",
+   "link": "https://investinglive.com/news/trump-weighs-renewed-strikes-on-iran-as-military-warns-of-strain-ft/",
+   "summary": "President Donald Trump is considering new strikes on Iran, the Financial Times reports, as hawkish officials in Washington and Israel urge him to resume military action. U.S. military planners are warning that American…",
+   "published": "2026-11-20T20:42:10.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "149qc9n",
+   "title": "Nvidia falls after SEC probe on potential accounting issues",
+   "link": "https://investinglive.com/stocks/nvidia-down-falls-after-sec-probe-on-potential-accounting-issues/",
+   "summary": "Shares of Nvidia are trading down $17.25 at $128.80. It low reached $128.66. That is the lowest level going back to May 14, 2025. Technically the price fell below the 61.8% retracement of the move up from the 2025 low…",
+   "published": "2026-11-20T19:59:30.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "3mmpks",
+   "title": "Prediction markets outlook for stocks in 2026 dims amid AI sell-off",
+   "link": "https://www.cnbc.com/2026/11/20/sp-500-8000-kalshi-odds-ai-selloff.html",
+   "summary": "Odds that the S&P 500 will cross 8,000, which were once north of 70%, are extremely low on platform Kalshi.",
+   "published": "2026-11-20T19:59:03.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "xxbyvd",
+   "title": "Wrapped Monero token crashes 99.8% amid suspected $13.5M exploit",
+   "link": "https://cointelegraph.com/news/wrapped-monero-token-crashes-998-amid-suspected-135m-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Bitquery traced $13.5 million in suspicious sales of the wrapped Monero token, as its operator blamed a security breach and promised to reimburse affected traders.",
+   "published": "2026-11-20T19:37:27.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "8akh0p",
+   "title": "Sky Protocol sees $2 billion in stablecoin withdrawals, disputes illicit fund claims",
+   "link": "https://cointelegraph.com/news/sky-protocol-sees-2b-in-stablecoin-withdrawals-disputes-illicit-fund-claims?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Sky says its USDS stablecoin held its $1 value despite more than $2 billion in withdrawals, as it disputes a report linking the protocol to illicit activity.",
+   "published": "2026-11-20T18:37:10.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1tiwbox",
+   "title": "What exactly is in the deal between the UK and the EU?",
+   "link": "https://www.theguardian.com/politics/2026/nov/20/what-is-in-deal-between-uk-eu-explainer",
+   "summary": "The two sides have come to agreements on food and drink, emissions trading and the youth exchange scheme Burnham has agreed EU reset deal with tuition fees issue unresolved, says No 10 After months of on-off…",
+   "published": "2026-11-20T18:19:53.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "5zyy8o",
+   "title": "European stocks end a bruising week. German DAX falls 7.29%.",
+   "link": "https://investinglive.com/news/european-stocks-end-a-bruising-week-german-dax-falls-7-29/",
+   "summary": "As London and European traders head home for the weekend, the major indices are closing sharply lower. The German DAX led the way down on Friday with a 2.60% decline, followed by Italy’s FTSE MIB at 2.48%. The UK’s…",
+   "published": "2026-11-20T18:12:25.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "wg51mc",
+   "title": "UK to explore even closer ties with EU after agreeing deal, says Burnham",
+   "link": "https://www.bbc.co.uk/news/articles/c6jreyqgw4e9o?at_medium=RSS&at_campaign=rss",
+   "summary": "The UK-EU deal agreed on Friday covers British food exports, emissions trading and a youth experience scheme.",
+   "published": "2026-11-20T17:49:48.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1tx3u0",
+   "title": "Trump: Secured two new trade deals. 10 others coming very soon.",
+   "link": "https://investinglive.com/news/trump-secured-two-new-trade-deals-10-others-coming-very-soon/",
+   "summary": "Secured two new trade deals. 10 others coming very soon. Interest rates are too high because we have political Fed. The Fed should be cutting rates We should have a low as interest rates in the world. Says that he is…",
+   "published": "2026-11-20T17:33:44.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "m6nx8w",
+   "title": "Fed’s Cook says monetary policy isn’t restrictive enough",
+   "link": "https://investinglive.com/central-banks/fed-s-cook-says-monetary-policy-isn-t-restrictive-enough/",
+   "summary": "The Fed’s Cook weighed in on inflation, the labor market and the need for tighter monetary policy in remarks that crossed the wires. Fed’s current monetary policy stance is not providing needed restraint. September’s…",
+   "published": "2026-11-20T17:21:55.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
    "id": "1ky1oiz",
    "title": "Bitcoin falls below $60K for first time since July amid broader market selloff",
    "link": "https://cointelegraph.com/markets/bitcoin-falls-below-60k-for-first-time-since-july-amid-broader-market-selloff?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -19,6 +190,15 @@
    "published": "2026-11-20T16:55:51.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
+  },
+  {
+   "id": "a2qhut",
+   "title": "NASDAQ composite is now down on the year",
+   "link": "https://investinglive.com/stocks/nasdaq-composite-is-now-down-on-the-year/",
+   "summary": "The Nasdaq Composite has given back its gains for 2026. With the index down 3.21% on the day at 23,111.52, it is now 130.47 points below its 2025 closing level of 23,241.99. That puts the index down 0.56% for the year…",
+   "published": "2026-11-20T16:49:23.000Z",
+   "source": "investingLive",
+   "category": "forex"
   },
   {
    "id": "8dkrdr",
@@ -30,19 +210,28 @@
    "category": "economy"
   },
   {
-   "id": "vzwb87",
-   "title": "Anthropic shares fall a day after blockbuster opening",
-   "link": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
-   "summary": "Other tech companies have also taken a hit as share markets broadly slump.",
-   "published": "2026-11-20T16:27:47.000Z",
-   "source": "BBC Business",
-   "category": "economy"
+   "id": "11yy38z",
+   "title": "Could Jensen Huang end up at SpaceX? Dan Ives thinks he could work alongside Elon Musk",
+   "link": "https://investinglive.com/stocks/could-jensen-huang-end-up-at-spacex-dan-ives-thinks-he-could-work-alongside-elon-musk/",
+   "summary": "SpaceX has already lined up about $40 billion in financing for AI computing equipment, including next-generation Nvidia chips. In a Bloomberg interview about 30 minutes ago, tech analyst Dan Ives was asked where Jensen…",
+   "published": "2026-11-20T16:39:10.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "xtcy1g",
+   "title": "Gold breaks below the 50% midpoint. Can buyers hold the old breakout area?",
+   "link": "https://investinglive.com/commodities/gold-breaks-below-the-50-midpoint-can-buyers-hold-the-old-breakout-area/",
+   "summary": "Gold is under pressure again today, with the price trading near $3,550.21 after reaching a low of $3,514.65 on my chart. That puts the price roughly 8% lower on the week and nearly 37% below the $5,598.75 high.…",
+   "published": "2026-11-20T16:29:36.000Z",
+   "source": "investingLive",
+   "category": "forex"
   },
   {
    "id": "2c0726",
    "title": "AI-linked stocks slide. Sandisk leads 14 names down more than 9%",
    "link": "https://investinglive.com/stocks/ai-linked-stocks-slide-sandisk-leads-14-names-down-more-than-9/",
-   "summary": "Fourteen stocks on the AI watchlist are down more than 9%, with nine posting double-digit losses. The selling stretches from memory and storage to the companies that connect, power and operate AI data centers. Memory…",
+   "summary": "I have a list of AI and Chip stocks and fourteen stocks on that AI watchlist are down more than 9% TODAY, with nine posting double-digit losses. The selling stretches from memory and storage to the companies that…",
    "published": "2026-11-20T15:57:08.000Z",
    "source": "investingLive",
    "category": "forex"
@@ -75,15 +264,6 @@
    "category": "economy"
   },
   {
-   "id": "98q3ci",
-   "title": "Bessent says Trump and Xi saw robust discussion on trade policy, AI",
-   "link": "https://investinglive.com/news/bessent-says-trump-and-xi-saw-robust-discussion-on-trade-policy-ai/",
-   "summary": "U.S. Treasury Secretary Bessent speaking on CNBC about Trump’s China trip, military AI and U.S. chip restrictions. Trump’s China trip saw robust discussion on trade policy, AI. Trump and Xi agreed that humans should be…",
-   "published": "2026-11-20T15:33:55.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "q6j8eo",
    "title": "DBS bets it can lose the deposit and keep the client",
    "link": "https://cointelegraph.com/news/dbs-bets-it-can-lose-the-deposit-and-keep-the-client?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -91,42 +271,6 @@
    "published": "2026-11-20T15:32:30.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "wusjhl",
-   "title": "Anthropic shares slide as AI sell-off hits global markets - as it happened",
-   "link": "https://www.theguardian.com/business/live/2026/nov/20/asia-stocks-worst-anthropic-ipo-ai-stock-market-latest-updates-news",
-   "summary": "Rolling coverage of the latest economic and financial news California has served an investigative subpoena on Nvidia after a scandal that prompted the departure of co-founder and longtime chief executive Jensen Huang .…",
-   "published": "2026-11-20T15:25:09.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "bzravx",
-   "title": "Warsh wants Fed officials to talk less. Instead, they’re talking more",
-   "link": "https://www.cnbc.com/2026/11/20/warsh-fed-forward-guidance-rate-hikes.html",
-   "summary": "Fed officials have been rushing to the microphones lately while the Fed chairman stays on the sidelines.",
-   "published": "2026-11-20T15:20:54.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
-   "id": "1xwhqmg",
-   "title": "S&P 500 turns positive, but the Nasdaq indices remain in technical triage",
-   "link": "https://investinglive.com/stocks/s-p-500-turns-positive-but-the-nasdaq-indices-remain-in-technical-triage/",
-   "summary": "The broader U.S. stock indices opened lower and are trying to find their footing after the sharp declines seen recently. The S&P 500 has been the first of the three to move back into modest positive territory. The…",
-   "published": "2026-11-20T15:17:01.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "hwnnk4",
-   "title": "University of Michigan consumer sentiment 51.5 versus 51.5 estimate",
-   "link": "https://investinglive.com/news/university-of-michigan-consumer-sentiment-51-5-versus-51-5-estimate/",
-   "summary": "University of Michigan consumer sentiment: 51.5 vs 51.5 expected. Preliminary 51.0. October 48.0. Current economic conditions: 49.4 vs 51.6 expected. Preliminary 51.0. October 46.7. Consumer expectations: 52.9.…",
-   "published": "2026-11-20T15:04:05.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "1hb8ltg",
@@ -138,15 +282,6 @@
    "category": "economy"
   },
   {
-   "id": "18i94iz",
-   "title": "Bitcoin tests key swing area low. A break below will target the 2026 lows",
-   "link": "https://investinglive.com/cryptocurrency/bitcoin-tests-key-swing-area-low-a-break-below-will-target-the-2026-lows/",
-   "summary": "Bitcoin moved to its lowest level since early July, trading down to $61,160. That took the price $23 below the $61,183 level that marks the bottom of a key swing area on the four-hour chart, but momentum faded and the…",
-   "published": "2026-11-20T14:22:41.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1x66jyf",
    "title": "The bull market has a new problem. The 'smart money' is selling",
    "link": "https://www.cnbc.com/2026/11/20/equity-issuance-bull-market-problem.html",
@@ -156,22 +291,13 @@
    "category": "markets"
   },
   {
-   "id": "1hwrjd8",
-   "title": "Greer says US-China trade truce extension hinges on rare earths",
-   "link": "https://investinglive.com/news/greer-says-us-china-trade-truce-extension-hinges-on-rare-earths/",
-   "summary": "US Trade Representative Greer spoke on Bloomberg TV about the Trump-Xi meeting and the outlook for US-China trade. Section 301 investigations are expected before year-end. China brought up Taiwan at the talks. Any…",
-   "published": "2026-11-20T14:06:16.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1ez85l",
-   "title": "Canada retail sales comes in stronger at 0.8% vs 0.7% estimate. Core up 1.0% vs 0.7% estimate.",
-   "link": "https://investinglive.com/news/canada-retail-sales-comes-in-stronger-at-0-8-vs-0-7-estimate-core-up-1-0-vs-0-7-estimate/",
-   "summary": "Prior month 1.2% revised higher to 1.4% Details of the September 2026 stronger retail sales report Retail sales rose 0.8% MoM to C$75.3 billion. Statistics Canada’s advance estimate was +0.7%. August was initially…",
-   "published": "2026-11-20T13:30:24.000Z",
-   "source": "investingLive",
-   "category": "forex"
+   "id": "1sg97ia",
+   "title": "These US fishers see offshore wind as a ‘godsend’. Trump wants to shut it down",
+   "link": "https://www.theguardian.com/environment/2026/nov/20/offshore-wind-farms-trump-fishers",
+   "summary": "Despite the president’s attacks, Sea Services is training New England fishers in offshore wind construction and providing them with a second income stream On a rainy September morning, the Pamela Ann, a rusty, 86ft…",
+   "published": "2026-11-20T14:00:31.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
   },
   {
    "id": "1la066y",
@@ -192,15 +318,6 @@
    "category": "markets"
   },
   {
-   "id": "11tnah",
-   "title": "Morning Kickstart. Anthropic slides after its IPO and gold breaks lower",
-   "link": "https://investinglive.com/technical-analysis/morning-kickstart-anthropic-slides-after-its-ipo-and-gold-breaks-lower/",
-   "summary": "Anthropic (ANT) is giving back much of its first-day gain. The stock was trading at $87.72 at 7:43 AM ET, down $9.45, or 9.7%, from Thursday’s $97.17 close. The IPO was priced at $83, and the stock traded as high as…",
-   "published": "2026-11-20T13:25:32.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "19brffj",
    "title": "Lagarde warns Europe could miss chance to unify tokenized markets",
    "link": "https://cointelegraph.com/news/lagarde-europe-limited-window-tokenization-rules?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -208,51 +325,6 @@
    "published": "2026-11-20T13:21:39.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "y2ivh",
-   "title": "The stock market's wealth effect: why it matters even if you don't own stocks",
-   "link": "https://investinglive.com/education/the-stock-market-s-wealth-effect-why-it-matters-even-if-you-don-t-own-stocks/",
-   "summary": "Equity market movements can have a significant impact on the economy through the so-called \"wealth effect\", changes in financial conditions and the influence on corporate investment and hiring decisions. People can be…",
-   "published": "2026-11-20T13:20:19.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1aw79hr",
-   "title": "GTA 6 drives spike in download demand, as estimated sales top $2.3bn",
-   "link": "https://www.bbc.co.uk/news/articles/c9zr5nyv5dj2o?at_medium=RSS&at_campaign=rss",
-   "summary": "Rockstar Games ended a 13-year wait with what is expected to be the biggest entertainment launch ever.",
-   "published": "2026-11-20T13:08:30.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "1medx7",
-   "title": "Is ANT stock a buy or sell?",
-   "link": "https://investinglive.com/stocks/is-ant-stock-a-buy-or-sell/",
-   "summary": "Anthropic stock is sliding toward $83. Could Wall Street have a reason to defend its IPO price? Anthropic shares have surrendered much of their spectacular IPO debut as the AI sector comes under pressure. A closer…",
-   "published": "2026-11-20T12:45:20.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "qlkzal",
-   "title": "investingLive European news wrap: Stock markets remain under pressure, bonds rally on slowdown expectations",
-   "link": "https://investinglive.com/news/investinglive-european-news-wrap-stock-markets-remain-under-pressure-bonds-rally-on-slowdown-expectations/",
-   "summary": "Articles: How have interest rate expectations changed after this week's events? Zcash's bearish trend remains intact as the path to recovery depends on two major macro catalysts Is Nvidia stock a buy or sell? My…",
-   "published": "2026-11-20T12:31:26.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "194xz49",
-   "title": "How have interest rate expectations changed after this week's events?",
-   "link": "https://investinglive.com/central-banks/how-have-interest-rate-expectations-changed-after-this-week-s-events-9/",
-   "summary": "Rate hikes by year-end BoE: 20 bps (79% probability of rate hike at the next meeting) 2027: 82 bps RBNZ: 21 bps (83% probability of rate hike at the next meeting) 2027: 78 bps BoC: 15 bps (62% probability of rate hike…",
-   "published": "2026-11-20T11:41:42.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "p7v4hg",
@@ -309,15 +381,6 @@
    "category": "crypto"
   },
   {
-   "id": "14todld",
-   "title": "SEC charges 8 firms over fake crypto platforms tied to $37M fraud",
-   "link": "https://cointelegraph.com/news/sec-charges-eight-fake-crypto-platforms-37m-fraud?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The SEC says the operators showed investors fake certificates and pointed them to filings on the agency’s website as proof of regulatory approval.",
-   "published": "2026-11-20T08:03:34.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1alvmtb",
    "title": "Should AI be judging our credit worthiness?",
    "link": "https://www.bbc.co.uk/news/articles/c6d94pzk9vleo?at_medium=RSS&at_campaign=rss",
@@ -330,19 +393,10 @@
    "id": "kcwb3j",
    "title": "What impact has Brexit had on the UK and EU economies?",
    "link": "https://www.theguardian.com/business/2026/nov/20/what-impact-brexit-uk-eu-economies",
-   "summary": "As talks are held in Brussels over closer relations, we examine the economic context and the challenges ahead UK-EU summit live: latest news updates The UK and EU will hold the second summit since Brexit on Friday…",
+   "summary": "As talks are held in Brussels over closer relations, we examine the economic context and the challenges ahead The UK and EU will hold the second summit since Brexit on Friday against a volatile economic backdrop.…",
    "published": "2026-11-20T07:00:26.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "fvurwk",
-   "title": "Anthropic’s $81B IPO draws half the net retail buying of SpaceX’s",
-   "link": "https://cointelegraph.com/markets/anthropic-ipo-spacex-retail-buying-first-day-gains?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Retail investors traded $772 million in Anthropic shares on Thursday, the most Vanda Research has recorded for a market debut since 2012.",
-   "published": "2026-11-20T06:24:41.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "wr8dw",
@@ -378,24 +432,6 @@
    "summary": "Anthropic is the first purely AI company to be publicly listed, creating a test for the entire industry.",
    "published": "2026-11-19T23:33:51.000Z",
    "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "13sxktq",
-   "title": "California targets Nvidia in China AI chip probe",
-   "link": "https://www.bbc.co.uk/news/articles/cqn70vxp5p4no?at_medium=RSS&at_campaign=rss",
-   "summary": "The probe by California, where the AI chipmaker has its global headquarters, follows former CEO Jensen Huang's departure.",
-   "published": "2026-11-19T23:04:30.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "f4xbjd",
-   "title": "Anthropic closes first day of public trading at $1.3tn valuation after largest-ever IPO",
-   "link": "https://www.theguardian.com/technology/2026/nov/19/anthropic-public-trading-ipo",
-   "summary": "AI startup and Claude chatbot maker became one of the world’s most valuable publicly traded businesses with final share price of $97 Anthropic’s historic stock market debut: key takeaways, and what comes next for the…",
-   "published": "2026-11-19T22:09:18.000Z",
-   "source": "The Guardian Business",
    "category": "economy"
   },
   {
@@ -450,15 +486,6 @@
    "summary": "The Market Participants Group (MPG) is a senior-level forum for financial market participants to share their views on relevant themes and narratives in financial markets with members of the Bank of England’s Monetary…",
    "published": "2026-11-19T07:30:00.000Z",
    "source": "Bank of England",
-   "category": "economy"
-  },
-  {
-   "id": "6uhxt6",
-   "title": "Simon Jack: Can Anthropic's record-breaking IPO stop the AI bubble bursting?",
-   "link": "https://www.bbc.co.uk/news/articles/cj4gnpzll020o?at_medium=RSS&at_campaign=rss",
-   "summary": "Anthropic's hotly anticipated IPO is expected to put it in the top 10 most valuable US companies, but the future is uncertain.",
-   "published": "2026-11-18T21:28:08.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
@@ -597,24 +624,6 @@
    "category": "economy"
   },
   {
-   "id": "kmyuva",
-   "title": "U.S. companies from Nvidia to Apple face a growing China dilemma",
-   "link": "https://www.cnbc.com/2026/11/17/us-tech-firms-china-ties-political-pressure.html",
-   "summary": "The stakes have just gotten higher for businesses navigating the U.S. and China markets.",
-   "published": "2026-11-17T08:52:45.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
-   "id": "1rrz1qm",
-   "title": "United Airlines says ‘widespread’ system outage resolved",
-   "link": "https://www.theguardian.com/us-news/2026/nov/16/united-airlines-system-outage",
-   "summary": "Airline acknowledges ‘technology issue that delayed flight departures’ in latest high-profile outage to affect Americans United ⁠Airlines said on ⁠Monday ⁠that it had resolved ⁠a widespread system ⁠outage, just three…",
-   "published": "2026-11-17T02:57:06.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
    "id": "w0gbmk",
    "title": "The man with the golden touch: James Bond franchise is a money-spinner",
    "link": "https://www.theguardian.com/film/2026/nov/16/man-with-golden-touch-james-bond-franchise-money-spinner",
@@ -648,15 +657,6 @@
    "summary": "Fallout from ex-Nvidia CEO Jensen Huang’s affair is the latest reminder of the shared toll paid when patriarchs cheat From Profumo to Petraeus to Gary Hart , Bill Gates and Bill Clinton , history is littered with older…",
    "published": "2026-11-15T15:00:16.000Z",
    "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "1477oon",
-   "title": "Agencies extend comment period for proposed third-party risk management guidance",
-   "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm",
-   "summary": "Agencies extend comment period for proposed third-party risk management guidance",
-   "published": "2026-11-13T21:15:00.000Z",
-   "source": "Federal Reserve",
    "category": "economy"
   }
  ]
