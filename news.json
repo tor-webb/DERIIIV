@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T12:53:29.166Z",
+ "updated": "2026-11-21T19:54:40.145Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -11,6 +11,15 @@
   "The Guardian Business /business/rss": 12
  },
  "items": [
+  {
+   "id": "10n6alp",
+   "title": "‘Little room for error’: what a debt-laden cloud computing company says about the AI boom",
+   "link": "https://www.theguardian.com/business/2026/nov/21/debt-laden-cloud-computing-company-coreweave-ai-boom",
+   "summary": "‘Poster child of AI bubble’ CoreWeave symbolises increasingly risky business model of datacentre buildout The Egyptians had pyramids. The Roman empire had roads. The early 21st-century tech bros have massive buildings…",
+   "published": "2026-11-21T13:00:01.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
   {
    "id": "1la066y",
    "title": "Here’s what happened in crypto today",
@@ -55,6 +64,15 @@
    "published": "2026-11-21T05:40:35.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
+  },
+  {
+   "id": "122rh3t",
+   "title": "Judge approves $7.25bn Bayer payout to settle claims that Roundup causes cancer",
+   "link": "https://www.theguardian.com/business/2026/nov/20/bayer-roundup-cancer-litigation",
+   "summary": "German company faced 65,000 claims from people who said they developed cancer after using weedkiller A Missouri judge on Friday approved Bayer ’s $7.25bn settlement of lawsuits ⁠alleging that its weedkiller ​Roundup…",
+   "published": "2026-11-20T23:42:43.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
   },
   {
    "id": "1aw79hr",
@@ -597,30 +615,12 @@
    "category": "economy"
   },
   {
-   "id": "1ertqj5",
-   "title": "Judge extends deadline for Trump’s deposition in $10bn BBC lawsuit",
-   "link": "https://www.theguardian.com/us-news/2026/nov/17/trump-bbc-deposition-delay",
-   "summary": "President, who had agreed to sit for deposition in October but backed out, must now appear by 22 January Donald Trump has been granted a temporary delay before he must give a witness statement in his $10bn defamation…",
-   "published": "2026-11-17T21:45:58.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
    "id": "8qv6gh",
    "title": "Philip R. Lane: The practice and science of monetary policy communication: the ECB experience",
    "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261117~7f5d3b1a0e.en.pdf",
    "summary": "",
    "published": "2026-11-17T18:30:00.000Z",
    "source": "ECB",
-   "category": "economy"
-  },
-  {
-   "id": "1493r2w",
-   "title": "Deutsche Bank dismissed warnings about dealings with risky clients, reports claim",
-   "link": "https://www.theguardian.com/business/2026/nov/17/deutsche-bank-dimissed-warnings-risky-clients-reports-claim",
-   "summary": "International investigation using trove of leaked internal data allegedly shows German bank overlooked compliance concerns to safeguard profits Deutsche Bank reportedly dismissed warnings about its dealings with risky…",
-   "published": "2026-11-17T13:35:39.000Z",
-   "source": "The Guardian Business",
    "category": "economy"
   },
   {
