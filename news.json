@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T04:08:01.945Z",
+ "updated": "2026-11-21T12:53:29.166Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -11,6 +11,51 @@
   "The Guardian Business /business/rss": 12
  },
  "items": [
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-11-21T11:18:52.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "wbvdi",
+   "title": "ECB seeks industry partners for tokenized deposits, securities experiments",
+   "link": "https://cointelegraph.com/news/ecb-tokenized-deposits-securities-experiments-appia?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Industry groups have until Dec. 11 to apply for the ECB’s first experimental exercises under its Appia initiative, with later submissions reviewed on a rolling basis.",
+   "published": "2026-11-21T09:48:56.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1jv54qe",
+   "title": "US lawmakers propose up to 30% rewards for prediction market whistleblowers",
+   "link": "https://cointelegraph.com/news/us-prediction-market-whistleblower-rewards-30-percent?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Whistleblowers could receive 10% to 30% of monetary sanctions in qualifying prediction market fraud cases exceeding $1 million in penalties.",
+   "published": "2026-11-21T07:51:47.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "fzb2zo",
+   "title": "How China is using summits to expand its global influence",
+   "link": "https://www.cnbc.com/2026/11/21/china-xi-trump-putin-global-diplomacy-shenzhen.html",
+   "summary": "Chinese President Xi Jinping has helped coordinate yet another photo-op of global significance.",
+   "published": "2026-11-21T06:00:02.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "9lv0wp",
+   "title": "Hong Kong pushes to bring crypto custodians, advisers under licensing rules",
+   "link": "https://cointelegraph.com/news/hong-kong-crypto-custody-advisory-licensing-bill?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Hong Kong’s securities regulator says the proposal would strengthen investor protections, with the bill set for its first reading in the Legislative Council on Dec. 2.",
+   "published": "2026-11-21T05:40:35.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
   {
    "id": "1aw79hr",
    "title": "GTA 6 sales hit $3.8bn in a single day - the biggest entertainment launch in history",
@@ -300,15 +345,6 @@
    "category": "economy"
   },
   {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-11-20T13:29:58.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1n7y695",
    "title": "U.S.-China trade, Taiwan and tech tensions remain unresolved as Trump returns from Asia",
    "link": "https://www.cnbc.com/2026/11/20/apec-summit-trump-xi-china-trade-taiwan.html",
@@ -336,24 +372,6 @@
    "category": "crypto"
   },
   {
-   "id": "1blr4u5",
-   "title": "VanEck to end Gemini ETF custody deals, keeps Coinbase",
-   "link": "https://cointelegraph.com/news/vaneck-gemini-etf-custody-end-keep-coinbase?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "VanEck plans to end Gemini’s custody agreements for three crypto ETFs in February 2027, while Coinbase will continue serving as a custodian for the funds.",
-   "published": "2026-11-20T10:54:38.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "e3tqwo",
-   "title": "Bitcoin nears repeat of chart pattern that preceded 2023’s $25K retest",
-   "link": "https://cointelegraph.com/markets/bitcoin-first-death-cross-repeat-2023-bottom-25k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitcoin’s 21-day moving average fell below its 200-day average, and analyst Keith Alan expects a second bearish crossover by Sunday.",
-   "published": "2026-11-20T10:29:10.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "gpy6jj",
    "title": "Tinned food and long-life milk boost retail sales after 'Be Ready' campaign launch",
    "link": "https://www.bbc.co.uk/news/articles/ck053mzy2qqeo?at_medium=RSS&at_campaign=rss",
@@ -370,15 +388,6 @@
    "published": "2026-11-20T08:30:00.000Z",
    "source": "ECB",
    "category": "economy"
-  },
-  {
-   "id": "101efki",
-   "title": "BlackRock’s IBIT loses record $541M amid Anthropic market debut",
-   "link": "https://cointelegraph.com/markets/blackrock-ibit-record-single-day-outflow?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "BlackRock’s IBIT posted its largest daily outflow on record, taking three-session outflows near $900 million as BTC dipped amid a broader market selloff.",
-   "published": "2026-11-20T08:18:42.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1alvmtb",
@@ -566,15 +575,6 @@
    "link": "https://www.cnbc.com/2026/11/18/putin-apec-eu-trump-xi-meeting.html",
    "summary": "Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up opportunities for APEC members in the country.",
    "published": "2026-11-18T08:29:35.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
-   "id": "1hbng9u",
-   "title": "JPMorgan is working on AI agent transactions that don’t involve humans",
-   "link": "https://www.cnbc.com/2026/11/18/jpmorgan-hyundai-card-ai-agents-payments.html",
-   "summary": "JPMorgan and Hyundai Card are looking to expand the use of AI agents in financial transactions.",
-   "published": "2026-11-18T06:18:11.000Z",
    "source": "CNBC Finance",
    "category": "markets"
   },
