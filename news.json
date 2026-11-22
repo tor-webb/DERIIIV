@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T07:13:48.686Z",
+ "updated": "2026-11-22T15:30:31.951Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,6 +12,96 @@
  },
  "items": [
   {
+   "id": "ybnue2",
+   "title": "The future of onchain FX could start with users, not institutional liquidity",
+   "link": "https://cointelegraph.com/opinion/future-onchain-fx-could-start-with-users-not-institutional-liquidity?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Onchain FX does not need to recreate the trillion-dollar institutional market to become useful. Real demand can make smaller markets work first.",
+   "published": "2026-11-22T14:30:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "yhqhlz",
+   "title": "Centrica boss says he is 'hugely concerned' over impact of soaring energy bills",
+   "link": "https://www.bbc.co.uk/news/articles/c6jre7gpdw13o?at_medium=RSS&at_campaign=rss",
+   "summary": "Chris O'Shea says the number of people unable or unwilling to pay their energy bills will increase when prices jump in the new year.",
+   "published": "2026-11-22T13:50:21.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1jpqahx",
+   "title": "Bitcoin analysis: More volume, but less downside damage (possible dip?)",
+   "link": "https://investinglive.com/cryptocurrency/bitcoin-analysis-more-volume-but-less-downside-damage-possible-dip/",
+   "summary": "Bitcoin's rebound from $55,130 has some encouraging short-term evidence behind it. Still, the broader Bitcoin outlook is not yet bullish again, and the $62,000-$62,640 area may help decide whether this is a recovery in…",
+   "published": "2026-11-22T12:53:44.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-11-22T11:25:27.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "ls2vsm",
+   "title": "Conservative media weighs its future as cracks emerge in Trump’s movement",
+   "link": "https://www.theguardian.com/us-news/2026/nov/22/conservative-media-trump-midterm-elections-results",
+   "summary": "Two weeks after Democrats flipped Congress, conservative outlets are having conversations on whether to distance themselves from Trump or double down on Maga As a so-called “blue wave” crashed across the country on the…",
+   "published": "2026-11-22T11:00:26.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "mpd9xw",
+   "title": "Bitcoin briefly drops to $17K on Kraken, exchange upholds trades",
+   "link": "https://cointelegraph.com/news/bitcoin-17k-kraken-canadian-dollar-market-trades-stand?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Kraken said all orders were processed correctly and found no evidence of a security breach or compromised accounts.",
+   "published": "2026-11-22T09:33:06.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "u1xbua",
+   "title": "South Korean exchanges halt CYBER transfers amid suspected bridge exploit",
+   "link": "https://cointelegraph.com/news/upbit-bithumb-suspend-cyber-transfers-bridge-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Cyber reported unexpected minting of CYBER tokens on Solana, followed by tokens moving out of its Ethereum bridge lockbox, prompting an investigation.",
+   "published": "2026-11-22T07:24:05.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1x4q4gt",
+   "title": "MP criticises Guernsey and Jersey company ownership register plans",
+   "link": "https://www.bbc.co.uk/news/articles/cqkgmy2nxy4lo?at_medium=RSS&at_campaign=rss",
+   "summary": "Sir Andrew Mitchell says access should be easier for people tackling financial crime.",
+   "published": "2026-11-22T07:22:05.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "zqv73t",
+   "title": "Italian jeweller and businessman Paolo Bulgari dies aged 89",
+   "link": "https://www.bbc.co.uk/news/articles/c8e39qk5vrpdo?at_medium=RSS&at_campaign=rss",
+   "summary": "In a statement to Italian media, his family remember him as \"the greatest jeweller of our time\".",
+   "published": "2026-11-22T07:12:41.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "bt88wy",
+   "title": "Hacks, AI and conspiracy theories: why are we having so many outages?",
+   "link": "https://www.theguardian.com/technology/2026/nov/22/hacks-ai-internet-outages-airlines-banks-microsoft-apple",
+   "summary": "After chaos at airlines, banks and companies from Microsoft to Apple, people have become convinced the world’s systems are under attack Nicole Reindorf’s American Airlines flight was ready for takeoff in Phoenix when…",
+   "published": "2026-11-22T06:00:19.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
    "id": "5k8v3f",
    "title": "Chainflip confirms $12M hack, offers attacker 10% bounty",
    "link": "https://cointelegraph.com/news/chainflip-12m-crypto-hack-10-percent-bounty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -21,6 +111,15 @@
    "category": "crypto"
   },
   {
+   "id": "1sbxpsq",
+   "title": "Employers are being asked to give interview feedback - here's what applicants want",
+   "link": "https://www.bbc.co.uk/news/articles/cm2d94le23xyo?at_medium=RSS&at_campaign=rss",
+   "summary": "People say they often hear nothing back after applying for jobs. But could employers be forced to respond to every applicant?",
+   "published": "2026-11-22T00:04:07.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
    "id": "10n6alp",
    "title": "‘Little room for error’: what a debt-laden cloud computing company says about the AI boom",
    "link": "https://www.theguardian.com/business/2026/nov/21/debt-laden-cloud-computing-company-coreweave-ai-boom",
@@ -28,15 +127,6 @@
    "published": "2026-11-21T13:00:01.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-11-21T11:18:52.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "wbvdi",
@@ -73,6 +163,15 @@
    "published": "2026-11-21T05:40:35.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
+  },
+  {
+   "id": "1nyk85k",
+   "title": "Can AI really help spot Black Friday deals? We put it to the test",
+   "link": "https://www.bbc.co.uk/news/articles/cw8dv4jmnle2o?at_medium=RSS&at_campaign=rss",
+   "summary": "We put four AI models to the test to see if they could save us money on a new TV.",
+   "published": "2026-11-21T00:06:11.000Z",
+   "source": "BBC Business",
+   "category": "economy"
   },
   {
    "id": "122rh3t",
@@ -300,47 +399,11 @@
    "category": "forex"
   },
   {
-   "id": "2c0726",
-   "title": "AI-linked stocks slide. Sandisk leads 14 names down more than 9%",
-   "link": "https://investinglive.com/stocks/ai-linked-stocks-slide-sandisk-leads-14-names-down-more-than-9/",
-   "summary": "I have a list of AI and Chip stocks and fourteen stocks on that AI watchlist are down more than 9% TODAY, with nine posting double-digit losses. The selling stretches from memory and storage to the companies that…",
-   "published": "2026-11-20T15:57:08.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "dsc998",
    "title": "US Senate advances prediction market restrictions with DEATH BETS Act",
    "link": "https://cointelegraph.com/news/us-senate-advances-prediction-market-restrictions-with-death-bets-act?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "summary": "The Senate-approved bill would ban prediction market contracts tied to war, assassination and death amid concerns over potential insider trading on military events.",
    "published": "2026-11-20T15:55:22.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1hw3v4l",
-   "title": "Bitcoin price drops to $60K as Anthropic drops to $87 in tech sell-off",
-   "link": "https://cointelegraph.com/markets/bitcoin-hits-new-20-week-low-anthropic-drops-87-tech-sell-off?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitcoin price strength felt pressure from falling US equities as traders reassessed AI prospects after Anthropic’s IPO.",
-   "published": "2026-11-20T15:52:06.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "12lgvjw",
-   "title": "Airbnb's divisive new house rules come into force",
-   "link": "https://www.bbc.co.uk/news/articles/cmx278n2genyo?at_medium=RSS&at_campaign=rss",
-   "summary": "New rules on what Airbnb hosts can reasonably ask guests to do could mean fewer chores but higher costs for customers.",
-   "published": "2026-11-20T15:48:35.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "q6j8eo",
-   "title": "DBS bets it can lose the deposit and keep the client",
-   "link": "https://cointelegraph.com/news/dbs-bets-it-can-lose-the-deposit-and-keep-the-client?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The Singapore bank earned a record $208 million in transaction services fees in the third quarter — now it’s helping companies turn deposits into stablecoins they can spend without it.",
-   "published": "2026-11-20T15:32:30.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
   },
@@ -381,15 +444,6 @@
    "category": "markets"
   },
   {
-   "id": "19brffj",
-   "title": "Lagarde warns Europe could miss chance to unify tokenized markets",
-   "link": "https://cointelegraph.com/news/lagarde-europe-limited-window-tokenization-rules?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The ECB president said Europe’s market for tokenized securities could split into platforms that cannot settle trades with one another.",
-   "published": "2026-11-20T13:21:39.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "gpy6jj",
    "title": "Tinned food and long-life milk boost retail sales after 'Be Ready' campaign launch",
    "link": "https://www.bbc.co.uk/news/articles/ck053mzy2qqeo?at_medium=RSS&at_campaign=rss",
@@ -423,42 +477,6 @@
    "summary": "As talks are held in Brussels over closer relations, we examine the economic context and the challenges ahead The UK and EU will hold the second summit since Brexit on Friday against a volatile economic backdrop.…",
    "published": "2026-11-20T07:00:26.000Z",
    "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "wr8dw",
-   "title": "Mouldy, infested housing for vulnerable people sold as ethical investments abroad",
-   "link": "https://www.bbc.co.uk/news/articles/c6evre8j12vno?at_medium=RSS&at_campaign=rss",
-   "summary": "The properties are marketed at premium prices with claims of “government-backed” returns, the BBC finds.",
-   "published": "2026-11-20T06:00:33.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "mujyud",
-   "title": "Fish and eggs al desko? The dos and don'ts of lunch at work",
-   "link": "https://www.bbc.co.uk/news/articles/cwp8g4092zglo?at_medium=RSS&at_campaign=rss",
-   "summary": "Eating at your desk? The dos and don'ts of lunch at work",
-   "published": "2026-11-20T00:08:37.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "1s8jxmq",
-   "title": "Tens of thousands of UK fridges secured from hackers in secret nationwide operation",
-   "link": "https://www.bbc.co.uk/news/articles/c6eq49zyx7p4o?at_medium=RSS&at_campaign=rss",
-   "summary": "Supermarkets, warehouses, restaurants and stadiums have been scrambling to make their devices safe.",
-   "published": "2026-11-20T00:02:07.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "jurj07",
-   "title": "Anthropic becomes one of world's most valuable public companies in stock market debut",
-   "link": "https://www.bbc.co.uk/news/articles/c3x29ggenz12o?at_medium=RSS&at_campaign=rss",
-   "summary": "Anthropic is the first purely AI company to be publicly listed, creating a test for the entire industry.",
-   "published": "2026-11-19T23:33:51.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
@@ -606,15 +624,6 @@
    "category": "markets"
   },
   {
-   "id": "1hvd0wj",
-   "title": "Nvidia doubles revenue as board says it does not intend to reinstate Jensen Huang",
-   "link": "https://www.theguardian.com/technology/2026/nov/17/nvidia-third-quarter-revenue-jensen-huang",
-   "summary": "Company issues first earnings report after ouster of CEO over allegations of affair with suspected Chinese spy Nvidia “does not intend to reinstate Jensen as CEO”, the chairman of the company’s board said Tuesday.…",
-   "published": "2026-11-17T23:32:16.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
    "id": "8qv6gh",
    "title": "Philip R. Lane: The practice and science of monetary policy communication: the ECB experience",
    "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261117~7f5d3b1a0e.en.pdf",
@@ -648,15 +657,6 @@
    "summary": "",
    "published": "2026-11-16T08:30:00.000Z",
    "source": "ECB",
-   "category": "economy"
-  },
-  {
-   "id": "10l7kms",
-   "title": "When the boss has an affair, the whole family business can pay the price",
-   "link": "https://www.theguardian.com/business/2026/nov/15/nvidia-ceo-jensen-huang-affair-business",
-   "summary": "Fallout from ex-Nvidia CEO Jensen Huang’s affair is the latest reminder of the shared toll paid when patriarchs cheat From Profumo to Petraeus to Gary Hart , Bill Gates and Bill Clinton , history is littered with older…",
-   "published": "2026-11-15T15:00:16.000Z",
-   "source": "The Guardian Business",
    "category": "economy"
   }
  ]
