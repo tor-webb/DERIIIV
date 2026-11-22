@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T15:30:31.951Z",
+ "updated": "2026-11-22T21:29:02.009Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -11,6 +11,15 @@
   "The Guardian Business /business/rss": 12
  },
  "items": [
+  {
+   "id": "14dyyv1",
+   "title": "Employees at Eric Trump-backed robot startup lose health benefits as company's cash crunch deepens",
+   "link": "https://www.cnbc.com/2026/11/22/foundation-future-industries-health-benefits-payroll-base-group.html",
+   "summary": "Foundation is pursuing an emergency bridge loan and has been in talks with VC firms as it waits for a $150 million investment from South Korea's Base Group.",
+   "published": "2026-11-22T18:55:05.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
   {
    "id": "ybnue2",
    "title": "The future of onchain FX could start with users, not institutional liquidity",
@@ -611,15 +620,6 @@
    "link": "https://www.cnbc.com/2026/11/18/putin-apec-eu-trump-xi-meeting.html",
    "summary": "Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up opportunities for APEC members in the country.",
    "published": "2026-11-18T08:29:35.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
-   "id": "pj8xwz",
-   "title": "Three things to watch as Trump, Xi and Putin meet in China",
-   "link": "https://www.cnbc.com/2026/11/18/apec-trump-xi-putin-shenzhen.html",
-   "summary": "U.S. President Donald Trump, Chinese President Xi Jinping and Russian President Vladimir Putin are set to meet in Shenzhen alongside an APEC leaders' meeting.",
-   "published": "2026-11-18T06:04:39.000Z",
    "source": "CNBC Finance",
    "category": "markets"
   },
