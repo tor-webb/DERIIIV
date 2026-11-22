@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T00:03:53.017Z",
+ "updated": "2026-11-22T07:13:48.686Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -11,6 +11,15 @@
   "The Guardian Business /business/rss": 12
  },
  "items": [
+  {
+   "id": "5k8v3f",
+   "title": "Chainflip confirms $12M hack, offers attacker 10% bounty",
+   "link": "https://cointelegraph.com/news/chainflip-12m-crypto-hack-10-percent-bounty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Chainflip offered the attacker a 10% bounty to return 90% of the stolen funds by Nov. 23, promising to treat the return as a white-hat recovery and withdraw law enforcement complaints.",
+   "published": "2026-11-22T05:28:43.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
   {
    "id": "10n6alp",
    "title": "‘Little room for error’: what a debt-laden cloud computing company says about the AI boom",
@@ -377,15 +386,6 @@
    "link": "https://cointelegraph.com/news/lagarde-europe-limited-window-tokenization-rules?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "summary": "The ECB president said Europe’s market for tokenized securities could split into platforms that cannot settle trades with one another.",
    "published": "2026-11-20T13:21:39.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "p7v4hg",
-   "title": "Binance hacker moves nearly $600M in ETH, routes funds through THORChain, Chainflip",
-   "link": "https://cointelegraph.com/news/binance-hacker-600m-eth-routes-thorchain-chainflip?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "OnChain Lens tracked nearly $600 million in ETH transfers over two days as the Binance hackers moved the stolen funds through fresh wallets and cross-chain protocols to obscure their trail.",
-   "published": "2026-11-20T11:31:41.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
   },
