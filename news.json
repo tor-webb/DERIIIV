@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T21:29:02.009Z",
+ "updated": "2026-11-23T01:55:32.012Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -11,6 +11,168 @@
   "The Guardian Business /business/rss": 12
  },
  "items": [
+  {
+   "id": "1dt5tu0",
+   "title": "Energy bills will soar - here's how you can ease the pain",
+   "link": "https://www.bbc.co.uk/news/articles/crm4rygl4m3o?at_medium=RSS&at_campaign=rss",
+   "summary": "Household energy bills are about to increase but there are ways to keep a lid on your expenditure.",
+   "published": "2026-11-23T01:05:07.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "jj941u",
+   "title": "Goldman sees European gas halving to €45 in 2027, but a cold winter could push it to €150",
+   "link": "https://investinglive.com/commodities/goldman-sees-european-gas-halving-to-45-in-2027-but-a-cold-winter-could-push-it-to-150/",
+   "summary": "A credible path to much cheaper gas would ease pressure on Europe's energy-intensive industries and utilities' input costs, and could weigh on gas futures further out the curve even while the winter contracts stay…",
+   "published": "2026-11-23T00:56:16.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "hh0z4f",
+   "title": "Half of wallets on Trump’s dinner list got tokens from non-US exchanges",
+   "link": "https://cointelegraph.com/news/half-wallets-trumps-dinner-list-got-tokens-from-non-us-exchanges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Public Citizen traced 66 of 130 qualifying wallets to exchanges that restrict US users, raising questions over who is attending Trump’s memecoin dinner on Sunday.",
+   "published": "2026-11-23T00:53:49.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "zqv73t",
+   "title": "Italian jeweller and businessman Paolo Bulgari dies aged 89",
+   "link": "https://www.bbc.co.uk/news/articles/c8e39qk5vrpdo?at_medium=RSS&at_campaign=rss",
+   "summary": "In a statement to Italian media, his family remember him as \"the greatest jeweller of our time\".",
+   "published": "2026-11-23T00:33:36.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "5iob1u",
+   "title": "Chinese brokers see a bottom and a broader 2027 rally after Beijing's support push",
+   "link": "https://investinglive.com/stock-market-update/chinese-brokers-see-a-bottom-and-a-broader-2027-rally-after-beijing-s-support-push/",
+   "summary": "The brokers' calls point to two phases. Near term, rotation favours high-dividend defensives such as banks, insurers, utilities-style infrastructure and consumer staples like baijiu. In any rebound, beta should lead,…",
+   "published": "2026-11-23T00:29:47.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "om0ya1",
+   "title": "PBOC is expected to set the USD/CNY reference rate at 6.6775 – Reuters estimate",
+   "link": "https://investinglive.com/central-banks/pboc-is-expected-to-set-the-usd-cny-reference-rate-at-6-6775-reuters-estimate/",
+   "summary": "The People’s Bank of China is due to set the daily USD/CNY reference rate at around 0115 GMT (2115 US Eastern time), a fixing that remains one of the most closely watched signals in Asian foreign exchange markets. ---…",
+   "published": "2026-11-23T00:24:04.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "15674ts",
+   "title": "What is going on with Poundland?",
+   "link": "https://www.bbc.co.uk/news/articles/cm4g10p2r0g9o?at_medium=RSS&at_campaign=rss",
+   "summary": "Poundland has a matter of days to find a buyer or face collapsing into administration. Why?",
+   "published": "2026-11-23T00:22:27.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1fe7ird",
+   "title": "The AI winners may not exist yet, J.P. Morgan warns, as mega-IPOs flood the market",
+   "link": "https://investinglive.com/stock-market-update/the-ai-winners-may-not-exist-yet-j-p-morgan-warns-as-mega-ipos-flood-the-market/",
+   "summary": "J.P. Morgan's numbers push back on one popular explanation for the AI sell-off, that a flood of new shares is draining liquidity. That puts the focus back on valuations and earnings doubts as the real drivers. Strong…",
+   "published": "2026-11-23T00:18:26.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "pmz87x",
+   "title": "San Francisco is enjoying an AI boom, but worries about a crash are growing",
+   "link": "https://www.bbc.co.uk/news/articles/cqe9k09j9jv4o?at_medium=RSS&at_campaign=rss",
+   "summary": "AI employees in the industry's epicentre - San Francisco - worry that the sector is overheated.",
+   "published": "2026-11-23T00:08:00.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "nxufh1",
+   "title": "SNB's Martin eyes second-round effects after inflation jumps to 1.5%, hike in view",
+   "link": "https://investinglive.com/central-banks/snb-s-martin-eyes-second-round-effects-after-inflation-jumps-to-1-5-hike-in-view/",
+   "summary": "Martin's focus on second-round effects is a hawkish signal, and it supports pricing for a December SNB hike. A tightening Swiss central bank alongside a hiking Fed changes the usual rate-differential story for the…",
+   "published": "2026-11-23T00:01:13.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1yp5khb",
+   "title": "Gold sinks 9% in a week as margin calls and Fed hike bets override its haven role",
+   "link": "https://investinglive.com/commodities/gold-sinks-9-in-a-week-as-margin-calls-and-fed-hike-bets-override-its-haven-role/",
+   "summary": "Gold is currently trading as a funding asset, so its near-term direction depends more on equity volatility and leveraged positioning than on traditional safe-haven demand. A December Fed hike is close to fully priced,…",
+   "published": "2026-11-22T23:51:03.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "b8gtax",
+   "title": "Korea's market rescue fund is worth around $8 billion, but is 10.76 trillion won enough?",
+   "link": "https://investinglive.com/stock-market-update/korea-s-market-rescue-fund-is-worth-around-8-billion-but-is-10-76-trillion-won-enough/",
+   "summary": "The fund's size makes it more of a confidence signal than a market mover, so traders are likely to watch how quickly and how visibly it is deployed, not just its headline value. If it is activated and the selling…",
+   "published": "2026-11-22T23:32:49.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "mlgzap",
+   "title": "Could Nvidia shareholders force Huang back? The 15% hurdle behind a long-shot idea",
+   "link": "https://investinglive.com/stocks/could-nvidia-shareholders-force-huang-back-the-15-hurdle-behind-a-long-shot-idea/",
+   "summary": "For now this is a watch item, not a trading catalyst. There's no filing, no coalition and a board that has firmly closed the door. If it did escalate into a formal fight, the leadership uncertainty would likely weigh…",
+   "published": "2026-11-22T23:17:55.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "16zg461",
+   "title": "Bessent leaves door open to Huang return at Nvidia, a week after urging an outside CEO",
+   "link": "https://investinglive.com/stocks/bessent-leaves-door-open-to-huang-return-at-nvidia-a-week-after-urging-an-outside-ceo/",
+   "summary": "Removing Washington's apparent veto on Huang lowers one source of leadership uncertainty at the world's most important AI chipmaker, which could ease some of the pressure on Nvidia after last week's slide. The bigger…",
+   "published": "2026-11-22T23:06:27.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1o2g2e3",
+   "title": "China cuts margin requirement to 80% in fresh market support push, but will it work?",
+   "link": "https://investinglive.com/stock-market-update/china-cuts-margin-requirement-to-80-in-fresh-market-support-push-but-will-it-work/",
+   "summary": "The margin cut may help mainland sentiment at the open, especially in the high-beta growth names on ChiNext and the STAR board, where leveraged retail money tends to concentrate. Because the change only takes effect on…",
+   "published": "2026-11-22T22:57:29.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "s9xcfs",
+   "title": "Will Bitcoin’s big rebound hold? More tampered Ledgers found: Hodler’s Digest",
+   "link": "https://cointelegraph.com/magazine/will-bitcoins-big-rebound-hold-more-tampered-ledgers-found-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Bitcoin rebounds sharply from its new cycle low, but is $55,111 really the bottom? Ledger investigates new reports of tampered devices in Berlin and the UAE.",
+   "published": "2026-11-22T22:47:09.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "6us7av",
+   "title": "Australia flash PMI sinks to 46.1 as private sector shrinks at fastest pace in 5 years",
+   "link": "https://investinglive.com/news/australia-flash-pmi-sinks-to-46-1-as-private-sector-shrinks-at-fastest-pace-in-5-years/",
+   "summary": "A drop this deep, alongside the first easing in input cost inflation for months, weakens the case for further Australian monetary tightening. That leaves the Australian dollar exposed if rate markets start pricing a…",
+   "published": "2026-11-22T22:09:56.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "te3oix",
+   "title": "New Zealand retail volumes jump 2.2% in Q3, more than four times the expected pace",
+   "link": "https://investinglive.com/news/new-zealand-retail-volumes-jump-2-2-in-q3-more-than-four-times-the-expected-pace/",
+   "summary": "A beat of this size is supportive for the New Zealand dollar and should firm rate expectations at the margin, since it weakens the case that NZ consumers need more help. Any boost may be short-lived, though, with…",
+   "published": "2026-11-22T21:54:37.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
   {
    "id": "14dyyv1",
    "title": "Employees at Eric Trump-backed robot startup lose health benefits as company's cash crunch deepens",
@@ -37,15 +199,6 @@
    "published": "2026-11-22T13:50:21.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "1jpqahx",
-   "title": "Bitcoin analysis: More volume, but less downside damage (possible dip?)",
-   "link": "https://investinglive.com/cryptocurrency/bitcoin-analysis-more-volume-but-less-downside-damage-possible-dip/",
-   "summary": "Bitcoin's rebound from $55,130 has some encouraging short-term evidence behind it. Still, the broader Bitcoin outlook is not yet bullish again, and the $62,000-$62,640 area may help decide whether this is a recovery in…",
-   "published": "2026-11-22T12:53:44.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "1la066y",
@@ -89,15 +242,6 @@
    "link": "https://www.bbc.co.uk/news/articles/cqkgmy2nxy4lo?at_medium=RSS&at_campaign=rss",
    "summary": "Sir Andrew Mitchell says access should be easier for people tackling financial crime.",
    "published": "2026-11-22T07:22:05.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "zqv73t",
-   "title": "Italian jeweller and businessman Paolo Bulgari dies aged 89",
-   "link": "https://www.bbc.co.uk/news/articles/c8e39qk5vrpdo?at_medium=RSS&at_campaign=rss",
-   "summary": "In a statement to Italian media, his family remember him as \"the greatest jeweller of our time\".",
-   "published": "2026-11-22T07:12:41.000Z",
    "source": "BBC Business",
    "category": "economy"
   },
@@ -192,15 +336,6 @@
    "category": "economy"
   },
   {
-   "id": "1aw79hr",
-   "title": "GTA 6 sales hit $3.8bn in a single day - the biggest entertainment launch in history",
-   "link": "https://www.bbc.co.uk/news/articles/c9zr5nyv5dj2o?at_medium=RSS&at_campaign=rss",
-   "summary": "The mammoth figure surpasses every video game launch and single-day film box office record.",
-   "published": "2026-11-20T22:53:24.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "vzwb87",
    "title": "Tech stock sell-off drags markets down as Anthropic shares slide",
    "link": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
@@ -208,33 +343,6 @@
    "published": "2026-11-20T22:42:47.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "5i0o59",
-   "title": "investingLive Americas FX news wrap 20 Nov: Stocks get hammered as Nasdaq plunges 5.28%",
-   "link": "https://investinglive.com/news/investinglive-americas-fx-news-wrap-20-nov-stocks-get-hammered-as-nasdaq-plunges-5-28/",
-   "summary": "Nasdaq 100 posts worst week since March 2020 Trump weighs renewed strikes on Iran as military warns of strain. FT Nvidia falls after SEC probe on potential accounting issues European stocks end a bruising week. German…",
-   "published": "2026-11-20T22:21:47.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "9678k1",
-   "title": "Nasdaq 100 posts worst week since March 2020",
-   "link": "https://investinglive.com/stocks/nasdaq-100-posts-worst-week-since-march-2020/",
-   "summary": "U.S. stocks closed sharply lower Friday, with the Nasdaq 100 falling 5.61% on the day and 10.43% for the week, its worst since March 2020. The Nasdaq Composite fell 5.28%, wiping out its gains for the year, while the…",
-   "published": "2026-11-20T22:03:17.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "lvwepp",
-   "title": "AUDUSD is the biggest mover of the major currencies this week. The price falls -2.30% for the week.",
-   "link": "https://investinglive.com/technical-analysis/audusd-is-the-biggest-mover-of-the-major-currencies-this-week-the-price-falls-2-30-for-the-week/",
-   "summary": "The AUDUSD is the weakest of the major currencies vs the greenback. It fell -2.3%. The price has now fallen for 10 consecutive days. That move has taken the price from a high on November 10 at 0.69296 to the low today…",
-   "published": "2026-11-20T21:46:41.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "1nsb0fw",
@@ -273,24 +381,6 @@
    "category": "economy"
   },
   {
-   "id": "14n5yyk",
-   "title": "Trump weighs renewed strikes on Iran as military warns of strain. FT",
-   "link": "https://investinglive.com/news/trump-weighs-renewed-strikes-on-iran-as-military-warns-of-strain-ft/",
-   "summary": "President Donald Trump is considering new strikes on Iran, the Financial Times reports, as hawkish officials in Washington and Israel urge him to resume military action. U.S. military planners are warning that American…",
-   "published": "2026-11-20T20:42:10.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "149qc9n",
-   "title": "Nvidia falls after SEC probe on potential accounting issues",
-   "link": "https://investinglive.com/stocks/nvidia-down-falls-after-sec-probe-on-potential-accounting-issues/",
-   "summary": "Shares of Nvidia are trading down $17.25 at $128.80. It low reached $128.66. That is the lowest level going back to May 14, 2025. Technically the price fell below the 61.8% retracement of the move up from the 2025 low…",
-   "published": "2026-11-20T19:59:30.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "3mmpks",
    "title": "Prediction markets outlook for stocks in 2026 dims amid AI sell-off",
    "link": "https://www.cnbc.com/2026/11/20/sp-500-8000-kalshi-odds-ai-selloff.html",
@@ -327,15 +417,6 @@
    "category": "economy"
   },
   {
-   "id": "5zyy8o",
-   "title": "European stocks end a bruising week. German DAX falls 7.29%.",
-   "link": "https://investinglive.com/news/european-stocks-end-a-bruising-week-german-dax-falls-7-29/",
-   "summary": "As London and European traders head home for the weekend, the major indices are closing sharply lower. The German DAX led the way down on Friday with a 2.60% decline, followed by Italy’s FTSE MIB at 2.48%. The UK’s…",
-   "published": "2026-11-20T18:12:25.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "wg51mc",
    "title": "UK to explore even closer ties with EU after agreeing deal, says Burnham",
    "link": "https://www.bbc.co.uk/news/articles/c6jreyqgw4e9o?at_medium=RSS&at_campaign=rss",
@@ -345,42 +426,6 @@
    "category": "economy"
   },
   {
-   "id": "1tx3u0",
-   "title": "Trump: Secured two new trade deals. 10 others coming very soon.",
-   "link": "https://investinglive.com/news/trump-secured-two-new-trade-deals-10-others-coming-very-soon/",
-   "summary": "Secured two new trade deals. 10 others coming very soon. Interest rates are too high because we have political Fed. The Fed should be cutting rates We should have a low as interest rates in the world. Says that he is…",
-   "published": "2026-11-20T17:33:44.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "m6nx8w",
-   "title": "Fed’s Cook says monetary policy isn’t restrictive enough",
-   "link": "https://investinglive.com/central-banks/fed-s-cook-says-monetary-policy-isn-t-restrictive-enough/",
-   "summary": "The Fed’s Cook weighed in on inflation, the labor market and the need for tighter monetary policy in remarks that crossed the wires. Fed’s current monetary policy stance is not providing needed restraint. September’s…",
-   "published": "2026-11-20T17:21:55.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1ky1oiz",
-   "title": "Bitcoin falls below $60K for first time since July amid broader market selloff",
-   "link": "https://cointelegraph.com/markets/bitcoin-falls-below-60k-for-first-time-since-july-amid-broader-market-selloff?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitcoin fell nearly 6% as US stocks declined, with the Nasdaq dropping more than 2% and Anthropic shares losing almost 10%.",
-   "published": "2026-11-20T16:55:51.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "a2qhut",
-   "title": "NASDAQ composite is now down on the year",
-   "link": "https://investinglive.com/stocks/nasdaq-composite-is-now-down-on-the-year/",
-   "summary": "The Nasdaq Composite has given back its gains for 2026. With the index down 3.21% on the day at 23,111.52, it is now 130.47 points below its 2025 closing level of 23,241.99. That puts the index down 0.56% for the year…",
-   "published": "2026-11-20T16:49:23.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "8dkrdr",
    "title": "Faisal Islam: This cost-cutting UK-EU deal doesn't mean lower prices will follow",
    "link": "https://www.bbc.co.uk/news/articles/cm1wr029evnqo?at_medium=RSS&at_campaign=rss",
@@ -388,33 +433,6 @@
    "published": "2026-11-20T16:41:52.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "11yy38z",
-   "title": "Could Jensen Huang end up at SpaceX? Dan Ives thinks he could work alongside Elon Musk",
-   "link": "https://investinglive.com/stocks/could-jensen-huang-end-up-at-spacex-dan-ives-thinks-he-could-work-alongside-elon-musk/",
-   "summary": "SpaceX has already lined up about $40 billion in financing for AI computing equipment, including next-generation Nvidia chips. In a Bloomberg interview about 30 minutes ago, tech analyst Dan Ives was asked where Jensen…",
-   "published": "2026-11-20T16:39:10.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "xtcy1g",
-   "title": "Gold breaks below the 50% midpoint. Can buyers hold the old breakout area?",
-   "link": "https://investinglive.com/commodities/gold-breaks-below-the-50-midpoint-can-buyers-hold-the-old-breakout-area/",
-   "summary": "Gold is under pressure again today, with the price trading near $3,550.21 after reaching a low of $3,514.65 on my chart. That puts the price roughly 8% lower on the week and nearly 37% below the $5,598.75 high.…",
-   "published": "2026-11-20T16:29:36.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "dsc998",
-   "title": "US Senate advances prediction market restrictions with DEATH BETS Act",
-   "link": "https://cointelegraph.com/news/us-senate-advances-prediction-market-restrictions-with-death-bets-act?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The Senate-approved bill would ban prediction market contracts tied to war, assassination and death amid concerns over potential insider trading on military events.",
-   "published": "2026-11-20T15:55:22.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1hb8ltg",
@@ -453,30 +471,12 @@
    "category": "markets"
   },
   {
-   "id": "gpy6jj",
-   "title": "Tinned food and long-life milk boost retail sales after 'Be Ready' campaign launch",
-   "link": "https://www.bbc.co.uk/news/articles/ck053mzy2qqeo?at_medium=RSS&at_campaign=rss",
-   "summary": "People stocking up on long-life food drove retail sales higher October, according to official data.",
-   "published": "2026-11-20T09:44:56.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "dkk7ck",
    "title": "Christine Lagarde: Acting in time",
    "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261120~e52bcc4db2.en.html",
    "summary": "",
    "published": "2026-11-20T08:30:00.000Z",
    "source": "ECB",
-   "category": "economy"
-  },
-  {
-   "id": "1alvmtb",
-   "title": "Should AI be judging our credit worthiness?",
-   "link": "https://www.bbc.co.uk/news/articles/c6d94pzk9vleo?at_medium=RSS&at_campaign=rss",
-   "summary": "Would AI be a good judge of whether you should get a mortgage, car loan or mobile phone contract?",
-   "published": "2026-11-20T07:32:19.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
