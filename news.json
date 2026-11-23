@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T01:55:32.012Z",
+ "updated": "2026-11-23T10:15:51.506Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,6 +12,204 @@
  },
  "items": [
   {
+   "id": "15674ts",
+   "title": "Poundland is facing collapse - what's gone wrong?",
+   "link": "https://www.bbc.co.uk/news/articles/cm4g10p2r0g9o?at_medium=RSS&at_campaign=rss",
+   "summary": "Poundland has a matter of days to find a buyer or face collapsing into administration. Why?",
+   "published": "2026-11-23T10:09:25.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1v6ozw3",
+   "title": "ECB expands acceptance of DLT-based assets as eligible Eurosystem collateral",
+   "link": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261123~76b6f57b74.en.html",
+   "summary": "",
+   "published": "2026-11-23T10:00:00.000Z",
+   "source": "ECB",
+   "category": "economy"
+  },
+  {
+   "id": "o6wdco",
+   "title": "General insurance stress test highlights value of rehearsing crisis response and recovery",
+   "link": "https://www.bankofengland.co.uk/news/2026/november/general-insurance-stress-test-highlights-value-of-rehearsing-crisis-response-and-recovery",
+   "summary": "The Prudential Regulation Authority (PRA) has today published the results of its 2026 Dynamic General Insurance Stress Test (DyGIST)",
+   "published": "2026-11-23T10:00:00.000Z",
+   "source": "Bank of England",
+   "category": "economy"
+  },
+  {
+   "id": "dlgt3o",
+   "title": "Catering giant to switch stock market listing to US in further blow to UK",
+   "link": "https://www.bbc.co.uk/news/articles/ckz74098jq5po?at_medium=RSS&at_campaign=rss",
+   "summary": "A growing number of firms have been leaving the UK to list shares in the US in recent years.",
+   "published": "2026-11-23T09:54:04.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "nr0aph",
+   "title": "Market outlook for the week of 23rd - 27th November",
+   "link": "https://investinglive.com/forex/market-outlook-for-the-week-of-23rd-27th-november/",
+   "summary": "Monday will start with manufacturing PMI and services PMI from the eurozone, the U.K. and the U.S. while Tuesday we'll get the U.S. CB consumer confidence and the Richmond manufacturing index. Wednesday the highlight…",
+   "published": "2026-11-23T09:49:07.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "h7r0iq",
+   "title": "Gold trims losses amid broad short-covering across markets as growth concerns linger. What's next?",
+   "link": "https://investinglive.com/commodities/gold-trims-losses-amid-broad-short-covering-across-markets-as-growth-concerns-linger-what-s-next/",
+   "summary": "Gold extended the losses on Friday but eventually bounced around the key 3,500 level likely due to some short-covering after the aggressive selloff. The precious metal then extended the gains in the APAC session amid a…",
+   "published": "2026-11-23T09:45:20.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "14otiw6",
+   "title": "Pip assessments need 'fundamental overhaul', report to say",
+   "link": "https://www.bbc.co.uk/news/articles/cvlyj3rn201xo?at_medium=RSS&at_campaign=rss",
+   "summary": "Disability Minister Sir Stephen Timms says he will recommend major reforms to the personal independence payment.",
+   "published": "2026-11-23T09:37:07.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1iqve0g",
+   "title": "UK November flash services PMI 52.0 vs 53.0 expected",
+   "link": "https://investinglive.com/news/uk-november-flash-services-pmi-52-0-vs-53-0-expected/",
+   "summary": "Prior 52.8 Manufacturing PMI 52.7 vs 53.0 expected Prior 52.8 Composite PMI 52.3 vs 53.1 expected Prior 52.9 Key Findings: UK private sector output growth slows in November, despite fastest upturn in manufacturing…",
+   "published": "2026-11-23T09:30:16.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "jxksaj",
+   "title": "‘MoldyRoost’ ads can steal crypto wallet recovery phrases from iPhones",
+   "link": "https://cointelegraph.com/news/moldyroost-malware-drain-iphone-wallets-one-tap?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The campaign used at least 480 ad domains to target users in more than 47 countries and could infect a vulnerable iPhone with a single tap.",
+   "published": "2026-11-23T09:05:44.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "svlnzi",
+   "title": "Eurozone November flash services PMI 51.2 vs 51.8 expected",
+   "link": "https://investinglive.com/news/eurozone-november-flash-services-pmi-51-2-vs-51-8-expected/",
+   "summary": "Prior 51.4 Manufacturing PMI 52.9 vs 52.8 expected Prior 52.7 Composite PMI 51.7 vs 51.9 expected Prior 51.7 Key findings: Eurozone growth sustained despite deepening downturn in France Comment: Chris Williamson, Chief…",
+   "published": "2026-11-23T09:00:21.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "141nziv",
+   "title": "Germany November flash manufacturing PMI 55.0 vs 54.0 expected",
+   "link": "https://investinglive.com/news/germany-november-flash-manufacturing-pmi-55-0-vs-54-0-expected/",
+   "summary": "Prior 54.2 Services PMI 54.0 vs 52.3 expected Prior 52.5 Composite PMI 55.0 vs 53.3 expected Prior 53.4 Key findings: German Composite PMI climbs to highest since March 2022 Comment: Phil Smith, Economics Associate…",
+   "published": "2026-11-23T08:30:21.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "xige34",
+   "title": "France November flash services PMI 46.6 vs 47.5 expected",
+   "link": "https://investinglive.com/news/france-november-flash-services-pmi-46-6-vs-47-5-expected/",
+   "summary": "Prior 46.2 Manufacturing PMI 47.9 vs 49.9 expected Prior 49.5 Composite PMI 46.2 vs 48.1 expected Prior 46.6 Key findings: Sharper manufacturing decline weighs on French economy in November Comment: Joe Hayes, Senior…",
+   "published": "2026-11-23T08:15:30.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "t8unab",
+   "title": "Bitcoin ETFs shed $1.8B in third-largest weekly outflow",
+   "link": "https://cointelegraph.com/markets/bitcoin-etfs-third-largest-weekly-outflows-1-8-billion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Bitcoin ETF outflows reached $4.14 billion in November through Friday, nearing June’s $4.51 billion total.",
+   "published": "2026-11-23T08:08:52.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1rcyg3t",
+   "title": "FX option expiries for 23 November 10am New York cut",
+   "link": "https://investinglive.com/orders/fx-option-expiries-for-23-november-10am-new-york-cut/",
+   "summary": "EUR/USD 1.1060 (EUR 519.34 mn) 1.1030 (EUR 499.54 mn) 1.1010 (EUR 432.56 mn) 1.0950 (EUR 774.00 mn) USD/JPY 159.25 (US$ 1.43 bn) 158.00 (US$ 1.02 bn) GBP/USD 1.3425 (GBP 1.25 bn) 1.3240 (GBP 2.30 bn) USD/CHF 0.8425…",
+   "published": "2026-11-23T07:35:55.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "ybapfm",
+   "title": "What are the main events for today?",
+   "link": "https://investinglive.com/news/what-are-the-main-events-for-today-91/",
+   "summary": "EUROPEAN SESSION In the European session, get the Flash PMIs for the major Eurozone economies and the UK. Basically all of them are expected to show an improvement versus the prior month. Given the underlying growth…",
+   "published": "2026-11-23T07:19:14.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1y7g43w",
+   "title": "Nasdaq analysis today as we wake up to the green",
+   "link": "https://investinglive.com/stocks/nasdaq-analysis-today-as-we-wake-up-to-the-green/",
+   "summary": "Nasdaq futures jump more than 3% after tech rout. Can buyers turn the rebound into a recovery? Nasdaq 100 futures are staging a powerful comeback on Monday, November 23, following last week's technology selloff. The…",
+   "published": "2026-11-23T06:29:13.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-11-23T06:00:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1xkpfz7",
+   "title": "investingLive Asia-Pacific market news: US futures hold 2% bounce",
+   "link": "https://investinglive.com/news/investinglive-asia-pacific-market-news-us-futures-hold-2-bounce/",
+   "summary": "Waking up to green Crypto crime: Fusionist's ACE bridge emptied of $3.7 million as traders follow a $2 million exploit California widens Nvidia probe to criminal law, a bigger deal than Huang return talk OCBC: AI rout…",
+   "published": "2026-11-23T04:31:16.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "wdnc3",
+   "title": "Trump renews call for Nvidia to rehire Jensen Huang as CEO",
+   "link": "https://cointelegraph.com/news/trump-renews-call-for-nvidia-to-rehire-jensen-huang-as-ceo?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "In a Truth Social post on Monday, Trump said rehiring Jensen Huang would benefit both Nvidia and the US.",
+   "published": "2026-11-23T03:37:20.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "xj83bd",
+   "title": "Waking up to green",
+   "link": "https://investinglive.com/stocks/waking-up-to-green/",
+   "summary": "Nvidia, AMD and Micron rebound sharply, but semiconductor stocks have a lot of ground to recover The latest four-hour gains across major semiconductor stocks look impressive. Put them next to their one-week…",
+   "published": "2026-11-23T03:34:43.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "ma2b3v",
+   "title": "Crypto crime: Fusionist's ACE bridge emptied of $3.7 million as traders follow a $2 million exploit",
+   "link": "https://investinglive.com/cryptocurrency/crypto-crime-fusionist-s-ace-bridge-emptied-of-3-7-million-as-traders-follow-a-2-million-exploit/",
+   "summary": "ACE fell to about $0.0001 on BNB Chain but still traded around $0.04 on centralised exchanges, and traders exploited that gap until the bridge ran dry. The drained 53.7 million tokens are almost half of the roughly 116…",
+   "published": "2026-11-23T03:20:36.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1w1ddbf",
+   "title": "Billionaire Bill Ackman warns Fed will make a rate ‘mistake’ in December",
+   "link": "https://cointelegraph.com/markets/billionaire-bill-ackman-warns-fed-rate-hikes-could-trigger-recession?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Markets and economists widely expect the US Federal Reserve to raise interest rates by 25 basis points in its December meeting.",
+   "published": "2026-11-23T02:47:39.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
    "id": "1dt5tu0",
    "title": "Energy bills will soar - here's how you can ease the pain",
    "link": "https://www.bbc.co.uk/news/articles/crm4rygl4m3o?at_medium=RSS&at_campaign=rss",
@@ -19,15 +217,6 @@
    "published": "2026-11-23T01:05:07.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "jj941u",
-   "title": "Goldman sees European gas halving to €45 in 2027, but a cold winter could push it to €150",
-   "link": "https://investinglive.com/commodities/goldman-sees-european-gas-halving-to-45-in-2027-but-a-cold-winter-could-push-it-to-150/",
-   "summary": "A credible path to much cheaper gas would ease pressure on Europe's energy-intensive industries and utilities' input costs, and could weigh on gas futures further out the curve even while the winter contracts stay…",
-   "published": "2026-11-23T00:56:16.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "hh0z4f",
@@ -48,42 +237,6 @@
    "category": "economy"
   },
   {
-   "id": "5iob1u",
-   "title": "Chinese brokers see a bottom and a broader 2027 rally after Beijing's support push",
-   "link": "https://investinglive.com/stock-market-update/chinese-brokers-see-a-bottom-and-a-broader-2027-rally-after-beijing-s-support-push/",
-   "summary": "The brokers' calls point to two phases. Near term, rotation favours high-dividend defensives such as banks, insurers, utilities-style infrastructure and consumer staples like baijiu. In any rebound, beta should lead,…",
-   "published": "2026-11-23T00:29:47.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "om0ya1",
-   "title": "PBOC is expected to set the USD/CNY reference rate at 6.6775 – Reuters estimate",
-   "link": "https://investinglive.com/central-banks/pboc-is-expected-to-set-the-usd-cny-reference-rate-at-6-6775-reuters-estimate/",
-   "summary": "The People’s Bank of China is due to set the daily USD/CNY reference rate at around 0115 GMT (2115 US Eastern time), a fixing that remains one of the most closely watched signals in Asian foreign exchange markets. ---…",
-   "published": "2026-11-23T00:24:04.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "15674ts",
-   "title": "What is going on with Poundland?",
-   "link": "https://www.bbc.co.uk/news/articles/cm4g10p2r0g9o?at_medium=RSS&at_campaign=rss",
-   "summary": "Poundland has a matter of days to find a buyer or face collapsing into administration. Why?",
-   "published": "2026-11-23T00:22:27.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "1fe7ird",
-   "title": "The AI winners may not exist yet, J.P. Morgan warns, as mega-IPOs flood the market",
-   "link": "https://investinglive.com/stock-market-update/the-ai-winners-may-not-exist-yet-j-p-morgan-warns-as-mega-ipos-flood-the-market/",
-   "summary": "J.P. Morgan's numbers push back on one popular explanation for the AI sell-off, that a flood of new shares is draining liquidity. That puts the focus back on valuations and earnings doubts as the real drivers. Strong…",
-   "published": "2026-11-23T00:18:26.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "pmz87x",
    "title": "San Francisco is enjoying an AI boom, but worries about a crash are growing",
    "link": "https://www.bbc.co.uk/news/articles/cqe9k09j9jv4o?at_medium=RSS&at_campaign=rss",
@@ -93,60 +246,6 @@
    "category": "economy"
   },
   {
-   "id": "nxufh1",
-   "title": "SNB's Martin eyes second-round effects after inflation jumps to 1.5%, hike in view",
-   "link": "https://investinglive.com/central-banks/snb-s-martin-eyes-second-round-effects-after-inflation-jumps-to-1-5-hike-in-view/",
-   "summary": "Martin's focus on second-round effects is a hawkish signal, and it supports pricing for a December SNB hike. A tightening Swiss central bank alongside a hiking Fed changes the usual rate-differential story for the…",
-   "published": "2026-11-23T00:01:13.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1yp5khb",
-   "title": "Gold sinks 9% in a week as margin calls and Fed hike bets override its haven role",
-   "link": "https://investinglive.com/commodities/gold-sinks-9-in-a-week-as-margin-calls-and-fed-hike-bets-override-its-haven-role/",
-   "summary": "Gold is currently trading as a funding asset, so its near-term direction depends more on equity volatility and leveraged positioning than on traditional safe-haven demand. A December Fed hike is close to fully priced,…",
-   "published": "2026-11-22T23:51:03.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "b8gtax",
-   "title": "Korea's market rescue fund is worth around $8 billion, but is 10.76 trillion won enough?",
-   "link": "https://investinglive.com/stock-market-update/korea-s-market-rescue-fund-is-worth-around-8-billion-but-is-10-76-trillion-won-enough/",
-   "summary": "The fund's size makes it more of a confidence signal than a market mover, so traders are likely to watch how quickly and how visibly it is deployed, not just its headline value. If it is activated and the selling…",
-   "published": "2026-11-22T23:32:49.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "mlgzap",
-   "title": "Could Nvidia shareholders force Huang back? The 15% hurdle behind a long-shot idea",
-   "link": "https://investinglive.com/stocks/could-nvidia-shareholders-force-huang-back-the-15-hurdle-behind-a-long-shot-idea/",
-   "summary": "For now this is a watch item, not a trading catalyst. There's no filing, no coalition and a board that has firmly closed the door. If it did escalate into a formal fight, the leadership uncertainty would likely weigh…",
-   "published": "2026-11-22T23:17:55.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "16zg461",
-   "title": "Bessent leaves door open to Huang return at Nvidia, a week after urging an outside CEO",
-   "link": "https://investinglive.com/stocks/bessent-leaves-door-open-to-huang-return-at-nvidia-a-week-after-urging-an-outside-ceo/",
-   "summary": "Removing Washington's apparent veto on Huang lowers one source of leadership uncertainty at the world's most important AI chipmaker, which could ease some of the pressure on Nvidia after last week's slide. The bigger…",
-   "published": "2026-11-22T23:06:27.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1o2g2e3",
-   "title": "China cuts margin requirement to 80% in fresh market support push, but will it work?",
-   "link": "https://investinglive.com/stock-market-update/china-cuts-margin-requirement-to-80-in-fresh-market-support-push-but-will-it-work/",
-   "summary": "The margin cut may help mainland sentiment at the open, especially in the high-beta growth names on ChiNext and the STAR board, where leveraged retail money tends to concentrate. Because the change only takes effect on…",
-   "published": "2026-11-22T22:57:29.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "s9xcfs",
    "title": "Will Bitcoin’s big rebound hold? More tampered Ledgers found: Hodler’s Digest",
    "link": "https://cointelegraph.com/magazine/will-bitcoins-big-rebound-hold-more-tampered-ledgers-found-hodlers-digest?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -154,24 +253,6 @@
    "published": "2026-11-22T22:47:09.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "6us7av",
-   "title": "Australia flash PMI sinks to 46.1 as private sector shrinks at fastest pace in 5 years",
-   "link": "https://investinglive.com/news/australia-flash-pmi-sinks-to-46-1-as-private-sector-shrinks-at-fastest-pace-in-5-years/",
-   "summary": "A drop this deep, alongside the first easing in input cost inflation for months, weakens the case for further Australian monetary tightening. That leaves the Australian dollar exposed if rate markets start pricing a…",
-   "published": "2026-11-22T22:09:56.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "te3oix",
-   "title": "New Zealand retail volumes jump 2.2% in Q3, more than four times the expected pace",
-   "link": "https://investinglive.com/news/new-zealand-retail-volumes-jump-2-2-in-q3-more-than-four-times-the-expected-pace/",
-   "summary": "A beat of this size is supportive for the New Zealand dollar and should firm rate expectations at the margin, since it weakens the case that NZ consumers need more help. Any boost may be short-lived, though, with…",
-   "published": "2026-11-22T21:54:37.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "14dyyv1",
@@ -199,15 +280,6 @@
    "published": "2026-11-22T13:50:21.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-11-22T11:25:27.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "ls2vsm",
@@ -291,15 +363,6 @@
    "category": "crypto"
   },
   {
-   "id": "1jv54qe",
-   "title": "US lawmakers propose up to 30% rewards for prediction market whistleblowers",
-   "link": "https://cointelegraph.com/news/us-prediction-market-whistleblower-rewards-30-percent?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Whistleblowers could receive 10% to 30% of monetary sanctions in qualifying prediction market fraud cases exceeding $1 million in penalties.",
-   "published": "2026-11-21T07:51:47.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "fzb2zo",
    "title": "How China is using summits to expand its global influence",
    "link": "https://www.cnbc.com/2026/11/21/china-xi-trump-putin-global-diplomacy-shenzhen.html",
@@ -307,15 +370,6 @@
    "published": "2026-11-21T06:00:02.000Z",
    "source": "CNBC Finance",
    "category": "markets"
-  },
-  {
-   "id": "9lv0wp",
-   "title": "Hong Kong pushes to bring crypto custodians, advisers under licensing rules",
-   "link": "https://cointelegraph.com/news/hong-kong-crypto-custody-advisory-licensing-bill?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Hong Kong’s securities regulator says the proposal would strengthen investor protections, with the bill set for its first reading in the Legislative Council on Dec. 2.",
-   "published": "2026-11-21T05:40:35.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1nyk85k",
@@ -333,15 +387,6 @@
    "summary": "German company faced 65,000 claims from people who said they developed cancer after using weedkiller A Missouri judge on Friday approved Bayer ’s $7.25bn settlement of lawsuits ⁠alleging that its weedkiller ​Roundup…",
    "published": "2026-11-20T23:42:43.000Z",
    "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "vzwb87",
-   "title": "Tech stock sell-off drags markets down as Anthropic shares slide",
-   "link": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
-   "summary": "Pressures weighed on US markets, with the S&P 500 and the Dow Jones Industrial Average pushed into correction territory.",
-   "published": "2026-11-20T22:42:47.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
@@ -372,15 +417,6 @@
    "category": "markets"
   },
   {
-   "id": "2ciab7",
-   "title": "Trump threatens ban on US firms building AI data centres overseas",
-   "link": "https://www.bbc.co.uk/news/articles/cmde1lw9y54ko?at_medium=RSS&at_campaign=rss",
-   "summary": "The US president provided little detail on the potential policy, saying others in his team were hearing about it for the first time.",
-   "published": "2026-11-20T20:54:12.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "3mmpks",
    "title": "Prediction markets outlook for stocks in 2026 dims amid AI sell-off",
    "link": "https://www.cnbc.com/2026/11/20/sp-500-8000-kalshi-odds-ai-selloff.html",
@@ -388,24 +424,6 @@
    "published": "2026-11-20T19:59:03.000Z",
    "source": "CNBC Finance",
    "category": "markets"
-  },
-  {
-   "id": "xxbyvd",
-   "title": "Wrapped Monero token crashes 99.8% amid suspected $13.5M exploit",
-   "link": "https://cointelegraph.com/news/wrapped-monero-token-crashes-998-amid-suspected-135m-exploit?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitquery traced $13.5 million in suspicious sales of the wrapped Monero token, as its operator blamed a security breach and promised to reimburse affected traders.",
-   "published": "2026-11-20T19:37:27.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "8akh0p",
-   "title": "Sky Protocol sees $2 billion in stablecoin withdrawals, disputes illicit fund claims",
-   "link": "https://cointelegraph.com/news/sky-protocol-sees-2b-in-stablecoin-withdrawals-disputes-illicit-fund-claims?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Sky says its USDS stablecoin held its $1 value despite more than $2 billion in withdrawals, as it disputes a report linking the protocol to illicit activity.",
-   "published": "2026-11-20T18:37:10.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1tiwbox",
@@ -647,15 +665,6 @@
    "link": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261116_1~11dd7f62af.en.html",
    "summary": "",
    "published": "2026-11-16T13:00:00.000Z",
-   "source": "ECB",
-   "category": "economy"
-  },
-  {
-   "id": "2457hp",
-   "title": "Boris Vujčić: Risks and resilience in the euro area financial system",
-   "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261116~db374b56ab.en.html",
-   "summary": "",
-   "published": "2026-11-16T08:30:00.000Z",
    "source": "ECB",
    "category": "economy"
   }
