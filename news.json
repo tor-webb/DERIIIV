@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T22:09:05.898Z",
+ "updated": "2026-11-24T06:14:31.041Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,47 +12,191 @@
  },
  "items": [
   {
-   "id": "lxfw1t",
-   "title": "Fed's Williams pins inflation on unusual factors, sees 2027 bringing it lower",
-   "link": "https://investinglive.com/central-banks/fed-s-williams-pins-inflation-on-unusual-factors-sees-2027-bringing-it-lower/",
-   "summary": "The Q&A softens the tone of Williams' prepared remarks without changing their core message, so pricing for a quarter-point hike on December 9 is unlikely to move much. His focus on unusual factors puts energy back at…",
-   "published": "2026-11-23T21:45:59.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1la066y",
    "title": "Here’s what happened in crypto today",
    "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-11-23T21:40:44.000Z",
+   "published": "2026-11-24T06:00:00.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
   },
   {
-   "id": "1htrq82",
-   "title": "Nvidia's Huang is back. Monday's rally leaves three big questions unanswered.",
-   "link": "https://investinglive.com/stocks/nvidia-s-huang-is-back-monday-s-rally-leaves-three-big-questions-unanswered/",
-   "summary": "Asia gets the first real test today of whether the relief extends beyond US chipmakers: Tokyo reopens after a holiday, and Seoul's memory makers sold off before the news broke. In rates, a firmer equity backdrop gives…",
-   "published": "2026-11-23T21:40:15.000Z",
+   "id": "120cgor",
+   "title": "US dollar refuses to budge despite the risk-on bounce, so what's keeping it so strong?",
+   "link": "https://investinglive.com/forex/us-dollar-refuses-to-budge-despite-the-risk-on-bounce-so-what-s-keeping-it-so-strong/",
+   "summary": "I guess someone forgot to tell the dollar that we're having a risk-on party again, even if it's just for a day or two. The greenback even gained modest ground despite the euphoric mood that swept across broader markets…",
+   "published": "2026-11-24T05:57:47.000Z",
    "source": "investingLive",
    "category": "forex"
   },
   {
-   "id": "1pq7mi8",
-   "title": "Jensen Huang is back in charge. Nvidia moves higher.",
-   "link": "https://investinglive.com/stocks/jensen-huang-is-back-in-charge-nvidia-moves-higher/",
-   "summary": "The S&P 500 and Nasdaq Composite had their best day since April 9, 2025, as buyers returned to beaten-down AI and chip stocks. Nvidia led the rebound, jumping $39.52 to $165.05 after its board reinstated Jensen Huang…",
-   "published": "2026-11-23T21:25:42.000Z",
+   "id": "1pm9e3y",
+   "title": "Gold gets a bit of a lifeline but the technical damage runs deep, so what now?",
+   "link": "https://investinglive.com/commodities/gold-gets-a-bit-of-a-lifeline-but-the-technical-damage-runs-deep-so-what-now/",
+   "summary": "Amid the turn in broader market sentiment yesterday, gold is finding some reprieve after having come dangerously close to the $3,500 mark at the end of last week. The good news at least is that there's still some fight…",
+   "published": "2026-11-24T05:10:33.000Z",
    "source": "investingLive",
    "category": "forex"
   },
   {
-   "id": "syzj5s",
-   "title": "Nvidia’s value jumped by $950bn as shares close at $165.05 after surprise return of CEO Jensen Huang – as it happened",
-   "link": "https://www.theguardian.com/business/live/2026/nov/23/tech-sell-off-ai-stock-market-support-measures-deployed-south-korea-taiwan-china-ftse-nasdaq-latest-news-updates",
-   "summary": "New value still half a trillion dollars lower than before affair was revealed; Trump hails Huang as a ‘great patriot and national treasure’ US reactions to Jensen Huang return – US politics live Jensen Huang reinstated…",
-   "published": "2026-11-23T21:24:07.000Z",
+   "id": "10wponw",
+   "title": "Why 42 Macro says it’s waiting to buy the Bitcoin dip",
+   "link": "https://cointelegraph.com/markets/why-42-macro-says-its-waiting-to-buy-the-bitcoin-dip?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The independent macro research company warns the Bitcoin sell-off may not have yet run its course.",
+   "published": "2026-11-24T05:07:30.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "opo6xo",
+   "title": "Wall Street catches Jensen Huang fever, but is this all a dead cat bounce?",
+   "link": "https://investinglive.com/stocks/wall-street-catches-jensen-huang-fever-but-is-this-all-a-dead-cat-bounce/",
+   "summary": "So, what'd I miss? Talk about picking the right, or should I say the wrong time to go off on a little break, eh? I leave for a little over a week and come back to find Wall Street flirting with a bear market, only for…",
+   "published": "2026-11-24T04:37:35.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1eawdhs",
+   "title": "Trump faces backlash after saying he 'convinced' Nvidia to reinstate CEO Jensen Huang",
+   "link": "https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&at_campaign=rss",
+   "summary": "Nvidia had come under pressure from President Trump to reappoint Huang, whose comeback helped add $1tn to the company's stock value.",
+   "published": "2026-11-24T04:36:31.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "2m06pb",
+   "title": "investingLive Asia-Pacific market news: Huang's return powers Asia's AI rebound",
+   "link": "https://investinglive.com/news/investinglive-asia-pacific-market-news-huang-s-return-powers-asia-s-ai-rebound/",
+   "summary": "Iran says three tankers hit mines, yet oil sits near a three-month low as supply wins ICYMI: China's 90 billion yuan rescue: record state ETF buying struggles to halt AI sell-off CFTC staff let exchanges count bitcoin…",
+   "published": "2026-11-24T04:13:33.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "j3rm4r",
+   "title": "Iran says three tankers hit mines, yet oil sits near a three-month low as supply wins",
+   "link": "https://investinglive.com/commodities/iran-says-three-tankers-hit-mines-yet-oil-sits-near-a-three-month-low-as-supply-wins/",
+   "summary": "Oil's muted reaction to fresh Hormuz incidents suggests most of the war risk premium has gone, leaving prices driven by supply data. The next tests are this week's US inventory figures and whether Libyan output holds.…",
+   "published": "2026-11-24T03:58:55.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1msb1ie",
+   "title": "Google wants to make you the star of your own AI slop movies",
+   "link": "https://cointelegraph.com/news/google-wants-make-you-star-your-own-ai-slop-movies?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Viewers could find their AI-doppelgangers inserted into the crowd during the Cricket World Cup, or take a leading role in their very own romantic comedy.",
+   "published": "2026-11-24T03:13:22.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "arg2t7",
+   "title": "ICYMI: China's 90 billion yuan rescue: record state ETF buying struggles to halt AI sell-off",
+   "link": "https://investinglive.com/stock-market-update/icymi-china-s-90-billion-yuan-rescue-record-state-etf-buying-struggles-to-halt-ai-sell-off/",
+   "summary": "Today's session is the first real test after Wall Street's Nvidia-led rebound . A sustained recovery in Chinese and Korean stocks without further state buying would suggest the interventions mark a floor, while renewed…",
+   "published": "2026-11-24T02:44:53.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1qyy2uu",
+   "title": "CFTC staff let exchanges count bitcoin and ether toward reserves, after a 20% haircut",
+   "link": "https://investinglive.com/cryptocurrency/cftc-staff-let-exchanges-count-bitcoin-and-ether-toward-reserves-after-a-20-haircut/",
+   "summary": "The direct price signal for BTC and ETH is small. The advisory frees up some capital on the balance sheets of crypto-native venues but doesn't create new demand for either coin. Spot ETF flows shouldn't feel it. The…",
+   "published": "2026-11-24T02:21:50.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "fot6k0",
+   "title": "PIMCO: AI debt and refinancing stress are splitting the corporate bond market in two",
+   "link": "https://investinglive.com/education/pimco-ai-debt-and-refinancing-stress-are-splitting-the-corporate-bond-market-in-two/",
+   "summary": "The split points to rising default and restructuring risk among CCC-rated borrowers, particularly in technology, media, telecoms and consumer sectors, even without a recession. That's a warning for holders of…",
+   "published": "2026-11-24T01:59:54.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "si6dfs",
+   "title": "Gold's road back to $5,000: four big banks bet on recovery, but the Fed sets the pace",
+   "link": "https://investinglive.com/commodities/gold-s-road-back-to-5-000-four-big-banks-bet-on-recovery-but-the-fed-sets-the-pace/",
+   "summary": "The banks' common message is that gold's direction in the coming months depends on the Fed, not on geopolitics. Throughout the Iran war, higher oil has fed rate-hike expectations and weighed on bullion. That makes…",
+   "published": "2026-11-24T01:34:56.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "944x7k",
+   "title": "BlackRock says markets overprice Fed hikes, sees two not three as energy shock fades",
+   "link": "https://investinglive.com/central-banks/blackrock-says-markets-overprice-fed-hikes-sees-two-not-three-as-energy-shock-fades/",
+   "summary": "BlackRock's view runs against Monday's hawkish Fed commentary and against market pricing, so the October PCE data becomes a key test. A softer services reading would back BlackRock and could pull Fed pricing toward two…",
+   "published": "2026-11-24T01:21:05.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "scfe3v",
+   "title": "PBOC sets USD/ CNY central rate at 6.7111 (vs. estimate at 6.6757)",
+   "link": "https://investinglive.com/central-banks/pboc-sets-usd-cny-central-rate-at-6-7111-vs-estimate-at-6-6757/",
+   "summary": "The PBOC allows the yuan to fluctuate within a +/- 2% range, around this reference rate. More here on this. injects 516 billion yuan of overnight reverse repurchase operations This article was written by Eamonn…",
+   "published": "2026-11-24T01:16:09.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1thop4s",
+   "title": "Singapore sees AI boom carrying 2026, but slower AI investment growth to weigh on 2027",
+   "link": "https://investinglive.com/central-banks/singapore-sees-ai-boom-carrying-2026-but-slower-ai-investment-growth-to-weigh-on-2027/",
+   "summary": "Coming from one of the region's biggest AI winners, the comments are an early official signal that growth in AI capital spending may peak in 2026. That matters for chip and electronics supply chains across Taiwan,…",
+   "published": "2026-11-24T00:52:41.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "dyvtf8",
+   "title": "Ethereum Foundation doubles protocol security team ahead of overhaul",
+   "link": "https://cointelegraph.com/news/ethereum-foundation-doubles-protocol-security-team-amid-ai-quantum-overhaul?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The foundation said its next upgrade will be harder than the Merge, and the required pace of development will make it easier to ship bugs.",
+   "published": "2026-11-24T00:36:26.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1e3b600",
+   "title": "I pay £250 a month for someone else to do my life admin - it's worth it",
+   "link": "https://www.bbc.co.uk/news/articles/c6zjr3g13zkno?at_medium=RSS&at_campaign=rss",
+   "summary": "Busy mothers on both sides of the Atlantic are paying companies to handle their to-do lists.",
+   "published": "2026-11-24T00:01:04.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1jby4zw",
+   "title": "CFTC staff say exchanges can count Bitcoin toward operating reserves",
+   "link": "https://cointelegraph.com/news/cftc-staff-say-exchanges-can-count-bitcoin-toward-operating-reserves?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The staff guidance allows Bitcoin, Ether and payment stablecoins to count towards operating reserves.",
+   "published": "2026-11-23T23:43:34.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "14dyyv1",
+   "title": "Employees at Eric Trump-backed robot startup lose health benefits as company's cash crunch deepens",
+   "link": "https://www.cnbc.com/2026/11/22/foundation-future-industries-health-benefits-payroll-base-group.html",
+   "summary": "Foundation is pursuing an emergency bridge loan and has been in talks with VC firms as it waits for a $150 million investment from South Korea's Base Group.",
+   "published": "2026-11-23T23:28:19.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "ewz198",
+   "title": "Jensen Huang reinstated as Nvidia CEO after Trump intervenes",
+   "link": "https://www.theguardian.com/technology/2026/nov/23/jensen-huang-reinstated-as-nvidia-chief-executive",
+   "summary": "Share price surges as chipmaker reverses decision to remove chief executive after US president ‘convinced’ its board Comment: Nvidia’s humiliated board should resign out of embarrassment Timeline: fall and comeback of…",
+   "published": "2026-11-23T22:23:40.000Z",
    "source": "The Guardian Business",
    "category": "economy"
   },
@@ -66,33 +210,6 @@
    "category": "economy"
   },
   {
-   "id": "ksk9vx",
-   "title": "Economic and event calendar in Asia Tuesday, November 24, 2026: Singapore and Japan",
-   "link": "https://investinglive.com/news/economic-and-event-calendar-in-asia-tuesday-november-24-2026-singapore-and-japan/",
-   "summary": "Singapore Q3 GDP: 0000 GMT / 1900 US Eastern Singapore starts the Asian data day with third-quarter GDP. Economists expect growth of 1.3% quarter on quarter, up from 1.1% in the previous reading. On a year-on-year…",
-   "published": "2026-11-23T21:16:15.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "z5h7d",
-   "title": "investingLive Americas market news wrap: Nvidia climbs 30% as Jensen Huang returns",
-   "link": "https://investinglive.com/news/investinglive-americas-market-news-wrap-nvidia-climbs-30-as-jensen-huang-returns/",
-   "summary": "Nvidia board reinstates Jensen Huang as President and CEO, effective immediately S&P Global US services November flash PMI 54.7 vs 55.7 expected U.S. Treasury sells $69 billion the two-year notes at a high yield of…",
-   "published": "2026-11-23T21:09:01.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1meb4yv",
-   "title": "Williams keeps December Fed hike in play as inflation seen above 2% until 2028",
-   "link": "https://investinglive.com/central-banks/williams-keeps-december-fed-hike-in-play-as-inflation-seen-above-2-until-2028/",
-   "summary": "Williams' remarks support pricing for a quarter-point hike in December and further tightening in 2027, which should keep front-end Treasury yields firm and give the US dollar some support. Energy features in his…",
-   "published": "2026-11-23T21:06:53.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1g3pdwd",
    "title": "US seeks to recover $1.1B in crypto stolen in North Korea-linked Binance hack",
    "link": "https://cointelegraph.com/news/us-seeks-11b-crypto-stolen-north-korea-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -100,15 +217,6 @@
    "published": "2026-11-23T21:04:03.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "1lg5ixk",
-   "title": "Silver sets the technical boundaries in the short term for traders",
-   "link": "https://investinglive.com/commodities/silver-sets-the-technical-boundaries-in-the-short-term-for-traders/",
-   "summary": "Silver is trading higher today after falling to its lowest level since September 2025 on Friday. The rebound took the price from $40.75 to a session high of $44.25, a gain of about 8.6% from Friday’s low. The move ran…",
-   "published": "2026-11-23T21:03:58.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "1rszhy3",
@@ -120,15 +228,6 @@
    "category": "markets"
   },
   {
-   "id": "1qntjfs",
-   "title": "Crude oil settles at $80.17. Trades at its lowest level since August 26.",
-   "link": "https://investinglive.com/commodities/crude-oil-settles-at-80-17-trades-at-its-lowest-level-since-august-26/",
-   "summary": "WTI crude oil fell nearly 4% Monday, trading near $80.20 a barrel around settlement after reaching an intraday low of $79.95. The selloff extends a slide that had already pushed crude to three straight weekly declines.…",
-   "published": "2026-11-23T20:52:37.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "wh1zfy",
    "title": "Kalshi secures temporary win in New York gambling law dispute",
    "link": "https://cointelegraph.com/news/kalshi-temporary-win-new-york-gambling-law-dispute?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -136,15 +235,6 @@
    "published": "2026-11-23T20:38:43.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "ml8tzm",
-   "title": "Jensen Huang may be back but the China hawks probably haven't given up",
-   "link": "https://investinglive.com/stocks/jensen-huang-may-be-back-but-the-china-hawks-probably-haven-t-given-up/",
-   "summary": "Charles Gasparino is out with an interesting report. He argues that the Nvidia saga isn't over and for reasons that could rattle the equity bulls. He writes: The weekend at the White House was pure bedlam, people with…",
-   "published": "2026-11-23T19:53:23.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "a0bvkw",
@@ -156,15 +246,6 @@
    "category": "crypto"
   },
   {
-   "id": "1tr6sn2",
-   "title": "The Nvidia reversal creates a fresh scramble for dollars",
-   "link": "https://investinglive.com/forex/the-nvidia-reversal-creates-a-fresh-scramble-for-dollars/",
-   "summary": "I wrote recently about the rise of the chip-dollar as a driving factor in foreign exchange. Today, we are seeing it again. There is a major risk-on trade underway but the euro and pound are both notably lower against…",
-   "published": "2026-11-23T19:24:01.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "ngop8m",
    "title": "Base makes quantum security a 2027 priority as regulators warn of risks",
    "link": "https://cointelegraph.com/interview/base-quantum-security-2027-priority-regulators-warn-risks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -172,24 +253,6 @@
    "published": "2026-11-23T19:16:46.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "1tcwqaa",
-   "title": "Gold rebounds 3.2% despite a stronger dollar and higher yields.",
-   "link": "https://investinglive.com/commodities/gold-rebounds-3-2-despite-a-stronger-dollar-and-higher-yields/",
-   "summary": "Gold is up 3.2% today, trading near $3,654 after falling more than 9% last week and hitting its lowest level since September 2025. The rebound stands out with both the US dollar and Treasury yields moving higher. A…",
-   "published": "2026-11-23T18:57:30.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "mxnegy",
-   "title": "U.S. Treasury sells $69 billion the two-year notes at a high yield of 4.700%",
-   "link": "https://investinglive.com/news/u-s-treasury-sells-69-billion-the-two-year-notes-at-a-high-yield-of-4-700/",
-   "summary": "The US treasury sold $69 billion of 2-year notes: WI level at the time of the auction: 4.703% High yield: 4.700% vs 4.708% at the prior auction Stop-through: -0.3 basis points vs the average stop-through of -0.1 basis…",
-   "published": "2026-11-23T18:03:10.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "lhze93",
@@ -255,15 +318,6 @@
    "category": "economy"
   },
   {
-   "id": "1gvr1jv",
-   "title": "How market depth shapes the price of a weekend Bitcoin sale",
-   "link": "https://cointelegraph.com/news/how-market-depth-shapes-the-price-of-a-weekend-bitcoin-sale?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Over 14 hours, Bitcoin traded on Kraken’s Canadian dollar market at an average 37.3% discount to a benchmark based on the exchange’s US dollar trades.",
-   "published": "2026-11-23T15:57:55.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "5u1f7v",
    "title": "The rise and fall and rise again of Jensen Huang",
    "link": "https://www.bbc.co.uk/news/articles/cmze750zg0jeo?at_medium=RSS&at_campaign=rss",
@@ -276,19 +330,10 @@
    "id": "1ln93ji",
    "title": "Wild stock market swings: will I lose money, and is there anything I can do?",
    "link": "https://www.theguardian.com/business/2026/nov/23/falling-markets-will-i-lose-money-shares-tech-ai-investments",
-   "summary": "Shares are volatile amid jitters over tech and AI – but think carefully before you decide to ditch investments too Business live – latest updates It has been a volatile time on global stock markets, with rapid rallies…",
+   "summary": "Shares are volatile amid jitters over tech and AI – but think carefully before you decide to ditch investments too It has been a volatile time on global stock markets, with rapid rallies and punishing sell-offs. There…",
    "published": "2026-11-23T14:51:44.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "4ctok7",
-   "title": "Nvidia reinstates Jensen Huang as CEO amid ongoing intelligence probe",
-   "link": "https://cointelegraph.com/news/nvidia-reinstates-jensen-huang-ceo-intelligence-probe?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Nvidia shares surged nearly 29% after the company’s board reinstated Jensen Huang as CEO following consultations with the US government.",
-   "published": "2026-11-23T14:47:00.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "16nw2jg",
@@ -298,24 +343,6 @@
    "published": "2026-11-23T14:30:00.000Z",
    "source": "ECB",
    "category": "economy"
-  },
-  {
-   "id": "1d3iauw",
-   "title": "OKX, ICE launch 113 tokenized assets despite issuer objections",
-   "link": "https://cointelegraph.com/news/okxice-launch-113-tokenized-assets-objections?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The venture named Coinbase and Fidelity among the issuers and asset managers in the rollout after 67 companies objected to having their shares traded on the venue.",
-   "published": "2026-11-23T14:00:00.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "336c78",
-   "title": "Trump-linked American Bitcoin secures $150M credit line from FalconX",
-   "link": "https://cointelegraph.com/news/trumps-american-bitcoin-rises-150m-credit-falconx?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The miner can borrow against its Bitcoin to fund operations and expansion after selling about 465 BTC to cover expenses in the third quarter.",
-   "published": "2026-11-23T13:44:16.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "4r9r7b",
@@ -342,15 +369,6 @@
    "summary": "Amid air chaos, travelers will have to navigate an outdated system (and complex company policies if it all goes wrong) Millions of people are planning to fly in the US over the Thanksgiving holiday, just two weeks…",
    "published": "2026-11-23T11:00:56.000Z",
    "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "ulw6kd",
-   "title": "South East Water reports loss after supply issues",
-   "link": "https://www.bbc.co.uk/news/articles/c6n90j1qxel8o?at_medium=RSS&at_campaign=rss",
-   "summary": "South East Water records a pre-tax loss of £22.9m in the six months to 30 September.",
-   "published": "2026-11-23T10:19:46.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
@@ -399,15 +417,6 @@
    "category": "economy"
   },
   {
-   "id": "pmz87x",
-   "title": "San Francisco is enjoying an AI boom, but worries about a crash are growing",
-   "link": "https://www.bbc.co.uk/news/articles/cqe9k09j9jv4o?at_medium=RSS&at_campaign=rss",
-   "summary": "AI employees in the industry's epicentre - San Francisco - worry that the sector is overheated.",
-   "published": "2026-11-23T00:08:00.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "1xbck9o",
    "title": "Jensen Huang’s reported affair was ‘most expensive sex since Helen of Troy’, US senator says",
    "link": "https://www.theguardian.com/us-news/2026/nov/22/jensen-huang-nvidia-john-kennedy",
@@ -415,15 +424,6 @@
    "published": "2026-11-22T20:23:36.000Z",
    "source": "The Guardian Business",
    "category": "economy"
-  },
-  {
-   "id": "14dyyv1",
-   "title": "Employees at Eric Trump-backed robot startup lose health benefits as company's cash crunch deepens",
-   "link": "https://www.cnbc.com/2026/11/22/foundation-future-industries-health-benefits-payroll-base-group.html",
-   "summary": "Foundation is pursuing an emergency bridge loan and has been in talks with VC firms as it waits for a $150 million investment from South Korea's Base Group.",
-   "published": "2026-11-22T18:55:05.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
   },
   {
    "id": "ls2vsm",
