@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-25T12:02:18.488Z",
+ "updated": "2026-11-25T21:53:27.749Z",
  "sources": {
   "investingLive /feed": 12,
-  "Federal Reserve /feeds/press_all.xml": "error: HTTP 404",
+  "Federal Reserve /feeds/press_all.xml": 12,
   "ECB /rss/press.html": 12,
   "Bank of England /rss/news": 12,
   "Cointelegraph /rss": 12,
@@ -12,11 +12,290 @@
  },
  "items": [
   {
-   "id": "fmqnte",
-   "title": "Japan’s SBI, SMFG launch Solana venture for stablecoins, tokenization",
-   "link": "https://cointelegraph.com/news/sbi-smfg-solana-global-stablecoin-tokenization?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "SBI Solana Global plans to develop stablecoin payment infrastructure, explore AI agent micropayments and tokenize financial assets.",
-   "published": "2026-11-25T11:49:54.000Z",
+   "id": "1um3q1q",
+   "title": "US stocks fall further as fears over AI intensify",
+   "link": "https://www.bbc.co.uk/news/articles/cq0md8g14zryo?at_medium=RSS&at_campaign=rss",
+   "summary": "All three main US indexes were down in early trading, with the tech-dominated Nasdaq down almost 4%.",
+   "published": "2026-11-25T21:43:18.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "j55twa",
+   "title": "Poundland collapses putting 11,000 jobs at risk",
+   "link": "https://www.bbc.co.uk/news/articles/cm3vgdn037z4o?at_medium=RSS&at_campaign=rss",
+   "summary": "The discount chain has fallen into administration after its owners failed to find a buyer.",
+   "published": "2026-11-25T21:31:10.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "ew5vnr",
+   "title": "Braiins warns of Bitcoin mining attacks affecting over 1,000 sites",
+   "link": "https://cointelegraph.com/news/braiins-warns-bitcoin-mining-attacks-affecting-1000-sites?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Bitcoin mining pool operator Braiins warned that attackers are exploiting unsecured connections to hijack miners’ computing power and potentially steal rewards.",
+   "published": "2026-11-25T21:22:19.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "aw6942",
+   "title": "Why ECB collateral eligibility could boost demand for tokenized bonds",
+   "link": "https://cointelegraph.com/news/why-ecb-collateral-eligibility-could-boost-demand-tokenized-bonds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Past ECB decisions offer clues to the value of using bonds as collateral, while US derivatives exchanges face a different calculation over their Bitcoin holdings.",
+   "published": "2026-11-25T21:11:39.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "rsu9m0",
+   "title": "The Nasdaq looked over the edge. Support held. Now what?",
+   "link": "https://investinglive.com/stocks/the-nasdaq-looked-over-the-edge-support-held-now-what/",
+   "summary": "The Nasdaq Composite and Nasdaq 100 both went to the edge of support, looked over and decided not to jump. At the lows, both indices were down more than 4% on the day. The bounce has cut those losses to 0.85% for the…",
+   "published": "2026-11-25T20:20:26.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1qvfcxn",
+   "title": "Agencies announce dollar thresholds for applicability of truth in lending and consumer leasing rules for consumer credit and lease transactions",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261125b.htm",
+   "summary": "Agencies announce dollar thresholds for applicability of truth in lending and consumer leasing rules for consumer credit and lease transactions",
+   "published": "2026-11-25T20:00:00.000Z",
+   "source": "Federal Reserve",
+   "category": "economy"
+  },
+  {
+   "id": "1qupxve",
+   "title": "Agencies announce dollar thresholds for smaller loan exemption from appraisal requirements for higher-priced mortgage loans",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261125a.htm",
+   "summary": "Agencies announce dollar thresholds for smaller loan exemption from appraisal requirements for higher-priced mortgage loans",
+   "published": "2026-11-25T20:00:00.000Z",
+   "source": "Federal Reserve",
+   "category": "economy"
+  },
+  {
+   "id": "w27y9u",
+   "title": "Beige Book: Eight of 12 districts report growth as wage pressures pick up",
+   "link": "https://investinglive.com/central-banks/beige-book-eight-of-12-districts-report-growth-as-wage-pressures-pick-up/",
+   "summary": "Eight districts reported growth in the slight to moderate range, and four reported no change. In October, nine grew and three were unchanged. Consumer spending was little changed as households remained price sensitive…",
+   "published": "2026-11-25T19:12:28.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "160ndna",
+   "title": "Stock markets mount a huge comeback",
+   "link": "https://investinglive.com/stocks/stock-markets-mount-a-huge-comeback/",
+   "summary": "On Monday, Morgan Stanley's Mike Wilson recommended a maximum overweight on global equities, saying the AI capex cycle remains in tact. Earlier today, that looked like folly but now it looks like a gutsy call that…",
+   "published": "2026-11-25T18:56:58.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "2ubg5w",
+   "title": "Ethereum Foundation backs Keccak-256 to counter quantum, AI threats",
+   "link": "https://cointelegraph.com/news/ethereum-foundation-keccak-256-counter-quantum-ai-threats?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Ethlabs co-founder Julian Ma told Cointelegraph that AI poses a more immediate threat as Ethereum prepares for one of its biggest security overhauls since the Merge.",
+   "published": "2026-11-25T18:54:51.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "zciqk2",
+   "title": "Baker Hughes US rig count holds steady at 607. Oil rigs rise by one.",
+   "link": "https://investinglive.com/commodities/baker-hughes-us-rig-count-holds-steady-at-607-oil-rigs-rise-by-one/",
+   "summary": "Baker Hughes reported that the US rotary rig count was unchanged at 607 in its November 25 report. The addition of one oil rig offset a decline of one natural gas rig. Oil rigs 470 vs 469 last week, up 1. Up 63 from a…",
+   "published": "2026-11-25T18:08:30.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "hpp334",
+   "title": "US inflation rises to 3.8% ahead of December Fed meeting, clouding crypto outlook",
+   "link": "https://cointelegraph.com/news/us-inflation-rises-december-fed-meeting-clouding-crypto-outlook?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "US core inflation rose more than expected in October as markets anticipate a December interest rate hike, which could slow a crypto market recovery.",
+   "published": "2026-11-25T17:53:10.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "17w62vn",
+   "title": "Trump blames the election for the selloff. Here’s what I’m watching.",
+   "link": "https://investinglive.com/news/trump-blames-the-election-for-the-selloff-here-s-what-i-m-watching/",
+   "summary": "President Trump blamed the November 3 election results for the drop in stocks in a Wednesday post on Truth Social. The first place I’d look is the chip stocks. The Nasdaq was down about 4% in morning trading versus…",
+   "published": "2026-11-25T17:46:49.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "64cx31",
+   "title": "Bitcoin falls toward $57K amid US tariff fears, hot PCE data as Nasdaq drops 4%",
+   "link": "https://cointelegraph.com/markets/bitcoin-falls-57k-us-tariff-pce-data-nasdaq-drops?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The prospect of higher US tariffs and hotter-than-expected PCE inflation weighed on Bitcoin, crypto and stocks on Wednesday.",
+   "published": "2026-11-25T17:33:22.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "fx58t0",
+   "title": "ECB and Sveriges Riksbank conclude agreement for Sweden to join T2",
+   "link": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261125_1~6333a90f3a.en.html",
+   "summary": "",
+   "published": "2026-11-25T17:30:00.000Z",
+   "source": "ECB",
+   "category": "economy"
+  },
+  {
+   "id": "1lygha3",
+   "title": "Nvidia agrees to $290M settlement over crypto mining revenue disclosures",
+   "link": "https://cointelegraph.com/news/nvidia-agrees-290m-settlement-crypto-mining-revenue-disclosures?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The proposed settlement would resolve a shareholder lawsuit dating back to 2018 that alleged Nvidia misled investors about its exposure to the cryptocurrency industry.",
+   "published": "2026-11-25T17:19:33.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "lxugvn",
+   "title": "European stocks close lower as the Nasdaq 100 sheds nearly 4%.",
+   "link": "https://investinglive.com/stocks/european-stocks-close-lower-as-the-nasdaq-100-sheds-nearly-4/",
+   "summary": "As London and European traders head home for the day, the major indices are all lower. Spain’s Ibex led the declines with a -2.00% drop, followed by Italy’s FTSE MIB at -1.81%. The UK’s FTSE 100 held up the best of the…",
+   "published": "2026-11-25T17:12:01.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1tws187",
+   "title": "FCC authorizes SpaceX to deploy 1M satellites for orbital AI data centers",
+   "link": "https://cointelegraph.com/news/fcc-authorizes-spacex-1m-satellites-orbital-ai-data-centers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The planned Starmind constellation will process data in orbit for use on Earth, as demand for artificial intelligence computing power continues to grow.",
+   "published": "2026-11-25T17:10:53.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "ms4hve",
+   "title": "Prediction markets push OpenAI IPO expectations later into 2027",
+   "link": "https://www.cnbc.com/2026/11/25/openai-ipo-odds-2027-prediction-markets.html",
+   "summary": "Kalshi traders have cut the odds of OpenAI confirming an IPO before June 2027, as AI stocks and related markets have weakened.",
+   "published": "2026-11-25T17:08:03.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "15674ts",
+   "title": "What's gone wrong at Poundland?",
+   "link": "https://www.bbc.co.uk/news/articles/cm4g10p2r0g9o?at_medium=RSS&at_campaign=rss",
+   "summary": "Poundland has collapse into administration. Why?",
+   "published": "2026-11-25T17:00:32.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1u6w0dj",
+   "title": "US treasury sells $44 billion of 7-year notes at a high yield of 4.708%",
+   "link": "https://investinglive.com/news/us-treasury-sells-44-billion-of-70-or-notes-at-a-high-yield-of-4-708/",
+   "summary": "The US treasury sold 44 billion of 70 or notes: WI level at the time of the auction: 4.698% High yield: 4.708% WI level at the time of the auction: 4.698% Tail: 1.0 basis point vs the average of 0.1 basis point Bid to…",
+   "published": "2026-11-25T16:54:10.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1edit6s",
+   "title": "Trump's accounts traded Nvidia shares 44 times this year, records show",
+   "link": "https://www.bbc.co.uk/news/articles/cq772vk664yvo?at_medium=RSS&at_campaign=rss",
+   "summary": "A review of the US president's financial disclosures shows Donald Trump's investment portfolios have regularly traded shares in the tech giant.",
+   "published": "2026-11-25T16:42:11.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "skv75j",
+   "title": "US announces new tariffs on host of countries including China",
+   "link": "https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&at_campaign=rss",
+   "summary": "The new levies would hit many of America's biggest trading partners, including China and the EU.",
+   "published": "2026-11-25T16:21:34.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "jrvvr6",
+   "title": "We are in the railway boom, but just discovered the airplane",
+   "link": "https://investinglive.com/stocks/we-are-in-the-railway-boom-but-just-discovered-the-airplane/",
+   "summary": "Imagine it's 1870 and you're investing in railways. The world is on the cusp of an enormous increase in demand for transportation. You buy land, lay tracks, build stations and invest in steel production. Then someone…",
+   "published": "2026-11-25T16:19:02.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "uw2jrd",
+   "title": "What is order flow trading? How to read buying and selling pressure beyond chart patterns",
+   "link": "https://investinglive.com/education/what-is-order-flow-trading-how-to-read-buying-and-selling-pressure-beyond-chart-patterns/",
+   "summary": "Why good chart patterns fail: What traders should know about market context and order flow Heavy selling does not always mean prices are about to fall. Understanding how the market responds to buying and selling can…",
+   "published": "2026-11-25T16:02:19.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "kezjd0",
+   "title": "Gold is sitting on the edge of support at $3,425 despite lower yields",
+   "link": "https://investinglive.com/commodities/gold-is-sitting-on-the-edge-of-support-at-3-425-despite-lower-yields/",
+   "summary": "Gold is trading near $3,441, down about $115 or 3.24%, after reaching a low of $3,426.72. That low came in just above the bottom of a swing area on the daily chart between $3,425 and $3,500. The sellers took the price…",
+   "published": "2026-11-25T15:47:15.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1ovug5p",
+   "title": "US inflation hits highest since May after prices climb 3.8% over the last year",
+   "link": "https://www.theguardian.com/business/2026/nov/25/consumer-prices-september-october-energy-inflation",
+   "summary": "Rise occurs amid soaring energy prices, according to last inflation reading before a crucial Fed board meeting The sell-off in the US tech stocks continued Wednesday as investors reacted to continued concern over the…",
+   "published": "2026-11-25T15:46:15.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "11etkn0",
+   "title": "This is the most-exciting moment in mathematics since Isaac Newton",
+   "link": "https://investinglive.com/stocks/this-is-the-most-exciting-moment-in-math-since-isaac-newton/",
+   "summary": "In the 17th century, Isaac Newton discovered calculus and changed the course of human civilization. Until then, mathematics was poorly equipped to deal with a world that was constantly changing. Calculus gave us a…",
+   "published": "2026-11-25T15:44:09.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "13xhmh3",
+   "title": "October new home sales 701k vs 650k",
+   "link": "https://investinglive.com/news/october-new-home-sales-701k-vs-650k/",
+   "summary": "Prior was 676K (revised to 614K) The US Census Bureau and the Department of Housing and Urban Development publish the New Residential Sales report monthly at 10 am ET, usually in the last week of the month. It tracks…",
+   "published": "2026-11-25T15:07:41.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1q3u9jp",
+   "title": "Trump proposing new tariffs on 14 partners including China and EU",
+   "link": "https://www.theguardian.com/us-news/2026/nov/25/trump-new-china-tariffs-europe",
+   "summary": "Administration is suggesting an added 20% tax on Chinese imports, which would bring the total to about 40% US politics live – latest updates Donald Trump is proposing new tariffs on 14 trading partners, including China…",
+   "published": "2026-11-25T14:59:44.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
+  {
+   "id": "1fvid7b",
+   "title": "Jensen Huang's Nvidia return shows the U.S.-China AI race is about more than chips",
+   "link": "https://www.cnbc.com/2026/11/25/jensen-huang-nvidia-ai-talent-race.html",
+   "summary": "Jensen Huang's return as Nvidia CEO demonstrates that the U.S.-China artificial intelligence race is not just about semiconductors, but tech talent too.",
+   "published": "2026-11-25T14:29:00.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "1n7q312",
+   "title": "Ex-FTX COO calls out Netflix over CZ’s ‘Asian mafia’ portrayal",
+   "link": "https://cointelegraph.com/news/ftx-coo-netflix-portrayal-binance-founder-racist?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Constance Waing said Netflix used racist stereotypes in its portrayal of CZ and misrepresented life at FTX before the exchange’s collapse.",
+   "published": "2026-11-25T14:21:36.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
   },
@@ -25,9 +304,54 @@
    "title": "Energy bills to rise by 26% from January after gas prices surge",
    "link": "https://www.bbc.co.uk/news/articles/cm20qnq33e90o?at_medium=RSS&at_campaign=rss",
    "summary": "A household using a typical amount of energy would see its annual bill rise from £1,723 to £2,166 if this level was sustained for a year.",
-   "published": "2026-11-25T11:44:26.000Z",
+   "published": "2026-11-25T13:42:08.000Z",
    "source": "BBC Business",
    "category": "economy"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-11-25T13:26:05.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1d6u7ni",
+   "title": "Ukraine passes bill to legalize crypto and tax profits at 23%",
+   "link": "https://cointelegraph.com/news/ukraine-passes-bill-crypto-regulation-tax?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Ukraine’s parliament passed a crypto regulation bill after three years of legislative work, with the new rules set to take effect in July 2027.",
+   "published": "2026-11-25T13:02:09.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "u36716",
+   "title": "Liesman: Nvidia whiplash tests Kevin Warsh’s push to read market signals",
+   "link": "https://www.cnbc.com/2026/11/25/nvidia-kevin-warsh-fed-market-signals.html",
+   "summary": "The extreme market gyrations and the drama surrounding Nvidia this past week have highlighted the dilemma facing Federal Reserve Chairman Kevin Warsh.",
+   "published": "2026-11-25T12:26:41.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "1pd3h43",
+   "title": "'I only use the washing machine on a Sunday' - how we're keeping our energy bills down",
+   "link": "https://www.bbc.co.uk/news/articles/c820qnznkrn4o?at_medium=RSS&at_campaign=rss",
+   "summary": "The BBC speaks to three people about steps they take to keep their energy bills under control.",
+   "published": "2026-11-25T12:12:11.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "fmqnte",
+   "title": "Japan’s SBI, SMFG launch Solana venture for stablecoins, tokenization",
+   "link": "https://cointelegraph.com/news/sbi-smfg-solana-global-stablecoin-tokenization?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "SBI Solana Global plans to develop stablecoin payment infrastructure, explore AI agent micropayments and tokenize financial assets.",
+   "published": "2026-11-25T11:49:54.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
   },
   {
    "id": "8wa30g",
@@ -39,51 +363,6 @@
    "category": "crypto"
   },
   {
-   "id": "1pd3h43",
-   "title": "Electric blankets and closed curtains - how we're coping with the energy bill rise",
-   "link": "https://www.bbc.co.uk/news/articles/c820qnznkrn4o?at_medium=RSS&at_campaign=rss",
-   "summary": "The BBC speaks to three people about steps they take to keep their energy bills under control.",
-   "published": "2026-11-25T11:23:13.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "183k1uc",
-   "title": "Bitcoin ETFs near $5B in record monthly outflows amid AI stock rout",
-   "link": "https://cointelegraph.com/markets/bitcoin-etfs-near-record-5-billion-monthly-outflows?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "US spot Bitcoin ETFs have recorded $4.94 billion in November net outflows, exceeding the previous monthly record of $4.51 billion set in June.",
-   "published": "2026-11-25T11:12:26.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "fw76fi",
-   "title": "Bitcoin price may fall below $53K if bear-market history repeats",
-   "link": "https://cointelegraph.com/markets/bitcoin-price-bear-market-history-repeats?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitcoin price downside targets focused on the $53,200 realized price as research saw pointed to bear-market patterns continuing for BTC/USD.",
-   "published": "2026-11-25T11:09:38.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1ayqodf",
-   "title": "HYPE drops 8% as Trump bump gives way to 40% slide from peak",
-   "link": "https://cointelegraph.com/markets/hyperliquid-hype-price-falls-abraxas-capital-wallets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "HYPE traded below its price before Trump’s August remarks as wallets linked to Abraxas Capital reportedly exited the Hyperliquid platform.",
-   "published": "2026-11-25T10:57:52.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1tygcar",
-   "title": "Huawei found guilty of stealing US trade secrets but acquitted of racketeering",
-   "link": "https://www.bbc.co.uk/news/articles/cmy49ngydqzpo?at_medium=RSS&at_campaign=rss",
-   "summary": "The verdict follows a months-long trial in New York.",
-   "published": "2026-11-25T10:52:09.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
    "id": "1dt5tu0",
    "title": "Energy bills will soar - here's how you can ease the pain",
    "link": "https://www.bbc.co.uk/news/articles/crm4rygl4m3o?at_medium=RSS&at_campaign=rss",
@@ -93,40 +372,13 @@
    "category": "economy"
   },
   {
-   "id": "c966pu",
-   "title": "Ethereum remains under pressure as macro headwinds outweigh Nvidia-driven optimism",
-   "link": "https://investinglive.com/cryptocurrency/ethereum-remains-under-pressure-as-macro-headwinds-outweigh-nvidia-driven-optimism/",
-   "summary": "Ethereum spiked to the upside on Monday as the news of Jensen Huang being reinstated as Nvidia CEO triggered a strong rally in equity markets and helped improve the risk sentiment in the crypto market too. The move…",
-   "published": "2026-11-25T10:34:21.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1o6ooh9",
-   "title": "Champions Don Land! HFM Brought Premier League Glory to Lagos with Arsenal Trophy Tour",
-   "link": "https://investinglive.com/education/champions-don-land-hfm-brought-premier-league-glory-to-lagos-with-arsenal-trophy-tour/",
-   "summary": "HFM, Official Partner of Arsenal FC, brought the iconic Premier League Trophy to Lagos, kicking off the highly anticipated Arsenal Africa Trophy Tour 2026 with a celebration of football, music and unforgettable fan…",
-   "published": "2026-11-25T10:27:51.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "2ar7lm",
-   "title": "Macro pulse: The Australian dollar can't catch a break, even with inflation running hot",
-   "link": "https://investinglive.com/education/macro-pulse-the-australian-dollar-can-t-catch-a-break-even-with-inflation-running-hot/",
-   "summary": "You know it's a tough market out there when even an inflation scare can't buy the aussie a decent day in the sun. The currency got a bit of a lift earlier today amid a hotter-than-expected October inflation report in…",
-   "published": "2026-11-25T10:22:35.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "gid8n0",
-   "title": "Why a forex prop firm's headline numbers leave part of the story untold",
-   "link": "https://investinglive.com/education/why-a-forex-prop-firm-s-headline-numbers-leave-part-of-the-story-untold/",
-   "summary": "You can get a currency trade right and still have a different result from the one the offer's headline suggests. A profit on the platform is one figure. The amount you can request, when you can request it and what you…",
-   "published": "2026-11-25T10:17:30.000Z",
-   "source": "investingLive",
-   "category": "forex"
+   "id": "1x9alxq",
+   "title": "Zoe Kleinman: Nobody is irreplaceable - unless you're Jensen Huang",
+   "link": "https://www.bbc.co.uk/news/articles/c3rrgqj2zx5yo?at_medium=RSS&at_campaign=rss",
+   "summary": "The BBC's technology and AI editor on how Nvidia's boss made himself impossible to fire.",
+   "published": "2026-11-25T10:03:12.000Z",
+   "source": "BBC Business",
+   "category": "economy"
   },
   {
    "id": "1gt06pg",
@@ -147,24 +399,6 @@
    "category": "economy"
   },
   {
-   "id": "ectp2m",
-   "title": "Howzit, Champions! HFM Brings Premier League Glory to Cape Town for Africa Trophy Tour Finale",
-   "link": "https://investinglive.com/education/howzit-champions-hfm-brings-premier-league-glory-to-cape-town-for-africa-trophy-tour-finale/",
-   "summary": "HFM, Official Partner of Arsenal FC, brought the iconic Premier League Trophy to Cape Town for the grand finale of the HFM x Arsenal FC Africa Trophy Tour 2026, concluding a three-city celebration of football, music…",
-   "published": "2026-11-25T09:58:30.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1ma2q54",
-   "title": "French Senate rejects 100K euro crypto wallet disclosure requirement",
-   "link": "https://cointelegraph.com/news/french-senate-rejects-disclosing-self-custodied-crypto-wallets-100k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Senators also rejected stablecoin-swap and crypto exit-tax proposals, while the 2027 budget remains under parliamentary consideration.",
-   "published": "2026-11-25T09:58:12.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1tct0w4",
    "title": "What will the energy cap changes mean for my bills?",
    "link": "https://www.bbc.co.uk/news/articles/cdd29v8mp9jo?at_medium=RSS&at_campaign=rss",
@@ -174,155 +408,11 @@
    "category": "economy"
   },
   {
-   "id": "p0a99z",
-   "title": "Mabingwa Wamefika! HFM Brought Premier League Glory to Nairobi with Arsenal Trophy Tour",
-   "link": "https://investinglive.com/education/mabingwa-wamefika-hfm-brought-premier-league-glory-to-nairobi-with-arsenal-trophy-tour/",
-   "summary": "HFM, Official Partner of Arsenal FC, brought the iconic Premier League Trophy to Nairobi, marking the second stop of the highly anticipated HFM x Arsenal FC Africa Trophy Tour 2026 with a celebration of football, music…",
-   "published": "2026-11-25T09:52:28.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "uiha0e",
-   "title": "Stablecoin redemptions hit $12B in 30 days, echoing 2022 bear market",
-   "link": "https://cointelegraph.com/markets/stablecoin-cash-out-2022-bear-market?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Crypto research firm Kaiko said the cash-out was smaller than in 2022 and has slowed, with stablecoin supply down just 0.4% since Nov. 13.",
-   "published": "2026-11-25T09:52:22.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "h4892p",
-   "title": "Market playbook: Where do investors hide when stocks, gold and Bitcoin are all struggling?",
-   "link": "https://investinglive.com/education/market-playbook-where-do-investors-hide-when-stocks-gold-and-bitcoin-are-all-struggling/",
-   "summary": "When everything seems to be on fire, where does one go to hide? Stocks are struggling, gold isn't offering much shelter and Bitcoin is hardly living up to its billing as digital gold. Even the bond market isn't exactly…",
-   "published": "2026-11-25T09:33:15.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1qeo7w3",
-   "title": "Why tight stop losses are just a psychological trap",
-   "link": "https://investinglive.com/education/why-tight-stop-losses-are-just-a-psychological-trap/",
-   "summary": "One of the most common mistakes among retail traders is placing stop losses too close to their entry price in an attempt to improve their risk-to-reward ratio. This is basically a psychological trap. A tighter stop…",
-   "published": "2026-11-25T09:10:58.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1peu59d",
-   "title": "EU seeks up to $55B for AI and quantum computing fund: Report",
-   "link": "https://cointelegraph.com/news/eu-55-billion-ai-quantum-computing-investment-fund?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Hackers already use AI to target crypto exchanges, while future quantum computers could break the cryptography that protects users’ funds.",
-   "published": "2026-11-25T08:40:28.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1xn1cki",
-   "title": "Gold erases gains as Nvidia optimism fades and US moves to restore tariffs to 2025 levels",
-   "link": "https://investinglive.com/commodities/gold-erases-gains-as-nvidia-optimism-fades-and-us-moves-to-restore-tariffs-to-2025-levels/",
-   "summary": "Gold erased all the weekly gains yesterday as the market optimism from Nvidia news faded rather quickly. The catalyst seemed to be the WSJ report saying that the US is preparing to raise tariffs on China and other…",
-   "published": "2026-11-25T08:28:39.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "19imco",
-   "title": "European stock market open: Europe holds its nerve despite another Wall Street selloff",
-   "link": "https://investinglive.com/stocks/european-stock-market-open-europe-holds-its-nerve-despite-another-wall-street-selloff/",
-   "summary": "Eurostoxx +0.1% Germany DAX +0.1% France CAC 40 +0.9% UK FTSE +0.5% Spain IBEX +0.1% Italy FTSE MIB -0.1% European stocks aren't quite buying into the panic on Wall Street just yet. It's a rather resilient start to the…",
-   "published": "2026-11-25T08:27:03.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "e5uirg",
-   "title": "France November consumer confidence improves slightly but economic worries persist",
-   "link": "https://investinglive.com/news/france-november-consumer-confidence-improves-slightly-but-economic-worries-persist/",
-   "summary": "France November consumer confidence 82 vs 82 expeccted Prior 80; revised to 81 Despite a mild improvement to October, French household confidence remains subdued for the most part and continues to hold well below the…",
-   "published": "2026-11-25T07:47:00.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "ybaphg",
-   "title": "What are the main events for today?",
-   "link": "https://investinglive.com/news/what-are-the-main-events-for-today-93/",
-   "summary": "EUROPEAN SESSION In the European session, we don't have much on the agenda other than a couple of low-tier releases like the final German GDP report and the French Consumer Confidence. The data won't change anything…",
-   "published": "2026-11-25T07:39:45.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1f3z9n7",
-   "title": "South Korea’s crypto bill could move stablecoin race beyond token issuance",
-   "link": "https://cointelegraph.com/news/south-korea-crypto-bill-stablecoin-race-beyond-issuance?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "South Korea’s draft bill favors bank-led stablecoin issuance but allows fintech and technology companies to become the largest individual shareholders.",
-   "published": "2026-11-25T06:54:59.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-11-25T05:50:43.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "okdy24",
-   "title": "Solana DEX Velocity halts trading over bug just months after relaunch",
-   "link": "https://cointelegraph.com/news/solana-dex-velocity-halts-transactions-over-bug-coming-2-months-after-relaunch?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Velocity relaunched in September as a rebuilt version of Drift Protocol, which was attacked by North Korean hackers in April.",
-   "published": "2026-11-25T05:32:55.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1madfqq",
-   "title": "Trump willing to pardon Jensen Huang, says it won’t be necessary",
-   "link": "https://cointelegraph.com/news/trump-willing-to-pardon-jensen-huang-but-says-it-wont-be-necessary?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The president’s remarks come days before Jensen Huang is due to face congressional questioning over national security concerns and US chip export controls.",
-   "published": "2026-11-25T04:14:42.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "171sce2",
-   "title": "US attorney general dodges questions about Nvidia investigation",
-   "link": "https://www.bbc.co.uk/news/articles/crpdw1qx7jgxo?at_medium=RSS&at_campaign=rss",
-   "summary": "Nvidia's share price have fallen 7% as lawmakers demand answers about President Donald Trump's involvement in Huang's reinstatement.",
-   "published": "2026-11-25T03:44:07.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "1fvid7b",
-   "title": "Jensen Huang's Nvidia return shows the U.S.-China AI race is about more than chips",
-   "link": "https://www.cnbc.com/2026/11/25/jensen-huang-nvidia-ai-talent-race.html",
-   "summary": "Jensen Huang's return as Nvidia CEO demonstrates that the U.S.-China artificial intelligence race is not just about semiconductors, but tech talent too.",
-   "published": "2026-11-25T01:13:56.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
    "id": "19a77tq",
    "title": "Trump's rescue of Nvidia's Huang brings political risks",
    "link": "https://www.bbc.co.uk/news/articles/ckj05m2zdyryo?at_medium=RSS&at_campaign=rss",
    "summary": "The US president's intercession to reinstate CEO Jensen Huang has inextricably linked their fates.",
    "published": "2026-11-25T01:03:05.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "skv75j",
-   "title": "US preparing to unveil plan for new tariffs on global trading partners",
-   "link": "https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&at_campaign=rss",
-   "summary": "The new levies would hit many of America's biggest trading partners, including China and the EU.",
-   "published": "2026-11-25T00:38:01.000Z",
    "source": "BBC Business",
    "category": "economy"
   },
@@ -348,7 +438,7 @@
    "id": "1hbpde9",
    "title": "Tech sell-off resumes as euphoria from Jensen Huang’s Nvidia return subsides",
    "link": "https://www.theguardian.com/business/2026/nov/24/nvidia-stock-falls-jensen-huang",
-   "summary": "Sell-off signals investors are bracing for further volatility in key AI sector driving economic growth worldwide Technology shares led a market retreat Tuesday as caution returned after Jensen Huang’s extraordinary…",
+   "summary": "Sell-off signals investors are bracing for further volatility in key AI sector driving economic growth worldwide Technology shares led a market retreat on Tuesday as caution returned after Jensen Huang’s extraordinary…",
    "published": "2026-11-24T22:05:21.000Z",
    "source": "The Guardian Business",
    "category": "economy"
@@ -366,27 +456,18 @@
    "id": "19gipwc",
    "title": "Nvidia CEO Jensen Huang apologizes to staff: ‘I made some terrible mistakes’",
    "link": "https://www.theguardian.com/technology/2026/nov/24/jensen-huang-nvidia-apologizes-staff",
-   "summary": "Huang acknowledges he violated code of conduct by having affairs, but denied Trump was instrumental in his return Jensen Huang apologized to staff on Tuesday for the tumult he’s caused at Nvidia. The company’s CEO…",
+   "summary": "Huang acknowledges he violated code of conduct by having affairs, but denied Trump was instrumental in his return Jensen Huang apologized to staff on Tuesday for the tumult he has caused at Nvidia. The company’s CEO…",
    "published": "2026-11-24T20:32:02.000Z",
    "source": "The Guardian Business",
    "category": "economy"
   },
   {
-   "id": "rofhs3",
-   "title": "Will I get the £100 energy payment and when will I receive it?",
-   "link": "https://www.bbc.co.uk/news/articles/c35yn8x748e9o?at_medium=RSS&at_campaign=rss",
-   "summary": "Here is what you need to know about the payment that millions will receive from January.",
-   "published": "2026-11-24T20:16:24.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "guvrxy",
-   "title": "Faisal Islam: Fears over the AI boom haven't gone away",
-   "link": "https://www.bbc.co.uk/news/articles/c6894evgpel5o?at_medium=RSS&at_campaign=rss",
-   "summary": "There were legitimate fears before Huang's abrupt exit from Nvidia - and his return won't fix it",
-   "published": "2026-11-24T18:21:43.000Z",
-   "source": "BBC Business",
+   "id": "1wfrx2d",
+   "title": "Minutes of the Board's discount rate meetings on October 19 and October 28, 2026",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261124a.htm",
+   "summary": "Minutes of the Board's discount rate meetings on October 19 and October 28, 2026",
+   "published": "2026-11-24T19:00:00.000Z",
+   "source": "Federal Reserve",
    "category": "economy"
   },
   {
@@ -432,15 +513,6 @@
    "summary": "Temporary quotas on vehicles entering the bloc will also apply to cars from the UK, Japan and Turkey The EU will next month impose its threatened caps on the number of Chinese hybrid cars that can be imported into the…",
    "published": "2026-11-24T10:59:40.000Z",
    "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "1eawdhs",
-   "title": "Trump faces backlash after saying he 'convinced' Nvidia to reinstate CEO Jensen Huang",
-   "link": "https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&at_campaign=rss",
-   "summary": "Nvidia had come under pressure from President Trump to reappoint Huang, whose comeback helped add $1tn to the company's stock value.",
-   "published": "2026-11-24T10:53:37.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
@@ -525,15 +597,6 @@
    "category": "economy"
   },
   {
-   "id": "ls2vsm",
-   "title": "Conservative media weighs its future as cracks emerge in Trump’s movement",
-   "link": "https://www.theguardian.com/us-news/2026/nov/22/conservative-media-trump-midterm-elections-results",
-   "summary": "Two weeks after Democrats flipped Congress, conservative outlets are having conversations on whether to distance themselves from Trump or double down on Maga As a so-called “blue wave” crashed across the country on the…",
-   "published": "2026-11-22T11:00:26.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
    "id": "bt88wy",
    "title": "Hacks, AI and conspiracy theories: why are we having so many outages?",
    "link": "https://www.theguardian.com/technology/2026/nov/22/hacks-ai-internet-outages-airlines-banks-microsoft-apple",
@@ -561,12 +624,12 @@
    "category": "markets"
   },
   {
-   "id": "1nsb0fw",
-   "title": "Nasdaq erases all 2026 gains as AI sell-off dampens Anthropic’s second day of trading",
-   "link": "https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off",
-   "summary": "The Nasdaq lost trillions in value, with the AI startup’s IPO failing to buoy it as investors question huge sums being poured into AI buildout Who are Anthropic’s seven co-founders, now worth $180bn? As Anthropic’s…",
-   "published": "2026-11-20T21:38:17.000Z",
-   "source": "The Guardian Business",
+   "id": "1hby0vp",
+   "title": "Federal Reserve announces College Fed Challenge winners",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120b.htm",
+   "summary": "Federal Reserve announces College Fed Challenge winners",
+   "published": "2026-11-20T21:15:00.000Z",
+   "source": "Federal Reserve",
    "category": "economy"
   },
   {
@@ -588,20 +651,20 @@
    "category": "markets"
   },
   {
+   "id": "1hb8ltg",
+   "title": "Federal Reserve Board releases results from survey of senior financial officers at banks about their strategies and practices for managing reserve balances",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120a.htm",
+   "summary": "Federal Reserve Board releases results from survey of senior financial officers at banks about their strategies and practices for managing reserve balances",
+   "published": "2026-11-20T15:00:00.000Z",
+   "source": "Federal Reserve",
+   "category": "economy"
+  },
+  {
    "id": "1x66jyf",
    "title": "The bull market has a new problem. The 'smart money' is selling",
    "link": "https://www.cnbc.com/2026/11/20/equity-issuance-bull-market-problem.html",
    "summary": "Companies are shifting from share buybacks to stock issuance, adding new supply. Anthropic’s $81 billion IPO puts that demand to the test.",
    "published": "2026-11-20T14:15:29.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
-   "id": "1n7y695",
-   "title": "U.S.-China trade, Taiwan and tech tensions remain unresolved as Trump returns from Asia",
-   "link": "https://www.cnbc.com/2026/11/20/apec-summit-trump-xi-china-trade-taiwan.html",
-   "summary": "Analysts note few concrete outcomes from the high-profile trilateral and other meetings for APEC in Shenzhen this week.",
-   "published": "2026-11-20T13:29:50.000Z",
    "source": "CNBC Finance",
    "category": "markets"
   },
@@ -615,13 +678,13 @@
    "category": "economy"
   },
   {
-   "id": "1najrkx",
-   "title": "Trump praises ‘great relationship’ with Putin after meeting, as Ukraine war takes center stage",
-   "link": "https://www.cnbc.com/2026/11/19/trump-xi-putin-china-apec-.html",
-   "summary": "U.S. President Donald Trump met individually on Thursday with Russian President Vladimir Putin, as well as Chinese President Xi Jinping.",
-   "published": "2026-11-19T09:02:00.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
+   "id": "18315lc",
+   "title": "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp",
+   "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261119a.htm",
+   "summary": "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp",
+   "published": "2026-11-19T16:00:00.000Z",
+   "source": "Federal Reserve",
+   "category": "economy"
   },
   {
    "id": "2ovqqe",
