@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T03:55:09.193Z",
+ "updated": "2026-11-26T13:29:53.180Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,11 +12,326 @@
  },
  "items": [
   {
+   "id": "1bdrhoe",
+   "title": "investingLive European session wrap: European stocks ride Wall Street's comeback into Thanksgiving",
+   "link": "https://investinglive.com/news/investinglive-european-session-wrap-european-stocks-ride-wall-street-s-comeback-into-thanksgiving/",
+   "summary": "Headlines: Heads up: Thanksgiving holiday leaves dip buyers in limbo European stock market open: Stocks surge after stunning Wall Street turnaround Gold remains caught between forced liquidations and hawkish Fed bets.…",
+   "published": "2026-11-26T12:51:11.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "qjyyhe",
+   "title": "Wall Street’s earnings mood is starting to improve. Is the stock market finding a bottom?",
+   "link": "https://investinglive.com/stocks/wall-street-s-earnings-mood-is-starting-to-improve-is-the-stock-market-finding-a-bottom/",
+   "summary": "Wall Street’s earnings mood is starting to improve. Is the stock market finding a bottom? Exclusive investingLive research reveals early signs of recovery in post-earnings stock performance. Meanwhile, hedge funds have…",
+   "published": "2026-11-26T12:47:26.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1500gv2",
+   "title": "Meeting of 28-29 October 2026",
+   "link": "https://www.ecb.europa.eu//press/accounts/2026/html/ecb.mg261126~ccf28c8071.en.html",
+   "summary": "",
+   "published": "2026-11-26T12:30:00.000Z",
+   "source": "ECB",
+   "category": "economy"
+  },
+  {
+   "id": "1h1esb3",
+   "title": "Vitalik Buterin calls for verifiable chips as hardware wallet threats evolve",
+   "link": "https://cointelegraph.com/news/vitalik-buterin-verifiable-chips-hardware-wallet-threats-evolve?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Buterin warned that future attacks could use lookalike chips with hidden malicious functions, making hardware tampering harder to detect.",
+   "published": "2026-11-26T12:13:59.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "qjrqxo",
+   "title": "Connecting the dots: Is big tech starting to outgrow its own valuation playbook?",
+   "link": "https://investinglive.com/education/connecting-the-dots-is-big-tech-starting-to-outgrow-its-own-valuation-playbook/",
+   "summary": "One of the things that Wall Street has always loved about big tech is its ability to make an obscene amount of money without having to spend an equally obscene amount of money to grow. Or at least that used to be how…",
+   "published": "2026-11-26T11:48:08.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "y27zkk",
+   "title": "Norse Atlantic suspends all flights as it faces potential collapse",
+   "link": "https://www.bbc.co.uk/news/articles/c9kgmd0ldy0lo?at_medium=RSS&at_campaign=rss",
+   "summary": "The carrier is looking for urgent funding, but will file for bankruptcy without a financial lifeline.",
+   "published": "2026-11-26T11:43:38.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1dztqr2",
+   "title": "What really drives the FX market? A look at interest rate differentials",
+   "link": "https://investinglive.com/education/what-really-drives-the-fx-market-a-look-at-interest-rate-differentials/",
+   "summary": "The FX market is highly sensitive to interest rates. This is one of the most important concepts to understand when trading currencies. In fact, interest rate differentials are the main drivers of major currencies. The…",
+   "published": "2026-11-26T11:41:25.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "l34pos",
+   "title": "Standard Chartered’s Zodia Custody suffers data breach",
+   "link": "https://cointelegraph.com/news/standard-chartered-zodia-suffers-data-breach?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Zodia Custody’s CEO said the breach exposed names and email addresses of some clients and employees and was detected by the company Monday.",
+   "published": "2026-11-26T11:37:06.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "146xec2",
+   "title": "Anthropic shares are now available on Xlence",
+   "link": "https://investinglive.com/education/anthropic-shares-are-now-available-on-xlence/",
+   "summary": "Anthropic, the company behind Claude, has made its Nasdaq debut with a starting valuation of $1.5 trillion and an initial share price of $83, yet quickly surpassed that level. For traders, this presents another…",
+   "published": "2026-11-26T11:36:48.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "2rs5b7",
+   "title": "Bitcoin price eyes $61K as Talos warns of thin Thanksgiving liquidity",
+   "link": "https://cointelegraph.com/markets/bitcoin-price-talos-warns-thin-thanksgiving-liquidity?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Bitcoin joined US stock futures in a modest relief rally as Talos questioned crypto demand and the broader outlook for the AI trade.",
+   "published": "2026-11-26T11:22:59.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1n5extd",
+   "title": "Drivers over 70 face eye tests every three years under new plans",
+   "link": "https://www.bbc.co.uk/news/articles/cjqlqerzv1eyo?at_medium=RSS&at_campaign=rss",
+   "summary": "The changes could see drivers over 70 stripped of licences if they do not meet standards.",
+   "published": "2026-11-26T11:21:45.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "wmxko8",
+   "title": "Zcash continues to face macro headwinds despite improving adoption developments. What's next?",
+   "link": "https://investinglive.com/cryptocurrency/zcash-continues-to-face-macro-headwinds-despite-improving-adoption-developments-what-s-next/",
+   "summary": "Zcash continues to face a challenging macro environment, much like the broader crypto market, as tightening financial conditions, hawkish Fed and risk-off flows continue to weigh on risk appetite. Keep in mind that…",
+   "published": "2026-11-26T10:59:23.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1oxw5sl",
+   "title": "Macro pulse: Is the Santa Claus rally losing its magic on Wall Street?",
+   "link": "https://investinglive.com/education/macro-pulse-is-the-santa-claus-rally-losing-its-magic-on-wall-street/",
+   "summary": "The trouble with market traditions is that we sometimes forget to ask whether they still work. With December just around the corner, you can expect to hear plenty of chatter about the Santa Claus rally coming to town…",
+   "published": "2026-11-26T10:36:09.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "19ls5ih",
+   "title": "Financial Policy Committee Record – November 2026",
+   "link": "https://www.bankofengland.co.uk/financial-policy-committee-record/2026/november-2026",
+   "summary": "Our Financial Policy Committee (FPC) meets to identify risks to financial stability and agree policy actions aimed at safeguarding the resilience of the UK financial system.",
+   "published": "2026-11-26T10:30:00.000Z",
+   "source": "Bank of England",
+   "category": "economy"
+  },
+  {
+   "id": "15674ts",
+   "title": "What's gone wrong at Poundland?",
+   "link": "https://www.bbc.co.uk/news/articles/cm4g10p2r0g9o?at_medium=RSS&at_campaign=rss",
+   "summary": "Poundland has collapse into administration. Why?",
+   "published": "2026-11-26T10:15:47.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "k529ll",
+   "title": "Zcash devs urge users to migrate 2% of ZEC supply to accelerate Sapling pool retirement",
+   "link": "https://cointelegraph.com/news/zcash-users-migrate-zec-supply-sapling-pool-retirement?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Zcash developers urged users to move funds out of an older shielded transaction pool over concerns that AI advances could compromise its cryptography.",
+   "published": "2026-11-26T10:15:28.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1vc2adj",
+   "title": "Crude oil finds some footing as prolonged US-Iran tensions keep the downside limited. What's next?",
+   "link": "https://investinglive.com/commodities/crude-oil-finds-some-footing-as-prolonged-us-iran-tensions-keep-the-downside-limited-what-s-next/",
+   "summary": "Crude oil started to find some footing recently as the bearish pressure from growth concerns eased. Keep in mind that growth fears could still push oil prices lower, but we will likely need a bigger selloff in the…",
+   "published": "2026-11-26T10:08:04.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "19s48fy",
+   "title": "New UK-EU treaty has 10-year termination clause",
+   "link": "https://www.bbc.co.uk/news/articles/c98r7p65edvgo?at_medium=RSS&at_campaign=rss",
+   "summary": "Text of the treaties will be published this afternoon, alongside legislation designed to enact the bulk of the deal.",
+   "published": "2026-11-26T09:59:14.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "yuwacl",
+   "title": "Bitcoin ETF November outflows top $5B, Morgan Stanley bucks trend",
+   "link": "https://cointelegraph.com/markets/morgan-stanley-bitcoin-etf-trend-outflows-november?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The Morgan Stanley Bitcoin Trust drew $114.1 million in monthly net inflows through Wednesday, while US spot Bitcoin ETF outflows reached $5.39 billion.",
+   "published": "2026-11-26T09:42:34.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1amwnrw",
+   "title": "Car finance compensation payments explained",
+   "link": "https://www.bbc.co.uk/news/articles/c2l9vvj097lo?at_medium=RSS&at_campaign=rss",
+   "summary": "Millions could be entitled to compensation as a result of commission arrangements between lenders and dealers.",
+   "published": "2026-11-26T09:39:50.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "6883gf",
+   "title": "Musk's plan to send a million SpaceX data satellites into space approved",
+   "link": "https://www.bbc.co.uk/news/articles/cwp836l8n1jgo?at_medium=RSS&at_campaign=rss",
+   "summary": "The Starmind constellation aims to be the most cost and energy-efficient way to meet the growing demand for AI computing power.",
+   "published": "2026-11-26T09:27:44.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1sm8s49",
+   "title": "UK signs £8bn deal to ensure submarines are 'warfighting ready'",
+   "link": "https://www.bbc.co.uk/news/articles/cq39gz99l1pyo?at_medium=RSS&at_campaign=rss",
+   "summary": "The deal will allow \"work around the clock to get our submarines back out to sea\" , Wes Streeting says.",
+   "published": "2026-11-26T09:23:46.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "19kocqy",
+   "title": "Month-end FX rebalancing signals favour the dollar - Credit Agricole",
+   "link": "https://investinglive.com/orders/month-end-fx-rebalancing-signals-favour-the-dollar-credit-agricole/",
+   "summary": "As if the dollar needed another excuse to stay bid this month. As November trading draws toward a close, we're getting to that time of the month when portfolio rebalancing flows can throw a little spanner in the works…",
+   "published": "2026-11-26T09:20:16.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "dkbo2p",
+   "title": "Switzerland’s first spot Bitcoin ETF ticks up 0.6% in opening hour",
+   "link": "https://cointelegraph.com/markets/bit-debuts-switzerlands-first-spot-bitcoin-etf?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The spot Bitcoin ETF will be backed by Bitcoin held in cold storage at a Swiss bank, unlike prior Bitcoin ETPs structured as debt securities.",
+   "published": "2026-11-26T09:18:15.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "12rla7d",
+   "title": "Bitcoin consolidates at yearly lows as traders await fresh catalyst amid negative backdrop",
+   "link": "https://investinglive.com/cryptocurrency/bitcoin-consolidates-at-yearly-lows-as-traders-await-fresh-catalyst-amid-negative-backdrop/",
+   "summary": "Bitcoin is now consolidating near the yearly lows as traders await new catalysts to pick a direction. The crypto market has been driven mainly by tightening financial conditions and risk-off flows amid intensifying…",
+   "published": "2026-11-26T09:01:50.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "4uic6j",
+   "title": "Gold remains caught between forced liquidations and hawkish Fed bets. What could trigger a reversal?",
+   "link": "https://investinglive.com/commodities/gold-remains-caught-between-forced-liquidations-and-hawkish-fed-bets-what-could-trigger-a-reversal/",
+   "summary": "Gold probed briefly below the key 3,500 level yesterday before rebounding strongly and erasing most of the weekly losses. The price action has become choppy across many markets as traders await new catalysts to pick a…",
+   "published": "2026-11-26T08:57:33.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "be3iw1",
+   "title": "European stock market open: Stocks surge after stunning Wall Street turnaround",
+   "link": "https://investinglive.com/stocks/european-stock-market-open-stocks-surge-after-stunning-wall-street-turnaround/",
+   "summary": "Eurostoxx +1.8% Germany DAX +1.6% France CAC 40 +1.6% UK FTSE +1.3% Spain IBEX +1.6% Italy FTSE MIB +2.1% What a difference a day can make in markets. This time yesterday, risk sentiment was in the dumps as US futures…",
+   "published": "2026-11-26T08:30:17.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "j55twa",
+   "title": "Poundland collapses putting 11,000 jobs at risk",
+   "link": "https://www.bbc.co.uk/news/articles/cm3vgdn037z4o?at_medium=RSS&at_campaign=rss",
+   "summary": "The discount chain has fallen into administration after its owners failed to find a buyer.",
+   "published": "2026-11-26T08:24:29.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1u3h4dg",
+   "title": "Robots could be doing household chores in just 1-2 years, Chinese EV firm says",
+   "link": "https://www.cnbc.com/2026/11/26/china-ev-xpeng-humanoid-robots-household-chores.html",
+   "summary": "Xpeng Co-President Brian Gu shared his humanoid robot predictions with CNBC in an interview Thursday.",
+   "published": "2026-11-26T07:30:11.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-11-26T06:00:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1himijc",
+   "title": "UK regulator plans tighter DeFi rules, citing $6.3B Binance hack: Report",
+   "link": "https://cointelegraph.com/news/uk-fca-defi-regulation-binance-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "North Korea-linked hackers used DeFi protocols to launder stolen Binance funds, while US prosecutors moved to recover more than $1.1 billion in crypto.",
+   "published": "2026-11-26T05:53:08.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "rpsj0e",
+   "title": "Beware higher correlation but nab high U.S. credit yields, fund managers say",
+   "link": "https://www.cnbc.com/2026/11/26/mispricing-risk-fund-managers-ai-volatility.html",
+   "summary": "The AI boom could trigger a recession, but data centers remain an attractive investment opportunity, a hedge fund manager said.",
+   "published": "2026-11-26T05:36:01.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "1qy6a3o",
+   "title": "Sky proposes emergency vote on $25M transfer amid liquidity stress",
+   "link": "https://cointelegraph.com/news/sky-emergency-vote-25m-transfer-stusds-liquidity-stress?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Sky’s Core Facilitator invoked the protocol’s emergency response process to expedite a vote rather than wait until the next scheduled vote on Dec. 3.",
+   "published": "2026-11-26T05:29:26.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1v4pgbj",
+   "title": "1Password hacker stole customer names and emails, but vaults safe",
+   "link": "https://cointelegraph.com/news/1password-hacker-stole-customer-names-and-emails-but-vaults-safe?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The password manager, which is used by millions of people to store their login credentials, said customer vaults were unaffected by the breach.",
+   "published": "2026-11-26T04:55:16.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "4sfloz",
+   "title": "Senate Democrats urge SEC to scrap crypto, tokenized stock exemptions",
+   "link": "https://cointelegraph.com/news/senate-democrats-urge-sec-to-scrap-crypto-tokenized-stock-exemptions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "US Senators Elizabeth Warren and Chris Van Hollen, among others, have taken aim at two recent SEC efforts to ease regulatory requirements for the crypto industry.",
+   "published": "2026-11-26T04:24:45.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
    "id": "skv75j",
    "title": "US announces new tariffs on host of countries including China",
    "link": "https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&at_campaign=rss",
    "summary": "The new levies would hit many of America's biggest trading partners, including China and the EU.",
-   "published": "2026-11-26T03:01:40.000Z",
+   "published": "2026-11-26T04:10:58.000Z",
    "source": "BBC Business",
    "category": "economy"
   },
@@ -30,51 +345,6 @@
    "category": "economy"
   },
   {
-   "id": "1lra7b9",
-   "title": "S&P puts Nvidia's AA rating on watch for a possible cut, as Moody's holds steady",
-   "link": "https://investinglive.com/stocks/s-p-puts-nvidia-s-aa-rating-on-watch-for-a-possible-cut-as-moody-s-holds-steady/",
-   "summary": "A one-notch downgrade from AA would barely change Nvidia's borrowing costs, so the bond market impact is likely to be small. For equities, the risk is reputational: S&P's focus on whether export rules were broken or…",
-   "published": "2026-11-26T02:23:35.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "19s48fy",
-   "title": "UK government set to publish new treaties agreed with EU",
-   "link": "https://www.bbc.co.uk/news/articles/c98r7p65edvgo?at_medium=RSS&at_campaign=rss",
-   "summary": "The BBC understands the treaties contain a 10-year termination clause to reimburse costs of any need to rebuild border checks infrastructure.",
-   "published": "2026-11-26T02:13:00.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "1ibm4mx",
-   "title": "Bank of Korea signals more hikes as 15 of 21 rate projections sit above 3.25%",
-   "link": "https://investinglive.com/central-banks/bank-of-korea-signals-more-hikes-as-15-of-21-rate-projections-sit-above-3-25/",
-   "summary": "The projections lift the risk that Korean rates peak above the 3.50% most economists expected, which should support the won and keep short-dated Korean government bond yields firm. Two dissents limit the hawkish…",
-   "published": "2026-11-26T02:02:35.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "rpsj0e",
-   "title": "Where the market may be mispricing risk most: AI boom, volatility, high-yield bonds",
-   "link": "https://www.cnbc.com/2026/11/26/mispricing-risk-fund-managers-ai-volatility.html",
-   "summary": "The AI boom could trigger a recession, but data centers remain an attractive investment opportunity, a hedge fund manager said.",
-   "published": "2026-11-26T01:34:58.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
-   "id": "pd9qyd",
-   "title": "Goldman says hedge funds pile into shorts, with ETF shorts posting a 19-point weekly jump",
-   "link": "https://investinglive.com/stocks/goldman-says-hedge-funds-pile-into-shorts-with-etf-shorts-posting-a-19-point-weekly-jump/",
-   "summary": "Low hedge fund positioning cuts both ways. It limits the pool of forced sellers if the selloff resumes, but it also means a stabilization in prices could trigger short covering and re-risking that lifts stocks faster…",
-   "published": "2026-11-26T01:34:20.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1bw3aze",
    "title": "AI labs likely sitting on cryptography ‘bombshells,’ computer scientist says",
    "link": "https://cointelegraph.com/news/ai-labs-likely-sitting-on-cryptography-bombshells-computer-scientist-says?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -82,78 +352,6 @@
    "published": "2026-11-26T01:33:20.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "5edxy4",
-   "title": "The RBA's three 'stars' are fuzzier than they look: what it means for AUD and stocks",
-   "link": "https://investinglive.com/education/the-rba-s-three-stars-are-fuzzier-than-they-look-what-it-means-for-aud-and-stocks/",
-   "summary": "The article doesn't signal any change in policy, but it supports the RBA's data-dependent approach, and that has practical consequences for traders. When the central bank can't be confident where neutral sits, the…",
-   "published": "2026-11-26T01:16:54.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "z775a4",
-   "title": "PBOC sets USD/ CNY reference rate for today at 6.7096 (vs. estimate at 6.6655)",
-   "link": "https://investinglive.com/central-banks/pboc-sets-usd-cny-reference-rate-for-today-at-6-7096-vs-estimate-at-6-6655/",
-   "summary": "The PBOC allows the yuan to fluctuate within a +/- 2% range, around this reference rate. More here on this. injected 571.5 billion yuan of overnight reverse repurchase operations This article was written by Eamonn…",
-   "published": "2026-11-26T01:15:56.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "th7dlz",
-   "title": "BoJ's Tamura says rates must reach neutral 'soon', still sees neutral near 2%",
-   "link": "https://investinglive.com/central-banks/boj-s-tamura-says-rates-must-reach-neutral-soon-still-sees-neutral-near-2/",
-   "summary": "With a December hike already largely priced, the speech matters mainly for expectations of where the cycle ends. Tamura's 2% neutral estimate sits at the top of the market's assumed endpoint of 1.75% to 2%, so any sign…",
-   "published": "2026-11-26T01:09:17.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "cpdkat",
-   "title": "Bank of Korea hikes to 3.25%, sees 4.1% growth in 2027 as chip boom drives economy",
-   "link": "https://investinglive.com/central-banks/bank-of-korea-hikes-to-3-25-sees-4-1-growth-in-2027-as-chip-boom-drives-economy/",
-   "summary": "With the hike fully priced, the won and Korean bonds are likely to react more to Governor Rhee's guidance than to the decision itself. A signal that one more hike is coming would support the won and push up short-term…",
-   "published": "2026-11-26T01:00:04.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "mmv6ol",
-   "title": "Australia's data centre boom drives the biggest capex jump in years, near mining-boom highs",
-   "link": "https://investinglive.com/news/australia-s-data-centre-boom-drives-the-biggest-capex-jump-in-years-near-mining-boom-highs/",
-   "summary": "The surprise is large, but the market reaction is likely to stay muted because so much of the spending is imported equipment that does little for local output or wages. Investors are more likely to focus on what it…",
-   "published": "2026-11-26T00:41:31.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1aius2r",
-   "title": "PBOC is expected to set the USD/CNY reference rate at 6.6655 – Reuters estimate",
-   "link": "https://investinglive.com/central-banks/pboc-is-expected-to-set-the-usd-cny-reference-rate-at-6-6655-reuters-estimate-0/",
-   "summary": "The People’s Bank of China is due to set the daily USD/CNY reference rate at around 0115 GMT (2115 US Eastern time), a fixing that remains one of the most closely watched signals in Asian foreign exchange markets.…",
-   "published": "2026-11-26T00:25:40.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "13xigs9",
-   "title": "Nikkei and Kospi rebound over 1% as Asia follows Wall Street's comeback, BoK decision next",
-   "link": "https://investinglive.com/stock-market-update/nikkei-and-kospi-rebound-over-1-as-asia-follows-wall-street-s-comeback-bok-decision-next/",
-   "summary": "The early gains look more like relief after a heavy selloff than a new rally, so the Bank of Korea's guidance could quickly decide whether Seoul holds them. A hawkish signal on further hikes could firm the won but…",
-   "published": "2026-11-26T00:20:30.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "6883gf",
-   "title": "US approves SpaceX plan to send a million data satellites to space",
-   "link": "https://www.bbc.co.uk/news/articles/cwp836l8n1jgo?at_medium=RSS&at_campaign=rss",
-   "summary": "The Starmind constellation aims to be the most cost and energy-efficient way to meet the growing demand for AI computing power.",
-   "published": "2026-11-26T00:07:51.000Z",
-   "source": "BBC Business",
-   "category": "economy"
   },
   {
    "id": "xrss11",
@@ -165,42 +363,6 @@
    "category": "economy"
   },
   {
-   "id": "13pbg5h",
-   "title": "Citi says fear is extreme, but stocks rose after 13 of 14 past VIX spikes to 40",
-   "link": "https://investinglive.com/stocks/citi-says-fear-is-extreme-but-stocks-rose-after-13-of-14-past-vix-spikes-to-40/",
-   "summary": "Contrarian calls like this tend to gain traction when other big names lean the same way, and this week Bank of America and Michael Burry have both pointed to the correction as a chance to buy. That could support…",
-   "published": "2026-11-25T23:36:08.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1o6q3rd",
-   "title": "Projectile explodes near tanker 50 nautical miles off Dubai as Gulf shipping attacks mount",
-   "link": "https://investinglive.com/commodities/projectile-explodes-near-tanker-50-nautical-miles-off-dubai-as-gulf-shipping-attacks-mount/",
-   "summary": "Incidents without damage rarely move oil much on their own, but where this one happened matters for pricing. An attack near the UAE coast, inside the Gulf, puts loading routes that had looked relatively safe back in…",
-   "published": "2026-11-25T23:30:16.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-11-25T22:33:13.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1rprskq",
-   "title": "Switzerland clears 57 jurisdictions for crypto tax data sharing",
-   "link": "https://cointelegraph.com/news/switzerland-clears-57-jurisdictions-crypto-tax-data-sharing?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The move paves the way for Switzerland to exchange crypto tax data with foreign authorities starting in 2028 as part of a global effort to combat tax evasion.",
-   "published": "2026-11-25T21:53:38.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1um3q1q",
    "title": "US stocks fall further as fears over AI intensify",
    "link": "https://www.bbc.co.uk/news/articles/cq0md8g14zryo?at_medium=RSS&at_campaign=rss",
@@ -208,33 +370,6 @@
    "published": "2026-11-25T21:43:18.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "j55twa",
-   "title": "Poundland collapses putting 11,000 jobs at risk",
-   "link": "https://www.bbc.co.uk/news/articles/cm3vgdn037z4o?at_medium=RSS&at_campaign=rss",
-   "summary": "The discount chain has fallen into administration after its owners failed to find a buyer.",
-   "published": "2026-11-25T21:31:10.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "ew5vnr",
-   "title": "Braiins warns of Bitcoin mining attacks affecting over 1,000 sites",
-   "link": "https://cointelegraph.com/news/braiins-warns-bitcoin-mining-attacks-affecting-1000-sites?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bitcoin mining pool operator Braiins warned that attackers are exploiting unsecured connections to hijack miners’ computing power and potentially steal rewards.",
-   "published": "2026-11-25T21:22:19.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "aw6942",
-   "title": "Why ECB collateral eligibility could boost demand for tokenized bonds",
-   "link": "https://cointelegraph.com/news/why-ecb-collateral-eligibility-could-boost-demand-tokenized-bonds?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Past ECB decisions offer clues to the value of using bonds as collateral, while US derivatives exchanges face a different calculation over their Bitcoin holdings.",
-   "published": "2026-11-25T21:11:39.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1qvfcxn",
@@ -255,33 +390,6 @@
    "category": "economy"
   },
   {
-   "id": "2ubg5w",
-   "title": "Ethereum Foundation backs Keccak-256 to counter quantum, AI threats",
-   "link": "https://cointelegraph.com/news/ethereum-foundation-keccak-256-counter-quantum-ai-threats?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Ethlabs co-founder Julian Ma told Cointelegraph that AI poses a more immediate threat as Ethereum prepares for one of its biggest security overhauls since the Merge.",
-   "published": "2026-11-25T18:54:51.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "hpp334",
-   "title": "US inflation rises to 3.8% ahead of December Fed meeting, clouding crypto outlook",
-   "link": "https://cointelegraph.com/news/us-inflation-rises-december-fed-meeting-clouding-crypto-outlook?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "US core inflation rose more than expected in October as markets anticipate a December interest rate hike, which could slow a crypto market recovery.",
-   "published": "2026-11-25T17:53:10.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "64cx31",
-   "title": "Bitcoin falls toward $57K amid US tariff fears, hot PCE data as Nasdaq drops 4%",
-   "link": "https://cointelegraph.com/markets/bitcoin-falls-57k-us-tariff-pce-data-nasdaq-drops?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The prospect of higher US tariffs and hotter-than-expected PCE inflation weighed on Bitcoin, crypto and stocks on Wednesday.",
-   "published": "2026-11-25T17:33:22.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "fx58t0",
    "title": "ECB and Sveriges Riksbank conclude agreement for Sweden to join T2",
    "link": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261125_1~6333a90f3a.en.html",
@@ -291,24 +399,6 @@
    "category": "economy"
   },
   {
-   "id": "1lygha3",
-   "title": "Nvidia agrees to $290M settlement over crypto mining revenue disclosures",
-   "link": "https://cointelegraph.com/news/nvidia-agrees-290m-settlement-crypto-mining-revenue-disclosures?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The proposed settlement would resolve a shareholder lawsuit dating back to 2018 that alleged Nvidia misled investors about its exposure to the cryptocurrency industry.",
-   "published": "2026-11-25T17:19:33.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1tws187",
-   "title": "FCC authorizes SpaceX to deploy 1M satellites for orbital AI data centers",
-   "link": "https://cointelegraph.com/news/fcc-authorizes-spacex-1m-satellites-orbital-ai-data-centers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The planned Starmind constellation will process data in orbit for use on Earth, as demand for artificial intelligence computing power continues to grow.",
-   "published": "2026-11-25T17:10:53.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "ms4hve",
    "title": "Prediction markets push OpenAI IPO expectations later into 2027",
    "link": "https://www.cnbc.com/2026/11/25/openai-ipo-odds-2027-prediction-markets.html",
@@ -316,24 +406,6 @@
    "published": "2026-11-25T17:08:03.000Z",
    "source": "CNBC Finance",
    "category": "markets"
-  },
-  {
-   "id": "15674ts",
-   "title": "What's gone wrong at Poundland?",
-   "link": "https://www.bbc.co.uk/news/articles/cm4g10p2r0g9o?at_medium=RSS&at_campaign=rss",
-   "summary": "Poundland has collapse into administration. Why?",
-   "published": "2026-11-25T17:00:32.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "1edit6s",
-   "title": "Trump's accounts traded Nvidia shares 44 times this year, records show",
-   "link": "https://www.bbc.co.uk/news/articles/cq772vk664yvo?at_medium=RSS&at_campaign=rss",
-   "summary": "A review of the US president's financial disclosures shows Donald Trump's investment portfolios have regularly traded shares in the tech giant.",
-   "published": "2026-11-25T16:42:11.000Z",
-   "source": "BBC Business",
-   "category": "economy"
   },
   {
    "id": "1ovug5p",
@@ -363,15 +435,6 @@
    "category": "markets"
   },
   {
-   "id": "1n7q312",
-   "title": "Ex-FTX COO calls out Netflix over CZ’s ‘Asian mafia’ portrayal",
-   "link": "https://cointelegraph.com/news/ftx-coo-netflix-portrayal-binance-founder-racist?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Constance Waing said Netflix used racist stereotypes in its portrayal of CZ and misrepresented life at FTX before the exchange’s collapse.",
-   "published": "2026-11-25T14:21:36.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "bihwae",
    "title": "Energy bills to rise by 26% from January after gas prices surge",
    "link": "https://www.bbc.co.uk/news/articles/cm20qnq33e90o?at_medium=RSS&at_campaign=rss",
@@ -381,15 +444,6 @@
    "category": "economy"
   },
   {
-   "id": "1d6u7ni",
-   "title": "Ukraine passes bill to legalize crypto and tax profits at 23%",
-   "link": "https://cointelegraph.com/news/ukraine-passes-bill-crypto-regulation-tax?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Ukraine’s parliament passed a crypto regulation bill after three years of legislative work, with the new rules set to take effect in July 2027.",
-   "published": "2026-11-25T13:02:09.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "u36716",
    "title": "Liesman: Nvidia whiplash tests Kevin Warsh’s push to read market signals",
    "link": "https://www.cnbc.com/2026/11/25/nvidia-kevin-warsh-fed-market-signals.html",
@@ -397,24 +451,6 @@
    "published": "2026-11-25T12:26:41.000Z",
    "source": "CNBC Finance",
    "category": "markets"
-  },
-  {
-   "id": "1pd3h43",
-   "title": "'I only use the washing machine on a Sunday' - how we're keeping our energy bills down",
-   "link": "https://www.bbc.co.uk/news/articles/c820qnznkrn4o?at_medium=RSS&at_campaign=rss",
-   "summary": "The BBC speaks to three people about steps they take to keep their energy bills under control.",
-   "published": "2026-11-25T12:12:11.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "1dt5tu0",
-   "title": "Energy bills will soar - here's how you can ease the pain",
-   "link": "https://www.bbc.co.uk/news/articles/crm4rygl4m3o?at_medium=RSS&at_campaign=rss",
-   "summary": "Household energy bills are about to increase but there are ways to keep a lid on your expenditure.",
-   "published": "2026-11-25T10:42:20.000Z",
-   "source": "BBC Business",
-   "category": "economy"
   },
   {
    "id": "1gt06pg",
@@ -432,15 +468,6 @@
    "summary": "The Prudential Regulation Authority and Financial Conduct Authority have today published revised rules designed to support securitisation’s contribution to economic growth.",
    "published": "2026-11-25T10:00:00.000Z",
    "source": "Bank of England",
-   "category": "economy"
-  },
-  {
-   "id": "1tct0w4",
-   "title": "What will the energy cap changes mean for my bills?",
-   "link": "https://www.bbc.co.uk/news/articles/cdd29v8mp9jo?at_medium=RSS&at_campaign=rss",
-   "summary": "Regulator Ofgem is raising the cap affecting the energy bills of millions of households.",
-   "published": "2026-11-25T09:54:32.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
@@ -642,15 +669,6 @@
    "category": "economy"
   },
   {
-   "id": "bzravx",
-   "title": "Warsh wants Fed officials to talk less. Instead, they’re talking more",
-   "link": "https://www.cnbc.com/2026/11/20/warsh-fed-forward-guidance-rate-hikes.html",
-   "summary": "Fed officials have been rushing to the microphones lately while the Fed chairman stays on the sidelines.",
-   "published": "2026-11-20T21:10:48.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
    "id": "3mmpks",
    "title": "Prediction markets outlook for stocks in 2026 dims amid AI sell-off",
    "link": "https://www.cnbc.com/2026/11/20/sp-500-8000-kalshi-odds-ai-selloff.html",
@@ -684,24 +702,6 @@
    "summary": "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp",
    "published": "2026-11-19T16:00:00.000Z",
    "source": "Federal Reserve",
-   "category": "economy"
-  },
-  {
-   "id": "2ovqqe",
-   "title": "Cyber resilience guidance consultation and AI and quantum effective practices",
-   "link": "https://www.bankofengland.co.uk/news/2026/november/cyber-resilience-guidance-consultation-and-ai-and-quantum-effective-practices",
-   "summary": "UK’s financial regulators are proposing a new guidance to help financial services firms prepare for and recover from cyber incidents as threats grow.",
-   "published": "2026-11-19T08:00:00.000Z",
-   "source": "Bank of England",
-   "category": "economy"
-  },
-  {
-   "id": "heg7wv",
-   "title": "Minutes of the Market Participants Group meeting – 18 November 2026",
-   "link": "https://www.bankofengland.co.uk/minutes/2026/november/market-participants-group-meeting-18-november-2026",
-   "summary": "The Market Participants Group (MPG) is a senior-level forum for financial market participants to share their views on relevant themes and narratives in financial markets with members of the Bank of England’s Monetary…",
-   "published": "2026-11-19T07:30:00.000Z",
-   "source": "Bank of England",
    "category": "economy"
   }
  ]
