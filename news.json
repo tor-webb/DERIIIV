@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T14:38:53.483Z",
+ "updated": "2026-11-27T23:11:09.614Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -11,6 +11,105 @@
   "The Guardian Business /business/rss": 12
  },
  "items": [
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-11-27T22:12:51.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "vqv8gg",
+   "title": "Franklin Templeton makes room for HYPE in crypto index ETF",
+   "link": "https://cointelegraph.com/news/franklin-templeton-hype-crypto-index-etf?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The addition comes as US spot investment products tracking Hyperliquid’s native token reach $266.5 million in assets under management.",
+   "published": "2026-11-27T21:15:29.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1b8ns80",
+   "title": "Bitcoin whales pile into BTC despite shrinking profit cushion",
+   "link": "https://cointelegraph.com/markets/bitcoin-whales-pile-btc-despite-shrinking-profit-cushion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "CryptoQuant data shows Bitcoin whales are breaking with historical fourth-quarter selling patterns despite a market downturn.",
+   "published": "2026-11-27T19:23:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1b62sje",
+   "title": "At the close: S&P 500 records best week since April 2025",
+   "link": "https://investinglive.com/stocks/at-the-close-s-p-500-records-best-week-since-april-2025/",
+   "summary": "What a difference a week makes. US equities capped a remarkable turnaround in holiday-shortened trading on Friday, with the major indexes building on Wednesday's gains as investors piled back into technology stocks.…",
+   "published": "2026-11-27T18:17:00.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1yuqas1",
+   "title": "China sets March 2027 rollout for blockchain identity regulations",
+   "link": "https://cointelegraph.com/news/china-march-2027-rollout-blockchain-identity-regulations?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "China has issued new regulations governing blockchain-based digital identities, setting rules for cross-platform verification and data privacy.",
+   "published": "2026-11-27T17:37:23.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1vuyj6d",
+   "title": "Bitcoin price drops below $59K as Anthropic joins tech stock rebound",
+   "link": "https://cointelegraph.com/markets/bitcoin-price-below-59k-anthropic-tech-stock-rebound?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Bitcoin price volatility returned at the Wall Street open as BTC/USD dropped to local lows of $58,700 while stocks and gold headed higher.",
+   "published": "2026-11-27T16:48:51.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "xole6y",
+   "title": "US stock markets climb to the highs of the day as tech leads",
+   "link": "https://investinglive.com/stocks/us-stock-markets-climb-to-the-highs-of-the-day-as-tech-leads/",
+   "summary": "The S&P 500 is at the highs of today's holiday-shortened session. Futures were strong ahead of the open but there was some immediate selling after the bell. That knocked the S&P 500 down to 7182 but it's since climbed…",
+   "published": "2026-11-27T15:56:29.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "19x5dvd",
+   "title": "IRGC Navy commander says breaking the US naval blockade is imminent",
+   "link": "https://investinglive.com/commodities/irgc-navy-commander-says-breaking-the-us-naval-blockade-is-imminent/",
+   "summary": "Iran's Revolutionary Guard is making huge amounts of noise today about breaking the US naval blockade. The Commander of the Iranian Revolutionary Guard’s naval forces said zero hour for breaking the naval blockade is…",
+   "published": "2026-11-27T15:13:22.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "12i41r0",
+   "title": "What was Coinbase worth while Nasdaq was closed?",
+   "link": "https://cointelegraph.com/news/what-was-coinbase-worth-while-nasdaq-was-closed?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "A Thanksgiving buyer paid 106.24 USDC per Coinbase share. Whether that looked like a holiday rally depended on when you’d last checked the stock.",
+   "published": "2026-11-27T14:40:54.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "16jwhhe",
+   "title": "Brazil's EWZ up 13% as Lula hands the finance ministry to a banker",
+   "link": "https://investinglive.com/stocks/brazil-s-ewz-up-13-as-lula-hands-the-finance-ministry-to-a-banker/",
+   "summary": "Markets are pricing a Brazil without a fiscal crisis The iShares MSCI Brazil ETF is up 13% in premarket trading after Lula named Bradesco chairman Luiz Carlos Trabuco Cappi as his finance minister for the term starting…",
+   "published": "2026-11-27T14:15:22.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "16t7d3h",
+   "title": "Amazon’s sale deals deceive customers, thinktank alleges",
+   "link": "https://www.theguardian.com/global/2026/nov/27/amazon-sale-deals-deceive-customers-black-friday-cyber-monday",
+   "summary": "Two-thirds of Black Friday and Cyber Monday sale products were priced the same or lower in previous months Groundwork Collaborative finds, a claim Amazon disputes An Apple Watch on sale for $680. A pair of women’s…",
+   "published": "2026-11-27T14:00:12.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
+  },
   {
    "id": "1bi3a8",
    "title": "Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
@@ -46,15 +145,6 @@
    "published": "2026-11-27T13:29:43.000Z",
    "source": "CNBC Finance",
    "category": "markets"
-  },
-  {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-11-27T13:28:26.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1dirntv",
@@ -174,22 +264,13 @@
    "category": "economy"
   },
   {
-   "id": "1g7rhzw",
-   "title": "Crude oil extends the rebound as growth concerns ease and US-Iran tensions provide support",
-   "link": "https://investinglive.com/commodities/crude-oil-extends-the-rebound-as-growth-concerns-ease-and-us-iran-tensions-provide-support/",
-   "summary": "Crude oil has been rallying steadily since Wednesday as growth concerns reached a near-term peak. Keep in mind that growth fears could still push oil prices lower in the future, but we will likely need a bigger selloff…",
-   "published": "2026-11-27T10:09:39.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1or6i79",
-   "title": "Ethereum consolidates near yearly lows as bearish macro backdrop remains intact despite short-covering",
-   "link": "https://investinglive.com/cryptocurrency/ethereum-consolidates-near-yearly-lows-as-bearish-macro-backdrop-remains-intact-despite-short-covering/",
-   "summary": "Ethereum is consolidating near yearly lows as the macro backdrop remains negative for the crypto market. There’s been some broad short-covering, but no positive catalyst backing the move. Keep in mind that…",
-   "published": "2026-11-27T09:12:46.000Z",
-   "source": "investingLive",
-   "category": "forex"
+   "id": "kyhuea",
+   "title": "‘It’s not helping’: calls for guardrails and regulations as AI use rises at US retailers",
+   "link": "https://www.theguardian.com/us-news/2026/nov/27/ai-retailer-consumer-guardrails",
+   "summary": "Labor leaders and advocates urge protections for workers and consumers as AI use becomes more commonplace As millions of Americans begin holiday shopping this Black Friday, consumers and workers alike are already…",
+   "published": "2026-11-27T10:00:02.000Z",
+   "source": "The Guardian Business",
+   "category": "economy"
   },
   {
    "id": "9psntu",
@@ -201,65 +282,11 @@
    "category": "economy"
   },
   {
-   "id": "e78j8c",
-   "title": "Germany unemployment rises more than expected in November as labour market struggles persist",
-   "link": "https://investinglive.com/news/germany-unemployment-rises-more-than-expected-in-november-as-labour-market-struggles-persist/",
-   "summary": "Germany November unemployment change 9k vs 4k expected Prior 4k Germany November unemployment rate 6.4% vs 6.4% expected Prior 6.4% The number of people out of work in Germany rose by more than expected in November,…",
-   "published": "2026-11-27T08:55:12.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "yzkrgy",
-   "title": "European stock market open: The rebound party rolls on",
-   "link": "https://investinglive.com/stocks/european-stock-market-open-the-rebound-party-rolls-on/",
-   "summary": "Eurostoxx +1.1% Germany DAX +0.7% France CAC 40 +0.4% UK FTSE +0.7% Spain IBEX +0.9% Italy FTSE MIB +1.5% It looks like dip buyers are hoping to squeeze in a little bit of joy out of what has otherwise been a rather…",
-   "published": "2026-11-27T08:22:16.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "as18xf",
    "title": "ESMA to overhaul EU’s MiCA crypto register in 2027",
    "link": "https://cointelegraph.com/news/esma-overhaul-eu-mica-crypto-register-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
    "summary": "ESMA’s new MiCA register will replace manual reporting and introduce automated data checks and a version history for crypto white papers.",
    "published": "2026-11-27T08:04:39.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "l13cex",
-   "title": "New York AG secures $1.37B court judgment against NovaTech founders",
-   "link": "https://cointelegraph.com/news/new-york-ag-137b-court-judgment-novatech?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The judgment follows an August 2025 default ruling against the founders over a Ponzi scheme that targeted Haitian and other immigrant communities.",
-   "published": "2026-11-27T07:19:44.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "16ji2k5",
-   "title": "Japan’s crypto security group taps SEAL to speed up hack response",
-   "link": "https://cointelegraph.com/news/japans-crypto-security-group-taps-seal-to-speed-up-hack-response?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The partnership comes weeks after a third-party data breach exposed hundreds of thousands of customer email addresses belonging to two Japanese crypto exchanges.",
-   "published": "2026-11-27T05:22:36.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "s9ruav",
-   "title": "Ethereum devs set Glamsterdam’s Hoodi rollout for mid-December after delays",
-   "link": "https://cointelegraph.com/news/ethereum-devs-set-glamsterdams-hoodi-rollout-for-mid-december-after-delays?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Glamsterdam’s Hoodi upgrade was delayed in October after concerns that changes to gas pricing could break some existing smart contracts.",
-   "published": "2026-11-27T04:47:36.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "158zvf",
-   "title": "AI is driving a flood of crypto bug reports. Now it’s helping sort them",
-   "link": "https://cointelegraph.com/news/ai-driving-flood-of-crypto-bug-reports-now-helping-sort-them?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bug bounty platform HackerOne said it’s increasing its triage throughput with AI agents after a record quarter of reports in the third quarter.",
-   "published": "2026-11-27T01:47:38.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
   },
@@ -271,15 +298,6 @@
    "published": "2026-11-27T00:58:49.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "a80nku",
-   "title": "Privacy coins face diverging fortunes as KuCoin moves to drop Monero",
-   "link": "https://cointelegraph.com/news/privacy-coins-kucoin-drop-monero-grayscale-zcash?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "As KuCoin joins exchanges dropping Monero ahead of new EU restrictions, Grayscale argues that Zcash’s privacy design sets it apart.",
-   "published": "2026-11-27T00:35:39.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1qm1qzz",
@@ -642,15 +660,6 @@
    "category": "markets"
   },
   {
-   "id": "1ln93ji",
-   "title": "Wild stock market swings: will I lose money, and is there anything I can do?",
-   "link": "https://www.theguardian.com/business/2026/nov/23/falling-markets-will-i-lose-money-shares-tech-ai-investments",
-   "summary": "Shares are volatile amid jitters over tech and AI – but think carefully before you decide to ditch investments too It has been a volatile time on global stock markets, with rapid rallies and punishing sell-offs. There…",
-   "published": "2026-11-23T14:51:44.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
    "id": "16nw2jg",
    "title": "Philip R. Lane: Climate change and monetary policy",
    "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261123~b5816801a0.en.pdf",
@@ -687,39 +696,12 @@
    "category": "economy"
   },
   {
-   "id": "1xbck9o",
-   "title": "Jensen Huang’s reported affair was ‘most expensive sex since Helen of Troy’, US senator says",
-   "link": "https://www.theguardian.com/us-news/2026/nov/22/jensen-huang-nvidia-john-kennedy",
-   "summary": "John Kennedy looks to Trump leaders as he asks how China evidently bypassed export controls for Nvidia’s top AI chips Invoking Greek mythology, the US senator John Kennedy has characterized former Nvidia chief…",
-   "published": "2026-11-22T20:23:36.000Z",
-   "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
    "id": "10n6alp",
    "title": "‘Little room for error’: what a debt-laden cloud computing company says about the AI boom",
    "link": "https://www.theguardian.com/business/2026/nov/21/debt-laden-cloud-computing-company-coreweave-ai-boom",
    "summary": "‘Poster child of AI bubble’ CoreWeave symbolises increasingly risky business model of datacentre buildout The Egyptians had pyramids. The Roman empire had roads. The early 21st-century tech bros have massive buildings…",
    "published": "2026-11-21T13:00:01.000Z",
    "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "1hby0vp",
-   "title": "Federal Reserve announces College Fed Challenge winners",
-   "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120b.htm",
-   "summary": "Federal Reserve announces College Fed Challenge winners",
-   "published": "2026-11-20T21:15:00.000Z",
-   "source": "Federal Reserve",
-   "category": "economy"
-  },
-  {
-   "id": "1hb8ltg",
-   "title": "Federal Reserve Board releases results from survey of senior financial officers at banks about their strategies and practices for managing reserve balances",
-   "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120a.htm",
-   "summary": "Federal Reserve Board releases results from survey of senior financial officers at banks about their strategies and practices for managing reserve balances",
-   "published": "2026-11-20T15:00:00.000Z",
-   "source": "Federal Reserve",
    "category": "economy"
   }
  ]
