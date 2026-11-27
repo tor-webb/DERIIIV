@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T04:44:23.303Z",
+ "updated": "2026-11-27T14:38:53.483Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,49 +12,247 @@
  },
  "items": [
   {
-   "id": "w0el48",
-   "title": "Aussie upside capped as jobless rate hits 4.9% and the RBA nears its peak, OCBC says",
-   "link": "https://investinglive.com/central-banks/aussie-upside-capped-as-jobless-rate-hits-4-9-and-the-rba-nears-its-peak-ocbc-says/",
-   "summary": "For AUD/USD, OCBC's view points to selling into rallies rather than chasing a risk-led bounce, although the currency is likely to stay highly sensitive to equity swings. The December 8 RBA decision is the key event…",
-   "published": "2026-11-27T03:46:42.000Z",
+   "id": "1bi3a8",
+   "title": "Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
+   "link": "https://www.ecb.europa.eu//press/govcdec/otherdec/2026/html/ecb.gc261127~13ecadc0f2.en.html",
+   "summary": "",
+   "published": "2026-11-27T14:00:00.000Z",
+   "source": "ECB",
+   "category": "economy"
+  },
+  {
+   "id": "14w0qdw",
+   "title": "Binance to launch tokenized IPO program after regulatory approval: Yi He",
+   "link": "https://cointelegraph.com/news/binance-ipo-program-regulatory-approval-yi-he?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Binance is hiring for equity capital markets roles, including an analyst to develop tokenized equity products and assess prospective issuers.",
+   "published": "2026-11-27T13:44:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "e4iy7k",
+   "title": "October US advance goods trade balance -149.5B vs -133.0B expected",
+   "link": "https://investinglive.com/news/october-us-advance-goods-trade-balance-149-5b-vs-133-0b-expected/",
+   "summary": "Prior was -135.9B That's going leave a dent in GDP forecasts. Elsewhere: Wholesale inventories +0.9% vs +0.8% prior Retail inventories ex autos +0.6% vs +0.7% prior The inventory data should somewhat offset the drag…",
+   "published": "2026-11-27T13:31:07.000Z",
    "source": "investingLive",
    "category": "forex"
   },
   {
-   "id": "1rlhye3",
-   "title": "ICYMI: SpaceX and Musk to hand shares to every child holding an active Trump Account",
-   "link": "https://investinglive.com/stocks/icymi-spacex-and-musk-to-hand-shares-to-every-child-holding-an-active-trump-account/",
-   "summary": "For existing SpaceX shareholders, the company's portion is newly issued Class A stock, so it means some dilution. How much depends on how many of the nearly 70 million accounts count as active, a number the company…",
-   "published": "2026-11-27T03:15:03.000Z",
+   "id": "u36716",
+   "title": "Liesman: Nvidia whiplash tests Kevin Warsh’s push to read market signals",
+   "link": "https://www.cnbc.com/2026/11/25/nvidia-kevin-warsh-fed-market-signals.html",
+   "summary": "The extreme market gyrations and the drama surrounding Nvidia this past week have highlighted the dilemma facing Federal Reserve Chairman Kevin Warsh.",
+   "published": "2026-11-27T13:29:43.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "1la066y",
+   "title": "Here’s what happened in crypto today",
+   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
+   "published": "2026-11-27T13:28:26.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1dirntv",
+   "title": "The S&P 500 is in a correction. Bear markets and recessions don't always follow",
+   "link": "https://www.cnbc.com/2026/11/27/the-sp-500-is-in-a-correction-bear-markets-and-recessions-dont-always-follow.html",
+   "summary": "The November sell-off has so far pushed the S&P 500 into a correction. History shows that a correction doesn't always lead to a bear market, or a recession.",
+   "published": "2026-11-27T13:21:56.000Z",
+   "source": "CNBC Finance",
+   "category": "markets"
+  },
+  {
+   "id": "su38hn",
+   "title": "Green Friday: US stock futures surge as the AI trade comes back to life",
+   "link": "https://investinglive.com/stocks/green-friday-us-stock-futures-surge-as-the-ai-trade-comes-back-to-life/",
+   "summary": "he rebound in US equity markets is picking up steam after the Thanksgiving holiday. S&P 500 futures are up 1.7% while Nasdaq futures are up 2.4% as the technology rebound that started on Wednesday accelerates. US…",
+   "published": "2026-11-27T13:15:37.000Z",
    "source": "investingLive",
    "category": "forex"
   },
   {
-   "id": "105q2rl",
-   "title": "China's industrial profits jump 20.1% in October as electronics do the heavy lifting",
-   "link": "https://investinglive.com/news/china-s-industrial-profits-jump-20-1-in-october-as-electronics-do-the-heavy-lifting/",
-   "summary": "The data offers some support for Chinese and wider Asian technology supply-chain stocks, where profits are clearly strongest. Its value as a signal for the broader economy is limited, though, because consumer-facing…",
-   "published": "2026-11-27T02:51:29.000Z",
+   "id": "jt80qz",
+   "title": "investingLive European session wrap: Post-Thanksgiving optimism lifts stocks, gold",
+   "link": "https://investinglive.com/news/investinglive-european-session-wrap-post-thanksgiving-optimism-lifts-stocks-gold/",
+   "summary": "Headlines: S&P 500 rebounds as growth concerns ease and Nvidia lifts sentiment, but underlying macro headwinds remain unchanged Reminder: Wall Street is back today but will dip buyers have the last laugh? Gold extends…",
+   "published": "2026-11-27T12:53:23.000Z",
    "source": "investingLive",
    "category": "forex"
   },
   {
-   "id": "1h3ifc",
-   "title": "RBI buys no gold for six months but brings another 60 tonnes home",
-   "link": "https://investinglive.com/commodities/rbi-buys-no-gold-for-six-months-but-brings-another-60-tonnes-home/",
-   "summary": "For gold, the RBI's pause matters more than the repatriation. Central bank buying has been one of the pillars of the long rally, and a year without additions from one of the biggest official buyers weakens that support…",
-   "published": "2026-11-27T02:24:58.000Z",
+   "id": "ntk7xt",
+   "title": "Black Friday's Record Spending Trap: Why Good Economic News Isn't Always Good Market News",
+   "link": "https://investinglive.com/education/black-friday-s-record-spending-trap-why-good-economic-news-isn-t-always-good-market-news/",
+   "summary": "Black Friday could deliver another record-breaking day for US consumer spending, with unprecedented retail sales painting a picture of remarkable consumer resilience. And yet financial markets could still respond…",
+   "published": "2026-11-27T12:40:16.000Z",
    "source": "investingLive",
    "category": "forex"
   },
   {
-   "id": "48sciv",
-   "title": "IMF tells RBA to stand ready for more hikes, even after 125bp of tightening this year",
-   "link": "https://investinglive.com/central-banks/imf-tells-rba-to-stand-ready-for-more-hikes-even-after-125bp-of-tightening-this-year/",
-   "summary": "The IMF's report adds institutional weight to the case against an early end to RBA tightening, which should keep markets wary of pricing in cuts soon. Short-dated Australian government bond yields are the most…",
-   "published": "2026-11-27T02:05:40.000Z",
+   "id": "qjkgmv",
+   "title": "Brazil’s stock exchange pushes stablecoin launch back to 2027",
+   "link": "https://cointelegraph.com/news/brazil-b3-stablecoin-tokenization-launch-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Brazil’s stock exchange is working with six major financial institutions on a real-backed stablecoin that could launch as early as the first quarter of 2027.",
+   "published": "2026-11-27T12:39:54.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "xic04s",
+   "title": "S&P 500 rebounds as growth concerns ease and Nvidia lifts sentiment, but underlying macro headwinds remain unchanged",
+   "link": "https://investinglive.com/stocks/s-p-500-rebounds-as-growth-concerns-ease-and-nvidia-lifts-sentiment-but-underlying-macro-headwinds-remain-unchanged/",
+   "summary": "The S&P 500 rebounded this week as growth concerns peaked in the near-term and the news of Jensen Huang being reinstated as Nvidia CEO following pressure from the White House improved the risk sentiment. The recent…",
+   "published": "2026-11-27T12:38:16.000Z",
    "source": "investingLive",
    "category": "forex"
+  },
+  {
+   "id": "1549lvd",
+   "title": "Austria-supervised crypto firms report 20.4B euros in H1 trading volume",
+   "link": "https://cointelegraph.com/news/austria-supervised-crypto-firms-report-204b-h1-volume?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "About 74% of accounts were based in other EEA countries, highlighting the market’s cross-border nature and putting Europe’s supervisory framework in focus, FMA said.",
+   "published": "2026-11-27T12:20:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1wwvwq9",
+   "title": "How have interest rate expectations changed after this week's events?",
+   "link": "https://investinglive.com/central-banks/how-have-interest-rate-expectations-changed-after-this-week-s-events-10/",
+   "summary": "Rate hikes by year-end BoC: 20 bps (81% probability of rate hike at the next meeting) 2027: 110 bps BoE: 24 bps (95% probability of rate hike at the next meeting) 2027: 83 bps RBNZ: 21 bps (84% probability of rate hike…",
+   "published": "2026-11-27T11:28:14.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "ujj1ml",
+   "title": "Bitcoin supply metric hits 11-year low as new ‘capitulation’ signal arrives",
+   "link": "https://cointelegraph.com/markets/bitcoin-supply-metric-new-capitulation-signal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The seven-day moving average of Bitcoin’s supply profit/loss ratio hit an 11-year low as BTC price losses month-to-date remain near 20%.",
+   "published": "2026-11-27T11:14:28.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "l4pmd",
+   "title": "Solana remains mostly rangebound as the negative macro backdrop limits the recovery. What's next?",
+   "link": "https://investinglive.com/cryptocurrency/solana-remains-mostly-rangebound-as-the-negative-macro-backdrop-limits-the-recovery-what-s-next/",
+   "summary": "Solana has been consolidating near recent lows as the crypto market remains under pressure from tightening financial conditions. There has been some broad short-covering, but no positive catalyst backing the move. Keep…",
+   "published": "2026-11-27T10:40:02.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "bxor6m",
+   "title": "Connecting the dots: When does the AI selloff become a Fed problem?",
+   "link": "https://investinglive.com/education/connecting-the-dots-when-does-the-ai-selloff-become-a-fed-problem/",
+   "summary": "At what point does Nvidia's falling share price become the Fed's headache? Now, wait a second. That sounds a little silly, doesn't it? But given how much of the US economic growth story is riding on AI these days, I…",
+   "published": "2026-11-27T10:39:17.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "5y9c8n",
+   "title": "Bluefin to shut down perps, refocus on spot trading and tokenized RWAs",
+   "link": "https://cointelegraph.com/news/bluefin-shut-down-perps-refocus-spot-trading-tokenized-rwas?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Bluefin will close its perps platform on Dec. 4, exiting a shrinking Sui market where it once handled over $500 million in daily trades.",
+   "published": "2026-11-27T10:26:06.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "1xklkxe",
+   "title": "My self-care ritual is a meal at a fancy restaurant - on my own",
+   "link": "https://www.bbc.co.uk/news/articles/cw8dv11dp2yeo?at_medium=RSS&at_campaign=rss",
+   "summary": "Solo-dining is being embraced as a self-care trend and it's reshaping the restaurant industry.",
+   "published": "2026-11-27T10:10:36.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1g7rhzw",
+   "title": "Crude oil extends the rebound as growth concerns ease and US-Iran tensions provide support",
+   "link": "https://investinglive.com/commodities/crude-oil-extends-the-rebound-as-growth-concerns-ease-and-us-iran-tensions-provide-support/",
+   "summary": "Crude oil has been rallying steadily since Wednesday as growth concerns reached a near-term peak. Keep in mind that growth fears could still push oil prices lower in the future, but we will likely need a bigger selloff…",
+   "published": "2026-11-27T10:09:39.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1or6i79",
+   "title": "Ethereum consolidates near yearly lows as bearish macro backdrop remains intact despite short-covering",
+   "link": "https://investinglive.com/cryptocurrency/ethereum-consolidates-near-yearly-lows-as-bearish-macro-backdrop-remains-intact-despite-short-covering/",
+   "summary": "Ethereum is consolidating near yearly lows as the macro backdrop remains negative for the crypto market. There’s been some broad short-covering, but no positive catalyst backing the move. Keep in mind that…",
+   "published": "2026-11-27T09:12:46.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "9psntu",
+   "title": "ECB Consumer Expectations Survey results – October 2026",
+   "link": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261127~2e53af695e.en.html",
+   "summary": "",
+   "published": "2026-11-27T09:00:00.000Z",
+   "source": "ECB",
+   "category": "economy"
+  },
+  {
+   "id": "e78j8c",
+   "title": "Germany unemployment rises more than expected in November as labour market struggles persist",
+   "link": "https://investinglive.com/news/germany-unemployment-rises-more-than-expected-in-november-as-labour-market-struggles-persist/",
+   "summary": "Germany November unemployment change 9k vs 4k expected Prior 4k Germany November unemployment rate 6.4% vs 6.4% expected Prior 6.4% The number of people out of work in Germany rose by more than expected in November,…",
+   "published": "2026-11-27T08:55:12.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "yzkrgy",
+   "title": "European stock market open: The rebound party rolls on",
+   "link": "https://investinglive.com/stocks/european-stock-market-open-the-rebound-party-rolls-on/",
+   "summary": "Eurostoxx +1.1% Germany DAX +0.7% France CAC 40 +0.4% UK FTSE +0.7% Spain IBEX +0.9% Italy FTSE MIB +1.5% It looks like dip buyers are hoping to squeeze in a little bit of joy out of what has otherwise been a rather…",
+   "published": "2026-11-27T08:22:16.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "as18xf",
+   "title": "ESMA to overhaul EU’s MiCA crypto register in 2027",
+   "link": "https://cointelegraph.com/news/esma-overhaul-eu-mica-crypto-register-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "ESMA’s new MiCA register will replace manual reporting and introduce automated data checks and a version history for crypto white papers.",
+   "published": "2026-11-27T08:04:39.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "l13cex",
+   "title": "New York AG secures $1.37B court judgment against NovaTech founders",
+   "link": "https://cointelegraph.com/news/new-york-ag-137b-court-judgment-novatech?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The judgment follows an August 2025 default ruling against the founders over a Ponzi scheme that targeted Haitian and other immigrant communities.",
+   "published": "2026-11-27T07:19:44.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "16ji2k5",
+   "title": "Japan’s crypto security group taps SEAL to speed up hack response",
+   "link": "https://cointelegraph.com/news/japans-crypto-security-group-taps-seal-to-speed-up-hack-response?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The partnership comes weeks after a third-party data breach exposed hundreds of thousands of customer email addresses belonging to two Japanese crypto exchanges.",
+   "published": "2026-11-27T05:22:36.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "s9ruav",
+   "title": "Ethereum devs set Glamsterdam’s Hoodi rollout for mid-December after delays",
+   "link": "https://cointelegraph.com/news/ethereum-devs-set-glamsterdams-hoodi-rollout-for-mid-december-after-delays?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Glamsterdam’s Hoodi upgrade was delayed in October after concerns that changes to gas pricing could break some existing smart contracts.",
+   "published": "2026-11-27T04:47:36.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
   },
   {
    "id": "158zvf",
@@ -66,58 +264,13 @@
    "category": "crypto"
   },
   {
-   "id": "9ncbo0",
-   "title": "Gold's downside looks limited because the dollar has already done most of its work, CBA says",
-   "link": "https://investinglive.com/commodities/gold-s-downside-looks-limited-because-the-dollar-has-already-done-most-of-its-work-cba-says/",
-   "summary": "If CBA is right, gold traders should be watching the dollar index and US real yields more closely than geopolitical headlines. The December Fed decision is the near-term test. A hike that is already expected, with no…",
-   "published": "2026-11-27T01:39:05.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "9lz85g",
-   "title": "China's industrial profits growth speeds up to 20.1% y/y in October",
-   "link": "https://investinglive.com/news/china-s-industrial-profits-growth-speeds-up-to-20-1-y-y-in-october/",
-   "summary": "China industrial profits, October Year-to-date: 16.0% y/y prior (jany - September) 15.5% October alone: 20.1% y/y prior 14.4% Profit growth at China's industrial firms accelerated sharply in October, with the…",
-   "published": "2026-11-27T01:36:10.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1nmwa12",
-   "title": "Kiwi edges higher as official NZ election count confirms a hung parliament",
-   "link": "https://investinglive.com/news/kiwi-edges-higher-as-official-nz-election-count-confirms-a-hung-parliament/",
-   "summary": "The muted reaction suggests NZD traders are pricing politics as noise unless talks break down. The tail risk is a failed negotiation and a fresh election, which would bring a longer period of uncertainty and could…",
-   "published": "2026-11-27T01:24:33.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "ocm6nn",
-   "title": "PBOC sets USD/ CNY reference rate for today at 6.7075 (vs. estimate at 6.6604)",
-   "link": "https://investinglive.com/central-banks/pboc-sets-usd-cny-reference-rate-for-today-at-6-7075-vs-estimate-at-6-6604/",
-   "summary": "The PBOC allows the yuan to fluctuate within a +/- 2% range, around this reference rate. More here on this. PBOC injected 100 billion yuan in overnight reverse repurchase agreements 571.5 bn yuan mature today thus net…",
-   "published": "2026-11-27T01:15:33.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1xklkxe",
-   "title": "I spend £200 a month on fancy meals by myself - would you dine solo?",
-   "link": "https://www.bbc.co.uk/news/articles/cw8dv11dp2yeo?at_medium=RSS&at_campaign=rss",
-   "summary": "Solo-dining is being embraced as a self-care trend and it's reshaping the restaurant industry.",
-   "published": "2026-11-27T00:54:45.000Z",
+   "id": "1o1fihq",
+   "title": "From £250 job to £9,000 bill: Inside the rogue trader networks scamming customers at scale",
+   "link": "https://www.bbc.co.uk/news/articles/c65yme31k7m2o?at_medium=RSS&at_campaign=rss",
+   "summary": "Networks of plumbers and electricians are scamming people on a large scale, the BBC reveals.",
+   "published": "2026-11-27T00:58:49.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "1nxonnj",
-   "title": "Tokyo core inflation hits 16-month high of 2.9%, firming the case for a December BoJ hike",
-   "link": "https://investinglive.com/central-banks/tokyo-core-inflation-hits-16-month-high-of-2-9-firming-the-case-for-a-december-boj-hike/",
-   "summary": "The data keeps a December hike as the base case, which should limit any yen weakness. With the yen near 160 per dollar, however, a 25 basis point move that is already widely expected may do little on its own. The…",
-   "published": "2026-11-27T00:52:06.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "a80nku",
@@ -127,24 +280,6 @@
    "published": "2026-11-27T00:35:39.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "r8f3s7",
-   "title": "HSBC flags $3,400 as gold's next big test and says it is too early to call a bottom",
-   "link": "https://investinglive.com/commodities/hsbc-flags-3-400-as-gold-s-next-big-test-and-says-it-is-too-early-to-call-a-bottom/",
-   "summary": "Gold is trading as a risk asset rather than a haven, so equity markets have become the key driver. Another leg lower in stocks would raise the chance of a test of $3,400, while a stabilisation would ease the forced…",
-   "published": "2026-11-27T00:30:06.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1hr38rk",
-   "title": "PBOC is expected to set the USD/CNY reference rate at 6.6604 – Reuters estimate",
-   "link": "https://investinglive.com/central-banks/pboc-is-expected-to-set-the-usd-cny-reference-rate-at-6-6604-reuters-estimate/",
-   "summary": "The People’s Bank of China is due to set the daily USD/CNY reference rate at around 0115 GMT (2115 US Eastern time), a fixing that remains one of the most closely watched signals in Asian foreign exchange markets.…",
-   "published": "2026-11-27T00:23:18.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "1qm1qzz",
@@ -174,60 +309,6 @@
    "category": "economy"
   },
   {
-   "id": "1at37hn",
-   "title": "‘Very racist’ Netflix SBF series, BitMart’s $319M shortfall: Asia Express",
-   "link": "https://cointelegraph.com/magazine/very-racist-netflix-sbf-series-bitmarts-319m-shortfall-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Netflix’s The Altruist has been slammed for its ‘very racist’ portrayal of CZ. BitMart reportedly has a $319.5 million shortfall and just $1.9M in liquid assets.",
-   "published": "2026-11-26T22:39:46.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1la066y",
-   "title": "Here’s what happened in crypto today",
-   "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation.",
-   "published": "2026-11-26T22:12:06.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "6fjzvi",
-   "title": "BNB Chain details new layer-1 for trading, private finance and AI",
-   "link": "https://cointelegraph.com/news/bnb-chain-details-new-layer-1-trading-private-finance-ai?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The proposed network will operate alongside BNB Smart Chain and retain BNB as its native token, with a public testnet targeted for the first quarter of 2027.",
-   "published": "2026-11-26T21:42:43.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "w049jh",
-   "title": "Binance completes withdrawal recovery four weeks after $6.3B hack",
-   "link": "https://cointelegraph.com/news/binance-completes-withdrawal-recovery-four-weeks-after-63b-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The announcement concludes a phased withdrawal recovery that began on Nov. 1, when Binance restored Bitcoin withdrawals following the record crypto theft.",
-   "published": "2026-11-26T21:33:47.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "7bywq3",
-   "title": "UK is ‘getting it wrong’ on DeFi regulation, says Coinbase",
-   "link": "https://cointelegraph.com/news/uk-wrong-defi-regulation-coinbase?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Coinbase and Stand With Crypto argue that the FCA’s proposed DeFi rules could leave UK users without regulated access to decentralized finance.",
-   "published": "2026-11-26T21:13:53.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1xzpxvo",
-   "title": "Japan weighs tighter oversight of DeFi, self-custodial wallets",
-   "link": "https://cointelegraph.com/news/japan-tighter-oversight-defi-self-custodial-wallets?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Japan’s financial regulator is exploring measures to curb illicit finance risks, including potential restrictions on access to DeFi services.",
-   "published": "2026-11-26T20:05:18.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "12ce384",
    "title": "Faisal Islam: Why Trump's new tariffs are less of a threat",
    "link": "https://www.bbc.co.uk/news/articles/c6r7g4e3yep1o?at_medium=RSS&at_campaign=rss",
@@ -235,15 +316,6 @@
    "published": "2026-11-26T19:55:58.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "o4q3vm",
-   "title": "Spain moves to grant financial watchdog power to freeze crypto accounts",
-   "link": "https://cointelegraph.com/news/spain-moves-grant-financial-watchdog-power-freeze-crypto-accounts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "A new decree would allow Spain’s financial intelligence unit to suspend crypto accounts, with firms facing fines for noncompliance.",
-   "published": "2026-11-26T18:26:31.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "ikxups",
@@ -255,15 +327,6 @@
    "category": "markets"
   },
   {
-   "id": "1g7wwrf",
-   "title": "Crypto on notice as hawkish Fed risks December ‘meltdown’",
-   "link": "https://cointelegraph.com/markets/crypto-hawkish-fed-risks-december-meltdown?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Economist Robin Brooks warned of dire consequences for stocks if the Federal Reserve fails to deliver dovish cues before the FOMC blackout period.",
-   "published": "2026-11-26T17:39:53.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "sttgw8",
    "title": "When will Poundland shops close? Five key questions answered",
    "link": "https://www.bbc.co.uk/news/articles/c6z9d3pv93glo?at_medium=RSS&at_campaign=rss",
@@ -273,15 +336,6 @@
    "category": "economy"
   },
   {
-   "id": "irxuqy",
-   "title": "BIS chief Pablo Hernández de Cos set to become next ECB president: FT",
-   "link": "https://cointelegraph.com/news/bis-chief-pablo-hernndez-de-cos-next-ecb-president?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The Spanish economist has questioned the viability of stablecoins for widespread payments while backing the development of a digital euro.",
-   "published": "2026-11-26T16:40:44.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "7mmblj",
    "title": "Buyer beware? Nvidia's volatile swings expose risks of single-stock ETFs",
    "link": "https://www.cnbc.com/2026/11/26/nvidias-volatile-swings-expose-risks-of-single-stock-etfs.html",
@@ -289,24 +343,6 @@
    "published": "2026-11-26T16:00:01.000Z",
    "source": "CNBC Finance",
    "category": "markets"
-  },
-  {
-   "id": "6fe19r",
-   "title": "How EU brokers could lose access to Kyrgyz crypto exchanges",
-   "link": "https://cointelegraph.com/news/how-eu-brokers-could-lose-access-to-kyrgyz-crypto-exchanges?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "A vote on Kyrgyzstan could make an exchange’s home country the deciding factor in whether a European broker can use it to settle a trade.",
-   "published": "2026-11-26T15:45:07.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "19s48fy",
-   "title": "New UK-EU treaty has 10-year termination clause",
-   "link": "https://www.bbc.co.uk/news/articles/c98r7p65edvgo?at_medium=RSS&at_campaign=rss",
-   "summary": "Text of the treaties was published this afternoon, alongside legislation designed to enact the bulk of the deal.",
-   "published": "2026-11-26T15:23:17.000Z",
-   "source": "BBC Business",
-   "category": "economy"
   },
   {
    "id": "bw0mwh",
@@ -480,15 +516,6 @@
    "category": "markets"
   },
   {
-   "id": "u36716",
-   "title": "Liesman: Nvidia whiplash tests Kevin Warsh’s push to read market signals",
-   "link": "https://www.cnbc.com/2026/11/25/nvidia-kevin-warsh-fed-market-signals.html",
-   "summary": "The extreme market gyrations and the drama surrounding Nvidia this past week have highlighted the dilemma facing Federal Reserve Chairman Kevin Warsh.",
-   "published": "2026-11-25T12:26:41.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
    "id": "1gt06pg",
    "title": "Card payments edge past cash in shops; euro area consumers want both",
    "link": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261125~26d1ade228.en.html",
@@ -606,15 +633,6 @@
    "category": "economy"
   },
   {
-   "id": "14dyyv1",
-   "title": "Employees at Eric Trump-backed robot startup lose health benefits as company's cash crunch deepens",
-   "link": "https://www.cnbc.com/2026/11/22/foundation-future-industries-health-benefits-payroll-base-group.html",
-   "summary": "Foundation is pursuing an emergency bridge loan and has been in talks with VC firms as it waits for a $150 million investment from South Korea's Base Group.",
-   "published": "2026-11-23T23:28:19.000Z",
-   "source": "CNBC Finance",
-   "category": "markets"
-  },
-  {
    "id": "lhze93",
    "title": "‘This establishes a bottom’: Jensen Huang’s return seen as likely to stop market sell-off, for now",
    "link": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo-market-rally.html",
@@ -702,15 +720,6 @@
    "summary": "Federal Reserve Board releases results from survey of senior financial officers at banks about their strategies and practices for managing reserve balances",
    "published": "2026-11-20T15:00:00.000Z",
    "source": "Federal Reserve",
-   "category": "economy"
-  },
-  {
-   "id": "dkk7ck",
-   "title": "Christine Lagarde: Acting in time",
-   "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261120~e52bcc4db2.en.html",
-   "summary": "",
-   "published": "2026-11-20T08:30:00.000Z",
-   "source": "ECB",
    "category": "economy"
   }
  ]
