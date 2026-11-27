@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T22:31:54.480Z",
+ "updated": "2026-11-27T04:44:23.303Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -12,6 +12,177 @@
  },
  "items": [
   {
+   "id": "w0el48",
+   "title": "Aussie upside capped as jobless rate hits 4.9% and the RBA nears its peak, OCBC says",
+   "link": "https://investinglive.com/central-banks/aussie-upside-capped-as-jobless-rate-hits-4-9-and-the-rba-nears-its-peak-ocbc-says/",
+   "summary": "For AUD/USD, OCBC's view points to selling into rallies rather than chasing a risk-led bounce, although the currency is likely to stay highly sensitive to equity swings. The December 8 RBA decision is the key event…",
+   "published": "2026-11-27T03:46:42.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1rlhye3",
+   "title": "ICYMI: SpaceX and Musk to hand shares to every child holding an active Trump Account",
+   "link": "https://investinglive.com/stocks/icymi-spacex-and-musk-to-hand-shares-to-every-child-holding-an-active-trump-account/",
+   "summary": "For existing SpaceX shareholders, the company's portion is newly issued Class A stock, so it means some dilution. How much depends on how many of the nearly 70 million accounts count as active, a number the company…",
+   "published": "2026-11-27T03:15:03.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "105q2rl",
+   "title": "China's industrial profits jump 20.1% in October as electronics do the heavy lifting",
+   "link": "https://investinglive.com/news/china-s-industrial-profits-jump-20-1-in-october-as-electronics-do-the-heavy-lifting/",
+   "summary": "The data offers some support for Chinese and wider Asian technology supply-chain stocks, where profits are clearly strongest. Its value as a signal for the broader economy is limited, though, because consumer-facing…",
+   "published": "2026-11-27T02:51:29.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1h3ifc",
+   "title": "RBI buys no gold for six months but brings another 60 tonnes home",
+   "link": "https://investinglive.com/commodities/rbi-buys-no-gold-for-six-months-but-brings-another-60-tonnes-home/",
+   "summary": "For gold, the RBI's pause matters more than the repatriation. Central bank buying has been one of the pillars of the long rally, and a year without additions from one of the biggest official buyers weakens that support…",
+   "published": "2026-11-27T02:24:58.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "48sciv",
+   "title": "IMF tells RBA to stand ready for more hikes, even after 125bp of tightening this year",
+   "link": "https://investinglive.com/central-banks/imf-tells-rba-to-stand-ready-for-more-hikes-even-after-125bp-of-tightening-this-year/",
+   "summary": "The IMF's report adds institutional weight to the case against an early end to RBA tightening, which should keep markets wary of pricing in cuts soon. Short-dated Australian government bond yields are the most…",
+   "published": "2026-11-27T02:05:40.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "158zvf",
+   "title": "AI is driving a flood of crypto bug reports. Now it’s helping sort them",
+   "link": "https://cointelegraph.com/news/ai-driving-flood-of-crypto-bug-reports-now-helping-sort-them?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Bug bounty platform HackerOne said it’s increasing its triage throughput with AI agents after a record quarter of reports in the third quarter.",
+   "published": "2026-11-27T01:47:38.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "9ncbo0",
+   "title": "Gold's downside looks limited because the dollar has already done most of its work, CBA says",
+   "link": "https://investinglive.com/commodities/gold-s-downside-looks-limited-because-the-dollar-has-already-done-most-of-its-work-cba-says/",
+   "summary": "If CBA is right, gold traders should be watching the dollar index and US real yields more closely than geopolitical headlines. The December Fed decision is the near-term test. A hike that is already expected, with no…",
+   "published": "2026-11-27T01:39:05.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "9lz85g",
+   "title": "China's industrial profits growth speeds up to 20.1% y/y in October",
+   "link": "https://investinglive.com/news/china-s-industrial-profits-growth-speeds-up-to-20-1-y-y-in-october/",
+   "summary": "China industrial profits, October Year-to-date: 16.0% y/y prior (jany - September) 15.5% October alone: 20.1% y/y prior 14.4% Profit growth at China's industrial firms accelerated sharply in October, with the…",
+   "published": "2026-11-27T01:36:10.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1nmwa12",
+   "title": "Kiwi edges higher as official NZ election count confirms a hung parliament",
+   "link": "https://investinglive.com/news/kiwi-edges-higher-as-official-nz-election-count-confirms-a-hung-parliament/",
+   "summary": "The muted reaction suggests NZD traders are pricing politics as noise unless talks break down. The tail risk is a failed negotiation and a fresh election, which would bring a longer period of uncertainty and could…",
+   "published": "2026-11-27T01:24:33.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "ocm6nn",
+   "title": "PBOC sets USD/ CNY reference rate for today at 6.7075 (vs. estimate at 6.6604)",
+   "link": "https://investinglive.com/central-banks/pboc-sets-usd-cny-reference-rate-for-today-at-6-7075-vs-estimate-at-6-6604/",
+   "summary": "The PBOC allows the yuan to fluctuate within a +/- 2% range, around this reference rate. More here on this. PBOC injected 100 billion yuan in overnight reverse repurchase agreements 571.5 bn yuan mature today thus net…",
+   "published": "2026-11-27T01:15:33.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1xklkxe",
+   "title": "I spend £200 a month on fancy meals by myself - would you dine solo?",
+   "link": "https://www.bbc.co.uk/news/articles/cw8dv11dp2yeo?at_medium=RSS&at_campaign=rss",
+   "summary": "Solo-dining is being embraced as a self-care trend and it's reshaping the restaurant industry.",
+   "published": "2026-11-27T00:54:45.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1nxonnj",
+   "title": "Tokyo core inflation hits 16-month high of 2.9%, firming the case for a December BoJ hike",
+   "link": "https://investinglive.com/central-banks/tokyo-core-inflation-hits-16-month-high-of-2-9-firming-the-case-for-a-december-boj-hike/",
+   "summary": "The data keeps a December hike as the base case, which should limit any yen weakness. With the yen near 160 per dollar, however, a 25 basis point move that is already widely expected may do little on its own. The…",
+   "published": "2026-11-27T00:52:06.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "a80nku",
+   "title": "Privacy coins face diverging fortunes as KuCoin moves to drop Monero",
+   "link": "https://cointelegraph.com/news/privacy-coins-kucoin-drop-monero-grayscale-zcash?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "As KuCoin joins exchanges dropping Monero ahead of new EU restrictions, Grayscale argues that Zcash’s privacy design sets it apart.",
+   "published": "2026-11-27T00:35:39.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "r8f3s7",
+   "title": "HSBC flags $3,400 as gold's next big test and says it is too early to call a bottom",
+   "link": "https://investinglive.com/commodities/hsbc-flags-3-400-as-gold-s-next-big-test-and-says-it-is-too-early-to-call-a-bottom/",
+   "summary": "Gold is trading as a risk asset rather than a haven, so equity markets have become the key driver. Another leg lower in stocks would raise the chance of a test of $3,400, while a stabilisation would ease the forced…",
+   "published": "2026-11-27T00:30:06.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1hr38rk",
+   "title": "PBOC is expected to set the USD/CNY reference rate at 6.6604 – Reuters estimate",
+   "link": "https://investinglive.com/central-banks/pboc-is-expected-to-set-the-usd-cny-reference-rate-at-6-6604-reuters-estimate/",
+   "summary": "The People’s Bank of China is due to set the daily USD/CNY reference rate at around 0115 GMT (2115 US Eastern time), a fixing that remains one of the most closely watched signals in Asian foreign exchange markets.…",
+   "published": "2026-11-27T00:23:18.000Z",
+   "source": "investingLive",
+   "category": "forex"
+  },
+  {
+   "id": "1qm1qzz",
+   "title": "Why is there a shortage of 'wizard' elevator mechanics?",
+   "link": "https://www.bbc.co.uk/news/articles/c52e8k19y94mo?at_medium=RSS&at_campaign=rss",
+   "summary": "The pay is good and there's lots of work, so what's behind the shortage of elevator mechanics?",
+   "published": "2026-11-27T00:02:19.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1lhmjnm",
+   "title": "UK to pay 'participation' fee to deliver EU deals",
+   "link": "https://www.bbc.co.uk/news/articles/ck2057x387ego?at_medium=RSS&at_campaign=rss",
+   "summary": "Details of the contribution towards EU running costs have been revealed in new legal documents.",
+   "published": "2026-11-26T23:17:12.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1dz2iq2",
+   "title": "Asia made a big AI bet on Nvidia. What happens now?",
+   "link": "https://www.bbc.co.uk/news/articles/cqevr4lnd1nxo?at_medium=RSS&at_campaign=rss",
+   "summary": "Asian stocks have been on a rollercoaster ride after Jensen Huang's shock return as Nvidia CEO.",
+   "published": "2026-11-26T23:08:12.000Z",
+   "source": "BBC Business",
+   "category": "economy"
+  },
+  {
+   "id": "1at37hn",
+   "title": "‘Very racist’ Netflix SBF series, BitMart’s $319M shortfall: Asia Express",
+   "link": "https://cointelegraph.com/magazine/very-racist-netflix-sbf-series-bitmarts-319m-shortfall-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Netflix’s The Altruist has been slammed for its ‘very racist’ portrayal of CZ. BitMart reportedly has a $319.5 million shortfall and just $1.9M in liquid assets.",
+   "published": "2026-11-26T22:39:46.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
    "id": "1la066y",
    "title": "Here’s what happened in crypto today",
    "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -19,15 +190,6 @@
    "published": "2026-11-26T22:12:06.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "5gpjx5",
-   "title": "Five questions over Nvidia's China chip trail that Huang's return has not settled",
-   "link": "https://investinglive.com/stocks/five-questions-over-nvidia-s-china-chip-trail-that-huang-s-return-has-not-settled/",
-   "summary": "For Nvidia shareholders, the main risk is regulatory rather than personal. Tougher know-your-customer enforcement, or a revival of the push to require location tracking on chips, could slow shipments into Southeast…",
-   "published": "2026-11-26T21:56:26.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "6fjzvi",
@@ -48,15 +210,6 @@
    "category": "crypto"
   },
   {
-   "id": "79j59",
-   "title": "NZ consumer confidence breaks 100 as falling fuel prices cool inflation fears",
-   "link": "https://investinglive.com/news/nz-consumer-confidence-breaks-100-as-falling-fuel-prices-cool-inflation-fears/",
-   "summary": "Households' inflation expectations have fallen sharply from their April peak, which eases one worry for the Reserve Bank of New Zealand. That leans slightly against any hawkish shift in the policy outlook and is a mild…",
-   "published": "2026-11-26T21:32:46.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "7bywq3",
    "title": "UK is ‘getting it wrong’ on DeFi regulation, says Coinbase",
    "link": "https://cointelegraph.com/news/uk-wrong-defi-regulation-coinbase?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
@@ -64,15 +217,6 @@
    "published": "2026-11-26T21:13:53.000Z",
    "source": "Cointelegraph",
    "category": "crypto"
-  },
-  {
-   "id": "1fp1hgu",
-   "title": "Tokyo CPI preview: core inflation seen jumping to 3% three weeks before BoJ decision",
-   "link": "https://investinglive.com/central-banks/tokyo-cpi-preview-core-inflation-seen-jumping-to-3-three-weeks-before-boj-decision/",
-   "summary": "A firm Tokyo print would add support for the yen, which is still trading near 160 per dollar despite close to $100 billion of intervention. The Fed is also hiking, so the rate gap stays wide, and a BoJ hike on its own…",
-   "published": "2026-11-26T21:01:59.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "1xzpxvo",
@@ -91,15 +235,6 @@
    "published": "2026-11-26T19:55:58.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "pf4rby",
-   "title": "European stocks surge, S&P 500 futures finish higher in Thanksgiving trading",
-   "link": "https://investinglive.com/stocks/european-stocks-surge-s-p-500-futures-finish-higher-in-thanksgiving-trading/",
-   "summary": "The US Thanksgiving holiday didn't stand in the way of a strong day for global equities as European stock markets surged and S&P 500 futures closed up 38.75 points, or 0.54%. The gains build on an impressive turnaround…",
-   "published": "2026-11-26T19:41:37.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "o4q3vm",
@@ -192,24 +327,6 @@
    "category": "economy"
   },
   {
-   "id": "1dwaame",
-   "title": "CoreWeave bond yields are approaching 19%. Why even stock investors should pay attention",
-   "link": "https://investinglive.com/stocks/coreweave-bond-yields-are-approaching-19-why-even-stock-investors-should-pay-attention/",
-   "summary": "The AI infrastructure boom requires enormous amounts of capital CoreWeave's falling bond prices offer a warning about the financial risks behind that expansion, even as demand for AI computing continues to grow.…",
-   "published": "2026-11-26T14:10:50.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "n68ovd",
-   "title": "EU leaders set to confirm backing for Spain's De Cos as next ECB President - report",
-   "link": "https://investinglive.com/central-banks/eu-leaders-set-to-confirm-backing-for-spain-s-de-cos-as-next-ecb-president-report/",
-   "summary": "Reuters reports, citing EU diplomats, that EU leaders are set to sign off on Pablo Hernández de Cos as the next president of the European Central Bank. This has been well telegraphed. Christine Lagarde is leaving…",
-   "published": "2026-11-26T14:10:49.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "rkxnwf",
    "title": "Millions of people to see average monthly mortgage payments rise by £100",
    "link": "https://www.bbc.co.uk/news/articles/cwg5r02zel9qo?at_medium=RSS&at_campaign=rss",
@@ -219,24 +336,6 @@
    "category": "economy"
   },
   {
-   "id": "6ucy77",
-   "title": "EUR/USD might be bottoming out amid peak Fed hawkishness and dovish repricing risks",
-   "link": "https://investinglive.com/forex/eur-usd-might-be-bottoming-out-amid-peak-fed-hawkishness-and-dovish-repricing-risks/",
-   "summary": "USD: The US dollar has found support recently from a hawkish repricing in interest rate expectations following Governor Waller’s remarks, in which he even floated the possibility of a larger 50 bps hike at the December…",
-   "published": "2026-11-26T13:49:17.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1c8nt8v",
-   "title": "Nasdaq exec pushes for common EU rules on tokenized securities",
-   "link": "https://cointelegraph.com/news/nasdaq-exec-eu-wide-legal-framework-tokenized-securities?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Nasdaq’s Roland Chai backed exploring common EU rules for tokenized securities and said its Swedish subsidiary had applied for a DLT license.",
-   "published": "2026-11-26T13:47:56.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "1a8mvwn",
    "title": "Simon Jack: Is Poundland's US owner to blame for its collapse?",
    "link": "https://www.bbc.co.uk/news/articles/c62klzxvyzyqo?at_medium=RSS&at_campaign=rss",
@@ -244,33 +343,6 @@
    "published": "2026-11-26T13:40:46.000Z",
    "source": "BBC Business",
    "category": "economy"
-  },
-  {
-   "id": "1mwj93i",
-   "title": "7 bizarre things crypto whales spent a fortune on",
-   "link": "https://cointelegraph.com/magazine/7-bizarre-things-crypto-whales-spent-a-fortune-on?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The crypto rich have spent their fortunes on everything from dinosaur skeletons to rotting fruit, with some purchases defying belief.",
-   "published": "2026-11-26T13:30:00.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
-   "id": "1bdrhoe",
-   "title": "investingLive European session wrap: European stocks ride Wall Street's comeback into Thanksgiving",
-   "link": "https://investinglive.com/news/investinglive-european-session-wrap-european-stocks-ride-wall-street-s-comeback-into-thanksgiving/",
-   "summary": "Headlines: Heads up: Thanksgiving holiday leaves dip buyers in limbo European stock market open: Stocks surge after stunning Wall Street turnaround Gold remains caught between forced liquidations and hawkish Fed bets.…",
-   "published": "2026-11-26T12:51:11.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "qjyyhe",
-   "title": "Wall Street’s earnings mood is starting to improve. Is the stock market finding a bottom?",
-   "link": "https://investinglive.com/stocks/wall-street-s-earnings-mood-is-starting-to-improve-is-the-stock-market-finding-a-bottom/",
-   "summary": "Wall Street’s earnings mood is starting to improve. Is the stock market finding a bottom? Exclusive investingLive research reveals early signs of recovery in post-earnings stock performance. Meanwhile, hedge funds have…",
-   "published": "2026-11-26T12:47:26.000Z",
-   "source": "investingLive",
-   "category": "forex"
   },
   {
    "id": "161u3pr",
@@ -291,15 +363,6 @@
    "category": "economy"
   },
   {
-   "id": "1h1esb3",
-   "title": "Vitalik Buterin calls for verifiable chips as hardware wallet threats evolve",
-   "link": "https://cointelegraph.com/news/vitalik-buterin-verifiable-chips-hardware-wallet-threats-evolve?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Buterin warned that future attacks could use lookalike chips with hidden malicious functions, making hardware tampering harder to detect.",
-   "published": "2026-11-26T12:13:59.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "19ayyed",
    "title": "New boss appointed to lead Travelodge",
    "link": "https://www.bbc.co.uk/news/articles/cqx2wx89kg0eo?at_medium=RSS&at_campaign=rss",
@@ -318,33 +381,6 @@
    "category": "economy"
   },
   {
-   "id": "qjrqxo",
-   "title": "Connecting the dots: Is big tech starting to outgrow its own valuation playbook?",
-   "link": "https://investinglive.com/education/connecting-the-dots-is-big-tech-starting-to-outgrow-its-own-valuation-playbook/",
-   "summary": "One of the things that Wall Street has always loved about big tech is its ability to make an obscene amount of money without having to spend an equally obscene amount of money to grow. Or at least that used to be how…",
-   "published": "2026-11-26T11:48:08.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "1dztqr2",
-   "title": "What really drives the FX market? A look at interest rate differentials",
-   "link": "https://investinglive.com/education/what-really-drives-the-fx-market-a-look-at-interest-rate-differentials/",
-   "summary": "The FX market is highly sensitive to interest rates. This is one of the most important concepts to understand when trading currencies. In fact, interest rate differentials are the main drivers of major currencies. The…",
-   "published": "2026-11-26T11:41:25.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
-   "id": "146xec2",
-   "title": "Anthropic shares are now available on Xlence",
-   "link": "https://investinglive.com/education/anthropic-shares-are-now-available-on-xlence/",
-   "summary": "Anthropic, the company behind Claude, has made its Nasdaq debut with a starting valuation of $1.5 trillion and an initial share price of $83, yet quickly surpassed that level. For traders, this presents another…",
-   "published": "2026-11-26T11:36:48.000Z",
-   "source": "investingLive",
-   "category": "forex"
-  },
-  {
    "id": "1n5extd",
    "title": "Drivers over 70 face eye tests every three years under new plans",
    "link": "https://www.bbc.co.uk/news/articles/cjqlqerzv1eyo?at_medium=RSS&at_campaign=rss",
@@ -360,33 +396,6 @@
    "summary": "Our Financial Policy Committee (FPC) meets to identify risks to financial stability and agree policy actions aimed at safeguarding the resilience of the UK financial system.",
    "published": "2026-11-26T10:30:00.000Z",
    "source": "Bank of England",
-   "category": "economy"
-  },
-  {
-   "id": "15674ts",
-   "title": "What's gone wrong at Poundland?",
-   "link": "https://www.bbc.co.uk/news/articles/cm4g10p2r0g9o?at_medium=RSS&at_campaign=rss",
-   "summary": "Poundland has collapse into administration. Why?",
-   "published": "2026-11-26T10:15:47.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "1amwnrw",
-   "title": "Car finance compensation payments explained",
-   "link": "https://www.bbc.co.uk/news/articles/c2l9vvj097lo?at_medium=RSS&at_campaign=rss",
-   "summary": "Millions could be entitled to compensation as a result of commission arrangements between lenders and dealers.",
-   "published": "2026-11-26T09:39:50.000Z",
-   "source": "BBC Business",
-   "category": "economy"
-  },
-  {
-   "id": "j55twa",
-   "title": "Poundland collapses putting 11,000 jobs at risk",
-   "link": "https://www.bbc.co.uk/news/articles/cm3vgdn037z4o?at_medium=RSS&at_campaign=rss",
-   "summary": "The discount chain has fallen into administration after its owners failed to find a buyer.",
-   "published": "2026-11-26T08:24:29.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
@@ -414,15 +423,6 @@
    "summary": "Federal judge Loren L AliKhan grants preliminary injunction in ABC’s favor after network sued FCC in August The federal judge Loren L AliKhan on Wednesday granted a preliminary injunction blocking the Brendan Carr-led…",
    "published": "2026-11-26T02:52:47.000Z",
    "source": "The Guardian Business",
-   "category": "economy"
-  },
-  {
-   "id": "xrss11",
-   "title": "Guitar wars - the transatlantic battle over the Stratocaster",
-   "link": "https://www.bbc.co.uk/news/articles/cqd01l9x8k48o?at_medium=RSS&at_campaign=rss",
-   "summary": "US company Fender is in dispute with a German firm that makes generic versions of its key model.",
-   "published": "2026-11-26T00:01:37.000Z",
-   "source": "BBC Business",
    "category": "economy"
   },
   {
