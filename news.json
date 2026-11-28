@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-28T04:50:33.398Z",
+ "updated": "2026-11-28T13:50:33.465Z",
  "sources": {
   "investingLive /feed": 12,
   "Federal Reserve /feeds/press_all.xml": 12,
@@ -11,6 +11,42 @@
   "The Guardian Business /business/rss": 12
  },
  "items": [
+  {
+   "id": "8o2vjc",
+   "title": "Justin Sun calls for Trump family-linked WLFI token to be delisted",
+   "link": "https://cointelegraph.com/news/justin-sun-calls-for-trump-family-linked-wlfi-token-to-be-delisted?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "Sun also urged exchanges to issue warnings, restrict deposits and require disclosure of where funds had gone.",
+   "published": "2026-11-28T13:28:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "9dr3rs",
+   "title": "ASEAN+3 agrees on initiative to explore crypto payments cooperation",
+   "link": "https://cointelegraph.com/news/asean3-agrees-on-initiative-to-explore-crypto-payments-cooperation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "A working group will examine enhancing connectivity between domestic digital payment networks and bringing their regulations into more alignment.",
+   "published": "2026-11-28T10:31:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
+  {
+   "id": "khkpwd",
+   "title": "Boris Vujčić: Interview with Kurier",
+   "link": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261128~10e11f78f1.en.html",
+   "summary": "",
+   "published": "2026-11-28T08:00:00.000Z",
+   "source": "ECB",
+   "category": "economy"
+  },
+  {
+   "id": "1dlq2qt",
+   "title": "Binance plans Asia hub in Bhutan, receives preliminary approval",
+   "link": "https://cointelegraph.com/news/binance-receives-in-principle-approval-plans-asia-hub-in-bhutan?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+   "summary": "The agreement is a milestone in Binance’s effort to expand its presence in Bhutan since launching a national crypto-powered tourism payment system in 2025.",
+   "published": "2026-11-28T07:43:00.000Z",
+   "source": "Cointelegraph",
+   "category": "crypto"
+  },
   {
    "id": "1la066y",
    "title": "Here’s what happened in crypto today",
@@ -219,15 +255,6 @@
    "category": "forex"
   },
   {
-   "id": "ujj1ml",
-   "title": "Bitcoin supply metric hits 11-year low as new ‘capitulation’ signal arrives",
-   "link": "https://cointelegraph.com/markets/bitcoin-supply-metric-new-capitulation-signal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "The seven-day moving average of Bitcoin’s supply profit/loss ratio hit an 11-year low as BTC price losses month-to-date remain near 20%.",
-   "published": "2026-11-27T11:14:28.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
-  },
-  {
    "id": "l4pmd",
    "title": "Solana remains mostly rangebound as the negative macro backdrop limits the recovery. What's next?",
    "link": "https://investinglive.com/cryptocurrency/solana-remains-mostly-rangebound-as-the-negative-macro-backdrop-limits-the-recovery-what-s-next/",
@@ -244,15 +271,6 @@
    "published": "2026-11-27T10:39:17.000Z",
    "source": "investingLive",
    "category": "forex"
-  },
-  {
-   "id": "5y9c8n",
-   "title": "Bluefin to shut down perps, refocus on spot trading and tokenized RWAs",
-   "link": "https://cointelegraph.com/news/bluefin-shut-down-perps-refocus-spot-trading-tokenized-rwas?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "Bluefin will close its perps platform on Dec. 4, exiting a shrinking Sui market where it once handled over $500 million in daily trades.",
-   "published": "2026-11-27T10:26:06.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1xklkxe",
@@ -280,15 +298,6 @@
    "published": "2026-11-27T09:00:00.000Z",
    "source": "ECB",
    "category": "economy"
-  },
-  {
-   "id": "as18xf",
-   "title": "ESMA to overhaul EU’s MiCA crypto register in 2027",
-   "link": "https://cointelegraph.com/news/esma-overhaul-eu-mica-crypto-register-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-   "summary": "ESMA’s new MiCA register will replace manual reporting and introduce automated data checks and a version history for crypto white papers.",
-   "published": "2026-11-27T08:04:39.000Z",
-   "source": "Cointelegraph",
-   "category": "crypto"
   },
   {
    "id": "1o1fihq",
@@ -693,15 +702,6 @@
    "summary": "The Prudential Regulation Authority (PRA) has today published the results of its 2026 Dynamic General Insurance Stress Test (DyGIST)",
    "published": "2026-11-23T10:00:00.000Z",
    "source": "Bank of England",
-   "category": "economy"
-  },
-  {
-   "id": "10n6alp",
-   "title": "‘Little room for error’: what a debt-laden cloud computing company says about the AI boom",
-   "link": "https://www.theguardian.com/business/2026/nov/21/debt-laden-cloud-computing-company-coreweave-ai-boom",
-   "summary": "‘Poster child of AI bubble’ CoreWeave symbolises increasingly risky business model of datacentre buildout The Egyptians had pyramids. The Roman empire had roads. The early 21st-century tech bros have massive buildings…",
-   "published": "2026-11-21T13:00:01.000Z",
-   "source": "The Guardian Business",
    "category": "economy"
   }
  ]
